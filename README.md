@@ -13,5 +13,7 @@ Nella cartella Candidatura è presente il file [Resoconto capitolati](./Candidat
 ## Verbali
 
 ### Interni
-
+- [Verbale 18/10/2024](./Verbali/Interni/Verbale2024-10-18.pdf)
+- [Verbale 25/10/2024](./Verbali/Interni/Verbale2024-10-25.pdf)
 ### Esterni
+- [Verbale 29/10/2024](./Verbali/Esterni/Verbale2024-10-29_approved.pdf)
