@@ -1,3 +1,5 @@
+<img src="https://avatars.githubusercontent.com/Rod2Cod" width="150" height="150">
+
 # SWEDoc
 Repository utilizzata per la documentazione del progetto di SWE
 
