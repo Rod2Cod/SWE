@@ -5,7 +5,7 @@ title: Documentazione Artificial QI
 layout: index
 ---
 
-# Documentazione
+# Artificial QI
 
 ## Candidatura
 <!-- così vado a prendermi i file pdf in Candidatura -->
