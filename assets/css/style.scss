@@ -1,0 +1,47 @@
+---
+---
+// importo il tema di default di "minima"
+@import "{{ site.theme }}";
+
+// faccio modifiche al css di default
+img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+header {
+    text-align: center;
+}
+
+#project_title {
+    font-size: 2.8em;
+}
+
+#project_tagline {
+    text-align: justify;
+}
+
+ul {
+    list-style-image: url("{{ '/assets/immagini/double-arrows_16x16.png' | relative_url}}");
+}
+
+.inner li {
+    font-size: 1.2em;
+}
+
+a {
+    color: #1a76c2;
+}
+
+.inner h1 {
+    font-size: 2.5em;
+}
+
+.inner h2 {
+    font-size: 2em;
+}
+
+.inner h3 {
+    font-size: 1.5em;
+}
