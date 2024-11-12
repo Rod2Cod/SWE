@@ -38,7 +38,8 @@ layout: index
 ### Esterni
 <!--  così vado a prendermi i file pdf in Verbali/Esterni -->
 {% for pdf in site.static_files %}
-    {% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" %}
+    {% assign check_approved = pdf.name | split: "Verbale" | last | split: "_" | last %}
+    {% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" and check_approved == "approved" %}
 
         {% assign data = pdf.name | split: "Verbale" | last | split: "_" | first | split: "-" %}
 
