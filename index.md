@@ -38,18 +38,19 @@ layout: index
 ### Esterni
 <!--  così vado a prendermi i file pdf in Verbali/Esterni -->
 {% for pdf in site.static_files %}
-{% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" %}
+    {% assign check_approved = pdf.name | split: "Verbale" | last | split: "_" | last %}
+    {% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" and check_approved == "approved" %}
 
-    {% assign data = pdf.name | split: "Verbale" | last | split: "_" | first | split: "-" %}
+        {% assign data = pdf.name | split: "Verbale" | last | split: "_" | first | split: "-" %}
 
-    {% assign giorno =  data[2] %}
+        {% assign giorno =  data[2] %}
 
-    {% assign mese =  data[1] %}
+        {% assign mese =  data[1] %}
 
-    {% assign anno =  data[0] %}
+        {% assign anno =  data[0] %}
 
-    {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last %}
+        {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last %}
 
 - [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} {{ last_part }} ]({{ pdf.path | relative_url }}){:target="_blank"}
-{% endif %}
+    {% endif %}
 {% endfor %}
