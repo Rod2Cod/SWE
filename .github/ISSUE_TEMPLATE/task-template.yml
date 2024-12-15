@@ -1,0 +1,26 @@
+name: Task con assegnazioni
+description: Crea una issue con assegnazioni specifiche per ogni fase.
+title: "Verbale interno"
+labels: ["stesura"] # Imposta uno stato iniziale
+body:
+  - type: input
+    id: responsabile_stesura
+    attributes:
+      label: Responsabile stesura
+      description: Inserisci l'username GitHub della persona responsabile della stesura
+    validations:
+      required: true
+  - type: input
+    id: responsabile_verifica
+    attributes:
+      label: Responsabile verifica
+      description: Inserisci l'username GitHub della persona responsabile della verifica
+    validations:
+      required: true
+  - type: input
+    id: responsabile_approvazione
+    attributes:
+      label: Responsabile approvazione
+      description: Inserisci l'username GitHub della persona responsabile dell'approvazione
+    validations:
+      required: true

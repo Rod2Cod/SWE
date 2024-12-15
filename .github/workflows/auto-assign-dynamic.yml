@@ -1,0 +1,84 @@
+name: Auto-assign based on Project column
+
+on:
+  issues:
+    types:
+      - edited
+
+jobs:
+  auto_assign:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup GitHub CLI
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Get Project Card Info
+        id: project_info
+        run: |
+          PROJECT_ID="<ID del progetto>"
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+
+          # Ottieni la posizione della issue nel progetto
+          CARD_INFO=$(gh api graphql -f query='
+            query ($projectId: ID!, $issueNumber: Int!) {
+              node(id: $projectId) {
+                ... on ProjectV2 {
+                  items(first: 100, query: {contentId: $issueNumber}) {
+                    nodes {
+                      id
+                      fieldValues(first: 100) {
+                        nodes {
+                          ... on ProjectV2ItemFieldValue {
+                            column {
+                              name
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }' -f projectId="$PROJECT_ID" -F issueNumber="$ISSUE_NUMBER")
+          
+          COLUMN=$(echo "$CARD_INFO" | jq -r '.data.node.items.nodes[0].fieldValues.nodes[0].column.name')
+          echo "Column found: $COLUMN"
+          echo "column_name=$COLUMN" >> $GITHUB_ENV
+
+      - name: Extract Issue Body Information
+        id: issue_body
+        run: |
+          echo "${{ github.event.issue.body }}" > issue_body.json
+          RESPONSABILE_STESURA=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_stesura')
+          RESPONSABILE_VERIFICA=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_verifica')
+          RESPONSABILE_APPROVAZIONE=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_approvazione')
+
+
+          echo "Responsabile stesura: $RESPONSABILE_STESURA"
+          echo "Responsabile verifica: $RESPONSABILE_VERIFICA"
+          echo "Responsabile approvazione: $RESPONSABILE_APPROVAZIONE"
+
+          echo "responsabile_stesura=$RESPONSABILE_STESURA" >> $GITHUB_ENV
+          echo "responsabile_verifica=$RESPONSABILE_VERIFICA" >> $GITHUB_ENV
+          echo "responsabile_approvazione=$RESPONSABILE_APPROVAZIONE" >> $GITHUB_ENV
+
+      - name: Assign based on column
+        run: |
+          if [[ "$COLUMN" == "Stesura" ]]; then
+            ASSIGNEE="$responsabile_stesura"
+          elif [[ "$COLUMN" == "Verifica" ]]; then
+            ASSIGNEE="$responsabile_verifica"
+          elif [[ "$COLUMN" == "Approvazione" ]]; then
+            ASSIGNEE="$responsabile_approvazione"
+          fi
+
+          echo "Assigning issue to $ASSIGNEE"
+          gh issue edit ${{ github.event.issue.number }} --add-assignee "$ASSIGNEE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          responsabile_stesura: ${{ env.responsabile_stesura }}
+          responsabile_verifica: ${{ env.responsabile_verifica }}
+          responsabile_approvazione: ${{ env.responsabile_approvazione }}
