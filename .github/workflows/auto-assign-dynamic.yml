@@ -1,9 +1,9 @@
 name: Auto-assign based on Project column
 
 on:
-  issues:
-    types:
-      - edited
+  project_card:
+    types: 
+      - moved
 
 jobs:
   auto_assign:
@@ -21,43 +21,41 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PROJECT_ID="PVT_kwDOCxV1Uc4AstoS"
-          ISSUE_NUMBER="${{ github.event.issue.number }}"
-
-          # Ottieni la posizione della issue nel progetto
+          CARD_ID="${{ github.event.project_card.id }}"
+          
+          # Fetch the column name using GraphQL
           CARD_INFO=$(gh api graphql -f query='
-            query ($projectId: ID!, $issueNumber: Int!) {
-              node(id: $projectId) {
-                ... on ProjectV2 {
-                  items(first: 100, query: {contentId: $issueNumber}) {
-                    nodes {
-                      id
-                      fieldValues(first: 100) {
-                        nodes {
-                          ... on ProjectV2ItemFieldValue {
-                            column {
-                              name
-                            }
-                          }
-                        }
-                      }
+            query ($cardId: ID!) {
+              node(id: $cardId) {
+                ... on ProjectCard {
+                  column {
+                    name
+                  }
+                  content {
+                    ... on Issue {
+                      number
                     }
                   }
                 }
               }
-            }' -f projectId="$PROJECT_ID" -F issueNumber="$ISSUE_NUMBER")
+            }' -f cardId="$CARD_ID")
           
-          COLUMN=$(echo "$CARD_INFO" | jq -r '.data.node.items.nodes[0].fieldValues.nodes[0].column.name')
-          echo "Column found: $COLUMN"
-          echo "column_name=$COLUMN" >> $GITHUB_ENV
+          COLUMN_NAME=$(echo "$CARD_INFO" | jq -r '.data.node.column.name')
+          ISSUE_NUMBER=$(echo "$CARD_INFO" | jq -r '.data.node.content.number')
+
+          echo "Column found: $COLUMN_NAME"
+          echo "column_name=$COLUMN_NAME" >> $GITHUB_ENV
+          echo "issue_number=$ISSUE_NUMBER" >> $GITHUB_ENV
 
       - name: Extract Issue Body Information
         id: issue_body
         run: |
-          echo "${{ github.event.issue.body }}" > issue_body.json
-          RESPONSABILE_STESURA=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_stesura')
-          RESPONSABILE_VERIFICA=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_verifica')
-          RESPONSABILE_APPROVAZIONE=$(echo "${{ github.event.issue.body }}" | jq -r '.responsabile_approvazione')
-
+          ISSUE_BODY=$(gh issue view $ISSUE_NUMBER --json body --jq .body)
+          echo "$ISSUE_BODY" > issue_body.json
+          
+          RESPONSABILE_STESURA=$(echo "$ISSUE_BODY" | jq -r '.responsabile_stesura')
+          RESPONSABILE_VERIFICA=$(echo "$ISSUE_BODY" | jq -r '.responsabile_verifica')
+          RESPONSABILE_APPROVAZIONE=$(echo "$ISSUE_BODY" | jq -r '.responsabile_approvazione')
 
           echo "Responsabile stesura: $RESPONSABILE_STESURA"
           echo "Responsabile verifica: $RESPONSABILE_VERIFICA"
@@ -66,19 +64,21 @@ jobs:
           echo "responsabile_stesura=$RESPONSABILE_STESURA" >> $GITHUB_ENV
           echo "responsabile_verifica=$RESPONSABILE_VERIFICA" >> $GITHUB_ENV
           echo "responsabile_approvazione=$RESPONSABILE_APPROVAZIONE" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Assign based on column
         run: |
-          if [[ "$COLUMN" == "Assegnato" ]]; then
+          if [[ "$COLUMN_NAME" == "Assegnato" ]]; then
             ASSIGNEE="$responsabile_stesura"
-          elif [[ "$COLUMN" == "In Revisione" ]]; then
+          elif [[ "$COLUMN_NAME" == "In Revisione" ]]; then
             ASSIGNEE="$responsabile_verifica"
-          elif [[ "$COLUMN" == "In Approvazione" ]]; then
+          elif [[ "$COLUMN_NAME" == "In Approvazione" ]]; then
             ASSIGNEE="$responsabile_approvazione"
           fi
 
           echo "Assigning issue to $ASSIGNEE"
-          gh issue edit ${{ github.event.issue.number }} --add-assignee "$ASSIGNEE"
+          gh issue edit $ISSUE_NUMBER --add-assignee "$ASSIGNEE"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           responsabile_stesura: ${{ env.responsabile_stesura }}
