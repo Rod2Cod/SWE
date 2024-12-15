@@ -1,6 +1,6 @@
-name: Task con assegnazioni
+name: Verbale interno
 description: Crea una issue con assegnazioni specifiche per ogni fase.
-title: "Verbale interno"
+title: "Verbale interno [data]"
 labels: ["stesura"] # Imposta uno stato iniziale
 body:
   - type: input

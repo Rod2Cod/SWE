@@ -67,11 +67,11 @@ jobs:
 
       - name: Assign based on column
         run: |
-          if [[ "$COLUMN" == "Stesura" ]]; then
+          if [[ "$COLUMN" == "Assegnato" ]]; then
             ASSIGNEE="$responsabile_stesura"
-          elif [[ "$COLUMN" == "Verifica" ]]; then
+          elif [[ "$COLUMN" == "In Revisione" ]]; then
             ASSIGNEE="$responsabile_verifica"
-          elif [[ "$COLUMN" == "Approvazione" ]]; then
+          elif [[ "$COLUMN" == "In Approvazione" ]]; then
             ASSIGNEE="$responsabile_approvazione"
           fi
 
