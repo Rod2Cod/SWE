@@ -18,7 +18,7 @@ jobs:
       - name: Get Project Card Info
         id: project_info
         run: |
-          PROJECT_ID="<ID del progetto>"
+          PROJECT_ID="PVT_kwDOCxV1Uc4AstoS"
           ISSUE_NUMBER="${{ github.event.issue.number }}"
 
           # Ottieni la posizione della issue nel progetto
