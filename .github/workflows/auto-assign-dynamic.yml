@@ -17,6 +17,8 @@ jobs:
 
       - name: Get Project Card Info
         id: project_info
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PROJECT_ID="PVT_kwDOCxV1Uc4AstoS"
           ISSUE_NUMBER="${{ github.event.issue.number }}"
