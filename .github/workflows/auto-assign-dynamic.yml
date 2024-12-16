@@ -1,5 +1,10 @@
 name: Auto-assign based on Project column
 
+permissions:
+  contents: read
+  issues: write
+  repository-projects: read
+
 on:
   project_card:
     types: 
