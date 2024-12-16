@@ -1,6 +1,6 @@
 name: Verbale interno
 description: Crea una issue con assegnazioni specifiche per ogni fase.
-title: "Verbale esterno [data]"
+title: "Verbale [data]"
 labels: ["stesura"] # Imposta uno stato iniziale
 body:
   - type: input
