@@ -1,26 +1,26 @@
 name: Verbale interno
 description: Crea una issue con assegnazioni specifiche per ogni fase.
-title: "Verbale interno [data]"
+title: "Verbale esterno [data]"
 labels: ["stesura"] # Imposta uno stato iniziale
 body:
   - type: input
-    id: responsabile_stesura
+    id: stesura
     attributes:
-      label: Responsabile stesura
+      label: stesura
       description: Inserisci l'username GitHub della persona responsabile della stesura
     validations:
       required: true
   - type: input
-    id: responsabile_verifica
+    id: verifica
     attributes:
-      label: Responsabile verifica
+      label: verifica
       description: Inserisci l'username GitHub della persona responsabile della verifica
     validations:
       required: true
   - type: input
-    id: responsabile_approvazione
+    id: approvazione
     attributes:
-      label: Responsabile approvazione
+      label: approvazione
       description: Inserisci l'username GitHub della persona responsabile dell'approvazione
     validations:
       required: true
