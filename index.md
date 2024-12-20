@@ -10,7 +10,7 @@ layout: index
 ## Candidatura
 <!-- così vado a prendermi i file pdf in Candidatura -->
 {% for pdf in site.static_files %}
-    {% if pdf.path contains "Candidatura/" and pdf.extname == ".pdf" %}
+    {% if pdf.path contains "Documentazione/Candidatura/" and pdf.extname == ".pdf" %}
 - [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
@@ -21,7 +21,7 @@ layout: index
 <!--  così vado a prendermi i file pdf in Verbali/Interni -->
 
 {% for pdf in site.static_files %}
-    {% if pdf.path contains "Verbali/Interni" and pdf.extname == ".pdf" %}
+    {% if pdf.path contains "Documentazione/Verbali/Interni" and pdf.extname == ".pdf" %}
 
         {% assign data = pdf.name | split: "Verbale" | last | split: "." | first | split: "-" %}
 
@@ -38,7 +38,7 @@ layout: index
 ### Esterni
 <!--  così vado a prendermi i file pdf in Verbali/Esterni -->
 {% for pdf in site.static_files %}
-    {% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" %}
+    {% if pdf.path contains "Documentazione/Verbali/Esterni" and pdf.extname == ".pdf" %}
 
         {% assign data = pdf.name | split: "Verbale" | last | split: "_" | first | split: "-" %}
 
@@ -51,5 +51,13 @@ layout: index
         {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last %}
 
 - [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} {{ last_part }} ]({{ pdf.path | relative_url }}){:target="_blank"}
+    {% endif %}
+{% endfor %}
+
+## WoW
+<!--  così vado a prendermi i file pdf in WoW -->
+{% for pdf in site.static_files %}
+    {% if pdf.path contains "Documentazione/WOW/" and pdf.extname == ".pdf" %}
+- [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
