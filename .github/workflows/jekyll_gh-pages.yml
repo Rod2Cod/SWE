@@ -62,7 +62,7 @@ jobs:
         # Copia solo le cartelle con i pdf dal branch master
         run: |
             git fetch origin master
-            git checkout origin/master -- Verbali Candidatura
+            git checkout origin/master -- Documentazione
 
 
       - name: Setup Ruby
