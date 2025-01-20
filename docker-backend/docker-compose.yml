@@ -1,0 +1,16 @@
+
+services:
+  backend:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_APP: main.py
+    container_name: backend
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true

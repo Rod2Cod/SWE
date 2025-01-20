@@ -1,0 +1,18 @@
+services:
+  react_app:
+    build: .
+    ports:
+      - "5173:5173" # Default port for React development server
+    container_name: react_app
+    volumes:
+      - ./react_app:/app
+      - /app/node_modules # Ensures node_modules is only managed in the container
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Necessary for some environments to watch files correctly
+      - HOST=0.0.0.0 # Ensures React dev server is accessible from outside the container
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true

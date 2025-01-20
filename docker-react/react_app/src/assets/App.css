@@ -1,0 +1,151 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #242424; /* Cambia il colore con quello che preferisci */
+  color: #333; /* Colore del testo per contrastare lo sfondo */
+  font-family: 'Arial', sans-serif; /* Font globale opzionale */
+  margin: 0; /* Rimuove il margine predefinito del body */
+  padding: 0; /* Rimuove il padding predefinito del body */
+}
+
+h1 {
+  color: white;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* INPUT */
+/* Global Styles for input fields */
+input[type="text"] {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0; /* Colore chiaro per il bordo */
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #333; /* Grigio scuro per armonizzarsi con lo sfondo */
+  color: #fff; /* Testo bianco */
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); /* Ombra bianca tenue */
+}
+
+input[type="text"]::placeholder {
+  color: #bbb; /* Grigio chiaro per il placeholder */
+  font-style: italic;
+}
+
+input[type="text"]:focus {
+  border-color: #fff; /* Bordo bianco in focus */
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2); /* Ombra bianca più pronunciata */
+}
+
+/* Submit button styles */
+.submitButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Testo scuro per contrasto */
+  background-color: #fff; /* Bottone bianco */
+  border: 2px solid #e0e0e0; /* Bordo chiaro */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); /* Ombra bianca tenue */
+}
+
+.submitButton:hover {
+  background-color: #f0f0f0; /* Colore leggermente più scuro al passaggio del mouse */
+  color: #000; /* Testo più scuro */
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+  background-color: #ddd; /* Ancora più scuro quando cliccato */
+}
+
+/* Stili per la classe personalizzata */
+.custom-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0; /* Colore chiaro per il bordo */
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #333; /* Grigio scuro per armonizzarsi con lo sfondo */
+  color: #fff; /* Testo bianco */
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); /* Ombra bianca tenue */
+  appearance: none; /* Rimuove l'aspetto predefinito */
+}
+
+.custom-select:focus {
+  border-color: #fff; /* Bordo bianco in focus */
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2); /* Ombra bianca più pronunciata */
+}
+
+.custom-select option {
+  background-color: #333; /* Sfondo degli elementi del dropdown */
+  color: #fff; /* Testo bianco */
+}
+
+/* Rotella di caricamento */
+
+/* App.css */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Aggiungi una altezza per centrare la rotella */
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.spinnerDelete {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+

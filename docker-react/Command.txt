@@ -1,0 +1,18 @@
+start: 
+docker-compose up --build -d
+
+test: 
+docker exec -it frontend-react npm run test
+
+test coverage
+docker exec -it frontend-react npm run test:coverage
+
+index coverage:
+start coverage\index.html
+
+
+
+
+
+
+

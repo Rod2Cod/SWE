@@ -1,0 +1,14 @@
+flask==2.3.3       # Framework per creare API web
+requests==2.31.0   # Libreria per effettuare richieste HTTP
+python-dotenv==1.0.0
+flask-cors==3.0.10
+flask-sqlalchemy
+psycopg2
+sacrebleu
+rouge-score
+transformers
+bert-score
+datasets
+sentence_transformers
+
+
