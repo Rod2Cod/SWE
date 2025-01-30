@@ -15,21 +15,27 @@ layout: index
     {% endif %}
 {% endfor %}
 
-## Esterni
-<!--  così vado a prendermi i file pdf in PdQ, PdP, AdR e Glossario -->
-{% assign documenti = "PdQ:Piano di Qualifica, PdP:Piano di Progetto, AdR:Analisi dei Requisiti, Glossario:Glossario" | split: ", " %}
+## Verbali
+
+### Interni
+<!--  così vado a prendermi i file pdf in Verbali/Interni -->
+
 {% for pdf in site.static_files %}
-    {% for documento in documenti %}
-        {% assign nome = documento | split: ":" %}
-        {% assign percorso = "Documentazione/" | append: nome[0] %}
-        {% if pdf.path contains percorso and pdf.extname == ".pdf" %}
-- [{{ nome[1] }} {{ pdf.name | split: '_' | last %}}]({{ pdf.path | relative_url }}){:target="_blank"}
-        {% endif %}
-    {% endfor %}
+    {% if pdf.path contains "Documentazione/Verbali/Interni" and pdf.extname == ".pdf" %}
+
+        {% assign data = pdf.name | split: "Verbale" | last | split: "." | first | split: "-" %}
+
+        {% assign giorno =  data[2] %}
+
+        {% assign mese =  data[1] %}
+
+        {% assign anno =  data[0] %}
+
+- [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} ]({{ pdf.path | relative_url }}){:target="_blank"}
+    {% endif %}
 {% endfor %}
 
-
-### Verbali
+### Esterni
 <!--  così vado a prendermi i file pdf in Verbali/Esterni -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Verbali/Esterni" and pdf.extname == ".pdf" %}
@@ -48,30 +54,10 @@ layout: index
     {% endif %}
 {% endfor %}
 
-## Interni
-
-### WoW
+## WoW
 <!--  così vado a prendermi i file pdf in WoW -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/WOW/" and pdf.extname == ".pdf" %}
-- [Way of Working {{ pdf.name | split: '_' | last %}}]({{ pdf.path | relative_url }}){:target="_blank"}
-    {% endif %}
-{% endfor %}
-
-### Verbali
-<!--  così vado a prendermi i file pdf in Verbali/Interni -->
-
-{% for pdf in site.static_files %}
-    {% if pdf.path contains "Documentazione/Verbali/Interni" and pdf.extname == ".pdf" %}
-
-        {% assign data = pdf.name | split: "Verbale" | last | split: "." | first | split: "-" %}
-
-        {% assign giorno =  data[2] %}
-
-        {% assign mese =  data[1] %}
-
-        {% assign anno =  data[0] %}
-
-- [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} ]({{ pdf.path | relative_url }}){:target="_blank"}
+- [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
