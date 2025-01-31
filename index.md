@@ -11,19 +11,19 @@ layout: index
 <!-- così vado a prendermi i file pdf in Candidatura -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Candidatura/" and pdf.extname == ".pdf" %}
-- [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
+- [{{ pdf.name | split: "_" | first | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
 
 ## Esterni
 <!--  così vado a prendermi i file pdf in PdQ, PdP, AdR e Glossario -->
-{% assign documenti = "PdQ:Piano di Qualifica, PdP:Piano di Progetto, AdR:Analisi dei Requisiti, Glossario:Glossario" | split: ", " %}
+{% assign documenti = "PdQ:Piano di Qualifica, PdP:Piano di Progetto, AdR:Analisi dei Requisiti, Glossario:Glossario, MS:Manuale Sviluppatore" | split: ", " %}
 {% for pdf in site.static_files %}
     {% for documento in documenti %}
         {% assign nome = documento | split: ":" %}
         {% assign percorso = "Documentazione/" | append: nome[0] %}
         {% if pdf.path contains percorso and pdf.extname == ".pdf" %}
-- [{{ nome[1] }} {{ pdf.name | split: '_' | last %}}]({{ pdf.path | relative_url }}){:target="_blank"}
+- [{{ nome[1] }} <span class="version">{{ pdf.name | split: "_" | last | split: ".pdf" | first %}}</span>]({{ pdf.path | relative_url }}){:target="_blank"}
         {% endif %}
     {% endfor %}
 {% endfor %}
@@ -42,7 +42,7 @@ layout: index
 
         {% assign anno =  data[0] %}
 
-        {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last %}
+        {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last | split: ".pdf" | first %}
 
 - [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} {{ last_part }} ]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
@@ -54,7 +54,7 @@ layout: index
 <!--  così vado a prendermi i file pdf in WoW -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/WOW/" and pdf.extname == ".pdf" %}
-- [Way of Working {{ pdf.name | split: '_' | last %}}]({{ pdf.path | relative_url }}){:target="_blank"}
+- [Way of Working <span class="version">{{ pdf.name | split: "_" | last | split: ".pdf" | first %}}</span>]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
 
