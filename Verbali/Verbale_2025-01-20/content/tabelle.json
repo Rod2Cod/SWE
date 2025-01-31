@@ -1,0 +1,59 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2025-01-20",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Alberto Maggion"
+      },
+      {
+        "Versione": "0.1.0",
+        "Data": "2025-01-27",
+        "Verificatore": "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "A",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Programmatore"
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": "Programmatore"
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Programmatore"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2024-12-05",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Luca Calzetta"
+      },
+      {
+        "Versione" : "0.0.2",
+        "Data" : "2024-12-08",
+        "Sez.modificate": "Presentazione metriche - Assegnazione e registrazione ruoli su verbale - Argomenti da discutere in futuro",
+        "Verificatore" : "Filippo Bellon"
+      },
+      {
+      "Versione" : "1.0.0",
+        "Data" : "2024-12-08",
+        "Sez.modificate" : "",
+        "Autore" : "",
+        "Verifica" : "",
+        "Validatore" : "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": "Verificatore"
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Amministratore"
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      }
+    ]
+  }
+}

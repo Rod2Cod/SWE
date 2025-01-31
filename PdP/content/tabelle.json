@@ -1,0 +1,1138 @@
+{
+    "versione" : {
+      "keys" : [
+        "Versione",
+        "Data",
+        "Sez.modificate",
+        "Autore",
+        "Verificatore",
+        "Validatore"
+      ],
+      "values": [
+        {
+          "Versione" : "0.0.1",
+          "Data" : "2024-11-05",
+          "Sez.modificate": "Prima stesura",
+          "Autore" : "Filippo Bellon"
+        },
+        {
+          "Versione" : "0.0.2",
+          "Data" : "2024-12-03",
+          "Sez.modificate": "Rischi attesi e loro mitigazione - Aggiunte tabelle rischi",
+          "Autore" : "Filippo Bellon"
+        },
+        {
+          "Versione" : "0.0.3",
+          "Data" : "2024-12-10",
+          "Sez.modificate": "Pianificazione - Aggiunti Introduzione, Requirements and Technology Baseline, Primo Periodo, Secondo Periodo, Terzo periodo",
+          "Autore" : "Filippo Bellon"
+        },
+        {
+          "Versione" : "0.0.4",
+          "Data" : "2024-12-12",
+          "Sez.modificate": "Preventivo - Aggiunto  Primo Periodo, Secondo Periodo, Terzo periodo",
+          "Autore" : "Alberto Maggion"
+        },
+        {
+          "Versione" : "0.0.5",
+          "Data" : "2024-12-17",
+          "Sez.modificate": "Consuntivo - Aggiunto Primo Periodo, Secondo Periodo, Terzo Periodo",
+          "Autore" : "Michele Nesler"
+        },
+        {
+          "Versione" : "0.0.6",
+          "Data" : "2024-12-17",
+          "Sez.modificate": "Pianificazione e Preventivo - Aggiunto Quarto Periodo",
+          "Autore" : "Filippo Bellon"
+        },
+        {
+          "Versione" : "0.0.7",
+          "Data" : "2025-01-2",
+          "Sez.modificate": "Consuntivo - Aggiunto Quarto Periodo \n Pianificazione e Preventivo -Aggiunto Quinto Periodo",
+          "Autore" : "Alberto Maggion"
+        },
+        {
+          "Versione" : "0.0.8",
+          "Data" : "2025-01-03",
+          "Sez.modificate": "Preventivo e Pianificazione - Aggiustata visualizzazione tabelle e Sistemati diagrammi di Gantt",
+          "Autore" : "Filippo Bellon"
+        },
+        {
+          "Versione" : "0.0.9",
+          "Data" : "2025-01-13",
+          "Sez.modificate": "Consuntivo - Aggiunto Quinto Periodo \n Pianificazione e Preventivo - Aggiunto Sesto Periodo",
+          "Autore" : "Michele Nesler"
+        },
+        {
+          "Versione" : "0.0.10",
+          "Data" : "2025-01-15",
+          "Sez.modificate": "Preventivo e Consuntivo - modifica grafici",
+          "Autore": "Alberto Maggion"
+        },
+        {
+          "Versione" : "0.1.0",
+          "Data" : "2025-01-15",
+          "Sez.modificate" : "Verifica documento",
+          "Verificatore" : "Alberto Maggion"
+        },
+        {
+          "Versione" : "0.1.1",
+          "Data" : "2025-01-27",
+          "Sez.modificate" : "Consuntivo - Aggiunto Sesto Periodo \n Pianificazione e Preventivo - Aggiunto Settimo Periodo",
+          "Autore" : "Alberto Maggion"
+        }
+      ]
+    },
+    "rischi" : {
+      "interni" : {
+        "keys" : [
+          "Codice",
+          "Rischio",
+          "Descrizione",
+          "Mitigazione"
+        ],
+        "values" : [
+          {
+            "Codice" : "RI-1",
+            "Rischio" : "Divergenze interne",
+            "Descrizione": "Ci potrebbero essere divergenze di pensiero tra i vari membri del gruppo che potrebbero portare a discussioni interne.",
+            "Mitigazione" : "Se, dopo una discussione collettiva, dovessero presentarsi ancora dei conflitti sarà compito del responsabile risolvere la controversia, principalmente ricorrendo all’utilizzo di sondaggi oppure contattando il docente o il proponente in base all’argomento di discussione."
+          },
+          {
+            "Codice" : "RI-2",
+            "Rischio" : "Ritiro dal progetto",
+            "__comment" : "Non particolarmente presente nel nostro caso",
+            "Descrizione": "Un membro del gruppo, per motivazioni personali, potrebbe decidere di ritirarsi dal progetto.",                 
+            "Mitigazione" : "Si cercherà di coprire il lavoro da svolgere, con un membro in meno, negoziando con il proponente sulle funzioni prioritarie da realizzare in modo da non superare il monte ore personale. Il responsabile pianificherà nuovamente le attività da completare."
+          },
+          {
+            "Codice" : "RI-3",
+            "Rischio" : "Disparità di conoscenze",
+            "Descrizione": "Ci potrebbe essere una disparità di conoscenze all’interno del gruppo.",
+            "Mitigazione" : "I membri del team con una maggiore conoscenza dell’argomento aiuteranno gli altri membri nel colmare tale differenza in modo da ridurre le tempistiche di autoapprendimento. Questo verrà effettuato tramite insegnamento diretto o scrittura di manuali ad uso interno."
+          },
+          {
+            "Codice" : "RI-4",
+            "Rischio" : "Disomogeneità della documentazione",
+            "Descrizione": "Si potrebbe presentare una disomogeneità nella redazione della documentazione a causa di un`errata scrittura o un mancato aggiornamento del Way of Working.",
+            "Mitigazione" : "Verrà fatto presente al responsabile e si cercherà di definire il prima possibile delle Norme di Progetto fisse ed evitare cambiamenti frequenti di queste ultime."
+          }
+        ]
+      },
+      "tecnologici" : {
+        "keys" : [
+          "Codice",
+          "Rischio",
+          "Descrizione",
+          "Mitigazione"
+        ],
+        "values" : [
+          {
+            "Codice" : "RT-1",
+            "Rischio" : "Inesperienza con gli strumenti di lavoro",
+            "Descrizione": "Si potrebbero presentare difficoltà nell'utilizzo degli strumenti di lavoro.",
+            "Mitigazione" : "Si può utilizzare del tempo per approfondire in autonomia l'utilizzo di questi strumenti o eventualmente richiedere un colloquio con il proponente al fine di coprire le difficoltà del gruppo in merito ad uno specifico argomento."
+          },
+          {
+            "Codice" : "RT-2",
+            "Rischio" : "Guasti hardware/software",
+            "Descrizione": "Si potrebbero presentare problemi di natura hardware o software per cui un membro del gruppo potrebbe avere difficoltà a portare a termine un obiettivo.",
+            "Mitigazione" : "Si avviserà il resto del gruppo del guasto e si provvederà a svolgere il proprio lavoro tramite altri mezzi."
+          }
+        ]
+      },
+      "organizzativi" : {
+        "keys" : [
+          "Codice",
+          "Rischio",
+          "Descrizione",
+          "Mitigazione"
+        ],
+        "values" : [
+          {
+            "Codice" : "RO-1",
+            "Rischio" : "Ritardo di consegna",
+            "Descrizione": "Un membro del gruppo potrebbe essere in ritardo con una consegna a causa di una sottostima del carico di lavoro dell’impegno preso oppure per un malessere fisico.",
+            "Mitigazione" : "Si concederà più tempo per quel particolare compito. Nel caso in cui dovesse essere necessario a causa di tempistiche strette, verrà affiancato da uno o più membri del gruppo, che si potrebbero sostituire al membro designato inizialmente nel caso in cui fosse impossibilitato a svolgere il suo lavoro."
+          },
+          {
+            "Codice" : "RO-2",
+            "Rischio" : "Stima errata dei costi",
+            "Descrizione": "Potrebbe verificarsi un'errata stima dei costi per un incarico.",
+            "Mitigazione" : "Si fisserà un incontro interno con il gruppo per discutere di un eventuale ricalcolo dei costi di quella particolare attività ed eventuali successive.",
+            "Mitigazione_old" : "Si prevede di utilizzare un diagramma di Gantt per organizzare le attività e si cercherà di lasciare un margine temporale abbondante tra le attività con dipendenze."
+          }
+        ]
+      },
+      "capitolato" : {
+        "keys" : [
+          "Codice",
+          "Rischio",
+          "Descrizione",
+          "Mitigazione"
+        ],
+        "values" : [
+          {
+            "Codice" : "RC-1",
+            "Rischio" : "Carico di lavoro eccessivo",
+            "Descrizione": "Ci si potrebbe rendere conto, a progetto in corso, che il carico di lavoro del capitolato che si è deciso di prendere in carico potrebbe essere eccessivo.",
+            "Mitigazione" : "Si fisserà il prima possibile un incontro con il proponente dove si andrà a negoziare su quali siano gli aspetti fondamentali del progetto e quali aspetti possano essere tralasciati; il tutto in modo da rispettare il vincolo imposto sul totale delle ore produttive assegnate ad ogni membro del gruppo."
+          },
+          {
+            "Codice" : "RC-2",
+            "Rischio" : "Incomprensione dei requisiti",
+            "Descrizione": "Durante l’analisi dei requisiti ci potrebbero essere errori dovuti ad un errata interpretazione/scrittura dei requisiti da parte degli analisti.",
+            "Mitigazione" : "Si cercherà di fissare il prima possibile un incontro con il proponente in modo da assicurare la corretta comprensione dei requisiti espressi nella presentazione del capitolato."
+          },
+          {
+            "Codice" : "RC-3",
+            "Rischio" : "Modifica dei requisiti",
+            "Descrizione": "Durante il progetto ci potrebbero essere dei cambiamenti dei requisiti dal lato del proponente.",
+            "Mitigazione" : "Si cercherà di adeguarsi a tali cambiamenti capendo quali aggiustamenti fare in corso d’opera, eventualmente cercando di arrivare ad un compromesso con il proponente."
+          }
+        ]
+      },
+      "riassunto" : {
+        "keys" : [
+          "Codice",
+          "Occorrenza",
+          "Impatto",
+          "Efficacia mitigazione"
+        ],
+        "values" : [
+          {
+            "Codice" : "RI-1",
+            "Occorrenza" : "Media",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Alta"
+          },
+          {
+            "Codice" : "RI-2",
+            "Occorrenza" : "Bassa",
+            "Impatto" : "Alto",
+            "Efficacia mitigazione" : "//"
+          },
+          {
+            "Codice" : "RI-3",
+            "Occorrenza" : "Alta",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Alta"
+          },
+          {
+            "Codice" : "RI-4",
+            "Occorrenza" : "Media",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Alta"
+          },
+          {
+            "Codice" : "RT-1",
+            "Occorrenza" : "Alta",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Media"
+          },
+          {
+            "Codice" : "RT-2",
+            "Occorrenza" : "Bassa",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "//"
+          },
+          {
+            "Codice" : "RO-1",
+            "Occorrenza" : "Alta",
+            "Impatto" : "Alto",
+            "Efficacia mitigazione" : "//"
+          },
+          {
+            "Codice" : "RO-2",
+            "Occorrenza" : "Alta",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "//"
+          },
+          {
+            "Codice" : "RC-1",
+            "Occorrenza" : "Media",
+            "Impatto" : "Alto",
+            "Efficacia mitigazione" : "//"
+          },
+          {
+            "Codice" : "RC-2",
+            "Occorrenza" : "Alta",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Alta"
+          },
+          {
+            "Codice" : "RC-3",
+            "Occorrenza" : "Bassa",
+            "Impatto" : "Medio",
+            "Efficacia mitigazione" : "Alta"
+          }
+        ]
+      }
+    },
+    "preventivo" : {
+      "1" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Amm": 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Res" : 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm" : 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Ana" : 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ver" : 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Alessandro Rossi",
+            "Ver" : 3,
+            "Totale" : 3
+          }
+        ]
+      },
+      "2" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Res" : 3,
+            "Ver" : 4,
+            "Totale" : 7
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Amm" : 4,
+            "Ver" : 3,
+            "Totale" : 7
+           },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm" : 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Ana" : 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ana" : 3,
+            "Ver" : 5,
+            "Totale" : 8
+          },
+          {
+            "Nominativo" : "Alessandro Rossi",
+            "Ver" : 4,
+            "Ana" : 4,
+            "Totale" : 8
+          }
+        ]
+      },
+      "3" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo": "Michele Nesler",
+            "Ana" : 8,
+            "Totale" : 8
+          },
+          {
+            "Nominativo": "Annalisa Egidi",
+            "Ana" : 8,
+            "Totale" : 8
+          },
+          {
+            "Nominativo": "Filippo Bellon",
+            "Ana" : 8,
+            "Totale" : 8
+          },
+          {
+            "Nominativo": "Luca Calzetta",
+            "Ana" : 3,
+            "Amm" : 4,
+            "Ver" : 2,
+            "Totale" : 9
+          },
+          {
+            "Nominativo": "Alberto Maggion",
+            "Res" : 4,
+            "Ana" : 3,
+            "Ver" : 3,
+            "Totale" : 10
+          },
+          {
+            "Nominativo": "Alessandro Rossi",
+            "Pre" : 3,
+            "Ver" : 2,
+            "Ana" : 4,
+            "Totale" : 9
+          }
+        ]
+      },
+      "4" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo": "Michele Nesler",
+            "Ana" : 12,
+            "Totale" : 12 
+          },
+          {
+            "Nominativo": "Annalisa Egidi",
+            "Ana" : 7,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Filippo Bellon",
+            "Ana" : 7,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Luca Calzetta",
+            "Ana" : 4,
+            "Ver" : 3,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Alberto Maggion",
+            "Amm": 3,
+            "Ana" : 4,
+            "Totale" : 7
+          },
+          {
+            "Nominativo": "Alessandro Rossi",
+            "Res": 4,
+            "Ana" : 2,
+            "Totale" : 6 
+          }
+        ]
+      },
+      "5" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo": "Michele Nesler",
+            "Ana" : 2,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 9
+          },
+          {
+            "Nominativo": "Annalisa Egidi",
+            "Ana" : 2,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 9
+          },
+          {
+            "Nominativo": "Filippo Bellon",
+            "Res": 4,
+            "Pre" : 2,
+            "Ver" : 6,
+            "Totale" : 12
+          },
+          {
+            "Nominativo": "Luca Calzetta",
+            "Amm": 3,
+            "Ana" : 2,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 12
+          },
+          {
+            "Nominativo": "Alberto Maggion",
+            "Ana" : 2,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 9
+          },
+          {
+            "Nominativo": "Alessandro Rossi",
+            "Amm": 3,
+            "Ana" : 2,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 12
+          }
+        ]
+      },
+      "6" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm": 2,
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 13
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Res": 4,
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 15
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          }
+        ]
+      },
+      "7" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm": 2,
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 13
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Res": 4,
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 15
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ptt": 7,
+            "Pre": 2,
+            "Ver": 2,
+            "Totale" : 11
+          }
+        ]
+      },
+      "tot1" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 440,
+            "Budget preventivato" : 440,
+            "Budget rimanente" : 11055
+          }
+        ]
+      },
+      "tot2" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 1205,
+            "Budget preventivato" : 795,
+            "Budget rimanente" : 10290
+          }
+        ]
+      },
+      "tot3" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 2405,
+            "Budget preventivato" : 1200,
+            "Budget rimanente" : 9090
+          }
+        ]
+      },
+      "tot4" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 3530,
+            "Budget preventivato" : 1125,
+            "Budget rimanente" : 7965
+          }
+        ]
+      },
+      "tot5" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 4665,
+            "Budget preventivato" : 1135,
+            "Budget rimanente" : 6830
+          }
+        ]
+      },
+      "tot6" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 6000,
+            "Budget preventivato" : 1335,
+            "Budget rimanente" : 5495
+          }
+        ]
+      },
+      "tot7" : {
+        "keys" : [
+          "Costo totale",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 6830,
+            "Budget preventivato" : 1335,
+            "Budget rimanente" : 4665
+          }
+        ]
+      }
+    },
+    "consuntivo" : {
+      "1" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Amm": 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Res" : 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm" : 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Amm" : 3.5,
+            "Totale" : 3.5
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ver" : 4,
+            "Totale" : 4
+          },
+          {
+            "Nominativo" : "Alessandro Rossi",
+            "Ver" : 2,
+            "Amm" : 1.5,
+            "Totale" : 3.5
+          }
+        ]
+      },
+      "2" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Res" : 3,
+            "Totale" : 3
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Amm" : 3,
+            "Ana" : 2,
+            "Ver" : 3,
+            "Totale" : 8
+           },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Amm" : 5,
+            "Ana" : 3,
+            "Totale" : 8
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Ana" : 5,
+            "Totale" : 5
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Ver" : 10,
+            "Totale" : 10
+          },
+          {
+            "Nominativo" : "Alessandro Rossi",
+            "Pre": 3,
+            "Totale" : 3
+          }
+        ]
+      },
+      "3" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo": "Michele Nesler",
+            "Res" : 0.5,
+            "Ana" : 7,
+            "Totale" : 7.5
+          },
+          {
+            "Nominativo": "Annalisa Egidi",
+            "Ana" : 10,
+            "Res" : 0.5,
+            "Totale" : 10.5
+          },
+          {
+            "Nominativo": "Filippo Bellon",
+            "Ana" : 7,
+            "Res" : 0.5,
+            "Totale" : 7.5
+          },
+          {
+            "Nominativo": "Luca Calzetta",
+            "Res" : 0.5,
+            "Amm" : 3,
+            "Ver" : 3,
+            "Totale" : 6.5
+          },
+          {
+            "Nominativo": "Alberto Maggion",
+            "Res" : 4,
+            "Ana" : 5,
+            "Ver" : 4,
+            "Totale" : 13
+          },
+          {
+            "Nominativo": "Alessandro Rossi",
+            "Res" : 0.5,
+            "Pre" : 3,
+            "Ver" : 2,
+            "Ana" : 2,
+            "Totale" : 7.5
+          }
+        ]
+      },
+      "4" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values": [
+          {
+            "Nominativo": "Michele Nesler",
+            "Res" : 1,
+            "Ana" : 12,
+            "Totale" : 13
+          },
+          {
+            "Nominativo": "Annalisa Egidi",
+            "Res" : 1,
+            "Ana" : 6,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Filippo Bellon",
+            "Res" : 1,
+            "Ana" : 6,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Luca Calzetta",
+            "Res" : 1,
+            "Ana" : 3,
+            "Ver" : 3,
+            "Totale" : 7 
+          },
+          {
+            "Nominativo": "Alberto Maggion",
+            "Res" : 1,
+            "Ana" : 3,
+            "Amm" : 2,
+            "Totale" : 6 
+          },
+          {
+            "Nominativo": "Alessandro Rossi",
+            "Res": 4,
+            "Ana" : 2,
+            "Totale" : 6 
+          }
+        ]
+      },
+      "5" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Res" : 0.5,
+            "Ana" : 3,
+            "Pre" : 5,
+            "Ver" : 2,
+            "Totale" : 10.5 
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Res" : 0.5,
+            "Ana" : 1.5,
+            "Pre" : 5,
+            "Ver" : 3,
+            "Totale" : 10
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Res" : 3.5,
+            "Pre" : 3,
+            "Ver" : 4,
+            "Totale" : 10.5 
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Res" : 0.5,
+            "Ana" : 2,
+            "Pre" : 7,
+            "Ver" : 2.5,
+            "Totale" : 12
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Res" : 0.5,
+            "Pre" : 3,
+            "Ver" : 3,
+            "Totale" : 6.5 
+          },
+          {
+            "Nominativo" : "Alessandro Rossi",
+            "Pre" : 5.5,
+            "Totale" : 5.5
+          }
+        ]
+      },
+      "6" : {
+        "keys" : [
+          "Nominativo",
+          "Res",
+          "Amm",
+          "Ana",
+          "Ptt",
+          "Pre",
+          "Ver",
+          "Totale"
+        ],
+        "values" : [
+          {
+            "Nominativo" : "Michele Nesler",
+            "Res": 0.5,
+            "Amm": 4,
+            "Ver": 2,
+            "Totale": 6.5
+          },
+          {
+            "Nominativo" : "Annalisa Egidi",
+            "Res": 0.5,
+            "Amm": 4,
+            "Ver": 1.5,
+            "Totale": 6
+          },
+          {
+            "Nominativo" : "Filippo Bellon",
+            "Res": 0.5,
+            "Amm": 4,
+            "Ver": 2,
+            "Totale": 6.5
+          },
+          {
+            "Nominativo" : "Luca Calzetta",
+            "Res": 3,
+            "Pre": 4,
+            "Totale": 7
+          },
+          {
+            "Nominativo" : "Alberto Maggion",
+            "Res": 0.5,
+            "Amm": 4,
+            "Ver": 1,
+            "Totale": 5.5
+          }
+        ]
+      },
+      "tot1" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 400,
+            "Costo periodo":400,
+            "Budget preventivato" : 400,
+            "Budget rimanente" : 11095
+          }
+        ]
+      },
+      "tot2" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 1185,
+            "Costo periodo":785,
+            "Budget preventivato" : 765,
+            "Budget rimanente" : 10310
+          }
+        ]
+      },
+      "tot3" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 2395,
+            "Costo periodo":1210,
+            "Budget preventivato" : 1200,
+            "Budget rimanente" : 9100
+          }
+        ]
+      },
+      "tot4" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 3550,
+            "Costo periodo":1155,
+            "Budget preventivato" : 1125,
+            "Budget rimanente" : 7945
+          }
+        ]
+      },
+      "tot5" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 4522.5,
+            "Costo periodo":972.5,
+            "Budget preventivato" : 1135,
+            "Budget rimanente" : 6972.5
+          }
+        ]
+      },
+      "tot6" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" : 5150,
+            "Costo periodo":627.5,
+            "Budget preventivato" : 1335,
+            "Budget rimanente" : 6345
+          }
+        ]
+      },
+      "tot7" : {
+        "keys" : [
+          "Costo totale",
+          "Costo periodo",
+          "Budget preventivato",
+          "Budget rimanente"
+        ],
+        "values": [
+          {
+            "Costo totale" :0 ,
+            "Costo periodo":0,
+            "Budget preventivato" :0,
+            "Budget rimanente" :0 
+          }
+        ]
+      }
+    }
+  }

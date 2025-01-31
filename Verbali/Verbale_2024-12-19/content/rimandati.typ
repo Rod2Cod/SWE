@@ -1,0 +1,1 @@
+Approvazione dei casi d'uso individuati rimandata dopo aver effettuato un incontro con il professore per risolvere i dubbi emersi durante la loro discussione.

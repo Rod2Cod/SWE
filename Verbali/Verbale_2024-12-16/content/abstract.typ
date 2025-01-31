@@ -1,0 +1,1 @@
+Il giorno 16/12/2024 dalle ore 16:05 alle 18.53 il gruppo Rod2Cod si riunisce.

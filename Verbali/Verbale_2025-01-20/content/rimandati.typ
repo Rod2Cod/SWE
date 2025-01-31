@@ -1,0 +1,2 @@
+== Automazione glossario
+Essendo il componente preposto alla ricerca di possibili automazioni dell'evidenziazione dei termini del glossario assente, il gruppo si riserva di discutere tale argomento nel prossimo incontro

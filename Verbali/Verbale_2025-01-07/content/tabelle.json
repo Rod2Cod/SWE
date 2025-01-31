@@ -1,0 +1,72 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2025-01-07",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Michele Nesler"
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2025-01-13",
+        "Sez.modificate" : "Verifica",
+        "Verificatore" : "Alberto Maggion"
+      },
+      {
+        "Versione" : "1.0.0",
+        "Data" : "2025-01-20",
+        "Sez.modificate" : "",
+        "Validatore" : "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+        
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      }
+    ]
+  }
+}

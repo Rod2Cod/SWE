@@ -1,0 +1,127 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values" : [
+        {
+          "Versione": "0.0.1",
+          "Data": "2024-10-22",
+          "Descrizione": "Prima stesura",
+          "Autore": "Alberto Maggion"
+        },
+        {
+          "Versione": "0.0.2",
+          "Data": "2024-10-22",
+          "Descrizione": "1.2 - 2.1 - 1.4 - Aggiunta tabella Riepilogo Modifiche",
+          "Autore": "Michele Nesler"
+        },
+        {
+          "Versione": "0.0.3",
+          "Data": "2024-11-12",
+          "Descrizione": "1.1.2 - Modifica secondo verbale 05-11-2024 decisione 3.1",
+          "Autore": "Alberto Maggion"
+        },
+        {
+          "Versione": "0.1.0",
+          "Data": "2024-11-13",
+          "Descrizione": "Verifica documento",
+          "Verificatore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.1.1",
+          "Data": "2024-11-13",
+          "Descrizione": "1.6 - Aggiunta sezione Github repo",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.2.0",
+          "Data": "2024-11-18",
+          "Descrizione": "Verifica ultime aggiunte",
+          "Verificatore": "Alberto Maggion"
+        },
+        {
+          "Versione": "0.2.1",
+          "Data": "2024-11-18",
+          "Descrizione": "Aggiunta sezione Utilizzo template",
+          "Autore": "Alberto Maggion"
+        },
+        {
+          "Versione": "0.2.2",
+          "Data": "2024-11-19",
+          "Descrizione": "Documentazione/Utilizzo template - Tolto segretario verbalizzante dai verbali",
+          "Autore": "Michele Nesler"
+        },
+        {
+          "Versione": "0.2.3",
+          "Data": "2024-11-23",
+          "Descrizione": "Documentazione/Processi - Aggiunte in sezioni Modifica, Verifica e Approvazione",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.2.3",
+          "Data": "2024-12-06",
+          "Descrizione": "Verifica sezioni . utilizzo template - Documentazione/Processi Modifica, Verifica, Approvazione ",
+          "Verificatore": "Michele Nesler"
+        },
+        {
+          "Versione": "1.0.0",
+          "Data": "2024-12-15",
+          "Validatore": "Annalisa Egidi"
+        },
+        {
+          "Versione": "1.0.1",
+          "Data": "2024-12-22",
+          "Descrizione": "Piano di Progetto - Aggiunta sezione Diagrammi di Gantt",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "1.0.2",
+          "Data": "2024-12-26",
+          "Descrizione": "Documentazione - Aggiunta sezione strumento per la scrittura documenti, - Aggiunta sezione sistema di ticketing, - Aggiunta sezione modalità di riunione, - Aggiunta sezione tracciamento ore, - Aggiunta sezione glossario",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "1.0.3",
+          "Data": "2024-12-29",
+          "Descrizione": "Aggiunta sezione analisi dei requisiti",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "1.0.4",
+          "Data": "2025-01-13",
+          "Descrizione": "Modificato posizionamento sezione Github e aggiunta sezione Piano di Qualifica ",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "1.0.5",
+          "Data": "2025-01-29",
+          "Descrizione": "Modificato il modo di inserire i termini nel glossario",
+          "Autore": "Michele Nesler"
+        },
+        {
+          "Versione": "1.1.0",
+          "Data": "2025-01-30",
+          "Descrizione": "Verifica ultime modifiche",
+          "Verificatore": "Alberto Maggion"
+        },
+        {
+          "Versione": "1.1.1",
+          "Data": "2025-01-30",
+          "Descrizione": "Github repository - Modificate sezioni Struttura e Utilizzo (Caricamento documenti)",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "1.2.0",
+          "Data": "2025-01-31",
+          "Descrizione": "Verifica ultime modifiche",
+          "Verificatore": "Alberto Maggion"
+        }
+      ]
+    }
+}

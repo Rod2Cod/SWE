@@ -1,0 +1,10 @@
+- Confronto Casi d'Uso
+- Piano di progetto 
+  - Analisi dei rischi
+  - Analisi dei requisiti
+- Approfondimento su container di DB
+- Norme di progetto
+- Sistema RAG da approfondire
+- Definire Milestone e Baseline
+- Manuale dello sviluppatore
+- Approfondimento metriche

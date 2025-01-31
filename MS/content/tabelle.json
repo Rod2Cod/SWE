@@ -1,0 +1,62 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values" : [
+        {
+          "Versione": "0.0.1",
+          "Data": "15-11-2024",
+          "Descrizione": "Prima stesura",
+          "Autore": "Filippo Bellon \nMichele Nesler"
+        },
+        {
+          "Versione": "0.0.2",
+          "Data": "20-11-2024",
+          "Descrizione": "Github Actions",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.3",
+          "Data": "22-11-2024",
+          "Descrizione": "Struttura del documento",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.1.0",
+          "Data": "22-11-2024",
+          "Descrizione": "Verifica documento",
+          "Verificatore": "Alberto Maggion"
+        },
+        {
+          "Versione": "0.1.1",
+          "Data": "23-11-2024",
+          "Descrizione": "Aggiunta sezione Introduzione",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.1.2",
+          "Data": "13-12-2024",
+          "Descrizione": "Aggiunta sezione Docker, React, Postgres SQL",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "0.2.0",
+          "Data": "19-12-2024",
+          "Descrizione": "Verifica documento",
+          "Verificatore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.2.1",
+          "Data": "20-01-2025",
+          "Descrizione": "Agginta Sezione Bootstrap, Axios, Backend - Flask, LLM Evaluator - Python, ",
+          "Autore": "Luca Calzetta"
+        }
+      ]
+    }
+}

@@ -1,0 +1,1 @@
+Il giorno 25-11-2024 il team Rod2Cod si riunisce dalle ore 16:00 alle ore 18:15.

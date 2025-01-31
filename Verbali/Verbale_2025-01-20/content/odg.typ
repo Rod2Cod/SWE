@@ -1,0 +1,5 @@
+- Stesura verbale
+- Situazione Glossario
+- Indice di Gulpease
+- Situazione PdQ
+- Preventivo prossimo periodo

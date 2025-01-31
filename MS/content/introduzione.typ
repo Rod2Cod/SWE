@@ -1,0 +1,2 @@
+== Glossario
+  Questo documento, come anche molti altri all'interno del progetto, viene affiancato da un *Glossario* presente all'interno della documentazione, contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.

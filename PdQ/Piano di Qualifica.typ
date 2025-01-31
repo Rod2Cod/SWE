@@ -1,0 +1,56 @@
+/*************************************************+**
+per utilizzare il template, è necessario utilizzare il file meta.typ che contiene i collegamenti alle parti variabili del template, Questo file non deve essere toccato 
+*************************************************+**/
+
+#import "meta.typ": Introduzione, QualitaProcesso, QualitaProdotto, ResocontoAttivitaVerifica, SpecificaTest, tabelle, date, title
+
+// Funzioni da includere
+#import "../functions.typ": table-json
+#import "../Glossario/Glossario.typ": glossario-therms 
+#import "../functions.typ": inDict 
+// Inizio template
+#set page(paper: "a4",
+  columns: 1,
+  numbering: "1",
+  header: [Gruppo 2 - Rod2Cod  #h(1fr) Data: #date.display() #h(1fr) #title],
+)
+#set heading(numbering: "1.1")
+#show outline.entry.where(
+  level: 1
+): it => {
+  v(1em, weak: true)
+  strong(it)
+}
+
+#set list(indent: 1em)
+#set enum(indent: 1em)
+#show link: underline.with(offset: 3pt)
+#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+//TITOLO
+#align(center, text(17pt)[*#title*])
+
+#align(center)[
+  //VERSIONE DOCUMENTO
+  #table-json(json(tabelle).at("versione"),6)
+]
+
+//TABLE OF CONTENTS
+#outline(indent: 1em)
+#outline(title: "Figures", target: figure.where(kind: image))
+#pagebreak()
+
+//Sezioni numerate
+= Introduzione
+#Introduzione
+
+= Qualità di Processo
+#QualitaProcesso
+
+= Qualità di Prodotto
+#QualitaProdotto
+
+= Specifica dei Test
+#SpecificaTest
+
+= Resoconto delle Attività di Verifica
+#ResocontoAttivitaVerifica

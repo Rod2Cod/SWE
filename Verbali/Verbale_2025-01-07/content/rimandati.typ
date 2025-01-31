@@ -1,0 +1,1 @@
+Inserire o meno il PdQ nel WoW

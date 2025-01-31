@@ -1,0 +1,72 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verifica",
+      "Approvazione"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2024-11-26",
+        "Sez.modificate" : "Stesura iniziale",
+        "Autore" : "Alberto Maggion",
+        "Verifica" : "",
+        "Approvazione" : ""
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2024-11-27",
+        "Sez.modificate" : "- React \n- Docker\n- File ODG",
+        "Autore" : "",
+        "Verifica" : "Luca Calzetta",
+        "Approvazione" : ""
+      },
+      {
+      "Versione" : "1.0.0",
+        "Data" : "2024-12-08",
+        "Sez.modificate" : "",
+        "Autore" : "",
+        "Verifica" : "",
+        "Approvazione" : "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P"
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P"
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P"
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P"
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+      },
+      {
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P"
+      }
+    ]
+  }
+}

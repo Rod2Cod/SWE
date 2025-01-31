@@ -1,0 +1,528 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values" : [
+      {
+        "Versione": "0.0.1",
+        "Data": "2024-11-15",
+        "Descrizione": "Prima stesura",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.2",
+        "Data": "2024-11-23",
+        "Descrizione": "Aggiunte sezioni Introduzione/Riferimenti/Descrizione/Requisiti ",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.3",
+        "Data": "2024-11-27",
+        "Descrizione": "Spostati riferimenti in sezione Introduzione - Aggiunta sezione Casi d'uso",
+        "Autore": "Filippo Bellon"
+      },{
+        "Versione": "0.0.4",
+        "Data": "2024-12-04",
+        "Descrizione": "Spostato contenuto da Casi d'uso a Requisiti",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.5",
+        "Data": "2024-12-05",
+        "Descrizione": "Sezione Descrizione - Modificati Obiettivo, Funzioni e Utenti e caratteristiche",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.6",
+        "Data": "2024-12-10",
+        "Descrizione": "Sezioni Introduzione, Descrizione e Requisiti - Modificati Riferimenti, Obiettivo, Funzioni, Utenti e caratteristiche, Formato Codice dei Requisiti e Requisiti di qualità",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.7",
+        "Data": "2024-12-11",
+        "Descrizione": "Sezione Casi d'uso - Aggiunte Introduzione, Attori e Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.8",
+        "Data": "2024-12-12",
+        "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.9",
+        "Data": "2024-12-13",
+        "Descrizione": "Sezione Casi d'uso e Requisiti - Modificati Elenco dei casi d'uso, Formato codice dei requisiti e Requisiti funzionali",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.0.10",
+        "Data": "2024-12-17",
+        "Descrizione": "Sezione Casi d'uso e Requisiti - Modificati Elenco dei casi d'uso e Requisiti funzionali",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.1.0",
+        "Data": "2024-12-19",
+        "Descrizione": "Inserimento Diagrammi UML (file esterno); agiunte Generalizzazioni UC5; aggiunti scenari altrenativi UC20.1 , 20,2",
+        "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione": "0.1.1",
+        "Data": "2025-01-04",
+        "Descrizione": "Sezione Casi d'uso e Requisiti - Modificati Elenco dei casi d'uso e Requisiti funzionali",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.1.2",
+        "Data": "2025-01-04",
+        "Descrizione": "Sezione Casi d'uso e Requisiti - Modificati Elenco dei casi d'uso e Requisiti funzionali",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.2.0",
+        "Data": "2025-01-12",
+        "Descrizione": "Inseriti UML",
+        "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione": "0.2.1",
+        "Data": "2025-01-12",
+        "Descrizione": "Sezione Tracciamento - Aggiunte sezioni Fonte - requisiti e Riepilogo",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.3.0",
+        "Data": "2025-01-13",
+        "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione": "1.0.0",
+        "Data": "2025-01-22",
+        "Validatore": "Alberto Maggion"
+      }
+    ]
+  },
+  "requisiti_funzionali" : {
+    "keys" : [
+      "Codice",
+      "Descrizione",
+      "Classificazione",
+      "Fonti"
+    ],
+    "values" : [
+      {
+        "Codice": "RF-1.1",
+        "Descrizione": "L’utente deve poter visualizzare le domande con le rispettive risposte attese",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC1"
+      },
+      {
+        "Codice": "RF-1.2",
+        "Descrizione": "L’utente deve poter modificare una domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC2"
+      },
+      {
+        "Codice": "RF-1.3",
+        "Descrizione": "L’utente deve poter modificare una risposta attesa",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC3"
+      },
+      {
+        "Codice": "RF-1.4",
+        "Descrizione": "L’utente deve poter eliminare una domanda e la rispettiva risposta attesa",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC4"
+      },
+      {
+        "Codice": "RF-1.5",
+        "Descrizione": "L’utente deve poter aggiungere una domanda e la rispettiva risposta attesa",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC5"
+      },
+      {
+        "Codice": "RF-1.5.1",
+        "Descrizione": "L’utente deve poter aggiungere manualmente una domanda e la rispettiva risposta attesa",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC5.1"
+      },
+      {
+        "Codice": "RF-3.5.2",
+        "Descrizione": "L’utente deve poter inserire nel sistema delle domande e rispettive risposte presenti in un file strutturato",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC5.2"
+      },
+      {
+        "Codice": "RF-2.6",
+        "Descrizione": "L’utente deve poter suddividere le domande e le relative risposte in set",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC6"
+      },
+      {
+        "Codice": "RF-1.7",
+        "Descrizione": "L’utente deve poter eseguire il test utilizzando le domande e relative risposte presenti",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC7"
+      },
+      {
+        "Codice": "RF-1.8",
+        "Descrizione": "L’utente deve poter visualizzare i risultati del test relativi ad una singola domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC8"
+      },
+      {
+        "Codice": "RF-1.9",
+        "Descrizione": "L’utente deve poter visualizzare il risultato del test relativo all’intero set di domande",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC9"
+      },
+      {
+        "Codice": "RF-1.10",
+        "Descrizione": "L’utente deve poter visualizzare solo i risultati peggiori di uno specifico test",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC10"
+      },
+      {
+        "Codice": "RF-1.11",
+        "Descrizione": "L’utente deve poter visualizzare tutte le domande eseguite nel test",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC11"
+      },
+      {
+        "Codice": "RF-2.12",
+        "Descrizione": "L’utente deve poter scaricare i risultati del test",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC12"
+      },
+      {
+        "Codice": "RF-3.13",
+        "Descrizione": "L’utente deve poter visualizzare uno storico dei test effettuati",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-2.14",
+        "Descrizione": "L’utente deve poter mettere a confronto differenti esecuzioni dei test",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-2.15",
+        "Descrizione": "L’utente deve poter definire etichette che descrivano il contesto delle domande da porre",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC15"
+      },
+      {
+        "Codice": "RF-2.16",
+        "Descrizione": "L’utente deve poter eliminare un etichetta",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC16"
+      },
+      {
+        "Codice": "RF-2.17",
+        "Descrizione": "L’utente deve poter assegnare una o più etichette ad una domanda",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC17"
+      },
+      {
+        "Codice": "RF-2.18",
+        "Descrizione": "L’utente deve poter rimuovere un'etichetta assegnata ad una domanda",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC18"
+      },
+      {
+        "Codice": "RF-2.19",
+        "Descrizione": "L’utente deve poter modificare quali sono le domande associate ad una etichetta",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19"
+      },
+      {
+        "Codice": "RF-3.20",
+        "Descrizione": "L’utente deve essere notificato della presenza di un errore nel caricamento delle domande da file",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-3.20.1",
+        "Descrizione": "L’utente deve essere notificato della presenza di un errore presente nei dati contenuti nel file",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC20.1"
+      },
+      {
+        "Codice": "RF-3.21",
+        "Descrizione": "L’utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC21"
+      },
+      {
+        "Codice": "RF-3.21.1",
+        "Descrizione": "L’utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta con un nome già presente nel sistema",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC21.1"
+      },
+      {
+        "Codice": "RF-2.22",
+        "Descrizione": "L’utente deve poter annullare l'operazione di eliminazione di un'etichetta",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC22"
+      },
+      {
+        "Codice": "RF-2.23",
+        "Descrizione": "L’utente deve poter annullare l'operazione di modifica di una domanda",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC23"
+      },
+      {
+        "Codice": "RF-2.24",
+        "Descrizione": "L’utente deve poter annullare l'operazione di modifica di una risposta attesa",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC24"
+      },
+      {
+        "Codice": "RF-2.25",
+        "Descrizione": "L’utente deve poter annullare l'operazione di eliminazione di una domanda e relativa risposta attesa",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC25"
+      }
+    ]
+  },
+  "requisiti_qualità" : {
+    "keys" : [
+      "Codice",
+      "Descrizione",
+      "Classificazione",
+      "Fonti"
+    ],
+    "values" : [
+      {
+        "Codice": "RQ-1.1",
+        "Descrizione": "Il prodotto deve essere sviluppato secondo quanto stabilito nel documento WoW.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Decisione del gruppo"
+      },
+      {
+        "Codice": "RQ-1.2",
+        "Descrizione": "Il codice sorgente deve essere pubblicato in un repository su GitHub o in altri repository pubblici.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato"
+      },
+      {
+        "Codice": "RQ-1.3",
+        "Descrizione": "Deve essere fornito un manuale per l’utilizzo dell'applicativo.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato"
+      },
+      {
+        "Codice": "RQ-1.4",
+        "Descrizione": "Deve essere fornita una guida per gli sviluppatori relativa a possibili estensioni dell'applicativo.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato"
+      },
+      {
+        "Codice": "RQ-1.5",
+        "Descrizione": "Deve essere implementato un sistema di test automatico con un adeguata copertura.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato"
+      }
+    ]
+  },
+  "requisiti_vincolo" : {
+    "keys" : [
+      "Codice",
+      "Descrizione",
+      "Classificazione",
+      "Fonti"
+    ],
+    "values" : [
+      {
+        "Codice": "RV-1.1",
+        "Descrizione": "All'interno del progetto devono essere adottati pattern architetturali robusti e duttili.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato - Decisione interna"
+      },
+      {
+        "Codice": "RV-1.2",
+        "Descrizione": "Non sono stati forniti vincoli per quanto riguarda versioni del Sistema Operativo o del Software sul quale il programma deve poter funzionare.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Verbale - Decisione interna"
+      }
+    ]
+  },
+  "tracciamento" : {
+    "fonte-requisiti" : {
+      "keys" : [
+        "Fonte",
+        "Requisito"
+      ],
+      "values" : [
+        {
+          "Fonte" : "Capitolato",
+          "Requisito" : "RF-1.1, RF-1.2, RF-1.3, RF-1.4, RF-1.5,\n RF-1.5.1, RF-3.5.2, RF-1.7, RF-1.8, RF-1.9,\n RF-1.10, RF-3.13, RQ-1.2, RQ-1.3, RQ-1.4,\n RQ-1.5, RV-1.1"
+        },
+        {
+          "Fonte" : "Incontro con il proponente",
+          "Requisito" : "RF-2.6, RF-1.11, RF-2.14, RF-2.15"
+        },
+        {
+          "Fonte" : "Decisione interna",
+          "Requisito" : "RF-2.12, RF-2.16, RF-2.17, RF-2.18, RF-2.19,\n RQ-1.1, RV-1.1, RV-1.2"
+        },
+        {
+          "Fonte" : "UC1",
+          "Requisito" : "RF-1.1"
+        },
+        {
+          "Fonte" : "UC2",
+          "Requisito" : "RF-1.2"
+        },
+        {
+          "Fonte" : "UC3",
+          "Requisito" : "RF-1.3"
+        },
+        {
+          "Fonte" : "UC4",
+          "Requisito" : "RF-1.4"
+        },
+        {
+          "Fonte" : "UC5",
+          "Requisito" : "RF-1.5"
+        },
+        {
+          "Fonte" : "UC5.1",
+          "Requisito" : "RF-1.5.1"
+        },
+        {
+          "Fonte" : "UC5.2",
+          "Requisito" : "RF-3.5.2"
+        },
+        {
+          "Fonte" : "UC6",
+          "Requisito" : "RF-2.6"
+        },
+        {
+          "Fonte" : "UC7",
+          "Requisito" : "RF-1.7"
+        },
+        {
+          "Fonte" : "UC8",
+          "Requisito" : "RF-1.8"
+        },
+        {
+          "Fonte" : "UC9",
+          "Requisito" : "RF-1.9"
+        },
+        {
+          "Fonte" : "UC10",
+          "Requisito" : "RF-1.10"
+        },
+        {
+          "Fonte" : "UC11",
+          "Requisito" : "RF-1.11"
+        },
+        {
+          "Fonte" : "UC12",
+          "Requisito" : "RF-2.12"
+        },
+        {
+          "Fonte" : "UC13",
+          "Requisito" : "RF-3.13"
+        },
+        {
+          "Fonte" : "UC14",
+          "Requisito" : "RF-2.14"
+        },
+        {
+          "Fonte" : "UC15",
+          "Requisito" : "RF-2.15"
+        },
+        {
+          "Fonte" : "UC16",
+          "Requisito" : "RF-2.16"
+        },
+        {
+          "Fonte" : "UC17",
+          "Requisito" : "RF-2.17"
+        },
+        {
+          "Fonte" : "UC18",
+          "Requisito" : "RF-2.18"
+        },
+        {
+          "Fonte" : "UC19",
+          "Requisito" : "RF-2.19"
+        },
+        {
+          "Fonte" : "UC20",
+          "Requisito" : "RF-3.20, RF-3.20.1"
+        },
+        {
+          "Fonte" : "UC21",
+          "Requisito" : "RF-3.21, RF-3.21.1"
+        },
+        {
+          "Fonte" : "UC22",
+          "Requisito" : "RF-2.22"
+        },
+        {
+          "Fonte" : "UC23",
+          "Requisito" : "RF-2.23"
+        },
+        {
+          "Fonte" : "UC24",
+          "Requisito" : "RF-2.24"
+        },
+        {
+          "Fonte" : "UC25",
+          "Requisito" : "RF-2.25"
+        }
+      ]
+    },
+    "riepilogo" : {
+      "keys" : [
+        "Tipologia",
+        "Obbligatorio",
+        "Desiderabile",
+        "Opzionale",
+        "Totale"
+      ],
+      "values" : [
+        {
+          "Tipologia" : "Funzionale",
+          "Obbligatorio" : "11",
+          "Desiderabile" : "6",
+          "Opzionale" : "12",
+          "Totale" : "29"
+        },
+        {
+          "Tipologia" : "Di qualità",
+          "Obbligatorio" : "5",
+          "Desiderabile" : "//",
+          "Opzionale" : "//",
+          "Totale" : "5"
+        },
+        {
+          "Tipologia" : "Di vincolo",
+          "Obbligatorio" : "2",
+          "Desiderabile" : "//",
+          "Opzionale" : "//",
+          "Totale" : "2"
+        },
+        {
+          "Tipologia" : "Totale",
+          "Obbligatorio" : "18",
+          "Desiderabile" : "6",
+          "Opzionale" : "12",
+          "Totale" : "36"
+        }
+      ]
+    }
+  }
+}

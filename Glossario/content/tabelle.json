@@ -1,0 +1,92 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values" : [
+        {
+          "Versione": "0.0.1",
+          "Data": "2024-11-12",
+          "Descrizione": "Prima stesura",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.2",
+          "Data": "2024-20",
+          "Descrizione": "Sezione I - Aggiunta Infrastructure as Code",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.3",
+          "Data": "2024-11-21",
+          "Descrizione": "Modifica a struttura",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.4",
+          "Data": "2024-11-27",
+          "Descrizione": "Sezioni G e R - Aggiunte Repository e Github",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.5",
+          "Data": "2024-12-03",
+          "Descrizione": "Sezione N - Aggiunta Norma",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.6",
+          "Data": "2024-12-10",
+          "Descrizione": "Sezioni L e R - Aggiunti LLM e RAG",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.7",
+          "Data": "2024-12-13",
+          "Descrizione": "Sezione D - Aggiunti DOM e Virtual DOM",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.8",
+          "Data": "2024-12-13",
+          "Descrizione": "Sezioni L N P S W - Aggiunti LTS, Npm, pgAdmin, SPA, SQL, WSL",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "0.0.9",
+          "Data": "2024-10-19",
+          "Descrizione": "Sezioni D e V - Spostato Virtual DOM da D a V",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.10",
+          "Data": "2024-12-22",
+          "Descrizione": "Sezione T - Aggiunta Task",
+          "Autore": "Filippo Bellon"
+        },
+        {
+          "Versione": "0.0.11",
+          "Data": "2024-12-26",
+          "Descrizione": "Sezione O - Aggiunto ODG",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "0.0.12",
+          "Data": "2024-12-29",
+          "Descrizione": "Sezione U - Aggiunto UC",
+          "Autore": "Luca Calzetta"
+        },
+        {
+          "Versione": "0.0.13",
+          "Data": "2025-01-02",
+          "Descrizione": "Sezioni A, B, C, E, P, Q, S - Aggiunti BAC, BV, CPI, EV, EAC, ETC, PV, QMS, SV",
+          "Autore": "Filippo Bellon"
+        }
+      ]
+    }
+}

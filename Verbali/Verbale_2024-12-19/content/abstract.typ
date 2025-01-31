@@ -1,0 +1,1 @@
+La riunione si è tenuta presso la sede Zucchetti in data 19/12/2024 per discutere i casi d'uso individuati dal gruppo

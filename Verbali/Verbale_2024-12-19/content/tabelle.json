@@ -1,0 +1,88 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2024-12-26",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Alberto Maggion"
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2024-12-28",
+        "Sez.modificate": "",
+        "Verificatore": "Alessandro Rossi"
+      },
+            {
+        "Versione" : "1.0.0",
+        "Data" : "2025-01-06",
+        "Sez.modificate": "",
+        "Validatore": "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Rif",
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Rif":"S",
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "A",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"A",
+        "Nominativo": "Gregori Piccoli",
+        "Presenze": "P"
+      },
+      {
+        "Rif":"A",
+        "Nominativo": "Michele Tollot",
+        "Presenze": "P"
+      }
+    ]
+  }
+}

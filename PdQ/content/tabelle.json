@@ -1,0 +1,664 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2024-12-26",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "0.0.2",
+        "Data" : "2025-01-01",
+        "Sez.modificate": "Introduzione e Qualità di Processo - Aggiunte modifiche nelle sezioni Scopo del documento, Glossario, Riferimenti, Processi Primari, Processi di Supporto e Metriche Utilizzate",
+        "Autore" : "Filippo Bellon"
+      },
+      {
+        "Versione" : "0.0.3",
+        "Data" : "2025-01-03",
+        "Sez.modificate": "Qualità di Processo e Qualità di Prodotto - Rimozione Processi organizzativi e spostamento Documentazione da Qualità di processo a Qualità di prodotto",
+        "Autore" : "Filippo Bellon"
+      },
+      {
+        "Versione" : "0.0.4",
+        "Data" : "2025-01-04",
+        "Sez.modificate": "Qualità di Prodotto - Aggiunta sezione Software e modifiche a sezione Metriche Utilizzate ",
+        "Autore" : "Filippo Bellon"
+      },
+      {
+        "Versione" : "0.0.5",
+        "Data" : "2025-01-05",
+        "Sez.modificate": "Qualità di Prodotto - Modificate sezioni Metriche Utilizzate e Software",
+        "Autore" : "Filippo Bellon"
+      },
+      {
+        "Versione" : "0.0.6",
+        "Data" : "2025-01-11",
+        "Sez.modificate": "Qualità di Processo - Processi di Supporto, \n Metriche Utilizzate, \n Processi Organizzativi",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "0.0.7",
+        "Data" : "2025-01-18",
+        "Sez.modificate": "Qualità di Processo - Processi di Supporto, \n Metriche Utilizzate",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "0.0.8",
+        "Data" : "2025-01-19",
+        "Sez.modificate": "Qualità di Prodotto - Metriche Utilizzate,\n  Specifica dei Test,\n Specifica dei Test - Formato codice dei test ",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2025-01-20",
+        "Verificatore" : "Alberto Maggion"
+      },
+      {
+        "Versione" : "0.1.1",
+        "Data" : "2025-01-27",
+        "Sez.modificate": "Specifica dei Test - Test di Sistema,\n Specifica dei Test - Test di Accettazione",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "0.1.2",
+        "Data" : "2024-12-26",
+        "Sez.modificate": "Resoconto delle Attività di Verifica - Verifica della documentazione,\n Resoconto delle Attività di Verifica - Verifica dei Processi",
+        "Autore" : "Annalisa Egidi"
+      }
+    ]
+  },
+   "Qualità" : {
+    "Processo" : {
+      "ProcessiPrimari" : {
+        "keys" : [
+          "Obbiettivo",
+          "Descrizione",
+          "Metriche"
+        ],
+        "values": [
+          {
+            "Obbiettivo" : "Sviluppo \n(in particolare Codifica)",
+            "Descrizione" : "Processo che ha lo scopo di determinare le attività e i compiti necessari per la realizzazione del prodotto richiesto, in accordo con le esigenze del proponente.",
+            "Metriche": "MPC-RSI, MPC-SOR"
+          },
+          {
+            "Obbiettivo" : "Fornitura",
+            "Descrizione" : "Processo che consiste nel decidere procedure e risorse da utilizzare per lo sviluppo del progetto.",
+            "Metriche": "MPC-BV, MPC-SV,\nMPC-ETC, MPC-EAC,\nMPC-CPI, MPC-AC,\nMPC-PV, MPC-EV"
+          }
+        ]
+      },
+      "ProcessiSupporto" : {
+        "keys" : [
+          "Obbiettivo",
+          "Descrizione",
+          "Metriche"
+        ],
+        "values": [
+          {
+            "Obbiettivo" : "Gestione della qualità",
+            "Descrizione" : "Processo con lo scopo di assicurare che il prodotto e i servizi offerti rispettino gli obiettivi di qualità preposti.",
+            "Metriche": "MPC-QMS"
+          },
+          {
+            "Obbiettivo" : "Verifica",
+            "Descrizione" : "Processo con lo scopo di controllare che i servizi realizzati soddisfino i requisiti specificati dal cliente",
+            "Metriche": "MPC-VCC, MPC-VPTCP, MPC-VFTCP"
+          }
+        ]
+      },
+      "ProcessiOrganizzativi" : {
+        "keys" : [
+          "Obbiettivo",
+          "Descrizione",
+          "Metriche"
+        ],
+        "values": [
+          {
+            "Obbiettivo" : "Gestione Organizzativa",
+            "Descrizione" : "Processo che si occupa di regolare le modalità di coordinamento del gruppo",
+            "Metriche": "MPC-ORG"
+          }
+        ]
+      },
+      "ProcessiPrimariMetriche" : {
+        "Fornitura" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPC-EV",
+              "Nome Metrica" : "Earned Value",
+              "Valore accettabile": "≥ 0",
+              "Valore ottimale": "≤ EAC"
+            },
+            {
+              "Codice" : "MPC-PV",
+              "Nome Metrica" : "Planned Value",
+              "Valore accettabile": "≥ 0",
+              "Valore ottimale": "≤ BAC"
+            },
+            {
+              "Codice" : "MPC-AC",
+              "Nome Metrica" : "Actual Cost",
+              "Valore accettabile": "≥ 0",
+              "Valore ottimale": "≤ EAC"
+            },
+            {
+              "Codice" : "MPC-CPI",
+              "Nome Metrica" : "Cost Performance Index ",
+              "Valore accettabile": "compreso tra 0.95 e 1.05",
+              "Valore ottimale": "1"
+            },
+            {
+              "Codice" : "MPC-EAC",
+              "Nome Metrica" : "Estimate At Completion ",
+              "Valore accettabile": "± 5% rispetto al BAC",
+              "Valore ottimale": "BAC"
+            },
+            {
+              "Codice" : "MPC-ETC",
+              "Nome Metrica" : "Estimate To Completion ",
+              "Valore accettabile": "≥ 0",
+              "Valore ottimale": "≤ EAC"
+            },
+            {
+              "Codice" : "MPC-SV",
+              "Nome Metrica" : "Schedule Variance ",
+              "Valore accettabile": "± 10% rispetto al BAC",
+              "Valore ottimale": "0%"
+            },
+            {
+              "Codice" : "MPC-BV",
+              "Nome Metrica" : "Budget Variance",
+              "Valore accettabile": "± 10% rispetto al BAC",
+              "Valore ottimale": "0%"
+            }
+          ]
+        },
+        "Sviluppo" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPC-SOR",
+              "Nome Metrica" : "Satisfied Obligatory Requirements",
+              "Valore accettabile": "100%",
+              "Valore ottimale": "100%"
+            },
+            {
+              "Codice" : "MPC-RSI",
+              "Nome Metrica" : "Requirements Stability Index",
+              "Valore accettabile": "≥ 70%",
+              "Valore ottimale": "100%"
+            }
+          ]
+        }
+      },
+      "ProcessiSupportoMetriche" : {
+        "Verifica" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPC-VPTCP",
+              "Nome Metrica" : "Passed Test Cases Percentage",
+              "Valore accettabile": "≥80%",
+              "Valore ottimale": "100%"
+            },
+            {
+              "Codice" : "MPC-VFTCP",
+              "Nome Metrica" : "Failed Test Cases Percentage",
+              "Valore accettabile": "≤20%",
+              "Valore ottimale": "0%"
+            },
+            {
+              "Codice" : "MPC-VCC",
+              "Nome Metrica" : "Code Coverage",
+              "Valore accettabile": "≥75%",
+              "Valore ottimale": "≥90%"
+            }
+          ]
+        },
+        "GestioneQualità" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPC-QMS",
+              "Nome Metrica" : "Quality Metrics Satisfied",
+              "Valore accettabile": "≥ 90%",
+              "Valore ottimale": "100%"
+            }
+          ]
+        }
+      },
+      "ProcessiOrganizzativiMetriche" : {
+          "GestioneOrganizzativa" : {
+            "keys" : [
+              "Codice",
+              "Nome Metrica",
+              "Valore accettabile",
+              "Valore ottimale"
+            ],
+            "values": [
+              {
+                "Codice" : "MPC-ORG",
+                "Nome Metrica" : "Non-calculated risk",
+                "Valore accettabile": "≤5%",
+                "Valore ottimale": "0"
+              }
+            ]
+          }
+        }
+      },
+    "Prodotto" : {
+      "Documentazione" : {
+        "keys" : [
+          "Obbiettivo",
+          "Descrizione",
+          "Metriche"
+        ],
+        "values": [
+          {
+            "Obbiettivo" : "Leggibilità",
+            "Descrizione" : "Il contenuto dei documenti deve essere comprensibile all’utente.",
+            "Metriche": "MPD-IG"
+          },
+          {
+            "Obbiettivo" : "Correttezza Linguistica",
+            "Descrizione" : "I documenti devono essere privi di errori grammaticali.",
+            "Metriche": "MPD-EO"
+          }
+        ]
+      },
+      "Software" : {
+        "keys" : [
+          "Obbiettivo",
+          "Descrizione",
+          "Metriche"
+        ],
+        "values": [
+          {
+            "Obbiettivo" : "Copertura dei Test",
+            "Descrizione" : "Capacità del prodotto Software di superare i test",
+            "Metriche": "MPD - CTS"
+          },
+          {
+            "Obbiettivo" : "Funzionalità",
+            "Descrizione" : "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
+            "Metriche": "MPD-CROB, MPD-CRD, \nMPD-CROP"
+          },
+          {
+            "Obbiettivo" : "Manutenibilità",
+            "Descrizione" : "Capacità di permettere future correzioni e modifiche senza compromettere l’intero prodotto software.",
+            "Metriche": "MPD-CCM"
+          },
+          {
+            "Obbiettivo" : "Usabilità",
+            "Descrizione" : "Capacità di essere comprensibile e di facile utilizzo per l’utente.",
+            "Metriche": "MPD-SU, MPD-TA"
+          },
+          {
+            "Obbiettivo" : "Affidabilità",
+            "Descrizione" : "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
+            "Metriche": "MPD-GE"
+          },
+          {
+            "Obbiettivo" : "Efficienza",
+            "Descrizione" : "Capacità di svolgere un compito nel minor tempo possibile e con l’utilizzo della minor quantità possibile di risorse.",
+            "Metriche": "MPD-TMR"
+          }
+        ]
+      },
+      "DocumentazioneMetriche" : {
+        "DocumentazioneTab" : {
+          "keys" : [
+              "Codice",
+              "Nome Metrica",
+              "Valore accettabile",
+              "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-IG",
+              "Nome Metrica" : "Leggibilità: Indice di Gulpease",
+              "Valore accettabile": "≥ 60",
+              "Valore ottimale": "100"
+            },
+            {
+              "Codice" : "MPD-EO",
+              "Nome Metrica" : "Correttezza Linguistica: Errori Ortografici",
+              "Valore accettabile": "0%",
+              "Valore ottimale": "0%"
+            }
+          ]
+        }
+      },
+      "SoftwareMetriche" : {
+        "Funzionalità" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-CROB",
+              "Nome Metrica" : "Copertura dei requisiti obbligatori",
+              "Valore accettabile": "100%",
+              "Valore ottimale": "100%"
+            },
+            {
+              "Codice" : "MPD-CRD",
+              "Nome Metrica" : "Copertura dei requisiti desiderabili",
+              "Valore accettabile": "≥ 80%",
+              "Valore ottimale": "100%"
+            },
+            {
+              "Codice" : "MPD-CROP",
+              "Nome Metrica" : "Copertura dei requisiti opzionali",
+              "Valore accettabile": "≥ 60%",
+              "Valore ottimale": "100%"
+            }
+          ]
+        },
+        "Usabilità" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-SU",
+              "Nome Metrica" : "Semplicità di utilizzo",
+              "Valore accettabile": "≤ 7 click",
+              "Valore ottimale": "≤ 5 click"
+            },
+            {
+              "Codice" : "MPD-TA",
+              "Nome Metrica" : "Tempo di apprendimento",
+              "Valore accettabile": "≤ 10 minuti",
+              "Valore ottimale": "≤ 5 minuti"
+            }
+          ]
+        },
+        "Efficienza" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-TMR",
+              "Nome Metrica" : "Tempo medio di risposta",
+              "Valore accettabile": "≤ 6 secondi",
+              "Valore ottimale": "≤ 4 secondi"
+            }
+          ]
+        },
+        "Manutenibilità" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-CCM",
+              "Nome Metrica" : " Complessità Ciclomatica per Metodo",
+              "Valore accettabile": "≤ 5",
+              "Valore ottimale": "≤ 4"
+            }
+          ]
+        },
+        "Affidabilità" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-GE",
+              "Nome Metrica" : "Gestione degli Errori",
+              "Valore accettabile": "≥ 60%",
+              "Valore ottimale": "≥ 80%"
+            }
+          ]
+        },
+        "CoperturaTest" : {
+          "keys" : [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice" : "MPD-CTS",
+              "Nome Metrica" : "Software Test Coverage",
+              "Valore accettabile": "≥ 80%",
+              "Valore ottimale": "100%"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Test":{
+    "TestSistema": {
+      "keys": [
+        "Codice",
+        "Descrizione",
+        "Requisito",
+        "Stato"
+      ],
+      "values":[
+       {
+          "Codice": "TS-1",
+          "Descrizione": "Verificare che l'utente possa visualizzare le domande e rispettive risposte attese presente nel sistema",
+          "Requisito": "RF-1.1",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-2",
+          "Descrizione": "Verificare che l'utente possa modificare una domanda presente nel sistema",
+          "Requisito": "RF-1.2",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-3",
+          "Descrizione": "Verificare che l'utente possa modificare la risposta attesa associata ad una domanda presente nel sistema",
+          "Requisito": "RF-1.3",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-4",
+          "Descrizione": "Verificare che l'utente possa eliminare dal sistema una domanda con la sua risposta attesa associata",
+          "Requisito": "RF-1.4",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-5",
+          "Descrizione": "Verificare che l'utente possa aggiungere manualmente tramite tastiera una domanda e la sua relativa risposta attesa",
+          "Requisito": "RF-1.5.1",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-6",
+          "Descrizione": "Verificare che l'utente possa aggiungere una o o più domande con relative risposte attese tramite l'upload di un file strutturato",
+          "Requisito": "RF-3.5.2",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-7",
+          "Descrizione": "Verificare che l'utente possa suddividere le domande e le relative risposte attese presenti nel sistema in set distinti",
+          "Requisito": "RF-2.6",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-8",
+          "Descrizione": "Verificare che l'utente possa eseguire il test con le domande e le relative risposte presenti nel sistema",
+          "Requisito": "RF-1.7",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-9",
+          "Descrizione": "Verificare che l'utente, dopo aver eseguito il test, possa visualizzare i risultati di una specifica domanda",
+          "Requisito": "RF-1.8",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-10",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test svolto sull'intero insieme di domande",
+          "Requisito": "RF-1.9",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-11",
+          "Descrizione": "Verificare che l'utente, dopo aver eseguito il test su più di una domanda, possa visualizzaresolo le domande che hanno avuto esito peggiore",
+          "Requisito": "RF-1.10",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-12",
+          "Descrizione": "Verificare che l'utente possa visualizzare lo score relativo ad ogni domanda valutata nel test",
+          "Requisito": "RF-1.11",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-13",
+          "Descrizione": "Verificare che l'utente possa scaricare i risultati del test eseguito",
+          "Requisito": "RF-2.12",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-14",
+          "Descrizione": "Verificare che l'utente possa accedere allo storico dei test effettuati e visualizzarne i risultati",
+          "Requisito": "RF-3.13",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-15",
+          "Descrizione": "Verificare che l'utente possa mettere a confronto i risultati di due test",
+          "Requisito": "RF-2.14",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-16",
+          "Descrizione": "Verificare che l'utente possa creare una nuova etichetta",
+          "Requisito": "RF-2.15",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-17",
+          "Descrizione": "Verificare che l'utente possa eliminare dal sistema una spefica etichetta, e che questa sia rimossa dalle domande a cui era stata assegnata",
+          "Requisito": "RF-2.16",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-18",
+          "Descrizione": "Verificare che l'utente possa assegnare un'etichetta a una o più domande presenti all'interno del sistema",
+          "Requisito": "RF-2.17",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-19",
+          "Descrizione": "Verificare che l'utente possa rimuovere un'etichetta da una domanda a cui era stata assegnata",
+          "Requisito": "RF-2.18",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-20",
+          "Descrizione": "Verificare che l'utente possa modificare quali domande sono associate ad una etichetta",
+          "Requisito": "RF-2.19",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-21",
+          "Descrizione": "Verificare che venga mostrato un messaggio di errore che indica la presenza di un formato non corretto di almeno una linea del file in caso di errore nel file caricato",
+          "Requisito": "RF-3.20.1",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-22",
+          "Descrizione": "Verificare che venga visualizzato un messaggio d'errore se l'utente vuole creare una etichetta avente un nome già presente nel sistema",
+          "Requisito": "RF-3.21.1",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-23",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di una etichetta",
+          "Requisito": "RF-2.22",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-24",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda",
+          "Requisito": "RF-2.23",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-25",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa",
+          "Requisito": "RF-2.24",
+          "Stato": "NI"
+        },
+        {
+          "Codice": "TS-26",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di una domanda e relativa risposta attesa",
+          "Requisito": "RF-2.25",
+          "Stato": "NI"
+        }
+      ]
+    },
+    "TestAccettazione":{
+        "keys" : [
+          "Codice",
+          "Descrizione",
+          "Stato"
+        ],
+        "values":[
+          {
+            "Codice": "TA-1",
+            "Descrizione": "Verificare che l'utente possa consultare il manuale utente",
+            "Stato": "NI"
+          }
+        ]
+    }
+  }
+}
+

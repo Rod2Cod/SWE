@@ -1,0 +1,2 @@
+- Stesura milestone e baseline
+- Discussione Piano di Progetto e Piano di Qualifica

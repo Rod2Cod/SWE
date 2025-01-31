@@ -1,0 +1,5 @@
+- Chi fa il verbale
+- Status documenti RTB
+- Situazione PoC
+- Discussione ridistribuzione lavoro
+- To Do

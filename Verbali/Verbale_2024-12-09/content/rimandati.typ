@@ -1,0 +1,1 @@
+- Confronto situazione per stesura Milestone e Baseline

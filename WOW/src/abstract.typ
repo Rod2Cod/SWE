@@ -1,0 +1,1 @@
+Questo documento serve a fornire le informazioni necessarie ad ogni membro del team riguardo i metodo di lavoro adottati e tutte le procedure da applicare.

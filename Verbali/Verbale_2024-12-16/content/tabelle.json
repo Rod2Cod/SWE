@@ -1,0 +1,71 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2024-12-17",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Luca Calzetta"
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2024-12-17",
+        "Sez.modificate": "",
+        "Verificatore": "Alessandro Rossi"
+      },
+      {
+        "Versione" : "1.0.0",
+        "Data" : "2024-12-19",
+        "Sez.modificate": "",
+        "Validatore": "Annalisa Egidi"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": "Responsabile"
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Amministratore"
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P",
+        "Ruolo": "Verificatore"
+      }
+    ]
+  }
+}

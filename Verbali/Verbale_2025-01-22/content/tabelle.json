@@ -1,0 +1,76 @@
+{
+  "versione" : {
+    "keys" : [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione" : "0.0.1",
+        "Data" : "2025-01-22",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : "Michele Nesler"
+      }
+    ]
+  },
+  "presenze" : {
+    "keys" : [
+      "Rif",
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
+    "values": [
+      {
+        "Rif":"S",
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "A",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": "Analista"
+      },
+      {
+        "Rif":"S",
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "A",
+        "Ruolo": "Ritirato"
+      },
+      {
+        "Rif":"A",
+        "Nominativo": "Gregori Piccoli",
+        "Presenze": "P"
+      },
+      {
+        "Rif":"A",
+        "Nominativo": "Michele Tollot",
+        "Presenze": "P"
+      }
+    ]
+  }
+}

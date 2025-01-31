@@ -1,0 +1,1 @@
+Il presente documento vuole essere una guida per aiutare i membri del gruppo nel primo approccio alle tecnologie utilizzate nel progetto e non appartenenti alle conoscenze di base di tutti i membri.

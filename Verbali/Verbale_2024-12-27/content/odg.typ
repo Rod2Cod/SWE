@@ -1,0 +1,10 @@
+- Chi fa il verbale
+- Chi fa il responsabile
+- Chi fa il diario di bordo
+- Condivisione progressi
+- Situazione Piano di Progetto
+- Discussione su status Analisi dei Requisiti
+- Preparazione incontro con Cardin
+- Piano di Qualifica
+- Confronto situazione per stesura Milestone e Baseline
+- Aggiornamento Glossario ed indicazione parole in documenti

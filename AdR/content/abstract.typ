@@ -1,0 +1,1 @@
+Documento all'interno della quale verrà prodotta l'analisi dei requisiti comprendente sia i casi d'uso delle applicazioni, sia i requisiti funzionali, di qualità e di vincolo delle stesse.

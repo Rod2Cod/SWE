@@ -1,0 +1,1 @@
+Il giorno 27/12/2024 dalle ore 9.30 alle 11.30 il gruppo Rod2Cod si riunisce in videochiamata su Teams.
