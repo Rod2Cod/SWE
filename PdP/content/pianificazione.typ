@@ -47,7 +47,7 @@
       - Stesura del *Piano di Progetto*
         - Stesura dell'*Analisi dei Rischi*
         - *Stesura generale* comprendente altre parti del documento
-      - Continuazione stesura *Analisi dei Requisiti*
+      - Continuazione stesura dell'*Analisi dei Requisiti*
         - *Aggiornamento* generale del documento
         - Raffinamento dei *casi d'uso* precedentemente aggiunti
         - Aggiunta dei primi *Requisiti* ricavati
@@ -90,7 +90,7 @@
         - Aggiunta *UML* definitivi
       - Continuazione della stesura del *Piano di Progetto*
       - Sviluppo del *PoC*
-        - Ultime *verifiche* sistema di valutazione e backend
+        - Ultime *verifiche* sistema di valutazione e del backend
         - *Unione* sistema di valutazione con backend e webpage
     
     *Suddivisione del lavoro*
@@ -101,7 +101,7 @@
       ]
     )
 
-  === Sesto Periodo 14/01/202 - 27/01/2025
+  === Sesto Periodo 14/01/2025 - 27/01/2025
     *Obiettivi*
       - Continuazione della stesura del *Piano di Qualifica*
       - Terminazione stesura *Analisi dei Requisiti*

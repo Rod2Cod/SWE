@@ -5,7 +5,7 @@
 == Introduzione
   Un preventivo rappresenta un documento di riferimento utilizzato per fornire una stima riguardante il consumo di risorse necessario per lo svolgimento delle attività programmate. In questa parte, vengono presi in considerazione i costi economici e temporali affrontati dal gruppo in ciascun periodo di lavoro.
   
-  Per semplicità verranno usate le seguenti abbreviazioni :
+  Per semplicità verranno usate le seguenti abbreviazioni:
   - *Res* : Responsabile
   - *Amm* : Amministratore
   - *Ana* : Analista
@@ -29,7 +29,7 @@
   *Distribuzione delle ore per ruolo*
   #image("Graphs/p1_dist_ore.png",height: 18%)
   ])
-  *Preventivo costi*
+  *Preventivo Costi*
   #table(
   columns: 2,
   stroke: none,
@@ -123,7 +123,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel quarto periodo.*
-  #image("Graphs/p5_budget.png",height: 20%)
+  #image("Graphs/p4_budget.png",height: 20%)
   #pagebreak()
   === Quinto periodo 31/12/2024 - 13/01/2025
   *Preventivo Orario*
@@ -183,7 +183,7 @@
   #pagebreak()
   === Settimo periodo 28/01/2025 - 10/02/2025
     *Preventivo Orario*
-  #table-json(preventivi.at("6"), 8)
+  #table-json(preventivi.at("7"), 8)
   #table(
   columns: 2,
   stroke: none,

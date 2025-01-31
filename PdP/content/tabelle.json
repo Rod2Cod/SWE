@@ -80,6 +80,12 @@
           "Data" : "2025-01-27",
           "Sez.modificate" : "Consuntivo - Aggiunto Sesto Periodo \n Pianificazione e Preventivo - Aggiunto Settimo Periodo",
           "Autore" : "Alberto Maggion"
+        },
+        {
+          "Versione" : "0.2.0",
+          "Data" : "2025-01-31",
+          "Sez.modificate" : "",
+          "Verificatore" : "Luca Calzetta"
         }
       ]
     },
