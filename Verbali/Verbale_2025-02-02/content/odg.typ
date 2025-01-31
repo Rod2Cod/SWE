@@ -1,5 +1,5 @@
-- Verbale esterno 22
 - PowerPoint PoC
+- Verbale esterno 22
 - Situazione glossario
 - Grafici attività di verifica PdQ
 - Terminazione documenti per RTB

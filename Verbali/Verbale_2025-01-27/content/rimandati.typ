@@ -1,0 +1,3 @@
+- Grafici per il PdQ
+- Terminazione dei documenti: Analisi dei Requisiti, Piano di Qualifica, Piano di Progetto
+- Richiesta RTB Cardin
