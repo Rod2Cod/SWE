@@ -20,7 +20,7 @@
 #figure(
   image("../Grafici/EAC.png", width: 80%),
   caption: [
-    Resoconto Estimated At Completion
+    Resoconto Estimated at Completion
   ],
 )
 === Budget Variance e Schedule Variance
