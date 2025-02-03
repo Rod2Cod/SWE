@@ -495,7 +495,7 @@
       "values":[
        {
           "Codice": "TS-1",
-          "Descrizione": "Verificare che l'utente possa visualizzare le domande e rispettive risposte attese presente nel sistema",
+          "Descrizione": "Verificare che l'utente possa visualizzare le domande e rispettive risposte attese presenti nel sistema",
           "Requisito": "RF-1.1",
           "Stato": "NI"
         },
@@ -555,7 +555,7 @@
         },
         {
           "Codice": "TS-11",
-          "Descrizione": "Verificare che l'utente, dopo aver eseguito il test su più di una domanda, possa visualizzaresolo le domande che hanno avuto esito peggiore",
+          "Descrizione": "Verificare che l'utente, dopo aver eseguito il test su più di una domanda, possa visualizzare solo le domande che hanno avuto esito peggiore",
           "Requisito": "RF-1.10",
           "Stato": "NI"
         },
@@ -621,7 +621,7 @@
         },
         {
           "Codice": "TS-22",
-          "Descrizione": "Verificare che venga visualizzato un messaggio d'errore se l'utente vuole creare una etichetta avente un nome già presente nel sistema",
+          "Descrizione": "Verificare che venga visualizzato un messaggio d'errore se l'utente vuole creare un'etichetta avente un nome già presente nel sistema",
           "Requisito": "RF-3.21.1",
           "Stato": "NI"
         },
