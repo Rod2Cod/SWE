@@ -1,2 +1,3 @@
 - Chiarimenti su Piano di Qualifica
 - Chiarimenti su Piano di Progetto
+- Esplorazione modelli alternativi LLM
