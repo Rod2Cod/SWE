@@ -6,7 +6,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      FLASK_APP: main.py
+      FLASK_APP: app.py
     container_name: backend
     networks:
       - shared_network

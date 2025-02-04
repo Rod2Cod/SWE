@@ -1,7 +1,6 @@
 services:
   postgres:
     image: postgres:15
-    container_name: postgres_container
     restart: always
     environment:
       POSTGRES_USER: admin
@@ -11,6 +10,8 @@ services:
       - "5432:5432"
     volumes:
       - ./db_data:/var/lib/postgresql/data
+    networks:
+      - shared_network
 
   pgadmin:
     image: dpage/pgadmin4
@@ -25,4 +26,9 @@ services:
       - postgres
     volumes:
       - ./pgadmin_data:/var/lib/pgadmin
+    networks:
+      - shared_network
 
+networks:
+  shared_network:
+    external: true
