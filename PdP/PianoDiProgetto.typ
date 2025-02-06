@@ -4,7 +4,8 @@
 // Funzioni da includere
 #import "../functions.typ": table-json
 #import "../Glossario/Glossario.typ": glossario-therms 
-#import "../functions.typ": inDict 
+#import "../functions.typ": inDict
+
 #set page(paper: "a4",
   columns: 1,
   numbering: "1",

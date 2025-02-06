@@ -46,6 +46,30 @@
   )
 }
 
+#let table-json-cal(data,fractions) = {
+  let keys = data.at("keys")
+  let values = data.at("values")
+
+
+  table(
+      fill: (_,y) =>
+      if y == 0 {gray.lighten(50%)},
+      align: horizon + center,
+      columns: fractions,
+      ..keys.map(key => {strong(key)}),
+      ..values.map(
+        row => keys.map(
+          key => if key == "Revisione" {
+                    //evidenzio contenuto colonna "codice"
+                    emph(row.at(key, default: []))
+                 } else { 
+                  row.at(key, default:[])
+                 }
+        )
+      ).flatten()
+  )
+}
+
 #let printDict(dict) = {
   let sortedDict = dict.pairs().sorted(key: x => upper(x.first()))
   let printed = none

@@ -86,8 +86,46 @@
         "Data": "2025-01-31",
         "Sez.modificate": "",
         "Verificatore": "Luca Calzetta"
+      },
+      {
+        "Versione": "0.2.1",
+        "Data": "2025-02-06",
+        "Sez.modificate": "Calendario di massima del progetto - Inserita sezione",
+        "Autore": "Filippo Bellon"
       }
     ]
+  },
+  "calendario_massima" : {
+    "previsione" : {
+      "keys" : ["Revisione", "Data"],
+      "values" : [
+        {
+          "Revisione" : "Requirements and Technology Baseline",
+          "Data" : "2025-01-20"
+        },
+        {
+          "Revisione" : "Product Baseline",
+          "Data" : "2025-03-17"
+        },
+        {
+          "Revisione" : "Customer Acceptance",
+          "Data" : "2025-03-20"
+        }
+      ]
+    },
+    "revisione" : {
+      "keys" : ["Revisione", "Data"],
+      "values" : [
+        {
+          "Revisione" : "Product Baseline",
+          "Data" : "2025-03-14"
+        },
+        {
+          "Revisione" : "Customer Acceptance",
+          "Data" : "2025-03-17"
+        }
+      ]
+    }
   },
   "rischi": {
     "interni": {
