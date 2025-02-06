@@ -170,6 +170,8 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
 )
   *Grafico a torta del budget speso e rimanente al termine del quinto periodo.*
   #image("Graphs/c5_budget.png",height: 20%)
+  *Retrospective*:
+  In questo periodo ci siamo concentrati sullo sviluppo del PoC. La principale fonte di problemi è stato il setup del container docker. 
 #pagebreak()
   === Sesto periodo 14/01/2025 - 27/01/2025
   *Consuntivo Orario*
@@ -199,7 +201,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
   #image("Graphs/c6_budget.png",height: 20%)
   *Retrospective*:
 
-  In questo periodo abbiamo definito con l'azienda quale convenzione utilizzare per la stesura degli UML dei casi d'uso come avevamo deciso nel quarto periodo, abbiamo poi presentato l'Analisi dei Requisiti e il PoC all'azienda, che si è dimostrata soddisfatta. Dal confronto abbiamo dedotto che mostrare le valutazioni assegnate da ogni metrica, oltre alla valutazione finale, aggiunge molto valore al prodotto. Attendendo la presentazione dell'RTB e dovendo studiare per gli esami, abbiamo ultimato AdR, PdQ e PdP e deciso di non fare altro, anche se lo avevamo preventivato. Per questo, il costo del periodo è risultato molto più basso di quello preventivato.\
-  Per prevenire situazioni simili in futuro, è stato deciso che ogni membro comunicherà preventivamente gli impegni maggiori, come gli esami, agli altri, in modo da poterli tenere in considerazione nei preventivi futuri.
+In questo periodo abbiamo definito con l'azienda quale convenzione utilizzare per la stesura degli UML dei casi d'uso come avevamo deciso nel quarto periodo, la quale ha accettato la nostra proposta. Abbiamo poi presentato l'analisi dei requisiti e il PoC all'azienda che si è dimostrata entusiasta. Dal confronto abbiamo estrapolato che mostrare le valutazioni assegnate da ogni metrica oltre alla valutazione finale aggiunge molto valore al prodotto. Ultimare AdR, PdQ e PdP, hanno richiesto parecchio meno tempo di quello che avevamo previsto, per questo il costo del periodo è risultato molto più basso di quello preventivato, attendendo però la presentazione dell'Rtb non abbiamo fatto altro che sarebbe potuto risultare inutile in caso di esito negativo.  In particolare ci siamo accorti di aver sovrastimato l'impegno previsto da parte dei verificatori, in quanto la prima stesura di questi documenti era già buona in generale. Ne terremo conto nei preventivi futuri. 
+
 
 #pagebreak()
