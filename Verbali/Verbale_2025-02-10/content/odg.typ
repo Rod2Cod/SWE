@@ -1,1 +1,2 @@
 - Discussione tecnologie progetto
+- Definizione nuova revisione PB e CA
