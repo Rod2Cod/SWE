@@ -1,3 +1,4 @@
+- Ruoli stesura verbale
 - Discussione tecnologie progetto
 - Definizione nuova revisione PB e CA
 - Discussione esito RTB e nuove attività
