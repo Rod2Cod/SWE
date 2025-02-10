@@ -1,5 +1,3 @@
-
-
 == Verifica della documentazione
 === Errori Ortografici
 #figure(
@@ -16,11 +14,11 @@
   ],
 )
 == Verifica dei Processi
-=== Estimated at Completion
+=== Estimate at Completion
 #figure(
   image("../Grafici/EAC.png", width: 80%),
   caption: [
-    Resoconto Estimated at Completion
+    Resoconto Estimate at Completion
   ],
 )
 === Budget Variance e Schedule Variance
@@ -41,7 +39,7 @@
 #figure(
   image("../Grafici/EV_PV.png", width: 80%),
   caption: [
-    Resoconto Earned value e Planned value
+    Resoconto Earned Value e Planned value
   ],
 )
 === Requirements Stability Index e Saisfied Obligatory Requirements
