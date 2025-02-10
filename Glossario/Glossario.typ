@@ -52,14 +52,14 @@
 #pagebreak()
 
 #let glossario = (
-  "AC|Actual Cost":"Metrica che misura i costi effettivi del progetto fino all'attualità.",
-  "BAC|Budget at Completion":"Budget ricavato dal preventivo presentato ad inizio progetto.",
-  "BV|Budget Variance":"Metrica che misura la differenza percentuale di budget tra quanto previsto nella pianificazione di un periodo e il costo effettivo. Viene definita come: (EV - AC).",
-  "CPI|Cost Performance Index":"Metrica che misura il rapporto tra il valore del lavoro effettivamente svolto ed il costo reale del lavoro fino al periodo di riferimento. Viene definita come: (EV / AC).",
+  "AC|Actual Cost":"Metrica che misura i costi effettivi sostenuti fino a un determinato momento nel progetto.",
+  "BAC|Budget at Completion":"Budget complessivo stimato per il completamento del progetto.",
+  "BV|Budget Variance":"Metrica che misura la differenza percentuale di budget tra quanto previsto nella pianificazione di un periodo e il costo effettivo. Viene definita come: BV = EV - AC.",
+  "CPI|Cost Performance Index":"Metrica che misura il rapporto tra il valore del lavoro effettivamente svolto ed il costo reale del lavoro fino al periodo di riferimento. Viene definita come: CPI = EV / AC.",
   "DOM|Document Object Model":"interfaccia di programmazione che rappresenta la struttura di un documento HTML o XML come una gerarchia di nodi.",
-  "EV-Earned Value":"Valore del lavoro effettivamente svolto fino a quel periodo.",
-  "EAC":"Estimated At Completion: metrica che misura il costo realizzativo stimato per terminare il progetto. Viene definita come: (BAC / CPI).",
-  "ETC|Estimated to Completion":"Metrica che stima i costi realizzativi fino alla fine del progetto. Viene definita come: (EAC - AC).",
+  "EV|Earned Value":"Valore del lavoro effettivamente svolto fino a quel periodo.",
+  "EAC|Estimate at Completion": "metrica che misura il costo realizzativo stimato per terminare il progetto. Viene definita come: (BAC / CPI).",
+  "ETC|Estimate to Complete":"Metrica che stima i costi realizzativi fino alla fine del progetto. Viene definita come: ETC = EAC - AC.",
   "GitHub":"Piattaforma online che consente agli sviluppatori di creare, salvare, gestire e condividere il proprio codice sorgente, facilitando la collaborazione e il controllo delle versioni.",
   "GH-Pages|GitHub Pages":"Sistema proposto da Github per l'impostazione di una pagina web relativa alla repository/organizzazione in questione.",
   "infrastructure as code":"Metodo di lavoro, riguardante l'infrastruttura IT, che utilizza file di configurazione scritti spesso in formato YAML o JSON, per definire e automatizzare la creazione, configurazione e gestione di risorse hardware e software.",
@@ -85,6 +85,7 @@
   "UC|Use Case":"Un caso d’uso definisce uno scenario in cui ci sono interazioni con il sistema da parte di uno o più u attori.",
   "Virtual DOM|Virtual Document Object Model":"Rappresentazione leggera e virtuale del DOM reale, utilizzata da librerie come React per ottimizzare l'aggiornamento delle interfacce utente.",
   "WSL|Windows Subsystem for Linux":"Funzionalità di Windows che consente di eseguire un ambiente Linux direttamente su Windows senza necessità di una macchina virtuale.",
+  "SOR|Satisfied Obligatory Requirements":"Percentuale dei requisiti obbligatori soddisfatti rispetto al totale definito.",
 )
 #let glossario-therms = ()
 

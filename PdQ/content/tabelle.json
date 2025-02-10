@@ -183,7 +183,7 @@
             },
             {
               "Codice" : "MPC-ETC",
-              "Nome Metrica" : "Estimate To Completion ",
+              "Nome Metrica" : "Estimate To Complete ",
               "Valore accettabile": "≥ 0",
               "Valore ottimale": "≤ EAC"
             },
