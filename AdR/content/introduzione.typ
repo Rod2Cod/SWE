@@ -1,6 +1,3 @@
-== Scopo del documento
-  Il documento ha lo scopo di definire i vari *casi d'uso* e i *requisiti* delle applicazioni che andranno sviluppate nel corso del progetto riguardante il capitolato scelto: Artificial QI.
-
 == Glossario
   Questo documento, come anche molti altri all'interno del progetto, viene affiancato da un *Glossario* presente all'interno della documentazione, contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.
 
