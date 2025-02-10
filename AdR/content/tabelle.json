@@ -107,6 +107,12 @@
         "Versione": "1.0.0",
         "Data": "2025-01-22",
         "Validatore": "Alberto Maggion"
+      },
+      {
+        "Versione": "1.0.1",
+        "Data": "2025-02-10",
+        "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
       }
     ]
   },

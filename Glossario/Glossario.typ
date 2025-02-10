@@ -85,6 +85,7 @@
   "UC|Use Case":"Un caso d’uso definisce uno scenario in cui ci sono interazioni con il sistema da parte di uno o più u attori.",
   "Virtual DOM|Virtual Document Object Model":"Rappresentazione leggera e virtuale del DOM reale, utilizzata da librerie come React per ottimizzare l'aggiornamento delle interfacce utente.",
   "WSL|Windows Subsystem for Linux":"Funzionalità di Windows che consente di eseguire un ambiente Linux direttamente su Windows senza necessità di una macchina virtuale.",
+  "Elemento domanda":"Elemento composto dalla coppia domanda testuale e risposta associata testuale.",
 )
 #let glossario-therms = ()
 
