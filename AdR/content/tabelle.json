@@ -120,175 +120,175 @@
     "values" : [
       {
         "Codice": "RF-1.1",
-        "Descrizione": "L’utente deve poter visualizzare le domande con le rispettive risposte attese",
+        "Descrizione": "L'utente deve poter visualizzare le domande con le rispettive risposte attese",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1"
       },
       {
         "Codice": "RF-1.2",
-        "Descrizione": "L’utente deve poter modificare una domanda",
+        "Descrizione": "L'utente deve poter modificare una domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC2"
       },
       {
         "Codice": "RF-1.3",
-        "Descrizione": "L’utente deve poter modificare una risposta attesa",
+        "Descrizione": "L'utente deve poter modificare una risposta attesa",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC3"
       },
       {
         "Codice": "RF-1.4",
-        "Descrizione": "L’utente deve poter eliminare una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter eliminare una domanda e la rispettiva risposta attesa",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC4"
       },
       {
         "Codice": "RF-1.5",
-        "Descrizione": "L’utente deve poter aggiungere una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter aggiungere una domanda e la rispettiva risposta attesa",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5"
       },
       {
         "Codice": "RF-1.5.1",
-        "Descrizione": "L’utente deve poter aggiungere manualmente una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una domanda e la rispettiva risposta attesa",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1"
       },
       {
         "Codice": "RF-3.5.2",
-        "Descrizione": "L’utente deve poter inserire nel sistema delle domande e rispettive risposte presenti in un file strutturato",
+        "Descrizione": "L'utente deve poter inserire nel sistema delle domande e rispettive risposte presenti in un file strutturato",
         "Classificazione": "Desiderabile",
         "Fonti": "UC5.2"
       },
       {
         "Codice": "RF-2.6",
-        "Descrizione": "L’utente deve poter suddividere le domande e le relative risposte in set",
+        "Descrizione": "L'utente deve poter suddividere le domande e le relative risposte in set",
         "Classificazione": "Opzionale",
         "Fonti": "UC6"
       },
       {
         "Codice": "RF-1.7",
-        "Descrizione": "L’utente deve poter eseguire il test utilizzando le domande e relative risposte presenti",
+        "Descrizione": "L'utente deve poter eseguire il test utilizzando le domande e relative risposte presenti",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC7"
       },
       {
         "Codice": "RF-1.8",
-        "Descrizione": "L’utente deve poter visualizzare i risultati del test relativi ad una singola domanda",
+        "Descrizione": "L'utente deve poter visualizzare i risultati del test relativi ad una singola domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC8"
       },
       {
         "Codice": "RF-1.9",
-        "Descrizione": "L’utente deve poter visualizzare il risultato del test relativo all’intero set di domande",
+        "Descrizione": "L'utente deve poter visualizzare il risultato del test relativo all'intero set di domande",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC9"
       },
       {
         "Codice": "RF-1.10",
-        "Descrizione": "L’utente deve poter visualizzare solo i risultati peggiori di uno specifico test",
+        "Descrizione": "L'utente deve poter visualizzare solo i risultati peggiori di uno specifico test",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC10"
       },
       {
         "Codice": "RF-1.11",
-        "Descrizione": "L’utente deve poter visualizzare tutte le domande eseguite nel test",
+        "Descrizione": "L'utente deve poter visualizzare tutte le domande eseguite nel test",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC11"
       },
       {
         "Codice": "RF-2.12",
-        "Descrizione": "L’utente deve poter scaricare i risultati del test",
+        "Descrizione": "L'utente deve poter scaricare i risultati del test",
         "Classificazione": "Opzionale",
         "Fonti": "UC12"
       },
       {
         "Codice": "RF-3.13",
-        "Descrizione": "L’utente deve poter visualizzare uno storico dei test effettuati",
+        "Descrizione": "L'utente deve poter visualizzare uno storico dei test effettuati",
         "Classificazione": "Desiderabile",
         "Fonti": "UC13"
       },
       {
         "Codice": "RF-2.14",
-        "Descrizione": "L’utente deve poter mettere a confronto differenti esecuzioni dei test",
+        "Descrizione": "L'utente deve poter mettere a confronto differenti esecuzioni dei test",
         "Classificazione": "Opzionale",
         "Fonti": "UC14"
       },
       {
         "Codice": "RF-2.15",
-        "Descrizione": "L’utente deve poter definire etichette che descrivano il contesto delle domande da porre",
+        "Descrizione": "L'utente deve poter definire etichette che descrivano il contesto delle domande da porre",
         "Classificazione": "Opzionale",
         "Fonti": "UC15"
       },
       {
         "Codice": "RF-2.16",
-        "Descrizione": "L’utente deve poter eliminare un etichetta",
+        "Descrizione": "L'utente deve poter eliminare un etichetta",
         "Classificazione": "Opzionale",
         "Fonti": "UC16"
       },
       {
         "Codice": "RF-2.17",
-        "Descrizione": "L’utente deve poter assegnare una o più etichette ad una domanda",
+        "Descrizione": "L'utente deve poter assegnare una o più etichette ad una domanda",
         "Classificazione": "Opzionale",
         "Fonti": "UC17"
       },
       {
         "Codice": "RF-2.18",
-        "Descrizione": "L’utente deve poter rimuovere un'etichetta assegnata ad una domanda",
+        "Descrizione": "L'utente deve poter rimuovere un'etichetta assegnata ad una domanda",
         "Classificazione": "Opzionale",
         "Fonti": "UC18"
       },
       {
         "Codice": "RF-2.19",
-        "Descrizione": "L’utente deve poter modificare quali sono le domande associate ad una etichetta",
+        "Descrizione": "L'utente deve poter modificare quali sono le domande associate ad una etichetta",
         "Classificazione": "Opzionale",
         "Fonti": "UC19"
       },
       {
         "Codice": "RF-3.20",
-        "Descrizione": "L’utente deve essere notificato della presenza di un errore nel caricamento delle domande da file",
+        "Descrizione": "L'utente deve essere notificato della presenza di un errore nel caricamento delle domande da file",
         "Classificazione": "Desiderabile",
         "Fonti": "UC20"
       },
       {
         "Codice": "RF-3.20.1",
-        "Descrizione": "L’utente deve essere notificato della presenza di un errore presente nei dati contenuti nel file",
+        "Descrizione": "L'utente deve essere notificato della presenza di un errore presente nei dati contenuti nel file",
         "Classificazione": "Desiderabile",
         "Fonti": "UC20.1"
       },
       {
         "Codice": "RF-3.21",
-        "Descrizione": "L’utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta",
+        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta",
         "Classificazione": "Desiderabile",
         "Fonti": "UC21"
       },
       {
         "Codice": "RF-3.21.1",
-        "Descrizione": "L’utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta con un nome già presente nel sistema",
+        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta con un nome già presente nel sistema",
         "Classificazione": "Desiderabile",
         "Fonti": "UC21.1"
       },
       {
         "Codice": "RF-2.22",
-        "Descrizione": "L’utente deve poter annullare l'operazione di eliminazione di un'etichetta",
+        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di un'etichetta",
         "Classificazione": "Opzionale",
         "Fonti": "UC22"
       },
       {
         "Codice": "RF-2.23",
-        "Descrizione": "L’utente deve poter annullare l'operazione di modifica di una domanda",
+        "Descrizione": "L'utente deve poter annullare l'operazione di modifica di una domanda",
         "Classificazione": "Opzionale",
         "Fonti": "UC23"
       },
       {
         "Codice": "RF-2.24",
-        "Descrizione": "L’utente deve poter annullare l'operazione di modifica di una risposta attesa",
+        "Descrizione": "L'utente deve poter annullare l'operazione di modifica di una risposta attesa",
         "Classificazione": "Opzionale",
         "Fonti": "UC24"
       },
       {
         "Codice": "RF-2.25",
-        "Descrizione": "L’utente deve poter annullare l'operazione di eliminazione di una domanda e relativa risposta attesa",
+        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di una domanda e relativa risposta attesa",
         "Classificazione": "Opzionale",
         "Fonti": "UC25"
       }
@@ -316,7 +316,7 @@
       },
       {
         "Codice": "RQ-1.3",
-        "Descrizione": "Deve essere fornito un manuale per l’utilizzo dell'applicativo.",
+        "Descrizione": "Deve essere fornito un manuale per l'utilizzo dell'applicativo.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       },
