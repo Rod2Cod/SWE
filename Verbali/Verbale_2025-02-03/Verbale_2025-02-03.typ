@@ -67,3 +67,4 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
 
 = Argomenti da discutere in futuro
 #rimandati
+Nessun argomento rimandato
