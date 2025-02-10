@@ -1,3 +1,4 @@
 - Discussione tecnologie progetto
 - Definizione nuova revisione PB e CA
 - Discussione esito RTB e nuove attività
+- GitHub Issues
