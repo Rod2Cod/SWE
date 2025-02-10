@@ -1,3 +1,3 @@
-- Chiarimenti su Piano di Qualifica
-- Chiarimenti su Piano di Progetto
+- Stesura del verbale
+- Avanzamento Documenti per RTB
 - Esplorazione modelli alternativi LLM

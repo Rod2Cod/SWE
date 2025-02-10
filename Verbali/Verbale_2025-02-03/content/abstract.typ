@@ -1,0 +1,1 @@
+Il giorno 03/02/2025 dalle ore 16.00 alle 16.40 il gruppo Rod2Cod si riunisce.
