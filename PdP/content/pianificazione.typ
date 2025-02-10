@@ -115,3 +115,17 @@
         Diagramma di Gantt per le attività del sesto periodo
       ]
     )
+
+  === Settimo Periodo 27/01/2025 - 10/02/2025
+    *Obiettivi*
+      - Inizio della fase di *Progettazione*
+      - Terminazione dei *documenti RTB*
+      - *Aggiustamenti* del *PoC*
+    
+    *Suddivisione del lavoro*
+    #figure(
+      image("gantt/Online Gantt 28-01_to_10-02.png"),
+      caption: [
+        Diagramma di Gantt per le attività del settimo periodo
+      ]
+    )
