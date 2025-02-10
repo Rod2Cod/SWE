@@ -7,7 +7,7 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
 // Funzioni da includere
 #import "../functions.typ": table-json
 
-#import "../Glossario/Glossario.typ": glossario-therms 
+#import "../../Glossario/Glossario.typ": glossario-therms
 #import "../functions.typ": inDict 
 // Inizio template
 #set page(paper: "a4",
