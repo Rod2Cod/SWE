@@ -1,1 +1,2 @@
-Il giorno 03/02/2025 dalle ore 16.00 alle XX.XX il gruppo Rod2Cod si riunisce.
+#import "../meta.typ": data
+Il giorno 10/02/2025 dalle ore 16.03 alle 19.33 il gruppo Rod2Cod si riunisce.
