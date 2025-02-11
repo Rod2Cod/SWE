@@ -113,6 +113,12 @@
         "Data": "2025-02-10",
         "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.0.2",
+        "Data": "2025-02-10",
+        "Descrizione": "Aggiunta preventivo periodo 8",
+        "Autore": "Alberto Maggion"
       }
     ]
   },
