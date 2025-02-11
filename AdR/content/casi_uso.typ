@@ -134,13 +134,12 @@
   - *Descrizione*: L’utente vuole poter suddividere le domande e relative risposte in set
   - *Scenario*:
     - L’utente seleziona l’opzione per creare un nuovo set di domande
-    - L’utente inserisce i dati relativi all’intero set di domante
-    - L'utente visualizza le domande e risposte nel sistema
     - L’utente seleziona le domande e relative risposte che vuole inserire
-    - L’utente crea il set
+    - L’utente inserisce i dati relativi all’intero set di domante
     - L'utente conferma la creazione del set
   - *Attore principale*: utente
   - *Precondizioni*:
+    - L'utente visualizza le domande e risposte nel sistema
     - È presente almeno una domanda con relativa risposta nel sistema
   - *Postcondizioni*:
     - Viene creato un nuovo set di domande
@@ -258,11 +257,11 @@
   - *Descrizione*: L'utente vuole poter visualizzare e confrontare i risultati di diverse esecuzioni dei test
   - *Scenario*:
     - L’utente seleziona l’opzione di confronto tra test differenti
-    - L'utente visualizza lo storico dei test effettuati
     - L’utente seleziona quali test confrontare
     - L'utente confronta i test
   - *Attore principale*: utente
   - *Precondizioni*:
+    - L'utente visualizza lo storico dei test effettuati
     - Sono stati eseguiti almeno due test
   - *Postcondizioni*:
     - Vengono visualizzati i risultati di diverse esecuzioni, messi a confronto
