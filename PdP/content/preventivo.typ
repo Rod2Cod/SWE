@@ -210,7 +210,33 @@
   #image("Graphs/p7_budget.png",height: 20%)
   #pagebreak()
   === Ottavo periodo 11/02/2025 - 24/02/2025
+      *Preventivo Orario*
+  #table-json(preventivi.at("8"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/p8_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/p8_dist_ore.png",height: 18%)
+  ])
+  *Preventivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+    #table-json(costi(preventivi.at("8")), 3)
+  ],
+  [
+    #table-json(preventivi.at("tot8"), 3)
+  ]
+)
   
+  *Grafico a torta del budget speso e rimanente preventivato nell'ottavo periodo.*
+  #image("Graphs/p8_budget.png",height: 20%)
+  #pagebreak()
   === Nono periodo 25/02/2025 - 10/03/2025
   
   === Decimo periodo 11/02/2025 - 17/03/2025

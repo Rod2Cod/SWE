@@ -647,6 +647,61 @@
         }
       ]
     },
+    "8": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+        {
+          "Nominativo": "Michele Nesler",
+          "Amm": 2,
+          "Ana": 2,
+          "Ptt": 4,
+          "Ver": 1,
+          "Totale": 9
+        },
+        {
+          "Nominativo": "Annalisa Egidi",
+          "Res": 2,
+          "Amm": 2,
+          "Ana": 2,
+          "Ptt": 4,
+          "Ver": 1,
+          "Totale": 11
+        },
+        {
+          "Nominativo": "Filippo Bellon",
+          "Amm": 2,
+          "Ana": 2,
+          "Ptt": 4,
+          "Ver": 1,
+          "Totale": 9
+        },
+        {
+          "Nominativo": "Luca Calzetta",
+          "Amm": 2,
+          "Ana": 2,
+          "Ptt": 4,
+          "Ver": 1,
+          "Totale": 9
+        },
+        {
+          "Nominativo": "Alberto Maggion",
+          "Amm": 2,
+          "Ana": 2,
+          "Ptt": 4,
+          "Ver": 1,
+          "Totale": 9
+        }
+      ]
+    },
     "tot1": {
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
@@ -711,9 +766,19 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 6955,
+          "Costo totale": 7210,
           "Budget preventivato": 1335,
-          "Budget rimanente": 4540
+          "Budget rimanente": 4285
+        }
+      ]
+    },
+    "tot8": {
+      "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
+      "values": [
+        {
+          "Costo totale": 8295,
+          "Budget preventivato": 1085,
+          "Budget rimanente": 3200
         }
       ]
     }
