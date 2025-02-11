@@ -18,7 +18,7 @@
 
     #text(25pt)[*#title*]
 
-    #text(size: 11pt)[#eval(riassunto, mode: "markup")]
+    #text(size: 11pt)[#riassunto]
 
     #text(size: 17pt, style: "italic")[Progetto di Ingegneria del Software \ A.A. 2024/2025]
 

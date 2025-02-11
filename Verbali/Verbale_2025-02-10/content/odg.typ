@@ -1,5 +1,5 @@
 - Ruoli stesura verbale
 - Discussione tecnologie progetto
-- Definizione nuova revisione PB e CA
+- Definizione nuove revisioni PB e CA
 - Discussione esito RTB e nuove attività
-- GitHub Issues
+- Github Issues

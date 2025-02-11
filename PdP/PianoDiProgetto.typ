@@ -1,10 +1,20 @@
  //Sezioni da includere del file meta.typ
-#import "meta.typ": title, abstract, tabelle, introduzione, calendario_massima, stima_costi, rischi_mitigazioni, pianificazione, preventivo, consuntivo
+#import "meta.typ": title, abstract, tabelle, introduzione, calendario_massima, stima_costi, rischi_mitigazioni, pianificazione, preventivo, consuntivo, data
 
 // Funzioni da includere
-#import "../functions.typ": table-json
+#import "../functions.typ": table-json, inDict, getLastDocVersion
 #import "../Glossario/Glossario.typ": glossario-therms 
-#import "../functions.typ": inDict
+
+#set list(indent: 1em)
+#set enum(indent: 1em)
+#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+
+//FRONTESPIZIO
+#import "../frontespizio.typ": show_content
+#let versione = getLastDocVersion(tabelle, "PdP")
+#show_content(title, data, versione, abstract)
+
+#pagebreak()
 
 #set page(paper: "a4",
   columns: 1,
@@ -19,24 +29,14 @@
   strong(it)
 }
 
-#set list(indent: 1em)
-#set enum(indent: 1em)
-#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
-//TITOLO
-#align(center, text(17pt)[*#title*])
-
 #align(center)[
   //VERSIONE DOCUMENTO
   #table-json(json(tabelle).at("versione"),6)
-  
-  //ABSTRACT
-  #set par(justify: true)
-  *Abstract* \
-  #abstract
 ]
 
 //TABLE OF CONTENTS
 #outline(indent: 1em)
+
 #pagebreak()
 
 = Introduzione

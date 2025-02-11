@@ -99,3 +99,4 @@
   return emph[#testo#sub("G")]
 }
 
+#let getLastDocVersion(data, path) = json("/" + path + "/" + data).at("versione").at("values").at(-1).at("Versione")

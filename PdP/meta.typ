@@ -1,12 +1,7 @@
 // Elementi da modificare per verbali
 #let title = "Piano di Progetto"
 #let tabelle = "content/tabelle.json"
-#let segretario = "Filippo Bellon"
-#let date = datetime(
-  day: 23,
-  month: 11,
-  year: 2024
-)
+#let data = datetime.today().display("[day]/[month]/[year]")
 
 #let abstract =  [#include "content/abstract.typ"]
 #let introduzione = [#include "content/introduzione.typ"]

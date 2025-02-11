@@ -1,14 +1,12 @@
-#import "meta.typ": title, abstract, tabelle, author, keywords, github_Actions, pages_Jekyll, introduzione, frontend_react, docker, db_postgres, backend_flask, llm_evaluator
+#import "meta.typ": title, abstract, tabelle, keywords, github_Actions, pages_Jekyll, introduzione, frontend_react, docker, db_postgres, backend_flask, llm_evaluator, data
 
 // Funzioni da includere
-#import "../functions.typ": table-json
+#import "../functions.typ": table-json, inDict, getLastDocVersion
+#import "../Glossario/Glossario.typ": glossario-therms
 
-#import "../Glossario/Glossario.typ": glossario-therms 
-#import "../functions.typ": inDict 
 //INFO DOCUMENTO, appaiono come descrizione del file
 #set document(
   title: (title),
-  author: (author),
   keywords: (keywords)
 )
 #set text(
@@ -20,6 +18,13 @@
 #show link: underline.with(offset: 2pt)
 
 #show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+
+//FRONTESPIZIO
+#import "../frontespizio.typ": show_content
+#let versione = getLastDocVersion(tabelle, "MS")
+#show_content(title, data, versione, abstract)
+
+#pagebreak()
 
 //SET DELLA PAGINA AUTOMATIZZATO, guardare documentazione per ulteriori customizzazioni
 #set page(paper: "a4",
@@ -45,15 +50,11 @@
 #align(center)[
   //VERSIONE DOCUMENTO
   #table-json(json(tabelle).at("versione"),6)
-  
-  //ABSTRACT
-  #set par(justify: true)
-  *Abstract* \
-  #abstract
 ]
 
 //TABLE OF CONTENTS
 #outline(indent: 1em)
+
 #pagebreak()
 
 = Introduzione

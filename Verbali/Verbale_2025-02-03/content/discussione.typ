@@ -7,17 +7,16 @@
     - Validatore: Alberto Maggion
   ], []
 )
-== Avanzamento Documenti per RTB
-- PoC: pronta la presentazione e artefatto
+== Avanzamento Documenti e Artefatti per RTB
+- PoC: pronta la presentazione e l'artefatto
 - Sito: pronto
-- WoW: pronta la 2.0
-- PdQ: pronto da caricare
-- PdP: manca retrospective
-- Glossare: da verificare e validare
-- Manuale Sviluppatore: non fa parte dell'RTB
+- WoW: versione 2.0.0 in attesa di approvazione
+- PdQ: in attesa di caricamento
+- PdP: in attesa di inserimento di alcuni periodi di retrospective
+- Glossare: in attesa di verifica e validazione
 
 == Esplorazione modelli alternativi LLM
-Introduzione di DeepSeek
+Introduzione al nuovo modello LLM DeepSeek. Esso si presenta come un concorrente diretto dell'attuale modello LLM di OpenAI, GPT, e si propone di essere più efficiente e performante. Esso mette intoltre a disposizione, per il momento, delle API pubbliche, che permettono di testare il modello in maniera gratuita.
 #decisioni(
   [Probabile integrazione nel prodotto finale],[]
 )
@@ -26,9 +25,10 @@ Introduzione di DeepSeek
 #decisioni(
   [
     1. Caricamento dei File nominati con le abbreviazioni
-    2. Aggiungere "p" per la versione],
+    2. Aggiungere "v" come prefisso per la versione
+  ],
   [
-    1. Il sito prende la abbreviazione e la estende
-    2. nuova metodologia di caricamento 
+    1. Il sito riconosce le abbreviazioni e le rimpiazza mostrando il nome completo del documento
+    2. Nuova metodologia di caricamento
   ]
 )

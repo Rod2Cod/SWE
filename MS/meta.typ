@@ -1,7 +1,7 @@
 #let title = "Manuale Sviluppatore"
 #let tabelle = "content/tabelle.json"
-#let author = "Michele Nesler, Filippo Bellon" 
 #let keywords = ("Manuale Sviluppatore", "modulistica", "guida", "tecnologie")
+#let data = datetime.today().display("[day]/[month]/[year]")
 
 #let abstract =  [#include "content/abstract.typ"]
 #let pages_Jekyll = [#include "content/pages_Jekyll.typ"]

@@ -1,3 +1,3 @@
 - Stesura del verbale
-- Avanzamento Documenti per RTB
+- Avanzamento Documenti e Artefatti per RTB
 - Esplorazione modelli alternativi LLM
