@@ -171,7 +171,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
   *Grafico a torta del budget speso e rimanente al termine del quinto periodo.*
   #image("Graphs/c5_budget.png",height: 20%)
   *Retrospective*:
-  In questo periodo ci siamo concentrati sullo sviluppo del PoC. La principale fonte di problemi è stato il setup del container docker. 
+  In questo periodo ci siamo concentrati sullo sviluppo del PoC. La principale fonte di problemi è stato il set up del container docker, che oltre alle singole configurazioni per ogni singolo ambiente come frontend, backend e database, è stato necessario configurare e gestire al meglio l'infrastruttura di rete, per rendere possibile la comunicazione tra i container, attraverso una rete interna a docker, ed evitando di passare dalla macchina host. 
 #pagebreak()
   === Sesto periodo 14/01/2025 - 27/01/2025
   *Consuntivo Orario*
@@ -201,7 +201,40 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
   #image("Graphs/c6_budget.png",height: 20%)
   *Retrospective*:
 
-In questo periodo abbiamo definito con l'azienda quale convenzione utilizzare per la stesura degli UML dei casi d'uso come avevamo deciso nel quarto periodo, la quale ha accettato la nostra proposta. Abbiamo poi presentato l'analisi dei requisiti e il PoC all'azienda che si è dimostrata entusiasta. Dal confronto abbiamo estrapolato che mostrare le valutazioni assegnate da ogni metrica oltre alla valutazione finale aggiunge molto valore al prodotto. Ultimare AdR, PdQ e PdP, hanno richiesto parecchio meno tempo di quello che avevamo previsto, per questo il costo del periodo è risultato molto più basso di quello preventivato, attendendo però la presentazione dell'Rtb non abbiamo fatto altro che sarebbe potuto risultare inutile in caso di esito negativo.  In particolare ci siamo accorti di aver sovrastimato l'impegno previsto da parte dei verificatori, in quanto la prima stesura di questi documenti era già buona in generale. Ne terremo conto nei preventivi futuri. 
+In questo periodo abbiamo definito con l'azienda quale convenzione utilizzare per la stesura degli UML dei casi d'uso come avevamo deciso nel quarto periodo, la quale ha accettato la nostra proposta. Abbiamo poi presentato l'analisi dei requisiti e il PoC all'azienda che si è dimostrata entusiasta. Dal confronto abbiamo colto che mostrare le valutazioni assegnate da ogni metrica oltre alla valutazione finale aggiunge molto valore al prodotto. La principale difficoltà incontrata durante questo periodo è risultata stimare le ore disponibili che ogni membro avrebbe potuto investire nel progetto, infatti abbiamo avuto gli esami. Oltre a questa difficoltà, colmabile nel tempo con l'esperienza, abbiamo individuato come concausa una generale timidezza nei membri del gruppo nel dichiarare di non essere in grado di completare tutti i compiti presi a carico. Essendo stata una problematica diffusa e riconosciuta da ognuno nel gruppo, abbiamo riconosciuto come utile a fare stime veritiere piuttosto che vergognoso dichiarare i propri impegni e le proprie difficoltà nel portare a termine i compiti.
+Per questo il costo del periodo è risultato molto più basso di quello preventivato.
+
+
+#pagebreak()
+=== Settimo periodo 28/01/2025 - 10/02/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("7"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/c7_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/c7_dist_ore.png",height: 18%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("7")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot7"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
+  #image("Graphs/c7_budget.png",height: 20%)
+  *Retrospective*:
+  Durante questo periodo abbiamo ultimato i documenti per l' RtB che abbiamo presentato. Abbiamo poi atteso il responso da parte dei professori, che una volta ricevuto ci ha portato a iniziare a correggere l'analisi dei requisiti. I principali problemi che abbiamo avuto infatti riguardano proprio questa correzione, visto che ci avevamo gia ragionato a fondo e la ritenevamo corretta. Per ovviare a questi abbiamo prima fatto una riunione sincrona per ragionarci e poi abbiamo deciso di tornare a studiare asincronamente questi argomenti per tornare a correggere l'analisi dei requisiti con maggiore consapevolezza.
+  Inoltre abbiamo sbagliato a programmare l'inizio della progettazione in questo periodo non considerando i tempi di correzione per l'RtB e le eventuali modifiche da apportare in caso di esito negativo.
 
 
 #pagebreak()

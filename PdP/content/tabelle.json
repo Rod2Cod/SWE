@@ -107,34 +107,34 @@
       }
     ]
   },
-  "calendario_massima" : {
-    "previsione" : {
-      "keys" : ["Revisione", "Data"],
-      "values" : [
+  "calendario_massima": {
+    "previsione": {
+      "keys": ["Revisione", "Data"],
+      "values": [
         {
-          "Revisione" : "Requirements and Technology Baseline",
-          "Data" : "2025-01-20"
+          "Revisione": "Requirements and Technology Baseline",
+          "Data": "2025-01-20"
         },
         {
-          "Revisione" : "Product Baseline",
-          "Data" : "2025-03-17"
+          "Revisione": "Product Baseline",
+          "Data": "2025-03-17"
         },
         {
-          "Revisione" : "Customer Acceptance",
-          "Data" : "2025-03-20"
+          "Revisione": "Customer Acceptance",
+          "Data": "2025-03-20"
         }
       ]
     },
-    "revisione" : {
-      "keys" : ["Revisione", "Data"],
-      "values" : [
+    "revisione": {
+      "keys": ["Revisione", "Data"],
+      "values": [
         {
-          "Revisione" : "Product Baseline",
-          "Data" : "2025-03-14"
+          "Revisione": "Product Baseline",
+          "Data": "2025-03-14"
         },
         {
-          "Revisione" : "Customer Acceptance",
-          "Data" : "2025-03-17"
+          "Revisione": "Customer Acceptance",
+          "Data": "2025-03-17"
         }
       ]
     }
@@ -1093,6 +1093,56 @@
         }
       ]
     },
+    "7": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+        {
+          "Nominativo": "Michele Nesler",
+          "Res": 0.5,
+          "Ana": 2,
+          "Pre": 2,
+          "Ver": 2,
+          "Totale": 6.5
+        },
+        {
+          "Nominativo": "Annalisa Egidi",
+          "Res": 0.5,
+          "Ana": 2,
+          "Ver": 3,
+          "Totale": 5.5
+        },
+        {
+          "Nominativo": "Filippo Bellon",
+          "Res": 1,
+          "Amm": 3,
+          "Ana": 2,
+          "Totale": 6
+        },
+        {
+          "Nominativo": "Luca Calzetta",
+          "Res": 3,
+          "Ana": 2,
+          "Pre": 2,
+          "Totale": 7
+        },
+        {
+          "Nominativo": "Alberto Maggion",
+          "Res": 0.5,
+          "Ana": 5,
+          "Ver": 2,
+          "Totale": 7.5
+        }
+      ]
+    },
     "tot1": {
       "keys": [
         "Costo totale",
@@ -1198,10 +1248,10 @@
       ],
       "values": [
         {
-          "Costo totale": 0,
-          "Costo periodo": 0,
-          "Budget preventivato": 0,
-          "Budget rimanente": 0
+          "Costo totale": 7060,
+          "Costo periodo": 715,
+          "Budget preventivato": 1335,
+          "Budget rimanente": 4435
         }
       ]
     }
