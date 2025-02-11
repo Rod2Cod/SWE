@@ -98,6 +98,12 @@
         "Data": "2025-02-11",
         "Sez.modificate": "Pianificazione - Inserito ottavo periodo",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.2.3",
+        "Data": "2025-02-11",
+        "Sez.modificate": "Preventivo - Aggiunta preventivo periodo 8",
+        "Autore": "Alberto Maggion"
       }
     ]
   },

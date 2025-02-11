@@ -1,0 +1,1 @@
+Il documento definirà sia i *casi d'uso*, sia i *requisiti funzionali*, di *qualità* e di *vincolo* delle applicazioni che andranno sviluppate nel corso del progetto riguardante il capitolato scelto: Artificial QI.

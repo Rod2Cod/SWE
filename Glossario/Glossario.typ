@@ -1,14 +1,11 @@
-#import "meta.typ": title, abstract, tabelle, author, keywords
-
-#import "../functions.typ": printDict
+#import "meta.typ": title, abstract, tabelle, keywords, data
 
 // Funzioni da includere
-#import "../functions.typ": table-json
+#import "../functions.typ": table-json, printDict, getLastDocVersion
 
 //INFO DOCUMENTO, appaiono come descrizione del file
 #set document(
   title: (title),
-  author: (author),
   keywords: (keywords)
 )
 #set text(
@@ -18,7 +15,15 @@
 #set list(indent: 1em)
 #set enum(indent: 1em)
 #show link: underline
-  
+
+
+//FRONTESPIZIO
+#import "../frontespizio.typ": show_content
+#let versione = getLastDocVersion(tabelle, "Glossario")
+#show_content(title, data, versione, abstract)
+
+#pagebreak()
+
 //SET DELLA PAGINA AUTOMATIZZATO, guardare documentazione per ulteriori customizzazioni
 #set page(paper: "a4",
   columns: 1,
@@ -33,22 +38,14 @@
   strong(it)
 }
 
-//TITOLO
-#align(center, text(17pt)[*#title*])
-
-
 #align(center)[
   //VERSIONE DOCUMENTO
   #table-json(json(tabelle).at("versione"),6)
-  
-  //ABSTRACT
-  #set par(justify: true)
-  *Abstract* \
-  #abstract
 ]
 
 //TABLE OF CONTENTS
 #outline(indent: 1em)
+
 #pagebreak()
 
 #let glossario = (

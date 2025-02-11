@@ -1,1 +1,1 @@
-Il documento ha lo scopo di definire le modalità da seguire e le risorse da impiegare per lo svolgimento delle attività.
+Il documento ha lo scopo di definire le *modalità* da seguire e le *risorse* da impiegare per lo svolgimento delle *attività* dei *processi* di progetto.

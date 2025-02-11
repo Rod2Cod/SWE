@@ -1,9 +1,8 @@
-#import "meta.typ": title, tabelle, keywords, introduzione, casi_uso, descrizione, requisiti, tracciamento, data
+#import "meta.typ": title, tabelle, keywords, introduzione, casi_uso, descrizione, requisiti, tracciamento, data, abstract
 
 // Funzioni da includere
-#import "../functions.typ": table-json
+#import "../functions.typ": table-json, inDict, getLastDocVersion
 #import "../Glossario/Glossario.typ": glossario-therms
-#import "../functions.typ": inDict
 
 //INFO DOCUMENTO, appaiono come descrizione del file
 #set document(
@@ -30,9 +29,9 @@
 #show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
 
 //FRONTESPIZIO
-#let riassunto = "Il documento definirà sia i *casi d'uso*, sia i *requisiti funzionali*, di *qualità* e di *vincolo* delle applicazioni che andranno sviluppate nel corso del progetto riguardante il capitolato scelto: Artificial QI."
 #import "../frontespizio.typ": show_content
-#show_content(title, data, "1.0", riassunto)
+#let versione = getLastDocVersion(tabelle, "AdR")
+#show_content(title, data, versione, abstract)
 
 #pagebreak()
 
@@ -50,6 +49,7 @@
 
 //TABLE OF CONTENTS
 #outline(indent: 1em)
+
 #pagebreak()
 
 = Introduzione
