@@ -104,6 +104,12 @@
         "Data": "2025-02-11",
         "Sez.modificate": "Preventivo - Aggiunta preventivo periodo 8",
         "Autore": "Alberto Maggion"
+      },
+      {
+        "Versione": "0.2.4",
+        "Data": "2025-02-11",
+        "Sez.modificate": "Consuntivo - Aggiunta periodo 7",
+        "Autore": "Michele Nesler"
       }
     ]
   },
