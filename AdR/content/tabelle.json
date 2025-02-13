@@ -334,7 +334,7 @@
       },
       {
         "Codice": "RQ-1.5",
-        "Descrizione": "Deve essere implementato un sistema di test automatico con un adeguata copertura.",
+        "Descrizione": "Deve essere implementato un sistema di test automatico con una copertura di almeno l'80% del codice.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       }
@@ -350,13 +350,7 @@
     "values" : [
       {
         "Codice": "RV-1.1",
-        "Descrizione": "All'interno del progetto devono essere adottati pattern architetturali robusti e duttili.",
-        "Classificazione": "Obbligatorio",
-        "Fonti": "Capitolato - Decisione interna"
-      },
-      {
-        "Codice": "RV-1.2",
-        "Descrizione": "Non sono stati forniti vincoli per quanto riguarda versioni del Sistema Operativo o del Software sul quale il programma deve poter funzionare.",
+        "Descrizione": "Il prodotto finale deve poter essere utilizzato su browser Chrome dalla versione 133",
         "Classificazione": "Obbligatorio",
         "Fonti": "Verbale - Decisione interna"
       }
