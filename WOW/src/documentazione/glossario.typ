@@ -8,5 +8,5 @@ La struttura è basata su un sistema alfabetico, dove ogni lettera rappresenta u
 
 == Aggiunta di un Termine
 
-Per aggiungere un termine al glossario, è necessario, nel file Glossario.typ nella struttura dizionario (dict) denominata glossario una coppia di valori. Il primo è composto dall'acronimo/abbreviazione e/o il termine per esteso, se sono presenti entrambi devono essere separati dal carattere "|". La seconda deve essere una descrizione chiara, breve e dettagliata, che spiega il significato del termine e il suo utilizzo nel contesto del progetto.
+Per aggiungere un termine al glossario, è necessario inserire una coppia di valori, nel file Glossario.typ nella struttura dizionario (dict) denominata glossario. Il primo valore è composto dall'acronimo/abbreviazione e/o il termine per esteso, se sono presenti entrambi devono essere separati dal carattere "|". La seconda deve essere una descrizione chiara, breve e dettagliata, che spiega il significato del termine e il suo utilizzo nel contesto del progetto.
 La funzione inDict presente nel file functions.typ si occupa di inserire la "G" a pedice dopo ogni occorrenza del Primo dei 2 valori nei vari documenti.

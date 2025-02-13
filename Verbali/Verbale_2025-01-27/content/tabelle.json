@@ -1,6 +1,6 @@
 {
-  "versione" : {
-    "keys" : [
+  "versione": {
+    "keys": [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,25 +10,27 @@
     ],
     "values": [
       {
-        "Versione" : "0.0.1",
-        "Data" : "31/01/2025",
+        "Versione": "0.0.1",
+        "Data": "31/01/2025",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Luca Calzetta"
+        "Autore": "Luca Calzetta"
       },
       {
-        "Versione" : "0.1.0",
-        "Data" : "09/02/2025",
+        "Versione": "0.1.0",
+        "Data": "09/02/2025",
         "Sez.modificate": "",
-        "Verificatore" : "Annalisa Egidi"
+        "Verificatore": "Annalisa Egidi"
+      },
+      {
+        "Versione": "1.0.0",
+        "Data": "10/02/2025",
+        "Sez.modificate": "",
+        "Validatore": "Michele Nesler"
       }
     ]
   },
-  "presenze" : {
-    "keys" : [
-      "Nominativo",
-      "Presenze",
-      "Ruolo"
-    ],
+  "presenze": {
+    "keys": ["Nominativo", "Presenze", "Ruolo"],
     "values": [
       {
         "Nominativo": "Michele Nesler",

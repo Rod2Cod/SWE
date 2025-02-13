@@ -2,7 +2,7 @@
   Qui di seguito vengono raccolte varie informazioni riguardanti l'utilizzo e l'attuale configurazione della repository di Github, in particolare per il caricamento e l'organizzazione della documentazione.
 
 == Struttura
-  Il repository si compone di due rami("branch"):
+  Il repository si compone di tre rami("branch"):
   + *master*: ramo che contiene tutti i *file* riguardanti il progetto ed è composto nel seguente modo:
     - *Assets*: contenente file aggiuntivi, quali immagini e loghi riguardanti il gruppo Rod2Cod ed il progetto
     - *Documentazione*: contenente tutti file riguardanti la documentazione del progetto
@@ -39,7 +39,7 @@ Il processo di utilizzo del sistema prevede la creazione di una nuova issue acce
 
 === Project board
 
-Le Project Board di Github sono uno strumento visivo potente e versatile, progettato per gestire e organizzare il lavoro all'interno di un progetto. Ispirate al metodo Kanban, queste bacheche offrono una rappresentazione chiara e immediata del flusso di lavoro, consentendo al team di monitorare lo stato di avanzamento delle attività, identificare eventuali ostacoli e garantire un’efficace collaborazione. Nelle sezioni successive vedremo come abbiamo suddiviso le board per la gestione dei ticket.
+Le Project Board di Github sono uno strumento visivo potente e versatile, progettato per gestire e organizzare il lavoro all'interno di un progetto. Ispirate al metodo Kanban, queste bacheche offrono una rappresentazione chiara e immediata del flusso di lavoro, consentendo al team di monitorare lo stato di avanzamento delle attività, identificare eventuali ostacoli e garantire un'efficace collaborazione. Nelle sezioni successive vedremo come abbiamo suddiviso le board per la gestione dei ticket.
 
 ==== Project board per i documenti
 
