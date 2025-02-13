@@ -21,6 +21,30 @@
   )
 }
 
+#let table-stima-costi(data, fractions) = {
+  let keys = data.at("keys")
+  let values = data.at("values")
+
+  table(
+      fill: (_, y) => 
+      if y == 0 {gray.lighten(50%)} 
+      else if calc.even(y) {gray.lighten(80%)},
+      align: horizon + center,
+      columns: fractions,
+      ..keys.map(key => {strong(key)}),
+      ..values.map(
+        row => keys.map(
+          key => if str(row.at(key,default :"")) == "Totale" {
+                    strong(str(row.at(key, default: "")))
+                 } else {
+                    str(row.at(key, default: ""))
+                 }
+        )
+      ).flatten()
+  )
+}
+
+
 #let costi(data) = {
   let ret = (
     "keys" : ("Ruolo", "Ore", "Costo €"),

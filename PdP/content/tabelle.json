@@ -145,6 +145,52 @@
       ]
     }
   },
+  "stima_costi": {
+    "keys": ["Ruolo", "Costo orario", "Ore previste", "Costo totale per ruolo"],
+    "values": [
+      {
+        "Ruolo": "Responsabile",
+        "Costo orario": "30",
+        "Ore previste": "57",
+        "Costo totale per ruolo": "1710"
+      },
+      {
+        "Ruolo": "Amministratore",
+        "Costo orario": "20",
+        "Ore previste": "38",
+        "Costo totale per ruolo": "760"
+      },
+      {
+        "Ruolo": "Analista",
+        "Costo orario": "25",
+        "Ore previste": "114",
+        "Costo totale per ruolo": "2850"
+      },
+      {
+        "Ruolo": "Progettista",
+        "Costo orario": "25",
+        "Ore previste": "133",
+        "Costo totale per ruolo": "3325"
+      },
+      {
+        "Ruolo": "Programmatore",
+        "Costo orario": "15",
+        "Ore previste": "95",
+        "Costo totale per ruolo": "1425"
+      },
+      {
+        "Ruolo": "Verificatore",
+        "Costo orario": "15",
+        "Ore previste": "95",
+        "Costo totale per ruolo": "1425"
+      },
+      {
+        "Ruolo": "Totale",
+        "Ore previste": "532",
+        "Costo totale per ruolo": "11495"
+      }
+    ]
+  },
   "rischi": {
     "interni": {
       "keys": ["Codice", "Rischio", "Descrizione", "Mitigazione"],

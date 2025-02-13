@@ -45,7 +45,7 @@
 = Calendario di massima del progetto //TODOca
   #calendario_massima
 
-= Stima dei costi di realizzazione //TODO
+= Stima dei costi di realizzazione 
   #stima_costi
 
 = Rischi attesi e loro mitigazione 
