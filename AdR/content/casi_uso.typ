@@ -36,7 +36,7 @@
       - Viene visualizzato l'elemento domanda
 
   ===== UC1.1.1: Visualizzazione domanda
-    - *Descrizione*: L'utente vuole poter visualizzare il testo di uan domanda
+    - *Descrizione*: L'utente vuole poter visualizzare il testo di una domanda
     - *Scenario*:
       - L'utente visualizza il testo di uan domanda
     - *Precondizioni*:
