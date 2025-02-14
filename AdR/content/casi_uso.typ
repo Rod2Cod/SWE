@@ -13,7 +13,7 @@
 
 #set heading(numbering: none)
 
-  === UC1: Visualizzazione domande e risposte
+  === UC1: Visualizzazione lista elementi domanda
     #align(center)[
       #image("UML/UC1.png", height: 13%)
     ] 
@@ -31,7 +31,7 @@
       - L'utente visualizza una domanda
       - L'utente visualizza la relativa risposta asssociata
     - *Precondizioni*:
-      - È presente almeno una domanda con relativa risposta nel sistema
+      - È presente almeno una elemento domanda nel sistema
     - *Postcondizioni*:
       - Viene visualizzato l'elemento domanda
 
@@ -49,12 +49,12 @@
     - *Scenario*:
       - L'utente visualizza il testo della risposta attesa associata ad una domanda
     - *Precondizioni*:
-      - È presente almeno una domanda con relativa risposta nel sistema
+      - È presente almeno una elemento domanda nel sistema
     - *Postcondizioni*:
       - Viene visualizzato il testo della risposta attesa
 
   === UC2: Modifica domanda
-#align(center)[
+  #align(center)[
       #image("UML/UC2.png", height: 13%)
     ]
   - *Descrizione*: L'utente vuole poter modificare una domanda da porre nel test
@@ -65,7 +65,7 @@
     - L'utente conferma la modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno una elemento domanda nel sistema
   - *Postcondizioni*:
     - La domanda modificata viene salvata correttamente
   - *Scenari alternativi*:
@@ -83,34 +83,34 @@
     - L'utente conferma la modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La risposta alla domanda selezionata viene salvata correttamente
   - *Scenari alternativi*:
     - Annullamento modifica risposta attesa (UC24)
 
-  === UC4: Eliminazione domanda e risposta attesa
+  === UC4: Eliminazione elemento domanda
   #align(center)[
       #image("UML/UC4.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter eliminare una domanda da porre nel test
+  - *Descrizione*: L'utente vuole poter eliminare un elemento domanda presente nel sistema
   - *Scenario*:
-    - L'utente seleziona l'opzione di eliminazione domanda
-    - L'utente seleziona una o più domande
+    - L'utente seleziona l'opzione di eliminazione di un elemento domanda
+    - L'utente seleziona uno o più elementi domanda da eliminare
     - L'utente conferma l'eliminazione
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*: 
-    - La domanda viene eliminata correttamente
+    - L'elemento domanda viene eliminato dal sistema
   - *Scenari alternativi*:
-    - Annullamento eliminazione domanda e risposta attesa (UC25)
+    - Annullamento eliminazione elemento domanda
 
-  === UC5: Aggiunta di domanda e risposta
+  === UC5: Aggiunta di elementi domanda
   #align(center)[
       #image("UML/UC5.png", height: 23%)
     ]
-  - *Descrizione*: L'utente vuole poter aggiungere almeno una domanda e relativa risposta attesa
+  - *Descrizione*: L'utente vuole poter aggiungere almeno un elemento domanda
   - *Scenario*:
     - L'utente seleziona l'opzione per aggiungere una domanda
     - L'utente aggiunge una o più domande
@@ -118,38 +118,57 @@
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    - Almeno una domanda e la relativa risposta vengono inserite nel sistema
+    - Almeno un elemento domanda vengono inserite nel sistema
   - *Generalizzazioni*:
-    - Aggiunta manuale di domanda e risposta (UC5.1)
+    - Aggiunta manuale di elementi domanda (UC5.1)
     - Aggiunta di domande da file strutturato (UC5.2)
 
-  ==== UC5.1: Aggiunta manuale di domanda e risposta
+  ==== UC5.1: Aggiunta manuale di elementi domanda
   #align(center)[
       #image("UML/UC5.1.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter aggiungere manualmente una domanda e relativa risposta attesa
+  - *Descrizione*: L'utente vuole poter aggiungere manualmente un elemento domanda
   - *Scenario*:
-    - L'utente seleziona l'opzione per aggiungere una domanda
-    - L'utente aggiunge manualmente una domanda e relativa risposta attesa
+    - L'utente seleziona l'opzione per aggiungere un elemento domanda
+    - L'utente aggiunge manualmente una domanda
+    - L'utente aggiunge manualmente la relativa risposta attesa
     - L'utente conferma l'aggiunta
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    - Una domanda e la relativa risposta vengono inserite nel sistema
+    - Un elemento domanda viene inserito nel sistema
 
-  ==== UC5.2: Aggiunta domande da file strutturato
+  ===== UC5.1.1: Aggiunta manuale domanda
+  - *Descrizione*: L'utente vuole poter aggiungere manualmente una domanda
+  - *Scenario*:
+    - L'utente aggiunge manualmente una domanda
+  - *Attore principale*: utente
+  - *Precondizioni*: nessuna
+  - *Postcondizioni*:
+    - Il sistema riceve la domanda inserita dall'utente
+
+  ===== UC5.1.2: Aggiunta manuale risposta attesa
+  - *Descrizione*: L'utente vuole poter aggiungere manualmente la risposta attesa associata ad una domanda
+  - *Scenario*:
+    - L'utente aggiunge manualmente la risposta attesa associata ad una domanda
+  - *Attore principale*: utente
+  - *Precondizioni*: nessuna
+  - *Postcondizioni*:
+    - Il sistema riceve la risposta attesa inserita dall'utente
+
+  ==== UC5.2: Aggiunta elementi domanda da file strutturato
   #align(center)[
       #image("UML/UC5.2.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter inserire nel sistema delle domande e relative risposte presenti in un file strutturato
+  - *Descrizione*: L'utente vuole poter inserire nel sistema degli elementi domanda presenti in un file strutturato
   - *Scenario*:
-    - L'utente seleziona l'opzione per caricare un file di domande e relative risposte
+    - L'utente seleziona l'opzione per caricare un file di elementi domanda
     - L'utente carica il file strutturato
     - L'utente conferma il caricamento
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    - Le domande e relative risposte vengono inserite nel sistema
+    - Gli elementi domanda vengono inserite nel sistema
   - *Scenari alternativi*:
     - Errore su aggiunta domande da file (UC20)
 
@@ -157,42 +176,133 @@
   #align(center)[
       #image("UML/UC6.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter suddividere le domande e relative risposte in set
+  - *Descrizione*: L'utente vuole poter suddividere gli elementi domanda in set
   - *Scenario*:
-    - L’utente seleziona l’opzione per creare un nuovo set di domande
-    - L’utente seleziona le domande e relative risposte che vuole inserire
-    - L’utente inserisce i dati relativi all’intero set di domante
+    - L'utente seleziona l'opzione per creare un nuovo set di domande
+    - L'utente seleziona gli elementi domanda da inserire nel set
+    - L'utente inserisce il nome del set
     - L'utente conferma la creazione del set
   - *Attore principale*: utente
   - *Precondizioni*:
-    - L'utente visualizza le domande e risposte nel sistema
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - L'utente visualizza gli elementi domanda presenti nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
-    - Viene creato un nuovo set di domande
-  - *UC Conseguenti (da definire prima dell'eventuale implementazione)*:
-    - Esecuzione test con set di domande
-    - Visualizzazione risultati set di domande
-    - Modifica dati generali set di domande
-    - Confronto differenti esecuzioni di test per set 
+    - Viene creato un nuovo set di elementi domanda
 
-  === UC7: Esecuzione test
+  === UC7: Visualizzazione dei vari set di domande
+  - *Descrizione*: L'utente vuole poter visualizzare i vari set di domande presenti nel sistema
+  - *Scenario*:
+    - L'utente seleziona l'opzione per visualizzare i vari set di domande
+  - *Attore principale*: utente
+  - *Precondizioni*: nessuna
+  - *Postcondizioni*:
+    - Viene visualizzato l'elenco dei set di domande presenti nel sistema o una lista vuota
+
+  === UC8: Visualizzazione elementi domanda appartenenti ad un set
+  - *Descrizione*: L'utente vuole poter visualizzare gli elementi domanda appartenenti ad un determinato set
+  - *Scenario*:
+    - L'utente seleziona un set
+    - L'utente entra nella visualizzazione degli elementi domanda del set
+    - L'utente visualizza gli elementi domanda appartenenti al set
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - Viene visualizzata la lista dei set
+  - *Postcondizioni*:
+    - Vengono visualizzati gli elementi domanda appartenenti al set
+
+  === UC9: Modifica nome del set di domande
+  - *Descrizione*: L'utente vuole poter modificare il nome assengato al set di elementi domanda
+  - *Scenario*:
+    - L'utente seleziona l'opzione per modificare il nome del set
+    - L'utene modifica il nome del set
+    - L'utente conferma la modifica
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza i vari set presenti nel sistema
+    - Deve essere presente almeno un set di domande nel sistema
+  - *Postcondizioni*:
+    - Viene modificato il nome del set di domande
+
+  === UC10: Eliminazione set di domande
+  - *Descrizione*: L'utente vuole poter eliminare un set di domande
+  - *Scenario*:
+    - L'utente seleziona l'opzione per eliminare un set di domande
+    - L'utente seleziona il set da eliminare
+    - L'utente conferma l'eliminazione
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza i vari set presenti nel sistema
+    - Deve essere presente almeno un set di domande nel sistema
+  - *Postcondizioni*:
+    - Il set di domande viene eliminato
+    - Le domande contenute nel set non vengono eliminate
+  - *Scenario alternativo*:
+    - Annullamento eliminazione di un set
+
+  === UC11: Modifica elementi domanda appartenenti ad un set
+  #align(center)[
+      #image("UML/UC19.png", height: 13%)
+    ]
+  - *Descrizione*: L'utente vuole poter modificare quali elementi domanda appartengono ad un set
+  - *Scenario*:
+    - L'utente seleziona l'opzione di modifica di un set
+    - L'utente modifica quali elementi domanda sono associati
+    - L'utente conferma la modifica
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - Viene visualizzata la lista di elementi domanda presenti nel set
+  - *Postcondizioni*:
+    - L'associazione tra gli elementi domanda e il set viene modificata
+
+  === UC12: Esecuzione test
   #align(center)[
       #image("UML/UC7.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter eseguire il test utilizzando le domande e risposte presenti
+  - *Descrizione*: L'utente vuole poter eseguire il test utilizzando gli elementi domanda presenti
   - *Scenario*:
-    - L'utente avvia il test di confronto tra le risposte generate da un LLM e le risposte inserite da lui
+    - L'utente avvia il test di confronto tra le risposte generate da un LLM e le risposte presenti
     - Il sistema invia le domande all'LLM e ne registra le risposte
     - Il sistema confronta le risposte ottenute con quelle attese
   - *Attore principale*: utente
   - *Attori secondari*: LLM
-  - *Precondizioni*: 
-    - È presente almeno una domanda con relativa risposta nel sistema
+  - *Precondizioni*:
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - Viene visualizzato il risultato del test
-    - (opzionale) Viene aggiunto allo storico il risultato del test
+    - Viene aggiunto allo storico il risultato del test
 
-  === UC8: Visualizzazione dei risultati del test per singola domanda
+  ==== UC12.1: Esecuzione test su un set di domande
+  - *Descrizione*: L'utente vuole poter eseguire il test su un determinato set di domande
+  - *Scenario*:
+    - L'utente seleziona il set di domande su cui eseguire il test
+    - L'utente avvia il test di confronto tra le risposte generate da un LLM e le risposte presenti
+    - Il sistema invia le domande all'LLM e ne registra le risposte
+    - Il sistema confronta le risposte ottenute con quelle attese
+  - *Attore principale*: utente
+  - *Attori secondari*: LLM
+  - *Precondizioni*:
+    - È presente almeno un set di domande nel sistema
+  - *Postcondizioni*:
+    - Viene visualizzato il risultato del test
+    - Viene aggiunto allo storico il risultato del test
+
+  === UC13: Visualizzazione del risultato del test
+  #align(center)[
+      #image("UML/UC9.png", height: 13%)
+    ]
+  - *Descrizione*: L'utente vuole poter visualizzare il risultato di un test, ordinato in modo crescente rispetto alla valutazione assegnata ad ogni singolo elemento domanda. \ L'ordinamento permette di evidenziare i risultati peggiori del test.
+  - *Scenario*:
+    - L'utente entra nella schermata di visualizzazione del risultato del test
+    - L'utente visualizza la valutazione generale del test (media dei voti)
+    - L'utente visualizza la lista di domande ordinate in modo crescente rispetto alla valutazione assegnata ad ogni singola domanda
+    - L'utente visualizza per ogni domanda la relativa valutazione
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - È stato eseguito almeno un test
+  - *Postcondizioni*:
+    - Viene visualizzato il risultato del test
+
+  === UC14: Visualizzazione dei risultati del test per singola domanda
   #align(center)[
       #image("UML/UC8.png", height: 13%)
     ]
@@ -208,25 +318,9 @@
   - *Precondizioni*:
     - È stato eseguito almeno un test
   - *Postcondizioni*:
-    - Vengono visualizzati i risultati del test relativi ad una singola domanda
+    - Vengono visualizzati i risultati del test relativi ad una singola domanda  
 
-  === UC9: Visualizzazione del risultato del test relativo all'intero insieme di domande
-  #align(center)[
-      #image("UML/UC9.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole poter visualizzare al termine del test, il suo risultato, relativo all'intero insieme di domande e ordinato in modo crescente rispetto alla valutazione assegnata ad ogni singola domanda
-  - *Scenario*:
-    - L'utente entra nella schermata di visualizzazione del risultato del test
-    - L'utente visualizza la valutazione generale del test
-    - L'utente visualizza la lista di domande ordinate in modo crescente rispetto alla valutazione assegnata ad ogni singola domanda
-    - L'utente visualizza per ogni domanda la relativa valutazione
-  - *Attore principale*: utente
-  - *Precondizioni*:
-    - È stato eseguito almeno un test
-  - *Postcondizioni*:
-    - Viene visualizzato il risultato del test relativo all'intero set di domande
-
-  === UC12: Scaricare i risultati del test eseguito
+  === UC15: Scaricare i risultati del test eseguito
   #align(center)[
       #image("UML/UC12.png", height: 13%)
     ]
@@ -240,125 +334,140 @@
   - *Precondizioni*:
     - È stato eseguito almeno un test
   - *Postcondizioni*:
-    - Un file strutturato che contiene domande, risposte attese, risposte ricevute, valutazione risposta e valutazione generale test viene salvato nel pc con nome e percorso scelti dall'utente
-  - *UC Conseguenti (da definire prima dell'eventuale implementazione)*:
-    - Caricamento file risultato test
+    - Un file strutturato che contiene gli elementi domanda utilizzati, le risposte ricevute dall'LLM, la valutazione di ogni elemento domanda, la valutazione e i nomi delle varie metriche utilizzate, la valutazione generale del test e l'eventuale nome del set di appartenenza degli elementi domanda viene salvato nel pc con nome e percorso scelti dall'utente
+  
+  === UC16: Caricamento file risultato test
+  - *Descrizione*: L'utente vuole poter caricare un file contenente i risultati di un test, nello stesso formato in cui vengono salvati
+  - *Scenario*:
+      - L'utente seleziona l'opzione di caricamento file relativo al risultato di un test
+      - L'utente seleziona il file da caricare
+      - Il sistema carica i risultati del test
+  - *Attore principale*: utente
+  - *Precondizioni*:
+      - L'utente visualizza lo storico dei test effettuati
+      - L'utente ha a disposizione un file contenente i risultati di un test
+  - *Postcondizioni*:
+      - L'utente visualizza il risultato del test appena caricato
+      - Il risultato del test viene aggiunto allo storico dei test eseguiti
+  - *Scenari alternativi*:
+      - Errore su caricamento file
 
-  === UC13: Visualizzazione Storico dei test
+  === UC17: Visualizzazione storico dei test
   #align(center)[
       #image("UML/UC13.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter visualizzare lo storico dei test eseguiti
+  - *Descrizione*: L'utente vuole poter visualizzare lo storico dei test eseguiti ordinati in ordine decrescente rispetto all'ordine di esecuzione
   - *Scenario*:
     - L'utente seleziona l'opzione di visualizzazione dello storico dei test eseguiti
+    - L'utente visualizza la lista degli elementi riguardanti i testi eseguiti
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    -  Viene visualizzato l'elenco dei test eseguiti o una lista vuota
+    - Viene visualizzato l'elenco dei test eseguiti o una lista vuota
 
-  === UC14: Confronto tra esecuzioni diverse
+  ==== UC17.1: Visualizzazione elemento esecuzione test
+  - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante l'esecuzione di un test
+  - *Scenario*:
+    - L'utente visualizza il set di domande su cui è stato eseguito il test
+    - L'utente visualizza la data di esecuzione del test
+    - L'utente visualizza lo score generale del test
+    - L'utente visualizza LLM utilizzato
+    - L'utente visualizza il set di domande su cui è stato eseguito il test
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza lo storico dei test
+    - È stato eseguito almeno un test
+  - *Postcondizioni*:
+    - Viene visualizzato l'elemento relativo all'esecuzione del test
+
+  === UC18: Applicazione filtri storico dei test
+  - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base determinati parametri
+  - *Scenario*:
+    - L'utente sceglie di filtrare gli elementi per determinati parametri
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza lo storico dei test
+  - *Postcondizioni*:
+    - Viene visualizzato lo storico dei test filtrato secondo i parametri selezionati
+
+  ==== UC18.1: Filtro storico dei test per nome del set
+  - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base al nome del set di domande
+  - *Scenario*:
+    - L'utente seleziona l'opzione di filtro per nome del set di domande utilizzato
+    - L'utente seleziona il nome del set di domande
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza lo storico dei test
+  - *Postcondizioni*:
+    - Viene visualizzato lo storico dei test eseguiti sul set selezionato
+
+  ==== UC18.2: Filtro storico dei test per LLM
+  - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base all'LLM utilizzato
+  - *Scenario*:
+    - L'utente seleziona l'opzione di filtro per LLM
+    - L'utente seleziona l'LLM
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza lo storico dei test
+  - *Postcondizioni*:
+    - Viene visualizzato lo storico dei test eseguiti con l'LLM selezionato
+
+  === UC19: Confronto tra esecuzioni diverse di test
   #align(center)[
       #image("UML/UC14.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter visualizzare e confrontare i risultati di diverse esecuzioni dei test
+  - *Descrizione*: L'utente vuole poter visualizzare e confrontare i risultati di due esecuzioni di test
   - *Scenario*:
-    - L’utente seleziona l’opzione di confronto tra test differenti
-    - L’utente seleziona quali test confrontare
+    - L'utente seleziona l'opzione di confronto tra due esecuzioni di test differenti
+    - L'utente seleziona quali test confrontare
     - L'utente confronta i test
   - *Attore principale*: utente
   - *Precondizioni*:
     - L'utente visualizza lo storico dei test effettuati
     - Sono stati eseguiti almeno due test
   - *Postcondizioni*:
-    - Vengono visualizzati i risultati di diverse esecuzioni, messi a confronto
-    - Vengono visualizzati eventuali miglioramenti/peggioramenti
+    - Viene visualizzato il risultato del confronto
 
-  === UC15: Definizione delle etichette per domande
-  #align(center)[
-      #image("UML/UC15.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole poter definire etichette che descrivano il contesto delle domande da porre come supporto al programma di valutazione
+  ==== UC19.1: Visualizza risultato confronto esecuzioni
+  - *Descrizione*: L'utente vuole poter visualizzare il risultato del confronto tra due esecuzioni di test
   - *Scenario*:
-    - L'utente seleziona l'opzione di visualizzazione delle etichette
-    - L'utente seleziona l'opzione per definire una nuova etichetta
-    - L'utente inserisce il nome e la descrizione dell'etichetta
-    - L'utente conferma l'aggiunta
-  - *Attore principale*: utente
-  - *Precondizioni*: nessuna
-  - *Postcondizioni*:
-    - Una nuova etichetta è disponibile nel sistema
-  - *Scenari alternativi*:
-    - Errore su aggiunta di un'etichetta (UC21)
-
-  === UC16: Eliminazione delle etichette per domande
-  #align(center)[
-      #image("UML/UC16.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole poter eliminare un'etichetta che descriva il contesto della domanda
-  - *Scenario*:
-    - L'utente seleziona l'opzione di visualizzazione delle etichette
-    - L'utente seleziona l'opzione per eliminare un'etichetta
-    - L'utente viene informato che l'etichetta eliminata sarà rimossa anche dalle domande a cui è attualmente assegnata
-    - L'utente conferma l'eliminazione
+    - L'utente entra nella schermata di visualizzazione del risultato del confronto
+    - L'utente visualizza entrambe le valutazioni generali dei test confrontati (media dei voti)
+    - L'utente visualizza entrambi i nomi dei set di domande su cui sono stati eseguiti i test
+    - L'utente visualizza entrambi i nomi degli LLM utilizzati per i test 
+    - L'utente visualizza gli elementi confronto esecuzione ordinati per distanza tra le valutazioni
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Almeno un etichetta è definita nel sistema
+    - È stato eseguito il confronto tra due esecuzioni diverse
   - *Postcondizioni*:
-    - L'etichetta viene rimossa dalle domande a cui è attualmente assegnata
-    - L'etichetta viene eliminata correttamente dal sistema
-  - *Scenari alternativi*:
-    - Annullamento eliminazione di un'etichetta (UC22)
+    - Viene visualizzato il risultato del confronto
 
-  === UC17: Assegnazione delle etichette
-  #align(center)[
-      #image("UML/UC17.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole assegnare ad una domanda una o più etichette, tra quelle disponibili.
+  ==== UC16.2: Visualizzazione elemento confronto esecuzione
+  - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
-    - L'utente seleziona una domanda
-    - L'utente seleziona l'opzione per assegnare le etichette alla domanda
-    - L'utente seleziona le etichette da assegnare
-    - L'utente conferma l'assegnazione
+    - L'utente visualizza la domanda
+    - L'utente visualizza entrambe le valutazioni delle diverse esecuzioni relative alla domanda
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Almeno un'etichetta è definita nel sistema
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - Lo stesso identico elemento domanda è presente in entrambe le esecuzioni
   - *Postcondizioni*:
-    - La domanda selezionata ha l'/le etichetta/e assegnata/e
+    - Viene visualizzato l'elemento relativo al confronto
 
-  === UC18: Rimozione delle etichette
-  #align(center)[
-      #image("UML/UC18.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole rimuovere l'assegnazione di un'etichetta da una domanda
+  === UC20: Visualizzazione singolo elemento domanda confronto esecuzione
+  - *Descrizione*: L'utente vuole poter visualizzare nel dettaglio il risultato del confronto dello stesso elemento domanda in due esecuzioni diverse
   - *Scenario*:
-    - L'utente sceglie una domanda
-    - L'utente seleziona l'opzione per rimuovere un'etichetta
-    - L'utente seleziona l'etichetta da rimuovere
-    - L'utente conferma la rimozione
+    - L'utente entra nella schermata di visualizzazione in dettaglio del singolo elemento confronto esecuzione
+    - (UC1.1) L'utente visualizza l'elemento domanda
+    - L'utente visualizza la risposta data dall'LLM per entrambe le esecuzioni
+    - L'utente visualizza l'LLM utilizzato per entrambe le esecuzioni
+    - L'utente visualizza la valutazione assegnata alla singola domanda per entrambe le esecuzioni
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda nel sistema con almeno un'etichetta assegnata
+    - È stato eseguito il confronto tra due esecuzioni diverse
   - *Postcondizioni*:
-    - L'etichetta viene rimossa dalla domanda selezionata
+    - Vengono visualizzati i risultati dettagliati del confronto relativi ad un elemento confronto esecuzione
 
-  === UC19: Modifica assegnazione domande a etichetta
-  #align(center)[
-      #image("UML/UC19.png", height: 13%)
-    ]
-  - *Descrizione*: L'utente vuole poter modificare quali domande sono associate all'etichetta desiderata
-  - *Scenario*:
-    - L'utente seleziona l'opzione di gestione delle etichette
-    - L'utente seleziona l'etichetta a cui vuole modificare le domande associate
-    - L'utente modifica quali sono le domande associate
-    - L'utente conferma la modifica
-  - *Attore principale*: utente
-  - *Precondizioni*:
-    - É presente almeno un'etichetta nel sistema
-  - *Postcondizioni*:
-    - L'associazione tra le domande e l'etichetta vengono modificate correttamente
-
-  === UC20: Errore su aggiunta domande da file
+  === UC21: Errore su caricamento file
   #align(center)[
       #image("UML/UC20.png", height: 12%)
     ]
@@ -367,7 +476,7 @@
     - L'utente carica un file con all'interno almeno un errore
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Viene caricato un file contente domande e risposte
+    - Viene caricato un file contenente dati da inserire nel sistema
   - *Postcondizioni*:
     - Viene visualizzato un messaggio di errore
     - Le domande contenute nel file non vengono caricate
@@ -375,7 +484,7 @@
   - *Generalizzazioni*:
     - Errore dati file (UC20.1)
 
-  ==== UC20.1: Errore dati file
+  ==== UC21.1: Errore dati file
   #align(center)[
       #image("UML/UC20.1.png", height: 13%)
     ]
@@ -384,58 +493,57 @@
     - L'utente carica un file che contiene dei dati in formato errato
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Viene caricato un file contente domande e risposte
+    - Viene caricato un file contenente dati da inserire nel sistema
   - *Postcondizioni*:
     - L'utente visualizza un messaggio di errore relativo ad un errato formato dei dati contenuti nel file
 
-  === UC21: Errore su aggiunta di un'etichetta
+  === UC22: Errore su creazione di un set
   #align(center)[
       #image("UML/UC21.png", height: 13%)
     ]
-  - *Descrizione*: L'utente viene notificato della presenza di un errore dato dall'aggiunta di un etichetta non andata a buon fine
+  - *Descrizione*: L'utente viene notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine
   - *Scenario*:
-    - L'utente ha aggiunto un'etichetta generando uno o più errori
+    - L'utente ha creato un set generando uno o più errori
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
     - Viene visualizzato un messaggio di errore
-    - La nuova etichetta non viene aggiunta
-    - L'utente può aggiungere una nuova etichetta
+    - Il nuovo set non viene creato
+    - L'utente può aggiungere un nuovo set
   - *Generalizzazioni*:
-    - Errore aggiunta di un'etichetta già presente (UC21.1)
+    - Errore aggiunta di un set già presente (UC21.1)
 
-  ==== UC21.1: Errore aggiunta di un'etichetta già presente
+  ==== UC22.1: Errore aggiunta di un set già presente
   #align(center)[
       #image("UML/UC21.1.png", height: 13%)
     ]
-  - *Descrizione*: L'utente viene notificato della presenza di un errore dato dall'aggiunta di un etichetta con un nome già presente nel sistema
+  - *Descrizione*: L'utente viene notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema
   - *Scenario*:
-    - L'utente ha aggiunto un'etichetta con un nome già presente nel sistema
+    - L'utente ha aggiunto un set con un nome già presente nel sistema
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Almeno un'etichetta è definita nel sistema
-    - Nel sistema è già presente un'etichetta con lo stesso nome
+    - Almeno un set è definito nel sistema
+    - Nel sistema è già presente un set con lo stesso nome
   - *Postcondizioni*:
-    - Viene visualizzato un messaggio di errore relativo al nome dell'etichetta
+    - Viene visualizzato un messaggio di errore relativo al nome del set
 
-  === UC22: Annullamento eliminazione di un'etichetta
+  === UC23: Annullamento eliminazione di un set
   #align(center)[
       #image("UML/UC22.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un'etichetta
+  - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un set
   - *Scenario*:
-    - L'utente seleziona l'opzione di visualizzazione delle etichette
-    - L'utente seleziona l'opzione per eliminare un'etichetta
-    - L'utente viene informato che l'etichetta eliminata sarà rimossa anche dalle domande a cui è attualmente assegnata
+    - L'utente seleziona l'opzione di visualizzazione dei set
+    - L'utente seleziona l'opzione per eliminare un set
+    - L'utente viene informato che le domande associate al set non verranno eliminate
     - L'utente annulla l'operazione di eliminazione
   - *Attore principale*: utente
   - *Precondizioni*:
-    - Almeno un'etichetta è definita nel sistema
+    - Almeno un set è definito nel sistema
   - *Postcondizioni*:
-    - L'etichetta non viene eliminata
     - Non vengono apportate modifiche al sistema
 
-  === UC23: Annullamento modifica domanda
+  === UC24: Annullamento modifica domanda
   #align(center)[
       #image("UML/UC23.png", height: 13%)
     ]
@@ -447,12 +555,12 @@
     - L'utente annulla l'operazione di modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La domanda non viene modificata
     - Non vengono apportate modifiche al sistema
 
-  === UC24: Annullamento modifica risposta attesa
+  === UC25: Annullamento modifica risposta attesa
   #align(center)[
       #image("UML/UC24.png", height: 13%)
     ]
@@ -464,25 +572,24 @@
     - L'utente annulla l'operazione di modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La risposta attesa non viene modificata
     - Non vengono apportate modifiche al sistema
     
-  === UC25: Annullamento eliminazione domanda e risposta attesa
+  === UC26: Annullamento eliminazione elemento domanda
   #align(center)[
       #image("UML/UC25.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un'etichetta
+  - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un elemento domanda
   - *Scenario*:
-    - L'utente seleziona l'opzione di eliminazione domanda
-    - L'utente seleziona una o più domande
+    - L'utente seleziona l'opzione di eliminazione di un elemento domanda
+    - L'utente seleziona uno o più elementi domanda da eliminare
     - L'utente annulla l'operazione di eliminazione
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
-    - La domanda e relativa risposta attesa non viene eliminata
     - Non vengono apportate modifiche al sistema
 
 //#set heading(numbering: "1.1") //non necessario perché la diversa formattazione dell'heading dura solo per il file attuale

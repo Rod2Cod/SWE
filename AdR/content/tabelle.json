@@ -113,6 +113,18 @@
         "Data": "2025-02-10",
         "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.0.2",
+        "Data": "2025-02-13",
+        "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.0.3",
+        "Data": "2025-02-14",
+        "Descrizione": "Sezione Tracciamento, Casi d'uso - Inserita tabella automatica Riepiologo e Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
@@ -126,7 +138,7 @@
     "values" : [
       {
         "Codice": "RF-1.1",
-        "Descrizione": "L'utente deve poter visualizzare le domande con le rispettive risposte attese",
+        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1"
       },
@@ -144,37 +156,37 @@
       },
       {
         "Codice": "RF-1.4",
-        "Descrizione": "L'utente deve poter eliminare una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter eliminare un elemento domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC4"
       },
       {
         "Codice": "RF-1.5",
-        "Descrizione": "L'utente deve poter aggiungere una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter aggiungere una elemento domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5"
       },
       {
         "Codice": "RF-1.5.1",
-        "Descrizione": "L'utente deve poter aggiungere manualmente una domanda e la rispettiva risposta attesa",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una elemento domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1"
       },
       {
         "Codice": "RF-3.5.2",
-        "Descrizione": "L'utente deve poter inserire nel sistema delle domande e rispettive risposte presenti in un file strutturato",
+        "Descrizione": "L'utente deve poter inserire nel sistema degli elementi domanda presenti in un file strutturato",
         "Classificazione": "Desiderabile",
         "Fonti": "UC5.2"
       },
       {
         "Codice": "RF-2.6",
-        "Descrizione": "L'utente deve poter suddividere le domande e le relative risposte in set",
+        "Descrizione": "L'utente deve poter suddividere gli elementi domanda in set",
         "Classificazione": "Opzionale",
         "Fonti": "UC6"
       },
       {
         "Codice": "RF-1.7",
-        "Descrizione": "L'utente deve poter eseguire il test utilizzando le domande e relative risposte presenti",
+        "Descrizione": "L'utente deve poter eseguire il test utilizzando gli elementi domanda presenti",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC7"
       },
@@ -294,7 +306,7 @@
       },
       {
         "Codice": "RF-2.25",
-        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di una domanda e relativa risposta attesa",
+        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di elemento domanda",
         "Classificazione": "Opzionale",
         "Fonti": "UC25"
       }
@@ -334,7 +346,7 @@
       },
       {
         "Codice": "RQ-1.5",
-        "Descrizione": "Deve essere implementato un sistema di test automatico con un adeguata copertura.",
+        "Descrizione": "Deve essere implementato un sistema di test automatico con una copertura di almeno l'80% del codice.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       }
@@ -350,13 +362,7 @@
     "values" : [
       {
         "Codice": "RV-1.1",
-        "Descrizione": "All'interno del progetto devono essere adottati pattern architetturali robusti e duttili.",
-        "Classificazione": "Obbligatorio",
-        "Fonti": "Capitolato - Decisione interna"
-      },
-      {
-        "Codice": "RV-1.2",
-        "Descrizione": "Non sono stati forniti vincoli per quanto riguarda versioni del Sistema Operativo o del Software sul quale il programma deve poter funzionare.",
+        "Descrizione": "Il prodotto finale deve poter essere utilizzato su browser Chrome dalla versione 133",
         "Classificazione": "Obbligatorio",
         "Fonti": "Verbale - Decisione interna"
       }
@@ -488,45 +494,6 @@
         {
           "Fonte" : "UC25",
           "Requisito" : "RF-2.25"
-        }
-      ]
-    },
-    "riepilogo" : {
-      "keys" : [
-        "Tipologia",
-        "Obbligatorio",
-        "Desiderabile",
-        "Opzionale",
-        "Totale"
-      ],
-      "values" : [
-        {
-          "Tipologia" : "Funzionale",
-          "Obbligatorio" : "11",
-          "Desiderabile" : "6",
-          "Opzionale" : "12",
-          "Totale" : "29"
-        },
-        {
-          "Tipologia" : "Di qualità",
-          "Obbligatorio" : "5",
-          "Desiderabile" : "//",
-          "Opzionale" : "//",
-          "Totale" : "5"
-        },
-        {
-          "Tipologia" : "Di vincolo",
-          "Obbligatorio" : "2",
-          "Desiderabile" : "//",
-          "Opzionale" : "//",
-          "Totale" : "2"
-        },
-        {
-          "Tipologia" : "Totale",
-          "Obbligatorio" : "18",
-          "Desiderabile" : "6",
-          "Opzionale" : "12",
-          "Totale" : "36"
         }
       ]
     }
