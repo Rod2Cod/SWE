@@ -69,7 +69,7 @@
   - *Postcondizioni*:
     - La domanda modificata viene salvata correttamente
   - *Scenari alternativi*:
-    - Annullamento modifica domanda (UC23)
+    - Annullamento modifica domanda (UC24)
 
   === UC3: Modifica risposta attesa
   #align(center)[
@@ -87,7 +87,7 @@
   - *Postcondizioni*:
     - La risposta alla domanda selezionata viene salvata correttamente
   - *Scenari alternativi*:
-    - Annullamento modifica risposta attesa (UC24)
+    - Annullamento modifica risposta attesa (UC25)
 
   === UC4: Eliminazione elemento domanda
   #align(center)[
@@ -104,7 +104,7 @@
   - *Postcondizioni*: 
     - L'elemento domanda viene eliminato dal sistema
   - *Scenari alternativi*:
-    - Annullamento eliminazione elemento domanda
+    - Annullamento eliminazione elemento domanda (UC26)
 
   === UC5: Aggiunta di elementi domanda
   #align(center)[
@@ -170,7 +170,7 @@
   - *Postcondizioni*:
     - Gli elementi domanda vengono inserite nel sistema
   - *Scenari alternativi*:
-    - Errore su aggiunta domande da file (UC20)
+    - Errore dati file (UC21.1)
 
   === UC6: Suddivisione domande in set
   #align(center)[
@@ -249,7 +249,7 @@
     - Il set di domande viene eliminato
     - Le domande contenute nel set non vengono eliminate
   - *Scenario alternativo*:
-    - Annullamento eliminazione di un set
+    - Annullamento eliminazione di un set (UC23)
 
   === UC11: Modifica elementi domanda appartenenti ad un set
   #align(center)[
@@ -282,6 +282,8 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del test
     - Viene aggiunto allo storico il risultato del test
+  - *Generalizzazioni*:
+    - Esecuzione test su un set di domande (UC12.1)
 
   ==== UC12.1: Esecuzione test su un set di domande
       #align(center)[
@@ -368,7 +370,7 @@
       - L'utente visualizza il risultato del test appena caricato
       - Il risultato del test viene aggiunto allo storico dei test eseguiti
   - *Scenari alternativi*:
-      - Errore su caricamento file
+      - Errore su caricamento file (UC21.1)
 
   === UC17: Visualizzazione storico dei test
   #align(center)[
@@ -441,7 +443,7 @@
   - *Scenario*:
     - L'utente seleziona l'opzione di confronto tra due esecuzioni di test differenti
     - L'utente seleziona quali test confrontare
-    - L'utente confronta i test
+    - L'utente avvia il confronto dei test
   - *Attore principale*: utente
   - *Precondizioni*:
     - L'utente visualizza lo storico dei test effettuati
@@ -449,7 +451,7 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del confronto
 
-  ==== UC19.1: Visualizza risultato confronto esecuzioni
+  === UC20: Visualizza risultato confronto esecuzioni
   - *Descrizione*: L'utente vuole poter visualizzare il risultato del confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione del risultato del confronto
@@ -463,7 +465,7 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del confronto
 
-  ==== UC19.2: Visualizzazione elemento confronto esecuzione
+  ==== UC20.1: Visualizzazione elemento confronto esecuzione
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente visualizza la domanda
@@ -474,7 +476,7 @@
   - *Postcondizioni*:
     - Viene visualizzato l'elemento relativo al confronto
 
-  === UC20: Visualizzazione singolo elemento domanda confronto esecuzione
+  === UC21: Visualizzazione singolo elemento domanda confronto esecuzione
       #align(center)[
       #image("UML/UC20.png", height: 13%)
     ] 
@@ -491,7 +493,7 @@
   - *Postcondizioni*:
     - Vengono visualizzati i risultati dettagliati del confronto relativi ad un elemento confronto esecuzione
 
-  === UC21: Errore su caricamento file
+  === UC22: Errore su caricamento file
   #align(center)[
       #image("UML/UC21.png", height: 12%)
     ]
@@ -521,7 +523,7 @@
   - *Postcondizioni*:
     - L'utente visualizza un messaggio di errore relativo ad un errato formato dei dati contenuti nel file
 
-  === UC22: Errore su creazione di un set
+  === UC23: Errore su creazione di un set
   #align(center)[
       #image("UML/UC22.png", height: 13%)
     ]
@@ -537,7 +539,7 @@
   - *Generalizzazioni*:
     - Errore aggiunta di un set già presente (UC21.1)
 
-  ==== UC22.1: Errore aggiunta di un set già presente
+  ==== UC23.1: Errore aggiunta di un set già presente
   #align(center)[
       #image("UML/UC22.1.png", height: 13%)
     ]
@@ -551,7 +553,7 @@
   - *Postcondizioni*:
     - Viene visualizzato un messaggio di errore relativo al nome del set
 
-  === UC23: Annullamento eliminazione di un set
+  === UC24: Annullamento eliminazione di un set
   #align(center)[
       #image("UML/UC23.png", height: 13%)
     ]
@@ -567,7 +569,7 @@
   - *Postcondizioni*:
     - Non vengono apportate modifiche al sistema
 
-  === UC24: Annullamento modifica domanda
+  === UC25: Annullamento modifica domanda
   #align(center)[
       #image("UML/UC24.png", height: 13%)
     ]
@@ -584,7 +586,7 @@
     - La domanda non viene modificata
     - Non vengono apportate modifiche al sistema
 
-  === UC25: Annullamento modifica risposta attesa
+  === UC26: Annullamento modifica risposta attesa
   #align(center)[
       #image("UML/UC25.png", height: 13%)
     ]
@@ -601,7 +603,7 @@
     - La risposta attesa non viene modificata
     - Non vengono apportate modifiche al sistema
     
-  === UC26: Annullamento eliminazione elemento domanda
+  === UC27: Annullamento eliminazione elemento domanda
   #align(center)[
       #image("UML/UC26.png", height: 13%)
     ]
