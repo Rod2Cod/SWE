@@ -1,5 +1,5 @@
 #let tabelle = "../tabelle.json"
-#import "../../../functions.typ": table-json-req
+#import "../../../functions.typ": table-json-rev
 
 I test svolgono un ruolo fondamentale nel dimostrare che il prodotto rispetta i requisiti indicati nel documento di *Analisi dei Requisiti*.\
 Lo *stato* di ciascun test è categorizzato come segue:\
@@ -22,7 +22,7 @@ Dove:
   - *R*: non regressione.
 
 == Test di Sistema
-#table-json-req(json(tabelle).at("Test").at("TestSistema"),4)
+#table-json-rev(json(tabelle).at("Test").at("TestSistema"),4)
 
 == Test di Accettazione
-#table-json-req(json(tabelle).at("Test").at("TestAccettazione"),3)
+#table-json-rev(json(tabelle).at("Test").at("TestAccettazione"),3)

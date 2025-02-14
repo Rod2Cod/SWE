@@ -17,7 +17,7 @@
   )
 }
 
-#let table-json-req(data,fractions) = {
+#let table-json-rev(data,fractions) = {
   let keys = data.at("keys")
   let values = data.at("values")
 
@@ -35,7 +35,7 @@
                     strong(row.at(key, default: []))
                  } else {
                     if row.at("Tipologia", default: "") == "Totale" and key == "Tipologia" {
-                          // Se "PrimaColonna" è "Totale", evidenzio in giallo
+                          // Evidenzion sfondo cella Tipologia
                           strong(row.at(key, default: []))
                     } else {
                       row.at(key, default: [])
@@ -67,6 +67,47 @@
                  }
         )
       ).flatten()
+  )
+}
+
+#let table-json-req(data) = {
+  let funzionali = (
+    Obbligatori: data.at("requisiti_funzionali").at("values").filter(x => x.Classificazione == "Obbligatorio").len(),
+    Desiderabili: data.at("requisiti_funzionali").at("values").filter(x => x.Classificazione == "Desiderabile").len(),
+    Opzionali: data.at("requisiti_funzionali").at("values").filter(x => x.Classificazione == "Opzionale").len()
+  )
+
+  let qualità = (
+    Obbligatori: data.at("requisiti_qualità").at("values").filter(x => x.Classificazione == "Obbligatorio").len(),
+    Desiderabili: data.at("requisiti_qualità").at("values").filter(x => x.Classificazione == "Desiderabile").len(),
+    Opzionali: data.at("requisiti_qualità").at("values").filter(x => x.Classificazione == "Opzionale").len()
+  )
+
+  let vincolo = (
+    Obbligatori: data.at("requisiti_vincolo").at("values").filter(x => x.Classificazione == "Obbligatorio").len(),
+    Desiderabili: data.at("requisiti_vincolo").at("values").filter(x => x.Classificazione == "Desiderabile").len(),
+    Opzionali: data.at("requisiti_vincolo").at("values").filter(x => x.Classificazione == "Opzionale").len()
+  )
+
+  let totali = (
+    Obbligatori: funzionali.Obbligatori + qualità.Obbligatori + vincolo.Obbligatori,
+    Desiderabili: funzionali.Desiderabili + qualità.Desiderabili + vincolo.Desiderabili,
+    Opzionali: funzionali.Opzionali + qualità.Opzionali + vincolo.Opzionali,
+    Totali: funzionali.Obbligatori + funzionali.Desiderabili + funzionali.Opzionali + qualità.Obbligatori + qualità.Desiderabili + qualità.Opzionali + vincolo.Obbligatori + vincolo.Desiderabili + vincolo.Opzionali
+  )
+
+  table(
+    fill: (_,y) =>
+      if y == 0 {gray.lighten(50%)}, // Sfondo blu per la cella "Totale", //else if calc.even(y){gray.lighten(80%)},
+      align: horizon + center,
+      columns: 5,
+      table.header(
+        [*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Totale*],
+      ),
+      [Funzionali], [#funzionali.at("Obbligatori")], [#funzionali.at("Desiderabili")], [#funzionali.at("Opzionali")], [#totali.at("Obbligatori")],
+      [Di qualità], [#qualità.at("Obbligatori")], [#qualità.at("Desiderabili")], [#qualità.at("Opzionali")], [#totali.at("Desiderabili")],
+      [Di vincolo], [#vincolo.at("Obbligatori")], [#vincolo.at("Desiderabili")], [#vincolo.at("Opzionali")], [#totali.at("Opzionali")],
+      [*Totale*], [#totali.at("Obbligatori")], [#totali.at("Desiderabili")], [#totali.at("Opzionali")], [#totali.at("Totali")],
   )
 }
 

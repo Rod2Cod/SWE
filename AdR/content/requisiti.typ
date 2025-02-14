@@ -1,4 +1,4 @@
-#import "../../functions.typ": table-json-req
+#import "../../functions.typ": table-json-rev
 
 == Introduzione
   Questa sezione permette di individuare e classificare le *funzionalità* dell’applicazione e le *richieste* del proponente per poi avere una lista chiara e completa di tutto ciò che dovrà contenere il prodotto finale da presentare.
@@ -27,11 +27,11 @@
       identificati con un punto seguito dal rispettivo codice del sottocaso.
 
 == Requisiti funzionali
-  #table-json-req(json("tabelle.json").at("requisiti_funzionali"), 4)
+  #table-json-rev(json("tabelle.json").at("requisiti_funzionali"), 4)
 
 == Requisiti di qualità
-  #table-json-req(json("tabelle.json").at("requisiti_qualità"), 4)
+  #table-json-rev(json("tabelle.json").at("requisiti_qualità"), 4)
 
 == Requisiti di vincolo
-  #table-json-req(json("tabelle.json").at("requisiti_vincolo"), 4)
+  #table-json-rev(json("tabelle.json").at("requisiti_vincolo"), 4)
   

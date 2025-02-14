@@ -113,6 +113,12 @@
         "Data": "2025-02-10",
         "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.0.2",
+        "Data": "2025-02-13",
+        "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
@@ -482,45 +488,6 @@
         {
           "Fonte" : "UC25",
           "Requisito" : "RF-2.25"
-        }
-      ]
-    },
-    "riepilogo" : {
-      "keys" : [
-        "Tipologia",
-        "Obbligatorio",
-        "Desiderabile",
-        "Opzionale",
-        "Totale"
-      ],
-      "values" : [
-        {
-          "Tipologia" : "Funzionale",
-          "Obbligatorio" : "11",
-          "Desiderabile" : "6",
-          "Opzionale" : "12",
-          "Totale" : "29"
-        },
-        {
-          "Tipologia" : "Di qualità",
-          "Obbligatorio" : "5",
-          "Desiderabile" : "//",
-          "Opzionale" : "//",
-          "Totale" : "5"
-        },
-        {
-          "Tipologia" : "Di vincolo",
-          "Obbligatorio" : "2",
-          "Desiderabile" : "//",
-          "Opzionale" : "//",
-          "Totale" : "2"
-        },
-        {
-          "Tipologia" : "Totale",
-          "Obbligatorio" : "18",
-          "Desiderabile" : "6",
-          "Opzionale" : "12",
-          "Totale" : "36"
         }
       ]
     }
