@@ -539,7 +539,7 @@
 
   ==== UC22.1: Errore aggiunta di un set già presente
   #align(center)[
-      #image("UML/UC21.1.png", height: 13%)
+      #image("UML/UC22.1.png", height: 13%)
     ]
   - *Descrizione*: L'utente viene notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema
   - *Scenario*:
