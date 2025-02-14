@@ -257,12 +257,6 @@
       "Fonti": "UC17.1"
       },
       {
-      "Codice": "RF-2.18",
-      "Descrizione": "L'utente deve poter filtrare gli elementi dello storico dei test in base a determinati parametri.",
-      "Classificazione": "Opzionale",
-      "Fonti": "UC18"
-      },
-      {
       "Codice": "RF-2.18.1",
       "Descrizione": "L'utente deve poter filtrare gli elementi dello storico in base al nome del set di domande.",
       "Classificazione": "Opzionale",
