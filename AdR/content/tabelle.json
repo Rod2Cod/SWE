@@ -123,7 +123,7 @@
       {
         "Versione": "1.0.3",
         "Data": "2025-02-14",
-        "Descrizione": "Sezione Tracciamento, Casi d'uso - Inserita tabella automatica Riepiologo e Modificato Elenco dei casi d'uso",
+        "Descrizione": "Sezione Tracciamento, Casi d'uso - Inserita tabella automatica Riepilogo, aggiornata tabella Fonte - Requisiti e Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
       }
     ]
@@ -557,19 +557,19 @@
       "values" : [
         {
           "Fonte" : "Capitolato",
-          "Requisito" : "RF-1.1, RF-1.2, RF-1.3, RF-1.4, RF-1.5,\n RF-1.5.1, RF-3.5.2, RF-1.7, RF-1.8, RF-1.9,\n RF-1.10, RF-3.13, RQ-1.2, RQ-1.3, RQ-1.4,\n RQ-1.5, RV-1.1"
+          "Requisito" : "RF-1.1, RF-1.1.1, RF-1.2, RF-1.3, RF-1.4, RF-1.5, RF-1.5.1, RF-1.5.1.1, RF-1.5.1.2, RF-1.12, RF-1.13, RF-1.13.2"
         },
         {
           "Fonte" : "Incontro con il proponente",
-          "Requisito" : "RF-2.6, RF-1.11, RF-2.14, RF-2.15"
+          "Requisito" : "RF-2.5.2, RF-3.6, RF-2.7, RF-2.8, RF-2.10, RF-2.11, RF-3.12.1, RF-2.15, RF-2.16, RF-1.17, RF-2.18, RF-2.19"
         },
         {
           "Fonte" : "Decisione interna",
-          "Requisito" : "RF-2.12, RF-2.16, RF-2.17, RF-2.18, RF-2.19,\n RQ-1.1, RV-1.1, RV-1.2"
+          "Requisito" : "RF-1.1.1.1, RF-1.1.1.2, RF-2.9, RF-1.13.1, RF-1.13.3, RF-1.14, RF-1.14.1, RF-1.14.2, RF-1.14.3, RF-1.14.4, RF-1.17.1, RF-1.17.1.1, RF-1.17.1.2, RF-1.17.1.3, RF-1.17.1.4, RF-2.18.1, RF-2.18.2, RF-2.19.1, RF-2.19.1.1, RF-2.19.1.2, RF-2.19.1.3, RF-2.19.2, RF-2.20, RF-2.20.1, RF-2.20.2, RF-2.20.3, RF-2.20.4, RF-2.21, RF-2.21.1, RF-3.22, RF-3.22.1, RF-2.23, RF-3.24, RF-3.25, RF-1.26"
         },
         {
           "Fonte" : "UC1",
-          "Requisito" : "RF-1.1"
+          "Requisito" : "RF-1.1, RF-1.1.1, RF-1.1.1.1, RF-1.1.1.2"
         },
         {
           "Fonte" : "UC2",
@@ -585,95 +585,95 @@
         },
         {
           "Fonte" : "UC5",
-          "Requisito" : "RF-1.5"
+          "Requisito" : "RF-1.5, RF-1.5.1, RF-1.5.1.1, RF-1.5.1.2, RF-2.5.2"
         },
         {
-          "Fonte" : "UC5.1",
-          "Requisito" : "RF-1.5.1"
-        },
-        {
-          "Fonte" : "UC5.2",
-          "Requisito" : "RF-3.5.2"
-        },
-        {
-          "Fonte" : "UC6",
-          "Requisito" : "RF-2.6"
+          "Fonte": "UC6",
+          "Requisito": "RF-3.6"
         },
         {
           "Fonte" : "UC7",
-          "Requisito" : "RF-1.7"
+          "Requisito" : "RF-2.7"
         },
         {
-          "Fonte" : "UC8",
-          "Requisito" : "RF-1.8"
+          "Fonte" : "UC7",
+          "Requisito" : "RF-2.8"
         },
         {
           "Fonte" : "UC9",
-          "Requisito" : "RF-1.9"
+          "Requisito" : "RF-2.9"
         },
         {
           "Fonte" : "UC10",
-          "Requisito" : "RF-1.10"
+          "Requisito" : "RF-2.10"
         },
         {
           "Fonte" : "UC11",
-          "Requisito" : "RF-1.11"
+          "Requisito" : "RF-2.11"
         },
         {
           "Fonte" : "UC12",
-          "Requisito" : "RF-2.12"
+          "Requisito" : "RF-1.12"
         },
         {
           "Fonte" : "UC13",
-          "Requisito" : "RF-3.13"
+          "Requisito" : "RF-1.13, RF-1.13.1, RF-1.13.2, RF-1.13.3"
         },
         {
-          "Fonte" : "UC14",
-          "Requisito" : "RF-2.14"
+          "Fonte": "UC14",
+          "Requisito": "RF-1.14, RF-1.14.1, RF-1.14.2, RF-1.14.3, RF-1.14.4"
         },
         {
-          "Fonte" : "UC15",
-          "Requisito" : "RF-2.15"
+          "Fonte": "UC15",
+          "Requisito": "RF-2.15"
         },
         {
-          "Fonte" : "UC16",
-          "Requisito" : "RF-2.16"
+          "Fonte": "UC16",
+          "Requisito": "RF-2.16"
         },
         {
-          "Fonte" : "UC17",
-          "Requisito" : "RF-2.17"
+          "Fonte": "UC17",
+          "Requisito": "RF-1.17, RF-1.17.1, RF-1.17.1.1, 1.17.1.2, 1.17.1.3, 1.17.1.4"
         },
         {
-          "Fonte" : "UC18",
-          "Requisito" : "RF-2.18"
+          "Fonte": "UC18",
+          "Requisito": "RF-2.18, RF-2.18.1, RF-2.18.2"
         },
         {
-          "Fonte" : "UC19",
-          "Requisito" : "RF-2.19"
+          "Fonte": "UC19",
+          "Requisito": "RF-2.19"
         },
         {
-          "Fonte" : "UC20",
-          "Requisito" : "RF-3.20, RF-3.20.1"
+          "Fonte": "UC20",
+          "Requisito": "RF-2.19.1, RF-2.19.1.1, RF-2.19.1.2, RF-2.19.1.3, RF-2.19.2"
         },
         {
-          "Fonte" : "UC21",
-          "Requisito" : "RF-3.21, RF-3.21.1"
+          "Fonte": "UC21",
+          "Requisito": "RF-2.20, RF-2.20.1, RF-2.20.2, RF-2.20.3, RF-2.20.4"
         },
         {
-          "Fonte" : "UC22",
-          "Requisito" : "RF-2.22"
+          "Fonte": "UC22",
+          "Requisito": "RF-2.21, RF-2.21.1"
         },
         {
-          "Fonte" : "UC23",
-          "Requisito" : "RF-2.23"
+          "Fonte": "UC23",
+          "Requisito": "RF-3.22, RF-3.22.1"
         },
         {
-          "Fonte" : "UC24",
-          "Requisito" : "RF-2.24"
+          "Fonte": "UC24",
+          "Requisito": "RF-2.23"
         },
         {
-          "Fonte" : "UC25",
-          "Requisito" : "RF-2.25"
+          "Fonte": "UC25",
+          "Requisito": "RF-3.24"
+        },
+        {
+          "Fonte": "UC26",
+          "Requisito": "RF-3.25"
+        },
+        {
+          "Fonte": "UC27",
+          "Requisito": "RF-1.26"
         }
       ]
     }
