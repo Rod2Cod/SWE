@@ -441,7 +441,7 @@
   - *Scenario*:
     - L'utente seleziona l'opzione di confronto tra due esecuzioni di test differenti
     - L'utente seleziona quali test confrontare
-    - L'utente confronta i test
+    - L'utente avvia il confronto dei test
   - *Attore principale*: utente
   - *Precondizioni*:
     - L'utente visualizza lo storico dei test effettuati
@@ -449,7 +449,7 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del confronto
 
-  ==== UC19.1: Visualizza risultato confronto esecuzioni
+  === UC20: Visualizza risultato confronto esecuzioni
   - *Descrizione*: L'utente vuole poter visualizzare il risultato del confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione del risultato del confronto
@@ -463,7 +463,7 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del confronto
 
-  ==== UC19.2: Visualizzazione elemento confronto esecuzione
+  ==== UC20.1: Visualizzazione elemento confronto esecuzione
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente visualizza la domanda
@@ -474,7 +474,7 @@
   - *Postcondizioni*:
     - Viene visualizzato l'elemento relativo al confronto
 
-  === UC20: Visualizzazione singolo elemento domanda confronto esecuzione
+  === UC21: Visualizzazione singolo elemento domanda confronto esecuzione
       #align(center)[
       #image("UML/UC20.png", height: 13%)
     ] 
@@ -491,7 +491,7 @@
   - *Postcondizioni*:
     - Vengono visualizzati i risultati dettagliati del confronto relativi ad un elemento confronto esecuzione
 
-  === UC21: Errore su caricamento file
+  === UC22: Errore su caricamento file
   #align(center)[
       #image("UML/UC21.png", height: 12%)
     ]
@@ -508,7 +508,7 @@
   - *Generalizzazioni*:
     - Errore dati file (UC20.1)
 
-  ==== UC21.1: Errore dati file
+  ==== UC22.1: Errore dati file
     #align(center)[
       #image("UML/UC21.1.png", height: 13%)
     ] 
@@ -521,7 +521,7 @@
   - *Postcondizioni*:
     - L'utente visualizza un messaggio di errore relativo ad un errato formato dei dati contenuti nel file
 
-  === UC22: Errore su creazione di un set
+  === UC23: Errore su creazione di un set
   #align(center)[
       #image("UML/UC22.png", height: 13%)
     ]
@@ -537,7 +537,7 @@
   - *Generalizzazioni*:
     - Errore aggiunta di un set già presente (UC21.1)
 
-  ==== UC22.1: Errore aggiunta di un set già presente
+  ==== UC23.1: Errore aggiunta di un set già presente
   #align(center)[
       #image("UML/UC22.1.png", height: 13%)
     ]
@@ -551,7 +551,7 @@
   - *Postcondizioni*:
     - Viene visualizzato un messaggio di errore relativo al nome del set
 
-  === UC23: Annullamento eliminazione di un set
+  === UC24: Annullamento eliminazione di un set
   #align(center)[
       #image("UML/UC23.png", height: 13%)
     ]
@@ -567,7 +567,7 @@
   - *Postcondizioni*:
     - Non vengono apportate modifiche al sistema
 
-  === UC24: Annullamento modifica domanda
+  === UC25: Annullamento modifica domanda
   #align(center)[
       #image("UML/UC24.png", height: 13%)
     ]
@@ -584,7 +584,7 @@
     - La domanda non viene modificata
     - Non vengono apportate modifiche al sistema
 
-  === UC25: Annullamento modifica risposta attesa
+  === UC26: Annullamento modifica risposta attesa
   #align(center)[
       #image("UML/UC25.png", height: 13%)
     ]
@@ -601,7 +601,7 @@
     - La risposta attesa non viene modificata
     - Non vengono apportate modifiche al sistema
     
-  === UC26: Annullamento eliminazione elemento domanda
+  === UC27: Annullamento eliminazione elemento domanda
   #align(center)[
       #image("UML/UC26.png", height: 13%)
     ]
