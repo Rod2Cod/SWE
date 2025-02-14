@@ -110,7 +110,7 @@
   #align(center)[
       #image("UML/UC5.png", height: 23%)
     ]
-  - *Descrizione*: L'utente vuole poter aggiungere almeno un elemento domanda attesa
+  - *Descrizione*: L'utente vuole poter aggiungere almeno un elemento domanda
   - *Scenario*:
     - L'utente seleziona l'opzione per aggiungere una domanda
     - L'utente aggiunge una o più domande
@@ -412,7 +412,7 @@
   - *Postcondizioni*:
     - Viene visualizzato lo storico dei test eseguiti con l'LLM selezionato
 
-  === UC19: Confronto tra esecuzioni diverse
+  === UC19: Confronto tra esecuzioni diverse di test
   #align(center)[
       #image("UML/UC14.png", height: 13%)
     ]
