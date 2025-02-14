@@ -442,7 +442,7 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del confronto
 
-  ==== UC16.2: Visualizzazione elemento confronto esecuzione
+  ==== UC19.2: Visualizzazione elemento confronto esecuzione
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente visualizza la domanda

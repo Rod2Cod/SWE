@@ -245,46 +245,70 @@
         "Fonti": "UC16"
       },
       {
-        "Codice": "RF-2.17",
-        "Descrizione": "L'utente deve poter assegnare una o più etichette ad una domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC17"
+      "Codice": "RF-1.17",
+      "Descrizione": "L'utente deve poter visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC17"
       },
       {
-        "Codice": "RF-2.18",
-        "Descrizione": "L'utente deve poter rimuovere un'etichetta assegnata ad una domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC18"
+      "Codice": "RF-1.17.1",
+      "Descrizione": "L'utente deve poter visualizzare i dettagli relativi a un test eseguito, inclusi il set di domande, la data di esecuzione, lo score generale e l'LLM utilizzato.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC17.1"
       },
       {
-        "Codice": "RF-2.19",
-        "Descrizione": "L'utente deve poter modificare quali sono le domande associate ad una etichetta",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC19"
+      "Codice": "RF-2.18",
+      "Descrizione": "L'utente deve poter filtrare gli elementi dello storico dei test in base a determinati parametri.",
+      "Classificazione": "Opzionale",
+      "Fonti": "UC18"
       },
       {
-        "Codice": "RF-3.20",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nel caricamento delle domande da file",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC20"
+      "Codice": "RF-2.18.1",
+      "Descrizione": "L'utente deve poter filtrare gli elementi dello storico in base al nome del set di domande.",
+      "Classificazione": "Opzionale",
+      "Fonti": "UC18.1"
       },
       {
-        "Codice": "RF-3.20.1",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore presente nei dati contenuti nel file",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC20.1"
+      "Codice": "RF-2.18.2",
+      "Descrizione": "L'utente deve poter filtrare gli elementi dello storico in base all'LLM utilizzato.",
+      "Classificazione": "Opzionale",
+      "Fonti": "UC18.2"
       },
       {
-        "Codice": "RF-3.21",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC21"
+      "Codice": "RF-1.19",
+      "Descrizione": "L'utente deve poter selezionare e confrontare i risultati di due esecuzioni di test.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC19"
       },
       {
-        "Codice": "RF-3.21.1",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta con un nome già presente nel sistema",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC21.1"
+      "Codice": "RF-1.19.1",
+      "Descrizione": "L'utente deve poter visualizzare il risultato del confronto tra due test, includendo le valutazioni generali, il nome del set e l'LLM utilizzato.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC19.1"
+      },
+      {
+      "Codice": "RF-2.19.2",
+      "Descrizione": "L'utente deve poter visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda.",
+      "Classificazione": "Opzionale",
+      "Fonti": "UC19.2"
+      },
+      {
+      "Codice": "RF-2.20",
+      "Descrizione": "L'utente deve poter visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test, includendo le risposte date e le valutazioni assegnate.",
+      "Classificazione": "Desiderabile",
+      "Fonti": "UC20"
+      },
+      {
+      "Codice": "RF-1.21",
+      "Descrizione": "L'utente deve essere notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC21"
+      },
+      {
+      "Codice": "RF-1.21.1",
+      "Descrizione": "L'utente deve essere notificato se il file caricato contiene dati in un formato errato.",
+      "Classificazione": "Obbligatorio",
+      "Fonti": "UC21.1"
       },
       {
         "Codice": "RF-2.22",
