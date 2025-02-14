@@ -69,7 +69,7 @@
   - *Postcondizioni*:
     - La domanda modificata viene salvata correttamente
   - *Scenari alternativi*:
-    - Annullamento modifica domanda (UC23)
+    - Annullamento modifica domanda (UC24)
 
   === UC3: Modifica risposta attesa
   #align(center)[
@@ -87,7 +87,7 @@
   - *Postcondizioni*:
     - La risposta alla domanda selezionata viene salvata correttamente
   - *Scenari alternativi*:
-    - Annullamento modifica risposta attesa (UC24)
+    - Annullamento modifica risposta attesa (UC25)
 
   === UC4: Eliminazione elemento domanda
   #align(center)[
@@ -104,7 +104,7 @@
   - *Postcondizioni*: 
     - L'elemento domanda viene eliminato dal sistema
   - *Scenari alternativi*:
-    - Annullamento eliminazione elemento domanda
+    - Annullamento eliminazione elemento domanda (UC26)
 
   === UC5: Aggiunta di elementi domanda
   #align(center)[
@@ -170,7 +170,7 @@
   - *Postcondizioni*:
     - Gli elementi domanda vengono inserite nel sistema
   - *Scenari alternativi*:
-    - Errore su aggiunta domande da file (UC20)
+    - Errore dati file (UC21.1)
 
   === UC6: Suddivisione domande in set
   #align(center)[
@@ -249,7 +249,7 @@
     - Il set di domande viene eliminato
     - Le domande contenute nel set non vengono eliminate
   - *Scenario alternativo*:
-    - Annullamento eliminazione di un set
+    - Annullamento eliminazione di un set (UC23)
 
   === UC11: Modifica elementi domanda appartenenti ad un set
   #align(center)[
@@ -282,6 +282,8 @@
   - *Postcondizioni*:
     - Viene visualizzato il risultato del test
     - Viene aggiunto allo storico il risultato del test
+  - *Generalizzazioni*:
+    - Esecuzione test su un set di domande (UC12.1)
 
   ==== UC12.1: Esecuzione test su un set di domande
       #align(center)[
@@ -368,7 +370,7 @@
       - L'utente visualizza il risultato del test appena caricato
       - Il risultato del test viene aggiunto allo storico dei test eseguiti
   - *Scenari alternativi*:
-      - Errore su caricamento file
+      - Errore su caricamento file (UC21.1)
 
   === UC17: Visualizzazione storico dei test
   #align(center)[
@@ -508,7 +510,7 @@
   - *Generalizzazioni*:
     - Errore dati file (UC20.1)
 
-  ==== UC22.1: Errore dati file
+  ==== UC21.1: Errore dati file
     #align(center)[
       #image("UML/UC21.1.png", height: 13%)
     ] 
