@@ -6,6 +6,5 @@ Modifiche da effettuare all'analisi dei requisiti
 5. UC14 non deve includere UC13, fa parte delle precondizioni
 6. UC15: cosa è possibile scegliere per le etichette
 7. Modifica requisiti funzionali per dettglio e atomicità
-8. RQ-1.5: da modificare adeguato
-9. RV-1.1: da rimuovere in quanto non misurabile
-10. RV-1.2 Siamo noi a dover individuare tali requisiti in quanto fornitori
+8. RV-1.1: da rimuovere in quanto non misurabile
+9. RV-1.2 Siamo noi a dover individuare tali requisiti in quanto fornitori

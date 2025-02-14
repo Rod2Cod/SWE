@@ -138,105 +138,351 @@
     "values" : [
       {
         "Codice": "RF-1.1",
-        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda",
+        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1"
       },
       {
         "Codice": "RF-1.1.1",
-        "Descrizione": "L'utente deve poter visualizzare un singolo elemento domanda",
+        "Descrizione": "L'utente deve poter visualizzare un singolo elemento domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1.1"
       },
       {
         "Codice": "RF-1.1.1.1",
-        "Descrizione": "L'utente deve poter visualizzare il testo di una domanda",
+        "Descrizione": "L'utente deve poter visualizzare il testo di una domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1.1.1"
       },
       {
         "Codice": "RF-1.1.1.2",
-        "Descrizione": "L'utente deve poter visualizzare il testo della risposta attesa associata ad una domanda",
+        "Descrizione": "L'utente deve poter visualizzare il testo della risposta attesa associata ad una domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC1.1.2"
       },
       {
         "Codice": "RF-1.2",
-        "Descrizione": "L'utente deve poter modificare una domanda",
+        "Descrizione": "L'utente deve poter modificare una domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC2"
       },
       {
         "Codice": "RF-1.3",
-        "Descrizione": "L'utente deve poter modificare una risposta attesa",
+        "Descrizione": "L'utente deve poter modificare una risposta attesa.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC3"
       },
       {
         "Codice": "RF-1.4",
-        "Descrizione": "L'utente deve poter eliminare un elemento domanda",
+        "Descrizione": "L'utente deve poter eliminare un elemento domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC4"
       },
       {
         "Codice": "RF-1.5",
-        "Descrizione": "L'utente deve poter aggiungere un elemento domanda",
+        "Descrizione": "L'utente deve poter aggiungere un elemento domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5"
       },
       {
         "Codice": "RF-1.5.1",
-        "Descrizione": "L'utente deve poter aggiungere manualmente un elemento domanda",
+        "Descrizione": "L'utente deve poter aggiungere manualmente un elemento domanda.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1"
       },
       {
         "Codice": "RF-1.5.1.1",
-        "Descrizione": "L'utente deve poter aggiungere manualmente una domadna",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una domadna.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1.1"
       },
       {
         "Codice": "RF-1.5.1.2",
-        "Descrizione": "L'utente deve poter aggiungere manualmente una risposta attesa",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una risposta attesa.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1.2"
       },
       {
         "Codice": "RF-2.5.2",
-        "Descrizione": "L'utente deve poter inserire nel sistema degli elementi domanda presenti in un file strutturato",
+        "Descrizione": "L'utente deve poter inserire nel sistema degli elementi domanda presenti in un file strutturato.",
         "Classificazione": "Opzionale",
         "Fonti": "UC5.2"
       },
       {
-        "Codice": "RF-2.6",
-        "Descrizione": "L'utente deve poter suddividere gli elementi domanda in set",
-        "Classificazione": "Opzionale",
+        "Codice": "RF-3.6",
+        "Descrizione": "L'utente deve poter suddividere gli elementi domanda in set.",
+        "Classificazione": "Desiderabile",
         "Fonti": "UC6"
       },
       {
         "Codice": "RF-2.7",
-        "Descrizione": "L'utente deve poter visualizzare i set di elementi domanda presenti",
+        "Descrizione": "L'utente deve poter visualizzare i set di elementi domanda presenti.",
         "Classificazione": "Opzionale",
         "Fonti": "UC7"
       },
       {
         "Codice": "RF-2.8",
-        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda presenti in un set",
+        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda presenti in un set.",
         "Classificazione": "Opzionale",
         "Fonti": "UC8"
       },
       {
         "Codice": "RF-2.9",
-        "Descrizione": "L'utente deve poter modificare il nome di un set",
+        "Descrizione": "L'utente deve poter modificare il nome di un set.",
         "Classificazione": "Opzionale",
         "Fonti": "UC9"
       },
       {
         "Codice": "RF-2.10",
-        "Descrizione": "L'utente deve poter eliminare un set di elementi domanda",
+        "Descrizione": "L'utente deve poter eliminare un set di elementi domanda.",
         "Classificazione": "Opzionale",
         "Fonti": "UC10"
+      },
+      {
+        "Codice": "RF-2.11",
+        "Descrizione": "L'utente deve poter modificare gli elementi domanda appartenenti ad un set.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC11"
+      },
+      {
+        "Codice": "RF-1.12",
+        "Descrizione": "L'utente deve poter eseguire un test utilizzando gli elementi domanda presenti nel sistema.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC12"
+      },
+      {
+        "Codice": "RF-3.12.1",
+        "Descrizione": "L'utente deve poter eseguire un test utilizzando un set di elementi domanda presente nel sistema.",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC12.1"
+      },
+      {
+        "Codice": "RF-1.13",
+        "Descrizione": "L'utente deve poter visualizzare il risultato del test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.13.1",
+        "Descrizione": "L'utente deve poter visualizzare nel risulato la valutazione generale del test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.13.2",
+        "Descrizione": "L'utente deve poter visualizzare nel risulato la valutazione di ogni singola domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.13.3",
+        "Descrizione": "L'utente deve poter visualizzare nel risulato la lista delle domande eseguite nel test ordinate in modo crescente rispetto alla singola valutazione.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.14",
+        "Descrizione": "L'utente deve poter visualizzare il risultato di un test per singolo elemento domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-1.14.1",
+        "Descrizione": "L'utente deve visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-1.14.2",
+        "Descrizione": "L'utente deve visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-1.14.3",
+        "Descrizione": "L'utente deve visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-1.14.4",
+        "Descrizione": "L'utente deve visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC14"
+      },
+      {
+        "Codice": "RF-2.15",
+        "Descrizione": "L'utente deve poter scaricare il risultato di un test",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC15"
+      },
+      {
+        "Codice": "RF-2",
+        "Descrizione": "L'utente deve poter caricare un file contenente i risultati di un test",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC16"
+      },
+      {
+        "Codice": "RF-1.17",
+        "Descrizione": "L'utente deve poter visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17"
+      },
+      {
+        "Codice": "RF-1.17.1",
+        "Descrizione": "L'utente deve poter visualizzare la data di esecuzione di un test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17.1"
+      },
+      {
+        "Codice": "RF-1.17.2",
+        "Descrizione": "L'utente deve poter visualizzare lo score generale di un test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17.1"
+      },
+      {
+        "Codice": "RF-1.17.3",
+        "Descrizione": "L'utente deve poter visualizzare l'LLM utilizzato in un test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17.1"
+      },
+      {
+        "Codice": "RF-1.17.1",
+        "Descrizione": "L'utente deve poter visualizzare il set di domande su cui è stato eseguito un test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17.1"
+      },
+      {
+        "Codice": "RF-2.18",
+        "Descrizione": "L'utente deve poter filtrare gli elementi dello storico dei test in base a determinati parametri.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC18"
+      },
+      {
+        "Codice": "RF-2.18.1",
+        "Descrizione": "L'utente deve poter filtrare gli elementi dello storico in base al nome del set di domande.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC18.1"
+      },
+      {
+        "Codice": "RF-2.18.2",
+        "Descrizione": "L'utente deve poter filtrare gli elementi dello storico in base all'LLM utilizzato.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC18.2"
+      },
+      {
+        "Codice": "RF-2.19",
+        "Descrizione": "L'utente deve poter selezionare e confrontare i risultati di due esecuzioni di test.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19"
+      },
+      {
+        "Codice": "RF-2.19.1",
+        "Descrizione": "L'utente deve poter visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19.1"
+      },
+      {
+        "Codice": "RF-2.19.1.1",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19.1"
+      },
+      {
+        "Codice": "RF-2.19.1.2",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19.1"
+      },
+      {
+        "Codice": "RF-2.19.1.3",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19.1"
+      },
+      {
+        "Codice": "RF-2.19.2",
+        "Descrizione": "L'utente deve poter visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC19.2"
+      },
+      {
+        "Codice": "RF-2.20",
+        "Descrizione": "L'utente deve poter visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-2.20.1",
+        "Descrizione": "L'utente deve poter visualizzare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-2.20.2",
+        "Descrizione": "L'utente deve poter visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-2.20.3",
+        "Descrizione": "L'utente deve poter visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-2.20.4",
+        "Descrizione": "L'utente deve poter visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC20"
+      },
+      {
+        "Codice": "RF-2.21",
+        "Descrizione": "L'utente deve essere notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC21"
+      },
+      {
+        "Codice": "RF-2.21.1",
+        "Descrizione": "L'utente deve essere notificato se il file caricato contiene dati in un formato errato.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC21.1"
+      },
+      {
+        "Codice": "RF-3.22",
+        "Descrizione": "L'utente viene notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC22"
+      },
+      {
+        "Codice": "RF-3.22.1",
+        "Descrizione": "L'utente viene notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC22.1"
+      },
+      {
+        "Codice": "RF-2.23",
+        "Descrizione": "L'utente vuole poter annullare l'operazione di eliminazione di un set",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC23"
+      },
+      {
+        "Codice": "RF-3.24",
+        "Descrizione": "L'utente vuole poter annullare l'operazione di modifica di una domanda",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC24"
+      },
+      {
+        "Codice": "RF-3.25",
+        "Descrizione": "L'utente vuole poter annullare l'operazione di modifica di una risposta attesa",
+        "Classificazione": "Desiderabile",
+        "Fonti": "UC25"
+      },
+      {
+        "Codice": "RF-1.26",
+        "Descrizione": "L'utente vuole poter annullare l'operazione di eliminazione di un elemento domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC26"
       }
     ]
   },
