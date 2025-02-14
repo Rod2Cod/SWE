@@ -1,12 +1,13 @@
 == Introduzione
   La seguente sezione contiene la *descrizione* dei casi d'uso relativi all'applicativo sviluppato. Sono classificati come '*UC*' e seguiti da uno o più numeri separati da un punto. Questo punto indica la *successione gerarchica* dei casi d'uso se questo è esplicitamente espresso dal punto 'Generalizzazioni' del caso d'uso padre, altrimenti indica un *sottocaso d'uso*, ovvero un caso d'uso che aggiunge *dettagli* al caso d'uso principale.
-  
-  Nei casi d'uso che rimangono generali, senza specificare in modo dettagliato alcuni aspetti della funzionalità l'azienda ha espresso la volontà di lasiciare al team di sviluppo totale libertà di decisione sui dettagli, in quanto non portatori di grande valore aggiunto.
+ 
+  Nei casi d'uso che rimangono generali, senza specificare in modo dettagliato alcuni aspetti della funzionalità l'azienda ha espresso la volontà di lasciare al team di sviluppo totale libertà di decisione sui dettagli, in quanto non portatori di grande valore aggiunto.
+
 
 == Attori
-  Il sistema comunica con due attori diversi: 
+  Il sistema comunica con due attori diversi:
   - l'*utente*, come attore principale che interagisce direttamente con esso.
-  - un *LLM*, come attore secondario che viene richiamato indirettamente. 
+  - un *LLM*, come attore secondario che viene richiamato indirettamente.
   Non viene richiesta l'autenticazione dell'utente.
 
 == Elenco dei casi d'uso
@@ -16,7 +17,7 @@
   === UC1: Visualizzazione lista elementi domanda
     #align(center)[
       #image("UML/UC1.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare una lista con gli elementi domanda presenti
   - *Scenario*:
     - L'utente seleziona l'opzione di visualizzazione della lista degli elementi domanda
@@ -24,7 +25,7 @@
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
     - Viene visualizzata una lista con gli elementi domanda presenti o una lista vuota
-  
+ 
   ==== UC1.1: Visualizzazione elemento domanda
   #align(center)[
       #image("UML/UC1.1.png", height: 18%)
@@ -32,7 +33,7 @@
     - *Descrizione*: L'utente vuole poter visualizzare un elemento domanda composto da una domanda e una risposta associata
     - *Scenario*:
       - L'utente visualizza una domanda
-      - L'utente visualizza la relativa risposta asssociata
+      - L'utente visualizza la relativa risposta associata
     - *Precondizioni*:
       - È presente almeno una elemento domanda nel sistema
     - *Postcondizioni*:
@@ -44,7 +45,7 @@
     ]
     - *Descrizione*: L'utente vuole poter visualizzare il testo di una domanda
     - *Scenario*:
-      - L'utente visualizza il testo di uan domanda
+      - L'utente visualizza il testo di una domanda
     - *Precondizioni*:
       - È presente almeno una domanda nel sistema
     - *Postcondizioni*:
@@ -110,7 +111,7 @@
   - *Attore principale*: utente
   - *Precondizioni*:
     - È presente almeno un elemento domanda nel sistema
-  - *Postcondizioni*: 
+  - *Postcondizioni*:
     - L'elemento domanda viene eliminato dal sistema
   - *Scenari alternativi*:
     - Annullamento eliminazione elemento domanda (UC26)
@@ -201,7 +202,7 @@
   === UC7: Visualizzazione dei vari set di domande
       #align(center)[
       #image("UML/UC7.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare i vari set di domande presenti nel sistema
   - *Scenario*:
     - L'utente seleziona l'opzione per visualizzare i vari set di domande
@@ -213,7 +214,7 @@
   === UC8: Visualizzazione elementi domanda appartenenti ad un set
       #align(center)[
       #image("UML/UC8.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare gli elementi domanda appartenenti ad un determinato set
   - *Scenario*:
     - L'utente seleziona un set
@@ -228,11 +229,11 @@
   === UC9: Modifica nome del set di domande
       #align(center)[
       #image("UML/UC9.png", height: 13%)
-    ] 
-  - *Descrizione*: L'utente vuole poter modificare il nome assengato al set di elementi domanda
+    ]
+  - *Descrizione*: L'utente vuole poter modificare il nome assegnato al set di elementi domanda
   - *Scenario*:
     - L'utente seleziona l'opzione per modificare il nome del set
-    - L'utene modifica il nome del set
+    - L'utente modifica il nome del set
     - L'utente conferma la modifica
   - *Attore principale*: utente
   - *Precondizioni*:
@@ -244,7 +245,7 @@
   === UC10: Eliminazione set di domande
       #align(center)[
       #image("UML/UC10.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter eliminare un set di domande
   - *Scenario*:
     - L'utente seleziona l'opzione per eliminare un set di domande
@@ -358,11 +359,11 @@
     - È stato eseguito almeno un test
   - *Postcondizioni*:
     - Un file strutturato che contiene gli elementi domanda utilizzati, le risposte ricevute dall'LLM, la valutazione di ogni elemento domanda, la valutazione e i nomi delle varie metriche utilizzate, la valutazione generale del test e l'eventuale nome del set di appartenenza degli elementi domanda viene salvato nel pc con nome e percorso scelti dall'utente
-  
+ 
   === UC16: Caricamento file risultato test
       #align(center)[
       #image("UML/UC16.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter caricare un file contenente i risultati di un test, nello stesso formato in cui vengono salvati
   - *Scenario*:
       - L'utente seleziona l'opzione di caricamento file relativo al risultato di un test
@@ -394,7 +395,7 @@
   ==== UC17.1: Visualizzazione elemento esecuzione test
   #align(center)[
       #image("UML/UC17.1.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante l'esecuzione di un test
   - *Scenario*:
     - L'utente visualizza il set di domande su cui è stato eseguito il test
@@ -412,7 +413,7 @@
   === UC18: Applicazione filtri storico dei test
       #align(center)[
       #image("UML/UC18.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base determinati parametri
   - *Scenario*:
     - L'utente sceglie di filtrare gli elementi per determinati parametri
@@ -425,7 +426,7 @@
   ==== UC18.1: Filtro storico dei test per nome del set
   #align(center)[
       #image("UML/UC18.12.png", height: 25%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base al nome del set di domande
   - *Scenario*:
     - L'utente seleziona l'opzione di filtro per nome del set di domande utilizzato
@@ -439,7 +440,7 @@
   ==== UC18.2: Filtro storico dei test per LLM
   #align(center)[
       #image("UML/UC18.12.png", height: 25%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base all'LLM utilizzato
   - *Scenario*:
     - L'utente seleziona l'opzione di filtro per LLM
@@ -469,13 +470,13 @@
   === UC20: Visualizza risultato confronto esecuzioni
   #align(center)[
       #image("UML/UC20.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare il risultato del confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione del risultato del confronto
     - L'utente visualizza entrambe le valutazioni generali dei test confrontati (media dei voti)
     - L'utente visualizza entrambi i nomi dei set di domande su cui sono stati eseguiti i test
-    - L'utente visualizza entrambi i nomi degli LLM utilizzati per i test 
+    - L'utente visualizza entrambi i nomi degli LLM utilizzati per i test
     - L'utente visualizza gli elementi confronto esecuzione ordinati per distanza tra le valutazioni
   - *Attore principale*: utente
   - *Precondizioni*:
@@ -486,7 +487,7 @@
   ==== UC20.1: Visualizzazione elemento confronto esecuzione
   #align(center)[
       #image("UML/UC20.1.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente visualizza la domanda
@@ -500,7 +501,7 @@
   === UC21: Visualizzazione singolo elemento domanda confronto esecuzione
       #align(center)[
       #image("UML/UC21.png", height: 13%)
-    ] 
+    ]
   - *Descrizione*: L'utente vuole poter visualizzare nel dettaglio il risultato del confronto dello stesso elemento domanda in due esecuzioni diverse
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione in dettaglio del singolo elemento confronto esecuzione
@@ -617,7 +618,7 @@
   - *Postcondizioni*:
     - La risposta attesa non viene modificata
     - Non vengono apportate modifiche al sistema
-    
+   
   === UC27: Annullamento eliminazione elemento domanda
   #align(center)[
       #image("UML/UC27.png", height: 13%)
