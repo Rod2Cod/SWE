@@ -26,6 +26,9 @@
     - Viene visualizzata una lista con gli elementi domanda presenti o una lista vuota
   
   ==== UC1.1: Visualizzazione elemento domanda
+  #align(center)[
+      #image("UML/UC1.1.png", height: 18%)
+    ]
     - *Descrizione*: L'utente vuole poter visualizzare un elemento domanda composto da una domanda e una risposta associata
     - *Scenario*:
       - L'utente visualizza una domanda
@@ -36,6 +39,9 @@
       - Viene visualizzato l'elemento domanda
 
   ===== UC1.1.1: Visualizzazione domanda
+  #align(center)[
+      #image("UML/UC1.1.12.png", height: 25%)
+    ]
     - *Descrizione*: L'utente vuole poter visualizzare il testo di una domanda
     - *Scenario*:
       - L'utente visualizza il testo di uan domanda
@@ -45,6 +51,9 @@
       - Viene visualizzato il testo della domanda
 
   ===== UC1.1.2: Visualizzazione risposta attesa
+  #align(center)[
+      #image("UML/UC1.1.12.png", height: 25%)
+    ]
     - *Descrizione*: L'utente vuole poter visualizzare il testo della risposta attesa associata ad una domanda
     - *Scenario*:
       - L'utente visualizza il testo della risposta attesa associata ad una domanda
@@ -125,7 +134,7 @@
 
   ==== UC5.1: Aggiunta manuale di elementi domanda
   #align(center)[
-      #image("UML/UC5.1.png", height: 13%)
+      #image("UML/UC5.1.png", height: 25%)
     ]
   - *Descrizione*: L'utente vuole poter aggiungere manualmente un elemento domanda
   - *Scenario*:
@@ -268,7 +277,7 @@
 
   === UC12: Esecuzione test
   #align(center)[
-      #image("UML/UC12.png", height: 13%)
+      #image("UML/UC12.png", height: 25%)
     ]
   - *Descrizione*: L'utente vuole poter eseguire il test utilizzando gli elementi domanda presenti
   - *Scenario*:
@@ -286,9 +295,6 @@
     - Esecuzione test su un set di domande (UC12.1)
 
   ==== UC12.1: Esecuzione test su un set di domande
-      #align(center)[
-      #image("UML/UC12.1.png", height: 13%)
-    ] 
   - *Descrizione*: L'utente vuole poter eseguire il test su un determinato set di domande
   - *Scenario*:
     - L'utente seleziona il set di domande su cui eseguire il test
@@ -386,6 +392,9 @@
     - Viene visualizzato l'elenco dei test eseguiti o una lista vuota
 
   ==== UC17.1: Visualizzazione elemento esecuzione test
+  #align(center)[
+      #image("UML/UC17.1.png", height: 13%)
+    ] 
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante l'esecuzione di un test
   - *Scenario*:
     - L'utente visualizza il set di domande su cui è stato eseguito il test
@@ -414,6 +423,9 @@
     - Viene visualizzato lo storico dei test filtrato secondo i parametri selezionati
 
   ==== UC18.1: Filtro storico dei test per nome del set
+  #align(center)[
+      #image("UML/UC18.12.png", height: 25%)
+    ] 
   - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base al nome del set di domande
   - *Scenario*:
     - L'utente seleziona l'opzione di filtro per nome del set di domande utilizzato
@@ -425,6 +437,9 @@
     - Viene visualizzato lo storico dei test eseguiti sul set selezionato
 
   ==== UC18.2: Filtro storico dei test per LLM
+  #align(center)[
+      #image("UML/UC18.12.png", height: 25%)
+    ] 
   - *Descrizione*: L'utente vuole poter filtrare gli elementi esecuzione del test in base all'LLM utilizzato
   - *Scenario*:
     - L'utente seleziona l'opzione di filtro per LLM
@@ -452,6 +467,9 @@
     - Viene visualizzato il risultato del confronto
 
   === UC20: Visualizza risultato confronto esecuzioni
+  #align(center)[
+      #image("UML/UC20.png", height: 13%)
+    ] 
   - *Descrizione*: L'utente vuole poter visualizzare il risultato del confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione del risultato del confronto
@@ -466,6 +484,9 @@
     - Viene visualizzato il risultato del confronto
 
   ==== UC20.1: Visualizzazione elemento confronto esecuzione
+  #align(center)[
+      #image("UML/UC20.1.png", height: 13%)
+    ] 
   - *Descrizione*: L'utente vuole poter visualizzare un elemento riguardante il confronto tra due esecuzioni di test
   - *Scenario*:
     - L'utente visualizza la domanda
@@ -478,7 +499,7 @@
 
   === UC21: Visualizzazione singolo elemento domanda confronto esecuzione
       #align(center)[
-      #image("UML/UC20.png", height: 13%)
+      #image("UML/UC21.png", height: 13%)
     ] 
   - *Descrizione*: L'utente vuole poter visualizzare nel dettaglio il risultato del confronto dello stesso elemento domanda in due esecuzioni diverse
   - *Scenario*:
@@ -495,7 +516,7 @@
 
   === UC22: Errore su caricamento file
   #align(center)[
-      #image("UML/UC21.png", height: 12%)
+      #image("UML/UC22.png", height: 12%)
     ]
   - *Descrizione*: L'utente viene notificato della presenza di un errore dato dal caricamento di un file impossibile da leggere correttamente
   - *Scenario*:
@@ -510,10 +531,7 @@
   - *Generalizzazioni*:
     - Errore dati file (UC20.1)
 
-  ==== UC21.1: Errore dati file
-    #align(center)[
-      #image("UML/UC21.1.png", height: 13%)
-    ] 
+  ==== UC22.1 Errore dati file
   - *Descrizione*: L'utente viene notificato della presenza di un errore dato da un errato formato di alcuni dati contenuti nel file
   - *Scenario*:
     - L'utente carica un file che contiene dei dati in formato errato
@@ -525,7 +543,7 @@
 
   === UC23: Errore su creazione di un set
   #align(center)[
-      #image("UML/UC22.png", height: 13%)
+      #image("UML/UC23.png", height: 13%)
     ]
   - *Descrizione*: L'utente viene notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine
   - *Scenario*:
@@ -540,9 +558,6 @@
     - Errore aggiunta di un set già presente (UC21.1)
 
   ==== UC23.1: Errore aggiunta di un set già presente
-  #align(center)[
-      #image("UML/UC22.1.png", height: 13%)
-    ]
   - *Descrizione*: L'utente viene notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema
   - *Scenario*:
     - L'utente ha aggiunto un set con un nome già presente nel sistema
@@ -555,7 +570,7 @@
 
   === UC24: Annullamento eliminazione di un set
   #align(center)[
-      #image("UML/UC23.png", height: 13%)
+      #image("UML/UC24.png", height: 13%)
     ]
   - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un set
   - *Scenario*:
@@ -571,7 +586,7 @@
 
   === UC25: Annullamento modifica domanda
   #align(center)[
-      #image("UML/UC24.png", height: 13%)
+      #image("UML/UC25.png", height: 13%)
     ]
   - *Descrizione*: L'utente vuole poter annullare l'operazione di modifica di una domanda
   - *Scenario*:
@@ -588,7 +603,7 @@
 
   === UC26: Annullamento modifica risposta attesa
   #align(center)[
-      #image("UML/UC25.png", height: 13%)
+      #image("UML/UC26.png", height: 13%)
     ]
   - *Descrizione*: L'utente vuole poter annullare l'operazione di modifica di una risposta attesa
   - *Scenario*:
@@ -605,7 +620,7 @@
     
   === UC27: Annullamento eliminazione elemento domanda
   #align(center)[
-      #image("UML/UC26.png", height: 13%)
+      #image("UML/UC27.png", height: 13%)
     ]
   - *Descrizione*: L'utente vuole poter annullare l'operazione di eliminazione di un elemento domanda
   - *Scenario*:
