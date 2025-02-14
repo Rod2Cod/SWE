@@ -143,6 +143,24 @@
         "Fonti": "UC1"
       },
       {
+        "Codice": "RF-1.1.1",
+        "Descrizione": "L'utente deve poter visualizzare un singolo elemento domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC1.1"
+      },
+      {
+        "Codice": "RF-1.1.1.1",
+        "Descrizione": "L'utente deve poter visualizzare il testo di una domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC1.1.1"
+      },
+      {
+        "Codice": "RF-1.1.1.2",
+        "Descrizione": "L'utente deve poter visualizzare il testo della risposta attesa associata ad una domanda",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC1.1.2"
+      },
+      {
         "Codice": "RF-1.2",
         "Descrizione": "L'utente deve poter modificare una domanda",
         "Classificazione": "Obbligatorio",
@@ -162,20 +180,32 @@
       },
       {
         "Codice": "RF-1.5",
-        "Descrizione": "L'utente deve poter aggiungere una elemento domanda",
+        "Descrizione": "L'utente deve poter aggiungere un elemento domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5"
       },
       {
         "Codice": "RF-1.5.1",
-        "Descrizione": "L'utente deve poter aggiungere manualmente una elemento domanda",
+        "Descrizione": "L'utente deve poter aggiungere manualmente un elemento domanda",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC5.1"
       },
       {
-        "Codice": "RF-3.5.2",
+        "Codice": "RF-1.5.1.1",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una domadna",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC5.1.1"
+      },
+      {
+        "Codice": "RF-1.5.1.2",
+        "Descrizione": "L'utente deve poter aggiungere manualmente una risposta attesa",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC5.1.2"
+      },
+      {
+        "Codice": "RF-2.5.2",
         "Descrizione": "L'utente deve poter inserire nel sistema degli elementi domanda presenti in un file strutturato",
-        "Classificazione": "Desiderabile",
+        "Classificazione": "Opzionale",
         "Fonti": "UC5.2"
       },
       {
@@ -185,130 +215,28 @@
         "Fonti": "UC6"
       },
       {
-        "Codice": "RF-1.7",
-        "Descrizione": "L'utente deve poter eseguire il test utilizzando gli elementi domanda presenti",
-        "Classificazione": "Obbligatorio",
+        "Codice": "RF-2.7",
+        "Descrizione": "L'utente deve poter visualizzare i set di elementi domanda presenti",
+        "Classificazione": "Opzionale",
         "Fonti": "UC7"
       },
       {
-        "Codice": "RF-1.8",
-        "Descrizione": "L'utente deve poter visualizzare i risultati del test relativi ad una singola domanda",
-        "Classificazione": "Obbligatorio",
+        "Codice": "RF-2.8",
+        "Descrizione": "L'utente deve poter visualizzare gli elementi domanda presenti in un set",
+        "Classificazione": "Opzionale",
         "Fonti": "UC8"
       },
       {
-        "Codice": "RF-1.9",
-        "Descrizione": "L'utente deve poter visualizzare il risultato del test relativo all'intero set di domande",
-        "Classificazione": "Obbligatorio",
+        "Codice": "RF-2.9",
+        "Descrizione": "L'utente deve poter modificare il nome di un set",
+        "Classificazione": "Opzionale",
         "Fonti": "UC9"
       },
       {
-        "Codice": "RF-1.10",
-        "Descrizione": "L'utente deve poter visualizzare solo i risultati peggiori di uno specifico test",
-        "Classificazione": "Obbligatorio",
+        "Codice": "RF-2.10",
+        "Descrizione": "L'utente deve poter eliminare un set di elementi domanda",
+        "Classificazione": "Opzionale",
         "Fonti": "UC10"
-      },
-      {
-        "Codice": "RF-1.11",
-        "Descrizione": "L'utente deve poter visualizzare tutte le domande eseguite nel test",
-        "Classificazione": "Obbligatorio",
-        "Fonti": "UC11"
-      },
-      {
-        "Codice": "RF-2.12",
-        "Descrizione": "L'utente deve poter scaricare i risultati del test",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC12"
-      },
-      {
-        "Codice": "RF-3.13",
-        "Descrizione": "L'utente deve poter visualizzare uno storico dei test effettuati",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC13"
-      },
-      {
-        "Codice": "RF-2.14",
-        "Descrizione": "L'utente deve poter mettere a confronto differenti esecuzioni dei test",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC14"
-      },
-      {
-        "Codice": "RF-2.15",
-        "Descrizione": "L'utente deve poter definire etichette che descrivano il contesto delle domande da porre",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC15"
-      },
-      {
-        "Codice": "RF-2.16",
-        "Descrizione": "L'utente deve poter eliminare un etichetta",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC16"
-      },
-      {
-        "Codice": "RF-2.17",
-        "Descrizione": "L'utente deve poter assegnare una o più etichette ad una domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC17"
-      },
-      {
-        "Codice": "RF-2.18",
-        "Descrizione": "L'utente deve poter rimuovere un'etichetta assegnata ad una domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC18"
-      },
-      {
-        "Codice": "RF-2.19",
-        "Descrizione": "L'utente deve poter modificare quali sono le domande associate ad una etichetta",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC19"
-      },
-      {
-        "Codice": "RF-3.20",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nel caricamento delle domande da file",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC20"
-      },
-      {
-        "Codice": "RF-3.20.1",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore presente nei dati contenuti nel file",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC20.1"
-      },
-      {
-        "Codice": "RF-3.21",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC21"
-      },
-      {
-        "Codice": "RF-3.21.1",
-        "Descrizione": "L'utente deve essere notificato della presenza di un errore nell'aggiunta di un'etichetta con un nome già presente nel sistema",
-        "Classificazione": "Desiderabile",
-        "Fonti": "UC21.1"
-      },
-      {
-        "Codice": "RF-2.22",
-        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di un'etichetta",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC22"
-      },
-      {
-        "Codice": "RF-2.23",
-        "Descrizione": "L'utente deve poter annullare l'operazione di modifica di una domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC23"
-      },
-      {
-        "Codice": "RF-2.24",
-        "Descrizione": "L'utente deve poter annullare l'operazione di modifica di una risposta attesa",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC24"
-      },
-      {
-        "Codice": "RF-2.25",
-        "Descrizione": "L'utente deve poter annullare l'operazione di eliminazione di elemento domanda",
-        "Classificazione": "Opzionale",
-        "Fonti": "UC25"
       }
     ]
   },
