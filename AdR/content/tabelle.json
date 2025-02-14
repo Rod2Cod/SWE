@@ -119,6 +119,12 @@
         "Data": "2025-02-13",
         "Descrizione": "Sezione Casi d'uso - Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.0.3",
+        "Data": "2025-02-13",
+        "Descrizione": "Sezione Tracciamento - Inserita tabella automatica Riepiologo",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
