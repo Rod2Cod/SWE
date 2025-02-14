@@ -31,7 +31,7 @@
       - L'utente visualizza una domanda
       - L'utente visualizza la relativa risposta asssociata
     - *Precondizioni*:
-      - È presente almeno una domanda con relativa risposta nel sistema
+      - È presente almeno una elemento domanda nel sistema
     - *Postcondizioni*:
       - Viene visualizzato l'elemento domanda
 
@@ -49,7 +49,7 @@
     - *Scenario*:
       - L'utente visualizza il testo della risposta attesa associata ad una domanda
     - *Precondizioni*:
-      - È presente almeno una domanda con relativa risposta nel sistema
+      - È presente almeno una elemento domanda nel sistema
     - *Postcondizioni*:
       - Viene visualizzato il testo della risposta attesa
 
@@ -65,7 +65,7 @@
     - L'utente conferma la modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno una elemento domanda nel sistema
   - *Postcondizioni*:
     - La domanda modificata viene salvata correttamente
   - *Scenari alternativi*:
@@ -83,7 +83,7 @@
     - L'utente conferma la modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La risposta alla domanda selezionata viene salvata correttamente
   - *Scenari alternativi*:
@@ -110,7 +110,7 @@
   #align(center)[
       #image("UML/UC5.png", height: 23%)
     ]
-  - *Descrizione*: L'utente vuole poter aggiungere almeno una domanda e relativa risposta attesa
+  - *Descrizione*: L'utente vuole poter aggiungere almeno un elemento domanda attesa
   - *Scenario*:
     - L'utente seleziona l'opzione per aggiungere una domanda
     - L'utente aggiunge una o più domande
@@ -118,9 +118,9 @@
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    - Almeno una domanda e la relativa risposta vengono inserite nel sistema
+    - Almeno un elemento domanda vengono inserite nel sistema
   - *Generalizzazioni*:
-    - Aggiunta manuale di domanda e risposta (UC5.1)
+    - Aggiunta manuale di elementi domanda (UC5.1)
     - Aggiunta di domande da file strutturato (UC5.2)
 
   ==== UC5.1: Aggiunta manuale di elementi domanda
@@ -160,7 +160,7 @@
   #align(center)[
       #image("UML/UC5.2.png", height: 13%)
     ]
-  - *Descrizione*: L'utente vuole poter inserire nel sistema delle domande e relative risposte presenti in un file strutturato
+  - *Descrizione*: L'utente vuole poter inserire nel sistema degli elementi domanda presenti in un file strutturato
   - *Scenario*:
     - L'utente seleziona l'opzione per caricare un file di elementi domanda
     - L'utente carica il file strutturato
@@ -168,7 +168,7 @@
   - *Attore principale*: utente
   - *Precondizioni*: nessuna
   - *Postcondizioni*:
-    - Le domande e relative risposte vengono inserite nel sistema
+    - Gli elementi domanda vengono inserite nel sistema
   - *Scenari alternativi*:
     - Errore su aggiunta domande da file (UC20)
 
@@ -555,7 +555,7 @@
     - L'utente annulla l'operazione di modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La domanda non viene modificata
     - Non vengono apportate modifiche al sistema
@@ -572,7 +572,7 @@
     - L'utente annulla l'operazione di modifica
   - *Attore principale*: utente
   - *Precondizioni*:
-    - È presente almeno una domanda con relativa risposta nel sistema
+    - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
     - La risposta attesa non viene modificata
     - Non vengono apportate modifiche al sistema
