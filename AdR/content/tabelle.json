@@ -330,25 +330,31 @@
       },
       {
         "Codice": "RF-1.17.1",
-        "Descrizione": "L'utente deve poter visualizzare la data di esecuzione di un test.",
+        "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC17.1"
       },
       {
-        "Codice": "RF-1.17.2",
-        "Descrizione": "L'utente deve poter visualizzare lo score generale di un test.",
+        "Codice": "RF-1.17.1.1",
+        "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC17.1"
       },
       {
-        "Codice": "RF-1.17.3",
-        "Descrizione": "L'utente deve poter visualizzare l'LLM utilizzato in un test.",
+        "Codice": "RF-1.17.1.2",
+        "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC17.1"
       },
       {
-        "Codice": "RF-1.17.1",
-        "Descrizione": "L'utente deve poter visualizzare il set di domande su cui è stato eseguito un test.",
+        "Codice": "RF-1.17.1.3",
+        "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC17.1"
+      },
+      {
+        "Codice": "RF-1.17.1.4",
+        "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test.",
         "Classificazione": "Obbligatorio",
         "Fonti": "UC17.1"
       },
