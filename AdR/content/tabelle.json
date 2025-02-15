@@ -124,11 +124,17 @@
       {
         "Versione": "1.0.3",
         "Data": "2025-02-14",
-        "Descrizione": "Sezione Tracciamento, Casi d'uso - Inserita tabella automatica Riepilogo, aggiornata tabella Fonte - Requisiti e Modificato Elenco dei casi d'uso",
+        "Descrizione": "Sezione Tracciamento, Casi d'uso - Inserita tabella automatica Riepilogo, aggiornata tabella Fonte - Requisiti",
         "Autore": "Filippo Bellon"
       },
       {
         "Versione": "1.0.4",
+        "Data": "2025-02-14",
+        "Descrizione": "Casi d'Uso - Modica Casi d'Uso",
+        "Autore": "Alberto Maggion,\nAnnalisa Egidi,\nFilippo Bellon,\nLuca Calzetta,\nMichele Nesler"
+      },
+      {
+        "Versione": "1.0.5",
         "Data": "2025-02-14",
         "Descrizione": "Inseriti diagrammi UML",
         "Autore": "Michele Nesler"
@@ -137,7 +143,13 @@
         "Versione": "1.1.0",
         "Data": "2025-02-14",
         "Descrizione": "Verifica modifiche casi d'uso",
-        "Autore": "Alberto Maggion"
+        "Verificatore": "Alberto Maggion"
+      },
+      {
+        "Versione": "2.0.0",
+        "Data": "2025-02-15",
+        "Descrizione": "",
+        "Validatore": "Annalisa Egidi"
       }
     ]
   },
