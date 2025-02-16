@@ -121,6 +121,12 @@
         "Data": "2025-01-31",
         "Descrizione": "Verifica ultime modifiche",
         "Verificatore": "Alberto Maggion"
+      },
+      {
+        "Versione": "1.2.1",
+        "Data": "2025-02-16",
+        "Descrizione": "Aggiunte sezioni Piano di Progetto - Pinaficazione, Preventivo, Consuntivo, Retrospective ",
+        "Autore": "Luca Calzetta"
       }
     ]
   }
