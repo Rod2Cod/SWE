@@ -1,3 +1,4 @@
 - Ruoli stesura verbale
 - Definizione nuove revisioni PB e CA
-- Discussione status aggiornamento Analisi dei Requisiti
+- RTB Vardanega
+- test PdQ
