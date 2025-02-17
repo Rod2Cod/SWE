@@ -94,10 +94,16 @@
           "Autore": "Filippo Bellon"
         },
         {
-          "Versione": "0.0.15",
+          "Versione": "0.1.0",
           "Data": "2025-02-10",
           "Descrizione": "Sezioni A, B, C - Modifiche alle definizioni di AC, BAC, BV, CPI",
           "Verificatore": "Annalisa Egidi"
+        },
+        {
+          "Versione": "1.0.0",
+          "Data": "2025-02-15",
+          "Descrizione": "Validazione del documento",
+          "Validatore": "Alberto Maggion"
         }
       ]
     }
