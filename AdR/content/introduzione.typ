@@ -1,5 +1,5 @@
 == Glossario
-  Questo documento, come anche molti altri all'interno del progetto, viene affiancato dal documento *Glossario_1.0.0* presente all'interno della documentazione, contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.
+  Questo documento, come anche molti altri all'interno del progetto, viene affiancato dal documento *Glossario_v1.0.0* presente all'interno della documentazione, contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.
 
 == Riferimenti
 

@@ -7,7 +7,7 @@
 
 #set list(indent: 1em)
 #set enum(indent: 1em)
-#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+#show regex( "(?i)\b" + glossario-therms.join("\b|\b")+ "\b"): inDict
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content

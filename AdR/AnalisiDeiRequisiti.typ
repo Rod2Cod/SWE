@@ -26,7 +26,7 @@
   v(1em, weak: true)
   strong(it)
 }
-#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+#show regex( "(?i)\b" + glossario-therms.join("\b|\b")+ "\b"): inDict
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content

@@ -17,7 +17,7 @@
 #set enum(indent: 1em)
 #show link: underline.with(offset: 2pt)
 
-#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+#show regex( "(?i)\b" + glossario-therms.join("\b|\b")+ "\b"): inDict
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content
@@ -59,6 +59,8 @@
 
 = Introduzione
   #introduzione
+  
+
 
 = Gh-Pages e Jekyll
   #pages_Jekyll

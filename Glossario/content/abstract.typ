@@ -1,1 +1,1 @@
-Il documento comprenderà spiegazioni ulteriori alla *terminologia* utilizzata all'interno del progetto. Le parole qui elencate e definite, verranno poi indicate all'interno dei vari documenti tramite un *pedice*.
+Il documento comprenderà spiegazioni ulteriori alla *terminologia* utilizzata all'interno del progetto. Le parole qui elencate e definite, verranno poi indicate all'interno dei vari documenti tramite un carattere "G" a *pedice*.

@@ -11,7 +11,7 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
 #set list(indent: 1em)
 #set enum(indent: 1em)
 #show link: underline.with(offset: 3pt)
-#show regex( "r(?i)\b" + glossario-therms.join("\b|")+ "\b"): inDict
+#show regex( "(?i)\b" + glossario-therms.join("\b|\b")+ "\b"): inDict
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content
