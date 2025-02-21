@@ -150,6 +150,12 @@
         "Data": "2025-02-15",
         "Descrizione": "",
         "Validatore": "Annalisa Egidi"
+      },
+      {
+        "Versione": "2.0.1",
+        "Data": "2025-02-21",
+        "Descrizione": "Sezioni Tracciamento, Requisiti e Casi d'uso - Aggiornata tabella Fonte - Requisiti, Aggiornati Requisiti Funzionali e di Qualità, Modificato Elenco dei casi d'uso",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
@@ -580,7 +586,7 @@
         },
         {
           "Fonte": "Incontro con il proponente",
-          "Requisito": "RF-2.5.2, RF-3.6, RF-2.7, RF-2.8, RF-2.10, RF-2.11, RF-3.12.1, RF-2.15, RF-2.16, RF-1.17, RF-2.18, RF-2.19"
+          "Requisito": "RF-2.5.2, RF-3.6, RF-2.7, RF-2.7.1, RF-2.8, RF-2.10, RF-2.11, RF-3.12.1, RF-2.15, RF-2.16, RF-1.17, RF-2.18, RF-2.19"
         },
         {
           "Fonte": "Decisione interna",
@@ -612,7 +618,7 @@
         },
         {
           "Fonte": "UC7",
-          "Requisito": "RF-2.7"
+          "Requisito": "RF-2.7, RF-2.7.1"
         },
         {
           "Fonte": "UC7",
