@@ -185,85 +185,133 @@
             {
                 "Codice": "TS-30",
                 "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione",
-                "Requisito": "RF-",
+                "Requisito": "RF-1.17",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-31",
+                "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contente la data di esecuzione del test",
+                "Requisito": "RF-1.17.1.1",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-32",
+                "Descrizione": "Verificare che l'utente possa visualizzare, all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test",
+                "Requisito": "RF-1.17.1.2",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-33",
+                "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente contenente l'LLM utilizzato nel test",
+                "Requisito": "RF-1.17.1.3",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-34",
+                "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test in base al nome del set di domande",
+                "Requisito": "RF-2.18.1",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-35",
+                "Descrizione": "Verificare che l'utente possa filtrare gli elemetni dello storico dei test in base all'LLM utilizzato",
+                "Requisito": "RF-2.18.2",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-36",
+                "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test",
+                "Requisito": "RF-2.19",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-37",
+                "Descrizione": "Verificare che l'utente possa visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni",
+                "Requisito": "RF-2.19.1",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-38",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati",
+                "Requisito": "RF-2.19.1.1",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-39",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati",
+                "Requisito": "RF-2.19.1.2",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-40",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati",
+                "Requisito": "RF-2.19.1.3",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-41",
+                "Descrizione": "Verificare che l'utente possa visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda presente nel sistema",
+                "Requisito": "RF-2.19.2",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-42",
+                "Descrizione": "Verificare che l'utente possa verificare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione",
+                "Requisito": "RF-2.20.1",
                 "Stato": "NI"
             },
             {
-                "Codice": "TS-",
-                "Descrizione": "",
-                "Requisito": "RF-",
+                "Codice": "TS-43",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test",
+                "Requisito": "RF-2.20.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-44",
+                "Descrizione": "Verficiare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test",
+                "Requisito": "RF-2.20.3",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-45",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test",
+                "Requisito": "RF-2.20.4",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-46",
+                "Descrizione": "Verificare che l'utente venga notificato se il file caricato contiene dati in un formato errato",
+                "Requisito": "RF-3.21.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-47",
+                "Descrizione": "Verificare che l'utente venga notificato dalla presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema",
+                "Requisito": "RF-3.22.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-48",
+                "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set",
+                "Requisito": "RF-2.23",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-49",
+                "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda",
+                "Requisito": "RF-3.24",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-50",
+                "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa",
+                "Requisito": "RF-3.25",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-51",
+                "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda",
+                "Requisito": "RF-1.26",
                 "Stato": "NI"
             }
         ]
