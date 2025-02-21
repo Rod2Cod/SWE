@@ -241,6 +241,12 @@
         "Fonti": "UC7"
       },
       {
+        "Codice": "RF-2.7.1",
+        "Descrizione": "L'utente deve poter visualizzare un singolo elemento set.",
+        "Classificazione": "Opzionale",
+        "Fonti": "UC7.1"
+      },
+      {
         "Codice": "RF-2.8",
         "Descrizione": "L'utente deve poter visualizzare gli elementi domanda presenti in un set.",
         "Classificazione": "Opzionale",
@@ -517,30 +523,36 @@
     "values": [
       {
         "Codice": "RQ-1.1",
-        "Descrizione": "Il prodotto deve essere sviluppato secondo quanto stabilito nel documento WoW.",
+        "Descrizione": "Il prodotto deve essere sviluppato secondo quanto stabilito nell'ultima versione del documento WoW.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Decisione del gruppo"
       },
       {
         "Codice": "RQ-1.2",
+        "Descrizione": "Il prodotto deve essere sviluppato utilizzando le tecnologie decise dal gruppo.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Decisione del gruppo"
+      },
+      {
+        "Codice": "RQ-1.3",
         "Descrizione": "Il codice sorgente deve essere pubblicato in un repository su GitHub o in altri repository pubblici.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       },
       {
-        "Codice": "RQ-1.3",
+        "Codice": "RQ-1.4",
         "Descrizione": "Deve essere fornito un manuale per l'utilizzo dell'applicativo.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       },
       {
-        "Codice": "RQ-1.4",
+        "Codice": "RQ-1.5",
         "Descrizione": "Deve essere fornita una guida per gli sviluppatori relativa a possibili estensioni dell'applicativo.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"
       },
       {
-        "Codice": "RQ-1.5",
+        "Codice": "RQ-1.6",
         "Descrizione": "Deve essere implementato un sistema di test automatico con una copertura di almeno l'80% del codice.",
         "Classificazione": "Obbligatorio",
         "Fonti": "Capitolato"

@@ -211,6 +211,18 @@
   - *Postcondizioni*:
     - Viene visualizzato l'elenco dei set di domande presenti nel sistema o una lista vuota
 
+  === UC7.1: Visualizzazione elemento lista set
+  - *Descrizione*: L'utente vuole poter visualizzare un elemento della lista dei set
+  - *Scenario*:
+    - L'utente visualizza il nome del set
+    - L'utente visualizzaz il numero di domande contenute nel set
+  - *Attore principale*: utente
+  - *Precondizioni*:
+    - L'utente visualizza l'elenco dei set
+    - È presente almeno un set
+  - *Postcondizioni*:
+    - Viene visualizzato l'elemento riguardante un set
+
   === UC8: Visualizzazione elementi domanda appartenenti ad un set
       #align(center)[
       #image("UML/UC8.png", height: 13%)
@@ -219,6 +231,7 @@
   - *Scenario*:
     - L'utente seleziona un set
     - L'utente entra nella visualizzazione degli elementi domanda del set
+    - L'utente visualizza il nome del set
     - L'utente visualizza gli elementi domanda appartenenti al set
   - *Attore principale*: utente
   - *Precondizioni*:
