@@ -508,7 +508,7 @@
         {
           "Codice": "TS-2",
           "Descrizione": "Verificare che l'utente possa modificare una domanda presente nel sistema",
-          "Requisito": "RF-1.2",
+          "Requisito": "RF-1.1.1",
           "Stato": "NI"
         },
         {
