@@ -2,7 +2,7 @@
 #let title = "Verbale riunione interna"
 #let tabelle = "content/tabelle.json"
 #let date = datetime(
-  day: 17,
+  day: 21,
   month: 02,
   year: 2025
 )
