@@ -21,5 +21,5 @@ Al termine del periodo, il Responsabile verifica il lavoro svolto confrontandolo
 
 == Retrospective
 
-Al termine del periodo, si svolge una riflessione collettiva per valutare i risultati ottenuti, verificando gli aspetti qualitativi, ovvero il livello di avanzamento degli obiettivi e delle attività rispetto alle previsioni.
-Questa analisi è fondamentale per assicurare che l'impiego delle risorse sia in linea con gli obiettivi, per individuare eventuali miglioramenti nei processi futuri.
+Al termine del periodo, si svolge una riflessione collettiva per valutare i risultati ottenuti, verificando gli aspetti quantitativi, ovvero il livello di avanzamento degli obiettivi e delle attività rispetto alle previsioni.
+Questa analisi è fondamentale per assicurare che l'impiego delle risorse sia in linea con gli obiettivi, per individuare eventuali miglioramenti da applicare nei processi futuri.
