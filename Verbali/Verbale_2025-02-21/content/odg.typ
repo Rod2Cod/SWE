@@ -1,4 +1,3 @@
 - Ruoli stesura verbale
 - Definizione nuove revisioni PB e CA
-- RTB Vardanega
-- test PdQ
+- Test PdQ

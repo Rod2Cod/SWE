@@ -13,7 +13,7 @@
         "Versione" : "0.0.1",
         "Data" : "",
         "Sez.modificate": "Prima stesura",
-        "Autore" : ""
+        "Autore" : "Alberto Maggion"
       }
     ]
   },
@@ -27,22 +27,22 @@
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": "Analista"
+        "Ruolo": "Responsabile"
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": "Responsabile"
+        "Ruolo": "Progettista"
       },
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": "Progettista"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Alberto Maggion",
