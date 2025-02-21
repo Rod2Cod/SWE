@@ -15,7 +15,7 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content
-#let versione = getLastDocVersion(tabelle, "PdP")
+#let versione = getLastDocVersion(tabelle, "PdQ")
 #show_content(title, data, versione, abstract)
 
 #pagebreak()
