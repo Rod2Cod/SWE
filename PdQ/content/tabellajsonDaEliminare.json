@@ -1,0 +1,272 @@
+{
+    "Test":{
+        "TestSistema": {
+        "keys": [
+            "Codice",
+            "Descrizione",
+            "Requisito",
+            "Stato"
+        ],
+        "values":[
+            {
+                "Codice": "TS-1",
+                "Descrizione": "Verificare che l'utente possa visualizzare gli elementi doamnda presenti nel sistema",
+                "Requisito": "RF-1.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-2",
+                "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda",
+                "Requisito": "RF-1.1.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-2",
+                "Descrizione": "Verificare che l'utente possa visulaizzare il testo di una singola/determinata domanda",
+                "Requisito": "RF-1.1.1.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-3",
+                "Descrizione": "Verificare che l'utente possa visualizzare il testo della risposta attesa associata ad una singola/determinata domanda",
+                "Requisito": "RF-1.1.1.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-4",
+                "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema",
+                "Requisito": "RF-1.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-5",
+                "Descrizione": "Verificare che l'utentee possa modificare una risposta attesa presente nel sistema",
+                "Requisito": "RF-1.3",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-6",
+                "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domandagià presente nel sistema",
+                "Requisito": "RF-1.4",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-8",
+                "Descrizione": "Verificare che l'utente possa immettere manualmente una domanda all'interno del sistema",
+                "Requisito": "RF-1.5.1.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-9",
+                "Descrizione": "Verificare che l'utente possa immettere manualmente una risposta attesa all'interno del sistema",
+                "Requisito": "RF-1.5.1.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-10",
+                "Descrizione": "Verificare che l'utente possa inserire nel sistema degli elementi domanda presenti in un file strutturato",
+                "Requisito": "RF-2.5.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-11",
+                "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set",
+                "Requisito": "RF-3.6",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-12",
+                "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema",
+                "Requisito": "RF-2.7",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-13",
+                "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti in un set presente nel sistema",
+                "Requisito": "RF-2.8",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-14",
+                "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema",
+                "Requisito": "RF-2.9",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-15",
+                "Descrizione": "Verificare che l'utente possa eliminare un set di lementi domanda presenti nel sistema",
+                "Requisito": "RF-2.10",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-16",
+                "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema",
+                "Requisito": "RF-2.11",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-17",
+                "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema",
+                "Requisito": "RF-1.12",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-18",
+                "Descrizione": "Veriricare che l'utente possa eseguire un test utilizzando un set di elementi domanda presenti nel sistema",
+                "Requisito": "RF-1.12.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-19",
+                "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito",
+                "Requisito": "RF-1.13",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-20",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la valutazione generale del test eseguito",
+                "Requisito": "RF-1.13.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-21",
+                "Descrizione": "Verificare che l'utente possa visualizzare nel risulato del test eseguito la valutazione di ogni singola domanda",
+                "Requisito": "RF-1.13.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-22",
+                "Descrizione": "Verificare che l'utente possa visulalizzare nel risultato la lista delle domande presenti nel sistema eseguite nel test ordinate in modo crescente rispetto alla singola valutazione",
+                "Requisito": "RF-1.13.3",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-23",
+                "Descrizione": "Verificare che l'utente possa visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+                "Requisito": "RF-1.14.1",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-24",
+                "Descrizione": "Verificare che l'utente possa visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+                "Requisito": "RF-1.14.2",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-25",
+                "Descrizione": "Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+                "Requisito": "RF-1.14.3",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-26",
+                "Descrizione": "Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+                "Requisito": "RF-1.14.3",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-27",
+                "Descrizione": "Verificare che l'utente possa visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda",
+                "Requisito": "RF-1.14.4",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-28",
+                "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito",
+                "Requisito": "RF-2.15",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-29",
+                "Descrizione": "Verificare che l'utente possa caricare un file contente i risultati di un test",
+                "Requisito": "RF-2.16",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-30",
+                "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            },
+            {
+                "Codice": "TS-",
+                "Descrizione": "",
+                "Requisito": "RF-",
+                "Stato": "NI"
+            }
+        ]
+        }
+    }
+}
