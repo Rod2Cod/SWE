@@ -116,7 +116,7 @@
       ]
     )
 
-  === Settimo Periodo 27/01/2025 - 10/02/2025
+  === Settimo Periodo 28/01/2025 - 10/02/2025
     *Obiettivi*
       - Inizio della fase di *Progettazione*
       - Terminazione dei *documenti RTB*
