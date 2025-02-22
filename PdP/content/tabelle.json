@@ -131,16 +131,16 @@
         }
       ]
     },
-    "revisione": {
+    "prima_revisione": {
       "keys": ["Revisione", "Data"],
       "values": [
         {
           "Revisione": "Product Baseline",
-          "Data": "2025-03-14"
+          "Data": "2025-04-04"
         },
         {
           "Revisione": "Customer Acceptance",
-          "Data": "2025-03-17"
+          "Data": "2025-04-07"
         }
       ]
     }

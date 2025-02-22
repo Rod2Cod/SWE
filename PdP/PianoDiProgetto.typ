@@ -42,7 +42,7 @@
 = Introduzione
   #introduzione
 
-= Calendario di massima del progetto //TODOca
+= Calendario di massima del progetto
   #calendario_massima
 
 = Stima dei costi di realizzazione 
