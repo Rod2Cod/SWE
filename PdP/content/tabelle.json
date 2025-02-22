@@ -110,6 +110,12 @@
         "Data": "2025-02-11",
         "Sez.modificate": "Consuntivo - Aggiunta periodo 7",
         "Autore": "Michele Nesler"
+      },
+      {
+        "Versione": "0.2.5",
+        "Data": "2025-02-22",
+        "Sez.modificate": "Calendario di massima del progetto - Inserita sezione Prima Revisione",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
