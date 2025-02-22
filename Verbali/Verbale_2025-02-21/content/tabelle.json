@@ -11,9 +11,15 @@
     "values": [
       {
         "Versione" : "0.0.1",
-        "Data" : "",
+        "Data" : "2025-02-21",
         "Sez.modificate": "Prima stesura",
         "Autore" : "Alberto Maggion"
+      },
+      {
+        "Versione" : "0.1.0",
+        "Data" : "2025-02-22",
+        "Sez.modificate": "Definizione nuove revisioni PB e Ca",
+        "Verificatore" : "Filippo Bellon"
       }
     ]
   },
