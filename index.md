@@ -1,17 +1,23 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: Documentazione Artificial QI
 layout: index
 ---
 
-# Artificial QI
+# Documenti
+
+## Requirements and Technology Baseline
+{% for pdf in site.static_files %}
+    {% if pdf.path contains "Documentazione/Candidatura_RTB" and pdf.extname == ".pdf" %}
+- [{{ pdf.name | replace: '_',' ' | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
+    {% endif %}
+{% endfor %}
 
 ## Candidatura
 <!-- così vado a prendermi i file pdf in Candidatura -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Candidatura/" and pdf.extname == ".pdf" %}
-- [{{ pdf.name | split: "_" | first | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
+- [{{ pdf.name | replace: '_',' ' | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
 
