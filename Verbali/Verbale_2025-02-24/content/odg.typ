@@ -1,0 +1,1 @@
+- Automazione calcolo Gulpease
