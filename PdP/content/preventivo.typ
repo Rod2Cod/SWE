@@ -98,7 +98,7 @@
   *Grafico a torta del budget speso e rimanente preventivato nel terzo periodo.*
   #image("Graphs/p3_budget.png",height: 20%)
   #pagebreak()
-  === Quarto periodo 17/12/2024 - 30/12/2024
+  === Quarto Periodo 17/12/2024 - 30/12/2024
   *Preventivo Orario*
   #table-json(preventivi.at("4"), 8)
   #table(
@@ -125,7 +125,7 @@
   *Grafico a torta del budget speso e rimanente preventivato nel quarto periodo.*
   #image("Graphs/p4_budget.png",height: 20%)
   #pagebreak()
-  === Quinto periodo 31/12/2024 - 13/01/2025
+  === Quinto Periodo 31/12/2024 - 13/01/2025
   *Preventivo Orario*
   #table-json(preventivi.at("5"), 8)
   #table(
@@ -153,7 +153,7 @@
   *Grafico a torta del budget speso e rimanente preventivato nel quinto periodo.*
   #image("Graphs/p5_budget.png",height: 20%)
   #pagebreak()
-  === Sesto periodo 14/01/2025 - 27/01/2025
+  === Sesto Periodo 14/01/2025 - 27/01/2025
   *Preventivo Orario*
   #table-json(preventivi.at("6"), 8)
   #table(
@@ -181,7 +181,7 @@
   *Grafico a torta del budget speso e rimanente preventivato nel sesto periodo.*
   #image("Graphs/p6_budget.png",height: 20%)
   #pagebreak()
-  === Settimo periodo 28/01/2025 - 10/02/2025
+  === Settimo Periodo 28/01/2025 - 10/02/2025
     *Preventivo Orario*
   #table-json(preventivi.at("7"), 8)
   #table(
@@ -209,7 +209,8 @@
   *Grafico a torta del budget speso e rimanente preventivato nel settimo periodo.*
   #image("Graphs/p7_budget.png",height: 20%)
   #pagebreak()
-  === Ottavo periodo 11/02/2025 - 24/02/2025
+
+  === Ottavo Periodo 11/02/2025 - 24/02/2025
       *Preventivo Orario*
   #table-json(preventivi.at("8"), 8)
   #table(
@@ -222,7 +223,7 @@
   *Distribuzione delle ore per ruolo*
   #image("Graphs/p8_dist_ore.png",height: 18%)
   ])
-  *Preventivo costi*
+  *Preventivo Costi*
   #table(
   columns: 2,
   stroke: none,
@@ -237,7 +238,7 @@
   *Grafico a torta del budget speso e rimanente preventivato nell'ottavo periodo.*
   #image("Graphs/p8_budget.png",height: 20%)
   #pagebreak()
-  === Nono periodo 25/02/2025 - 10/03/2025
+  === Nono Periodo 25/02/2025 - 10/03/2025
   
-  === Decimo periodo 11/02/2025 - 17/03/2025
+  === Decimo Periodo 11/02/2025 - 17/03/2025
   
