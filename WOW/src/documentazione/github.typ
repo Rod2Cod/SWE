@@ -8,7 +8,7 @@
     - *Documentazione*: contenente tutti file riguardanti la documentazione del progetto
       - *Candidatura*: contenente i vari file riguardanti le candidature presentate e da presentare per il progetto in essere
       - *Verbali*: contente i file redatti in seguito a riunioni del gruppo. Al suo interno due cartelle distinguono fra verbali *interni* ed *esterni*.
-      - Una *cartella* per ogni tipo di *documento* presentato (es. WoW, PdP, AdR,...) con al suo interno il documento in formato *pdf*, con un nome il quale presenti alla fine un *underscore*(\_) seguito dal numero di *versione* (es. PdQ_v1.0.0.pdf)
+      - Una *cartella* per ogni tipo di *documento* presentato (es. WoW, PdP, AdR,...) con al suo interno il documento in formato *pdf*, con un nome il quale presenti alla fine un *underscore*(\_) seguito dal numero di *versione* (es. PdQ_v1.0.0.pdf). In aggiunta a ciò, è presente una sottocartella *Deprecated* che conterrà i file con versioni deprecate del documento.
   
   + *gh-pages*: ramo che contiene tutti file di configurazione necessari a *Jekyll* e alle Github Actions per poter impostare la Webpage della repository.
   
@@ -19,7 +19,7 @@
 === Caricamento documenti
   Per il caricamento di documenti e/o modifiche a questi ultimi, come prima cosa, si effettua la *copia* della repository in *locale*(`git clone <nome_repo>`) e ci si sposta dentro la cartella così creata.
   
-  Successivamente ci sposta nel ramo *master*(`git checkout master`). Qui si effettuano le modifiche/aggiunte che servono, stando attenti a rispettare il *pattern* per l'inserimento di nuovi documenti (_nome_documento/nome_documento_versione.pdf_). Successivamente si vanno a *modificare* anche i file di configurazione di *Jekyll* e delle *Github Actions* per includere eventuali nuove cartelle e pdf all'interno della Webpage.
+  Successivamente ci sposta nel ramo *master*(`git checkout master`). Qui si effettuano le modifiche/aggiunte che servono, stando attenti a rispettare il *pattern* per l'inserimento di nuovi documenti (_nome_documento/nome_documento_versione.pdf_) e lo spostamento di quelli deprecati nella rispettiva cartella. Successivamente si vanno a *modificare* anche i file di configurazione di *Jekyll* e delle *Github Actions* per includere eventuali nuove cartelle e pdf all'interno della Webpage.
 
   *IMPORTANTE*: i documenti devono essere #underline[verificati] e #underline[approvati] prima di essere caricati all'interno della repository di Github.
   
