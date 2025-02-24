@@ -84,7 +84,7 @@
       {
         "Versione": "0.2.0",
         "Data": "2025-01-31",
-        "Sez.modificate": "",
+        "Sez.modificate": "Verifica nuove sezioni",
         "Verificatore": "Luca Calzetta"
       },
       {
@@ -116,6 +116,12 @@
         "Data": "2025-02-22",
         "Sez.modificate": "Calendario di massima del progetto - Inserita sezione Prima Revisione",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "0.3.0",
+        "Data": "2025-02-23",
+        "Sez.modificate": "Verifica nuove sezioni",
+        "Verificatore": "Luca Calzetta"
       }
     ]
   },

@@ -1,0 +1,3 @@
+- Ruoli stesura verbale
+- Automazione calcolo Gulpease
+- Situazione documenti RTB Seconda parte

@@ -133,13 +133,13 @@
   === Ottavo Periodo 11/02/2025 - 24/02/2025
     *Obiettivi*
       - Inizio della fase di *Progettazione* durante la seconda settimana
-      - Terminazione dei *documenti RTB* in vista del colloquio col prof. Vardanega
-      - *Modifica* all'*Analisi dei Requisiti* in seguito a indicazioni del prof. Cardin
+      - Terminazione dei *documenti RTB* in vista del colloquio con il professor Vardanega
+      - *Modifica* all'*Analisi dei Requisiti* in seguito alle indicazioni del prof. Cardin
     
     *Suddivisione del lavoro*
     #figure(
       image("gantt/Online Gantt 11-02_to_24-02.png"),
       caption: [
-        Diagramma di Gantt per le attività del ottavo periodo
+        Diagramma di Gantt per le attività dell'ottavo periodo periodo
       ]
     )

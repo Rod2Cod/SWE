@@ -233,8 +233,7 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
   #image("Graphs/c7_budget.png",height: 20%)
   *Retrospective*:
-  Durante questo periodo abbiamo ultimato i documenti per l' RtB che abbiamo presentato. Abbiamo poi atteso il responso da parte dei professori, che una volta ricevuto ci ha portato a iniziare a correggere l'analisi dei requisiti. I principali problemi che abbiamo avuto infatti riguardano proprio questa correzione, visto che ci avevamo gia ragionato a fondo e la ritenevamo corretta. Per ovviare a questi abbiamo prima fatto una riunione sincrona per ragionarci e poi abbiamo deciso di tornare a studiare asincronamente questi argomenti per tornare a correggere l'analisi dei requisiti con maggiore consapevolezza.
-  Inoltre abbiamo sbagliato a programmare l'inizio della progettazione in questo periodo non considerando i tempi di correzione per l'RtB e le eventuali modifiche da apportare in caso di esito negativo.
+  Durante questo periodo abbiamo ultimato i documenti per l' RTB che abbiamo presentato. Abbiamo poi atteso il responso da parte dei professori, che una volta ricevuto ci ha portato a iniziare a correggere l'analisi dei requisiti. I principali problemi che abbiamo avuto infatti riguardano proprio questa correzione, visto che ci avevamo già ragionato a fondo e la ritenevamo corretta. Per ovviare a questi abbiamo prima fatto una riunione sincrona per ragionarci e poi abbiamo deciso di studiare nuovamente in maniera asincrona questi argomenti, per tornare a correggere l'analisi dei requisiti con maggiore consapevolezza. Inoltre abbiamo sbagliato a programmare l'inizio della progettazione, non considerando i tempi di correzione per l'RTB e le eventuali modifiche da apportare in caso di esito negativo.
 
 
 #pagebreak()

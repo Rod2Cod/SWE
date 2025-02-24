@@ -1,4 +1,4 @@
-== Versionamento dei documenti
+=== Versionamento dei documenti
 Il versionamento dei documenti tiene traccia dei seguenti stati possibili della documentazione: *documento approvato*, *documento verificato* e *documento modificato*.
 Per questo motivo la versione dei documenti è del tipo "*a.b.c*" dove "*a*" rappresenta l'#underline[ultima approvazione] del documento, "*b*" ne rappresenta l'#underline[ultima verifica] dopo un'approvazione e "*c*" rappresenta l'#underline[ultima modifica] dopo una verifica o un'approvazione. In questo modo risulta molto semplice riconoscere lo stato di un documento e capire quali sono quelli da considerare validi applicando le seguenti regole:
 - *Documento modificato*\
