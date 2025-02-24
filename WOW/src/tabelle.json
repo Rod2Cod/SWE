@@ -157,6 +157,12 @@
         "Data": "2025-02-24",
         "Descrizione": "Verifica ultime modifiche",
         "Verificatore": "Filippo Bellon"
+      },
+      {
+        "Versione": "2.0.0",
+        "Data": "2025-02-24",
+        "Descrizione": "",
+        "Validatore": "Luca Calzetta"
       }
     ]
   }
