@@ -9,7 +9,7 @@ layout: index
 ## Requirements and Technology Baseline
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Candidatura_RTB" and pdf.extname == ".pdf" %}
-- [{{ pdf.name | replace: '_',' ' | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
+- [Candidatura per la revisione Requirements and Technology Baseline]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
 
