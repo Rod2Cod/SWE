@@ -30,7 +30,7 @@ Per garantire il raggiungimento degli standard qualitativi prefissati, il team h
 La qualità del prodotto è un elemento centrale del Piano di Qualifica. Il software sviluppato deve rispettare specifici criteri per garantire affidabilità, efficienza e usabilità.
 Gli aspetti valutati includono:
 - *Documentazione*: deve essere chiara, leggibile e priva di errori;
-- *Software*: deve soddisfare tutti i requisiti richiesti dal committente.
+- *Software*: deve soddisfare tutti i requisiti concordati con il proponente.
 
 *Metriche di qualità* prese in esame:
   - Leggibilità *(MPD-IG)*: il contenuto dei documenti deve essere comprensibile all’utente;  

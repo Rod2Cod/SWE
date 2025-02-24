@@ -151,6 +151,12 @@
         "Data": "2025-02-24",
         "Descrizione": "Aggiunta sezione Piano di Qualifica",
         "Autore": "Annalisa Egidi"
+      },
+      {
+        "Versione": "1.4.0",
+        "Data": "2025-02-24",
+        "Descrizione": "Verifica ultime modifiche",
+        "Verificatore": "Filippo Bellon"
       }
     ]
   }

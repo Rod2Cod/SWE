@@ -9,7 +9,7 @@
 #set list(indent: 1em)
 #set enum(indent: 1em)
 #show link: underline.with(offset: 2pt)
-
+#set underline(offset: 2pt)
 
 #show regex( "(?i)\b" + glossario-therms.join("\b|\b")+ "\b"): inDict
 
