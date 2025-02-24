@@ -133,6 +133,12 @@
         "Versione": "1.3.0",
         "Data": "2025-02-21",
         "Descrizione": "Verifica ultime modifiche"
+      },
+      {
+        "Autore": "Michele Nesler",
+        "Versione": "1.3.1",
+        "Data": "2025-02-23",
+        "Descrizione": "Riorganizzazione processi in Primari, di supporto e organizzativi"
       }
     ]
   }

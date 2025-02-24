@@ -1,4 +1,4 @@
-= Tracciamento ore
+== Tracciamento ore
 
 Il tracciamento delle ore lavorative è un elemento fondamentale per monitorare il tempo dedicato alle diverse attività del progetto. Per questo scopo, utilizziamo un foglio condiviso in formato Excel, che funge da registro centralizzato per la rendicontazione delle ore lavorate da ciascun membro del team. Ogni partecipante è responsabile di aggiornare il foglio con le proprie ore, indicando con precisione il numero di ore produttive dedicate. Questo approccio permette di avere una visione chiara dell'impegno complessivo del team e di analizzare la distribuzione del tempo tra le varie fasi del progetto. Il foglio Excel è condiviso in una piattaforma accessibile a tutti i membri del gruppo, ovvero microsoft teams, assicurando una gestione collaborativa e in tempo reale.
 
