@@ -122,6 +122,12 @@
         "Data": "2025-02-23",
         "Sez.modificate": "Verifica nuove sezioni",
         "Verificatore": "Luca Calzetta"
+      },
+      {
+        "Versione": "1.0.0",
+        "Data": "2025-02-23",
+        "Sez.modificate": "",
+        "Validatore": "Michele Nesler"
       }
     ]
   },
