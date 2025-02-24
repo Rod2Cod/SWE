@@ -330,7 +330,7 @@
   - *Descrizione*: L'utente vuole poter visualizzare il risultato di un test, ordinato in modo crescente rispetto alla valutazione assegnata ad ogni singolo elemento domanda. \ L'ordinamento permette di evidenziare i risultati peggiori del test.
   - *Scenario*:
     - L'utente entra nella schermata di visualizzazione del risultato del test
-    - L'utente visualizza la valutazione generale del test (media dei voti)
+    - L'utente visualizza la valutazione generale del test (media delle valutazioni delle domande)
     - L'utente visualizza la lista di domande ordinate in modo crescente rispetto alla valutazione assegnata ad ogni singola domanda
     - L'utente visualizza per ogni domanda la relativa valutazione
   - *Attore principale*: utente
