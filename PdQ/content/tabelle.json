@@ -103,6 +103,12 @@
         "Data" : "2025-02-24",
         "Sez.modificate": "Verifica Documento",
         "Verificatore" : "Luca Calzetta"
+      },
+      {
+        "Versione" : "2.0.0",
+        "Data" : "2025-02-24",
+        "Sez.modificate": "",
+        "Validatore" : "Michele Nesler"
       }
     ]
   },
