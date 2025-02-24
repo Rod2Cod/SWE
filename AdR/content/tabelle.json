@@ -573,6 +573,12 @@
         "Descrizione": "Il prodotto finale deve poter essere utilizzato su browser Chrome dalla versione 133",
         "Classificazione": "Obbligatorio",
         "Fonti": "Verbale - Decisione interna"
+      },
+      {
+        "Codice": "RV-1.2",
+        "Descrizione": "Il componente di esecuzione di test deve comunicare con un LLM tramite API Rest in accordo con OpenAPI 3.1",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "Capitolato"
       }
     ]
   },
