@@ -1,0 +1,2 @@
+- Discussione Esito RTB Seconda Parte
+- Discussione prima bozza Progettazione
