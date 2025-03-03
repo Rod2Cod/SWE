@@ -1,1 +1,1 @@
-#lorem(20)
+Il giorno XX/XX/XXXX dalle ore 16.00 alle XX:XX il gruppo Rod2Cod si riunisce.
