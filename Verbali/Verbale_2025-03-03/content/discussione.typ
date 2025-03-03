@@ -12,19 +12,17 @@
 
 = Progettazione: design patterns
 #decisioni([
-  \ Utilizzo monolite come architettura di deployment;
-  \ Exhagonal come architettura logica;
-  \ Le interfaccie di comunicazione della buisness logic.
+  - Utilizzo monolite come architettura di deployment;
+  - Exhagonal come architettura logica;
+  - Le interfaccie di comunicazione della buisness logic.
 ],[])
-
 
 = Way of working: aggiornamento
-Decisione: aggiunta al way of working della creazione issues per ogni decisione presa in riunione.
+#decisioni([aggiunta al way of working della creazione issues per ogni decisione presa in riunione.],[Feedback RTB])
 
 = Versionamento: aggiornamento
-#decisioni([
-  \ Verificatore, colonna sez. modificate e autore modificate dagli autori in ordine cronologico.
-],[])
+#decisioni([il Verificatore modifia la sez. versione e data; le colonne sez. modificate e autore vengono modificate dagli autori in ordine cronologico.
+],[Feedback RTB])
 
 = Domande per richiesta colloquio Vardanega
 - In che senso le metriche devono essere definite nel wow? noi le abbiamo definite;
