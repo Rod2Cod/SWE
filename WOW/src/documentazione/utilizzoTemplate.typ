@@ -16,3 +16,4 @@ Per i documenti viene utilizzato il template "documento" che richiede i seguenti
 + *Abstract*: breve sintesi del contenuto o scopo del documento
 + *Dati versione*: file in formato json che contiene i dati necessari alla produzione della tabella di versione del documento
 + *Contenuto*: contenuto del documento
+I primi 2 punti sono presenti all'interno del frontespizio del documento in questione.

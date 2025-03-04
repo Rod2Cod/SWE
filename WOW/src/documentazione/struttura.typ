@@ -8,6 +8,6 @@ Per queste ragioni è stato deciso di mantenere una struttura unica per tutti i 
 ==== Titolo del documento
 Breve indicazione del contenuto del documento e della data di riferimento in caso sia utile.
 ==== Tabella versione del documento
-Contiene una *raccolta* storica di tutte le *versioni* del documento, tenendo traccia sia di chi si occupa delle modifiche, dei vari verificatori, del responsabile che approva e delle differenze con la versione precedente.\
+Contiene una *raccolta* storica di tutte le *versioni* del documento, tenendo quindi traccia di chi si occupa delle modifiche, dei vari verificatori, del responsabile che approva e delle differenze rispetto alla versione precedente.\
 Il contenuto della tabella deve essere del tipo *LIFO*, ovvero deve contenere i numeri di versione dal maggiore al minore, rispecchiando le modifiche al documento in ordine cronologico inverso: dalla più recente alla più datata.\
-L’unico documento da considerare *valido* in fase di consultazione è quello con numero di *versione maggiore* e che non ha subito nessuna modifica dopo l’approvazione, ovvero in documento con numero di versione del tipo *x.0.0*, in caso fossero presenti diversi documenti che corrispondono a questo tipo di versione, quello da consultare sarà quello con *x* maggiore.
+L'unico documento da considerare *valido* in fase di consultazione è quello con numero di *versione maggiore* e che non ha subito nessuna modifica dopo l'approvazione, ovvero in documento con numero di versione del tipo *x.0.0*, in caso fossero presenti diversi documenti che corrispondono a questo tipo di versione, quello da consultare sarà quello con *x* maggiore.

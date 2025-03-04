@@ -11,57 +11,63 @@
     "values": [
       {
         "Versione": "0.0.1",
-        "Data": "15-11-2024",
+        "Data": "2024-11-15",
         "Descrizione": "Prima stesura",
         "Autore": "Filippo Bellon \nMichele Nesler"
       },
       {
         "Versione": "0.0.2",
-        "Data": "20-11-2024",
+        "Data": "2024-11-20",
         "Descrizione": "Github Actions",
         "Autore": "Filippo Bellon"
       },
       {
         "Versione": "0.0.3",
-        "Data": "22-11-2024",
+        "Data": "2024-11-22",
         "Descrizione": "Struttura del documento",
         "Autore": "Filippo Bellon"
       },
       {
         "Versione": "0.1.0",
-        "Data": "22-11-2024",
+        "Data": "2024-11-22",
         "Descrizione": "Verifica documento",
         "Verificatore": "Alberto Maggion"
       },
       {
         "Versione": "0.1.1",
-        "Data": "23-11-2024",
+        "Data": "2024-11-23",
         "Descrizione": "Aggiunta sezione Introduzione",
         "Autore": "Filippo Bellon"
       },
       {
         "Versione": "0.1.2",
-        "Data": "13-12-2024",
+        "Data": "2024-12-13",
         "Descrizione": "Aggiunta sezione Docker, React, Postgres SQL",
         "Autore": "Luca Calzetta"
       },
       {
         "Versione": "0.2.0",
-        "Data": "19-12-2024",
+        "Data": "2024-12-19",
         "Descrizione": "Verifica documento",
         "Verificatore": "Filippo Bellon"
       },
       {
         "Versione": "0.2.1",
-        "Data": "20-01-2025",
+        "Data": "2025-01-20",
         "Descrizione": "Agginta Sezione Bootstrap, Axios, Backend - Flask, LLM Evaluator - Python, ",
         "Autore": "Luca Calzetta"
       },
       {
         "Versione": "0.3.0",
-        "Data": "13-02-2025",
+        "Data": "2025-02-13",
         "Descrizione": "Verifica documento",
         "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione": "1.0.0",
+        "Data": "2025-02-24",
+        "Descrizione": "",
+        "Validatore": "Annalisa Egidi"
       }
     ]
   }

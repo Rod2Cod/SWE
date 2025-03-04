@@ -145,6 +145,24 @@
         "Data": "2025-02-24",
         "Descrizione": "Github repository - Modificate sezioni Struttura e Utilizzo (Caricamento documenti)",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "1.3.3",
+        "Data": "2025-02-24",
+        "Descrizione": "Aggiunta sezione Piano di Qualifica",
+        "Autore": "Annalisa Egidi"
+      },
+      {
+        "Versione": "1.4.0",
+        "Data": "2025-02-24",
+        "Descrizione": "Verifica ultime modifiche",
+        "Verificatore": "Filippo Bellon"
+      },
+      {
+        "Versione": "2.0.0",
+        "Data": "2025-02-24",
+        "Descrizione": "",
+        "Validatore": "Luca Calzetta"
       }
     ]
   }

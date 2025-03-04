@@ -42,7 +42,7 @@
     Resoconto Earned Value e Planned value
   ],
 )
-=== Requirements Stability Index e Saisfied Obligatory Requirements
+=== Requirements Stability Index e Satisfied Obligatory Requirements
 #figure(
   image("../Grafici/RSI_SOR.png", width: 80%),
   caption: [

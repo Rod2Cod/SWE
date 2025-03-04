@@ -1,0 +1,4 @@
+- Assegnazione diari di bordo marzo/aprile
+- Progettazione: design patterns
+- Way of working: aggiornamento
+- Versionamento: aggiornamento

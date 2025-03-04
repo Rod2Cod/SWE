@@ -11,21 +11,9 @@
     "values": [
       {
         "Versione" : "0.0.1",
-        "Data" : "2025-02-11",
+        "Data" : "03/03/2025",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Filippo Bellon"
-      },
-      {
-        "Versione" : "0.1.0",
-        "Data" : "2025-02-27",
-        "Sez.modificate": "",
-        "Verificatore" : "Annalisa Egidi"
-      },
-      {
-        "Versione" : "1.0.0",
-        "Data" : "2025-02-27",
-        "Sez.modificate": "",
-        "Validatore" : "Alberto Maggion"
+        "Autore" : "Annalisa Egidi"
       }
     ]
   },
@@ -44,12 +32,12 @@
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": "Responsabile"
       },
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": "Responsabile"
+        "Ruolo": "Amministratore"
       },
       {
         "Nominativo": "Luca Calzetta",
