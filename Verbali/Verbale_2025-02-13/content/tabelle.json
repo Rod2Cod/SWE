@@ -1,0 +1,52 @@
+{
+  "versione": {
+    "keys": [
+      "Versione",
+      "Data",
+      "Sez.modificate",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione": "0.0.1",
+        "Data": "2025-02-15",
+        "Autore": "Michele Nesler",
+        "Sez.modificate": "Prima Stesura",
+        "Verificatore": "",
+        "Validatore": ""
+      }
+    ]
+  },
+  "presenze": {
+    "keys": ["Nominativo", "Presenze", "Ruolo"],
+    "values": [
+      {
+        "Nominativo": "Michele Nesler",
+        "Presenze": "P",
+        "Ruolo": ""
+      },
+      {
+        "Nominativo": "Annalisa Egidi",
+        "Presenze": "P",
+        "Ruolo": ""
+      },
+      {
+        "Nominativo": "Filippo Bellon",
+        "Presenze": "P",
+        "Ruolo": ""
+      },
+      {
+        "Nominativo": "Luca Calzetta",
+        "Presenze": "P",
+        "Ruolo": ""
+      },
+      {
+        "Nominativo": "Alberto Maggion",
+        "Presenze": "P",
+        "Ruolo": ""
+      }
+    ]
+  }
+}
