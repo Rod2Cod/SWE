@@ -1,2 +1,4 @@
-- Discussione Esito RTB Seconda Parte
-- Discussione prima bozza Progettazione
+- Assegnazione diari di bordo marzo/aprile
+- Progettazione: design patterns
+- Way of working: aggiornamento
+- Versionamento: aggiornamento

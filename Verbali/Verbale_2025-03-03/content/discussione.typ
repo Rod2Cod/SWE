@@ -1,21 +1,31 @@
 #import "../../functions.typ": decisioni
-== #lorem(4)
-#lorem(30)
-#decisioni(
-  [
-    - #lorem(30)
-  ],
-  [
-    - #lorem(30)
-  ]
-)
-== #lorem(4)
-#lorem(30)
-#decisioni(
-  [
-    - #lorem(30)
-  ],
-  [
-    - #lorem(30)
-  ]
-)
+
+= Assegnazione diari di bordo marzo/aprile
+- 10/03 Annalisa
+- 17/03 Alberto
+- 25/03 Luca
+- 31/03 Filippo
+- 07/04 Michele
+- 15/04 Annalisa
+- 22/04 Alberto
+- 28/04 Luca
+
+= Progettazione: design patterns
+#decisioni([
+  - Utilizzo monolite come architettura di deployment;
+  - Exhagonal come architettura logica;
+  - Le interfaccie di comunicazione della buisness logic.
+],[])
+
+= Way of working: aggiornamento
+#decisioni([aggiunta al way of working della creazione issues per ogni decisione presa in riunione.],[Feedback RTB])
+
+= Versionamento: aggiornamento
+#decisioni([il Verificatore modifia la sez. versione e data; le colonne sez. modificate e autore vengono modificate dagli autori in ordine cronologico.
+],[Feedback RTB])
+
+= Domande per richiesta colloquio Vardanega
+- In che senso le metriche devono essere definite nel wow? noi le abbiamo definite;
+- Come fare il cruscotto diverso dai grafici;
+- Dobbiamo aggiungere le valutazioni al PdQ;
+- il glossario, perché dovrebbe essere interno se viene riportato sui documenti esterni il linking.
