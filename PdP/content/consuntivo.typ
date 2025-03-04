@@ -237,3 +237,34 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
 
 
 #pagebreak()
+
+=== Ottavo periodo 11/02/2025 - 24/02/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("8"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/c8_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/c8_dist_ore.png",height: 18%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("8")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot8"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
+  #image("Graphs/c8_budget.png",height: 20%)
+  *Retrospective*:
+  Durante questo periodo abbiamo ultimato i preparativi per l'ultimo colloquio dell'RTB e apportato alcune correzioni al PdP e PdQ, come suggerito dalle valutazioni ricevute. A differenza di quanto preventivato per il periodo, non è stato svolto il lavoro di progettazione, in quanto abbiamo nuovamente sottostimato i tempi necessari alla conclusione dell'RTB.\
+  Durante questo periodo ci siamo anche resi conto che non avevamo tante ore a disposizione a causa degli impegni dovuti alla sessione di esami. Questo ci ha portato a non poter lavorare come avremmo voluto sul progetto, ma abbiamo comunque cercato di sfruttare al meglio il tempo a disposizione.
+#pagebreak()

@@ -128,6 +128,10 @@
         "Data": "2025-02-23",
         "Sez.modificate": "",
         "Validatore": "Michele Nesler"
+      },
+      {
+        "Sez.modificate": "Aggiunta consuntivo periodo 8",
+        "Autore": "Alberto Maggion"
       }
     ]
   },
@@ -1213,6 +1217,48 @@
         }
       ]
     },
+    "8": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+        {
+          "Nominativo": "Michele Nesler",
+          "Amm": 3,
+          "Ver": 1,
+          "Totale": 4
+        },
+        {
+          "Nominativo": "Annalisa Egidi",
+          "Res": 2,
+          "Amm": 3,
+          "Totale": 6
+        },
+        {
+          "Nominativo": "Filippo Bellon",
+          "Amm": 3,
+          "Totale": 3
+        },
+        {
+          "Nominativo": "Luca Calzetta",
+          "Amm": 3,
+          "Totale": 3
+        },
+        {
+          "Nominativo": "Alberto Maggion",
+          "Amm": 2,
+          "Ver": 1,
+          "Totale": 3
+        }
+      ]
+    },
     "tot1": {
       "keys": [
         "Costo totale",
@@ -1318,10 +1364,26 @@
       ],
       "values": [
         {
-          "Costo totale": 7060,
+          "Costo totale": 5865          ,
           "Costo periodo": 715,
           "Budget preventivato": 1335,
-          "Budget rimanente": 4435
+          "Budget rimanente": 5630
+        }
+      ]
+    },
+    "tot8": {
+      "keys": [
+        "Costo totale",
+        "Costo periodo",
+        "Budget preventivato",
+        "Budget rimanente"
+      ],
+      "values": [
+        {
+          "Costo totale": 6255,
+          "Costo periodo": 390,
+          "Budget preventivato": 1085,
+          "Budget rimanente": 5240
         }
       ]
     }
