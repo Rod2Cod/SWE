@@ -9,7 +9,7 @@ layout: index
 ## Requirements and Technology Baseline
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Candidatura_RTB" and pdf.extname == ".pdf" %}
-- [Candidatura per la revisione Requirements and Technology Baseline]({{ pdf.path | relative_url }}){:target="_blank"}
+- [Lettera di Presentazione RTB]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
 
@@ -17,7 +17,11 @@ layout: index
 <!-- così vado a prendermi i file pdf in Candidatura -->
 {% for pdf in site.static_files %}
     {% if pdf.path contains "Documentazione/Candidatura/" and pdf.extname == ".pdf" %}
+        {% if pdf.path contains "Documentazione/Candidatura/Candidatura" %}
+- [Lettera di Candidatura]({{ pdf.path | relative_url }}){:target="_blank"}
+        {% else %}
 - [{{ pdf.name | replace: '_',' ' | split: ".pdf" | first }}]({{ pdf.path | relative_url }}){:target="_blank"}
+        {% endif %}
     {% endif %}
 {% endfor %}
 
