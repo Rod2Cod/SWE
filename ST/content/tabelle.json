@@ -1,0 +1,83 @@
+{
+  "versione": {
+    "keys": [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Data": "2025-03-05",
+        "Descrizione": "Prima stesura",
+        "Autore": "Filippo Bellon"
+      }
+    ]
+  },
+  "tecnologie": {
+    "linguaggi": {
+      "keys": [
+        "Nome",
+        "Descrizione",
+        "Versione"
+      ],
+      "values": [
+        {
+          "Nome":"Python",
+          "Descrizione":"Linguaggio di programmazione interpretato, ad alto livello e orientato agli oggetti.",
+          "Versione":""
+        },
+        {
+          "Nome":"Javascript",
+          "Descrizione":"Linguaggio di programmazione interpretato, orientato agli oggetti e basato su eventi.",
+          "Versione":""
+        }
+      ]
+    },
+    "framework": {
+      "keys": [
+        "Nome",
+        "Descrizione",
+        "Versione"
+      ],
+      "values": [
+        {
+          "Nome":"VueJS",
+          "Descrizione":"Framework JavaScript open-source per la creazione di interfacce utente e applicazioni web.",
+          "Versione":""
+        }
+      ]
+    },
+    "librerie": {
+      "keys": [
+        "Nome",
+        "Descrizione",
+        "Versione"
+      ],
+      "values": [
+        {
+          "Nome":"",
+          "Descrizione":"",
+          "Versione":""
+        }
+      ]
+    },
+    "strumenti": {
+      "keys": [
+        "Nome",
+        "Descrizione",
+        "Versione"
+      ],
+      "values": [
+        {
+          "Nome":"Visual Studio Code",
+          "Descrizione":"Editor di codice gratuito e open-source sviluppato da Microsoft. Supporta vari linguaggi di programmazione, estensioni personalizzabili e altri strumenti per lo sviluppo.",
+          "Versione":""
+        }
+      ]
+    }
+  }
+}
+  

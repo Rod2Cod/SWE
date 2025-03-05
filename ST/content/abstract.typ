@@ -1,0 +1,1 @@
+Il documento ha lo scopo di definire l'*architettura* e il *design* dell'*applicazione* che si andrà a sviluppare, includendo inoltre eventuali *API* e *tecnologie* utilizzate.

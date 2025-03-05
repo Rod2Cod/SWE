@@ -2,7 +2,6 @@
   let keys = data.at("keys")
   let values = data.at("values")
 
-
   table(
       fill: (_,y) =>
       if y == 0 {gray.lighten(50%)},
@@ -20,7 +19,6 @@
 #let table-json-rev(data,fractions) = {
   let keys = data.at("keys")
   let values = data.at("values")
-
 
   table(
       fill: (_,y) =>
@@ -49,7 +47,6 @@
 #let table-json-cal(data,fractions) = {
   let keys = data.at("keys")
   let values = data.at("values")
-
 
   table(
       fill: (_,y) =>
@@ -109,6 +106,30 @@
       [Di vincolo], [#vincolo.at("Obbligatori")], [#vincolo.at("Desiderabili")], [#vincolo.at("Opzionali")], [#totali.at("Opzionali")],
       [*Totale*], [#totali.at("Obbligatori")], [#totali.at("Desiderabili")], [#totali.at("Opzionali")], [#totali.at("Totali")],
   )
+}
+
+#let table-json-tec(data) = {
+  let sections = data.keys()
+
+  for section in sections [
+    #let keys = data.at(section).at("keys")
+    #let values = data.at(section).at("values")
+
+    == #section.replace(regex("(^)[a-z]"), m => upper(m.text))
+
+    #table(
+        fill: (_,y) =>
+        if y == 0 {gray.lighten(50%)},
+        align: left,
+        columns: 3,
+        ..keys.map(key => {strong(key)}),
+        ..values.map(
+          row => keys.map(
+            key => row.at(key, default:[])
+          )
+        ).rev().flatten()
+    )
+  ]
 }
 
 #let printDict(dict) = {
