@@ -42,14 +42,14 @@
 = Introduzione
   #introduzione
 
+= Rischi attesi e loro mitigazione 
+#rischi_mitigazioni
+
 = Calendario di massima del progetto
   #calendario_massima
 
 = Stima dei costi di realizzazione 
   #stima_costi
-
-= Rischi attesi e loro mitigazione 
-  #rischi_mitigazioni
 
 = Pianificazione
   #pianificazione

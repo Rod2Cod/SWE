@@ -140,6 +140,18 @@
     #figure(
       image("gantt/Online Gantt 11-02_to_24-02.png"),
       caption: [
-        Diagramma di Gantt per le attività dell'ottavo periodo periodo
+        Diagramma di Gantt per le attività dell'ottavo periodo
+      ]
+    )
+
+  === Nono Periodo 24/02/2025 - 10/03/2025
+    *Obiettivi*
+      - Inizio della fase di *Progettazione*
+      - Aggiustamento dei *documenti RTB* in seguito all'esito dei colloqui RTB
+    *Suddivisione del lavoro*
+    #figure(
+      image("gantt/Online Gantt 24-02_to_10-03.png"),
+      caption: [
+        Diagramma di Gantt per le attività del nono periodo
       ]
     )

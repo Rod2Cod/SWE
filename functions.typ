@@ -1,4 +1,4 @@
-#let table-json(data,fractions) = {
+ #let table-json(data,fractions) = {
   let keys = data.at("keys")
   let values = data.at("values")
 
@@ -140,4 +140,9 @@
   return emph[#testo#sub("G")]
 }
 
-#let getLastDocVersion(data, path) = json("/" + path + "/" + data).at("versione").at("values").at(-1).at("Versione")
+// Prendo l'ultima versione del documento
+#let getLastDocVersion(data, path) = {
+  let items = json("/" + path + "/" + data).at("versione").at("values")
+  let filtered = items.filter(it => it.keys().contains("Versione"))
+  filtered.at(-1).at("Versione")
+}
