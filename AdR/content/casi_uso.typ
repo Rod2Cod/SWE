@@ -215,7 +215,7 @@
   - *Descrizione*: L'utente vuole poter visualizzare un elemento della lista dei set
   - *Scenario*:
     - L'utente visualizza il nome del set
-    - L'utente visualizzaz il numero di domande contenute nel set
+    - L'utente visualizza il numero di domande contenute nel set
   - *Attore principale*: utente
   - *Precondizioni*:
     - L'utente visualizza l'elenco dei set
