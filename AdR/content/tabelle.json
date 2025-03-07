@@ -313,6 +313,24 @@
         "Fonti": "UC13"
       },
       {
+        "Codice": "RF-1.13.4",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato il nome del set su cui è stato eseguito il test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.13.5",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato la data di esecuzione del test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
+        "Codice": "RF-1.13.6",
+        "Descrizione": "L'utente deve poter visualizzare nel risultato l'LLM utilizzato nel test.",
+        "Classificazione": "Obbligatorio",
+        "Fonti": "UC13"
+      },
+      {
         "Codice": "RF-1.14",
         "Descrizione": "L'utente deve poter visualizzare il risultato di un test per singolo elemento domanda.",
         "Classificazione": "Obbligatorio",
