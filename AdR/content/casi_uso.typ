@@ -112,6 +112,7 @@
   - *Precondizioni*:
     - È presente almeno un elemento domanda nel sistema
   - *Postcondizioni*:
+    - L'elemento domanda viene rimosso da eventuali set a cui era associato
     - L'elemento domanda viene eliminato dal sistema
   - *Scenari alternativi*:
     - Annullamento eliminazione elemento domanda (UC26)

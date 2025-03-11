@@ -156,6 +156,12 @@
         "Data": "2025-02-21",
         "Descrizione": "Sezioni Tracciamento, Requisiti e Casi d'uso - Aggiornata tabella Fonte - Requisiti, Aggiornati Requisiti Funzionali e di Qualità, Modificato Elenco dei casi d'uso",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Versione": "",
+        "Data": "2025-03-11",
+        "Descrizione": "Sezione Casi d'uso - Aggiornate postcondizioni UC4",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
