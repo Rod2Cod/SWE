@@ -86,11 +86,17 @@
     Opzionali: data.at("requisiti_vincolo").at("values").filter(x => x.Classificazione == "Opzionale").len()
   )
 
-  let totali = (
+  let totaliPriorita = (
     Obbligatori: funzionali.Obbligatori + qualità.Obbligatori + vincolo.Obbligatori,
     Desiderabili: funzionali.Desiderabili + qualità.Desiderabili + vincolo.Desiderabili,
     Opzionali: funzionali.Opzionali + qualità.Opzionali + vincolo.Opzionali,
     Totali: funzionali.Obbligatori + funzionali.Desiderabili + funzionali.Opzionali + qualità.Obbligatori + qualità.Desiderabili + qualità.Opzionali + vincolo.Obbligatori + vincolo.Desiderabili + vincolo.Opzionali
+  )
+
+  let totaliTipo = (
+    Funzionali: funzionali.Obbligatori + funzionali.Desiderabili + funzionali.Opzionali,
+    Qualità: qualità.Obbligatori + qualità.Desiderabili + qualità.Opzionali,
+    Vincolo: vincolo.Obbligatori + vincolo.Desiderabili + vincolo.Opzionali
   )
 
   table(
@@ -101,10 +107,10 @@
       table.header(
         [*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Totale*],
       ),
-      [Funzionali], [#funzionali.at("Obbligatori")], [#funzionali.at("Desiderabili")], [#funzionali.at("Opzionali")], [#totali.at("Obbligatori")],
-      [Di qualità], [#qualità.at("Obbligatori")], [#qualità.at("Desiderabili")], [#qualità.at("Opzionali")], [#totali.at("Desiderabili")],
-      [Di vincolo], [#vincolo.at("Obbligatori")], [#vincolo.at("Desiderabili")], [#vincolo.at("Opzionali")], [#totali.at("Opzionali")],
-      [*Totale*], [#totali.at("Obbligatori")], [#totali.at("Desiderabili")], [#totali.at("Opzionali")], [#totali.at("Totali")],
+      [Funzionali], [#funzionali.at("Obbligatori")], [#funzionali.at("Desiderabili")], [#funzionali.at("Opzionali")], [#totaliTipo.at("Funzionali")],
+      [Di qualità], [#qualità.at("Obbligatori")], [#qualità.at("Desiderabili")], [#qualità.at("Opzionali")], [#totaliTipo.at("Qualità")],
+      [Di vincolo], [#vincolo.at("Obbligatori")], [#vincolo.at("Desiderabili")], [#vincolo.at("Opzionali")], [#totaliTipo.at("Vincolo")],
+      [*Totale*], [#totaliPriorita.at("Obbligatori")], [#totaliPriorita.at("Desiderabili")], [#totaliPriorita.at("Opzionali")], [#totaliPriorita.at("Totali")],
   )
 }
 
