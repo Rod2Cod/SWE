@@ -3,7 +3,7 @@
 
 ==== Modifica
   Il processo di modifica include sia la *modifica/correzione* di parti del testo che la parte di creazione di *nuovi contenuti*. Nella fase di creazione dei contenuti, al fine di ottimizzare il tempo necessario alla produzione dei documenti, non è necessario preoccuparsi troppo della forma, quanto invece nell’esprimere i *contenuti in modo chiaro*. Nei passaggi successivi questi verranno corretti sia nella forma che nella sintassi. \
-  Nella tabella delle versioni, la persona assegnata a questo compito viene indicata all'interno della colonna *Autore*.
+  Nella tabella delle versioni, la persona assegnata a questo compito viene indicata all'interno della colonna *Autore*, mentre le modifiche apportate si trovano nella colonna *Descrizione*.
 
 ==== Verifica
   Il processo di verifica consiste nella lettura del testo prodotto e nell’eventuale *correzione di errori* ortografici rilevati nonché nella modifica della struttura del documento al fine di rendere l’argomento trattato di *facile consultazione*.\
