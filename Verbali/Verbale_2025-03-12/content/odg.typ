@@ -1,4 +1,4 @@
-- Discussione progettazione
 - Discussione incontro con Vardanega
-  - Correzione documenti (WoW, PdQ,..)
-  - Discussione versionamento (WoW)
+- Correzione documenti (WoW, PdQ,..)
+- Discussione versionamento (WoW)
+- Discussione progettazione
