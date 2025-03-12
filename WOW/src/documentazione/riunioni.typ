@@ -10,7 +10,7 @@ Le riunioni rappresentano un momento fondamentale per il buon andamento del prog
 
 === Ruoli e Responsabilità
 
-Durante le riunioni, chi attualmente veste il ruolo di responsabile, sarà considerato il moderatore della riunione, ovvero colui che tiene le redini della discussione, portando uno a uno i punti del ordine del giorno Durante le riunioni, il responsabile attualmente in carica assume il ruolo di moderatore, ovvero la figura incaricata di guidare la discussione e garantire il corretto svolgimento degli incontri. Il moderatore si occupa di presentare e affrontare, punto per punto, gli argomenti all'ordine del giorno, assicurando così un dialogo produttivo e una gestione efficace delle decisioni da prendere. Nel corso delle riunioni i ruoli potranno essere soggetti a rotazione, e sarà designato un segretario. Quest'ultimo avrà il compito di redigere il verbale secondo le modalità precedentemente definite, assicurando una documentazione accurata e completa delle discussioni e delle decisioni adottate.
+Durante le riunioni, chi attualmente veste il ruolo di responsabile, sarà considerato il moderatore della riunione, ovvero la figura incaricata di guidare la discussione e garantire il corretto svolgimento degli incontri. Dovrà inoltre. Il moderatore si occupa di presentare e affrontare, punto per punto, gli argomenti all'ordine del giorno, assicurando così un dialogo produttivo e una gestione efficace delle decisioni da prendere. Nel corso delle riunioni i ruoli potranno essere soggetti a rotazione, e sarà designato anche un segretario. Quest'ultimo avrà il compito di redigere il verbale secondo le modalità precedentemente definite, assicurando una documentazione accurata e completa delle discussioni e delle decisioni adottate. Oltre a redigere il verbale, il segretario avrà anche il compito di creare le issue relative alle decisioni prese durante la riunione. Al fine di tracciare al meglio tali issue, il segretario ne riporterà il numero all'interno del verbale, con le decisioni che hanno portato alla creazione delle stesse. 
 
 === Svolgimento delle Riunioni
 
@@ -18,7 +18,7 @@ Le riunioni si svolgono secondo una procedura strutturata, finalizzata a garanti
 
 === Documentazione
 
-Per ogni riunione sarà redatto un verbale, il cui scopo è documentare in modo dettagliato tutti i punti trattati all'ordine del giorno. Il verbale riporterà in maniera chiara gli argomenti discussi, le decisioni adottate e le relative motivazioni, garantendo così una traccia completa e consultabile delle attività svolte. Questa pratica non solo consente di mantenere un registro organizzato delle decisioni prese, ma permette anche ai membri assenti di recuperare agevolmente quanto discusso e stabilito durante la riunione.
+Per ogni riunione sarà redatto un verbale, il cui scopo è documentare in modo dettagliato tutti i punti trattati all'ordine del giorno. Il verbale riporterà in maniera chiara gli argomenti discussi, le decisioni adottate e le relative motivazioni e le issue collegate, garantendo così una traccia completa e consultabile delle attività svolte. Questa pratica non solo consente di mantenere un registro organizzato delle decisioni prese, ma permette anche ai membri assenti di recuperare agevolmente quanto discusso e stabilito durante la riunione.
 
 === Strumenti e Tecnologie
 
