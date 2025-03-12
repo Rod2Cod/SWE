@@ -22,7 +22,7 @@ title: Artificial QI - Rod2Cod
 email: rod2cod@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Qui di seguito verranno forniti vari link alla documentazione 
-  riguardante il progetto di Ingegneria del Software: Artificial QI, proposto dall'azienda Zucchetti 
+  riguardante il progetto di Ingegneria del Software: [Artificial QI](https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C1.pdf){:target="_blank"}, proposto dall'azienda Zucchetti 
   e preso in carico dal nostro gruppo.
 baseurl: "/SWE" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -47,9 +47,9 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 
-exclude:
+#exclude:
   # rimuovo dalla visualizzazione i file deprecati
-  - Documentazione/*/Deprecated
+  # - Documentazione/*/Deprecated
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

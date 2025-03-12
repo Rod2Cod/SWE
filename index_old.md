@@ -10,9 +10,9 @@ layout: index
 ## Candidatura
 <!-- così vado a prendermi i file pdf in Candidatura -->
 {% for pdf in site.static_files %}
-{% if pdf.path contains "Candidatura/" and pdf.extname == ".pdf" %}
+    {% if pdf.path contains "Documentazione/Candidatura/" and pdf.extname == ".pdf" %}
 - [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
-{% endif %}
+    {% endif %}
 {% endfor %}
 
 ## Verbali
@@ -21,25 +21,24 @@ layout: index
 <!--  così vado a prendermi i file pdf in Verbali/Interni -->
 
 {% for pdf in site.static_files %}
-{% if pdf.path contains "Verbali/Interni" and pdf.extname == ".pdf" %}
+    {% if pdf.path contains "Documentazione/Verbali/Interni" and pdf.extname == ".pdf" %}
 
-    {% assign data = pdf.name | split: "Verbale" | last | split: "." | first | split: "-" %}
+        {% assign data = pdf.name | split: "Verbale" | last | split: "." | first | split: "-" %}
 
-    {% assign giorno =  data[2] %}
+        {% assign giorno =  data[2] %}
 
-    {% assign mese =  data[1] %}
+        {% assign mese =  data[1] %}
 
-    {% assign anno =  data[0] %}
+        {% assign anno =  data[0] %}
 
 - [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} ]({{ pdf.path | relative_url }}){:target="_blank"}
-{% endif %}
+    {% endif %}
 {% endfor %}
 
 ### Esterni
 <!--  così vado a prendermi i file pdf in Verbali/Esterni -->
 {% for pdf in site.static_files %}
-    {% assign check_approved = pdf.name | split: "Verbale" | last | split: "_" | last %}
-    {% if pdf.path contains "Verbali/Esterni" and pdf.extname == ".pdf" and check_approved == "approved" %}
+    {% if pdf.path contains "Documentazione/Verbali/Esterni" and pdf.extname == ".pdf" %}
 
         {% assign data = pdf.name | split: "Verbale" | last | split: "_" | first | split: "-" %}
 
@@ -52,5 +51,13 @@ layout: index
         {% assign last_part = pdf.name | split: "Verbale" | last | split: "_" | last %}
 
 - [ Verbale {{ giorno }}/{{ mese }}/{{ anno }} {{ last_part }} ]({{ pdf.path | relative_url }}){:target="_blank"}
+    {% endif %}
+{% endfor %}
+
+## WoW
+<!--  così vado a prendermi i file pdf in WoW -->
+{% for pdf in site.static_files %}
+    {% if pdf.path contains "Documentazione/WOW/" and pdf.extname == ".pdf" %}
+- [{{ pdf.name | replace: '_', ' ' }}]({{ pdf.path | relative_url }}){:target="_blank"}
     {% endif %}
 {% endfor %}
