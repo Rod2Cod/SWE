@@ -6,3 +6,4 @@
 #let abstract =  [#include "content/abstract.typ"]
 #let introduzione = [#include "content/introduzione.typ"]
 #let tecnologie = [#include "content/tecnologie.typ"]
+#let struttura = [#include "content/struttura.typ"]
