@@ -155,3 +155,16 @@
         Diagramma di Gantt per le attività del nono periodo
       ]
     )
+
+  === Decimo Periodo 11/03/2025 - 24/03/2025
+    *Obiettivi*
+      - Continuazione fase di *Progettazione*
+      - Continuazione *stesura documenti* per revisione *PB*
+        - Inizio stesura documento *Specifica Tecnica*
+      - *Codifica* dell'applicativo
+    #figure(
+      image("gantt/Online Gantt 11-03_to_24-03.png"),
+      caption: [
+        Diagramma di Gantt per le attività del decimo periodo
+      ]
+    )
