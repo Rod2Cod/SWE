@@ -1,154 +1,115 @@
-CREATE DATABASE ArtificialQI;
-USE ArtificialQI;
+-- Creazione del database (PostgreSQL non supporta USE, quindi bisogna connettersi manualmente)
+CREATE DATABASE artificialqi;
 
--- Tabella SET (rinominata per evitare conflitti con parola chiave SQL)
+-- Creazione delle tabelle
 CREATE TABLE set_domande (
-    id_set INT PRIMARY KEY AUTO_INCREMENT,
+    id_set SERIAL PRIMARY KEY,
     nome_set VARCHAR(100) NOT NULL
 );
 
--- Tabella DOMANDA
 CREATE TABLE domanda (
-    id_domanda INT PRIMARY KEY AUTO_INCREMENT,
+    id_domanda SERIAL PRIMARY KEY,
     testo_domanda TEXT NOT NULL,
     risposta_attesa TEXT NOT NULL,
-    ultima_versione  BOOLEAN NOT NULL,
-    id_set INT NOT NULL
+    ultima_versione BOOLEAN NOT NULL
 );
 
--- Tabella RISULTATO_TEST
 CREATE TABLE risultato_test (
-    id_risultato_test INT PRIMARY KEY AUTO_INCREMENT,
+    id_risultato_test SERIAL PRIMARY KEY,
     LLM VARCHAR(200) NOT NULL,
     score_generale FLOAT NOT NULL,
-    data_test DATETIME NOT NULL,
+    data_test TIMESTAMP NOT NULL,
     nome_set VARCHAR(100),
     id_set INT NOT NULL,
-    FOREIGN KEY (id_set) REFERENCES set_domande(id_set)
+    FOREIGN KEY (id_set) REFERENCES set_domande(id_set) ON UPDATE CASCADE
 );
 
--- Tabella RISULTATO_DOMANDA
 CREATE TABLE risultato_domanda (
-    id_risultato_domanda INT PRIMARY KEY AUTO_INCREMENT,
+    id_risultato_domanda SERIAL PRIMARY KEY,
     risposta_LLM TEXT NOT NULL,
     score_generale FLOAT NOT NULL,
     id_domanda INT NOT NULL,
     id_risultato_test INT NOT NULL,
-    FOREIGN KEY (id_domanda) REFERENCES domanda(id_domanda),
-    FOREIGN KEY (id_risultato_test) REFERENCES risultato_test(id_risultato_test)
+    FOREIGN KEY (id_domanda) REFERENCES domanda(id_domanda) ON UPDATE CASCADE,
+    FOREIGN KEY (id_risultato_test) REFERENCES risultato_test(id_risultato_test) ON UPDATE CASCADE
 );
 
--- Tabella METRICA
 CREATE TABLE metrica (
     nome_metrica VARCHAR(100) NOT NULL,
-    score_parziale FLOAT NOT NULL,
     id_risultato_domanda INT NOT NULL,
-    FOREIGN KEY (id_risultato_domanda) REFERENCES risultato_domanda(id_risultato_domanda),
-    PRIMARY KEY (nome_metrica, id_risultato_domanda)
-);  
-
--- DOMANDE NEI SET
-CREATE TABLE domande_nei_set (
-    id_set INT NOT NULL,
-    id_domanda INT NOT NULL,
-    PRIMARY KEY (id_set , id_domanda),
-    FOREIGN KEY (id_set) REFERENCES set_domande(id_set),
-    FOREIGN KEY (id_domanda) REFERENCES domanda(id_domanda)
+    score_parziale FLOAT NOT NULL,
+    FOREIGN KEY (id_risultato_domanda) REFERENCES risultato_domanda(id_risultato_domanda) ON UPDATE CASCADE,
+    PRIMARY KEY (nome_metrica, id_risultato_domanda) 
 );
 
-DELIMITER $$
+CREATE TABLE domande_nei_set (
+    id_set INT NOT NULL ,
+    id_domanda INT NOT NULL,
+    PRIMARY KEY (id_set, id_domanda),
+    FOREIGN KEY (id_set) REFERENCES set_domande(id_set) ON UPDATE CASCADE,
+    FOREIGN KEY (id_domanda) REFERENCES domanda(id_domanda) ON UPDATE CASCADE
+);
+
+-- Trigger per impedire aggiornamenti diretti su domande referenziate
+CREATE OR REPLACE FUNCTION before_update_domanda()
+RETURNS TRIGGER AS $$
+DECLARE
+    ref_count INT;
+    new_id INT;
+BEGIN
+    SELECT COUNT(*) INTO ref_count FROM risultato_domanda WHERE id_domanda = OLD.id_domanda;
+    IF ref_count > 0 THEN
+        UPDATE domanda SET ultima_versione = FALSE WHERE id_domanda = OLD.id_domanda;
+        INSERT INTO domanda (testo_domanda, ultima_versione, risposta_attesa)
+        VALUES (NEW.testo_domanda, TRUE, NEW.risposta_attesa) RETURNING id_domanda INTO new_id;
+        UPDATE domande_nei_set SET id_domanda = new_id WHERE id_domanda = OLD.id_domanda;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_update_domanda
 BEFORE UPDATE ON domanda
 FOR EACH ROW
+EXECUTE FUNCTION before_update_domanda();
+
+-- Trigger per eliminazione domande
+CREATE OR REPLACE FUNCTION before_delete_domanda()
+RETURNS TRIGGER AS $$
 BEGIN
-    DECLARE ref_count INT;
-    
-    -- Conta quanti record in risultato_domanda fanno riferimento alla domanda
-    SELECT COUNT(*) INTO ref_count 
-    FROM risultato_domanda 
-    WHERE id_domanda = OLD.id_domanda;
-    -- Se la domanda è visibile e ha almeno un riferimento, viene copiata invece di essere aggiornata
-    IF ref_count > 0 THEN
-        -- imposto a false la proprietà ultima_versione 
-        UPDATE domanda
-        SET ultima_versione  = false
-        WHERE id_domanda = OLD.id_domanda;
-        -- Creazione della copia della domanda con i nuovi dati
-        INSERT INTO domanda (testo_domanda, ultima_versione , risposta_attesa)
-        VALUES (NEW.testo_domanda, true , NEW.risposta_attesa);
-
-        SET new_id = LAST_INSERT_ID(); -- Ottieni l'ID della nuova domanda
-
-        UPDATE domande_nei_set 
-        SET id_domanda = new_id
-        WHERE id_domanda = OLD.id_domanda;
-
-         -- Impedire l'aggiornamento della domanda originale
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Modifica bloccata: domanda referenziata nella tabella risultato_domanda (presente all interno di un test nello storico), creata una copia con le modifiche.';
-
-    END IF;
-END
+    UPDATE domanda SET ultima_versione = FALSE WHERE id_domanda = OLD.id_domanda;
+    DELETE FROM domande_nei_set WHERE id_domanda = OLD.id_domanda;
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
 
 CREATE TRIGGER before_delete_domanda
 BEFORE DELETE ON domanda
 FOR EACH ROW
+EXECUTE FUNCTION before_delete_domanda();
+
+-- Trigger per eliminazione test
+CREATE OR REPLACE FUNCTION before_delete_test()
+RETURNS TRIGGER AS $$
+DECLARE
+    v_id_domanda INT;
 BEGIN
-    UPDATE domanda
-    SET ultima_versione = false
-    WHERE id_domanda = OLD.id_domanda;
-
-    DELETE FROM domande_nei_set
-    WHERE id_domanda = OLD.id_domanda;
-END
-
-CREATE TRIGGER before_delete_test
-BEFORE DELETE ON test
-FOR EACH ROW
-BEGIN
-    -- Declare a variable to store the question ID
-    DECLARE v_id_domanda INT;
-
-    -- Cursor to loop through all questions in the test being deleted
-    DECLARE cur CURSOR FOR
-        SELECT id_domanda 
-        FROM risultato_domanda 
-        WHERE id_risultato_test = OLD.id_risultato_test;
-
-    -- Handler for when no more rows are found
-    DECLARE CONTINUE HANDLER FOR NOT FOUND SET @done = TRUE;
-
-    -- Open the cursor
-    OPEN cur;
-
-    -- Loop through each question in the test
-    read_loop: LOOP
-        FETCH cur INTO v_id_domanda;
-        IF @done THEN
-            LEAVE read_loop;
-        END IF;
-
-        -- Check if the question is an old version and not referenced in any other test
+    FOR v_id_domanda IN
+        SELECT id_domanda FROM risultato_domanda WHERE id_risultato_test = OLD.id_risultato_test
+    LOOP
         IF EXISTS (
-            SELECT 1 
-            FROM domanda 
-            WHERE id_domanda = v_id_domanda 
-              AND ultima_versione = FALSE
+            SELECT 1 FROM domanda WHERE id_domanda = v_id_domanda AND ultima_versione = FALSE
         ) AND NOT EXISTS (
-            SELECT 1 
-            FROM risultato_domanda 
-            WHERE id_domanda = v_id_domanda 
-              AND id_risultato_test <> OLD.id_risultato_test
+            SELECT 1 FROM risultato_domanda WHERE id_domanda = v_id_domanda AND id_risultato_test <> OLD.id_risultato_test
         ) THEN
-            -- Delete the question if it meets the conditions
-            DELETE FROM domanda 
-            WHERE id_domanda = v_id_domanda;
+            DELETE FROM domanda WHERE id_domanda = v_id_domanda;
         END IF;
     END LOOP;
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
 
-    -- Close the cursor
-    CLOSE cur;
-END$$
-
-DELIMITER ;
+CREATE TRIGGER before_delete_test
+BEFORE DELETE ON risultato_test
+FOR EACH ROW
+EXECUTE FUNCTION before_delete_test();
