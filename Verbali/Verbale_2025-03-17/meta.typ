@@ -1,7 +1,7 @@
 // Elementi da modificare per verbali
-#let title = "Verbale 12/03/2024"
+#let title = "Titolo del documento"
 #let tabelle = "content/tabelle.json"
-#let segretario = "Luca Calzetta"
+#let segretario = "Maggion Alberto"
 #let date = datetime(
   day: 12,
   month: 03,

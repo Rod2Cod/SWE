@@ -11,9 +11,9 @@
     "values": [
       {
         "Versione" : "",
-        "Data" : "2025-03-13",
-        "Autore" : "Luca Calzetta",
-        "Sez.modificate": "Prima stesura"
+        "Data" : "2025-03-12",
+        "Autore" : "",
+        "Sez.modificate": ""
       }
     ]
   },
@@ -27,27 +27,32 @@
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": "Analista"
+        "Ruolo": ""
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": ""
       },
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": "Progettista"
+        "Ruolo": ""
       },
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": "Responsabile"
+        "Ruolo": ""
       },
       {
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
-        "Ruolo": "Progettista"
+        "Ruolo": ""
+      },
+      {
+        "Nominativo": "Alessandro Rossi",
+        "Presenze": "P",
+        "Ruolo": ""
       }
     ]
   }

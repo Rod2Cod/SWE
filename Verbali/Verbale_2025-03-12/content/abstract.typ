@@ -1,1 +1,1 @@
-Il giorno XX/XX/XXXX dalle ore 16.00 alle XX:XX il gruppo Rod2Cod si riunisce.
+Il giorno 12/03/2024 dalle ore 10.00 alle 12:00 e dalle ore 16.00 alle 17.30 il gruppo Rod2Cod si riunisce.
