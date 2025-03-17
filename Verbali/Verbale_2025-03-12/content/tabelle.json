@@ -10,10 +10,11 @@
     ],
     "values": [
       {
-        "Versione" : "",
+        "Versione" : "0.1",
         "Data" : "2025-03-13",
         "Autore" : "Luca Calzetta",
-        "Sez.modificate": "Prima stesura"
+        "Sez.modificate": "Prima stesura",
+        "Verificatore" : "Annalisa Egidi"
       }
     ]
   },

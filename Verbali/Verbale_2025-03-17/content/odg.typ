@@ -1,9 +1,11 @@
+- Verbale
 - Discussione incontro con Cardin
-- Correzione documenti (WoW, PdQ,..)
-- Discussione versionamento (WoW)
 - Discussione progettazione
   - Discussione nome classi
   - Discussione Dati API/Controller
   - Discussione operazioni Servizi
   - Discussione operazione Persistence
     - Discussione progettazione e implementazione updateElementiDomandaSet
+- Discussione test e automazioni
+  - pytest
+  - docker e web

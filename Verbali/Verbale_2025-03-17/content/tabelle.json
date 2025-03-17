@@ -10,9 +10,11 @@
     ],
     "values": [
       {
-        "Versione" : "1.0",
+        "Versione" : "0.0",
         "Data" : "2025-03-17",
-        "Autore" : ""
+        "Sez.modificate" : "Prima stesura",
+        "Autore" : "Annalisa Egidi",
+        "Verificatore" : ""
       }
     ]
   },
@@ -26,32 +28,27 @@
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Responsabile"
       },
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Programmatore"
       },
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Programmatore"
       },
       {
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
-        "Ruolo": ""
-      },
-      {
-        "Nominativo": "Alessandro Rossi",
-        "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Amministratore"
       }
     ]
   }

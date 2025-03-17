@@ -14,16 +14,6 @@
   1. è possibile togliere la classe o lasciarla evidenziandola
   2. divisione interfacce per il single responsibility principle]
 )
-== Correzione documenti (WoW, PdQ,..)
-#decisioni(
-  [],
-  []
-)
-== Discussione versionamento (WoW)
-#decisioni(
-  [],
-  []
-)
 == Discussione progettazione
   #decisioni(
   [
@@ -40,18 +30,29 @@
   )
   === Discussione nome classi
   #decisioni(
-  [],
-  []
+  [Utilizzo di italiano e inglese per i nomi delle classi, eventualmente modificando a posteriori],
+  [Sono già state scritte la parte di Persistence e Servizi con i nomi in italiano e ingelse]
   )
   === Discussione Dati API/Controller
-  #decisioni(
-  [],
-  []
-  )
+  Il gruppo si è aggiornato sugli sviluppi, non sono state prese decisioni se non di continuare i lavori.
   === Discussione operazioni Servizi
-  #decisioni(
-  [],
-  []
-  )
+ Il gruppo ha discusso sulle operazioni da implementare nei servizi e sulla struttura delle classi.
+ E' stato deciso di presentare una prima bozza prima della riunione successiva.
   === Discussione operazione Persistence
+  Il gruppo ha discusso sul tema senza prendere decisioni ma solo per chiarire i dubbi
     ==== Discussione progettazione e implementazione updateElementiDomandaSet
+    #decisioni(
+    [
+      1. una richiesta per ogni lista
+    ],
+    [
+      1. efficienza con la prospettiva una grande mole di dati
+    ]
+    )
+== Discussione test e automazioni
+  === pytest
+Il gruppo si è aggiornato riguardo le possibilità di automazione dei test. 
+on sono state prese decisioni.
+  === docker e web
+Il gruppo si è aggiornato sulle metodologie di test.
+Non sono state prese decisioni.
