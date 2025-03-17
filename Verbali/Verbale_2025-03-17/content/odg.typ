@@ -1,4 +1,4 @@
-- Discussione incontro con Vardanega
+- Discussione incontro con Cardin
 - Correzione documenti (WoW, PdQ,..)
 - Discussione versionamento (WoW)
 - Discussione progettazione
