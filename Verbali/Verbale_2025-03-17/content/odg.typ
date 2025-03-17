@@ -9,3 +9,4 @@
 - Discussione test e automazioni
   - pytest
   - docker e web
+- Issues aggiunte
