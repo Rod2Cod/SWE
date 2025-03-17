@@ -1,14 +1,14 @@
 #import "../../functions.typ": decisioni
 
 == Verbale
-    - autore: Annalisa Egidi
-    - verificatore: Alberto Maggion
-    - validatore: Luca Calzetta
+    - autore: Annalisa Egidi (\#174)
+    - verificatore: Alberto Maggion (\#174)
+    - validatore: Luca Calzetta (\#174)
 == Discussione incontro con Cardin
 #decisioni(
   [
-    1. Lasciare ViewModel evidenziando la presenza
-    2. Ulteriore divisione delle singole interfaccie 
+    1. Lasciare ViewModel evidenziando la presenza (\#175)
+    2. Ulteriore divisione delle singole interfaccie (\#176)
   ],
   [Le decisioni sono state prese a seguito dei feedback ricevuto dal professor Cardin in colloquio avuto in data 17/03/2025
   1. è possibile togliere la classe o lasciarla evidenziandola
@@ -56,3 +56,6 @@ on sono state prese decisioni.
   === docker e web
 Il gruppo si è aggiornato sulle metodologie di test.
 Non sono state prese decisioni.
+
+== Issue aggiunte
+\#177 (modifica dell'SQL)

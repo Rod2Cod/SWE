@@ -1,5 +1,5 @@
 // Elementi da modificare per verbali interni
-#let title = "Verbale riunione interna"
+#let title = "Verbale Interno"
 #let tabelle = "content/tabelle.json"
 #let date = datetime(
   day: 24,

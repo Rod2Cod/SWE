@@ -10,10 +10,11 @@
     ],
     "values": [
       {
-        "Versione" : "",
+        "Versione" : "0.1",
         "Data" : "2025-03-10",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Filippo Bellon"
+        "Autore" : "Filippo Bellon",
+        "Verificatore" : "Annalisa Egidi"
       }
     ]
   },
