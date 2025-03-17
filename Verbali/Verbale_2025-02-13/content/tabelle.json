@@ -10,11 +10,11 @@
     ],
     "values": [
       {
-        "Versione": "0.0.1",
-        "Data": "2025-02-15",
+        "Versione": "0.1",
+        "Data": "2025-02-20",
         "Autore": "Michele Nesler",
         "Sez.modificate": "Prima Stesura",
-        "Verificatore": "",
+        "Verificatore": "Annalisa Egidi",
         "Validatore": ""
       }
     ]
