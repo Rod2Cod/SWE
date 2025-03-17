@@ -1,0 +1,6 @@
+- Discussione progettazione
+  - Discussione nome classi
+  - Discussione Dati API/Controller
+  - Discussione operazioni Servizi
+  - Discussione operazione Persistence
+    - Discussione progettazione e implementazione updateElementiDomandaSet
