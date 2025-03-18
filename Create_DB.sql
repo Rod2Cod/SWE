@@ -35,7 +35,7 @@ CREATE TABLE risultato_domanda (
 );
 
 CREATE TABLE metrica (
-    nome_metrica VARCHAR(100) PRIMARY KEY,
+    nome_metrica VARCHAR(100) PRIMARY KEY
 );
 
 CREATE TABLE score_metriche(
