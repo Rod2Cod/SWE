@@ -1,6 +1,6 @@
 {
-  "versione" : {
-    "keys" : [
+  "versione": {
+    "keys": [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,19 +10,22 @@
     ],
     "values": [
       {
-        "Versione" : "",
-        "Data" : "2025-03-10",
+        "Versione": "0.1",
+        "Data": "2025-03-10",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Annalisa Egidi"
+      },
+      {
+        "Versione": "1.0",
+        "Data": "2025-03-18",
+        "Sez.modificate": "",
+        "Validatore": "Michele Nesler"
       }
     ]
   },
-  "presenze" : {
-    "keys" : [
-      "Nominativo",
-      "Presenze",
-      "Ruolo"
-    ],
+  "presenze": {
+    "keys": ["Nominativo", "Presenze", "Ruolo"],
     "values": [
       {
         "Nominativo": "Michele Nesler",
