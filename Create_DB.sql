@@ -35,11 +35,16 @@ CREATE TABLE risultato_domanda (
 );
 
 CREATE TABLE metrica (
+    nome_metrica VARCHAR(100) PRIMARY KEY,
+);
+
+CREATE TABLE score_metriche(
     nome_metrica VARCHAR(100) NOT NULL,
     id_risultato_domanda INT NOT NULL,
     score_parziale FLOAT NOT NULL,
-    FOREIGN KEY (id_risultato_domanda) REFERENCES risultato_domanda(id_risultato_domanda) ON UPDATE CASCADE,
-    PRIMARY KEY (nome_metrica, id_risultato_domanda) 
+    PRIMARY KEY (nome_metrica, id_risultato_domanda),
+    FOREIGN KEY (nome_metrica) REFERENCES metrica(nome_metrica) ON UPDATE CASCADE,
+    FOREIGN KEY (id_risultato_domanda) REFERENCES risultato_domanda(id_risultato_domanda) ON UPDATE CASCADE
 );
 
 CREATE TABLE domande_nei_set (
@@ -55,14 +60,11 @@ CREATE OR REPLACE FUNCTION before_update_domanda()
 RETURNS TRIGGER AS $$
 DECLARE
     ref_count INT;
-    new_id INT;
 BEGIN
     SELECT COUNT(*) INTO ref_count FROM risultato_domanda WHERE id_domanda = OLD.id_domanda;
     IF ref_count > 0 THEN
-        UPDATE domanda SET ultima_versione = FALSE WHERE id_domanda = OLD.id_domanda;
         INSERT INTO domanda (testo_domanda, ultima_versione, risposta_attesa)
-        VALUES (NEW.testo_domanda, TRUE, NEW.risposta_attesa) RETURNING id_domanda INTO new_id;
-        UPDATE domande_nei_set SET id_domanda = new_id WHERE id_domanda = OLD.id_domanda;
+        VALUES (NEW.testo_domanda, FALSE, NEW.risposta_attesa) ;
     END IF;
     RETURN NEW;
 END;
@@ -76,9 +78,15 @@ EXECUTE FUNCTION before_update_domanda();
 -- Trigger per eliminazione domande
 CREATE OR REPLACE FUNCTION before_delete_domanda()
 RETURNS TRIGGER AS $$
+DECLARE
+    ref_count INT;
 BEGIN
-    UPDATE domanda SET ultima_versione = FALSE WHERE id_domanda = OLD.id_domanda;
-    DELETE FROM domande_nei_set WHERE id_domanda = OLD.id_domanda;
+    SELECT COUNT(*) INTO ref_count FROM risultato_domanda WHERE id_domanda = OLD.id_domanda;
+    IF ref_count > 0 THEN
+        UPDATE domanda SET ultima_versione = FALSE WHERE id_domanda = OLD.id_domanda;
+        DELETE FROM domande_nei_set WHERE id_domanda = OLD.id_domanda;
+        RETURN NULL;
+    END IF;
     RETURN OLD;
 END;
 $$ LANGUAGE plpgsql;
