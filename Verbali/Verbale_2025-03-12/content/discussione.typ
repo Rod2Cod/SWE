@@ -8,7 +8,7 @@ Il verbale verrà redatto da Luca Calzetta, verificato da Annalisa Egidi e valid
 
 Dopo aver richiesto un incontro con il professor Vardanega per ottenere chiarimenti sull'esito dell'RTB, abbiamo discusso le osservazioni ricevute e preso decisioni, con lo scopo di migliorare gli aspetti segnalati, al fine di garantire una gestione più efficace del progetto.
 
-=== Correzzioni documento Piano di Qualifica
+=== Correzioni documento Piano di Qualifica
 
 Nel Piano di Qualifica è stata segnalata una comprensione non corretta del suo scopo, in particolare riguardo a quali elementi debbano essere riportati nel PdQ e quali, invece, nel WoW.
 
@@ -33,7 +33,7 @@ Per quanto riguarda il WoW, oltre alle decisioni relative alle metriche e al PdQ
 
 #decisioni(
 [
-- Inserire sezione come utlizzare le metriche del PdQ.
+- Inserire sezione come utilizzare le metriche del PdQ.
 - Inserimento del numero delle Issue nei verbali.
 - Aggiornamento del sistema di versionamento.
 ],[
@@ -41,7 +41,7 @@ Per quanto riguarda il WoW, oltre alle decisioni relative alle metriche e al PdQ
 - Il WoW dovrà essere modificato aggiornando la sezione Verbali, in modo da includere il numero dell'Issue corrispondente a ciascuna decisione presa. (Issue \#163)
 - Le singole modifiche ai documenti non verranno più versionate individualmente, ma solo in occasione delle fasi di verifica e validazione. Inoltre, anche i documenti verificati potranno essere resi disponibili pubblicamente. (Issue \#163)
 ]
-) 
+)
 
 
 == Correzione pagina web
@@ -56,7 +56,7 @@ Nella presentazione dei documenti è stato segnalato che occorre seguire una log
    ]
 )
 
-== Correzzione Glossario
+== Correzione Glossario
 
 Il glossario è un documento interno, reso esterno. Per cui è necessario riorganizzare l'uso dei glossari, distinguendo tra documenti interni, documenti esterni.
 
@@ -66,11 +66,11 @@ Il glossario è un documento interno, reso esterno. Per cui è necessario riorga
     - Glossario specifico per il Manuale Utente
    ],[
     - Il glossario essendo a uso interno sarà un documento interno, reso esterno. (Issue \#161)
-    - Il Manuale Utente disporrà di un glossario interno al documento stesso, così da facilitarne la consultazione senza necessità di riferimenti esterni. (Issue \#161)
+    - Il Manuale Utente disporrà di un glossario interno al documento stesso, così da facilitare la consultazione senza necessità di riferimenti esterni. (Issue \#161)
    ]
 )
 
 
 = Discussione Progettazione
 
-Si procede con lo sviluppo della progettazione. Ogni componente del gruppo presenta le sezioni sviluppate individualmente durante la settimana, consentendo una valutazione collettiva e l'individuazione di eventuali punti critici o miglioramenti necessari. Non sono state prese decisioni specifiche, se non l'avvio della codifica per alcune sezioni già completate e la prosecuzione dello sviluppo delle parti rimanenti. 
+Si procede con lo sviluppo della progettazione. Ogni componente del gruppo presenta le sezioni sviluppate individualmente durante la settimana, consentendo una valutazione collettiva e l'individuazione di eventuali punti critici o miglioramenti necessari. Non sono state prese decisioni specifiche, se non l'avvio della codifica per alcune sezioni già completate e la prosecuzione dello sviluppo delle parti rimanenti.
