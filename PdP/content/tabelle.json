@@ -140,8 +140,8 @@
         "Data": "2025-03-05"
       },
       {
-        "Sez.modificate": "Pianificazione - Aggiunta pianificazione Decimo Periodo",
-        "Autore": "Filippo Bellon",
+        "Sez.modificate": "Pianificazione - Aggiunta pianificazione Decimo Periodo, aggiunta preventivo periodo 9 e 10",
+        "Autore": "Filippo Bellon - Alberto Maggion",
         "Data": "2025-03-13"
       }
     ]
@@ -793,6 +793,134 @@
         }
       ]
     },
+    "9": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+          {
+              "Nominativo": "Michele",
+              "Res": 3,
+              "Amm": 0,
+              "Ana": 0,
+              "Ptt": 10,
+              "Pre": 0,
+              "Ver": 0,
+              "Totale": 13
+          },
+          {
+              "Nominativo": "Annalisa",
+              "Res": 0,
+              "Amm": 0,
+              "Ana": 0,
+              "Ptt": 10,
+              "Pre": 0,
+              "Ver": 0,
+              "Totale": 10
+          },
+          {
+              "Nominativo": "Filippo",
+              "Res": 0,
+              "Amm": 0,
+              "Ana": 0,
+              "Ptt": 10,
+              "Pre": 0,
+              "Ver": 0,
+              "Totale": 10
+          },
+          {
+              "Nominativo": "Luca",
+              "Res": 0,
+              "Amm": 0,
+              "Ana": 0,
+              "Ptt": 10,
+              "Pre": 0,
+              "Ver": 0,
+              "Totale": 10
+          },
+          {
+              "Nominativo": "Alberto",
+              "Res": 0,
+              "Amm": 2,
+              "Ana": 0,
+              "Ptt": 10,
+              "Pre": 0,
+              "Ver": 0,
+              "Totale": 12
+          }
+      ]
+    },
+    "10": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+        {
+            "Nominativo": "Michele",
+            "Res": 0,
+            "Amm": 3,
+            "Ana": 0,
+            "Ptt": 3,
+            "Pre": 3,
+            "Ver": 1,
+            "Totale": 10
+        },
+        {
+            "Nominativo": "Annalisa",
+            "Res": 0,
+            "Amm": 3,
+            "Ana": 0,
+            "Ptt": 3,
+            "Pre": 3,
+            "Ver": 1,
+            "Totale": 10
+        },
+        {
+            "Nominativo": "Filippo",
+            "Res": 3,
+            "Amm": 3,
+            "Ana": 0,
+            "Ptt": 3,
+            "Pre": 3,
+            "Ver": 1,
+            "Totale": 13
+        },
+        {
+            "Nominativo": "Luca",
+            "Res": 0,
+            "Amm": 3,
+            "Ana": 0,
+            "Ptt": 3,
+            "Pre": 3,
+            "Ver": 1,
+            "Totale": 10
+        },
+        {
+            "Nominativo": "Alberto",
+            "Res": 0,
+            "Amm": 3,
+            "Ana": 0,
+            "Ptt": 3,
+            "Pre": 3,
+            "Ver": 1,
+            "Totale": 10
+        }
+      ]
+    },
     "tot1": {
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
@@ -870,6 +998,26 @@
           "Costo totale": 8295,
           "Budget preventivato": 1085,
           "Budget rimanente": 3200
+        }
+      ]
+    },
+    "tot9": {
+      "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
+      "values": [
+        {
+          "Costo totale": 9675,
+          "Budget preventivato": 1380,
+          "Budget rimanente": 1820
+        }
+      ]
+    },
+    "tot10": {
+      "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
+      "values": [
+        {
+          "Costo totale": 10740,
+          "Budget preventivato": 1065,
+          "Budget rimanente": 755
         }
       ]
     }

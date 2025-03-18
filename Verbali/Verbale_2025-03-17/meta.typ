@@ -1,10 +1,10 @@
 // Elementi da modificare per verbali
 #let title = "Verbale Interno"
 #let tabelle = "content/tabelle.json"
-#let segretario = "Michele Nesler"
+#let segretario = "Annalisa Egidi"
 #let date = datetime(
-  day: 13,
-  month: 02,
+  day: 17,
+  month: 03,
   year: 2025
 )
 

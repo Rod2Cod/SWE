@@ -239,6 +239,58 @@
   #image("Graphs/p8_budget.png",height: 20%)
   #pagebreak()
   === Nono Periodo 25/02/2025 - 10/03/2025
+        *Preventivo Orario*
+  #table-json(preventivi.at("9"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/p9_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/p9_dist_ore.png",height: 18%)
+  ])
+  *Preventivo Costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+    #table-json(costi(preventivi.at("9")), 3)
+  ],
+  [
+    #table-json(preventivi.at("tot9"), 3)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente preventivato nel nono periodo.*
+  #image("Graphs/p9_budget.png",height: 20%)
+  #pagebreak()
+
+  === Decimo Periodo 11/02/2025 - 24/03/2025
+        *Preventivo Orario*
+  #table-json(preventivi.at("10"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/p10_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/p10_dist_ore.png",height: 18%)
+  ])
+  *Preventivo Costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+    #table-json(costi(preventivi.at("10")), 3)
+  ],
+  [
+    #table-json(preventivi.at("tot10"), 3)
+  ]
+)
   
-  === Decimo Periodo 11/02/2025 - 17/03/2025
-  
+  *Grafico a torta del budget speso e rimanente preventivato nel decimo periodo.*
+  #image("Graphs/p10_budget.png",height: 20%)
+  #pagebreak()

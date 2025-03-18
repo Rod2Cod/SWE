@@ -1,6 +1,6 @@
 {
-  "versione": {
-    "keys": [
+  "versione" : {
+    "keys" : [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,27 +10,30 @@
     ],
     "values": [
       {
-        "Versione": "0.1",
-        "Data": "2025-02-20",
-        "Autore": "Michele Nesler",
-        "Sez.modificate": "Prima Stesura",
-        "Verificatore": "Annalisa Egidi",
-        "Validatore": ""
+        "Versione" : "0.0",
+        "Data" : "2025-03-17",
+        "Sez.modificate" : "Prima stesura",
+        "Autore" : "Annalisa Egidi",
+        "Verificatore" : ""
       }
     ]
   },
-  "presenze": {
-    "keys": ["Nominativo", "Presenze", "Ruolo"],
+ "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
     "values": [
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": "Analista"
+        "Ruolo": "Responsabile"
       },
       {
         "Nominativo": "Filippo Bellon",
@@ -45,7 +48,7 @@
       {
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
-        "Ruolo": "Responsabile"
+        "Ruolo": "Amministratore"
       }
     ]
   }
