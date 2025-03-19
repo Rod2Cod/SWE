@@ -20,3 +20,10 @@ Le porte, punto focale di comunicazione con l'esterno, sono rappresentate dalle 
 Gli *Adapters* sono invece le classe che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
+
+== Design Patterns Utilizzati
+=== Singleton
+Il pattern Singleton viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per garantire che le classi che gestiscono la connessione al database siano uniche e che non vengano create più istanze di queste classi.
+
+=== Strategy
+Il pattern Strategy viene principalmente utilizzato per definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern è stato utilizzato per definire le diverse strategie e algoritmi che permettono la valutazione delle domande.
