@@ -23,7 +23,13 @@ Gli *Adapters* sono invece le classe che andranno ad implementare in maniera con
 
 == Design Patterns Utilizzati
 === Singleton
-Il pattern Singleton viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per garantire che le classi che gestiscono la connessione al database siano uniche e che non vengano create più istanze di queste classi.
+Il pattern Singleton viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per gestire la creazione di un'unica istanza di connessione al database.
 
 === Strategy
 Il pattern Strategy viene principalmente utilizzato per definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern è stato utilizzato per definire le diverse strategie e algoritmi che permettono la valutazione delle domande.
+
+=== Factory Method
+Il pattern Factory Method viene utilizzato per definire un'interfaccia per la creazione di un oggetto, ma lascia alle sottoclassi la decisione su quale classe istanziare. Questo pattern è stato utilizzato per la creazione e gestione di dipendenze tramite dependency injection.
+
+=== Decorator
+Il pattern Decorator viene utilizzato per aggiungere funzionalità a un oggetto dinamicamente. Questo pattern è stato utilizzato per esempio nella creazione e gestione delle route API del backend.
