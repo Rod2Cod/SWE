@@ -1,0 +1,3 @@
+- Stato avanzamento programmazione
+  - Python
+  - VueJS

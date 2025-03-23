@@ -20,3 +20,16 @@ Le porte, punto focale di comunicazione con l'esterno, sono rappresentate dalle 
 Gli *Adapters* sono invece le classe che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
+
+== Design Patterns Utilizzati
+=== Singleton
+Il pattern Singleton viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Questo pattern è stato utilizzato per gestire la creazione di un'unica istanza di connessione al database.
+
+=== Strategy
+Il pattern Strategy viene principalmente utilizzato per definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern è stato utilizzato per definire le diverse strategie e algoritmi che permettono la valutazione delle domande.
+
+=== Factory Method
+Il pattern Factory Method viene utilizzato per definire un'interfaccia per la creazione di un oggetto, ma lascia alle sottoclassi la decisione su quale classe istanziare. Questo pattern è stato utilizzato per la creazione e gestione di dipendenze tramite dependency injection.
+
+=== Decorator
+Il pattern Decorator viene utilizzato per aggiungere funzionalità a un oggetto dinamicamente. Questo pattern è stato utilizzato per esempio nella creazione e gestione delle route API del backend.
