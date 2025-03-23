@@ -143,6 +143,11 @@
         "Sez.modificate": "Pianificazione - Aggiunta pianificazione Decimo Periodo, aggiunta preventivo periodo 9 e 10",
         "Autore": "Filippo Bellon - Alberto Maggion",
         "Data": "2025-03-13"
+      },
+      {
+        "Sez.modificate": "aggiunto consuntivo Nono Periodo",
+        "Autore": "Michele Nesler",
+        "Data": "2025-03-14"
       }
     ]
   },
