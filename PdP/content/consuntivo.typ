@@ -41,7 +41,7 @@
     #table-json(consuntivi.at("tot1"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del primo periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c1_budget.png",height: 20%)
 
   *Retrospective*:
@@ -77,7 +77,7 @@ I costi sono stati in linea con le aspettative, solo leggermente inferiori, ques
     #table-json(consuntivi.at("tot2"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del secondo periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c2_budget.png",height: 20%)
   *Retrospective*:
   
@@ -107,7 +107,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
     #table-json(consuntivi.at("tot3"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del terzo periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c3_budget.png",height: 20%)
   *Retrospective*:
 
@@ -137,7 +137,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
     #table-json(consuntivi.at("tot4"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del quarto periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c4_budget.png",height: 20%)
   *Retrospective*:
 
@@ -168,7 +168,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
     #table-json(consuntivi.at("tot5"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del quinto periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c5_budget.png",height: 20%)
   *Retrospective*:
   In questo periodo ci siamo concentrati sullo sviluppo del PoC. La principale fonte di problemi è stato il set up del container docker, che oltre alle singole configurazioni per ogni singolo ambiente come frontend, backend e database, è stato necessario configurare e gestire al meglio l'infrastruttura di rete, per rendere possibile la comunicazione tra i container, attraverso una rete interna a docker, ed evitando di passare dalla macchina host. 
@@ -197,7 +197,7 @@ Nel periodo precedente ci eravamo resi conto dell'onerosità del processo di ver
     #table-json(consuntivi.at("tot6"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c6_budget.png",height: 20%)
   *Retrospective*:
 
@@ -230,7 +230,7 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
     #table-json(consuntivi.at("tot7"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c7_budget.png",height: 20%)
   *Retrospective*:
   Durante questo periodo abbiamo ultimato i documenti per l' RTB che abbiamo presentato. Abbiamo poi atteso il responso da parte dei professori, che una volta ricevuto ci ha portato a iniziare a correggere l'analisi dei requisiti. I principali problemi che abbiamo avuto infatti riguardano proprio questa correzione, visto che ci avevamo già ragionato a fondo e la ritenevamo corretta. Per ovviare a questi abbiamo prima fatto una riunione sincrona per ragionarci e poi abbiamo deciso di studiare nuovamente in maniera asincrona questi argomenti, per tornare a correggere l'analisi dei requisiti con maggiore consapevolezza. Inoltre abbiamo sbagliato a programmare l'inizio della progettazione, non considerando i tempi di correzione per l'RTB e le eventuali modifiche da apportare in caso di esito negativo.
@@ -262,9 +262,41 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
     #table-json(consuntivi.at("tot8"), 4)
   ]
 )
-  *Grafico a torta del budget speso e rimanente al termine del sesto periodo.*
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/c8_budget.png",height: 20%)
   *Retrospective*:
   Durante questo periodo abbiamo ultimato i preparativi per l'ultimo colloquio dell'RTB e apportato alcune correzioni al PdP e PdQ, come suggerito dalle valutazioni ricevute. A differenza di quanto preventivato per il periodo, non è stato svolto il lavoro di progettazione, in quanto abbiamo nuovamente sottostimato i tempi necessari alla conclusione dell'RTB.\
   Durante questo periodo ci siamo anche resi conto che non avevamo tante ore a disposizione a causa degli impegni dovuti alla sessione di esami. Questo ci ha portato a non poter lavorare come avremmo voluto sul progetto, ma abbiamo comunque cercato di sfruttare al meglio il tempo a disposizione.
+#pagebreak()
+
+
+
+=== Nono periodo 25/02/2025 - 10/03/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("9"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/c9_dist_ore_persona.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/c9_dist_ore.png",height: 18%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("9")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot9"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
+  #image("Graphs/c9_budget.png",height: 20%)
+  *Retrospective*:
+  
 #pagebreak()

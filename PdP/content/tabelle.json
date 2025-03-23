@@ -805,56 +805,56 @@
         "Totale"
       ],
       "values": [
-          {
-              "Nominativo": "Michele",
-              "Res": 3,
-              "Amm": 0,
-              "Ana": 0,
-              "Ptt": 10,
-              "Pre": 0,
-              "Ver": 0,
-              "Totale": 13
-          },
-          {
-              "Nominativo": "Annalisa",
-              "Res": 0,
-              "Amm": 0,
-              "Ana": 0,
-              "Ptt": 10,
-              "Pre": 0,
-              "Ver": 0,
-              "Totale": 10
-          },
-          {
-              "Nominativo": "Filippo",
-              "Res": 0,
-              "Amm": 0,
-              "Ana": 0,
-              "Ptt": 10,
-              "Pre": 0,
-              "Ver": 0,
-              "Totale": 10
-          },
-          {
-              "Nominativo": "Luca",
-              "Res": 0,
-              "Amm": 0,
-              "Ana": 0,
-              "Ptt": 10,
-              "Pre": 0,
-              "Ver": 0,
-              "Totale": 10
-          },
-          {
-              "Nominativo": "Alberto",
-              "Res": 0,
-              "Amm": 2,
-              "Ana": 0,
-              "Ptt": 10,
-              "Pre": 0,
-              "Ver": 0,
-              "Totale": 12
-          }
+        {
+          "Nominativo": "Michele",
+          "Res": 3,
+          "Amm": 0,
+          "Ana": 0,
+          "Ptt": 10,
+          "Pre": 0,
+          "Ver": 0,
+          "Totale": 13
+        },
+        {
+          "Nominativo": "Annalisa",
+          "Res": 0,
+          "Amm": 0,
+          "Ana": 0,
+          "Ptt": 10,
+          "Pre": 0,
+          "Ver": 0,
+          "Totale": 10
+        },
+        {
+          "Nominativo": "Filippo",
+          "Res": 0,
+          "Amm": 0,
+          "Ana": 0,
+          "Ptt": 10,
+          "Pre": 0,
+          "Ver": 0,
+          "Totale": 10
+        },
+        {
+          "Nominativo": "Luca",
+          "Res": 0,
+          "Amm": 0,
+          "Ana": 0,
+          "Ptt": 10,
+          "Pre": 0,
+          "Ver": 0,
+          "Totale": 10
+        },
+        {
+          "Nominativo": "Alberto",
+          "Res": 0,
+          "Amm": 2,
+          "Ana": 0,
+          "Ptt": 10,
+          "Pre": 0,
+          "Ver": 0,
+          "Totale": 12
+        }
       ]
     },
     "10": {
@@ -870,54 +870,54 @@
       ],
       "values": [
         {
-            "Nominativo": "Michele",
-            "Res": 0,
-            "Amm": 3,
-            "Ana": 0,
-            "Ptt": 3,
-            "Pre": 3,
-            "Ver": 1,
-            "Totale": 10
+          "Nominativo": "Michele",
+          "Res": 0,
+          "Amm": 3,
+          "Ana": 0,
+          "Ptt": 3,
+          "Pre": 3,
+          "Ver": 1,
+          "Totale": 10
         },
         {
-            "Nominativo": "Annalisa",
-            "Res": 0,
-            "Amm": 3,
-            "Ana": 0,
-            "Ptt": 3,
-            "Pre": 3,
-            "Ver": 1,
-            "Totale": 10
+          "Nominativo": "Annalisa",
+          "Res": 0,
+          "Amm": 3,
+          "Ana": 0,
+          "Ptt": 3,
+          "Pre": 3,
+          "Ver": 1,
+          "Totale": 10
         },
         {
-            "Nominativo": "Filippo",
-            "Res": 3,
-            "Amm": 3,
-            "Ana": 0,
-            "Ptt": 3,
-            "Pre": 3,
-            "Ver": 1,
-            "Totale": 13
+          "Nominativo": "Filippo",
+          "Res": 3,
+          "Amm": 3,
+          "Ana": 0,
+          "Ptt": 3,
+          "Pre": 3,
+          "Ver": 1,
+          "Totale": 13
         },
         {
-            "Nominativo": "Luca",
-            "Res": 0,
-            "Amm": 3,
-            "Ana": 0,
-            "Ptt": 3,
-            "Pre": 3,
-            "Ver": 1,
-            "Totale": 10
+          "Nominativo": "Luca",
+          "Res": 0,
+          "Amm": 3,
+          "Ana": 0,
+          "Ptt": 3,
+          "Pre": 3,
+          "Ver": 1,
+          "Totale": 10
         },
         {
-            "Nominativo": "Alberto",
-            "Res": 0,
-            "Amm": 3,
-            "Ana": 0,
-            "Ptt": 3,
-            "Pre": 3,
-            "Ver": 1,
-            "Totale": 10
+          "Nominativo": "Alberto",
+          "Res": 0,
+          "Amm": 3,
+          "Ana": 0,
+          "Ptt": 3,
+          "Pre": 3,
+          "Ver": 1,
+          "Totale": 10
         }
       ]
     },
@@ -1418,6 +1418,48 @@
         }
       ]
     },
+    "9": {
+      "keys": [
+        "Nominativo",
+        "Res",
+        "Amm",
+        "Ana",
+        "Ptt",
+        "Pre",
+        "Ver",
+        "Totale"
+      ],
+      "values": [
+        {
+          "Nominativo": "Michele Nesler",
+          "Res": 3,
+          "Ptt": 10,
+          "Totale": 13
+        },
+        {
+          "Nominativo": "Annalisa Egidi",
+          "Ptt": 9,
+          "Amm": 2,
+          "Totale": 11
+        },
+        {
+          "Nominativo": "Filippo Bellon",
+          "Ptt": 13,
+          "Totale": 13
+        },
+        {
+          "Nominativo": "Luca Calzetta",
+          "Ptt": 9,
+          "Totale": 9
+        },
+        {
+          "Nominativo": "Alberto Maggion",
+          "Amm": 2,
+          "Ptt": 9,
+          "Totale": 11
+        }
+      ]
+    },
     "tot1": {
       "keys": [
         "Costo totale",
@@ -1523,7 +1565,7 @@
       ],
       "values": [
         {
-          "Costo totale": 5865          ,
+          "Costo totale": 5865,
           "Costo periodo": 715,
           "Budget preventivato": 1335,
           "Budget rimanente": 5630
@@ -1543,6 +1585,22 @@
           "Costo periodo": 390,
           "Budget preventivato": 1085,
           "Budget rimanente": 5240
+        }
+      ]
+    },
+    "tot9": {
+      "keys": [
+        "Costo totale",
+        "Costo periodo",
+        "Budget preventivato",
+        "Budget rimanente"
+      ],
+      "values": [
+        {
+          "Costo totale": 7675,
+          "Costo periodo": 1420,
+          "Budget preventivato": 1380,
+          "Budget rimanente": 3820
         }
       ]
     }
