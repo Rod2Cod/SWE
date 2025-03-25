@@ -148,7 +148,12 @@
         "Sez.modificate": "aggiunto consuntivo Nono Periodo",
         "Autore": "Michele Nesler",
         "Data": "2025-03-14"
-      }
+      },
+      {
+        "Sez.modificate": "Pianificazione - Aggiunto Undicesimo Periodo",
+        "Autore": "Filippo Bellon",
+        "Data": "2025-03-24"
+      }      
     ]
   },
   "calendario_massima": {
