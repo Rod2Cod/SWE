@@ -1,12 +1,9 @@
 #let tabelle = "../tabelle.json"
 #import "../../../functions.typ": table-json
 
+Per il monitoraggio della qualità dei processi, il gruppo ha scelto di attenersi allo standard ISO/IEC/IEEE 12207:1995, che fornisce un riferimento strutturato per la gestione e il miglioramento dei processi software. \ 
 
-La qualità di processo si fonda sull'idea che, per ottenere un prodotto che soddisfi determinati *standard* di qualità, è necessario che i *processi* che lo vanno a creare, vengano sottoposti a *controlli* periodici con lo scopo ultimo di ottimizzarli. \
-Il concetto di qualità di processo viene dunque applicato all’intero spettro di *attività*, *pratiche* e *metodi* utilizzati lungo l’intero ciclo di vita del software. In sintesi, la qualità di processo si pone l'obiettivo di rendere la qualità una *parte integrante* del prodotto, garantendo che sia *costruita* nel processo stesso e non sia solo un obiettivo secondario. \
-Di seguito vengono presentate le *metriche* che il team si impegna ad utilizzare nel contesto della verifica della qualità di processo.
-
-La sigla *MPC* indica le *metriche di processo*.
+In questa sezione sono riportati i valori accettabili e ottimali delle metriche che il team ha deciso di utilizzare per valutare la qualità dei processi primari, di supporto e organizzativi. Tali metriche sono identificate dalla sigla *MPC* (Metriche di Processo).
 
 == Processi Primari
     #table-json(json(tabelle).at("Qualità").at("Processo").at("ProcessiPrimari"),3)
@@ -18,6 +15,7 @@ La sigla *MPC* indica le *metriche di processo*.
     #table-json(json(tabelle).at("Qualità").at("Processo").at("ProcessiOrganizzativi"),3)
 
 == Metriche Utilizzate
+Le metriche presentate in questa sezione sono definite e formalizzate nel Way of Working.
   
 === Processi Primari
     #table-json(json(tabelle).at("Qualità").at("Processo").at("ProcessiPrimariMetriche").at("Fornitura"),4)
