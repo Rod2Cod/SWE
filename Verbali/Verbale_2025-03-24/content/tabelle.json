@@ -10,8 +10,10 @@
     ],
     "values": [
       {
+        "Versione": "0.1",
         "Data" : "2025-03-24",
         "Autore" : "Alberto Maggion",
+        "Verificatore" : "Luca Calzetta",
         "Sez.modificate" : ""
       }
     ]
