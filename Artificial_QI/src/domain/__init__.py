@@ -1,3 +1,2 @@
 from .ElementoDomanda import ElementoDomanda,Domanda,Risposta
-from .SetElementiDomanda import SetElementiDomanda
 from .RisultatoTest import RisultatoTest,RisultatoSingolaDomanda

@@ -1,4 +1,3 @@
 from .ElementoDomandaPersistenceMapper import ElementoDomandaPersistenceMapper
-from .SetElementiDomandaPersistenceMapper import SetElementiDomandaPersistenceMapper
 from .RisultatoTestPersistenceMapper import RisultatoTestPersistenceMapper
 from .RisultatoSingolaDomandaPersistenceMapper import RisultatoSingolaDomandaPersistenceMapper

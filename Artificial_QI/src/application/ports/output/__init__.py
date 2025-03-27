@@ -1,5 +1,3 @@
 from .ElementiDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
-from .SetElementiDomandaPorts import SaveSetElementiDomandaPort, GetSetElementiDomandaPort, GetAllSetElementiDomandaPort, DeleteSetElementiDomandaPort, EditNomeSetElementiDomandaPort, UpdateElementiDomandaSetPort
 from .RisultatoTestPorts import SaveRisultatoTestPort, GetRisultatoTestPort, GetAllRisultatiTestPort, GetAllRisultatiSingoleDomandePort, GetRisultatoSingolaDomandaPort
-from ...AlgoritmoValutazioneRisposte import AlgoritmoValutazioneRisposte
 from .LLMPort import LLMPort
