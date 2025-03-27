@@ -168,3 +168,18 @@
         Diagramma di Gantt per le attività del decimo periodo
       ]
     )
+
+  === Undicesimo Periodo 25/03/2025 - 07/04/2025
+    *Obiettivi*
+      - Aggiornamento dei *documenti*
+        - Continuazione stesura documento *Specifica Tecnica*
+        - Stesura *Manuale Utente*
+      - Ultime definizioni *progettazione*
+      - Continuazione *codifica* dell'applicativo
+      - *Test finali*
+    #figure(
+      image("gantt/Online Gantt 25-03_to_07-04.png"),
+      caption: [
+        Diagramma di Gantt per le attività dell'undicesimo periodo
+      ]
+    )

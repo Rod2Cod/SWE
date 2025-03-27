@@ -1,6 +1,6 @@
 {
-  "versione": {
-    "keys": [
+  "versione" : {
+    "keys" : [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,30 +10,24 @@
     ],
     "values": [
       {
-        "Versione": "0.1",
-        "Data": "2025-02-20",
-        "Autore": "Michele Nesler",
-        "Sez.modificate": "Prima Stesura",
-        "Verificatore": "Annalisa Egidi",
-        "Validatore": ""
-      },
-      {
-        "Versione": "1.0",
-        "Data": "2025-03-26",
-        "Autore": "",
-        "Sez.modificate": "",
-        "Verificatore": "",
-        "Validatore": "Luca Calzetta"
+        "Versione" : "0.0.1",
+        "Data" : "",
+        "Sez.modificate": "Prima stesura",
+        "Autore" : ""
       }
     ]
   },
-  "presenze": {
-    "keys": ["Nominativo", "Presenze", "Ruolo"],
+  "presenze" : {
+    "keys" : [
+      "Nominativo",
+      "Presenze",
+      "Ruolo"
+    ],
     "values": [
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Annalisa Egidi",
@@ -43,12 +37,12 @@
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": "Programmatore"
+        "Ruolo": "Amministratore"
       },
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": "Programmatore"
+        "Ruolo": "Progettista"
       },
       {
         "Nominativo": "Alberto Maggion",

@@ -10,8 +10,17 @@
     ],
     "values": [
       {
+        "Versione": "0.1",
         "Data" : "2025-03-24",
-        "Autore" : ""
+        "Autore" : "Alberto Maggion",
+        "Verificatore" : "Luca Calzetta",
+        "Sez.modificate" : ""
+      },
+      {
+        "Versione": "1.0",
+        "Data" : "2025-03-26",
+        "Validatore" : "Annalisa Egidi",
+        "Sez.modificate" : ""
       }
     ]
   },
@@ -25,32 +34,27 @@
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Amministratore"
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Programmatore"
       },
       {
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Responsabile"
       },
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Programmatore"
       },
       {
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
-        "Ruolo": ""
-      },
-      {
-        "Nominativo": "Alessandro Rossi",
-        "Presenze": "P",
-        "Ruolo": ""
+        "Ruolo": "Programmatore"
       }
     ]
   }

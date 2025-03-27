@@ -1,1 +1,1 @@
-Il giorno XX/XX/XXXX dalle ore 16.00 alle XX:XX il gruppo Rod2Cod si riunisce.
+Il giorno 24/03/2025 dalle ore 10:00 alle 11:30 il gruppo Rod2Cod si riunisce.\ Questa riunione è stata svolta ad un orario differente dal solito in quanto nel primo pomeriggio il gruppo avrebbre dovuto partecipare all'evento *Stage-IT*.

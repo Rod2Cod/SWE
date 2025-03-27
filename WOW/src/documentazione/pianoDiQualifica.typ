@@ -8,6 +8,9 @@ Le metriche utilizzate all'interno del Piano di Qualifica, sono state selezionat
   - Ricerche in *internet*, in aggiunta a quanto consigliato all'interno dei documenti resi disponibili.
 
 ==== Qualità di Processo
+La qualità di processo si fonda sull'idea che, per ottenere un prodotto che soddisfi determinati *standard* di qualità, è necessario che i *processi* che lo vanno a creare, vengano sottoposti a *controlli* periodici con lo scopo ultimo di ottimizzarli. \
+Il concetto di qualità di processo viene dunque applicato all’intero spettro di *attività*, *pratiche* e *metodi* utilizzati lungo l’intero ciclo di vita del software. In sintesi, la qualità di processo si pone l'obiettivo di rendere la qualità una *parte integrante* del prodotto, garantendo che sia *costruita* nel processo stesso e non sia solo un obiettivo secondario.
+
 Per garantire il raggiungimento degli standard qualitativi prefissati, il team ha adottato un approccio strutturato alla qualità di processo, che include:
 - *Processi primari*, che comprendono la gestione delle risorse e lo sviluppo del software;
 - *Processi di supporto*, focalizzati sulla verifica e gestione della qualità;
@@ -27,7 +30,11 @@ Per garantire il raggiungimento degli standard qualitativi prefissati, il team h
 
 
 ==== Qualità di Prodotto
-La qualità del prodotto è un elemento centrale del Piano di Qualifica. Il software sviluppato deve rispettare specifici criteri per garantire affidabilità, efficienza e usabilità.
+
+La qualità del prodotto si concentra sulla *valutazione* del *software* sviluppato, ponendo particolare attenzione a caratteristiche come *usabilità*, *funzionalità*, *affidabilità*, *manutenibilità* e, più in generale, alle *prestazioni* complessive del sistema.\
+L’obiettivo principale è garantire che il software non solo *soddisfi* le funzionalità richieste dal cliente e operi correttamente, ma che lo faccia *rispettando* specifici standard di qualità.
+
+
 Gli aspetti valutati includono:
 - *Documentazione*: deve essere chiara, leggibile e priva di errori;
 - *Software*: deve soddisfare tutti i requisiti concordati con il proponente.
