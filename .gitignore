@@ -179,6 +179,9 @@ pyrightconfig.json
 db_data/
 pgadmin_data/
 
-# VSCODE
+# IDE
 .vscode/
 .idea/
+
+# modelli joblib
+*.joblib
