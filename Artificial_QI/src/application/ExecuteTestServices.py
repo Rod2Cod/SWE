@@ -17,6 +17,7 @@ class ExecuteTestService(ExecuteTestUseCase):
         elementiDomanda = self.__getElementiDomanda_port.getAllElementiDomanda()
 
         risultati = set()
+        scores = []
         for elemento in elementiDomanda:
             domanda = elemento.getDomanda().getText()
             risposta = elemento.getRisposta().getText()
@@ -24,8 +25,9 @@ class ExecuteTestService(ExecuteTestUseCase):
             metriche, score = self.__valutatore.evaluate(risposta, risposta_llm)
             risultato = RisultatoSingolaDomanda(uuid.uuid1().int>>64, domanda, risposta, risposta_llm, score, metriche)
             risultati.add(risultato)
+            scores.append(score)
         
-        score_totale = 0
+        score_totale = sum(scores) / len(scores)
 
         risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now().strftime("%d-%m-%Y"), "", risultati)
         self.__saveTestport.saveRisultatoTest(risultato_test)
