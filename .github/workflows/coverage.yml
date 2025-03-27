@@ -1,0 +1,56 @@
+name: Update coverage report
+on:
+    push:
+      branches:
+        - main
+        - develop
+    pull_request:
+      branches:
+        - main
+        - develop
+    workflow_dispatch:
+
+jobs:
+  InstallDependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Artificial_QI/requirements.txt
+
+    - name: Run tests and generate coverage report
+      run: |
+        cd Artificial_QI
+        coverage run -m pytest
+        coverage report
+        coverage xml
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v2
+ 
+  CheckCiclomaticComplexity:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install xenon radon
+    
+    - name: Check ciclomatic complexity
+      run: |
+       cd Artificial_QI
+       xenon --max-absolute B --max-average A .
