@@ -10,3 +10,9 @@ radon == 4.1.0
 xenon >= 0.9.3
 dependency-injector == 4.46.0
 psycopg2 == 2.9.10
+sacrebleu >= 2.5.0
+rouge-score >= 0.1.0
+bert-score >= 0.3.10
+sentence-transformers >= 4.0.0
+pandas == 2.2.3
+joblib >= 1.4.0
