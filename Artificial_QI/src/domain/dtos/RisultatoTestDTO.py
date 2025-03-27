@@ -1,0 +1,4 @@
+
+
+class RisultatoTestDTO:
+    pass
