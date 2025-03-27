@@ -36,6 +36,12 @@ class RisultatoSingolaDomanda:
             "score": self.__score,
             "metriche": self.__metriche
         }
+        
+    def serializeForList(self) -> dict:
+        return {
+            "domanda": self.__domanda,
+            "score": self.__score
+        }
 
 class RisultatoTest:
     def __init__(self, id: int, score: float, LLM: str, dataEsecuzione: datetime, nomeSet: str, risultatiDomande: set[RisultatoSingolaDomanda]):
@@ -71,7 +77,7 @@ class RisultatoTest:
             "LLM": self.__LLM,
             "dataEsecuzione": self.__dataEsecuzione,
             "nomeSet": self.__nomeSet,
-            "risultatiDomande": [risultatoDomanda.serialize() for risultatoDomanda in self.__risultatiDomande]
+            "risultatiDomande": [risultatoDomanda.serializeForList() for risultatoDomanda in self.__risultatiDomande]
         }
         
     def serializeForList(self) -> dict:
