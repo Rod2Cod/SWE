@@ -183,5 +183,5 @@ pgadmin_data/
 .vscode/
 .idea/
 
-# Modelli
+# modelli joblib
 *.joblib
