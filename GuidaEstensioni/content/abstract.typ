@@ -1,0 +1,1 @@
+Il documento ha lo scopo di presentare le possibili estensioni dell'applicativo che sono state pensate o progettate ma non ancora implementate. 

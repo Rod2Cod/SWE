@@ -1,0 +1,20 @@
+{
+  "versione": {
+    "keys": [
+      "Versione",
+      "Data",
+      "Descrizione",
+      "Autore",
+      "Verificatore",
+      "Validatore"
+    ],
+    "values": [
+      {
+        "Versione": "0.1",
+        "Data": "27-03-2025",
+        "Descrizione": "Prima stesura",
+        "Autore": "Michele Nesler"
+      }
+    ]
+  }
+}
