@@ -1,1 +1,1 @@
-Il documento fornisce le *informazioni* necessarie ad ogni membro del team riguardo i *metodo* di lavoro adottati e tutte le *procedure* da applicare.
+Il documento fornisce le *informazioni* necessarie ad ogni membro del team riguardo il *metodo* di lavoro adottato e tutte le *procedure* da applicare.

@@ -17,3 +17,5 @@
     https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf
     https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf
     https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T11.pdf
+  - Standard ISO/IEC/IEEE 12297:1995 \
+    https://en.wikipedia.org/wiki/ISO/IEC_12207
