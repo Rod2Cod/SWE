@@ -1,5 +1,5 @@
 import pytest
-from Artificial_QI.src.domain import ElementoDomanda,Domanda,Risposta
+from src.domain import ElementoDomanda,Domanda,Risposta
 
 # TEST DOMANDA
 
@@ -45,7 +45,7 @@ class TestElementoDomanda:
 
     @pytest.fixture(autouse=True)
     def elemento_domanda_fixture(self):
-        self.elemento_domanda = ElementoDomanda(domanda, risposta, id)
+        self.elemento_domanda = ElementoDomanda(domanda, risposta, id) 
 
     def test_get_id(self):  
         """Test per il metodo getId."""

@@ -13,8 +13,6 @@ from src.infrastructure.adapter.input.rest import (risultatoTest_blueprint,
 from src.infrastructure.adapter.input.rest import (executeTest_blueprint, 
                                                    ExecuteTestController)
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
-import sys
-sys.dont_write_bytecode = True
 
 
 def create_app() -> Flask:

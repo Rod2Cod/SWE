@@ -1,4 +1,4 @@
-from src.application.ports.output import GetRisultatoTestPort, GetAllRisultatiTestPort, GetAllRisultatiSingoleDomandePort, GetRisultatoSingolaDomandaPort
+from src.application.ports.output import GetRisultatoTestPort, GetAllRisultatiTestPort, GetRisultatoSingolaDomandaPort
 from src.application.ports.input import GetRisultatoTestUseCase, GetAllRisultatiTestUseCase, GetRisultatoSingolaDomandaUseCase
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 

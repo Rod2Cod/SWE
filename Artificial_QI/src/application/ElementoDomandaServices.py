@@ -4,7 +4,7 @@ from src.application.ports.output.ElementiDomandaPorts import SaveElementoDomand
 
 def validateDomandaRisposta(domanda: str, risposta: str):
         if not(isinstance(domanda, str) and isinstance(risposta, str)) \
-            and (len(domanda) == 0 or len(risposta) == 0):
+            or (len(domanda) == 0 or len(risposta) == 0):
             raise ValueError("Domanda e risposta devono essere stringhe non vuote.")
 
 def validateId(id: int):

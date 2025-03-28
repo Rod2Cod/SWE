@@ -1,5 +1,5 @@
 import pytest
-from Artificial_QI.src.domain import RisultatoTest, RisultatoSingolaDomanda
+from src.domain import RisultatoTest, RisultatoSingolaDomanda
 
 # TEST RISULTATO SINGOLA DOMANDA
 
@@ -53,30 +53,31 @@ dataEsecuzione = "2025-03-13"
 nomeSet = "Set1"
 risultatiDomande = {risultato_singola_domanda1, risultato_singola_domanda2, risultato_singola_domanda3, risultato_singola_domanda4}
 
-@pytest.fixture
-def risultato_test():
-    return RisultatoTest(id, scoreGenerale, LLM, dataEsecuzione, nomeSet, risultatiDomande)
+class TestRisultatoTest:
 
-def test_get_id(risultato_test):
-    """Test per il metodo getId."""
-    assert risultato_test.getId() == id
+    def setup_method(self):
+        self.risultato_test = RisultatoTest(id, scoreGenerale, LLM, dataEsecuzione, nomeSet, risultatiDomande)
 
-def test_get_score(risultato_test):
-    """Test per il metodo getScore."""
-    assert risultato_test.getScore() == score
+    def test_get_id(self):
+        """Test per il metodo getId."""
+        assert self.risultato_test.getId() == id
 
-def test_get_LLM(risultato_test):
-    """Test per il metodo getLLM."""
-    assert risultato_test.getLLM() == LLM
+    def test_get_score(self):
+        """Test per il metodo getScore."""
+        assert self.risultato_test.getScore() == score
 
-def test_get_data_esecuzione(risultato_test):
-    """Test per il metodo getDataEsecuzione."""
-    assert risultato_test.getDataEsecuzione() == dataEsecuzione
+    def test_get_LLM(self):
+        """Test per il metodo getLLM."""
+        assert self.risultato_test.getLLM() == LLM
 
-def test_get_nome_set(risultato_test):
-    """Test per il metodo getNomeSet."""
-    assert risultato_test.getNomeSet() == nomeSet
+    def test_get_data_esecuzione(self):
+        """Test per il metodo getDataEsecuzione."""
+        assert self.risultato_test.getDataEsecuzione() == dataEsecuzione
 
-def test_get_risultati_domande(risultato_test):
-    """Test per il metodo getRisultatiDomande."""
-    assert risultato_test.getRisultatiDomande() == risultatiDomande
+    def test_get_nome_set(self):
+        """Test per il metodo getNomeSet."""
+        assert self.risultato_test.getNomeSet() == nomeSet
+
+    def test_get_risultati_domande(self):
+        """Test per il metodo getRisultatiDomande."""
+        assert self.risultato_test.getRisultatiDomande() == risultatiDomande
