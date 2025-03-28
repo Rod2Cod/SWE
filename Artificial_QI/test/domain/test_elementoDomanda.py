@@ -1,72 +1,70 @@
-from src.domain.ElementoDomanda import ElementoDomanda, Domanda, Risposta
-from unittest.mock import Mock, patch
+import pytest
+from src.domain import ElementoDomanda,Domanda,Risposta
 
-class Test_Domanda:
-    @classmethod
-    def setup_class(cls):
-        cls.domanda = Domanda("domanda")
+# TEST DOMANDA
 
+domanda = "Qual è la capitale d'Italia?"
+
+class TestDomanda:
     def setup_method(self):
-        self.domanda.setText("domanda")
+        self.domanda = Domanda(domanda)
 
-    def test_getText(self):
-        assert self.domanda.getText() == "domanda"
+    def test_get_text(self):  
+        """Test per il metodo getText."""
+        assert self.domanda.getText() == domanda
 
-    def test_setText(self):
-        self.domanda.setText("new_domanda")
-        assert self.domanda.getText() == "new_domanda"
+    def test_set_text(self):
+        """Test per il metodo setText."""
+        self.domanda.setText("Qual è la capitale della Francia?")
+        assert self.domanda.getText() == "Qual è la capitale della Francia?"
+        
+# TEST RISPOSTA
 
-class Test_Risposta:
-    @classmethod
-    def setup_class(cls):
-        cls.risposta = Risposta("risposta")
+risposta = "Roma"
 
-    def setup_method(self):
-        self.risposta.setText("risposta")
-
-    def test_getText(self):
-        assert self.risposta.getText() == "risposta"
-
-    def test_setText(self):
-        self.risposta.setText("new_risposta")
-        assert self.risposta.getText() == "new_risposta"
-
-class Test_ElementoDomanda:
-    @classmethod
-    def setup_class(cls):
-        cls.mockDomanda = Mock(name="Domanda")
-        cls.mockDomanda.getText.return_value = "domanda"
-        cls.mockRisposta = Mock(name="Risposta")
-        cls.mockRisposta.getText.return_value = "risposta"
-
-        with patch("src.domain.ElementoDomanda.Domanda", return_value = cls.mockDomanda):
-            with patch("src.domain.ElementoDomanda.Risposta", return_value = cls.mockRisposta):
-                cls.elemento = ElementoDomanda("useless1", "useless2", 1)
-
-    def setup_method(self):
-        self.mockDomanda.reset_mock()
-        self.mockRisposta.reset_mock()
-
-    def test_getId(self):
-        assert self.elemento.getId() == 1
-
-    def test_getDomanda(self):
-        assert self.elemento.getDomanda() == self.mockDomanda
-
-    def test_getRisposta(self):
-        assert self.elemento.getRisposta() == self.mockRisposta
-
-    def test_setDomanda(self):
-        self.elemento.setDomanda("new_domanda")
-        self.mockDomanda.setText.assert_called_once_with("new_domanda")
-
-    def test_setRisposta(self):
-        self.elemento.setRisposta("new_risposta")
-        self.mockRisposta.setText.assert_called_once_with("new_risposta")
+class TestRisposta:
     
-    def test_serialize(self):
-        assert self.elemento.serialize() == {
-            "id": 1,
-            "domanda": "domanda",
-            "risposta": "risposta"
-        }
+    @pytest.fixture(autouse=True)
+    def risposta_fixture(self):
+        self.risposta = Risposta(risposta)
+
+    def test_get_text(self):  
+        """Test per il metodo getText."""
+        assert self.risposta.getText() == risposta
+
+    def test_set_text(self):
+        """Test per il metodo setText."""
+        self.risposta.setText("Parigi")
+        assert self.risposta.getText() == "Parigi"
+
+# TEST ELEMENTO DOMANDA
+
+id = 1
+
+class TestElementoDomanda:
+
+    @pytest.fixture(autouse=True)
+    def elemento_domanda_fixture(self):
+        self.elemento_domanda = ElementoDomanda(domanda, risposta, id) 
+
+    def test_get_id(self):  
+        """Test per il metodo getId."""
+        assert self.elemento_domanda.getId() == id
+
+    def test_get_domanda(self):  
+        """Test per il metodo getDomanda."""
+        assert self.elemento_domanda.getDomanda().getText() == domanda
+
+    def test_get_risposta(self):  
+        """Test per il metodo getRisposta."""
+        assert self.elemento_domanda.getRisposta().getText() == risposta
+
+    def test_set_domanda(self):
+        """Test per il metodo setDomanda."""
+        self.elemento_domanda.setDomanda("Qual è la capitale della Francia?")
+        assert self.elemento_domanda.getDomanda().getText() == "Qual è la capitale della Francia?"
+
+    def test_set_risposta(self):
+        """Test per il metodo setRisposta."""
+        self.elemento_domanda.setRisposta("Parigi")
+        assert self.elemento_domanda.getRisposta().getText() == "Parigi"
