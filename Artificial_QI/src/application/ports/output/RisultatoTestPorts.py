@@ -24,9 +24,3 @@ class GetRisultatoSingolaDomandaPort(ABC):
     @abstractmethod
     def getRisultatoSingolaDomandaTestById(id: int) -> RisultatoSingolaDomanda:
         pass
-    
-class GetAllRisultatiSingoleDomandePort(ABC):
-    
-    @abstractmethod
-    def getAllRisultatiSingoleDomandeByTestId(self, id: int) -> set[RisultatoSingolaDomanda]:
-        pass

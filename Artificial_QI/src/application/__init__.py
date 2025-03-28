@@ -1,3 +1,3 @@
 from .ElementoDomandaServices import AddElementoDomandaService, GetElementoDomandaService, GetAllElementiDomandaService, DeleteElementiDomandaService, UpdateElementoDomandaService
 from .ExecuteTestServices import ExecuteTestService
-from .RisultatoTestServices import GetRisultatoTestService, GetAllRisultatiTestService, GetAllRisultatiSingoleDomandeService, GetRisultatoSingolaDomandaService
+from .RisultatoTestServices import GetRisultatoTestService, GetAllRisultatiTestService, GetRisultatoSingolaDomandaService

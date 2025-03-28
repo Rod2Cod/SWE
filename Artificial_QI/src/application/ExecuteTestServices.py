@@ -23,12 +23,14 @@ class ExecuteTestService(ExecuteTestUseCase):
             risposta = elemento.getRisposta().getText()
             risposta_llm = self.__llm.makeQuestion(domanda)
             metriche, score = self.__valutatore.evaluate(risposta, risposta_llm)
+            score = float(score)
+            metriche = {k: float(v) for k, v in metriche.items()}
             risultato = RisultatoSingolaDomanda(uuid.uuid1().int>>64, domanda, risposta, risposta_llm, score, metriche)
             risultati.add(risultato)
             scores.append(score)
         
         score_totale = sum(scores) / len(scores)
 
-        risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now().strftime("%d-%m-%Y"), "", risultati)
+        risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now(), None, risultati)
         self.__saveTestport.saveRisultatoTest(risultato_test)
         return risultato_test

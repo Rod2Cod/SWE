@@ -10,9 +10,9 @@ class LLMAdapter(LLMPort):
     
     def makeQuestion(self, domanda: str) -> str:        
         data = {
-            "model": self.__nome,
-            "messages": domanda,
-            "max_tokens": 100,
+            "model": self.__nome, 
+            "messages": [{"role": "user", "content": domanda}], 
+            "max_tokens": 100
         }
  
         headers = {"Content-Type": "application/json"}
@@ -25,7 +25,7 @@ class LLMAdapter(LLMPort):
             risposta = re.sub(r'\s{2,}', ' ', risposta)
             return risposta
         else:
-            raise Exception()
+            raise Exception("Errore nella richiesta al server LLM")
     
     def getName(self) -> str:
         return self.__nome

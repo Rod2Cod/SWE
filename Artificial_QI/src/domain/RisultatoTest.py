@@ -75,7 +75,7 @@ class RisultatoTest:
             "id": self.__id,
             "score": self.__score,
             "LLM": self.__LLM,
-            "dataEsecuzione": self.__dataEsecuzione,
+            "dataEsecuzione": self.__dataEsecuzione.strftime("%Y-%m-%d"),
             "nomeSet": self.__nomeSet,
             "risultatiDomande": [risultatoDomanda.serializeForList() for risultatoDomanda in self.__risultatiDomande]
         }
@@ -85,6 +85,6 @@ class RisultatoTest:
             "id": self.__id,
             "score": self.__score,
             "LLM": self.__LLM,
-            "dataEsecuzione": self.__dataEsecuzione,
+            "dataEsecuzione": self.__dataEsecuzione.strftime("%Y-%m-%d"),
             "nomeSet": self.__nomeSet
         }
