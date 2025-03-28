@@ -1,5 +1,5 @@
 from src.application.ports.output import GetRisultatoTestPort, GetAllRisultatiTestPort, GetAllRisultatiSingoleDomandePort, GetRisultatoSingolaDomandaPort
-from src.application.ports.input import GetRisultatoTestUseCase, GetAllRisultatiTestUseCase, GetAllRisultatiSingoleDomandeUseCase, GetRisultatoSingolaDomandaUseCase
+from src.application.ports.input import GetRisultatoTestUseCase, GetAllRisultatiTestUseCase, GetRisultatoSingolaDomandaUseCase
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 
 def validateId(id: int):
@@ -20,14 +20,6 @@ class GetAllRisultatiTestService(GetAllRisultatiTestUseCase):
 
     def getAllRisultatiTest(self) -> set[RisultatoTest]:
         return self.__port.getAllRisultatiTest()
-    
-class GetAllRisultatiSingoleDomandeService(GetAllRisultatiSingoleDomandeUseCase):
-    def __init__(self, port: GetAllRisultatiSingoleDomandePort):
-        self.__port = port
-
-    def getAllRisultatiSingoleDomandeByTestId(self, id: int) -> set[RisultatoSingolaDomanda]:
-        validateId(id)
-        return self.__port.getAllRisultatiSingoleDomandeByTestId(id)
     
 class GetRisultatoSingolaDomandaService(GetRisultatoSingolaDomandaUseCase):
     def __init__(self, port: GetRisultatoSingolaDomandaPort):

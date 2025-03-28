@@ -9,7 +9,6 @@ from src.infrastructure.adapter.input.rest import (elementoDomanda_blueprint,
 from src.infrastructure.adapter.input.rest import (risultatoTest_blueprint, 
                                                     GetRisultatoTestController, 
                                                     GetAllRisultatiTestController, 
-                                                    GetAllRisultatiSingoleDomandeController, 
                                                     GetRisultatoSingolaDomandaController)
 from src.infrastructure.adapter.input.rest import (executeTest_blueprint, 
                                                    ExecuteTestController)
@@ -55,7 +54,6 @@ def create_app() -> Flask:
     getRisultatoTestController = GetRisultatoTestController()
     getAllRisultatiTestController = GetAllRisultatiTestController()
     getRisultatoSingolaDomandaController = GetRisultatoSingolaDomandaController()
-    getAllRisultatiSingoleDomandeController = GetAllRisultatiSingoleDomandeController()
     
     """ Configuro i controller di esecuzione test (necessario per registrare le route) """
     executeTestController = ExecuteTestController()

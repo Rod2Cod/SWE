@@ -40,23 +40,6 @@ class GetAllRisultatiTestController:
         except Exception:
             return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
 
-class GetAllRisultatiSingoleDomandeController:
-    def __init__(self, useCase: GetAllRisultatiSingoleDomandeUseCase = Provide[RootContainer.risultatoTestContainer.GetAllRisultatiSingoleDomandeService]):
-        self.__useCase = useCase
-        risultatoTest_blueprint.add_url_rule('/risultati/<int:id>/domande', view_func=self.getAllRisultatiSingoleDomandeByTestId, methods=['GET'])
-
-    @inject
-    def getAllRisultatiSingoleDomandeByTestId(self, id: int):
-        try:
-            risultati = self.__useCase.getAllRisultatiSingoleDomandeByTestId(id)
-            return (jsonify([risultato.serialize() for risultato in risultati]), 200) \
-                if risultati else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
-        except ValueError as e:
-            return jsonify(str(e)), 400
-        except Exception as e:
-            print(e)
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
-
 class GetRisultatoSingolaDomandaController:
     def __init__(self, useCase: GetRisultatoSingolaDomandaUseCase = Provide[RootContainer.risultatoTestContainer.GetRisultatoSingolaDomandaService]):
         self.__useCase = useCase
