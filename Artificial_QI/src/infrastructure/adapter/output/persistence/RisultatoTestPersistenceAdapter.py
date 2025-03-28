@@ -16,9 +16,11 @@ class RisultatoTestPersistenceAdapter(
         try:
             self.__repositoryTest.saveRisultatoTest(self.__mapperTest.toRisultatoTestEntity(risultatoTest))
             return True
-        except SQLAlchemyError:
+        except SQLAlchemyError as e:
+            print(e)
             return False
-        except Exception:
+        except Exception as e:
+            print(e)
             return False
 
     def getRisultatoTestById(self, id: int) -> RisultatoTest:

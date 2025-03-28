@@ -65,8 +65,6 @@ def create_app() -> Flask:
     app.register_blueprint(risultatoTest_blueprint)
     app.register_blueprint(executeTest_blueprint)
     
-    #print(app.url_map)
-    
     return app
 
 if __name__ == '__main__':
