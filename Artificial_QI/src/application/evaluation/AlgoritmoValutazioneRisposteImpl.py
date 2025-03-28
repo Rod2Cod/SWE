@@ -1,9 +1,10 @@
 from .AlgoritmoValutazioneRisposte import AlgoritmoValutazioneRisposte
+from .Scorer import Scorer
 import pandas as pd
 import joblib
 
 class AlgoritmoValutazioneRisposteImpl(AlgoritmoValutazioneRisposte):
-    def __init__(self, scorer, model: str = "assets/model.joblib"):
+    def __init__(self, scorer: Scorer, model: str = "assets/model.joblib"):
         self.__model = joblib.load(model)
         self.__scorer = scorer
     

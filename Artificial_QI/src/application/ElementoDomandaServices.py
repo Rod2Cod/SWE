@@ -3,8 +3,9 @@ from src.application.ports.input.ElementoDomandaUseCase import AddElementoDomand
 from src.application.ports.output.ElementiDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
 
 def validateDomandaRisposta(domanda: str, risposta: str):
-        if not(isinstance(domanda, str) and isinstance(risposta, str)) \
-            or (len(domanda) == 0 or len(risposta) == 0):
+        if not(isinstance(domanda, str) and isinstance(risposta, str)):
+            raise ValueError("Domanda e risposta devono essere stringhe non vuote.")
+        elif (len(domanda) == 0 or len(risposta) == 0):
             raise ValueError("Domanda e risposta devono essere stringhe non vuote.")
 
 def validateId(id: int):
