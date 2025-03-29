@@ -100,7 +100,7 @@ il sistema deve essere valutato in base a : Testare la copertura dei requisiti d
 === Test di qualificazione del sistema
 + durante una riunione viene presentato l'MVP al proponente che valuta il prodotto e decide se approvarlo
 === Installazione del software
-+ viene documentata la procedura di installazione del Software
++ viene documentata la procedura di installazione del Software, tenendo conto dei requisiti di sistema e delle possibili configurazioni del prodotto.
 
 
 /*== Processo operativo*/
@@ -120,17 +120,21 @@ il sistema deve essere valutato in base a : Testare la copertura dei requisiti d
 #include "documentazione/analisiDeiRequisiti.typ"
 
 
-== gestione della configurazione
+== Gestione della configurazione
 + nel branch master devono comparire solo documenti validati e codice verificato
 + Prima di ogni release del codice sul branch master viene eseguito il test statico del codice come è definito nel processo di verifica attraverso una pull-request che ne causa la notifica agli altri membri del team.
 #include "documentazione/github.typ"
 
-== assicurazione della qualità
+== Assicurazione della qualità
 + il piano di qualifica deve includere : Standard di qualità, metodologie, procedure e strumenti per lo svolgimento delle attività di assicurazione della qualità (o i loro riferimenti nella documentazione ufficiale dell'organizzazione); b) le procedure di revisione e coordinamento dei contratti; c) Procedure per l'identificazione, la raccolta, l'archiviazione, il mantenimento e lo smaltimento dei registri di qualità;Risorse, calendario e responsabilità per lo svolgimento delle attività di assicurazione della qualità; e) Attività e compiti selezionati dai processi di supporto, come la verifica (6.4), la convalida (6.5), la revisione congiunta (6.6), l'audit (6.7) e la risoluzione dei problemi (6.8). /* da verificare che li contenga*/
 #include "documentazione/pianoDiQualifica.typ"
-=== assicurazione prodotti
+// === Assicurazione prodotti
+// Le tempistiche verranno rispettate, documentate e coerenti con il contratto come anche il SW.
+// === Assicurazione Processi 
+// garantire che i processi siano conformi al contratto
+=== Assicurazione prodotti
 + le tempistiche verranno rispettate, documentate e coerenti con il regolamento del progetto didattico come anche il SW. 
-=== assicurazione Processi 
+=== Assicurazione Processi 
 + i processi necessari al completamento del progetto vengono identificati, definiti e documentati nel documento Way of Working prima di essere istanziati
 + viene adottato il framework standard iso/iec 12207
 + durante l'attività di retrospective vengono identificate le inefficienze e i problemi nei processi e poi proposti miglioramenti.
@@ -138,16 +142,34 @@ il sistema deve essere valutato in base a : Testare la copertura dei requisiti d
 /* aggiungere automazioni varie*/
 
 
-== verifica
+// == Verifica
+// verifica di tutti i documenti, e SW 
+// == Verifica Processi 
+// retrospective 
+// == Verifica documentazione
+// deve includere  
+// a) The documentation is adequate,complete, and consistent.
+//  b) Documentation preparation is timely.
+//  c) Configuration managementof documents follows specified procedures
+// == Validazione 
+// MVP cardin tullio
+// == Revisione congiunta
+// planned con odg 
+// == Audit
+// valutazione indipendente (prof) di prodotti e processi
+== Risoluzione dei problemi
+Deve essere stabilito un processo a circuito chiuso per la risoluzione dei problemi nei prodotti e nelle attività software, garantendo la segnalazione, l'analisi delle cause, la categorizzazione, il monitoraggio delle tendenze e la verifica delle soluzioni, con la documentazione di ogni problema rilevato.
+// retrospective + cruscotto + risoluzione sucessiva
+== Verifica
 + tutti i documenti vengono verificati dopo ogni modifica da un componente del gruppo diverso dall'autore
 + tutto il software prodotto deve essere verificato ad ogni modifica
-=== retrospective
+=== Retrospective
 + durante l'azione di retrospective vengono identificati, documentati, analizzati i problemi incontrati ed elaborate modalità di risoluzione. Ciò avviene per verificare l'efficacia dei processi adottati e al contempo per renderli flessibili abbastanza da poterli adattare ai cambiamenti possibili. 
-=== verifica documentazione
+=== Verifica documentazione
 + La verifica della documentazione consiste nella lettura del testo prodotto e nell’eventuale *correzione di errori* ortografici rilevati nonché nella modifica della struttura del documento al fine di rendere l’argomento trattato di *facile consultazione*.\
   Nel caso in cui certi punti dovesse risultare poco chiari, si procederà ad una o più modifiche successive al fine di esprimere tali concetti in modo migliore. \
   Nella tabella delle versioni, la persona assegnata a questo compito viene indicata all'interno della colonna *Verificatore*.
-=== verifica codice
+=== Verifica codice
 + Test statici : 
   - prima di ogni release tutto il codice che ha subito modifiche viene verificata da due componenti del gruppo leggendo il codice e comprendendone il funzionamento, ricercando eventuali errori. 
   - code coverage : 
@@ -157,7 +179,7 @@ il sistema deve essere valutato in base a : Testare la copertura dei requisiti d
     - il codice viene testato tramite test di unità nella misura definita nel documento piano di Qualifica. Ogni test di unità deve stressare il componente testando il suo fuinzionamento in condizioni normali, limite e in cui ci si aspetta che non funzioni. 
     - viene testata l'integrazione dei vari componenti come previsto dall'attività Integrazione Software del processo di sviluppo.
 
-== validazione 
+== Validazione 
 === Validazione documentazione 
 + consiste nella *lettura* del documento prodotto e nella *verifica della
   conformità* con i punti che questo dovrebbe trattare.\
@@ -165,15 +187,43 @@ il sistema deve essere valutato in base a : Testare la copertura dei requisiti d
   Nella tabella delle versioni, la persona assegnata a questo compito viene indicata all'interno della colonna *Validatore*.
 === Validazione Prodotto
 + durante una riunione viene presentato l'MVP al proponente che valuta il prodotto e decide se approvarlo
-=== revisione congiunta
+=== Revisione congiunta
 + le revisioni congiunte con il proponente sono programmate periodicamente ogni mese, l'odg è definito in precedenza e approvato dal proponente
-=== audit
+=== Audit
 + come definito nel "Regolamento del progetto didattico" il committente valuta il prodotto e i processi durante gli incontri per la presentazione dell'RTB e PB.
-=== risoluzione dei problemi
+=== Risoluzione dei problemi
 + I problemi rilevati e le relative azioni di mitigazione vengono documentati nella sezione retrospective del documento Piano di Progetto, essi vengono anche tracciati ai rischi identificati nell'analisi dei rischi. 
 
 
 = Processi organizzativi
+== gestione
+Il processo di gestione comprende attività generiche applicabili a qualsiasi processo, tra cui gestione del prodotto, del progetto e dei compiti. Si articola in cinque fasi: inizializzazione e definizione dell'ambito, pianificazione, esecuzione e controllo, revisione e valutazione, e chiusura.
+
+Inizializzazione: definisce i requisiti e verifica la fattibilità del processo.
+Pianificazione: prevede la preparazione dei piani operativi, incluse tempistiche, risorse, assegnazione di compiti, analisi dei rischi e misure di controllo qualità.
+Esecuzione e controllo: implementa i piani, monitora l'andamento, gestisce problemi e aggiornamenti, e garantisce la documentazione delle modifiche.
+Revisione e valutazione: verifica la conformità dei prodotti e dei processi agli obiettivi e ai requisiti stabiliti.
+Chiusura: determina il completamento del processo e archivia i risultati e le registrazioni come previsto dal contratto.
+== infrastrutturale 
+Il processo di infrastruttura ha lo scopo di stabilire e mantenere l'infrastruttura necessaria per altri processi, comprendendo hardware, software, strumenti, tecniche, standard e strutture.
+
+Si articola in tre fasi:
+
+Implementazione del processo: definizione e documentazione dell'infrastruttura in base ai requisiti e agli standard applicabili.
+Stabilizzazione dell'infrastruttura: pianificazione, configurazione e installazione dell'infrastruttura considerando funzionalità, sicurezza, prestazioni, costi e vincoli temporali.
+Manutenzione dell'infrastruttura: monitoraggio, aggiornamento e gestione della configurazione per garantirne l'adeguatezza nel tempo.
+== miglioramento 
+Il processo di miglioramento ha lo scopo di stabilire, valutare, misurare, controllare e migliorare i processi del ciclo di vita del software.
+
+Si articola in tre fasi:
+
+Stabilizzazione del processo: definizione, documentazione e controllo dei processi aziendali relativi al ciclo di vita del software.
+Valutazione del processo: sviluppo e applicazione di procedure di valutazione, con revisioni periodiche per garantirne l'efficacia.
+Miglioramento del processo: aggiornamento dei processi in base ai risultati delle valutazioni, analisi dei dati storici e tecnici per individuare punti di forza e debolezza, e raccolta di dati sui costi della qualità per ottimizzare la gestione.
+== formazione
+autoformazione
+
+
 #include "documentazione/riunioni.typ"
 #include "documentazione/tracciamentoOre.typ"
 == infrastrutturale 
