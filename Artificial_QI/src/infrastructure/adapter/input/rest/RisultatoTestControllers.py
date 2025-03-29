@@ -4,7 +4,6 @@ from src.infrastructure.adapter.input.rest.containers.Containers import RootCont
 
 from src.application.ports.input import (GetRisultatoTestUseCase, 
                                          GetAllRisultatiTestUseCase, 
-                                         GetAllRisultatiSingoleDomandeUseCase, 
                                          GetRisultatoSingolaDomandaUseCase)
 
 

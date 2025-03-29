@@ -1,5 +1,5 @@
 from dependency_injector import containers, providers
-from src.application import GetRisultatoTestService, GetAllRisultatiTestService, GetAllRisultatiSingoleDomandeService, GetRisultatoSingolaDomandaService
+from src.application import GetRisultatoTestService, GetAllRisultatiTestService, GetRisultatoSingolaDomandaService
 from src.infrastructure.adapter.output.persistence import RisultatoTestPersistenceAdapter
 from src.infrastructure.adapter.output.persistence.repository import RisultatoTestPostgreSQLRepository, RisultatoSingolaDomandaPostgreSQLRepository
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoTestPersistenceMapper, RisultatoSingolaDomandaPersistenceMapper
@@ -31,5 +31,4 @@ class RisultatoTestContainer(containers.DeclarativeContainer):
     # Services
     GetRisultatoTestService = providers.Factory(GetRisultatoTestService, port=RisultatoTestAdapter)
     GetAllRisultatiTestService = providers.Factory(GetAllRisultatiTestService, port=RisultatoTestAdapter)
-    GetAllRisultatiSingoleDomandeService = providers.Factory(GetAllRisultatiSingoleDomandeService, port=RisultatoTestAdapter)
     GetRisultatoSingolaDomandaService = providers.Factory(GetRisultatoSingolaDomandaService, port=RisultatoTestAdapter)
