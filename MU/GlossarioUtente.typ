@@ -40,7 +40,7 @@
 
   "WSL|Windows Subsystem for Linux":"Funzionalità di Windows che consente di eseguire un ambiente Linux direttamente su Windows senza necessità di una macchina virtuale.",
 
-  "Elemento domanda":"Elemento composto dalla coppia domanda testuale e risposta associata testuale.",
+  "Elemento domanda":"Elemento composto dalla coppia domanda testuale e risposta attesa associata testuale.",
 )
 #let glossario-therms = ()
 
