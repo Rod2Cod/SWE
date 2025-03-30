@@ -16,7 +16,7 @@ class ExecuteTestController:
         try:
             risultato = self.__useCase.executeTest()
             return (jsonify(risultato.serialize()), 200) \
-                if risultato else (jsonify("Si è verificato un errore nel server, riprova pià tardi"), 500)
+                if risultato else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception as e:
             print(e)
-            return jsonify("Si è verificato un errore nel server, riprova pià tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
