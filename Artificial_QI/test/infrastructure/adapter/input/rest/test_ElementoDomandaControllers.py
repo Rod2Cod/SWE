@@ -27,7 +27,7 @@ class TestAddElementoDomandaController:
             response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
 
         assert response.status_code == 201
-        assert "Elemento aggiunto con successo" in response.json.values()
+        assert response.json["message"] == "Elemento aggiunto con successo"
         
     def test_add_elemento_domanda_invalid(self, client, app):
         """Test per il controller di aggiunta di un elemento domanda con dati non validi."""
@@ -39,7 +39,7 @@ class TestAddElementoDomandaController:
             response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"risposta": "Roma"})
             
         assert response.status_code == 400
-        assert "Domanda e risposta sono campi obbligatori." in response.json.values()
+        assert response.json["message"] == "Domanda e risposta sono campi obbligatori."
         
     def test_add_elemento_domanda_server_error(self, client, app):
         """Test per il controller di aggiunta di un elemento domanda in presenza di un errore nel server."""
@@ -52,7 +52,7 @@ class TestAddElementoDomandaController:
             response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
 
         assert response.status_code == 500
-        assert "Si è verificato un errore nel server, riprova più tardi" in response.json.values()
+        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
         
         
 class TestGetElementoDomandaController:
@@ -67,8 +67,9 @@ class TestGetElementoDomandaController:
             response = client.get(url_for('elementoDomanda_blueprint.getElementoDomandaById', id=1))
             
         assert response.status_code == 200
-        assert "Qual è la capitale d'Italia?" in response.json.values()
-        assert "Roma" in response.json.values()
+        assert response.json["id"] == 1
+        assert response.json["domanda"] == "Qual è la capitale d'Italia?"
+        assert response.json["risposta"] == "Roma"
         
     def test_get_elemento_domanda_by_id_invalid(self, client, app):
         """Test per il controller di recupero di un elemento domanda in presenza di un errore nel server."""
@@ -93,7 +94,7 @@ class TestGetElementoDomandaController:
             response = client.get(url_for('elementoDomanda_blueprint.getElementoDomandaById', id=1))
             
         assert response.status_code == 500
-        assert "Si è verificato un errore nel server, riprova più tardi" in response.json.values()
+        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
         
 class TestGetAllElementiDomandaController:
     def test_get_all_elementi_domanda(self, client, app):
@@ -108,11 +109,12 @@ class TestGetAllElementiDomandaController:
             response = client.get(url_for('elementoDomanda_blueprint.getAllElementiDomanda'))
             
         assert response.status_code == 200
-        assert len(response.json) == 1
-        assert "Qual è la capitale d'Italia?" in response.json[0].values()
-        assert "Roma" in response.json[0].values()
-        assert "Qual è la capitale della Francia?" in response.json[1].values()
-        assert "Parigi" in response.json[1].values()
+        assert response.json[0]["id"] == 1
+        assert response.json[0]["domanda"] == "Qual è la capitale d'Italia?"
+        assert response.json[0]["risposta"] == "Roma"
+        assert response.json[1]["id"] == 2
+        assert response.json[1]["domanda"] == "Qual è la capitale della Francia?"
+        assert response.json[1]["risposta"] == "Parigi"
         assert len(response.json) == 2
         
     def test_get_all_elementi_domanda_empty(self, client, app):
@@ -140,7 +142,7 @@ class TestDeleteElementiDomandaController:
             response = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'), json={"ids": [1, 2, 3]})
             
         assert response.status_code == 200
-        assert "Elemento eliminato con successo" in response.json.values()
+        assert response.json["message"] == "Elemento eliminato con successo"
         
     def test_delete_elementi_domanda_by_id_invalid(self, client, app):
         """Test per il controller di eliminazione di un elemento domanda con ID non valido."""
@@ -153,9 +155,9 @@ class TestDeleteElementiDomandaController:
             response2 = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'))
             
         assert response.status_code == 400
-        assert "La lista di id è un campo obbligatorio." in response.json.values()
+        assert response.json["message"] == "La lista di id è un campo obbligatorio."
         assert response2.status_code == 400
-        assert "La lista di id è un campo obbligatorio." in response2.json.values()
+        assert response2.json["message"] == "La lista di id è un campo obbligatorio."
         
     def test_delete_elementi_domanda_by_id_not_found(self, client, app):
         """Test per il controller di eliminazione di un elemento domanda non trovato."""
@@ -168,4 +170,43 @@ class TestDeleteElementiDomandaController:
             response = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'), json={"ids": [999]})
             
         assert response.status_code == 500
-        assert "Si è verificato un errore nel server, riprova più tardi" in response.json.values()
+        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
+        
+class TestUpdateElementoDomandaController:
+    def test_update_elemento_domanda_by_id(self, client, app):
+        """Test per il controller di aggiornamento di un elemento domanda."""
+        mockUseCase = mock.Mock(spec=UpdateElementoDomandaUseCase)
+        mockUseCase.updateElementoDomandaById.return_value = True
+        
+        app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
+        with app.test_request_context():
+            # Simulo una richiesta PUT per aggiornare un elemento domanda
+            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id=1), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+            
+        assert response.status_code == 200
+        assert response.json["message"] == "Elemento aggiornato con successo"
+        
+    def test_update_elemento_domanda_by_id_invalid(self, client, app):
+        """Test per il controller di aggiornamento di un elemento domanda con ID non valido."""
+        mockUseCase = mock.Mock(spec=UpdateElementoDomandaUseCase)
+        
+        app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
+        with app.test_request_context():
+            # Simulo una richiesta PUT con ID non valido
+            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id="invalid"), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+            
+        assert response.status_code == 400
+        assert response.json["message"] == "Id deve essere un intero."
+        
+    def test_update_elemento_domanda_by_id_not_found(self, client, app):
+        """Test per il controller di aggiornamento di un elemento domanda non trovato."""
+        mockUseCase = mock.Mock(spec=UpdateElementoDomandaUseCase)
+        mockUseCase.updateElementoDomandaById.return_value = False
+        
+        app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
+        with app.test_request_context():
+            # Simulo una richiesta PUT per aggiornare un elemento domanda non trovato
+            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id=999), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+            
+        assert response.status_code == 500
+        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
