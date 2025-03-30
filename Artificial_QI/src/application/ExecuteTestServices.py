@@ -32,5 +32,4 @@ class ExecuteTestService(ExecuteTestUseCase):
         score_totale = sum(scores) / len(scores)
 
         risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now(), None, risultati)
-        self.__saveTestport.saveRisultatoTest(risultato_test)
-        return risultato_test
+        return self.__saveTestport.saveRisultatoTest(risultato_test)
