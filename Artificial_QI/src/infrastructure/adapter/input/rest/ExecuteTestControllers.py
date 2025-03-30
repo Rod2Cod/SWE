@@ -9,7 +9,7 @@ executeTest_blueprint = Blueprint('executeTest_blueprint', __name__)
 class ExecuteTestController:
     def __init__(self, useCase: ExecuteTestUseCase = Provide[RootContainer.executeTestContainer.ExecuteTestService]):
         self.__useCase = useCase
-        executeTest_blueprint.add_url_rule('/executeTest', view_func=self.executeTest, methods=['GET'])
+        executeTest_blueprint.add_url_rule('/executeTest', view_func=self.executeTest, methods=['POST'])
 
     @inject
     def executeTest(self):
