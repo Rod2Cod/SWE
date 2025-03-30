@@ -77,6 +77,8 @@ class DeleteElementiDomandaController:
             deleted = self.__useCase.deleteElementiDomandaById(ids)
             return (jsonify({"message": "Elementi eliminati con successo"}), 200) \
                 if deleted else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
+        except ValueError as e:
+            return jsonify({"message": str(e)}), 400
         except (KeyError, BadRequest):
             return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
         except Exception:
