@@ -98,6 +98,176 @@
         }
       ]
     }
+  },
+  "api": {
+    "elemento_domanda": {
+      "add": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "201",
+            "Body": "JSON",
+            "Descrizione": "Date domanda e risposta, l'elemento viene creato con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Non vengono caricati tutti i parametri richiesti, oppure alcuni presentano un formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "get": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "JSON",
+            "Descrizione": "L'elemento viene trovato e restituito con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "L'elemento non esiste oppure ne viene fornito un id in formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "get_all": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "JSON",
+            "Descrizione": "Tutti gli elementi vengono restituiti con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "delete": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Gli elementi vengono eliminati con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Uno o più parametri non vengono forniti oppure presentano un formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "update": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "L'elemento viene aggiornato con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Uno o più parametri non vengono forniti oppure presentano un formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      }
+    },
+    "execute_test": {
+      "keys": [
+        "Esito",
+        "Codice HTTP",
+        "Body",
+        "Descrizione"
+      ],
+      "values": [
+        {
+          "Esito": "",
+          "Codice HTTP": "",
+          "Body": "",
+          "Descrizione": ""
+        }
+      ]
+    },
+    "risultati_test": {
+      "keys": [
+        "Esito",
+        "Codice HTTP",
+        "Body",
+        "Descrizione"
+      ],
+      "values": [
+        {
+          "Esito": "",
+          "Codice HTTP": "",
+          "Body": "",
+          "Descrizione": ""
+        }
+      ]
+    }
   }
 }
   
