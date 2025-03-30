@@ -35,7 +35,7 @@ class GetAllRisultatiTestController:
         try:
             risultati = self.__useCase.getAllRisultatiTest()
             return (jsonify([risultato.serializeForList() for risultato in risultati]), 200) \
-                if risultati else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
+                if risultati is None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
 
