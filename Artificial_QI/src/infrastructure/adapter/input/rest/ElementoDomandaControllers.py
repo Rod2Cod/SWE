@@ -61,7 +61,7 @@ class GetAllElementiDomandaController:
             elementi = self.__useCase.getAllElementiDomanda()
             # Se elementi è set vuoto lo ritorna, altrimento se è None ritorna errore 500
             return (jsonify([elemento.serialize() for elemento in elementi]), 200) \
-                if elementi else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
+                if elementi is None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
     
