@@ -41,7 +41,7 @@ class GetElementoDomandaController(MethodView):
         self.__useCase = useCase
 
     @inject
-    def getElementoDomandaById(self, id: int):
+    def get(self, id: int):
         try:
             elemento = self.__useCase.getElementoDomandaById(id)
             return (jsonify(elemento.serialize()), 200) \
@@ -52,7 +52,7 @@ class GetElementoDomandaController(MethodView):
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=GetElementoDomandaController.as_view('get_elemento_domanda_by_id'))
-    
+
 class GetAllElementiDomandaController(MethodView):
     def __init__(self, useCase: GetAllElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.GetAllElementiDomandaService]):
         self.__useCase = useCase
@@ -68,14 +68,13 @@ class GetAllElementiDomandaController(MethodView):
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 elementoDomanda_blueprint.add_url_rule('/domande', view_func=GetAllElementiDomandaController.as_view('get_all_elementi_domanda'))
-    
-class DeleteElementiDomandaController:
+
+class DeleteElementiDomandaController(MethodView):
     def __init__(self, useCase: DeleteElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.DeleteElementiDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=self.deleteElementiDomandaById, methods=['POST'])
 
     @inject
-    def deleteElementiDomandaById(self):
+    def post(self):
         try:
             ids = request.json['ids']
             deleted = self.__useCase.deleteElementiDomandaById(ids)
@@ -87,14 +86,15 @@ class DeleteElementiDomandaController:
             return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
-    
-class UpdateElementoDomandaController:
+        
+elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=DeleteElementiDomandaController.as_view('delete_elementi_domanda'))
+
+class UpdateElementoDomandaController(MethodView):
     def __init__(self, useCase: UpdateElementoDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.UpdateElementoDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=self.updateElementoDomandaById, methods=['PUT'])
 
     @inject
-    def updateElementoDomandaById(self, id: int):
+    def put(self, id: int):
         try:
             domanda = request.json['domanda']
             risposta = request.json['risposta']
@@ -107,3 +107,5 @@ class UpdateElementoDomandaController:
             return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
+
+elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=UpdateElementoDomandaController.as_view('update_elemento_domanda'))
