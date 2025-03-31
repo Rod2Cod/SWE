@@ -79,7 +79,7 @@ class TestGetElementoDomandaController:
             with app.test_request_context():
                 # Simulo una richiesta GET con ID non valido
                 with pytest.raises(ValueError):
-                    response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id="invalid"))
+                    _ = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id="invalid"))
         
     def test_get_elemento_domanda_by_id_server_error(self, client, app):
         """Test per il controller di recupero di un elemento domanda in presenza di un errore nel server."""

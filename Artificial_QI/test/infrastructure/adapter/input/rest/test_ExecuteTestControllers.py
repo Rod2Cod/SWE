@@ -3,7 +3,7 @@ import pytest
 from flask import url_for
 from application import create_app
 from src.application.ports.input import ExecuteTestUseCase
-from src.domain import ElementoDomanda, RisultatoTest, RisultatoSingolaDomanda
+from src.domain import RisultatoTest, RisultatoSingolaDomanda
 from datetime import date
 
 @pytest.fixture()
@@ -47,13 +47,13 @@ class TestExecuteTestController:
                     score=6.3, 
                     metriche={"metrica1": 4.7, "metrica2": 6.9}
                 )
-            })
+            }
+        )
         mock_use_case.executeTest.return_value = result
 
-        with app.container.executeTestContainer.ExecuteTestService.override(mock_use_case):
-            with app.test_request_context():
-                # Sending a POST request to the endpoint
-                response = client.post(url_for('executeTest_blueprint.execute_test'))
+        with app.test_request_context():
+            # Sending a POST request to the endpoint
+            response = client.post(url_for('executeTest_blueprint.execute_test'))
 
         # Asserting the response status code and data
         assert response.status_code == 200
@@ -67,10 +67,9 @@ class TestExecuteTestController:
         # Mocking the return value of executeTest method to return None
         mock_use_case.executeTest.return_value = None
 
-        with app.container.executeTestContainer.ExecuteTestService.override(mock_use_case):
-            with app.test_request_context():
-                # Sending a POST request to the endpoint
-                response = client.post(url_for('executeTest_blueprint.execute_test'))
+        with app.test_request_context():
+            # Sending a POST request to the endpoint
+            response = client.post(url_for('executeTest_blueprint.execute_test'))
 
         # Asserting the response status code and data
         assert response.status_code == 500
@@ -83,10 +82,10 @@ class TestExecuteTestController:
 
         # Mocking the return value of executeTest method to raise an exception
         mock_use_case.executeTest.side_effect = Exception()
-        with app.container.executeTestContainer.ExecuteTestService.override(mock_use_case):
-            with app.test_request_context():
-                # Sending a POST request to the endpoint
-                response = client.post(url_for('executeTest_blueprint.execute_test'))
+
+        with app.test_request_context():
+            # Sending a POST request to the endpoint
+            response = client.post(url_for('executeTest_blueprint.execute_test'))
 
         # Asserting the response status code and data
         assert response.status_code == 500
