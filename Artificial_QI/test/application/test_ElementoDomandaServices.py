@@ -1,147 +1,186 @@
 import pytest
-from src.application.ElementoDomandaServices import AddElementoDomandaService, GetElementoDomandaService, GetAllElementiDomandaService, DeleteElementiDomandaService, UpdateElementoDomandaService
-from src.application.ports.output.ElementiDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
 from unittest import mock
+from src.application.ElementoDomandaServices import (AddElementoDomandaService, 
+                                                     GetElementoDomandaService, 
+                                                     GetAllElementiDomandaService, 
+                                                     DeleteElementiDomandaService, 
+                                                     UpdateElementoDomandaService,
+                                                     validateDomandaRisposta,
+                                                     validateId,
+                                                     validateIdSet)
+from src.application.ports.output.ElementiDomandaPorts import (SaveElementoDomandaPort, 
+                                                               GetElementoDomandaPort, 
+                                                               GetAllElementiDomandaPort, 
+                                                               DeleteElementiDomandaPort, 
+                                                               UpdateElementoDomandaPort)
+
+@pytest.mark.parametrize("domanda, risposta", [("domanda", False), (True, "risposta"), (True,False), ("", "risposta"), ("domanda", "")])
+def test_validate_domanda_risposta_invalid(domanda,risposta):
+    with pytest.raises(ValueError):
+        validateDomandaRisposta(domanda, risposta)
+
+def test_validate_domanda_risposta():
+    validateDomandaRisposta("domanda", "risposta")
+    assert True
+
+def test_validate_id_invalid():
+    with pytest.raises(ValueError):
+        validateId("id")
+
+def test_validate_id():
+    validateId(1)
+    assert True
+
+@pytest.mark.parametrize("ids", [set([1,"2",3]), set([1,2,"3"]), set(["1",2,3]),set()])
+def test_validate_id_set_invalid(ids):
+    with pytest.raises(ValueError):
+        validateIdSet(ids)
+
+def test_validate_id_set():
+    validateIdSet(set([1,2,3]))
+    assert True
 
 class TestAddElementoDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=SaveElementoDomandaPort)
+        cls.service = AddElementoDomandaService(cls.mockPort)
+    
+    def setup_method(self):
+        self.mockPort.reset_mock()
     
     def test_add_elemento_domanda(self):
         """Test per il servizio di aggiunta di un elemento domanda."""
-        mockPort = mock.Mock(spec=SaveElementoDomandaPort)
-        service = AddElementoDomandaService(mockPort)
         
         domanda = "Qual è la capitale d'Italia?"
         risposta = "Roma"
         
-        mockPort.saveElementoDomanda.return_value = {"id": 1, "domanda": domanda, "risposta": risposta}
+        self.mockPort.saveElementoDomanda.return_value = mock.Mock({"id": 1, "domanda": domanda, "risposta": risposta})
         
-        result = service.addElementoDomanda(domanda, risposta)
+        result = self.service.addElementoDomanda(domanda, risposta)
         
-        mockPort.saveElementoDomanda.assert_called_once_with(domanda, risposta)
-        assert result == mockPort.saveElementoDomanda.return_value
+        self.mockPort.saveElementoDomanda.assert_called_once_with(domanda, risposta)
+        assert result == self.mockPort.saveElementoDomanda.return_value
         
-    def test_add_elemento_domanda_invalid(self):
+    @pytest.mark.parametrize("domanda,risposta", [("", "Roma"), ("Qual è la capitale d'Italia?", ""), (123, "Roma"), ("Qual è la capitale d'Italia?", 456)])
+    def test_add_elemento_domanda_invalid(self, domanda, risposta):
         """Test per il servizio di aggiunta di un elemento domanda con dati non validi."""
-        mockPort = mock.Mock(spec=SaveElementoDomandaPort)
-        service = AddElementoDomandaService(mockPort)
         
         with pytest.raises(ValueError):
-            service.addElementoDomanda("", "Roma")
-        with pytest.raises(ValueError):
-            service.addElementoDomanda("Qual è la capitale d'Italia?", "")
-        with pytest.raises(ValueError):
-            service.addElementoDomanda(123, "Roma")
-        with pytest.raises(ValueError):
-            service.addElementoDomanda("Qual è la capitale d'Italia?", 456)
+            self.service.addElementoDomanda(domanda, risposta)
             
 class TestGetElementoDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=GetElementoDomandaPort)
+        cls.service = GetElementoDomandaService(cls.mockPort)
+    
+    def setup_method(self):
+        self.mockPort.reset_mock()
     
     def test_get_elemento_domanda_by_id(self):
         """Test per il servizio di recupero di un elemento domanda."""
-        mockPort = mock.Mock(spec=GetElementoDomandaPort)
-        service = GetElementoDomandaService(mockPort)
         
         id = 1
-        mockPort.getElementoDomandaById.return_value = {"id": id, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}
+        self.mockPort.getElementoDomandaById.return_value = mock.Mock({"id": id, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
         
-        result = service.getElementoDomandaById(id)
+        result = self.service.getElementoDomandaById(id)
         
-        mockPort.getElementoDomandaById.assert_called_once_with(id)
-        assert result == mockPort.getElementoDomandaById.return_value
+        self.mockPort.getElementoDomandaById.assert_called_once_with(id)
+        assert result == self.mockPort.getElementoDomandaById.return_value
         
     def test_get_elemento_domanda_by_id_invalid(self):
         """Test per il servizio di recupero di un elemento domanda con ID non valido."""
-        mockPort = mock.Mock(spec=GetElementoDomandaPort)
-        service = GetElementoDomandaService(mockPort)
         
         with pytest.raises(ValueError):
-            service.getElementoDomandaById("1")
+            self.service.getElementoDomandaById("1")
             
 class TestGetAllElementiDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=GetAllElementiDomandaPort)
+        cls.service = GetAllElementiDomandaService(cls.mockPort)
+    
+    def setup_method(self):
+        self.mockPort.reset_mock()
     
     def test_get_all_elementi_domanda(self):
         """Test per il servizio di recupero di tutti gli elementi domanda."""
-        mockPort = mock.Mock(spec=GetAllElementiDomandaPort)
-        service = GetAllElementiDomandaService(mockPort)
         
-        mockPort.getAllElementiDomanda.return_value = [
-            {"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"},
-            {"id": 2, "domanda": "Qual è la capitale della Francia?", "risposta": "Parigi"}
+        self.mockPort.getAllElementiDomanda.return_value = [
+            mock.Mock({"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}),
+            mock.Mock({"id": 2, "domanda": "Qual è la capitale della Francia?", "risposta": "Parigi"})
         ]
         
-        result = service.getAllElementiDomanda()
+        result = self.service.getAllElementiDomanda()
         
-        mockPort.getAllElementiDomanda.assert_called_once()
-        assert result == mockPort.getAllElementiDomanda.return_value
+        self.mockPort.getAllElementiDomanda.assert_called_once()
+        assert result == self.mockPort.getAllElementiDomanda.return_value
         
     def test_get_all_elementi_domanda_empty(self):
         """Test per il servizio di recupero di tutti gli elementi domanda quando non ci sono elementi."""
-        mockPort = mock.Mock(spec=GetAllElementiDomandaPort)
-        service = GetAllElementiDomandaService(mockPort)
         
-        mockPort.getAllElementiDomanda.return_value = []
+        self.mockPort.getAllElementiDomanda.return_value = []
         
-        result = service.getAllElementiDomanda()
+        result = self.service.getAllElementiDomanda()
         
-        mockPort.getAllElementiDomanda.assert_called_once()
-        assert result == mockPort.getAllElementiDomanda.return_value
+        self.mockPort.getAllElementiDomanda.assert_called_once()
+        assert result == self.mockPort.getAllElementiDomanda.return_value
         assert len(result) == 0
         
 class TestDeleteElementiDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=DeleteElementiDomandaPort)
+        cls.service = DeleteElementiDomandaService(cls.mockPort)
+    
+    def setup_method(self):
+        self.mockPort.reset_mock()
     
     def test_delete_elementi_domanda_by_id(self):
         """Test per il servizio di eliminazione di uno o più elementi domanda."""
-        mockPort = mock.Mock(spec=DeleteElementiDomandaPort)
-        service = DeleteElementiDomandaService(mockPort)
         
         ids = {1, 2}
-        mockPort.deleteElementiDomandaById.return_value = True
+        self.mockPort.deleteElementiDomandaById.return_value = True
         
-        result = service.deleteElementiDomandaById(ids)
+        result = self.service.deleteElementiDomandaById(ids)
         
-        mockPort.deleteElementiDomandaById.assert_called_once_with(ids)
-        assert result == mockPort.deleteElementiDomandaById.return_value
+        self.mockPort.deleteElementiDomandaById.assert_called_once_with(ids)
+        assert result == self.mockPort.deleteElementiDomandaById.return_value
         
-    def test_delete_elementi_domanda_by_id_invalid(self):
+    @pytest.mark.parametrize("ids", [set(), {1, "2"}, {1, 2, "3"}])
+    def test_delete_elementi_domanda_by_id_invalid(self, ids):
         """Test per il servizio di eliminazione di uno o più elementi domanda con ID non validi."""
-        mockPort = mock.Mock(spec=DeleteElementiDomandaPort)
-        service = DeleteElementiDomandaService(mockPort)
         
         with pytest.raises(ValueError):
-            service.deleteElementiDomandaById(set())
-        with pytest.raises(ValueError):
-            service.deleteElementiDomandaById({1, "2"})
+            self.service.deleteElementiDomandaById(ids)
 
 class TestUpdateElementoDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=UpdateElementoDomandaPort)
+        cls.service = UpdateElementoDomandaService(cls.mockPort)
+    
+    def setup_method(self):
+        self.mockPort.reset_mock()
     
     def test_update_elemento_domanda_by_id(self):
         """Test per il servizio di aggiornamento di un elemento domanda."""
-        mockPort = mock.Mock(spec=UpdateElementoDomandaPort)
-        service = UpdateElementoDomandaService(mockPort)
         
         id = 1
         domanda = "Qual è la capitale d'Italia?"
         risposta = "Roma"
         
-        mockPort.updateElementoDomandaById.return_value = True
+        self.mockPort.updateElementoDomandaById.return_value = True
         
-        result = service.updateElementoDomandaById(id, domanda, risposta)
+        result = self.service.updateElementoDomandaById(id, domanda, risposta)
         
-        mockPort.updateElementoDomandaById.assert_called_once_with(id, domanda, risposta)
-        assert result == mockPort.updateElementoDomandaById.return_value
+        self.mockPort.updateElementoDomandaById.assert_called_once_with(id, domanda, risposta)
+        assert result == self.mockPort.updateElementoDomandaById.return_value
         
-    def test_update_elemento_domanda_by_id_invalid(self):
+    @pytest.mark.parametrize("id,domanda,risposta", [(1, "", "Roma"), (1, "Qual è la capitale d'Italia?", ""), (1, 123, "Roma"), (1, "Qual è la capitale d'Italia?", 456)])
+    def test_update_elemento_domanda_by_id_invalid(self, id, domanda, risposta):
         """Test per il servizio di aggiornamento di un elemento domanda con dati non validi."""
-        mockPort = mock.Mock(spec=UpdateElementoDomandaPort)
-        service = UpdateElementoDomandaService(mockPort)
         
         with pytest.raises(ValueError):
-            service.updateElementoDomandaById("1", "Qual è la capitale d'Italia?", "Roma")
-        with pytest.raises(ValueError):
-            service.updateElementoDomandaById(1, "", "Roma")
-        with pytest.raises(ValueError):
-            service.updateElementoDomandaById(1, "Qual è la capitale d'Italia?", "")
-        with pytest.raises(ValueError):
-            service.updateElementoDomandaById(1, 123, "Roma")
-        with pytest.raises(ValueError):
-            service.updateElementoDomandaById(1, "Qual è la capitale d'Italia?", 456)
+            self.service.updateElementoDomandaById(id, domanda, risposta)
