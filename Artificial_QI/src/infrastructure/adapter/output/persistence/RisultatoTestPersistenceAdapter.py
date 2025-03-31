@@ -12,16 +12,13 @@ class RisultatoTestPersistenceAdapter(
         self.__mapperSingolaDomanda = mapperSingolaDomanda
         self.__mapperTest = mapperTest
         
-    def saveRisultatoTest(self, risultatoTest: RisultatoTest) -> bool:
+    def saveRisultatoTest(self, risultatoTest: RisultatoTest) -> RisultatoTest:
         try:
-            self.__repositoryTest.saveRisultatoTest(self.__mapperTest.toRisultatoTestEntity(risultatoTest))
-            return True
-        except SQLAlchemyError as e:
-            print(e)
-            return False
-        except Exception as e:
-            print(e)
-            return False
+            return self.__mapperTest.fromRisultatoTestEntity(self.__repositoryTest.saveRisultatoTest(self.__mapperTest.toRisultatoTestEntity(risultatoTest)))
+        except SQLAlchemyError:
+            return None
+        except Exception:
+            return None
 
     def getRisultatoTestById(self, id: int) -> RisultatoTest:
         try:
@@ -29,19 +26,17 @@ class RisultatoTestPersistenceAdapter(
         except NoResultFound:
             raise ValueError("Risultato non trovato.")
         except SQLAlchemyError:
-            return False
+            return None
         except Exception:
-            return False
+            return None
 
     def getAllRisultatiTest(self) -> set[RisultatoTest]:
         try:
             return set(self.__mapperTest.fromRisultatoTestEntity(risultatoTest) for risultatoTest in self.__repositoryTest.loadAllRisultatiTest())
-        except SQLAlchemyError as e:
-            print(e)
-            return False
-        except Exception as e:
-            print(e)
-            return False
+        except SQLAlchemyError:
+            return None
+        except Exception:
+            return None
 
     def getRisultatoSingolaDomandaTestById(self, id: int) -> RisultatoSingolaDomanda:
         try:
@@ -49,6 +44,6 @@ class RisultatoTestPersistenceAdapter(
         except NoResultFound:
             raise ValueError("Risultato non trovato.")
         except SQLAlchemyError:
-            return False
+            return None
         except Exception:
-            return False
+            return None

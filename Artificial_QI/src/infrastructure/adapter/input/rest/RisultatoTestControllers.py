@@ -19,11 +19,11 @@ class GetRisultatoTestController:
         try:
             risultato = self.__useCase.getRisultatoTestById(id)
             return (jsonify(risultato.serialize()), 200) \
-                if risultato else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+                if risultato else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify(str(e)), 400
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
 
 class GetAllRisultatiTestController:
     def __init__(self, useCase: GetAllRisultatiTestUseCase = Provide[RootContainer.risultatoTestContainer.GetAllRisultatiTestService]):
@@ -35,9 +35,9 @@ class GetAllRisultatiTestController:
         try:
             risultati = self.__useCase.getAllRisultatiTest()
             return (jsonify([risultato.serializeForList() for risultato in risultati]), 200) \
-                if risultati else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+                if risultati is None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
 
 class GetRisultatoSingolaDomandaController:
     def __init__(self, useCase: GetRisultatoSingolaDomandaUseCase = Provide[RootContainer.risultatoTestContainer.GetRisultatoSingolaDomandaService]):
@@ -49,8 +49,8 @@ class GetRisultatoSingolaDomandaController:
         try:
             risultato = self.__useCase.getRisultatoSingolaDomandaTestById(id)
             return (jsonify(risultato.serialize()), 200) \
-                if risultato else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+                if risultato else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify(str(e)), 400
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500

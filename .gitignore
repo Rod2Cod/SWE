@@ -185,3 +185,6 @@ pgadmin_data/
 
 # modelli joblib
 *.joblib
+
+# File di prova
+prova*

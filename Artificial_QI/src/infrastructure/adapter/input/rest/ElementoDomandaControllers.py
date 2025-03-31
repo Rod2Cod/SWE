@@ -24,16 +24,15 @@ class AddElementoDomandaController:
             domanda = request.json['domanda']
             risposta = request.json['risposta']
             elemento = self.__useCase.addElementoDomanda(domanda, risposta)
-            # se errore da adapter in poi
-            return (jsonify("Elemento aggiunto con successo"), 201) \
-                if elemento else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+            return (jsonify({"message": "Elemento aggiunto con successo"}), 201) \
+                if elemento else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         # se errore di validazione nella business logic
         except ValueError as e:
             return jsonify(str(e)), 400
-        except BadRequest:
-            return jsonify("Domanda e risposta sono campi obbligatori."), 400
+        except (KeyError, BadRequest):
+            return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
    
 class GetElementoDomandaController:
     def __init__(self, useCase: GetElementoDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.GetElementoDomandaService]):
@@ -47,9 +46,9 @@ class GetElementoDomandaController:
             return (jsonify(elemento.serialize()), 200) \
                 if elemento else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
         except ValueError as e:
-            return jsonify(str(e)), 400
+            return jsonify({"message": str(e)}), 400
         except Exception as e:
-            return jsonify(str(e)), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
     
 class GetAllElementiDomandaController:
     def __init__(self, useCase: GetAllElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.GetAllElementiDomandaService]):
@@ -62,26 +61,28 @@ class GetAllElementiDomandaController:
             elementi = self.__useCase.getAllElementiDomanda()
             # Se elementi è set vuoto lo ritorna, altrimento se è None ritorna errore 500
             return (jsonify([elemento.serialize() for elemento in elementi]), 200) \
-                if elementi else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+                if elementi is None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
     
 class DeleteElementiDomandaController:
     def __init__(self, useCase: DeleteElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.DeleteElementiDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=self.deleteElementiDomandaByid, methods=['POST'])
+        elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=self.deleteElementiDomandaById, methods=['POST'])
 
     @inject
-    def deleteElementiDomandaByid(self):
+    def deleteElementiDomandaById(self):
         try:
             ids = request.json['ids']
             deleted = self.__useCase.deleteElementiDomandaById(ids)
-            return (jsonify("Elementi eliminati con successo"), 200) \
-                if deleted else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
-        except BadRequest:
-            return jsonify("Ids è un campo obbligatorio."), 400
+            return (jsonify({"message": "Elementi eliminati con successo"}), 200) \
+                if deleted else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
+        except ValueError as e:
+            return jsonify({"message": str(e)}), 400
+        except (KeyError, BadRequest):
+            return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
         except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
     
 class UpdateElementoDomandaController:
     def __init__(self, useCase: UpdateElementoDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.UpdateElementoDomandaService]):
@@ -94,11 +95,11 @@ class UpdateElementoDomandaController:
             domanda = request.json['domanda']
             risposta = request.json['risposta']
             updated = self.__useCase.updateElementoDomandaById(id, domanda, risposta)
-            return (jsonify("Elemento aggiornato con successo"), 200) \
-                if updated else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
-        except BadRequest:
-            return jsonify("Domanda e risposta sono campi obbligatori."), 400
-        except Exception:
-            return jsonify("Si è verificato un errore nel server, riprova più tardi"), 500
+            return (jsonify({"message": "Elemento aggiornato con successo"}), 200) \
+                if updated else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify(str(e)), 400
+        except (KeyError, BadRequest):
+            return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
+        except Exception:
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500

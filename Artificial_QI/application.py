@@ -15,7 +15,7 @@ from src.infrastructure.adapter.input.rest import (executeTest_blueprint,
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
 
 
-def create_app() -> Flask:
+def create_app(testing=False) -> Flask:
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "default_secret_key"
 
@@ -23,7 +23,10 @@ def create_app() -> Flask:
     app.json.sort_keys = False
     
     """ Configuro database """
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/progetto'
+    if(testing):
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+    else:
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/progetto'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     db.init_app(app)
@@ -38,9 +41,11 @@ def create_app() -> Flask:
     
     with app.app_context():
         """ Creo le tabelle del database. Devo importare i modelli per far si che vengano creati """
-        from src.infrastructure.adapter.output.persistence.domain import ElementoDomandaEntity, RisultatoTestEntity, RisultatoSingolaDomandaEntity, MetricheEntity
+        from src.infrastructure.adapter.output.persistence.domain import (
+            ElementoDomandaEntity, RisultatoTestEntity, 
+            RisultatoSingolaDomandaEntity, MetricheEntity)
         db.create_all()
-        
+    
     """ Configuro i controller di elemento domanda (necessario per registrare le route) """
     addElementoDomandaController = AddElementoDomandaController()
     getElementoDomandaController = GetElementoDomandaController()

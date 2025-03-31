@@ -4,7 +4,7 @@ from src.domain import RisultatoTest, RisultatoSingolaDomanda
 class SaveRisultatoTestPort(ABC):
 
     @abstractmethod
-    def saveRisultatoTest(self, risultato: RisultatoTest) -> bool:
+    def saveRisultatoTest(self, risultato: RisultatoTest) -> RisultatoTest:
         pass
     
 class GetRisultatoTestPort(ABC):
