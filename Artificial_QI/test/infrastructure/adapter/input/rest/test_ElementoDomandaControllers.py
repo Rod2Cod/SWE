@@ -25,7 +25,7 @@ class TestAddElementoDomandaController:
         with app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase):
             with app.test_request_context():
                 # Simulo una richiesta POST per aggiungere un elemento domanda
-                response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+                response = client.post(url_for('elementoDomanda_blueprint.add_elemento_domanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
 
         assert response.status_code == 201
         assert response.json["message"] == "Elemento aggiunto con successo"
