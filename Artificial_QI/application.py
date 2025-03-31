@@ -47,9 +47,9 @@ def create_app(testing=False) -> Flask:
         db.create_all()
     
     """ Configuro i controller di elemento domanda (necessario per registrare le route) """
-    addElementoDomandaController = AddElementoDomandaController()
-    getElementoDomandaController = GetElementoDomandaController()
-    getAllElementiDomandaController = GetAllElementiDomandaController()
+    #addElementoDomandaController = AddElementoDomandaController()
+    #getElementoDomandaController = GetElementoDomandaController()
+    #getAllElementiDomandaController = GetAllElementiDomandaController()
     deleteElementiDomandaController = DeleteElementiDomandaController()
     updateElementoDomandaController = UpdateElementoDomandaController()
     

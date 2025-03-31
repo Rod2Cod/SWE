@@ -1,4 +1,5 @@
 from flask import request, jsonify, Blueprint
+from flask.views import MethodView
 from werkzeug.exceptions import BadRequest
 from dependency_injector.wiring import inject, Provide
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
@@ -12,13 +13,12 @@ from src.application.ports.input import (AddElementoDomandaUseCase,
 
 elementoDomanda_blueprint = Blueprint('elementoDomanda_blueprint', __name__)
 
-class AddElementoDomandaController:
+class AddElementoDomandaController(MethodView):
     def __init__(self, useCase: AddElementoDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.AddElementoDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande', view_func=self.addElementoDomanda, methods=['POST'])
 
     @inject
-    def addElementoDomanda(self):
+    def post(self):
         try:
             # prendo domanda e risposta dal body della richiesta, se non presenti ritorna BadRequest
             domanda = request.json['domanda']
@@ -33,11 +33,12 @@ class AddElementoDomandaController:
             return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
+        
+elementoDomanda_blueprint.add_url_rule('/domande', view_func=AddElementoDomandaController.as_view('add_elemento_domanda'))
    
-class GetElementoDomandaController:
+class GetElementoDomandaController(MethodView):
     def __init__(self, useCase: GetElementoDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.GetElementoDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=self.getElementoDomandaById, methods=['GET'])
 
     @inject
     def getElementoDomandaById(self, id: int):
@@ -49,21 +50,24 @@ class GetElementoDomandaController:
             return jsonify({"message": str(e)}), 400
         except Exception as e:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
+        
+elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=GetElementoDomandaController.as_view('get_elemento_domanda_by_id'))
     
-class GetAllElementiDomandaController:
+class GetAllElementiDomandaController(MethodView):
     def __init__(self, useCase: GetAllElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.GetAllElementiDomandaService]):
         self.__useCase = useCase
-        elementoDomanda_blueprint.add_url_rule('/domande', view_func=self.getAllElementiDomanda, methods=['GET'])
 
     @inject
-    def getAllElementiDomanda(self):
+    def get(self):
         try:
             elementi = self.__useCase.getAllElementiDomanda()
             # Se elementi è set vuoto lo ritorna, altrimento se è None ritorna errore 500
             return (jsonify([elemento.serialize() for elemento in elementi]), 200) \
-                if elementi is None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
+                if elementi is not None else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
+        
+elementoDomanda_blueprint.add_url_rule('/domande', view_func=GetAllElementiDomandaController.as_view('get_all_elementi_domanda'))
     
 class DeleteElementiDomandaController:
     def __init__(self, useCase: DeleteElementiDomandaUseCase = Provide[RootContainer.elementoDomandaContainer.DeleteElementiDomandaService]):

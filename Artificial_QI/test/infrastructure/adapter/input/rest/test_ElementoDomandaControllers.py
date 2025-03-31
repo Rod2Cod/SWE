@@ -3,6 +3,7 @@ import pytest
 from flask import url_for
 from application import create_app
 from src.application.ports.input import AddElementoDomandaUseCase, GetElementoDomandaUseCase, GetAllElementiDomandaUseCase, DeleteElementiDomandaUseCase, UpdateElementoDomandaUseCase
+from src.domain import ElementoDomanda
 
 @pytest.fixture()
 def app():
@@ -21,10 +22,10 @@ class TestAddElementoDomandaController:
         mockUseCase = mock.Mock(spec=AddElementoDomandaUseCase)
         mockUseCase.addElementoDomanda.return_value = {"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}
         
-        app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta POST per aggiungere un elemento domanda
-            response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+        with app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta POST per aggiungere un elemento domanda
+                response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
 
         assert response.status_code == 201
         assert response.json["message"] == "Elemento aggiunto con successo"
@@ -33,10 +34,10 @@ class TestAddElementoDomandaController:
         """Test per il controller di aggiunta di un elemento domanda con dati non validi."""
         mockUseCase = mock.Mock(spec=AddElementoDomandaUseCase)
         
-        app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta POST con dati non validi
-            response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"risposta": "Roma"})
+        with app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta POST con dati non validi
+                response = client.post(url_for('elementoDomanda_blueprint.add_elemento_domanda'), json={"risposta": "Roma"})
             
         assert response.status_code == 400
         assert response.json["message"] == "Domanda e risposta sono campi obbligatori."
@@ -46,25 +47,24 @@ class TestAddElementoDomandaController:
         mockUseCase = mock.Mock(spec=AddElementoDomandaUseCase)
         mockUseCase.addElementoDomanda.return_value = None
         
-        app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta POST per aggiungere un elemento domanda
-            response = client.post(url_for('elementoDomanda_blueprint.addElementoDomanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+        with app.container.elementoDomandaContainer.AddElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta POST per aggiungere un elemento domanda
+                response = client.post(url_for('elementoDomanda_blueprint.add_elemento_domanda'), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
 
         assert response.status_code == 500
-        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
-        
+        assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"     
         
 class TestGetElementoDomandaController:
     def test_get_elemento_domanda_by_id(self, client, app):
         """Test per il controller di recupero di un elemento domanda."""
         mockUseCase = mock.Mock(spec=GetElementoDomandaUseCase)
-        mockUseCase.getElementoDomandaById.return_value = {"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}
+        mockUseCase.getElementoDomandaById.return_value = ElementoDomanda(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma")
         
-        app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta GET per recuperare un elemento domanda
-            response = client.get(url_for('elementoDomanda_blueprint.getElementoDomandaById', id=1))
+        with app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta GET per recuperare un elemento domanda
+                response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id=1))
             
         assert response.status_code == 200
         assert response.json["id"] == 1
@@ -75,10 +75,10 @@ class TestGetElementoDomandaController:
         """Test per il controller di recupero di un elemento domanda in presenza di un errore nel server."""
         mockUseCase = mock.Mock(spec=GetElementoDomandaUseCase)
         
-        app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta GET con ID non valido
-            response = client.get(url_for('elementoDomanda_blueprint.getElementoDomandaById', id="invalid"))
+        with app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta GET con ID non valido
+                response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id="invalid"))
             
         assert response.status_code == 400
         assert "ID non valido" in response.json.values()
@@ -88,10 +88,10 @@ class TestGetElementoDomandaController:
         mockUseCase = mock.Mock(spec=GetElementoDomandaUseCase)
         mockUseCase.getElementoDomandaById.return_value = None
         
-        app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta GET per recuperare un elemento domanda
-            response = client.get(url_for('elementoDomanda_blueprint.getElementoDomandaById', id=1))
+        with app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta GET per recuperare un elemento domanda
+                response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id=1))
             
         assert response.status_code == 500
         assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
@@ -100,13 +100,13 @@ class TestGetAllElementiDomandaController:
     def test_get_all_elementi_domanda(self, client, app):
         """Test per il controller di recupero di tutti gli elementi domanda."""
         mockUseCase = mock.Mock(spec=GetAllElementiDomandaUseCase)
-        mockUseCase.getAllElementiDomanda.return_value = [{"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}, 
-                                                          {"id": 2, "domanda": "Qual è la capitale della Francia?", "risposta": "Parigi"}]
+        mockUseCase.getAllElementiDomanda.return_value = [ElementoDomanda(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma"), 
+                                                          ElementoDomanda(id=2, domanda="Qual è la capitale della Francia?", risposta="Parigi")]
         
-        app.container.elementoDomandaContainer.GetAllElementiDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta GET per recuperare tutti gli elementi domanda
-            response = client.get(url_for('elementoDomanda_blueprint.getAllElementiDomanda'))
+        with app.container.elementoDomandaContainer.GetAllElementiDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta GET per recuperare tutti gli elementi domanda
+                response = client.get(url_for('elementoDomanda_blueprint.get_all_elementi_domanda'))
             
         assert response.status_code == 200
         assert response.json[0]["id"] == 1
@@ -122,10 +122,10 @@ class TestGetAllElementiDomandaController:
         mockUseCase = mock.Mock(spec=GetAllElementiDomandaUseCase)
         mockUseCase.getAllElementiDomanda.return_value = []
         
-        app.container.elementoDomandaContainer.GetAllElementiDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta GET per recuperare tutti gli elementi domanda
-            response = client.get(url_for('elementoDomanda_blueprint.getAllElementiDomanda'))
+        with app.container.elementoDomandaContainer.GetAllElementiDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta GET per recuperare tutti gli elementi domanda
+                response = client.get(url_for('elementoDomanda_blueprint.get_all_elementi_domanda'))
             
         assert response.status_code == 200
         assert len(response.json) == 0
