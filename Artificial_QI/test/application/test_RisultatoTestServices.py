@@ -1,68 +1,99 @@
 import pytest
-from src.application.RisultatoTestServices import GetRisultatoTestService, GetAllRisultatiTestService, GetRisultatoSingolaDomandaService
+from src.application.RisultatoTestServices import (GetRisultatoTestService, 
+                                                   GetAllRisultatiTestService, 
+                                                   GetRisultatoSingolaDomandaService,
+                                                   validateId)
 from src.application.ports.output.RisultatoTestPorts import GetRisultatoTestPort, GetAllRisultatiTestPort, GetRisultatoSingolaDomandaPort
 from src.domain.RisultatoTest import RisultatoTest, RisultatoSingolaDomanda
 from unittest import mock
 
+def test_validate_id_invalid():
+    with pytest.raises(ValueError):
+        validateId("ciao")
+
+def test_validate_id():
+    assert validateId(1) == None
+
 class TestGetRisultatoTestService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=GetRisultatoTestPort)
+        cls.service = GetRisultatoTestService(cls.mockPort)
+
+    def setup_method(self):
+        self.mockPort.reset_mock()
 
     def test_get_risultato_test_by_id(self):
         """Test per il servizio di recupero di un RisultatoTest tramite ID."""
-        port = mock.Mock(spec=GetRisultatoTestPort)
-        service = GetRisultatoTestService(port)
 
-        expected = RisultatoTest(1, 0.8, "LLM", "2024-01-01", "set1", set())
-        port.getRisultatoTestById.return_value = expected
+        self.mockPort.getRisultatoTestById.return_value = mock.Mock(1, 0.8, "LLM", "2024-01-01", "set1", set())
 
-        result = service.getRisultatoTestById(1)
+        result = self.service.getRisultatoTestById(1)
 
-        port.getRisultatoTestById.assert_called_once_with(1)
-        assert result == expected
+        self.mockPort.getRisultatoTestById.assert_called_once_with(1)
+        assert result == self.mockPort.getRisultatoTestById.return_value
 
     def test_get_risultato_test_by_invalid_id(self):
         """Test per il servizio con ID non intero."""
-        port = mock.Mock(spec=GetRisultatoTestPort)
-        service = GetRisultatoTestService(port)
 
         with pytest.raises(ValueError):
-            service.getRisultatoTestById("uno")
+            self.service.getRisultatoTestById("uno")
 
 
 class TestGetAllRisultatiTestService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=GetAllRisultatiTestPort)
+        cls.service = GetAllRisultatiTestService(cls.mockPort)
+
+    def setup_method(self):
+        self.mockPort.reset_mock()
 
     def test_get_all_risultati_test(self):
         """Test per il servizio di recupero di tutti i RisultatoTest."""
-        port = mock.Mock(spec=GetAllRisultatiTestPort)
-        service = GetAllRisultatiTestService(port)
 
-        expected = {RisultatoTest(1, 0.8, "LLM", "2024-01-01", "set1", set())}
-        port.getAllRisultatiTest.return_value = expected
+        self.mockPort.getAllRisultatiTest.return_value = {
+                                                            mock.Mock(1, 0.8, "LLM", "2024-01-01", "set1", set()),
+                                                            mock.Mock(2, 0.9, "LLM", "2024-01-02", "set2", set())
+                                                        }
 
-        result = service.getAllRisultatiTest()
+        result = self.service.getAllRisultatiTest()
 
-        port.getAllRisultatiTest.assert_called_once()
-        assert result == expected
+        self.mockPort.getAllRisultatiTest.assert_called_once()
+        assert result == self.mockPort.getAllRisultatiTest.return_value
+        
+    def test_get_all_risultati_test_empty(self):
+        """Test per il servizio di recupero di tutti i RisultatoTest quando non ci sono risultati."""
+
+        self.mockPort.getAllRisultatiTest.return_value = set()
+
+        result = self.service.getAllRisultatiTest()
+
+        self.mockPort.getAllRisultatiTest.assert_called_once()
+        assert len(result) == 0
 
 
 class TestGetRisultatoSingolaDomandaService:
+    @classmethod
+    def setup_class(cls):
+        cls.mockPort = mock.Mock(spec=GetRisultatoSingolaDomandaPort)
+        cls.service = GetRisultatoSingolaDomandaService(cls.mockPort)
+
+    def setup_method(self):
+        self.mockPort.reset_mock()
 
     def test_get_risultato_singola_domanda_by_id(self):
         """Test per il servizio di recupero di una singola domanda tramite ID."""
-        port = mock.Mock(spec=GetRisultatoSingolaDomandaPort)
-        service = GetRisultatoSingolaDomandaService(port)
 
-        expected = RisultatoSingolaDomanda(1, "Domanda?", "Risposta", "LLM", 0.9, {"score": 0.9})
-        port.getRisultatoSingolaDomandaTestById.return_value = expected
+        self.mockPort.getRisultatoSingolaDomandaTestById.return_value = mock.Mock(1, "Domanda?", "Risposta", "LLM", 0.9, {"metrica1": 0.9, "metrica2": 0.1})
 
-        result = service.getRisultatoSingolaDomandaTestById(1)
+        result = self.service.getRisultatoSingolaDomandaTestById(1)
 
-        port.getRisultatoSingolaDomandaTestById.assert_called_once_with(1)
-        assert result == expected
+        self.mockPort.getRisultatoSingolaDomandaTestById.assert_called_once_with(1)
+        assert result == self.mockPort.getRisultatoSingolaDomandaTestById.return_value
 
     def test_get_risultato_singola_domanda_invalid_id(self):
         """Test per ID non valido nel recupero della singola domanda."""
-        port = mock.Mock(spec=GetRisultatoSingolaDomandaPort)
-        service = GetRisultatoSingolaDomandaService(port)
 
         with pytest.raises(ValueError):
-            service.getRisultatoSingolaDomandaTestById("abc")
+            self.service.getRisultatoSingolaDomandaTestById("uno")

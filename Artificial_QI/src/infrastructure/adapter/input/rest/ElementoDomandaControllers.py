@@ -28,8 +28,8 @@ class AddElementoDomandaController(MethodView):
                 if elemento else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         # se errore di validazione nella business logic
         except ValueError as e:
-            return jsonify(str(e)), 400
-        except (KeyError, BadRequest):
+            return jsonify({"message": str(e)}), 400
+        except (KeyError, BadRequest, UnsupportedMediaType):
             return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
@@ -45,10 +45,10 @@ class GetElementoDomandaController(MethodView):
         try:
             elemento = self.__useCase.getElementoDomandaById(id)
             return (jsonify(elemento.serialize()), 200) \
-                if elemento else (jsonify("Si è verificato un errore nel server, riprova più tardi"), 500)
+                if elemento else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify({"message": str(e)}), 400
-        except Exception as e:
+        except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 elementoDomanda_blueprint.add_url_rule('/domande/<int:id>', view_func=GetElementoDomandaController.as_view('get_elemento_domanda_by_id'))
@@ -84,7 +84,7 @@ class DeleteElementiDomandaController(MethodView):
             return jsonify({"message": str(e)}), 400
         except (KeyError, BadRequest, UnsupportedMediaType):
             return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
-        except Exception as e:
+        except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=DeleteElementiDomandaController.as_view('delete_elementi_domanda'))
@@ -102,8 +102,8 @@ class UpdateElementoDomandaController(MethodView):
             return (jsonify({"message": "Elemento aggiornato con successo"}), 200) \
                 if updated else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
-            return jsonify(str(e)), 400
-        except (KeyError, BadRequest):
+            return jsonify({"message": str(e)}), 400
+        except (KeyError, BadRequest, UnsupportedMediaType):
             return jsonify({"message": "Domanda e risposta sono campi obbligatori."}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
