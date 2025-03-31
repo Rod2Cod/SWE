@@ -37,6 +37,7 @@
 *Descrizione:* Questo endpoint consente di eseguire un test su tutte le domande presenti nel sistema.
 - *endpoint:* `/executeTest`
 - *Metodo:* `POST`
+#table-json-api(json("tabelle.json").at("api").at("execute_test"), 4)
 == Risultato Test
 === GET Get Risultato Test
 *Descrizione:* Questo endpoint consente di ottenere il risultato del test eseguito, dato il suo id.
@@ -44,15 +45,16 @@
 - *Metodo:* `GET`
 - *Parametri:* 
   - `id` = id del risultato del test da ottenere
-
+#table-json-api(json("tabelle.json").at("api").at("risultato_test").at("get"), 4)
 === GET Get All Risultati Test
 *Descrizione:* Questo endpoint consente di ottenere tutti i risultati dei test eseguiti.
 - *endpoint:* `/risultati`
 - *Metodo:* `GET`
-
+#table-json-api(json("tabelle.json").at("api").at("risultato_test").at("get_all"), 4)
 === GET Get Risultato Singola Domanda
 *Descrizione:* Questo endpoint consente di ottenere il risultato di una singola domanda di un test, dato il suo id.
 - *endpoint:* `/risultati/domande/{id}`
 - *Metodo:* `GET`
 - *Parametri:* 
   - `id` = id del risultato della singola domanda da ottenere
+#table-json-api(json("tabelle.json").at("api").at("risultato_test").at("get_singolo"), 4)

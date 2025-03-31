@@ -33,6 +33,11 @@
         "Data": "2025-03-27",
         "Descrizione": "Sezione Struttura - Aggiunti altri Design Patterns Utilizzati",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-03-31",
+        "Descrizione": "Sezione API - Aggiunte API e tabelle",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
@@ -245,28 +250,98 @@
       ],
       "values": [
         {
-          "Esito": "",
-          "Codice HTTP": "",
-          "Body": "",
-          "Descrizione": ""
+          "Esito": "Positivo",
+          "Codice HTTP": "200",
+          "Body": "JSON",
+          "Descrizione": "Il test viene eseguito e ritornato con successo."
+        },
+        {
+          "Esito": "Negativo",
+          "Codice HTTP": "500",
+          "Body": "`{\"message\": \"...\"}`",
+          "Descrizione": "Si è verificato un errore interno del server."
         }
       ]
     },
-    "risultati_test": {
-      "keys": [
-        "Esito",
-        "Codice HTTP",
-        "Body",
-        "Descrizione"
-      ],
-      "values": [
-        {
-          "Esito": "",
-          "Codice HTTP": "",
-          "Body": "",
-          "Descrizione": ""
-        }
-      ]
+    "risultato_test": {
+      "get": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "JSON",
+            "Descrizione": "Il risultato del test viene trovato e restituito con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Il risultato del test non esiste oppure ne viene fornito un id in formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "get_all": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "JSON",
+            "Descrizione": "Tutti gli elementi vengono restituiti con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      },
+      "get_singolo": {
+        "keys": [
+          "Esito",
+          "Codice HTTP",
+          "Body",
+          "Descrizione"
+        ],
+        "values": [
+          {
+            "Esito": "Positivo",
+            "Codice HTTP": "200",
+            "Body": "JSON",
+            "Descrizione": "Il risultato della singola domanda del test viene trovato e restituito con successo."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "400",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Il risultato della singola domanda del test non esiste oppure ne viene fornito un id in formato non valido."
+          },
+          {
+            "Esito": "Negativo",
+            "Codice HTTP": "500",
+            "Body": "`{\"message\": \"...\"}`",
+            "Descrizione": "Si è verificato un errore interno del server."
+          }
+        ]
+      }
     }
   }
 }
