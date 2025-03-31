@@ -1,0 +1,15 @@
+@import './base.css';
+
+
+.page-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-heading) !important;
+}
+
+.text-body {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.5;
+}
