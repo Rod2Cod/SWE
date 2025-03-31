@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container mt-5">
     <h1 class="page-title">Aggiungi una Domanda</h1>
     <form @submit.prevent="submitForm">
       <div class="form-group">
@@ -44,13 +44,13 @@ export default {
   },
   methods: {
     async submitForm() {
-      if (!this.payload.question || !this.payload.expectedAnswer) {
+      if (!this.payload.domanda || !this.payload.risposta) {
         alert("Compila entrambi i campi.");
         return;
       }
 
       try {
-        //await axios.post("/api/questions", this.payload);
+        await axios.post("/domande", this.payload);
         this.$router.push("/questions");
       } catch (error) {
         console.error("Errore durante l'invio della domanda:", error);
@@ -60,8 +60,8 @@ export default {
   computed: {
     payload() {
       return {
-        question: this.question.trim(),
-        expectedAnswer: this.expectedAnswer.trim()
+        domanda: this.question.trim(),
+        risposta: this.expectedAnswer.trim()
       };
     }
   },

@@ -11,12 +11,17 @@
 
 <script>
 import Test from "@/components/Test.vue";
+import axios from "axios";
 
 export default {
   name: "TestResultView",
   components: {Test},
+  mounted() {
+    this.loadTest();
+  },
   data() {
     return {
+      id: this.$route.params.id,
       test: {
         id: 1,
         date: new Date().toISOString().split("T")[0],
@@ -49,6 +54,21 @@ export default {
       },
     };
   },
+  methods: {
+    formatDate(dateISO) {
+      return new Date(dateISO).toLocaleDateString();
+    },
+    async loadTest() {
+      try {
+        //const response = await axios.get(`/risultatiDomanda/${this.id}`);
+        //console.log(response.data);
+        //this.test = response.data.test;
+      } catch (error) {
+        console.error("Error loading test data:", error);
+      }
+
+    }
+  }
 }
 </script>
 

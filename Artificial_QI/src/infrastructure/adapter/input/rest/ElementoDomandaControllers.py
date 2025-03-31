@@ -74,7 +74,7 @@ class DeleteElementiDomandaController(MethodView):
         self.__useCase = useCase
 
     @inject
-    def post(self):
+    def delete(self):
         try:
             ids = request.json['ids']
             deleted = self.__useCase.deleteElementiDomandaById(ids)

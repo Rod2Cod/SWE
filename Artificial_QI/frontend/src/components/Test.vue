@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="test-card">
-    <h2 class="test-title">Test del {{ test.date }}</h2>
+    <!-- <h2 class="test-title">Test del {{ test.date }}</h2> -->
 
     <p class="test-info"><strong>Modello LLM:</strong> {{ test.llmUsed }}</p>
     <p class="test-info"><strong>Punteggio Totale:</strong> {{ test.score }}/10</p>

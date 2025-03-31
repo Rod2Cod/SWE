@@ -17,7 +17,7 @@ class ExecuteTestController(MethodView):
             risultato = self.__useCase.executeTest()
             return (jsonify(risultato.serialize()), 200) \
                 if risultato else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
-        except Exception:
-            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
+        except Exception as e:
+            return jsonify({"message": f"Si è verificato un errore nel server, riprova più tardi {e}" }), 500
         
 executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestController.as_view('execute_test'))

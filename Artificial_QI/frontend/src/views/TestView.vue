@@ -73,16 +73,18 @@ export default {
       }
     },
 
-    startPolling() {
-      if (this.pollingInterval) clearInterval(this.pollingInterval);
-      this.pollingInterval = setInterval(this.pollTestProgress, 2000);
+    async startPolling() {
+      const response = await axios.post(`/executeTest`);
+      console.log(response)
+
     },
 
     async pollTestProgress() {
       try {
         // Simulazione richiesta API di avanzamento test
+
+        const response = await axios.post(`/executeTest`);
         /*
-        const response = await axios.get(`/api/test/progress/${this.id}`);
         const data = response.data;
         this.progress = data.progress;
         this.testCompleted = data.completed;

@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     editQuestion() {
-      console.log( this.id);
       this.$router.push(`/editquestion/${this.id}`);
     }
   }

@@ -3,26 +3,36 @@
     <div class="header">
       <h1 class="page-title">Domande</h1>
       <div class="buttons">
-        <button class="add-btn" @click="goToAddQuestion">
+        <button class="add-btn"  v-if="!isDeleting" @click="goToAddQuestion">
           <IonIcon :icon="addOutline"></IonIcon> Aggiungi
         </button>
+
+
 
         <template v-if="isDeleting">
           <button class="confirm-delete-btn" @click="confirmDelete">
             <IonIcon :icon="trashOutline"></IonIcon> Conferma Eliminazione
           </button>
-          <button class="cancel-btn" @click="cancelDeleteMode">
+          <button class="cancel-btn"  @click="cancelDeleteMode">
             <IonIcon :icon="closeOutline"></IonIcon> Annulla
           </button>
         </template>
 
-        <button v-else class="delete-btn" @click="startDeleteMode">
+        <button v-else-if="!isDeleting && questions.length !== 0" class="delete-btn" @click="startDeleteMode">
           <IonIcon :icon="trashOutline"></IonIcon> Elimina
         </button>
       </div>
     </div>
 
-    <div class="questions-list">
+    <div class="d-flex justify-content-center mt-5" v-if="isLoading">
+      <img class="loading" src="@/assets/loading.svg">
+    </div>
+
+    <div class="d-flex justify-content-center mt-5" v-if="questions.length === 0 && !isLoading">
+      <h2>Nessuna domanda inserita!</h2>
+    </div>
+
+    <div class="questions-list" v-if="!isLoading">
       <div v-for="question in questions" :key="question.id" class="question-container">
         <input
             v-if="isDeleting"
@@ -32,7 +42,7 @@
             @change="toggleSelection(question.id)"
         />
         <div class="question-box">
-          <Domanda :question="question.question" :expectedAnswer="question.expectedAnswer" :id="question.id" />
+          <Domanda :question="question.domanda" :expectedAnswer="question.risposta" :id="question.id" />
         </div>
       </div>
     </div>
@@ -54,35 +64,23 @@ export default {
       addOutline,
       trashOutline,
       closeOutline,
-      questions: [
-        {
-          id: 1,
-          question: "Cos'è Vue.js?",
-          expectedAnswer: "Vue.js è un framework JavaScript progressivo per la creazione di interfacce utente."
-        },
-        {
-          id: 2,
-          question: "Come si installa Vue?",
-          expectedAnswer: "Puoi installare Vue.js usando `npm install vue`."
-        },
-        {
-          id: 3,
-          question: "Cos'è un componente in Vue?",
-          expectedAnswer: "Un componente in Vue è un elemento riutilizzabile dell'interfaccia utente che può essere utilizzato all'interno di altre componenti."
-        }
-      ],
+      questions: [],
       isDeleting: false,
+      isLoading: false,
       selectedQuestions: []
     };
   },
   mounted() {
-    //this.loadQuestions();
+    this.loadQuestions();
   },
   methods: {
     async loadQuestions() {
+      this.isLoading = true;
       try {
-        const response = await axios.get("/api/questions");
+        const response = await axios.get("/domande");
         this.questions = response.data;
+        this.questions.sort((a, b) => b.id - a.id);
+        this.isLoading = false;
       } catch (error) {
         console.error("Errore nel recuperare le domande:", error);
       }
@@ -113,7 +111,7 @@ export default {
 
       if (confirm(`Sei sicuro di voler eliminare ${this.selectedQuestions.length} domanda(e)?`)) {
         try {
-          await axios.delete("/api/questions", { data: { ids: this.selectedQuestions } });
+          await axios.delete("/domande/delete", { data: { ids: this.selectedQuestions } });
           this.questions = this.questions.filter(q => !this.selectedQuestions.includes(q.id));
           this.cancelDeleteMode();
         } catch (error) {
@@ -180,6 +178,12 @@ ion-icon {
   font-size: 20px;
 }
 
+h2 {
+  color: #dfdfdf;
+  font-size: 20px;
+  text-align: center;
+}
+
 
 .question-container {
   display: flex;
@@ -205,6 +209,7 @@ ion-icon {
   transform: scale(1.3);
   cursor: pointer;
 }
+
 
 
 </style>

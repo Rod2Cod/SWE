@@ -1,8 +1,8 @@
 <template>
-  <main class="container">
+  <main class="container mt-5">
     <h1 class="page-title">Modifica la Domanda</h1>
 
-    <form v-if="isLoaded" @submit.prevent="submitForm">
+    <form v-if="!isLoading" @submit.prevent="submitForm">
       <div class="form-group">
         <label for="question">Domanda</label>
         <input
@@ -30,7 +30,9 @@
       </div>
     </form>
 
-    <p v-else class="loading-text">Caricamento domanda...</p>
+    <div class="d-flex justify-content-center mt-5" v-if="isLoading">
+      <img class="loading" src="@/assets/loading.svg">
+    </div>
   </main>
 </template>
 
@@ -42,9 +44,10 @@ export default {
   name: "ModificaDomanda",
   data() {
     return {
+      id: this.$route.params.id,
       question: "",
       expectedAnswer: "",
-      isLoaded: false, // Per simulare il caricamento dei dati
+      isLoading: false, // Per simulare il caricamento dei dati
     };
   },
   mounted() {
@@ -53,13 +56,14 @@ export default {
   methods: {
     async loadQuestion() {
 
-      const questionId = this.$route.params.id;
 
+      this.isLoading = true;
       try {
-        //const res = await axios.get(`/api/questions/${questionId}`);
-        //this.question = res.data.question;
-        //this.expectedAnswer = res.data.expectedAnswer;
-        this.isLoaded = true;
+        const res = await axios.get(`/domande/${this.id}`);
+
+        this.question = res.data.domanda;
+        this.expectedAnswer = res.data.risposta;
+        this.isLoading = false;
       } catch (error) {
         console.error("Errore durante il caricamento:", error);
         this.$router.push("/questions");
@@ -67,15 +71,14 @@ export default {
     },
 
     async submitForm() {
-      const questionId = this.$route.params.id;
 
-      if (!this.payload.question || !this.payload.expectedAnswer) {
+      if (!this.payload.domanda || !this.payload.risposta) {
         alert("Compila entrambi i campi.");
         return;
       }
 
       try {
-        //await axios.put(`/api/questions/${questionId}`, this.payload);
+        await axios.put(`/domande/${this.id}`, this.payload);
         this.$router.push("/questions");
       } catch (error) {
         console.error("Errore durante il salvataggio:", error);
@@ -88,8 +91,8 @@ export default {
   computed: {
     payload() {
       return {
-        question: this.question.trim(),
-        expectedAnswer: this.expectedAnswer.trim()
+        domanda: this.question.trim(),
+        risposta: this.expectedAnswer.trim()
       };
     }
   },

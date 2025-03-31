@@ -17,3 +17,4 @@ sentence-transformers >= 4.0.0
 pandas == 2.2.3
 joblib >= 1.4.0
 pytest-mock == 3.14.0
+Flask-Cors==4.0.0
