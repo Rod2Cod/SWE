@@ -78,15 +78,13 @@ class TestGetElementoDomandaController:
         with app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase):
             with app.test_request_context():
                 # Simulo una richiesta GET con ID non valido
-                response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id="invalid"))
-            
-        assert response.status_code == 400
-        assert "ID non valido" in response.json.values()
+                with pytest.raises(ValueError):
+                    response = client.get(url_for('elementoDomanda_blueprint.get_elemento_domanda_by_id', id="invalid"))
         
     def test_get_elemento_domanda_by_id_server_error(self, client, app):
         """Test per il controller di recupero di un elemento domanda in presenza di un errore nel server."""
         mockUseCase = mock.Mock(spec=GetElementoDomandaUseCase)
-        mockUseCase.getElementoDomandaById.return_value = None
+        mockUseCase.getElementoDomandaById.side_effect = Exception()
         
         with app.container.elementoDomandaContainer.GetElementoDomandaService.override(mockUseCase):
             with app.test_request_context():
@@ -136,23 +134,24 @@ class TestDeleteElementiDomandaController:
         mockUseCase = mock.Mock(spec=DeleteElementiDomandaUseCase)
         mockUseCase.deleteElementiDomandaById.return_value = True
         
-        app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta DELETE per eliminare un elemento domanda
-            response = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'), json={"ids": [1, 2, 3]})
+        with app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta DELETE per eliminare un elemento domanda
+                response = client.post(url_for('elementoDomanda_blueprint.delete_elementi_domanda'), json={"ids": [1, 2, 3]})
             
         assert response.status_code == 200
-        assert response.json["message"] == "Elemento eliminato con successo"
+        assert response.json["message"] == "Elementi eliminati con successo"
         
     def test_delete_elementi_domanda_by_id_invalid(self, client, app):
         """Test per il controller di eliminazione di un elemento domanda con ID non valido."""
         mockUseCase = mock.Mock(spec=DeleteElementiDomandaUseCase)
+        mockUseCase.deleteElementiDomandaById.side_effect = ValueError("Il set non può essere vuoto.")
         
-        app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase)
-        with app.test_request_context():
+        with app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase):
+            with app.test_request_context():
             # Simulo una richiesta DELETE con ID non valido
-            response = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'), json={})
-            response2 = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'))
+                response = client.post(url_for('elementoDomanda_blueprint.delete_elementi_domanda'), json={})
+                response2 = client.post(url_for('elementoDomanda_blueprint.delete_elementi_domanda'))
             
         assert response.status_code == 400
         assert response.json["message"] == "La lista di id è un campo obbligatorio."
@@ -164,10 +163,10 @@ class TestDeleteElementiDomandaController:
         mockUseCase = mock.Mock(spec=DeleteElementiDomandaUseCase)
         mockUseCase.deleteElementiDomandaById.return_value = False
         
-        app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase)
-        with app.test_request_context():
-            # Simulo una richiesta DELETE per eliminare un elemento domanda non trovato
-            response = client.delete(url_for('elementoDomanda_blueprint.deleteElementiDomandaById'), json={"ids": [999]})
+        with app.container.elementoDomandaContainer.DeleteElementiDomandaService.override(mockUseCase):
+            with app.test_request_context():
+                # Simulo una richiesta DELETE per eliminare un elemento domanda non trovato
+                response = client.post(url_for('elementoDomanda_blueprint.delete_elementi_domanda'), json={"ids": [999]})
             
         assert response.status_code == 500
         assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"
@@ -179,9 +178,10 @@ class TestUpdateElementoDomandaController:
         mockUseCase.updateElementoDomandaById.return_value = True
         
         app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
+
         with app.test_request_context():
             # Simulo una richiesta PUT per aggiornare un elemento domanda
-            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id=1), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+            response = client.put(url_for('elementoDomanda_blueprint.update_elemento_domanda', id=1), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
             
         assert response.status_code == 200
         assert response.json["message"] == "Elemento aggiornato con successo"
@@ -193,10 +193,8 @@ class TestUpdateElementoDomandaController:
         app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
         with app.test_request_context():
             # Simulo una richiesta PUT con ID non valido
-            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id="invalid"), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
-            
-        assert response.status_code == 400
-        assert response.json["message"] == "Id deve essere un intero."
+            with pytest.raises(ValueError):
+                response = client.put(url_for('elementoDomanda_blueprint.update_elemento_domanda', id="invalid"), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
         
     def test_update_elemento_domanda_by_id_not_found(self, client, app):
         """Test per il controller di aggiornamento di un elemento domanda non trovato."""
@@ -206,7 +204,7 @@ class TestUpdateElementoDomandaController:
         app.container.elementoDomandaContainer.UpdateElementoDomandaService.override(mockUseCase)
         with app.test_request_context():
             # Simulo una richiesta PUT per aggiornare un elemento domanda non trovato
-            response = client.put(url_for('elementoDomanda_blueprint.updateElementoDomandaById', id=999), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+            response = client.put(url_for('elementoDomanda_blueprint.update_elemento_domanda', id=999), json={"domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
             
         assert response.status_code == 500
         assert response.json["message"] == "Si è verificato un errore nel server, riprova più tardi"

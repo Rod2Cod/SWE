@@ -1,6 +1,6 @@
 from flask import request, jsonify, Blueprint
 from flask.views import MethodView
-from werkzeug.exceptions import BadRequest
+from werkzeug.exceptions import BadRequest, UnsupportedMediaType
 from dependency_injector.wiring import inject, Provide
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
 
@@ -82,9 +82,9 @@ class DeleteElementiDomandaController(MethodView):
                 if deleted else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify({"message": str(e)}), 400
-        except (KeyError, BadRequest):
+        except (KeyError, BadRequest, UnsupportedMediaType):
             return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
-        except Exception:
+        except Exception as e:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 elementoDomanda_blueprint.add_url_rule('/domande/delete', view_func=DeleteElementiDomandaController.as_view('delete_elementi_domanda'))
