@@ -29,12 +29,12 @@ class TestRisultatoTestPersistenceAdapter:
             mockRepositoryTest, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, mockMapperTest
         )
     @pytest.fixture
-    def risultatoSingolaDomanda1(self):
-        metriche1 = {"metrica 1": 8.5, "metrica 2": 9}
-        return RisultatoSingolaDomanda(id=1, domanda="domanda 1", risposta="risposta 1", rispostaLLM = "rispostaLLM 1", score=8.2, metriche=metriche1)
+    def RisultatoSingolaDomanda1(self):
+        metriche2 = {"metrica 1": 7.5, "metrica 2": 6, "metrica 3": 6}
+        return RisultatoSingolaDomanda(id=2, domanda="domanda 1", risposta="risposta 1", rispostaLLM = "rispostaLLM 1", score=7.3, metriche=metriche2)
 
     @pytest.fixture
-    def risultatoSingolaDomanda1(self):
+    def RisultatoSingolaDomanda2(self):
         metriche2 = {"metrica 1": 7.5, "metrica 2": 6, "metrica 3": 6}
         return RisultatoSingolaDomanda(id=2, domanda="domanda 2", risposta="risposta 2", rispostaLLM = "rispostaLLM 2", score=6.2, metriche=metriche2)
 
@@ -161,9 +161,9 @@ class TestRisultatoTestPersistenceAdapter:
 
         assert result is False
 
-    def testGetRisultatoSingolaDomandaTestByIdSuccess(self, adapter, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, risultatoSingolaDomanda1, singolaDomandaId):
+    def testGetRisultatoSingolaDomandaTestByIdSuccess(self, adapter, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, RisultatoSingolaDomanda1, singolaDomandaId):
         mockEntitySingolaDomanda = Mock()
-        expectedRisultatoSingolaDomanda = risultatoSingolaDomanda1
+        expectedRisultatoSingolaDomanda = RisultatoSingolaDomanda1
         mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.return_value = mockEntitySingolaDomanda
         mockMapperSingolaDomanda.fromRisultatoSingolaDomandaEntity.return_value = expectedRisultatoSingolaDomanda
 

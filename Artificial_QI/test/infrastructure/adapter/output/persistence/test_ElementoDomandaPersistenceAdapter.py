@@ -23,7 +23,7 @@ class TestElementoDomandaPersistenceAdapter:
         risposta = "Parigi"
         mockEntity = Mock()
         mockSavedEntity = Mock()
-        expectedElementoDomanda = ElementoDomanda(domanda=domanda, risposta=risposta)
+        expectedElementoDomanda = ElementoDomanda(domanda=domanda, risposta=risposta, id=1)
 
         mockMapper.fromDomandaRisposta.return_value = mockEntity
         mockRepository.saveElementoDomanda.return_value = mockSavedEntity
