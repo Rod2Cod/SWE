@@ -6518,7 +6518,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGVa9b2T+UNE58="
 					},
-					"name": "Main1",
+					"name": "Artificial QI",
 					"defaultDiagram": true,
 					"ownedViews": [
 						{
@@ -69792,7 +69792,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGVma0iH/SxWWc="
 							},
-							"name": "ERDDiagram1",
+							"name": "Artificial QI ER",
 							"ownedViews": [
 								{
 									"_type": "ERDEntityView",
@@ -87068,6 +87068,24 @@
 							}
 						}
 					]
+				}
+			]
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGV8JEebIyxmzE=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Progettazione UML test",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAGV8JF4/Yz9Pec=",
+					"_parent": {
+						"$ref": "AAAAAAGV8JEebIyxmzE="
+					},
+					"name": "ClassDiagram1"
 				}
 			]
 		}
