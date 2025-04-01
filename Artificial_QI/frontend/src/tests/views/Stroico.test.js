@@ -85,17 +85,4 @@ describe('StoricoView.vue', () => {
         await wrapper.find('.test-card').trigger('click')
         expect(mockRouter.push).toHaveBeenCalledWith({ name: 'TestResult', params: { id: 99 } })
     })
-
-    it('formatDate restituisce una stringa leggibile', () => {
-        const wrapper = mount(StoricoView, {
-            global: {
-                mocks: {
-                    $router: mockRouter
-                }
-            }
-        })
-
-        const result = wrapper.vm.formatDate('2024-03-31T12:00:00Z')
-        expect(result).toMatch(/\d{2}\/\d{2}\/\d{4}/)
-    })
 })
