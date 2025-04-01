@@ -48,7 +48,7 @@ class ExecuteTestContainer(containers.DeclarativeContainer):
     evaluator = providers.Factory(
         AlgoritmoValutazioneRisposteImpl,
         scorer=scorer,
-        model=modelPath
+        modelPath=modelPath
     )
 
     # Services
