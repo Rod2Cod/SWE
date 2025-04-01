@@ -19,34 +19,26 @@ describe("Navbar.vue", () => {
 
     it("renderizza il numero corretto di link", () => {
         const navLinks = wrapper.findAll("ul.nav-links li");
-        expect(navLinks.length).toBe(3);
+        expect(navLinks.length).toBe(4);
     });
 
     it("toggleMenu cambia la classe dei nav-links al click del bottone hamburger", async () => {
         const navLinks = wrapper.find("ul.nav-links");
-
         expect(navLinks.classes()).not.toContain("show");
-
-
         const hamburgerButton = wrapper.find("button.hamburger");
         await hamburgerButton.trigger("click");
         expect(navLinks.classes()).toContain("show");
-
         await hamburgerButton.trigger("click");
         expect(navLinks.classes()).not.toContain("show");
     });
 
     it("closeMenu chiude il menu quando si clicca un link", async () => {
         const navLinks = wrapper.find("ul.nav-links");
-
         const hamburgerButton = wrapper.find("button.hamburger");
         await hamburgerButton.trigger("click");
         expect(navLinks.classes()).toContain("show");
-
-
         const link = wrapper.find("ul.nav-links li a");
         await link.trigger("click");
-
         expect(navLinks.classes()).not.toContain("show");
     });
 });

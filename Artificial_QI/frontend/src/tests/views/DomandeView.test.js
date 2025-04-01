@@ -1,107 +1,86 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import DomandeView from '@/views/DomandeView.vue';
+import { mount, flushPromises } from '@vue/test-utils'
+import DomandeView from "@/views/DomandeView.vue";
+import axios from 'axios'
+import { createRouter, createWebHistory } from 'vue-router'
+import { describe, it, vi, expect, beforeEach } from 'vitest'
+
+// Mock domande
+const mockQuestions = [
+    { id: 1, domanda: 'Domanda 1', risposta: 'Risposta 1' },
+    { id: 2, domanda: 'Domanda 2', risposta: 'Risposta 2' }
+]
+
+vi.mock('axios')
+
+// Router mock
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [{ path: '/addquestion', name: 'AddQuestion' }]
+})
 
 describe('DomandeView.vue', () => {
-    const mockRouterPush = vi.fn();
-    const globalConfig = {
-        config: {
-            globalProperties: {
-                $router: {
-                    push: mockRouterPush,
-                },
-            },
-        },
-        stubs: {
-            IonIcon: {
-                template: '<div class="ion-icon-stub" @click="$emit(\'click\')"></div>',
-            },
-            Domanda: {
-                template: '<div class="domanda-stub"></div>',
-            },
-        },
-    };
+    let wrapper
 
-    beforeEach(() => {
-        mockRouterPush.mockClear();
-        vi.stubGlobal('alert', vi.fn());
-        vi.stubGlobal('confirm', () => true);
-    });
+    beforeEach(async () => {
+        axios.get.mockResolvedValue({ data: mockQuestions })
+        wrapper = mount(DomandeView, {
+            global: {
+                plugins: [router]
+            }
+        })
+        await flushPromises()
+    })
 
-    afterEach(() => {
-        vi.unstubAllGlobals();
-    });
+    it('carica le domande al mount', () => {
+        expect(axios.get).toHaveBeenCalledWith('/domande')
+        expect(wrapper.vm.questions.length).toBe(2)
+    })
 
-    it('renderizza il titolo della pagina e la lista di domande', () => {
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        expect(wrapper.find('.page-title').text()).toBe('Domande');
-        const questionContainers = wrapper.findAll('.question-container');
-        expect(questionContainers.length).toBe(3);
-    });
+    it('mostra il messaggio se non ci sono domande', async () => {
+        axios.get.mockResolvedValue({ data: [] })
+        wrapper = mount(DomandeView, { global: { plugins: [router] } })
+        await flushPromises()
+        expect(wrapper.text()).toContain('Nessuna domanda inserita!')
+    })
 
-    it('al click del pulsante "Aggiungi" naviga a "/addquestion"', async () => {
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        const addBtn = wrapper.find('.add-btn');
-        await addBtn.trigger('click');
-        expect(mockRouterPush).toHaveBeenCalledWith('/addquestion');
-    });
+    it('naviga alla pagina per aggiungere una domanda', async () => {
+        router.push = vi.fn()
+        await wrapper.vm.goToAddQuestion()
+        expect(router.push).toHaveBeenCalledWith('/addquestion')
+    })
 
-    it('attiva la modalità di eliminazione e mostra le checkbox', async () => {
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        expect(wrapper.find('input.question-checkbox').exists()).toBe(false);
-        const deleteBtn = wrapper.find('.delete-btn');
-        await deleteBtn.trigger('click');
-        const checkboxes = wrapper.findAll('input.question-checkbox');
-        expect(checkboxes.length).toBe(3);
-    });
+    it('attiva la modalità eliminazione', async () => {
+        await wrapper.find('.delete-btn').trigger('click')
+        expect(wrapper.vm.isDeleting).toBe(true)
+    })
 
-    it('gestisce la selezione delle domande tramite checkbox', async () => {
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        const deleteBtn = wrapper.find('.delete-btn');
-        await deleteBtn.trigger('click');
-        expect(wrapper.vm.selectedQuestions).toEqual([]);
-        const checkboxes = wrapper.findAll('input.question-checkbox');
-        await checkboxes[0].setValue(true);
-        expect(wrapper.vm.selectedQuestions).toEqual([1]);
-        await checkboxes[0].setValue(false);
-        expect(wrapper.vm.selectedQuestions).toEqual([]);
-    });
+    it('seleziona e deseleziona una domanda', async () => {
+        wrapper.vm.startDeleteMode()
+        await wrapper.vm.$nextTick()
+        wrapper.vm.toggleSelection(1)
+        expect(wrapper.vm.selectedQuestions).toContain(1)
 
-    it('mostra un alert se si tenta di confermare l\'eliminazione senza selezionare domande', async () => {
-        const alertSpy = vi.fn();
-        vi.stubGlobal('alert', alertSpy);
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        const deleteBtn = wrapper.find('.delete-btn');
-        await deleteBtn.trigger('click');
-        const confirmDeleteBtn = wrapper.find('.confirm-delete-btn');
-        await confirmDeleteBtn.trigger('click');
-        expect(alertSpy).toHaveBeenCalled();
-    });
+        wrapper.vm.toggleSelection(1)
+        expect(wrapper.vm.selectedQuestions).not.toContain(1)
+    })
 
-    it('elimina le domande selezionate al conferma', async () => {
-        vi.stubGlobal('confirm', () => true);
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        const deleteBtn = wrapper.find('.delete-btn');
-        await deleteBtn.trigger('click');
-        const checkboxes = wrapper.findAll('input.question-checkbox');
-        await checkboxes[0].setValue(true);
-        await checkboxes[1].setValue(true);
-        expect(wrapper.vm.selectedQuestions).toEqual([1, 2]);
-        const confirmDeleteBtn = wrapper.find('.confirm-delete-btn');
-        await confirmDeleteBtn.trigger('click');
-        expect(wrapper.vm.questions.length).toBe(1);
-        expect(wrapper.vm.questions[0].id).toBe(3);
-        expect(wrapper.vm.isDeleting).toBe(false);
-    });
+    it('conferma e invia la richiesta di eliminazione', async () => {
+        axios.delete.mockResolvedValue({})
+        window.confirm = vi.fn(() => true)
 
-    it('annulla la modalità di eliminazione al click del pulsante "Annulla"', async () => {
-        const wrapper = mount(DomandeView, { global: globalConfig });
-        const deleteBtn = wrapper.find('.delete-btn');
-        await deleteBtn.trigger('click');
-        expect(wrapper.vm.isDeleting).toBe(true);
-        const cancelBtn = wrapper.find('.cancel-btn');
-        await cancelBtn.trigger('click');
-        expect(wrapper.vm.isDeleting).toBe(false);
-        expect(wrapper.vm.selectedQuestions).toEqual([]);
-    });
-});
+        wrapper.vm.startDeleteMode()
+        wrapper.vm.selectedQuestions = [1]
+        await wrapper.vm.confirmDelete()
+
+        expect(axios.delete).toHaveBeenCalledWith('/domande/delete', { data: { ids: [1] } })
+        expect(wrapper.vm.questions.length).toBe(1) // Rimuove la domanda 1
+        expect(wrapper.vm.isDeleting).toBe(false)
+    })
+
+    it('non elimina nulla se nessuna domanda è selezionata', async () => {
+        window.alert = vi.fn()
+        wrapper.vm.selectedQuestions = []
+        await wrapper.vm.confirmDelete()
+        expect(window.alert).toHaveBeenCalledWith('Seleziona almeno una domanda da eliminare.')
+    })
+})

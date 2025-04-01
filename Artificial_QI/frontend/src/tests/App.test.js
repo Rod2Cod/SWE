@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import App from '@/App.vue'
 
 describe('App.vue', () => {
-    it('renders header with Navbar and RouterView', () => {
+    it('Renderizza l\'app con la navbar e il componente routerview, che gestisce le viste', () => {
         const wrapper = mount(App, {
             global: {
                 stubs: {

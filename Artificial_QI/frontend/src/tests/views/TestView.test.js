@@ -1,80 +1,53 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import TestView from '@/views/TestView.vue';
+import { mount, flushPromises } from '@vue/test-utils'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+import TestView from '@/views/TestView.vue'
+import axios from 'axios'
+
+// Mock axios
+vi.mock('axios')
 
 describe('TestView.vue', () => {
+    let wrapper
+    const mockRouter = {
+        push: vi.fn()
+    }
+
     beforeEach(() => {
-        vi.useFakeTimers();
-    });
-    afterEach(() => {
-        vi.useRealTimers();
-    });
-
-    it('renders initial state with start button', () => {
-        const wrapper = mount(TestView);
-        expect(wrapper.find('.page-title').text()).toBe('Esegui un Test');
-        expect(wrapper.find('button.start-btn').exists()).toBe(true);
-        expect(wrapper.find('.progress-container').exists()).toBe(false);
-        expect(wrapper.find('.test-results').exists()).toBe(false);
-    });
-
-    it('starts test execution on clicking the start button', async () => {
-        const wrapper = mount(TestView);
-        await wrapper.find('button.start-btn').trigger('click');
-        expect(wrapper.vm.testStarted).toBe(true);
-        expect(wrapper.find('.progress-container').exists()).toBe(true);
-        expect(wrapper.find('.test-results').exists()).toBe(false);
-        expect(wrapper.vm.progress).toBe(0);
-    });
-
-    it('updates progress during test execution and completes test execution', async () => {
-        const wrapper = mount(TestView, {
+        vi.useFakeTimers()
+        vi.clearAllMocks()
+        wrapper = mount(TestView, {
             global: {
-                stubs: {
-                    Test: {
-                        template: '<div class="test-stub">{{ test.llmUsed }}</div>',
-                        props: ['test']
-                    }
+                mocks: {
+                    $router: mockRouter
                 }
             }
-        });
-        await wrapper.find('button.start-btn').trigger('click');
-        for (let i = 1; i <= 5; i++) {
-            vi.advanceTimersByTime(300);
-            await wrapper.vm.$nextTick();
-        }
-        expect(wrapper.vm.progress).toBe(50);
-        const progressFill = wrapper.find('.progress-fill');
-        expect(progressFill.exists()).toBe(true);
-        expect(progressFill.element.style.width).toBe('50%');
-        for (let i = 6; i <= 10; i++) {
-            vi.advanceTimersByTime(300);
-            await wrapper.vm.$nextTick();
-        }
-        expect(wrapper.vm.progress).toBe(100);
+        })
+    })
 
-    });
+    it('avvia il test e mostra la barra di avanzamento', async () => {
+        const startPollingMock = vi.fn()
+        wrapper.vm.startPolling = startPollingMock
 
-    it('renders the Test component with test data after completion', async () => {
-        const wrapper = mount(TestView, {
-            global: {
-                stubs: {
-                    Test: {
-                        template: '<div class="test-stub">{{ test.llmUsed }}</div>',
-                        props: ['test']
-                    }
-                }
-            }
-        });
-        await wrapper.find('button.start-btn').trigger('click');
-        vi.advanceTimersByTime(3000);
-        vi.runOnlyPendingTimers();
-        await wrapper.vm.$nextTick();
-        expect(wrapper.vm.testCompleted).toBe(true);
-        const testStub = wrapper.find('.test-stub');
-        expect(testStub.exists()).toBe(true);
-        expect(testStub.text()).toBe('GPT-4');
-        expect(wrapper.vm.test).toHaveProperty('questionSet', 'Vue Basics');
-        expect(wrapper.vm.test.questions.length).toBe(2);
-    });
-});
+        await wrapper.find('.start-btn').trigger('click')
+
+        expect(wrapper.vm.testStarted).toBe(true)
+        expect(startPollingMock).toHaveBeenCalled()
+        expect(wrapper.find('.progress-container').exists()).toBe(true)
+    })
+
+
+    it('cliccando su "Vai al risultato!" naviga alla pagina dei risultati', async () => {
+        wrapper.setData({
+            testCompleted: true,
+            id: 'abc123'
+        })
+
+        await flushPromises()
+        await wrapper.find('.start-btn').trigger('click')
+
+        expect(mockRouter.push).toHaveBeenCalledWith({
+            name: 'TestResult',
+            params: { id: 'abc123' }
+        })
+    })
+})

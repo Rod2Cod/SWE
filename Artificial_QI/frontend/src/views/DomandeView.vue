@@ -6,9 +6,6 @@
         <button class="add-btn"  v-if="!isDeleting" @click="goToAddQuestion">
           <IonIcon :icon="addOutline"></IonIcon> Aggiungi
         </button>
-
-
-
         <template v-if="isDeleting">
           <button class="confirm-delete-btn" @click="confirmDelete">
             <IonIcon :icon="trashOutline"></IonIcon> Conferma Eliminazione
@@ -42,7 +39,7 @@
             @change="toggleSelection(question.id)"
         />
         <div class="question-box">
-          <Domanda :question="question.domanda" :expectedAnswer="question.risposta" :id="question.id" />
+          <Domanda :question="question.domanda" :expectedAnswer="question.risposta" :id="question.id" :isDeleting="isDeleting" />
         </div>
       </div>
     </div>
