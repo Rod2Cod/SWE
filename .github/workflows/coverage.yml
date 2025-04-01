@@ -15,7 +15,7 @@ jobs:
       runs-on: ubuntu-latest
       defaults:
         run:
-          working-directory: ./Artificial_QI/frotnend
+          working-directory: ./Artificial_QI/frontend
 
       steps:
         - name: Checkout repository
