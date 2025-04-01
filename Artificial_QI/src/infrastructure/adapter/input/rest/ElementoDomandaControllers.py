@@ -4,10 +4,10 @@ from werkzeug.exceptions import BadRequest, UnsupportedMediaType
 from dependency_injector.wiring import inject, Provide
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
 
-from src.application.ports.input import (AddElementoDomandaUseCase, 
-                                         GetElementoDomandaUseCase, 
-                                         GetAllElementiDomandaUseCase, 
-                                         DeleteElementiDomandaUseCase, 
+from src.application.ports.input import (AddElementoDomandaUseCase,
+                                         GetElementoDomandaUseCase,
+                                         GetAllElementiDomandaUseCase,
+                                         DeleteElementiDomandaUseCase,
                                          UpdateElementoDomandaUseCase)
 
 

@@ -1,9 +1,3 @@
-[tool.radon]
-ignore = "test"
-cc_min = 'B'
-cc_max = 'F'
-show_complexity = true
-
 [tool.coverage.run]
 branch = true
 omit = [

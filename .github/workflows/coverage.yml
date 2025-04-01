@@ -53,4 +53,4 @@ jobs:
     - name: Check ciclomatic complexity
       run: |
        cd Artificial_QI
-       xenon --max-absolute B --max-average A .
+       xenon --max-absolute B --max-average A -e "test/*" .
