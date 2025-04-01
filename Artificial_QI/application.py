@@ -46,7 +46,7 @@ def create_app(testing=False) -> Flask:
         """ Creo le tabelle del database. Devo importare i modelli per far si che vengano creati """
         from src.infrastructure.adapter.output.persistence.domain import (
             ElementoDomandaEntity, RisultatoTestEntity, 
-            RisultatoSingolaDomandaEntity, MetricheEntity)
+            RisultatoSingolaDomandaEntity, RisultatoMetricaEntity)
         db.create_all()
     
     """ Configuro i controller di esecuzione test (necessario per registrare le route) """
