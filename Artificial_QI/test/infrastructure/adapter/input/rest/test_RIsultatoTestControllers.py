@@ -17,7 +17,7 @@ def app():
 def client(app):
     return app.test_client()
 
-class TestRisultatoTestControllers:
+class TestGetRisultatoTestControllers:
     def test_get_risultato_test_by_id(self,client,app):
         # Mocking the GetRisultatoTestUseCase
         mock_use_case = mock.Mock(spec=GetRisultatoTestUseCase)
