@@ -4,7 +4,7 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Artifial QI</h1>
+        <h1>Artificial QI</h1>
         <p>Valutiamo l'intelligenza artificiale, un confronto tra ciò che dice e ciò che ci aspettiamo.</p>
         <button class="cta-btn" @click="goToQuestion()">Scopri di più</button>
       </div>

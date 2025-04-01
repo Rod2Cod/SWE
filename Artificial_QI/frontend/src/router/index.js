@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DomandeView from "@/views/DomandeView.vue";
 import TestView from "@/views/TestView.vue";
-import AggiungiDomanda from "@/views/AggiungiDomanda.vue";
-import ModificaDomanda from "@/views/ModificaDomanda.vue";
-import HistoryView from "@/views/HistoryView.vue";
+import AggiungiDomandaView from "@/views/AggiungiDomandaView.vue";
+import ModificaDomandaView from "@/views/ModificaDomandaView.vue";
+import StoricoView from "@/views/StoricoView.vue";
 import TestResultView from "@/views/TestResultView.vue";
 
 const router = createRouter({
@@ -23,12 +23,12 @@ const router = createRouter({
     {
       path: '/addquestion',
       name: 'addquestion',
-      component: AggiungiDomanda,
+      component: AggiungiDomandaView,
     },
     {
       path: '/editquestion/:id',
       name: 'editquestion',
-      component: ModificaDomanda,
+      component: ModificaDomandaView,
     },
     {
       path: '/test',
@@ -38,7 +38,7 @@ const router = createRouter({
     {
       path: '/history',
       name: 'history',
-      component: HistoryView,
+      component: StoricoView,
     },
     {
       path: '/testresult/:id',

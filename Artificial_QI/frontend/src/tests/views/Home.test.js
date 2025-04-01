@@ -18,7 +18,7 @@ describe("HomeView", () => {
                 },
                 stubs: {
                     IonIcon: {
-                        template: "<div><slot /></div>",
+                        template: "<div><slot/></div>",
                     },
                 },
             },
@@ -29,10 +29,10 @@ describe("HomeView", () => {
         expect(wrapper.exists()).toBe(true);
     });
 
-    it("Mostra il titolo 'Artifial QI'", () => {
+    it("Mostra il titolo 'Artificial QI'", () => {
         const title = wrapper.find("h1");
         expect(title.exists()).toBe(true);
-        expect(title.text()).toBe("Artifial QI");
+        expect(title.text()).toBe("Artificial QI");
     });
 
     it("Mostra il pulsante con testo 'Scopri di più'", () => {
@@ -41,7 +41,7 @@ describe("HomeView", () => {
         expect(button.text()).toBe("Scopri di più");
     });
 
-    it("Click sul pulsante chiama $router.push('/questions')", async () => {
+    it("Click sul pulsante scopri di più chiama $router.push('/questions') e renderizza alla pagina delle domande", async () => {
         const button = wrapper.find("button.cta-btn");
         await button.trigger("click");
         expect(mockRouterPush).toHaveBeenCalledWith("/questions");

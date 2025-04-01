@@ -1,6 +1,6 @@
 <template>
   <div class="question-card">
-    <IonIcon :icon="pencilOutline" class="edit-icon" @click="editQuestion"></IonIcon>
+    <IonIcon :icon="pencilOutline" v-if="!isDeleting" class="edit-icon" @click="editQuestion"></IonIcon>
     <h2 class="question-title">{{ question }}</h2>
     <p class="expected-answer">{{ expectedAnswer }}</p>
   </div>
@@ -19,7 +19,8 @@ export default {
   props: {
     id: Number,
     question: String,
-    expectedAnswer: String
+    expectedAnswer: String,
+    isDeleting: Boolean,
   },
   data() {
     return {

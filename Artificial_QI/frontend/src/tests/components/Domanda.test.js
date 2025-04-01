@@ -35,7 +35,7 @@ describe('Domanda.vue', () => {
         expect(wrapper.find('.expected-answer').text()).toBe('Intelligenza Artificiale');
     });
 
-    it('al click sull\'icona, chiama editQuestion e naviga correttamente', async () => {
+    it('al click sull\'icona di edit, naviga correttamente nella vista di edit', async () => {
         const wrapper = factory({
             id: 42,
             question: 'Che cos\'è l\'IA?',
