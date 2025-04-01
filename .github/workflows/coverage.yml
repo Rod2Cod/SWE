@@ -39,7 +39,7 @@ jobs:
           uses: coverallsapp/github-action@v2
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            path-to-lcov: coverage/lcov.info
+            path-to-lcov:  ./Artificial_QI/frontend/coverage/lcov.info
   CodeCoverageBackend:
     runs-on: ubuntu-latest
 
