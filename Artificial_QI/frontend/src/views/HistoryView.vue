@@ -12,24 +12,32 @@
           @click="vaiAlDettaglio(test.id)"
       >
         <div class="test-card p-3 shadow-sm h-100">
-          <p><strong>Data:</strong> {{ formatDate(test.data) }}</p>
+          <p><strong>Data:</strong> {{ formatDate(test.dataEsecuzione) }}</p>
           <p><strong>Score:</strong> {{ test.score }}/10</p>
-          <p><strong>LLM:</strong> {{ test.llm }}</p>
-          <p><strong>Nome Set:</strong> {{ test.nomeSet }}</p>
+          <p><strong>LLM:</strong> {{ test.LLM }}</p>
         </div>
       </div>
     </div>
 
-    <p v-if="tests.length === 0" class="mt-4 text-white">Nessun test completato trovato.</p>
+    <div class="d-flex justify-content-center mt-5" v-if="isLoading">
+      <img class="loading" src="@/assets/loading.svg">
+    </div>
+
+    <div class="d-flex justify-content-center mt-5" v-if="!isLoading && tests.length === 0">
+      <h2>Nessuna test eseguito</h2>
+    </div>
   </main>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "HistoryView",
   data() {
     return {
       tests: [],
+      isLoading: false,
     };
   },
   mounted() {
@@ -38,14 +46,14 @@ export default {
   methods: {
     async caricaStorico() {
       try {
-        const response = await fetch('/api/test/history'); // Da adattare al backend reale
-        const data = await response.json();
-        this.tests = data;
+        this.isLoading = true;
+        const response = await axios.get('/risultati'); // Da adattare al backend reale
+        this.tests = response.data;
+        console.log('Storico test:', this.tests);
+        this.isLoading = false;
+
       } catch (error) {
-        this.tests = [
-          { id: 1, data: "2025-03-26T18:30:00.000Z", score: 8.6, llm: "OLLama 3", nomeSet: "All" },
-          { id: 2, data: "2025-03-27T10:00:00.000Z", score: 10, llm: "GPT-4", nomeSet: "All" }
-        ]
+        this.isLoading = false;
         console.error('Errore nel recupero dello storico:', error);
       }
     },
@@ -84,6 +92,12 @@ export default {
   color: #ffffff;
   font-size: 28px;
   font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 20px;
   text-align: center;
 }
 </style>

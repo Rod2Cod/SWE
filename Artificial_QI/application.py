@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from src.infrastructure.adapter.output.persistence.Extensions import db
 from src.infrastructure.adapter.input.rest import (elementoDomanda_blueprint, 
                                                     AddElementoDomandaController, 
@@ -18,6 +19,8 @@ from src.infrastructure.adapter.input.rest.containers.Containers import RootCont
 def create_app(testing=False) -> Flask:
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "default_secret_key"
+
+    CORS(app)
 
     """ Impedisco a flask di ordinare le chiavi json alfabeticamente"""
     app.json.sort_keys = False
@@ -45,6 +48,9 @@ def create_app(testing=False) -> Flask:
             ElementoDomandaEntity, RisultatoTestEntity, 
             RisultatoSingolaDomandaEntity, MetricheEntity)
         db.create_all()
+    
+    """ Configuro i controller di esecuzione test (necessario per registrare le route) """
+    executeTestController = ExecuteTestController()
     
     """ Registro i blueprint (route inserite in altri file) """
     app.register_blueprint(elementoDomanda_blueprint)

@@ -1,5 +1,6 @@
 from src.infrastructure.adapter.output.persistence.domain import ElementoDomandaEntity
 
+
 class ElementoDomandaPostgreSQLRepository:
     def __init__(self, db):
         self.__db = db

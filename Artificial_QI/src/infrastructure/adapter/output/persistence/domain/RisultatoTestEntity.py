@@ -1,14 +1,14 @@
 from src.infrastructure.adapter.output.persistence.Extensions import db
 
-class MetricheEntity(db.Model):
-    __tablename__ = 'risultato_metriche'
+class RisultatoMetricaEntity(db.Model):
+    __tablename__ = 'RisultatoMetrica'
     nomeMetrica = db.Column(db.Text, primary_key=True)  # Chiave primaria
     score = db.Column(db.Float, nullable=False)
     risultatoDomandaId = db.Column(db.Integer, db.ForeignKey('risultato_singola_domanda.id', ondelete='CASCADE'), nullable=False, primary_key=True)
     risultatoDomanda = db.relationship('RisultatoSingolaDomandaEntity', back_populates="risultatiMetriche")  # Relazione uno a molti con la tabella risultato_singola_domanda (bidirezionale)
 
 class RisultatoSingolaDomandaEntity(db.Model):
-    __tablename__ = 'risultato_singola_domanda'
+    __tablename__ = 'RisultatoSingolaDomanda'
     id = db.Column(db.Integer, primary_key=True)  # Chiave primaria
     domanda = db.Column(db.Text, nullable=False)
     risposta = db.Column(db.Text, nullable=False) 
@@ -19,7 +19,7 @@ class RisultatoSingolaDomandaEntity(db.Model):
     risultatiMetriche = db.relationship('MetricheEntity', back_populates="risultatoDomanda")  # Relazione uno a molti con la tabella elemento_domanda (bidirezionale)
 
 class RisultatoTestEntity(db.Model):
-    __tablename__ = 'risultato_test'
+    __tablename__ = 'RisultatoTest'
     id = db.Column(db.Integer, primary_key=True)  # Chiave primaria
     data = db.Column(db.DateTime, nullable=False)
     score = db.Column(db.Float, nullable=False)

@@ -22,13 +22,13 @@
         <div class="feature-card">
           <IonIcon :icon="analyticsOutline" class="feature-icon"></IonIcon>
           <h3>Valutazione Intelligente</h3>
-          <p>Usiamo metriche avanzate per assegnare un punteggio alla qualità delle risposte.</p>
+          <p>Usiamo metriche per assegnare un punteggio alla qualità delle risposte.</p>
         </div>
 
         <div class="feature-card">
-          <IonIcon :icon="trophyOutline" class="feature-icon"></IonIcon>
-          <h3>Ottimizzazione</h3>
-          <p>Fornisci feedback per migliorare le prestazioni dei modelli AI.</p>
+          <IonIcon :icon="statsChartOutline" class="feature-icon"></IonIcon>
+          <h3>Monitoraggio</h3>
+          <p>Consulta i punteggi e lo storico dei test per analizzare l’andamento nel tempo.</p>
         </div>
       </div>
     </section>
@@ -37,7 +37,7 @@
 
 <script>
 import { IonIcon } from "@ionic/vue";
-import { chatbubblesOutline, analyticsOutline, trophyOutline } from "ionicons/icons";
+import { chatbubblesOutline, analyticsOutline, statsChartOutline } from "ionicons/icons";
 
 export default {
   name: "HomeView",
@@ -48,7 +48,7 @@ export default {
     return {
       chatbubblesOutline,
       analyticsOutline,
-      trophyOutline
+      statsChartOutline
     };
   },
   methods: {
