@@ -49,18 +49,6 @@ def create_app(testing=False) -> Flask:
             RisultatoSingolaDomandaEntity, MetricheEntity)
         db.create_all()
     
-    """ Configuro i controller di elemento domanda (necessario per registrare le route) """
-    addElementoDomandaController = AddElementoDomandaController()
-    getElementoDomandaController = GetElementoDomandaController()
-    getAllElementiDomandaController = GetAllElementiDomandaController()
-    deleteElementiDomandaController = DeleteElementiDomandaController()
-    updateElementoDomandaController = UpdateElementoDomandaController()
-    
-    """ Configuro i controller di risultato test (necessario per registrare le route) """
-    getRisultatoTestController = GetRisultatoTestController()
-    getAllRisultatiTestController = GetAllRisultatiTestController()
-    getRisultatoSingolaDomandaController = GetRisultatoSingolaDomandaController()
-    
     """ Configuro i controller di esecuzione test (necessario per registrare le route) """
     executeTestController = ExecuteTestController()
     
