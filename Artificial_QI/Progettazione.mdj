@@ -4914,6 +4914,37 @@
 									}
 								}
 							],
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAGV8h2xIfR9qGU=",
+									"_parent": {
+										"$ref": "AAAAAAGVheC+NNLWTNA="
+									},
+									"name": "scorer",
+									"visibility": "private",
+									"type": "Scorer"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAGV8icueRnIr70=",
+									"_parent": {
+										"$ref": "AAAAAAGVheC+NNLWTNA="
+									},
+									"name": "modelPath",
+									"visibility": "private",
+									"type": "str"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAGV8ieGOTtZ2vw=",
+									"_parent": {
+										"$ref": "AAAAAAGVheC+NNLWTNA="
+									},
+									"name": "model",
+									"visibility": "private"
+								}
+							],
 							"operations": [
 								{
 									"_type": "UMLOperation",
@@ -45844,12 +45875,68 @@
 									"model": {
 										"$ref": "AAAAAAGVheC+NNLWTNA="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGV8h2xUfUl080=",
+											"_parent": {
+												"$ref": "AAAAAAGVheC+NNLeqW4="
+											},
+											"model": {
+												"$ref": "AAAAAAGV8h2xIfR9qGU="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 4637,
+											"top": 2910,
+											"width": 440.6767578125,
+											"height": 13,
+											"text": "-scorer: Scorer",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGV8icukRpwixA=",
+											"_parent": {
+												"$ref": "AAAAAAGVheC+NNLeqW4="
+											},
+											"model": {
+												"$ref": "AAAAAAGV8icueRnIr70="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 4637,
+											"top": 2925,
+											"width": 440.6767578125,
+											"height": 13,
+											"text": "-modelPath: str",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGV8ieGVDwBN9g=",
+											"_parent": {
+												"$ref": "AAAAAAGVheC+NNLeqW4="
+											},
+											"model": {
+												"$ref": "AAAAAAGV8ieGOTtZ2vw="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 4637,
+											"top": 2940,
+											"width": 440.6767578125,
+											"height": 13,
+											"text": "-model",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 4632,
 									"top": 2905,
 									"width": 450.6767578125,
-									"height": 10
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -45873,7 +45960,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 4637,
-											"top": 2920,
+											"top": 2963,
 											"width": 440.6767578125,
 											"height": 13,
 											"text": "+evaluate(risposta: str, rispostaLLM: str): dict<metrica_&_score> float",
@@ -45891,7 +45978,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 4637,
-											"top": 2935,
+											"top": 2978,
 											"width": 440.6767578125,
 											"height": 13,
 											"text": "-transformInput(data: dict<>): pd.DataFrame",
@@ -45901,7 +45988,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 4632,
-									"top": 2915,
+									"top": 2958,
 									"width": 450.6767578125,
 									"height": 38
 								},
@@ -45949,7 +46036,7 @@
 							"left": 4632,
 							"top": 2880,
 							"width": 449.6767578125,
-							"height": 73,
+							"height": 116,
 							"nameCompartment": {
 								"$ref": "AAAAAAGVheC+NNLZRTA="
 							},
