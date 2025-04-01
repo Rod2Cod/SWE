@@ -1,14 +1,14 @@
 import pytest
 from src.domain import RisultatoSingolaDomanda
-from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, MetricheEntity
+from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, RisultatoMetricaEntity
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoSingolaDomandaPersistenceMapper
 
 class test_RisultatoSingolaDomandaPersistenceMapper:
 
     def test_FromRisultatoSingolaDomandaEntity(self):
         metricheEntity = [
-            MetricheEntity(nomeMetrica="bert", score=0.9),
-            MetricheEntity(nomeMetrica="roberta", score=0.85)
+            RisultatoMetricaEntity(nomeMetrica="bert", score=0.9),
+            RisultatoMetricaEntity(nomeMetrica="roberta", score=0.85)
         ]
         entity = RisultatoSingolaDomandaEntity(
             id=1,
