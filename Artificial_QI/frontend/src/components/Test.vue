@@ -4,27 +4,24 @@ export default {
   props: {
     test: Object,
   },
+  methods: {
+    risultatoSingolaDomanda(id) {
+      console.log("QUII")
+    },
+  },
   mounted() {
-    console.log("Test component mounted with props:", this.test.questions[0]);
+
   }
 };
-</script>
 
-<template>
-  <div class="test-card">
-    <!-- <h2 class="test-title">Test del {{ test.date }}</h2> -->
 
-    <p class="test-info"><strong>Modello LLM:</strong> {{ test.llmUsed }}</p>
-    <p class="test-info"><strong>Punteggio Totale:</strong> {{ test.score }}/10</p>
+/*
 
-    <h3 class="section-title">Risultati del Test</h3>
-    <div class="question-list">
-      <div v-for="(question, index) in test.questions" :key="index" class="question-item">
+<div v-for="(question, index) in test.questions" :key="index" class="question-item">
         <p class="question-text"><strong>Domanda:</strong> {{ question.text }}</p>
         <p class="expected-answer"><strong>Risposta Attesa:</strong> {{ question.expectedAnswer }}</p>
         <p class="llm-response"><strong>Risposta del LLM:</strong> {{ question.llmResponse }}</p>
         <p class="score"><strong>Punteggio:</strong> {{ question.score }}</p>
-
         <div v-if="question.metrics && Object.keys(question.metrics).length" class="question-metrics">
           <p class="metric-title">Metriche:</p>
           <ul class="metrics-list">
@@ -33,6 +30,23 @@ export default {
             </li>
           </ul>
         </div>
+      </div>
+
+ */
+</script>
+
+<template>
+  <div class="test-card">
+    <h2 class="test-title">Test del {{ test.dataEsecuzione }}</h2>
+
+    <p class="test-info"><strong>Modello LLM:</strong> {{ test.llmUsed }}</p>
+    <p class="test-info"><strong>Punteggio Totale:</strong> {{ test.score }}/10</p>
+
+    <h3 class="section-title">Risultati del Test</h3>
+    <div class="question-list">
+      <div v-for="(question, index) in test.risultatiDomande" :key="index" class="question-item" @click="risultatoSingolaDomanda">
+        <p class="question-text"><strong>Domanda:</strong> {{ question.domanda }}</p>
+        <p class="question-text"><strong>Punteggio:</strong> {{ question.score }}</p>
       </div>
     </div>
   </div>

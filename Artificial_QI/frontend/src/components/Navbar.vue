@@ -29,7 +29,7 @@ export default {
       <!-- Logo -->
       <RouterLink to="/" class="logo-container">
         <img src="@/assets/logo.webp" alt="Artifial QI logo" class="logo" />
-        <span class="brand-name">Artifial QI</span>
+        <span class="brand-name">Artificial QI</span>
       </RouterLink>
 
       <!-- Hamburger menu -->
