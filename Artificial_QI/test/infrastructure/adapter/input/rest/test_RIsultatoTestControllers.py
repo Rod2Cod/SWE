@@ -113,13 +113,13 @@ class TestGetAllRisultatiTestController:
     def test_get_all_risultati_test_empty(self,client,app):
         mock_use_case = mock.Mock(spec=GetAllRisultatiTestUseCase)
         app.container.risultatoTestContainer.GetAllRisultatiTestService.override(mock_use_case)
-        mock_use_case.getAllRisultatiTest.return_value = None
+        mock_use_case.getAllRisultatiTest.return_value = {}
 
         with app.test_request_context():
             response = client.get(url_for('risultatoTest_blueprint.get_all_risultati_test'))
 
-        assert response.status_code == 500
-        assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
+        assert response.status_code == 200
+        assert len(response.json) == 0
 
     def test_get_all_risultati_server_error(self,client,app):
         mock_use_case = mock.Mock(spec=GetAllRisultatiTestUseCase)

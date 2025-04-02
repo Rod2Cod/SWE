@@ -148,7 +148,7 @@ class TestGetAllElementiDomandaController:
     def test_get_all_elementi_domanda_empty(self, client, app):
         """Test per il controller di recupero di tutti gli elementi domanda quando non ci sono elementi."""
         mockUseCase = mock.Mock(spec=GetAllElementiDomandaUseCase)
-        mockUseCase.getAllElementiDomanda.return_value = []
+        mockUseCase.getAllElementiDomanda.return_value = {}
         
         with app.container.elementoDomandaContainer.GetAllElementiDomandaService.override(mockUseCase):
             with app.test_request_context():
