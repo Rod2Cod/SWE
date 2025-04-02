@@ -100,6 +100,15 @@ class TestElementoDomandaPersistenceAdapter:
         assert len(result) == 2
         assert result == elementi
         
+    def test_get_all_elementi_domanda_empty(self):
+        """Test per il recupero di tutti gli elementi domanda vuoti."""
+
+        self.mockRepository.loadAllElementiDomanda.return_value = set()
+        self.mockMapper.fromElementoDomandaEntity.side_effect = set()
+        result = self.adapter.getAllElementiDomanda()
+
+        assert len(result) == 0
+        
     def test_get_all_elementi_domanda_db_error(self):
         """Test per il recupero di tutti gli elementi domanda con errore nel database."""
 
