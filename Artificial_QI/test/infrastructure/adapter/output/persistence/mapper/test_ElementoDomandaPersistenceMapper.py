@@ -22,7 +22,7 @@ class TestElementoDomandaPersistenceMapper:
         assert elemento.getDomanda().getText() == domanda
         assert elemento.getRisposta().getText() == risposta
 
-    def test_ToElementoDomandaEntity(self):
+    def test_to_elemento_domanda_entity(self):
         """Test per la creazione di un oggetto ElementoDomandaEntity a partire da un oggetto ElementoDomanda."""
         
         domanda = "Qual è la capitale della Germania?"
@@ -36,7 +36,7 @@ class TestElementoDomandaPersistenceMapper:
         assert entity.risposta == risposta
         assert entity.id is None  # L'ID di una nuova entità è None prima del salvataggio
 
-    def test_FromDomandaRisposta(self):
+    def test_from_domanda_risposta(self):
         """Test per la creazione di un oggetto ElementoDomandaEntity a partire da una domanda e una risposta."""
         
         domanda_text = "Quanto fa 2 + 2?"
