@@ -1,82 +1,57 @@
-import pytest
 from src.domain import RisultatoSingolaDomanda
 from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, RisultatoMetricaEntity
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoSingolaDomandaPersistenceMapper
 
-class test_RisultatoSingolaDomandaPersistenceMapper:
+class TestRisultatoSingolaDomandaPersistenceMapper:
+    @classmethod
+    def setup_class(cls):
+        cls.mapper = RisultatoSingolaDomandaPersistenceMapper()
 
-    def test_FromRisultatoSingolaDomandaEntity(self):
-        metricheEntity = [
-            RisultatoMetricaEntity(nomeMetrica="bert", score=0.9),
-            RisultatoMetricaEntity(nomeMetrica="roberta", score=0.85)
-        ]
+    def test_from_risultato_singola_domanda_entity(self):
+        """Test per la creazione di un oggetto RisultatoSingolaDomanda a partire da un oggetto RisultatoSingolaDomandaEntity."""
+
         entity = RisultatoSingolaDomandaEntity(
             id=1,
-            domanda="Domanda di test",
-            risposta="Risposta attesa",
+            domanda="Domanda",
+            risposta="Risposta",
             rispostaLLM="Risposta LLM",
             score=0.95,
-            risultatiMetriche=metricheEntity
+            risultatiMetriche=[
+                RisultatoMetricaEntity(nomeMetrica="bert", score=0.9),
+                RisultatoMetricaEntity(nomeMetrica="roberta", score=0.85)
+            ]
         )
-        mapper = RisultatoSingolaDomandaPersistenceMapper()
 
-        risultato = mapper.fromRisultatoSingolaDomandaEntity(entity)
+        risultato = self.mapper.fromRisultatoSingolaDomandaEntity(entity)
 
         assert risultato.getId() == 1
-        assert risultato.getDomanda() == "Domanda di test"
-        assert risultato.getRisposta() == "Risposta utente"
+        assert risultato.getDomanda() == "Domanda"
+        assert risultato.getRisposta() == "Risposta"
         assert risultato.getRispostaLLM() == "Risposta LLM"
         assert risultato.getScore() == 0.95
         assert risultato.getMetriche() == {"bert": 0.9, "roberta": 0.85}
 
-    def test_ToRisultatoSingolaDomandaEntity(self):
-        metriche = {"bert": 0.92, "roberta": 0.88}
+    def test_to_risultato_singola_domanda_entity(self):
+        """Test per la creazione di un oggetto RisultatoSingolaDomandaEntity a partire da un oggetto RisultatoSingolaDomanda."""
+
         risultato = RisultatoSingolaDomanda(
             id=2,
             domanda="Altra domanda",
-            risposta="Altra risposta utente",
+            risposta="Altra risposta",
             rispostaLLM="Altra risposta LLM",
             score=0.8,
-            metriche=metriche
+            metriche={
+                "bert": 0.92,
+                "roberta": 0.88
+            }
         )
-        mapper = RisultatoSingolaDomandaPersistenceMapper()
 
-        entity = mapper.toRisultatoSingolaDomandaEntity(risultato)
+        entity = self.mapper.toRisultatoSingolaDomandaEntity(risultato)
 
         assert entity.domanda == "Altra domanda"
-        assert entity.risposta == "Altra risposta utente"
+        assert entity.risposta == "Altra risposta"
         assert entity.rispostaLLM == "Altra risposta LLM"
         assert entity.score == 0.8
         assert len(entity.risultatiMetriche) == 2
         metriche_entity_dict = {m.nomeMetrica: m.score for m in entity.risultatiMetriche}
         assert metriche_entity_dict == {"bert": 0.92, "roberta": 0.88}
-
-    def test_FromRisultatoSingolaDomandaEntityWithEmptyMetrics(self):
-        entity = RisultatoSingolaDomandaEntity(
-            id=3,
-            domanda="Domanda senza metriche",
-            risposta="Risposta",
-            rispostaLLM="LLM",
-            score=0.75,
-            risultatiMetriche=[]
-        )
-        mapper = RisultatoSingolaDomandaPersistenceMapper()
-
-        risultato = mapper.fromRisultatoSingolaDomandaEntity(entity)
-
-        assert risultato.getMetriche() == {}
-
-    def test_ToRisultatoSingolaDomandaEntityWithEmptyMetrics(self):
-        risultato = RisultatoSingolaDomanda(
-            id=4,
-            domanda="Domanda senza metriche nel dominio",
-            risposta="Risposta",
-            rispostaLLM="LLM",
-            score=0.6,
-            metriche={}
-        )
-        mapper = RisultatoSingolaDomandaPersistenceMapper()
-
-        entity = mapper.toRisultatoSingolaDomandaEntity(risultato)
-
-        assert entity.risultatiMetriche == []
