@@ -1,6 +1,5 @@
 from src.application.evaluation.AlgoritmoValutazioneRisposteImpl import AlgoritmoValutazioneRisposteImpl as av
 from unittest.mock import Mock, patch
-import joblib
 
 
 class Test_AlgoritmoValutazioneRisposte:

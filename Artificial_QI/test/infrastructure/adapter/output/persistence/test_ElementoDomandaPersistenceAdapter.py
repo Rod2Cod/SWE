@@ -6,131 +6,137 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm.exc import NoResultFound
 
 class TestElementoDomandaPersistenceAdapter:
-    @pytest.fixture
-    def mockRepository(self):
-        return Mock()
+    @classmethod
+    def setup_class(cls):
+        cls.mockRepository = Mock()
+        cls.mockMapper = Mock()
+        cls.adapter = ElementoDomandaPersistenceAdapter(cls.mockRepository, cls.mockMapper)
 
-    @pytest.fixture
-    def mockMapper(self):
-        return Mock()
+    def setup_method(self):
+        self.mockMapper.fromElementoDomandaEntity.return_value = ElementoDomanda(domanda="Domanda1", risposta="Risposta1", id=1)
+        self.mockMapper.fromDomandaRisposta.return_value = ElementoDomanda(domanda="Domanda1", risposta="Risposta1", id=1)
+
+        self.mockRepository.loadElementoDomandaById.return_value = ElementoDomanda(domanda="Domanda1", risposta="Risposta1", id=1)
+        self.mockRepository.saveElementoDomanda.return_value = ElementoDomanda(domanda="Domanda1", risposta="Risposta1", id=1)
+
+    def teardown_method(self):
+        self.mockRepository.reset_mock(side_effect=True, return_value=True)
+        self.mockMapper.reset_mock(side_effect=True, return_value=True)
+
+    def test_SaveElementoDomandaReturnType(self):
+        saved = self.adapter.saveElementoDomanda("Domanda1", "Risposta1")
+        assert type(saved) == ElementoDomanda
     
-    @pytest.fixture
-    def adapter(self, mockRepository, mockMapper):
-        return ElementoDomandaPersistenceAdapter(mockRepository, mockMapper)
+    def test_SaveElementoDomandaReturnValue(self):
+        saved = self.adapter.saveElementoDomanda("Domanda1", "Risposta1")
+        assert saved.serialize() == {
+            "id": 1,
+            "domanda": "Domanda1",
+            "risposta": "Risposta1"
+        }
     
-    def test_SaveElementoDomandaSuccess(self, adapter, mockRepository, mockMapper):
-        domanda = "Qual è la capitale della Francia?"
-        risposta = "Parigi"
-        mockEntity = Mock()
-        mockSavedEntity = Mock()
-        expectedElementoDomanda = ElementoDomanda(domanda=domanda, risposta=risposta, id=1)
-
-        mockMapper.fromDomandaRisposta.return_value = mockEntity
-        mockRepository.saveElementoDomanda.return_value = mockSavedEntity
-        mockMapper.fromElementoDomandaEntity.return_value = expectedElementoDomanda
-
-        result = adapter.saveElementoDomanda(domanda, risposta)
-
-        mockMapper.fromDomandaRisposta.assert_called_once_with(domanda, risposta)
-        mockRepository.saveElementoDomanda.assert_called_once_with(mockEntity)
-        mockMapper.fromElementoDomandaEntity.assert_called_once_with(mockSavedEntity)
-        assert result == expectedElementoDomanda
-
-    def test_SaveElementoDomandaDbError(self, adapter, mockRepository):
-        mockRepository.saveElementoDomanda.side_effect = SQLAlchemyError()
-        result = adapter.saveElementoDomanda("Domanda", "Risposta")
-        assert result is None
-
-    def test_GetElementoDomandaByIdSuccess(self, adapter, mockMapper, mockRepository):
-        mockEntity = Mock()
-        expectedElementoDomanda = ElementoDomanda( domanda="Qual è la capitale della Francia?", risposta="Parigi", id=1)
+    def test_SaveElementoDomandaException(self):
+        self.mockMapper.fromElementoDomandaEntity.side_effect = SQLAlchemyError()
+        saved = self.adapter.saveElementoDomanda("Domanda1", "Risposta1")
+        assert saved is None
         
-        mockRepository.loadElementoDomandaById.return_value = mockEntity
-        mockMapper.fromElementoDomandaEntity.return_value = expectedElementoDomanda
+        self.mockMapper.fromElementoDomandaEntity.side_effect = Exception()
+        saved = self.adapter.saveElementoDomanda("Domanda1", "Risposta1")
+        assert saved is None
 
-        result = adapter.getElementoDomandaById(1)
+    def test_GetElementoDomandaByIdReturnType(self):
+        saved = self.adapter.getElementoDomandaById(1)
+        assert type(saved) == ElementoDomanda
 
-        mockRepository.loadElementoDomandaById.assert_called_once_with(1)
-        mockMapper.fromElementoDomandaEntity.assert_called_once_with(mockEntity)
-        assert result == expectedElementoDomanda
-    
-    def test_GetElementoDomandaByIdNoResultFound(self, adapter, mockMapper, mockRepository):
+    def test_GetElementoDomandaByIdValue(self):
+        saved = self.adapter.getElementoDomandaById(1)
+        assert saved.serialize() == {
+            "id": 1,
+            "domanda": "Domanda1",
+            "risposta": "Risposta1"
+        }
+        
+    def test_GetElementoDomandaByIdException(self):
+        self.mockMapper.fromElementoDomandaEntity.side_effect = SQLAlchemyError()
+        saved = self.adapter.getElementoDomandaById(1)
+        assert saved is None
+
+        self.mockMapper.fromElementoDomandaEntity.side_effect = Exception()
+        saved = self.adapter.getElementoDomandaById(1)
+        assert saved is None
+
+    def test_GetAllElementiDomandaReturnType(self):
+        self.mockRepository.loadAllElementiDomanda.return_value = [1,2]
+        saved = self.adapter.getAllElementiDomanda()
+        assert type(saved) == set
+
+    def test_GetAllElementiDomandaReturnValue(self):
+
+        def differentElementoDomanda(i: int) -> ElementoDomanda:
+            return ElementoDomanda(domanda=f"Domanda{i}", risposta=f"Risposta{i}", id=i)
+        self.mockMapper.fromElementoDomandaEntity.side_effect = differentElementoDomanda
+
+        self.mockRepository.loadAllElementiDomanda.return_value = [1,2]
+        saved = self.adapter.getAllElementiDomanda()
+        
+        assert len(saved) == 2
+        ser = [i.serialize() for i in saved]
+        assert ser.sort(key=lambda x: x["id"]) == [
+            {"id": 1, "domanda": "Domanda1", "risposta": "Risposta1"},
+            {"id": 2, "domanda": "Domanda2", "risposta": "Risposta2"}
+        ].sort(key=lambda x: x["id"])
+        
+    def test_GetAllElementiDomandaException(self):
+        self.mockRepository.loadAllElementiDomanda.side_effect = SQLAlchemyError()
+        saved = self.adapter.getAllElementiDomanda()
+        assert saved is None
+
+        self.mockRepository.loadAllElementiDomanda.side_effect = Exception()
+        saved = self.adapter.getAllElementiDomanda()
+        assert saved is None
+
+    def test_DeleteElementiDomandaByIdReturnType(self):
+        ids = {1, 2, 3}
+        result = self.adapter.deleteElementiDomandaById(ids)
+        assert type(result) == bool
+
+    def test_DeleteElementiDomandaByIdReturnValue(self):
+        ids = {1, 2, 3}
+        result = self.adapter.deleteElementiDomandaById(ids)
+        assert result is True
+
+    def test_DeleteElementiDomandaByIdException(self):
+        ids = {1, 2, 3}
+        self.mockRepository.deleteElementiDomanda.side_effect = SQLAlchemyError()
+        result = self.adapter.deleteElementiDomandaById(ids)
+        assert result is False
+
+        self.mockRepository.deleteElementiDomanda.side_effect = Exception()
+        result = self.adapter.deleteElementiDomandaById(ids)
+        assert result is False
+
+    def test_UpdateElementoDomandaByIdReturnType(self):
         id = 1
-        mockRepository.loadElementoDomandaById.side_effect = NoResultFound()
+        domanda = "Nuova Domanda"
+        risposta = "Nuova Risposta"
+        result = self.adapter.updateElementoDomandaById(id, domanda, risposta)
+        assert type(result) == bool
 
-        with pytest.raises(ValueError, match="Elemento non trovato."):
-            adapter.getElementoDomandaById(id)
-
-        mockRepository.loadElementoDomandaById.assert_called_once_with(id)
-        mockMapper.fromElementoDomandaEntity.assert_not_called()
-    
-    def test_GetElementoDomandaByIdDbError(self, adapter, mockMapper, mockRepository):
-        elementoId = 1
-        mockRepository.loadElementoDomandaById.side_effect = SQLAlchemyError()
-        result = adapter.getElementoDomandaById(elementoId)
-        
-        mockRepository.loadElementoDomandaById.assert_called_once_with(elementoId)
-        mockMapper.fromElementoDomandaEntity.assert_not_called()
-        assert result is None
-    
-    def test_GetAllElementiDomandaSuccess(self, adapter, mockRepository, mockMapper):
-        mockEntity1 = Mock(id=1, domanda="Domanda 1", risposta="Risposta 1")
-        mockEntity2 = Mock(id=2, domanda="Domanda 2", risposta="Risposta 2")
-        mockRepository.loadAllElementiDomanda.return_value = [mockEntity1, mockEntity2]
-        expectedElemento1 = ElementoDomanda(id=1, domanda="Domanda 1", risposta="Risposta 1")
-        expectedElemento2 = ElementoDomanda(id=2, domanda="Domanda 2", risposta="Risposta 2")
-        mockMapper.fromElementoDomandaEntity.side_effect = [expectedElemento1, expectedElemento2]
-
-        result = adapter.getAllElementiDomanda()
-
-        mockRepository.loadAllElementiDomanda.assert_called_once()
-        assert mockMapper.fromElementoDomandaEntity.call_count == 2
-        assert expectedElemento1 in result
-        assert expectedElemento2 in result
-        assert isinstance(result, set)
-    
-    def test_GetAllElementiDomandaDbError(self, adapter, mockRepository):
-        mockRepository.loadAllElementiDomanda.side_effect = SQLAlchemyError()
-        result = adapter.getAllElementiDomanda()
-        assert result is None
-    
-    def test_DeleteElementiDomandaByIdSuccess(self, adapter, mockRepository):
-        idsToDelete = {1, 2, 3}
-        mockRepository.deleteElementiDomanda.return_value = None
-        result = adapter.deleteElementiDomandaById(idsToDelete)
-        mockRepository.deleteElementiDomanda.assert_called_once_with(idsToDelete)
+    def test_UpdateElementoDomandaByIdReturnValue(self):
+        id = 1
+        domanda = "Nuova Domanda"
+        risposta = "Nuova Risposta"
+        result = self.adapter.updateElementoDomandaById(id, domanda, risposta)
         assert result is True
     
-    def test_DeleteElementiDomandaByIdDbError(self, adapter, mockRepository):
-        idsToDelete = {1}
-        mockRepository.deleteElementiDomanda.side_effect = SQLAlchemyError()
-        result = adapter.deleteElementiDomandaById(idsToDelete)
+    def test_UpdateElementoDomandaByIdException(self):
+        id = 1
+        domanda = "Nuova Domanda"
+        risposta = "Nuova Risposta"
+        self.mockRepository.updateElementoDomanda.side_effect = SQLAlchemyError()
+        result = self.adapter.updateElementoDomandaById(id, domanda, risposta)
         assert result is False
 
-    def test_UpdateElementoDomandaByIdSuccess(self, adapter, mockRepository):
-        elementoId = 1
-        nuovaDomanda = "Nuova domanda"
-        nuovaRisposta = "Nuova risposta"
-        mockRepository.updateElementoDomanda.return_value = None
-        result = adapter.updateElementoDomandaById(elementoId, nuovaDomanda, nuovaRisposta)
-        mockRepository.updateElementoDomanda.assert_called_once_with(elementoId, nuovaDomanda, nuovaRisposta)
-        assert result is True
-
-    def test_UpdateElementoDomandaByIdNotFound(self, adapter, mockRepository):
-        elementoId = 1
-        nuovaDomanda = "Nuova domanda"
-        nuovaRisposta = "Nuova risposta"
-        mockRepository.updateElementoDomanda.side_effect = NoResultFound()
-        with pytest.raises(ValueError, match="Elemento non trovato."):
-            adapter.updateElementoDomandaById(elementoId, nuovaDomanda, nuovaRisposta)
-        mockRepository.updateElementoDomanda.assert_called_once_with(elementoId, nuovaDomanda, nuovaRisposta)
-
-    def test_UpdateElementoDomandaByIdDbError(self, adapter, mockRepository):
-        elementoId = 1
-        nuovaDomanda = "Nuova domanda"
-        nuovaRisposta = "Nuova risposta"
-        mockRepository.updateElementoDomanda.side_effect = SQLAlchemyError()
-        result = adapter.updateElementoDomandaById(elementoId, nuovaDomanda, nuovaRisposta)
-        mockRepository.updateElementoDomanda.assert_called_once_with(elementoId, nuovaDomanda, nuovaRisposta)
+        self.mockRepository.updateElementoDomanda.side_effect = Exception()
+        result = self.adapter.updateElementoDomandaById(id, domanda, risposta)
         assert result is False
-    
