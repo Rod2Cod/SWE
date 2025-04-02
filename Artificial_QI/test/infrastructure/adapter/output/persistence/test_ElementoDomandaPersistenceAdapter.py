@@ -23,7 +23,7 @@ class TestElementoDomandaPersistenceAdapter:
         risposta = "Parigi"
         mockEntity = Mock()
         mockSavedEntity = Mock()
-        expectedElementoDomanda = ElementoDomanda(domanda=domanda, risposta=risposta)
+        expectedElementoDomanda = ElementoDomanda(domanda=domanda, risposta=risposta, id=1)
 
         mockMapper.fromDomandaRisposta.return_value = mockEntity
         mockRepository.saveElementoDomanda.return_value = mockSavedEntity
@@ -38,6 +38,11 @@ class TestElementoDomandaPersistenceAdapter:
 
     def test_SaveElementoDomandaDbError(self, adapter, mockRepository):
         mockRepository.saveElementoDomanda.side_effect = SQLAlchemyError()
+        result = adapter.saveElementoDomanda("Domanda", "Risposta")
+        assert result is None
+
+    def test_SaveElementoDomandaGenericError(self, adapter, mockRepository):
+        mockRepository.saveElementoDomanda.side_effect = Exception("Errore generico")
         result = adapter.saveElementoDomanda("Domanda", "Risposta")
         assert result is None
 
@@ -73,6 +78,15 @@ class TestElementoDomandaPersistenceAdapter:
         mockMapper.fromElementoDomandaEntity.assert_not_called()
         assert result is None
     
+    def test_GetElementoDomandaByIdGenericError(self, adapter, mockMapper, mockRepository):
+        elementoId = 1
+        mockRepository.loadElementoDomandaById.side_effect = Exception("Errore generico")
+        result = adapter.getElementoDomandaById(elementoId)
+        
+        mockRepository.loadElementoDomandaById.assert_called_once_with(elementoId)
+        mockMapper.fromElementoDomandaEntity.assert_not_called()
+        assert result is None
+    
     def test_GetAllElementiDomandaSuccess(self, adapter, mockRepository, mockMapper):
         mockEntity1 = Mock(id=1, domanda="Domanda 1", risposta="Risposta 1")
         mockEntity2 = Mock(id=2, domanda="Domanda 2", risposta="Risposta 2")
@@ -94,6 +108,11 @@ class TestElementoDomandaPersistenceAdapter:
         result = adapter.getAllElementiDomanda()
         assert result is None
     
+    def test_GetAllElementiDomandaGenericError(self, adapter, mockRepository):
+        mockRepository.loadAllElementiDomanda.side_effect = Exception("Errore generico")
+        result = adapter.getAllElementiDomanda()
+        assert result is None
+    
     def test_DeleteElementiDomandaByIdSuccess(self, adapter, mockRepository):
         idsToDelete = {1, 2, 3}
         mockRepository.deleteElementiDomanda.return_value = None
@@ -104,6 +123,12 @@ class TestElementoDomandaPersistenceAdapter:
     def test_DeleteElementiDomandaByIdDbError(self, adapter, mockRepository):
         idsToDelete = {1}
         mockRepository.deleteElementiDomanda.side_effect = SQLAlchemyError()
+        result = adapter.deleteElementiDomandaById(idsToDelete)
+        assert result is False
+    
+    def test_DeleteElementiDomandaByIdGenericError(self, adapter, mockRepository):
+        idsToDelete = {1}
+        mockRepository.deleteElementiDomanda.side_effect = Exception("Errore generico")
         result = adapter.deleteElementiDomandaById(idsToDelete)
         assert result is False
 
@@ -130,6 +155,15 @@ class TestElementoDomandaPersistenceAdapter:
         nuovaDomanda = "Nuova domanda"
         nuovaRisposta = "Nuova risposta"
         mockRepository.updateElementoDomanda.side_effect = SQLAlchemyError()
+        result = adapter.updateElementoDomandaById(elementoId, nuovaDomanda, nuovaRisposta)
+        mockRepository.updateElementoDomanda.assert_called_once_with(elementoId, nuovaDomanda, nuovaRisposta)
+        assert result is False
+    
+    def test_UpdateElementoDomandaByIdGenericError(self, adapter, mockRepository):
+        elementoId = 1
+        nuovaDomanda = "Nuova domanda"
+        nuovaRisposta = "Nuova risposta"
+        mockRepository.updateElementoDomanda.side_effect = Exception("Errore generico")
         result = adapter.updateElementoDomandaById(elementoId, nuovaDomanda, nuovaRisposta)
         mockRepository.updateElementoDomanda.assert_called_once_with(elementoId, nuovaDomanda, nuovaRisposta)
         assert result is False

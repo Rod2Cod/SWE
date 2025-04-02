@@ -14,3 +14,4 @@ class ElementoDomandaPersistenceMapper:
         
     def fromDomandaRisposta(self, domanda: str, risposta: str) -> ElementoDomandaEntity:
         return ElementoDomandaEntity(domanda=domanda, risposta=risposta)
+    

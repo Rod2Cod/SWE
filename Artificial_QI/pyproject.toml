@@ -8,7 +8,7 @@ show_complexity = true
 branch = true
 omit = [
     ".venv/*",
-    "test/*",
+    "./Artificaial_QI/test/*",
     "__init__.py",
     ]
 

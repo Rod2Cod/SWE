@@ -1,40 +1,58 @@
 import pytest
+from unittest.mock import MagicMock
 from src.infrastructure.adapter.output.persistence.domain import ElementoDomandaEntity
 from src.infrastructure.adapter.output.persistence.mapper import ElementoDomandaPersistenceMapper
 from src.domain import ElementoDomanda, Domanda, Risposta
 
-class test_ElementoDomandaPersistenceMapper:
+class TestElementoDomandaPersistenceMapper:
     
     @pytest.fixture
     def mapper(self):
         return ElementoDomandaPersistenceMapper()
+    
+    @pytest.fixture
+    def mockDomanda(self):
+        mockDom = MagicMock()
+        mockDom.getText.return_value = "Domanda"
+        return mockDom
+    
+    @pytest.fixture
+    def mockRisposta(self):
+        mockRis = MagicMock()
+        mockRis.getText.return_value = "Risposta"
+        return mockRis
+    
 
     def test_FromElementoDomandaEntity(self, mapper):
-        entity = ElementoDomandaEntity(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma")
+        elementoDomandaEntity = ElementoDomandaEntity(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma")
 
-        elemento = mapper.fromElementoDomandaEntity(entity)
+        elementoDomanda = mapper.fromElementoDomandaEntity(elementoDomandaEntity)
 
-        assert elemento.getId() == 1
-        assert elemento.getDomanda().getText() == "Qual è la capitale d'Italia?"
-        assert elemento.getRisposta().getText() == "Roma"
+        assert elementoDomanda.getId() == 1
+        assert elementoDomanda.getDomanda().getText() == "Qual è la capitale d'Italia?"
+        assert elementoDomanda.getRisposta().getText() == "Roma"
 
     def test_ToElementoDomandaEntity(self, mapper):
-        domanda = Domanda("Qual è il tuo nome?")
-        risposta = Risposta("Sono un modello linguistico.")
-        elemento = ElementoDomanda(domanda=domanda, risposta=risposta)
+        mockElementoDomanda = MagicMock()
+        mockDomanda = MagicMock()
+        mockRisposta = MagicMock()
+        mockDomanda.getText.return_value = "Test domanda"
+        mockRisposta.getText.return_value = "Test risposta"
+        mockElementoDomanda.getDomanda.return_value = mockDomanda
+        mockElementoDomanda.getRisposta.return_value = mockRisposta
 
-        entity = mapper.toElementoDomandaEntity(elemento)
+        elementoDomandaEntity = mapper.toElementoDomandaEntity(mockElementoDomanda)
 
-        assert entity.domanda == "Qual è il tuo nome?"
-        assert entity.risposta == "Sono un modello linguistico."
-        assert entity.id is None  # L'ID di una nuova entità è None prima del salvataggio
+        assert elementoDomandaEntity.domanda == "Test domanda"
+        assert elementoDomandaEntity.risposta == "Test risposta"
+        assert elementoDomandaEntity.id is None  # L'ID di una nuova entità è None prima del salvataggio
 
     def test_FromDomandaRisposta(self, mapper):
         domanda_text = "Quanto fa 2 + 2?"
         risposta_text = "4"
 
-        entity = mapper.fromDomandaRisposta(domanda_text, risposta_text)
+        elementoDomandaEntity = mapper.fromDomandaRisposta(domanda_text, risposta_text)
 
-        assert entity.domanda == "Quanto fa 2 + 2?"
-        assert entity.risposta == "4"
-        assert entity.id is None  # L'ID di una nuova entità creata da domanda/risposta è None
+        assert elementoDomandaEntity.domanda == "Quanto fa 2 + 2?"
+        assert elementoDomandaEntity.risposta == "4"
+        assert elementoDomandaEntity.id is None  # L'ID di una nuova entità creata da domanda/risposta è None

@@ -3,7 +3,7 @@ from src.domain import RisultatoSingolaDomanda
 from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, MetricheEntity
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoSingolaDomandaPersistenceMapper
 
-class test_RisultatoSingolaDomandaPersistenceMapper:
+class TestRisultatoSingolaDomandaPersistenceMapper:
 
     def test_FromRisultatoSingolaDomandaEntity(self):
         metricheEntity = [
@@ -24,7 +24,7 @@ class test_RisultatoSingolaDomandaPersistenceMapper:
 
         assert risultato.getId() == 1
         assert risultato.getDomanda() == "Domanda di test"
-        assert risultato.getRisposta() == "Risposta utente"
+        assert risultato.getRisposta() == "Risposta attesa"
         assert risultato.getRispostaLLM() == "Risposta LLM"
         assert risultato.getScore() == 0.95
         assert risultato.getMetriche() == {"bert": 0.9, "roberta": 0.85}
