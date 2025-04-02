@@ -39,6 +39,7 @@ class RisultatoSingolaDomanda:
         
     def serializeForList(self) -> dict:
         return {
+            "id": self.__id,
             "domanda": self.__domanda,
             "score": self.__score
         }

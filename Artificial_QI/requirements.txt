@@ -2,7 +2,7 @@
 # Per specificare una versione di python, usare come interprete di partenza quello della versione richiesta
 pytest == 8.3.5
 pytest-cov == 6.0.0
-pyxtension == 1.16.11
+pytest-xdist == 3.6.1
 Flask == 3.1.0
 Flask-SQLAlchemy == 3.1.1
 coverage == 7.7.0
@@ -16,4 +16,4 @@ bert-score >= 0.3.10
 sentence-transformers >= 4.0.0
 pandas == 2.2.3
 joblib >= 1.4.0
-pytest-mock == 3.14.0
+flask-cors==4.0.0

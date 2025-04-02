@@ -1,112 +1,147 @@
 import pytest
-from unittest.mock import Mock
-from datetime import datetime
+from unittest.mock import Mock, patch
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
-from src.infrastructure.adapter.output.persistence.domain import RisultatoTestEntity, RisultatoSingolaDomandaEntity, MetricheEntity
+from src.infrastructure.adapter.output.persistence.domain import RisultatoTestEntity, RisultatoSingolaDomandaEntity, RisultatoMetricaEntity
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoTestPersistenceMapper, RisultatoSingolaDomandaPersistenceMapper
 
+@pytest.fixture
+def RisultatoSingolaDomanda1():
+    return RisultatoSingolaDomanda(id=1, 
+                                   domanda="Domanda 1", 
+                                   risposta="Risposta 1", 
+                                   rispostaLLM="Risposta LLM 1", 
+                                   score=0.9, 
+                                   metriche={
+                                       "BLEU": 0.8, 
+                                       "TER": 0.7
+                                       })
+    
+@pytest.fixture
+def RisultatoSingolaDomanda2():
+    return RisultatoSingolaDomanda(id=2, 
+                                   domanda="Domanda 2", 
+                                   risposta="Risposta 2", 
+                                   rispostaLLM="Risposta LLM 2", 
+                                   score=0.8, 
+                                   metriche={
+                                       "BLEU": 0.75, 
+                                       "TER": 0.65
+                                       })
+    
+@pytest.fixture
+def RisultatoTest1(RisultatoSingolaDomanda1, RisultatoSingolaDomanda2):
+    return RisultatoTest(id=1,
+                         score=0.85,
+                         LLM="gpt-3",
+                         dataEsecuzione="2025-03-31",
+                         nomeSet=None,
+                         risultatiDomande={RisultatoSingolaDomanda1, RisultatoSingolaDomanda2})
+
 class TestRisultatoTestPersistenceMapper:
+    @classmethod
+    def setup_class(cls):
+        cls.mockRisultatoSingolaDomandaPersistenceMapper = Mock(spec=RisultatoSingolaDomandaPersistenceMapper)
+        cls.mapper = RisultatoTestPersistenceMapper(cls.mockRisultatoSingolaDomandaPersistenceMapper)
+        
+    def setup_method(self):
+        self.mockRisultatoSingolaDomandaPersistenceMapper.reset_mock()
 
-    @pytest.fixture
-    def mockRisultatoSingolaDomandaPersistenceMapper(self):
-        return Mock()
+    def test_from_risultato_test_entity(self, RisultatoTest1, RisultatoSingolaDomanda1, RisultatoSingolaDomanda2):
+        """Test per la creazione di un oggetto RisultatoTest a partire da un oggetto RisultatoTestEntity."""
 
-    @pytest.fixture
-    def RisultatoTestEntity(self):
-        metriche1 = {"matrica1": 3.14}
-        metriche2 = {"matrica2": 2.71}  
-
-        risultatoDomanda1 = RisultatoSingolaDomandaEntity(
-            id=1,
-            domanda="domanda 1",  
-            risposta="risposta 1",
-            rispostaLLM="risposta LLM 1",
-            score=0.8,
-            risultatiMetriche=[MetricheEntity(nomeMetrica=nome, score=valore, risultatoDomandaId=1) for nome, valore in metriche1.items()],
-        )
-        risultatoDomanda2 = RisultatoSingolaDomandaEntity(
-            id=2,
-            domanda="domanda 2",  
-            risposta="risposta 2",
-            rispostaLLM="risposta LLM 2",
-            score=0.9,  
-            risultatiMetriche=[MetricheEntity(nomeMetrica=nome, score=valore, risultatoDomandaId=2) for nome, valore in metriche2.items()],
-        )
-        return RisultatoTestEntity(
+        entity = RisultatoTestEntity(
             id=1,
             score=0.85,
             LLM="gpt-3",
-            data="2025-03-31",  
-            nomeSet="testSet",
+            data="2025-03-31",
             risultatiDomande=[
-                risultatoDomanda1,
-                risultatoDomanda2,
+                RisultatoSingolaDomandaEntity(id=10, 
+                                                domanda="Domanda 1", 
+                                                risposta="Risposta 1", 
+                                                rispostaLLM="Risposta LLM 1", 
+                                                score=0.9, 
+                                                risultatiMetriche=[
+                                                        RisultatoMetricaEntity(nomeMetrica="BLEU", score=0.8),
+                                                        RisultatoMetricaEntity(nomeMetrica="TER", score=0.7)
+                                                ]),
+                RisultatoSingolaDomandaEntity(id=11,
+                                                domanda="Domanda 2", 
+                                                risposta="Risposta 2", 
+                                                rispostaLLM="Risposta LLM 2", 
+                                                score=0.8, 
+                                                risultatiMetriche=[
+                                                        RisultatoMetricaEntity(nomeMetrica="BLEU", score=0.75),
+                                                        RisultatoMetricaEntity(nomeMetrica="TER", score=0.65)
+                                                    ])
+                
             ]
         )
-    
-    @pytest.fixture
-    def EmptyRisultatoTestEntity(self):
-        return RisultatoTestEntity(
+        
+        self.mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.side_effect = [RisultatoSingolaDomanda1, RisultatoSingolaDomanda2]
+        
+        risultato = self.mapper.fromRisultatoTestEntity(entity)
+        
+        assert risultato.getId() == RisultatoTest1.getId()
+        assert risultato.getScore() == RisultatoTest1.getScore()
+        assert risultato.getLLM() == RisultatoTest1.getLLM()
+        assert risultato.getDataEsecuzione() == RisultatoTest1.getDataEsecuzione()
+        assert risultato.getNomeSet() == RisultatoTest1.getNomeSet()
+        assert risultato.getRisultatiDomande() == RisultatoTest1.getRisultatiDomande()
+        assert len(risultato.getRisultatiDomande()) == 2
+        assert RisultatoSingolaDomanda1 in risultato.getRisultatiDomande()
+        assert RisultatoSingolaDomanda2 in risultato.getRisultatiDomande()
+        self.mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.assert_any_call(entity.risultatiDomande[0])
+        self.mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.assert_any_call(entity.risultatiDomande[1])
+
+    def test_to_risultato_test_entity(self, RisultatoTest1):
+        """Test per la creazione di un oggetto RisultatoTestEntity a partire da un oggetto RisultatoTest."""
+        
+        entity = RisultatoTestEntity(
             id=1,
             score=0.85,
             LLM="gpt-3",
-            data="2025-03-31",  
-            nomeSet="testSet",
-            risultatiDomande=[]
+            data="2025-03-31",
+            risultatiDomande=[
+                RisultatoSingolaDomandaEntity(id=10, 
+                                                domanda="Domanda 1", 
+                                                risposta="Risposta 1", 
+                                                rispostaLLM="Risposta LLM 1", 
+                                                score=0.9, 
+                                                risultatiMetriche=[
+                                                        RisultatoMetricaEntity(nomeMetrica="BLEU", score=0.8),
+                                                        RisultatoMetricaEntity(nomeMetrica="TER", score=0.7)
+                                                ]),
+                RisultatoSingolaDomandaEntity(id=11,
+                                                domanda="Domanda 2", 
+                                                risposta="Risposta 2", 
+                                                rispostaLLM="Risposta LLM 2", 
+                                                score=0.8, 
+                                                risultatiMetriche=[
+                                                        RisultatoMetricaEntity(nomeMetrica="BLEU", score=0.75),
+                                                        RisultatoMetricaEntity(nomeMetrica="TER", score=0.65)
+                                                    ])
+                
+            ]
         )
+        
+        self.mockRisultatoSingolaDomandaPersistenceMapper.toRisultatoSingolaDomandaEntity.side_effect = [entity.risultatiDomande[0], entity.risultatiDomande[1]]
 
-    @pytest.fixture
-    def RisultatoTest(self):
-        metriche = {"matrica1": 3.14, "matrica1": 2.71}
-        risultatoDomanda1= RisultatoSingolaDomanda(id=1, domanda="doamnda", risposta="risposta", rispostaLLM=" risposta LLM", score = 0.8, metriche=metriche)
-        risultatoDomanda2= RisultatoSingolaDomanda(id=2, domanda="doamnda", risposta="risposta", rispostaLLM=" risposta LLM", score = 0.8, metriche=metriche)
-        risultatiDomande = {risultatoDomanda1,risultatoDomanda2}
-        return RisultatoTest(id=1, LLM="gpt-3", score = 0.85, dataEsecuzione ="2025-03-31", nomeSet = "testSet", risultatiDomande=risultatiDomande)
+        risultato = self.mapper.toRisultatoTestEntity(RisultatoTest1)
 
-    def test_fromRisultatoTestEntity(self, mockRisultatoSingolaDomandaPersistenceMapper, RisultatoTestEntity):
-        metriche = {"matrica1": 3.14, "matrica1": 2.71}
-        expectedRisultato1= RisultatoSingolaDomanda(id=1, domanda="doamnda", risposta="risposta", rispostaLLM=" risposta LLM", score = 0.8, metriche=metriche)
-        expectedRisultato2= RisultatoSingolaDomanda(id=2, domanda="doamnda", risposta="risposta", rispostaLLM=" risposta LLM", score = 0.8, metriche=metriche)
-        mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.side_effect = [expectedRisultato1, expectedRisultato2]
-        mapper = RisultatoTestPersistenceMapper(mockRisultatoSingolaDomandaPersistenceMapper)
-        risultato = mapper.fromRisultatoTestEntity(RisultatoTestEntity)
-        assert risultato.getId() == 1
-        assert risultato.getScore() == 0.85
-        assert risultato.getLLM() == "gpt-3"
-        assert risultato.getDataEsecuzione() == datetime.strptime("2025-03-31", "%Y-%m-%d").date()
-        assert risultato.getNomeSet() == "testSet"
-        assert len(risultato.getRisultatiDomande()) == 2
-        assert expectedRisultato1 in risultato.getRisultatiDomande()
-        assert expectedRisultato2 in risultato.getRisultatiDomande()
-        mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.assert_any_call(RisultatoTestEntity.risultatiDomande[0])
-        mockRisultatoSingolaDomandaPersistenceMapper.fromRisultatoSingolaDomandaEntity.assert_any_call(RisultatoTestEntity.risultatiDomande[1])
-
-    def test_toRisultatoTestEntity(self, RisultatoTest, RisultatoTestEntity):
-        mapper = RisultatoTestPersistenceMapper(RisultatoSingolaDomandaPersistenceMapper())
-        risTestEntity = mapper.toRisultatoTestEntity(RisultatoTest)
-        assert risTestEntity.score == RisultatoTestEntity.score
-        assert risTestEntity.LLM == RisultatoTestEntity.LLM
-        assert risTestEntity.data == RisultatoTestEntity.data
-        assert risTestEntity.nomeSet == RisultatoTestEntity.nomeSet
-        assert len(risTestEntity.risultatiDomande) == len(RisultatoTestEntity.risultatiDoamnde)
-
-    def test_fromRisultatoTestEntityWithEmptyRisultati(self, EmptyRisultatoTestEntity):
-        singolaDomandaMapper =RisultatoSingolaDomandaPersistenceMapper()
-        mapper = RisultatoTestPersistenceMapper(singolaDomandaMapper)
-        risultato = mapper.fromRisultatoTestEntity(EmptyRisultatoTestEntity)
-        assert len(risultato.getRisultatiDomande()) == 0
-        singolaDomandaMapper.fromRisultatoSingolaDomandaEntity.assert_not_called()
-
-    def test_toRisultatoTestEntityWithEmptyRisultati(self, mockRisultatoSingolaDomandaPersistenceMapper):
-        risultato = RisultatoTest(
-            id=4,
-            score=0.88,
-            LLM="roberta",
-            dataEsecuzione="2025-04-03",
-            nomeSet="vuotoSet",
-            risultatiDomande=set()
-        )
-        mapper = RisultatoTestPersistenceMapper(mockRisultatoSingolaDomandaPersistenceMapper)
-        entity = mapper.toRisultatoTestEntity(risultato)
-        assert len(entity.risultatiDomande) == 0
-        mockRisultatoSingolaDomandaPersistenceMapper.toRisultatoSingolaDomandaEntity.assert_not_called()
+        assert risultato.score == entity.score
+        assert risultato.LLM == entity.LLM
+        assert risultato.data == entity.data
+        assert risultato.nomeSet == entity.nomeSet
+        assert len(risultato.risultatiDomande) == 2
+        for res,exp in zip(risultato.risultatiDomande, entity.risultatiDomande):
+            assert res.id == exp.id
+            assert res.domanda == exp.domanda
+            assert res.risposta == exp.risposta
+            assert res.rispostaLLM == exp.rispostaLLM
+            assert res.score == exp.score
+            assert len(res.risultatiMetriche) == len(exp.risultatiMetriche)
+            for metrica, metricaEntity in zip(res.risultatiMetriche, exp.risultatiMetriche):
+                assert metrica.nomeMetrica == metricaEntity.nomeMetrica
+                assert metrica.score == metricaEntity.score
+        for res in RisultatoTest1.getRisultatiDomande():
+            self.mockRisultatoSingolaDomandaPersistenceMapper.toRisultatoSingolaDomandaEntity.assert_any_call(res)

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from src.infrastructure.adapter.output.persistence.Extensions import db
 from src.infrastructure.adapter.input.rest import (elementoDomanda_blueprint, 
                                                     AddElementoDomandaController, 
@@ -19,6 +20,8 @@ def create_app(testing=False) -> Flask:
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "default_secret_key"
 
+    CORS(app)
+
     """ Impedisco a flask di ordinare le chiavi json alfabeticamente"""
     app.json.sort_keys = False
     
@@ -26,7 +29,7 @@ def create_app(testing=False) -> Flask:
     if(testing):
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/progetto'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/Artificial_QI'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     db.init_app(app)
@@ -43,20 +46,8 @@ def create_app(testing=False) -> Flask:
         """ Creo le tabelle del database. Devo importare i modelli per far si che vengano creati """
         from src.infrastructure.adapter.output.persistence.domain import (
             ElementoDomandaEntity, RisultatoTestEntity, 
-            RisultatoSingolaDomandaEntity, MetricheEntity)
+            RisultatoSingolaDomandaEntity, RisultatoMetricaEntity)
         db.create_all()
-    
-    """ Configuro i controller di elemento domanda (necessario per registrare le route) """
-    addElementoDomandaController = AddElementoDomandaController()
-    getElementoDomandaController = GetElementoDomandaController()
-    getAllElementiDomandaController = GetAllElementiDomandaController()
-    deleteElementiDomandaController = DeleteElementiDomandaController()
-    updateElementoDomandaController = UpdateElementoDomandaController()
-    
-    """ Configuro i controller di risultato test (necessario per registrare le route) """
-    getRisultatoTestController = GetRisultatoTestController()
-    getAllRisultatiTestController = GetAllRisultatiTestController()
-    getRisultatoSingolaDomandaController = GetRisultatoSingolaDomandaController()
     
     """ Configuro i controller di esecuzione test (necessario per registrare le route) """
     executeTestController = ExecuteTestController()

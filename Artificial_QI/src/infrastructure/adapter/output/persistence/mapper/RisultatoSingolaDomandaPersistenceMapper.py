@@ -1,5 +1,5 @@
 from src.domain import RisultatoSingolaDomanda
-from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, MetricheEntity
+from src.infrastructure.adapter.output.persistence.domain import RisultatoSingolaDomandaEntity, RisultatoMetricaEntity
 
 class RisultatoSingolaDomandaPersistenceMapper:
     
@@ -16,4 +16,4 @@ class RisultatoSingolaDomandaPersistenceMapper:
                                                 risposta=risultato.getRisposta(), 
                                                 rispostaLLM=risultato.getRispostaLLM(), 
                                                 score=risultato.getScore(), 
-                                                risultatiMetriche=[MetricheEntity(nomeMetrica=metrica, score=risultato.getMetriche()[metrica]) for metrica in risultato.getMetriche().keys()])
+                                                risultatiMetriche=[RisultatoMetricaEntity(nomeMetrica=metrica, score=risultato.getMetriche()[metrica]) for metrica in risultato.getMetriche().keys()])

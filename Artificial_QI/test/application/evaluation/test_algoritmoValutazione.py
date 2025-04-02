@@ -6,7 +6,6 @@ class Test_AlgoritmoValutazioneRisposte:
 
     @classmethod
     def setup_class(cls):
-        cls.algoritmo = None
         #creo i mock necesssari
         mockScorer = Mock()
         mockModel = Mock()
@@ -16,8 +15,9 @@ class Test_AlgoritmoValutazioneRisposte:
         mockModel.predict.return_value = [0.5]
 
         #creo l'oggetto da testare con i mock
+        cls.algoritmo = av(scorer=mockScorer, modelPath="dummyModel")
         with patch("joblib.load", return_value = mockModel):
-            cls.algoritmo = av(scorer=mockScorer, model="dummyModel")
+            _ = cls.algoritmo.evaluate("test", "test")
 
     def test_returnType(self):
         evaluation = self.algoritmo.evaluate("test", "test")

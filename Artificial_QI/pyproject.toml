@@ -1,15 +1,11 @@
-[tool.radon]
-ignore = "test"
-cc_min = 'B'
-cc_max = 'F'
-show_complexity = true
-
 [tool.coverage.run]
 branch = true
 omit = [
     ".venv/*",
     "./Artificaial_QI/test/*",
     "__init__.py",
+    # omit pytorch-generated files in /tmp
+    "/tmp/*",
     ]
 
 [tool.coverage.report]

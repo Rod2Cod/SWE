@@ -1,58 +1,49 @@
-import pytest
-from unittest.mock import MagicMock
 from src.infrastructure.adapter.output.persistence.domain import ElementoDomandaEntity
 from src.infrastructure.adapter.output.persistence.mapper import ElementoDomandaPersistenceMapper
-from src.domain import ElementoDomanda, Domanda, Risposta
+from src.domain import ElementoDomanda
 
 class TestElementoDomandaPersistenceMapper:
-    
-    @pytest.fixture
-    def mapper(self):
-        return ElementoDomandaPersistenceMapper()
-    
-    @pytest.fixture
-    def mockDomanda(self):
-        mockDom = MagicMock()
-        mockDom.getText.return_value = "Domanda"
-        return mockDom
-    
-    @pytest.fixture
-    def mockRisposta(self):
-        mockRis = MagicMock()
-        mockRis.getText.return_value = "Risposta"
-        return mockRis
-    
+    @classmethod
+    def setup_class(cls):
+        cls.mapper = ElementoDomandaPersistenceMapper()
 
-    def test_FromElementoDomandaEntity(self, mapper):
-        elementoDomandaEntity = ElementoDomandaEntity(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma")
+    def test_from_elemento_domanda_entity(self):
+        """Test per la creazione di un oggetto ElementoDomanda a partire da un oggetto ElementoDomandaEntity."""
+        
+        domanda = "Qual è la capitale d'Italia?"
+        risposta = "Roma"
+        id = 1
+        
+        entity = ElementoDomandaEntity(id=id, domanda=domanda, risposta=risposta)
 
-        elementoDomanda = mapper.fromElementoDomandaEntity(elementoDomandaEntity)
+        elemento = self.mapper.fromElementoDomandaEntity(entity)
 
-        assert elementoDomanda.getId() == 1
-        assert elementoDomanda.getDomanda().getText() == "Qual è la capitale d'Italia?"
-        assert elementoDomanda.getRisposta().getText() == "Roma"
+        assert elemento.getId() == id
+        assert elemento.getDomanda().getText() == domanda
+        assert elemento.getRisposta().getText() == risposta
 
-    def test_ToElementoDomandaEntity(self, mapper):
-        mockElementoDomanda = MagicMock()
-        mockDomanda = MagicMock()
-        mockRisposta = MagicMock()
-        mockDomanda.getText.return_value = "Test domanda"
-        mockRisposta.getText.return_value = "Test risposta"
-        mockElementoDomanda.getDomanda.return_value = mockDomanda
-        mockElementoDomanda.getRisposta.return_value = mockRisposta
+    def test_to_elemento_domanda_entity(self):
+        """Test per la creazione di un oggetto ElementoDomandaEntity a partire da un oggetto ElementoDomanda."""
+        
+        domanda = "Qual è la capitale della Germania?"
+        risposta = "Berlino"
+        id = 999
+        elemento = ElementoDomanda(id=id, domanda=domanda, risposta=risposta)
 
-        elementoDomandaEntity = mapper.toElementoDomandaEntity(mockElementoDomanda)
+        entity = self.mapper.toElementoDomandaEntity(elemento)
 
-        assert elementoDomandaEntity.domanda == "Test domanda"
-        assert elementoDomandaEntity.risposta == "Test risposta"
-        assert elementoDomandaEntity.id is None  # L'ID di una nuova entità è None prima del salvataggio
+        assert entity.domanda == domanda
+        assert entity.risposta == risposta
+        assert entity.id is None  # L'ID di una nuova entità è None prima del salvataggio
 
-    def test_FromDomandaRisposta(self, mapper):
+    def test_from_domanda_risposta(self):
+        """Test per la creazione di un oggetto ElementoDomandaEntity a partire da una domanda e una risposta."""
+        
         domanda_text = "Quanto fa 2 + 2?"
         risposta_text = "4"
 
-        elementoDomandaEntity = mapper.fromDomandaRisposta(domanda_text, risposta_text)
+        entity = self.mapper.fromDomandaRisposta(domanda_text, risposta_text)
 
-        assert elementoDomandaEntity.domanda == "Quanto fa 2 + 2?"
-        assert elementoDomandaEntity.risposta == "4"
-        assert elementoDomandaEntity.id is None  # L'ID di una nuova entità creata da domanda/risposta è None
+        assert entity.domanda == domanda_text
+        assert entity.risposta == risposta_text
+        assert entity.id is None  # L'ID di una nuova entità creata da domanda/risposta è None

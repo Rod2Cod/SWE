@@ -1,200 +1,237 @@
 import pytest
-from unittest.mock import Mock
+from unittest import mock
 from src.infrastructure.adapter.output.persistence import RisultatoTestPersistenceAdapter
+from src.infrastructure.adapter.output.persistence.repository import RisultatoTestPostgreSQLRepository, RisultatoSingolaDomandaPostgreSQLRepository
+from src.infrastructure.adapter.output.persistence.mapper import RisultatoTestPersistenceMapper, RisultatoSingolaDomandaPersistenceMapper
+from src.infrastructure.adapter.output.persistence.domain import RisultatoTestEntity, RisultatoSingolaDomandaEntity, RisultatoMetricaEntity
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm.exc import NoResultFound
 
+@pytest.fixture
+def RisultatoSingolaDomanda1():
+    return RisultatoSingolaDomanda(id=1, 
+                                   domanda="domanda 1", 
+                                   risposta="risposta 1", 
+                                   rispostaLLM = "rispostaLLM 1", 
+                                   score=7.3, 
+                                   metriche=[
+                                        {"nomeMetrica": "metrica 1", "score": 7.5},
+                                        {"nomeMetrica": "metrica 2", "score": 6},
+                                        {"nomeMetrica": "metrica 3", "score": 6}])
+
+@pytest.fixture
+def risultatoTest1():
+    return RisultatoTest(id=1, score=7.8, LLM="LLM1", dataEsecuzione="2025-03-31", nomeSet=None, risultatiDomande={})
+
+@pytest.fixture
+def risultatoTest2():
+    return RisultatoTest(id=2, score=9.2, LLM="LLM2", dataEsecuzione="2025-04-31", nomeSet=None, risultatiDomande={})
+
 class TestRisultatoTestPersistenceAdapter:
-
-    @pytest.fixture
-    def mockRepositoryTest(self):
-        return Mock()
-
-    @pytest.fixture
-    def mockRepositorySingolaDomanda(self):
-        return Mock()
-
-    @pytest.fixture
-    def mockMapperSingolaDomanda(self):
-        return Mock()
-
-    @pytest.fixture
-    def mockMapperTest(self):
-        return Mock()
-
-    @pytest.fixture
-    def adapter(self, mockRepositoryTest, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, mockMapperTest):
-        return RisultatoTestPersistenceAdapter(
-            mockRepositoryTest, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, mockMapperTest
+    @classmethod
+    def setup_class(cls):
+        cls.mockRepositoryTest = mock.Mock(spec=RisultatoTestPostgreSQLRepository)
+        cls.mockRepositorySingolaDomanda = mock.Mock(spec=RisultatoSingolaDomandaPostgreSQLRepository)
+        cls.mockMapperTest = mock.Mock(spec=RisultatoTestPersistenceMapper)
+        cls.mockMapperSingolaDomanda = mock.Mock(spec=RisultatoSingolaDomandaPersistenceMapper)
+        cls.adapter = RisultatoTestPersistenceAdapter(
+            cls.mockRepositoryTest, cls.mockRepositorySingolaDomanda, cls.mockMapperSingolaDomanda, cls.mockMapperTest
         )
+        
+    def setup_method(self):
+        self.mockRepositoryTest.reset_mock(side_effect=True)
+        self.mockRepositorySingolaDomanda.reset_mock(side_effect=True)
+        self.mockMapperTest.reset_mock(side_effect=True)
+        self.mockMapperSingolaDomanda.reset_mock(side_effect=True)
+        
+    # Save Risultato Test
 
-    @pytest.fixture
-    def risultatoTest(self): 
-        metriche1 = {"metrica 1": 8.5, "metrica 2": 9}
-        metriche2 = {"metrica 1": 7.5, "metrica 2": 6, "metrica 3": 6}
-        RisultatoSingolaDomanda1 = RisultatoSingolaDomanda(id=1, domanda="domanda 1", risposta="risposta 1", rispostaLLM = "rispostaLLM 1", score=8.2, metriche=metriche1)
-        RisultatoSingolaDomanda2 = RisultatoSingolaDomanda(id=2, domanda="domanda 2", risposta="risposta 2", rispostaLLM = "rispostaLLM 2", score=6.2, metriche=metriche2)
-        RDomande = {RisultatoSingolaDomanda1,RisultatoSingolaDomanda2}
-        return RisultatoTest(id=1, score=7.8, LLM="nome LLM", dataEsecuzione="2025-03-31", nomeSet="All", risultatiDomande=RDomande )
+    def test_save_risultato_test(self, risultatoTest1):
+        """Test per il salvataggio di un risultato test."""
 
-    @pytest.fixture
-    def risultatoTest2(self):
-        metriche1 = {"metrica 1": 8.5, "metrica 2": 9}
-        metriche2 = {"metrica 1": 7.5, "metrica 2": 6, "metrica 3": 6}
-        RisultatoDomanda1 = RisultatoSingolaDomanda(id=1, domanda="domanda 1", risposta="risposta 1", rispostaLLM = "rispostaLLM 1", score=8.2, metriche=metriche1)
-        RisultatoDomanda2 = RisultatoSingolaDomanda(id=2, domanda="domanda 2", risposta="risposta 2", rispostaLLM = "rispostaLLM 2", score=6.2, metriche=metriche2)
-        RDomande = {RisultatoDomanda1,RisultatoDomanda2}
-        return RisultatoTest(id=2, score=7.8, LLM="nome LLM", dataEsecuzione="2025-03-31", nomeSet="All", risultatiDomande=RDomande )
+        entityIn = RisultatoTestEntity(score=7.8, LLM="nome LLM", data="2025-03-31", risultatiDomande=[])
+        entityOut = RisultatoTestEntity(id=1, score=7.8, LLM="nome LLM", data="2025-03-31", nomeSet=None, risultatiDomande=[])
+        self.mockMapperTest.toRisultatoTestEntity.return_value = entityIn
+        self.mockRepositoryTest.saveRisultatoTest.return_value = entityOut
+        self.mockMapperTest.fromRisultatoTestEntity.return_value = risultatoTest1
 
-    @pytest.fixture
-    def testId(self):
-        return 1
+        result = self.adapter.saveRisultatoTest(risultatoTest1)
 
-    @pytest.fixture
-    def singolaDomandaId(self):
-        return 5
+        assert result == risultatoTest1
+        self.mockMapperTest.toRisultatoTestEntity.assert_called_once_with(risultatoTest1)
+        self.mockRepositoryTest.saveRisultatoTest.assert_called_once_with(entityIn)
+        self.mockMapperTest.fromRisultatoTestEntity.assert_called_once_with(entityOut)
 
-    def test_SaveRisultatoTestSuccess(self, adapter, mockRepositoryTest, mockMapperTest, risultatoTest):
-        mockRisultatoTestEntity = Mock()
-        mockMapperTest.toRisultatoTestEntity.return_value = mockRisultatoTestEntity
-        mockMapperTest.fromRisultatoTestEntity.return_value = risultatoTest
-        mockRepositoryTest.saveRisultatoTest.return_value = mockRisultatoTestEntity
+    def test_save_risultato_test_db_error(self, risultatoTest1):
+        """Test per il salvataggio di un risultato test in presenza di un errore nel database."""
 
-        result = adapter.saveRisultatoTest(risultatoTest)
+        entityIn = RisultatoTestEntity(score=7.8, LLM="nome LLM", data="2025-03-31", risultatiDomande=[])
+        self.mockMapperTest.toRisultatoTestEntity.return_value = entityIn
+        self.mockRepositoryTest.saveRisultatoTest.side_effect = SQLAlchemyError()
 
-        mockMapperTest.toRisultatoTestEntity.assert_called_once_with(risultatoTest)
-        mockRepositoryTest.saveRisultatoTest.assert_called_once_with(mockRisultatoTestEntity)
-        mockMapperTest.fromRisultatoTestEntity.assert_called_once_with(mockRisultatoTestEntity)
-        assert result.getId()== risultatoTest.getId()
-        assert result.getScore()== risultatoTest.getScore()
-        assert result.getLLM()== risultatoTest.getLLM()
-        assert result.getDataEsecuzione() == risultatoTest.getDataEsecuzione()
-        assert result.getNomeSet() == risultatoTest.getNomeSet()
-        assert len(result.getRisultatiDomande()) == 2
-
-
-    def test_SaveRisultatoTestDbError(self, adapter, mockRepositoryTest, mockMapperTest, risultatoTest):
-        mockMapperTest.toRisultatoTestEntity.return_value = Mock()
-        mockRepositoryTest.saveRisultatoTest.side_effect = SQLAlchemyError()
-
-        result = adapter.saveRisultatoTest(risultatoTest)
+        result = self.adapter.saveRisultatoTest(risultatoTest1)
 
         assert result is None
 
-    def test_SaveRisultatoTestGenericError(self, adapter, mockRepositoryTest, mockMapperTest, risultatoTest):
-        mockMapperTest.toRisultatoTestEntity.return_value = Mock()
-        mockRepositoryTest.saveRisultatoTest.side_effect = Exception("Errore generico")
+    def test_save_risultato_test_server_error(self, risultatoTest1):
+        """Test per il salvataggio di un risultato test in presenza di un errore nel server."""
 
-        result = adapter.saveRisultatoTest(risultatoTest)
+        entityIn = RisultatoTestEntity(score=7.8, LLM="nome LLM", data="2025-03-31", risultatiDomande=[])
+        self.mockMapperTest.toRisultatoTestEntity.return_value = entityIn
+        self.mockRepositoryTest.saveRisultatoTest.side_effect = Exception()
+
+        result = self.adapter.saveRisultatoTest(risultatoTest1)
+
+        assert result is None
+        
+    # Get Risultato Test
+
+    def test_get_risultato_test_by_id(self, risultatoTest1):
+        """Test per il recupero di un risultato test tramite ID.""" 
+        
+        entityIn = RisultatoTestEntity(id=1, score=7.8, LLM="nome LLM", data="2025-03-31", risultatiDomande=[])
+        self.mockRepositoryTest.loadRisultatoTestById.return_value = entityIn
+        self.mockMapperTest.fromRisultatoTestEntity.return_value = risultatoTest1
+
+        id = 1
+        result = self.adapter.getRisultatoTestById(id)
+
+        assert result == risultatoTest1
+        self.mockRepositoryTest.loadRisultatoTestById.assert_called_once_with(id)
+        self.mockMapperTest.fromRisultatoTestEntity.assert_called_once_with(entityIn)
+
+    def test_get_risultato_test_by_id_not_found(self):
+        """Test per il recupero di un risultato test non trovato."""
+        
+        self.mockRepositoryTest.loadRisultatoTestById.side_effect = NoResultFound()
+
+        id = 1
+        with pytest.raises(ValueError):
+            self.adapter.getRisultatoTestById(id)
+
+        self.mockRepositoryTest.loadRisultatoTestById.assert_called_once_with(id)
+
+    def test_get_risultato_test_by_id_db_error(self):
+        """Test per il recupero di un risultato test in presenza di un errore nel database."""
+
+        self.mockRepositoryTest.loadRisultatoTestById.side_effect = SQLAlchemyError()
+
+        id = 1
+        result = self.adapter.getRisultatoTestById(id)
 
         assert result is None
 
-    def test_GetRisultatoTestByIdSuccess(self, adapter, mockRepositoryTest, mockMapperTest, risultatoTest, testId):
-        mockEntityTest = Mock()
-        expectedRisultatoTest = risultatoTest
-        mockRepositoryTest.loadRisultatoTestById.return_value = mockEntityTest
-        mockMapperTest.fromRisultatoTestEntity.return_value = expectedRisultatoTest
+    def test_get_risultato_test_by_id_server_error(self):
+        """Test per il recupero di un risultato test in presenza di un errore nel server."""
 
-        result = adapter.getRisultatoTestById(testId)
+        self.mockRepositoryTest.loadRisultatoTestById.side_effect = Exception()
 
-        mockRepositoryTest.loadRisultatoTestById.assert_called_once_with(testId)
-        mockMapperTest.fromRisultatoTestEntity.assert_called_once_with(mockEntityTest)
-        assert result == expectedRisultatoTest
-
-    def test_GetRisultatoTestByIdNotFound(self, adapter, mockRepositoryTest, testId):
-        mockRepositoryTest.loadRisultatoTestById.side_effect = NoResultFound()
-
-        with pytest.raises(ValueError, match="Risultato non trovato."):
-            adapter.getRisultatoTestById(testId)
-
-        mockRepositoryTest.loadRisultatoTestById.assert_called_once_with(testId)
-
-    def test_GetRisultatoTestByIdDbError(self, adapter, mockRepositoryTest, testId):
-        mockRepositoryTest.loadRisultatoTestById.side_effect = SQLAlchemyError()
-
-        result = adapter.getRisultatoTestById(testId)
+        id = 1
+        result = self.adapter.getRisultatoTestById(id)
 
         assert result is None
+        
+    # Get All Risultati Test
 
-    def test_GetRisultatoTestByIdGenericError(self, adapter, mockRepositoryTest, testId):
-        mockRepositoryTest.loadRisultatoTestById.side_effect = Exception("Errore generico")
+    def test_get_all_risultati_test(self, risultatoTest1, risultatoTest2):
+        """Test per il recupero di tutti i risultati test."""
 
-        result = adapter.getRisultatoTestById(testId)
+        entityIn1 = RisultatoTestEntity(id=1, score=7.8, LLM="nome LLM", data="2025-03-31", risultatiDomande=[])
+        entityIn2 = RisultatoTestEntity(id=2, score=9.2, LLM="nome LLM", data="2025-04-31", risultatiDomande=[])
+        self.mockRepositoryTest.loadAllRisultatiTest.return_value = [entityIn1, entityIn2]
+        self.mockMapperTest.fromRisultatoTestEntity.side_effect = [risultatoTest1, risultatoTest2]
 
-        assert result is None
+        result = self.adapter.getAllRisultatiTest()
+        
+        assert result == {risultatoTest1, risultatoTest2}
+        self.mockRepositoryTest.loadAllRisultatiTest.assert_called_once()
+        self.mockMapperTest.fromRisultatoTestEntity.assert_any_call(entityIn1)
+        self.mockMapperTest.fromRisultatoTestEntity.assert_any_call(entityIn2)
+        assert len(result) == 2
 
-    def test_GetAllRisultatiTestSuccess(self, adapter, mockRepositoryTest, mockMapperTest, risultatoTest, risultatoTest2):
-        mockEntityTest1 = Mock()
-        mockEntityTest2 = Mock()
-        mockRepositoryTest.loadAllRisultatiTest.return_value = [mockEntityTest1, mockEntityTest2]
-        expectedRisultatoTest1 = risultatoTest
-        expectedRisultatoTest2 = risultatoTest2
-        mockMapperTest.fromRisultatoTestEntity.side_effect = [expectedRisultatoTest1, expectedRisultatoTest2]
+    def test_get_all_risultati_test_empty(self):
+        """Test per il recupero di tutti i risultati test vuoti."""
+        
+        self.mockRepositoryTest.loadAllRisultatiTest.return_value = {}
 
-        result = adapter.getAllRisultatiTest()
+        result = self.adapter.getAllRisultatiTest()
 
-        mockRepositoryTest.loadAllRisultatiTest.assert_called_once()
-        assert mockMapperTest.fromRisultatoTestEntity.call_count == 2
-        assert expectedRisultatoTest1 in result
-        assert expectedRisultatoTest2 in result
-        assert isinstance(result, set)
-
-    def test_GetAllRisultatiTestSuccessEmpty(self, adapter, mockRepositoryTest, mockMapperTest):
-        mockRepositoryTest.loadAllRisultatiTest.return_value = []
-
-        result = adapter.getAllRisultatiTest()
-
-        mockRepositoryTest.loadAllRisultatiTest.assert_called_once()
-        mockMapperTest.fromRisultatoTestEntity.assert_not_called()
-        assert isinstance(result, set)
+        self.mockRepositoryTest.loadAllRisultatiTest.assert_called_once()
+        self.mockMapperTest.fromRisultatoTestEntity.assert_not_called()
         assert len(result) == 0
 
-    def test_GetAllRisultatiTestDbError(self, adapter, mockRepositoryTest):
-        mockRepositoryTest.loadAllRisultatiTest.side_effect = SQLAlchemyError()
+    def test_get_all_risultati_test_db_error(self):
+        """"Test per il recupero di tutti i risultati test in presenza di un errore nel database."""
+            
+        self.mockRepositoryTest.loadAllRisultatiTest.side_effect = SQLAlchemyError()
 
-        result = adapter.getAllRisultatiTest()
-
-        assert result is None
-
-    def test_GetAllRisultatiTestGenericError(self, adapter, mockRepositoryTest):
-        mockRepositoryTest.loadAllRisultatiTest.side_effect = Exception("Errore generico")
-
-        result = adapter.getAllRisultatiTest()
+        result = self.adapter.getAllRisultatiTest()
 
         assert result is None
 
-    def test_GetRisultatoSingolaDomandaTestByIdSuccess(self, adapter, mockRepositorySingolaDomanda, mockMapperSingolaDomanda, singolaDomandaId):
-        mockEntitySingolaDomanda = Mock()
-        metriche1 = {"metrica 1": 8.5, "metrica 2": 9}
-        expectedRisultatoSingolaDomanda = RisultatoSingolaDomanda(id=1, domanda="domanda 1", risposta="risposta 1", rispostaLLM = "rispostaLLM 1", score=8.2, metriche=metriche1)
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.return_value = mockEntitySingolaDomanda
-        mockMapperSingolaDomanda.fromRisultatoSingolaDomandaEntity.return_value = expectedRisultatoSingolaDomanda
+    def test_get_all_risultati_test_server_error(self):
+        """Test per il recupero di tutti i risultati test in presenza di un errore nel server."""
 
-        result = adapter.getRisultatoSingolaDomandaTestById(singolaDomandaId)
+        self.mockRepositoryTest.loadAllRisultatiTest.side_effect = Exception()
 
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(singolaDomandaId)
-        mockMapperSingolaDomanda.fromRisultatoSingolaDomandaEntity.assert_called_once_with(mockEntitySingolaDomanda)
-        assert result == expectedRisultatoSingolaDomanda
-
-    def test_GetRisultatoSingolaDomandaTestByIdNotFound(self, adapter, mockRepositorySingolaDomanda, singolaDomandaId):
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = NoResultFound()
-
-        with pytest.raises(ValueError, match="Risultato non trovato."):
-            adapter.getRisultatoSingolaDomandaTestById(singolaDomandaId)
-
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(singolaDomandaId)
-
-    def test_GetRisultatoSingolaDomandaTestByIdDbError(self, adapter, mockRepositorySingolaDomanda, singolaDomandaId):
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = SQLAlchemyError()
-
-        result = adapter.getRisultatoSingolaDomandaTestById(singolaDomandaId)
+        result = self.adapter.getAllRisultatiTest()
 
         assert result is None
+        
+    # Get Risultato Singola Domanda Test
 
-    def test_GetRisultatoSingolaDomandaTestByIdGenericError(self, adapter, mockRepositorySingolaDomanda, singolaDomandaId):
-        mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = Exception("Errore generico")
+    def test_get_risultato_singola_domanda_test_by_id(self, RisultatoSingolaDomanda1):
+        """Test per il recupero di un risultato singola domanda test tramite ID."""
+        
+        entityIn = RisultatoSingolaDomandaEntity(id=1, 
+                                                 domanda="domanda 1", 
+                                                 risposta="risposta 1", 
+                                                 rispostaLLM = "rispostaLLM 1", 
+                                                 score=7.3, 
+                                                 risultatiMetriche=[
+                                                        RisultatoMetricaEntity(nomeMetrica="metrica 1", score=7.5),
+                                                        RisultatoMetricaEntity(nomeMetrica="metrica 2", score=6), 
+                                                        RisultatoMetricaEntity(nomeMetrica="metrica 3", score=6)])
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.return_value = entityIn
+        self.mockMapperSingolaDomanda.fromRisultatoSingolaDomandaEntity.return_value = RisultatoSingolaDomanda1
 
-        result = adapter.getRisultatoSingolaDomandaTestById(singolaDomandaId)
+        id = 1
+        result = self.adapter.getRisultatoSingolaDomandaTestById(id)
+
+        assert result == RisultatoSingolaDomanda1
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(id)
+        self.mockMapperSingolaDomanda.fromRisultatoSingolaDomandaEntity.assert_called_once_with(entityIn)
+
+    def test_get_risultato_singola_domanda_test_by_id_not_found(self):
+        """Test per il recupero di un risultato singola domanda test non trovato."""
+        
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = NoResultFound()
+
+        id = 1
+        with pytest.raises(ValueError):
+            self.adapter.getRisultatoSingolaDomandaTestById(id)
+
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(id)
+
+    def test_get_risultato_singola_domanda_test_by_id_db_error(self):
+        """Test per il recupero di un risultato singola domanda test in presenza di un errore nel database."""
+        
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = SQLAlchemyError()
+
+        id = 1
+        result = self.adapter.getRisultatoSingolaDomandaTestById(id)
 
         assert result is None
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(id)
+        
+    def test_get_risultato_singola_domanda_test_by_id_server_error(self):
+        """Test per il recupero di un risultato singola domanda test in presenza di un errore nel server."""
+
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.side_effect = Exception()
+
+        id = 1
+        result = self.adapter.getRisultatoSingolaDomandaTestById(id)
+
+        assert result is None
+        self.mockRepositorySingolaDomanda.loadRisultatoSingolaDomandaTestById.assert_called_once_with(id)
