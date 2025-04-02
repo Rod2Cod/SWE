@@ -26,7 +26,14 @@ class TestGetRisultatoTestService:
     def test_get_risultato_test_by_id(self):
         """Test per il servizio di recupero di un RisultatoTest tramite ID."""
 
-        self.mockPort.getRisultatoTestById.return_value = mock.Mock(1, 0.8, "LLM", "2024-01-01", "set1", set())
+        self.mockPort.getRisultatoTestById.return_value = RisultatoTest(
+            id=1,
+            score=0.8,
+            LLM="LLM",
+            dataEsecuzione="2024-01-01",
+            nomeSet="set1",
+            risultatiDomande={}
+        )
 
         result = self.service.getRisultatoTestById(1)
 
@@ -53,9 +60,23 @@ class TestGetAllRisultatiTestService:
         """Test per il servizio di recupero di tutti i RisultatoTest."""
 
         self.mockPort.getAllRisultatiTest.return_value = {
-                                                            mock.Mock(1, 0.8, "LLM", "2024-01-01", "set1", set()),
-                                                            mock.Mock(2, 0.9, "LLM", "2024-01-02", "set2", set())
-                                                        }
+            RisultatoTest(
+                id=1,
+                score=0.8,
+                LLM="LLM",
+                dataEsecuzione="2024-01-01",
+                nomeSet="set1",
+                risultatiDomande={}
+            ),
+            RisultatoTest(
+                id=2,
+                score=0.9,
+                LLM="LLM2",
+                dataEsecuzione="2024-01-02",
+                nomeSet="set2",
+                risultatiDomande={}
+            )
+        }
 
         result = self.service.getAllRisultatiTest()
 
@@ -85,7 +106,14 @@ class TestGetRisultatoSingolaDomandaService:
     def test_get_risultato_singola_domanda_by_id(self):
         """Test per il servizio di recupero di una singola domanda tramite ID."""
 
-        self.mockPort.getRisultatoSingolaDomandaTestById.return_value = mock.Mock(1, "Domanda?", "Risposta", "LLM", 0.9, {"metrica1": 0.9, "metrica2": 0.1})
+        self.mockPort.getRisultatoSingolaDomandaTestById.return_value = RisultatoSingolaDomanda(
+            id=1,
+            domanda="Domanda 1",
+            risposta="Risposta 1",
+            rispostaLLM="Risposta LLM",
+            score=0.8,
+            metriche={"metrica1": 0.7, "metrica2": 0.3}
+        )
 
         result = self.service.getRisultatoSingolaDomandaTestById(1)
 

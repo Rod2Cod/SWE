@@ -13,6 +13,7 @@ from src.application.ports.output.ElementiDomandaPorts import (SaveElementoDoman
                                                                GetAllElementiDomandaPort, 
                                                                DeleteElementiDomandaPort, 
                                                                UpdateElementoDomandaPort)
+from src.domain.ElementoDomanda import ElementoDomanda
 
 @pytest.mark.parametrize("domanda, risposta", [("domanda", False), (True, "risposta"), (True,False), ("", "risposta"), ("domanda", "")])
 def test_validate_domanda_risposta_invalid(domanda,risposta):
@@ -55,7 +56,7 @@ class TestAddElementoDomandaService:
         domanda = "Qual è la capitale d'Italia?"
         risposta = "Roma"
         
-        self.mockPort.saveElementoDomanda.return_value = mock.Mock({"id": 1, "domanda": domanda, "risposta": risposta})
+        self.mockPort.saveElementoDomanda.return_value = ElementoDomanda(domanda=domanda, risposta=risposta, id=1)
         
         result = self.service.addElementoDomanda(domanda, risposta)
         
@@ -82,7 +83,7 @@ class TestGetElementoDomandaService:
         """Test per il servizio di recupero di un elemento domanda."""
         
         id = 1
-        self.mockPort.getElementoDomandaById.return_value = mock.Mock({"id": id, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"})
+        self.mockPort.getElementoDomandaById.return_value = ElementoDomanda(domanda="Qual è la capitale d'Italia?", risposta="Roma", id=id)
         
         result = self.service.getElementoDomandaById(id)
         
@@ -108,8 +109,8 @@ class TestGetAllElementiDomandaService:
         """Test per il servizio di recupero di tutti gli elementi domanda."""
         
         self.mockPort.getAllElementiDomanda.return_value = [
-            mock.Mock({"id": 1, "domanda": "Qual è la capitale d'Italia?", "risposta": "Roma"}),
-            mock.Mock({"id": 2, "domanda": "Qual è la capitale della Francia?", "risposta": "Parigi"})
+            ElementoDomanda(domanda="Qual è la capitale d'Italia?", risposta="Roma", id=1),
+            ElementoDomanda(domanda="Qual è la capitale della Francia?", risposta="Parigi", id=2)
         ]
         
         result = self.service.getAllElementiDomanda()
