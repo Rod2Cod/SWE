@@ -204,14 +204,11 @@ Pianificazione: prevede la preparazione dei piani operativi, incluse tempistiche
 Esecuzione e controllo: implementa i piani, monitora l'andamento, gestisce problemi e aggiornamenti, e garantisce la documentazione delle modifiche.
 Revisione e valutazione: verifica la conformità dei prodotti e dei processi agli obiettivi e ai requisiti stabiliti.
 Chiusura: determina il completamento del processo e archivia i risultati e le registrazioni come previsto dal contratto.
+
+#include "documentazione/riunioni.typ"
+#include "documentazione/tracciamentoOre.typ"
 == infrastrutturale 
-Il processo di infrastruttura ha lo scopo di stabilire e mantenere l'infrastruttura necessaria per altri processi, comprendendo hardware, software, strumenti, tecniche, standard e strutture.
-
-Si articola in tre fasi:
-
-Implementazione del processo: definizione e documentazione dell'infrastruttura in base ai requisiti e agli standard applicabili.
-Stabilizzazione dell'infrastruttura: pianificazione, configurazione e installazione dell'infrastruttura considerando funzionalità, sicurezza, prestazioni, costi e vincoli temporali.
-Manutenzione dell'infrastruttura: monitoraggio, aggiornamento e gestione della configurazione per garantirne l'adeguatezza nel tempo.
++ viene utilizzato git come strumento di versionamento e github come repository, inoltre viene ulilizzato github-pages per esprre la documentazione e github-action per l'automatizzazione dei processi.
 == miglioramento 
 Il processo di miglioramento ha lo scopo di stabilire, valutare, misurare, controllare e migliorare i processi del ciclo di vita del software.
 
@@ -221,17 +218,14 @@ Stabilizzazione del processo: definizione, documentazione e controllo dei proces
 Valutazione del processo: sviluppo e applicazione di procedure di valutazione, con revisioni periodiche per garantirne l'efficacia.
 Miglioramento del processo: aggiornamento dei processi in base ai risultati delle valutazioni, analisi dei dati storici e tecnici per individuare punti di forza e debolezza, e raccolta di dati sui costi della qualità per ottimizzare la gestione.
 == formazione
-autoformazione
-
-
-#include "documentazione/riunioni.typ"
-#include "documentazione/tracciamentoOre.typ"
-== infrastrutturale 
-+ viene utilizzato git come strumento di versionamento e github come repository, inoltre viene ulilizzato github-pages per esprre la documentazione e github-action per l'automatizzazione dei processi.
-== formazione
 + Ogni membro del team è responsabile della propria formazione sugli strumenti e sulle tecnologie utilizzate nel progetto.  
 + In caso di difficoltà o dubbi, è incentivata la condivisione delle conoscenze all'interno del team.  
 + I progressi nell'apprendimento possono essere discussi durante gli incontri periodici per favorire l'allineamento delle competenze.
+
+
+
+
+
 
 
 
