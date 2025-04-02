@@ -4,6 +4,8 @@ omit = [
     ".venv/*",
     "test/*",
     "__init__.py",
+    # omit pytorch-generated files in /tmp
+    "/tmp/*",
     ]
 
 [tool.coverage.report]
