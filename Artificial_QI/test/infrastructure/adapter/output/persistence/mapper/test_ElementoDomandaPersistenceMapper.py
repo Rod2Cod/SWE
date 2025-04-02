@@ -1,40 +1,49 @@
-import pytest
 from src.infrastructure.adapter.output.persistence.domain import ElementoDomandaEntity
 from src.infrastructure.adapter.output.persistence.mapper import ElementoDomandaPersistenceMapper
-from src.domain import ElementoDomanda, Domanda, Risposta
+from src.domain import ElementoDomanda
 
-class test_ElementoDomandaPersistenceMapper:
-    
-    @pytest.fixture
-    def mapper(self):
-        return ElementoDomandaPersistenceMapper()
+class TestElementoDomandaPersistenceMapper:
+    @classmethod
+    def setup_class(cls):
+        cls.mapper = ElementoDomandaPersistenceMapper()
 
-    def test_FromElementoDomandaEntity(self, mapper):
-        entity = ElementoDomandaEntity(id=1, domanda="Qual è la capitale d'Italia?", risposta="Roma")
+    def test_from_elemento_domanda_entity(self):
+        """Test per la creazione di un oggetto ElementoDomanda a partire da un oggetto ElementoDomandaEntity."""
+        
+        domanda = "Qual è la capitale d'Italia?"
+        risposta = "Roma"
+        id = 1
+        
+        entity = ElementoDomandaEntity(id=id, domanda=domanda, risposta=risposta)
 
-        elemento = mapper.fromElementoDomandaEntity(entity)
+        elemento = self.mapper.fromElementoDomandaEntity(entity)
 
-        assert elemento.getId() == 1
-        assert elemento.getDomanda().getText() == "Qual è la capitale d'Italia?"
-        assert elemento.getRisposta().getText() == "Roma"
+        assert elemento.getId() == id
+        assert elemento.getDomanda().getText() == domanda
+        assert elemento.getRisposta().getText() == risposta
 
-    def test_ToElementoDomandaEntity(self, mapper):
-        domanda = Domanda("Qual è il tuo nome?")
-        risposta = Risposta("Sono un modello linguistico.")
-        elemento = ElementoDomanda(domanda=domanda, risposta=risposta)
+    def test_ToElementoDomandaEntity(self):
+        """Test per la creazione di un oggetto ElementoDomandaEntity a partire da un oggetto ElementoDomanda."""
+        
+        domanda = "Qual è la capitale della Germania?"
+        risposta = "Berlino"
+        id = 999
+        elemento = ElementoDomanda(id=id, domanda=domanda, risposta=risposta)
 
-        entity = mapper.toElementoDomandaEntity(elemento)
+        entity = self.mapper.toElementoDomandaEntity(elemento)
 
-        assert entity.domanda == "Qual è il tuo nome?"
-        assert entity.risposta == "Sono un modello linguistico."
+        assert entity.domanda == domanda
+        assert entity.risposta == risposta
         assert entity.id is None  # L'ID di una nuova entità è None prima del salvataggio
 
-    def test_FromDomandaRisposta(self, mapper):
+    def test_FromDomandaRisposta(self):
+        """Test per la creazione di un oggetto ElementoDomandaEntity a partire da una domanda e una risposta."""
+        
         domanda_text = "Quanto fa 2 + 2?"
         risposta_text = "4"
 
-        entity = mapper.fromDomandaRisposta(domanda_text, risposta_text)
+        entity = self.mapper.fromDomandaRisposta(domanda_text, risposta_text)
 
-        assert entity.domanda == "Quanto fa 2 + 2?"
-        assert entity.risposta == "4"
+        assert entity.domanda == domanda_text
+        assert entity.risposta == risposta_text
         assert entity.id is None  # L'ID di una nuova entità creata da domanda/risposta è None
