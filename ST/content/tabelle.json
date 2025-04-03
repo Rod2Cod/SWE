@@ -38,7 +38,12 @@
         "Data": "2025-03-31",
         "Descrizione": "Sezione API - Aggiunte API e tabelle",
         "Autore": "Filippo Bellon"
-      }
+      },
+      {
+        "Data": "2025-04-03",
+        "Descrizione": "Sezione Struttura - Aggiunto Database",
+        "Autore": "Filippo Bellon"
+      }      
     ]
   },
   "tecnologie": {
