@@ -4942,7 +4942,8 @@
 										"$ref": "AAAAAAGVheC+NNLWTNA="
 									},
 									"name": "model",
-									"visibility": "private"
+									"visibility": "private",
+									"type": ""
 								}
 							],
 							"operations": [
@@ -70075,7 +70076,7 @@
 											},
 											"font": "Arial;13;1",
 											"parentStyle": true,
-											"left": 1032,
+											"left": 1024,
 											"top": 853,
 											"width": 234.6611328125,
 											"height": 13,
@@ -70102,7 +70103,7 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 1037,
+													"left": 1029,
 													"top": 876,
 													"width": 224.6611328125,
 													"height": 13
@@ -70118,7 +70119,7 @@
 													},
 													"font": "Arial;13;0",
 													"parentStyle": true,
-													"left": 1037,
+													"left": 1029,
 													"top": 891,
 													"width": 224.6611328125,
 													"height": 13
@@ -70126,7 +70127,7 @@
 											],
 											"font": "Arial;13;0",
 											"parentStyle": true,
-											"left": 1032,
+											"left": 1024,
 											"top": 871,
 											"width": 234.6611328125,
 											"height": 38
@@ -70134,7 +70135,7 @@
 									],
 									"font": "Arial;13;0",
 									"parentStyle": false,
-									"left": 1032,
+									"left": 1024,
 									"top": 848,
 									"width": 234.6611328125,
 									"height": 61,
@@ -70164,7 +70165,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 1340,
+											"left": 1336,
 											"top": 886,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -70200,7 +70201,7 @@
 											},
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 1292,
+											"left": 1284,
 											"top": 885,
 											"height": 13,
 											"alpha": -0.5235987755982988,
@@ -70219,7 +70220,7 @@
 										"$ref": "AAAAAAGVmbGoFXa2hGs="
 									},
 									"lineStyle": 2,
-									"points": "1416:877;1267:877",
+									"points": "1416:877;1259:877",
 									"nameLabel": {
 										"$ref": "AAAAAAGVmbOZxnd9hiI="
 									},
@@ -70623,7 +70624,7 @@
 											"parentStyle": true,
 											"left": 984,
 											"top": 549,
-											"width": 227.9072265625,
+											"width": 248.84814453125,
 											"height": 13,
 											"text": "RisultatoMetrica"
 										},
@@ -70650,7 +70651,7 @@
 													"parentStyle": true,
 													"left": 989,
 													"top": 572,
-													"width": 217.9072265625,
+													"width": 238.84814453125,
 													"height": 13
 												},
 												{
@@ -70666,7 +70667,7 @@
 													"parentStyle": true,
 													"left": 989,
 													"top": 587,
-													"width": 217.9072265625,
+													"width": 238.84814453125,
 													"height": 13
 												},
 												{
@@ -70682,7 +70683,7 @@
 													"parentStyle": true,
 													"left": 989,
 													"top": 602,
-													"width": 217.9072265625,
+													"width": 238.84814453125,
 													"height": 13
 												}
 											],
@@ -70690,7 +70691,7 @@
 											"parentStyle": true,
 											"left": 984,
 											"top": 567,
-											"width": 227.9072265625,
+											"width": 248.84814453125,
 											"height": 53
 										}
 									],
@@ -70698,7 +70699,7 @@
 									"parentStyle": false,
 									"left": 984,
 									"top": 544,
-									"width": 227.9072265625,
+									"width": 248.84814453125,
 									"height": 76,
 									"nameLabel": {
 										"$ref": "AAAAAAGV8bO2Qenon0g="
@@ -70726,7 +70727,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 1265,
+											"left": 1275,
 											"top": 568,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -70762,7 +70763,7 @@
 											},
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 1237,
+											"left": 1258,
 											"top": 567,
 											"height": 13,
 											"alpha": -0.5235987755982988,
@@ -70781,7 +70782,7 @@
 										"$ref": "AAAAAAGVmbSgpXexpc4="
 									},
 									"lineStyle": 2,
-									"points": "1320:559;1212:559",
+									"points": "1320:559;1233:559",
 									"nameLabel": {
 										"$ref": "AAAAAAGV8bTSmeoI5wE="
 									},
@@ -70966,7 +70967,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGVmbGoFXa0Rag="
 									},
-									"name": "NOME",
+									"name": "nome",
 									"type": "TEXT",
 									"length": 0,
 									"primaryKey": true
@@ -71017,10 +71018,11 @@
 									"_parent": {
 										"$ref": "AAAAAAGVmbIVTXbJt5o="
 									},
-									"name": "ID_ELEMENTO",
+									"name": "id_elemento",
 									"type": "INTEGER",
 									"length": 0,
-									"primaryKey": true
+									"primaryKey": true,
+									"foreignKey": true
 								},
 								{
 									"_type": "ERDColumn",
@@ -71028,10 +71030,11 @@
 									"_parent": {
 										"$ref": "AAAAAAGVmbIVTXbJt5o="
 									},
-									"name": "NOME_SET",
+									"name": "nome_set",
 									"type": "TEXT",
 									"length": 0,
-									"primaryKey": true
+									"primaryKey": true,
+									"foreignKey": true
 								}
 							]
 						},
@@ -71111,7 +71114,7 @@
 										"$ref": "AAAAAAGVmbR+hneihvs="
 									},
 									"name": "data",
-									"type": "DATE",
+									"type": "TIMESTAMP",
 									"length": 0
 								},
 								{
@@ -71224,7 +71227,8 @@
 									},
 									"name": "risultatoTestId",
 									"type": "INTEGER",
-									"length": 0
+									"length": 0,
+									"foreignKey": true
 								}
 							]
 						},
@@ -71256,7 +71260,8 @@
 									"name": "risultatoDomandaId",
 									"type": "INTEGER",
 									"length": 0,
-									"primaryKey": true
+									"primaryKey": true,
+									"foreignKey": true
 								},
 								{
 									"_type": "ERDColumn",
@@ -87349,7 +87354,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGV8JEebIyxmzE="
 					},
-					"name": "ClassDiagram1"
+					"name": "Artificial_QI_test"
 				}
 			]
 		}
