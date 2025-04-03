@@ -1,3 +1,4 @@
+import pytest
 from src.domain import ElementoDomanda,Domanda,Risposta
 
 # TEST DOMANDA
@@ -22,10 +23,12 @@ class TestDomanda:
 risposta = "Roma"
 
 class TestRisposta:
-    def setup_method(self):
+    
+    @pytest.fixture(autouse=True)
+    def risposta_fixture(self):
         self.risposta = Risposta(risposta)
 
-    def test_get_text(self):
+    def test_get_text(self):  
         """Test per il metodo getText."""
         assert self.risposta.getText() == risposta
 
@@ -39,7 +42,9 @@ class TestRisposta:
 id = 1
 
 class TestElementoDomanda:
-    def setup_method(self):
+
+    @pytest.fixture(autouse=True)
+    def elemento_domanda_fixture(self):
         self.elemento_domanda = ElementoDomanda(domanda, risposta, id) 
 
     def test_get_id(self):  

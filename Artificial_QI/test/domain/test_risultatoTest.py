@@ -1,3 +1,4 @@
+import pytest
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 
 # TEST RISULTATO SINGOLA DOMANDA
