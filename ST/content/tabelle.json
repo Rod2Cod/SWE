@@ -190,6 +190,21 @@
           "Nome": "Visual Studio Code",
           "Descrizione": "Editor di codice gratuito e open-source sviluppato da Microsoft. Supporta vari linguaggi di programmazione, estensioni personalizzabili e altri strumenti per lo sviluppo.",
           "Versione": "1.98.2"
+        },
+        {
+          "Nome": "Docker",
+          "Descrizione": "Piattaforma per la creazione, distribuzione e gestione di applicazioni in container.",
+          "Versione": "24.0.1"
+        },
+        {
+          "Nome": "PostgreSQL",
+          "Descrizione": "Database relazionale open source basato su SQL. Utilizzato all'interno di un docker container.",
+          "Versione": "16.0"
+        },
+        {
+          "Nome": "pgAdmin",
+          "Descrizione": "Interfaccia grafica per la gestione di database PostgreSQL. Utilizzato all'interno di un docker container.",
+          "Versione": "7.6"
         }
       ]
     }
