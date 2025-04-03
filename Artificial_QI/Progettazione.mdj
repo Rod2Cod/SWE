@@ -70008,7 +70008,7 @@
 											"top": 861,
 											"width": 186.96630859375,
 											"height": 13,
-											"text": "SET_ELEMENTI_DOMANDA"
+											"text": "SetElementiDomanda"
 										},
 										{
 											"_type": "ERDColumnCompartmentView",
@@ -70080,7 +70080,7 @@
 											"top": 853,
 											"width": 234.6611328125,
 											"height": 13,
-											"text": "ELEMENTI_SET"
+											"text": "ElementiSet"
 										},
 										{
 											"_type": "ERDColumnCompartmentView",
@@ -70872,7 +70872,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGVma0iH/SxWWc="
 							},
-							"name": "SET_ELEMENTI_DOMANDA",
+							"name": "SetElementiDomanda",
 							"ownedElements": [
 								{
 									"_type": "ERDRelationship",
@@ -70980,7 +70980,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGVma0iH/SxWWc="
 							},
-							"name": "ELEMENTI_SET",
+							"name": "ElementiSet",
 							"ownedElements": [
 								{
 									"_type": "ERDRelationship",
