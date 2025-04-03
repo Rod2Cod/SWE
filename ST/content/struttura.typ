@@ -1,5 +1,55 @@
 == Diagrammi delle classi
 
+== Database
+#figure(
+  image("../pictures/db/Artificial_QI_ER.jpg"),
+  caption: [
+    Architettura del database
+  ]
+)
+
+=== Entità
+Il database è composto da 5 entità:
+  - *ElementoDomanda*: rappresenta una singola domanda con annessa risposta. È composto da:
+    - id: identificativo univoco dell'elemento domanda
+    - domanda: testo della domanda
+    - risposta: testo della risposta
+
+  - *RisultatoTest*: rappresenta il risultato di un test di valutazione svolto su delle domande. È composto da:
+    - id: identificativo univoco del risultato
+    - score: punteggio ottenuto dal test
+    - LLM: nome dell'LLM a cui vengono poste le domande
+    - data: data in cui è stato svolto il test
+    - nomeSet: nome del set di domande utilizzato per il test. Questo campo può essere nullo se il test viene svolto su tutte le domande disponibili
+
+  - *RisultatoSingolaDomanda*: rappresenta il risultato ottenuto da una singola domanda all'interno del risultato di un test . È composto da:
+    - id: identificativo univoco del risultato
+    - idRisultatoTest: identificativo del risultato del test a cui appartiene
+    - domanda: testo della domanda testata
+    - risposta: testo della risposta testata
+    - rispostaLLM: testo della risposta fornita dall'LLM
+    - score: punteggio ottenuto dalla domanda
+    - risultatoTestId: id del risultato del test a cui si riferisce
+
+  - *RisultatoMetrica*: rappresenta il risultato ottenuto da metrica su un determinato risultato della singola domanda. È composto da:
+    - nomeMetrica: nome della metrica
+    - score: punteggio ottenuto dalla metrica
+    - risultatoDomandaId: id del risultato della singola domanda a cui si riferisce
+
+=== Query
+Le operazioni principali che vengono eseguite sul database sono:
+- *Inserimento*:
+  - di un elemento domanda
+  - di un risultato di un test, con conseguente caricamento di risultati delle singole domande e dei relativi risultati delle singole metriche.
+- *Ottenimento*:
+  - di un elemento domanda o di tutti gli elementi domanda presenti.
+  - di un risultato di un test o di tutti i risultati di test presenti. In entrambi i casi, con conseguente ottenimento di risultati delle singole domande e dei relativi risultati delle singole metriche.
+  - di un risultato di una singola domanda, con conseguente ottenimento dei risultati delle singole metriche.
+- *Eliminazione*:
+  - di uno o più elementi domanda
+- *Aggiornamento*:
+  - di domanda o risposta di un determinato elemento domanda
+
 == Architettura
 === Architettura di Deployment
 L'architettura di deployment utilizzata dall'applicativo sia lato client che lato server è di tipo *monolitico*. Questo tipo di architettura porta diversi vantaggi:
@@ -32,7 +82,7 @@ Il pattern *Strategy* viene principalmente utilizzato per definire una famiglia 
 Il pattern *Factory Method* viene utilizzato per definire un'interfaccia per la creazione di un oggetto, ma lascia alle sottoclassi la decisione su quale classe istanziare. Questo pattern è stato utilizzato per la creazione e gestione di dipendenze tramite dependency injection.
 
 === Decorator
-Il pattern *Decorator* viene utilizzato per aggiungere funzionalità a un oggetto dinamicamente, incapsulandolo in un nuovo oggetto che contiene queste funzionalità. Questo pattern è stato utilizzato per esempio nella creazione e gestione delle route API del backend.
+Il pattern *Decorator* viene utilizzato per aggiungere funzionalità a un oggetto dinamicamente, incapsulandolo in un nuovo oggetto che contiene queste funzionalità. Questo pattern è stato utilizzato per esempio per l'"iniezione" delle dipendenze all'interno dei controllers.
 
 === Dependency injection
 Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le loro dipendenze dall'esterno, piuttosto che crearle direttamente al loro interno. Questo approccio migliora la modularità e facilita il testing, permettendo di sostituire facilmente le dipendenze con implementazioni alternative o mock durante i test. \
