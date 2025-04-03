@@ -162,7 +162,7 @@
           row => keys.map(
             key => row.at(key, default:[])
           )
-        ).rev().flatten()
+        ).flatten()
     )
   ]
 }
