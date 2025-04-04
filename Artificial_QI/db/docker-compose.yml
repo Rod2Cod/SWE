@@ -31,4 +31,4 @@ services:
 
 networks:
   shared_network:
-    external: true
+    #external: true

@@ -36,9 +36,9 @@ class ExecuteTestController(MethodView):
             if status["in_progress"]:
                 return jsonify({"message": "Test avviato con successo"}), 200
             else:
-                return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi "}), 500
+                return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         except Exception:
-            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi "}), 500
+            return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestController.as_view('execute_test'))
 
