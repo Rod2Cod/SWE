@@ -31,7 +31,7 @@ export default {
     async loadTest() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/risultati/${this.id}`
+          `/risultati/${this.id}`
         );
         this.test = response.data;
         console.log(this.test.risultatiDomande);

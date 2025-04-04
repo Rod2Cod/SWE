@@ -102,7 +102,7 @@ export default {
       this.error = false;
 
       try {
-        const response = await axios.post(`http://localhost:5000/executeTest`);
+        const response = await axios.post(`/executeTest`);
 
         this.startingTest = false;
         this.testStarted = true;
@@ -134,7 +134,7 @@ export default {
         this.pollingInterval = setInterval(this.checkTestStatus, 1000);
       } else if (status.in_progress && status.percentage === 100 && globalState.vResult) {
         this.testCompleted = true;
-        globalState.vResult = false;
+        globalState.vResult = true;
       }
   },
   beforeUnmount() {

@@ -49,7 +49,7 @@ export default {
       }
 
       try {
-        await axios.post("http://localhost:5000/domande", this.payload);
+        await axios.post("/domande", this.payload);
         this.$router.push("/questions");
       } catch (error) {
         console.error("Errore durante l'invio della domanda:", error);

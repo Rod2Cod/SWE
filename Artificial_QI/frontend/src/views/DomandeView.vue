@@ -89,7 +89,7 @@ export default {
     async loadQuestions() {
       this.isLoading = true;
       try {
-        const response = await axios.get("http://localhost:5000/domande");
+        const response = await axios.get("/domande");
         this.questions = response.data;
         this.questions.sort((a, b) => b.id - a.id);
         this.isLoading = false;
@@ -129,7 +129,7 @@ export default {
         )
       ) {
         try {
-          await axios.post("http://localhost:5000/domande/delete", {
+          await axios.post("/domande/delete", {
              ids: this.selectedQuestions ,
           });
           this.questions = this.questions.filter(

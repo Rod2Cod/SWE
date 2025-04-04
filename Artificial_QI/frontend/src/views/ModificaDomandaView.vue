@@ -58,7 +58,7 @@ export default {
     async loadQuestion() {
       this.isLoading = true;
       try {
-        const res = await axios.get(`http://localhost:5000/domande/${this.id}`);
+        const res = await axios.get(`/domande/${this.id}`);
 
         this.question = res.data.domanda;
         this.expectedAnswer = res.data.risposta;
