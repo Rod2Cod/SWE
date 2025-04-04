@@ -11,5 +11,10 @@ import axios from 'axios'
 axios.defaults.baseURL = 'http://localhost:5000'
 
 const app = createApp(App)
+
+app.config.globalProperties.$vResult = "view"
+
+
+
 app.use(router)
 app.mount('#app')

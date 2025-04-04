@@ -13,7 +13,10 @@
       >
         <div class="test-card p-3 shadow-sm h-100">
           <p><strong>Data:</strong> {{ formatDate(test.dataEsecuzione) }}</p>
-          <p><strong>Score:</strong> {{ test.score }}/10</p>
+          <p>
+            <strong>Score:</strong>
+            {{ parseFloat((test.score * 10).toFixed(2)) }}/10
+          </p>
           <p><strong>LLM:</strong> {{ test.LLM }}</p>
         </div>
       </div>
@@ -52,7 +55,9 @@ export default {
         this.isLoading = true;
         const response = await axios.get("http://localhost:5000/risultati"); // Da adattare al backend reale
         this.tests = response.data;
-        console.log("Storico test:", this.tests);
+        this.tests.sort(
+          (a, b) => new Date(b.dataEsecuzione) - new Date(a.dataEsecuzione)
+        ); // Ordina per data decrescente
         this.isLoading = false;
       } catch (error) {
         this.isLoading = false;

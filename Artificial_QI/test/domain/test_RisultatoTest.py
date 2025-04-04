@@ -1,4 +1,3 @@
-import pytest
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 
 # TEST RISULTATO SINGOLA DOMANDA
@@ -11,7 +10,6 @@ score = 1.0
 metriche = {"metrica1": 0.5, "metrica2": 0.5}
 
 class TestRisultatoSingolaDomanda:
-
     def setup_method(self):
         self.risultato_singola_domanda = RisultatoSingolaDomanda(id, domanda, risposta, rispostaLLM, score, metriche)
 
@@ -54,7 +52,6 @@ nomeSet = "Set1"
 risultatiDomande = {risultato_singola_domanda1, risultato_singola_domanda2, risultato_singola_domanda3, risultato_singola_domanda4}
 
 class TestRisultatoTest:
-
     def setup_method(self):
         self.risultato_test = RisultatoTest(id, scoreGenerale, LLM, dataEsecuzione, nomeSet, risultatiDomande)
 

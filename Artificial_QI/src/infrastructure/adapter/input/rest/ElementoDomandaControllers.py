@@ -82,8 +82,8 @@ class DeleteElementiDomandaController(MethodView):
                 if deleted else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
             return jsonify({"message": str(e)}), 400
-        except (KeyError, BadRequest, UnsupportedMediaType):
-            return jsonify({"message": "La lista di id è un campo obbligatorio."}), 400
+        except (KeyError, BadRequest, UnsupportedMediaType) as e:
+            return jsonify({"message": "La lista di id è un campo obbligatorio.", "error": str(e)}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         

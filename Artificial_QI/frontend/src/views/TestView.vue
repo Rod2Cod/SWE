@@ -5,12 +5,24 @@
     <div class="spacer"></div>
 
     <button
-      v-if="!testStarted && !testCompleted"
+      v-if="!testStarted && !testCompleted && !startingTest"
       class="start-btn"
       @click="startTest"
     >
       Inizia Test
     </button>
+
+    <div
+      class="starting-test d-flex flex-column align-items-center justify-content-center mt-5"
+      v-if="startingTest"
+    >
+      <img
+        class="loading mb-3"
+        src="@/assets/loading.svg"
+        alt="Loading spinner"
+      />
+      <h3 class="text-white">Avvio Test...</h3>
+    </div>
 
     <div v-if="testStarted && !testCompleted" class="progress-container">
       <p>Test in esecuzione... ({{ progress }}%)</p>
@@ -22,108 +34,96 @@
     <div v-if="testCompleted" class="test-results">
       <h2 class="results-title">Test Completato!</h2>
       <button class="start-btn" @click="goToResult">Vai al risultato!</button>
+      <button class="secondary-btn mt-3" @click="startTest">
+        Esegui un altro test
+      </button>
     </div>
   </main>
 </template>
 
 <script>
-import axios from "axios"; // Assicurati che axios sia installato
+import axios from "axios";
+import { globalState } from "@/globalState";
 
 export default {
   name: "TestView",
   data() {
     return {
+      startingTest: false,
       testStarted: false,
       testCompleted: false,
       progress: 0,
       id: null,
       pollingInterval: null,
+      in_progress: "",
     };
   },
   methods: {
     async checkTestStatus() {
       try {
-        // Simulazione richiesta API per lo stato test
-        /*
-        const response = await axios.get(`/api/test/status`);
+        const response = await axios.get(`http://localhost:5000/status`);
         const data = response.data;
-        this.id = data.id;
-        this.progress = data.progress;
-        this.testStarted = data.started;
-        this.testCompleted = data.completed;
-        */
 
-        // DEMO - simula risposta iniziale
-        const data = {
-          id: "demo123",
-          progress: 0,
-          started: false,
-          completed: false,
-        };
+        console.log(data);
 
-        this.id = data.id;
-        this.progress = data.progress;
-        this.testStarted = data.started;
-        this.testCompleted = data.completed;
+        this.in_progress = data.in_progress;
 
-        if (this.testStarted && !this.testCompleted) {
-          this.startPolling();
+        if (data.in_progress) {
+          this.testStarted = true;
+          this.progress = data.percentage;
+        } else if (data.percentage === 100) {
+          this.testCompleted = true;
+          this.testStarted = false;
+          this.id = data.id_risultato;
+          clearInterval(this.pollingInterval);
+        } else if (data.status === "not_started") {
+          this.testStarted = false;
+          this.testCompleted = false;
         }
       } catch (error) {
         console.error("Errore nel recupero dello stato del test", error);
       }
     },
+    async startTest() {
+      globalState.vResult = false;
+      this.startingTest = true;
+      this.testCompleted = false;
+      this.id = null;
 
-    async startPolling() {
       const response = await axios.post(`http://localhost:5000/executeTest`);
-      console.log(response);
-    },
 
-    async pollTestProgress() {
-      try {
-        // Simulazione richiesta API di avanzamento test
-
-        const response = await axios.post(`http://localhost:5000/executeTest`);
-        /*
-        const data = response.data;
-        this.progress = data.progress;
-        this.testCompleted = data.completed;
-        */
-
-        // DEMO - simulazione avanzamento
-        if (this.progress < 100) {
-          this.progress += 10;
-        } else {
-          this.testCompleted = true;
-          clearInterval(this.pollingInterval);
-        }
-      } catch (error) {
-        console.error("Errore durante il polling del test", error);
-        clearInterval(this.pollingInterval);
+      if (response.status === 200) {
+        this.startingTest = false;
+        this.testStarted = true;
+        this.pollingInterval = setInterval(this.checkTestStatus, 1000);
+      } else {
+        this.startingTest = false;
+        console.log("Errore durante l'esecuzione del test");
       }
     },
 
-    async startTest() {
-      this.testStarted = true;
-      this.testCompleted = false;
-      this.progress = 0;
-
-      // Simulazione richiesta API per iniziare il test
-      /*
-      const response = await axios.post(`/api/test/start`);
-      this.id = response.data.id;
-      */
-
-      this.id = "demo123"; // DEMO ID
-      this.startPolling();
-    },
-
     goToResult() {
+      globalState.vResult = false;
+      console.log(globalState.vResult);
       this.$router.push({ name: "TestResult", params: { id: this.id } });
     },
   },
-  mounted() {
-    this.checkTestStatus();
+  async mounted() {
+    const response = await axios.get(`http://localhost:5000/status`);
+
+    const status = response.data;
+
+    if (status.starting) {
+      this.startingTest = true;
+      this.pollingInterval = setInterval(this.checkTestStatus, 1000);
+    } else if (status.in_progress) {
+      this.testStarted = true;
+      this.progress = status.percentage;
+      this.pollingInterval = setInterval(this.checkTestStatus, 1000);
+    } else if (status.completed && globalState.vResult) {
+      this.testCompleted = true;
+      globalState.vResult = false;
+    }
   },
   beforeUnmount() {
     if (this.pollingInterval) clearInterval(this.pollingInterval);
@@ -192,9 +192,12 @@ export default {
 .test-results {
   margin-top: 50px;
   padding: 20px;
-
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .results-title {
@@ -202,5 +205,20 @@ export default {
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 </style>

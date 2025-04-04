@@ -1,13 +1,43 @@
 <script>
+
+import axios from "axios";
+import DomandaPopup from "@/components/PopupRisultatoDomandaSingola.vue";
+
+
 export default {
   name: "Test",
   props: {
     test: Object,
   },
+  components: {
+    DomandaPopup,
+  },
   methods: {
-    risultatoSingolaDomanda(id) {
-      console.log("QUII")
+    async risultatoSingolaDomanda(id) {
+      try {
+
+        const response =  await axios.get('/risultatiDomanda/' + id);
+
+        this.domandaSelezionata = response.data;
+        this.showPopup = true;
+
+      } catch (error) {
+        this.showPopup = false;
+        console.error("Errore durante il recupero della domanda:", error);
+      }
+
+
     },
+    closePopup() {
+      this.showPopup = false;
+      this.domandaSelezionata = null;
+    }
+  },
+  data() {
+    return {
+      domandaSelezionata: null,
+      showPopup: false,
+    };
   },
   mounted() {
 
@@ -15,24 +45,6 @@ export default {
 };
 
 
-/*
-
-<div v-for="(question, index) in test.questions" :key="index" class="question-item">
-        <p class="question-text"><strong>Domanda:</strong> {{ question.text }}</p>
-        <p class="expected-answer"><strong>Risposta Attesa:</strong> {{ question.expectedAnswer }}</p>
-        <p class="llm-response"><strong>Risposta del LLM:</strong> {{ question.llmResponse }}</p>
-        <p class="score"><strong>Punteggio:</strong> {{ question.score }}</p>
-        <div v-if="question.metrics && Object.keys(question.metrics).length" class="question-metrics">
-          <p class="metric-title">Metriche:</p>
-          <ul class="metrics-list">
-            <li v-for="(val, metricName) in question.metrics" :key="metricName">
-              <strong>{{ metricName }}:</strong> {{ val }}
-            </li>
-          </ul>
-        </div>
-      </div>
-
- */
 </script>
 
 <template>
@@ -40,16 +52,23 @@ export default {
     <h2 class="test-title">Test del {{ test.dataEsecuzione }}</h2>
 
     <p class="test-info"><strong>Modello LLM:</strong> {{ test.llmUsed }}</p>
-    <p class="test-info"><strong>Punteggio Totale:</strong> {{ test.score }}/10</p>
+    <p class="test-info"><strong>Punteggio Totale:</strong> {{ parseFloat((test.score * 10).toFixed(2)) }}/10</p>
 
     <h3 class="section-title">Risultati del Test</h3>
     <div class="question-list">
-      <div v-for="(question, index) in test.risultatiDomande" :key="index" class="question-item" @click="risultatoSingolaDomanda">
+      <div v-for="(question, index) in test.risultatiDomande" :key="index" class="question-item" @click="risultatoSingolaDomanda(question.id)">
         <p class="question-text"><strong>Domanda:</strong> {{ question.domanda }}</p>
-        <p class="question-text"><strong>Punteggio:</strong> {{ question.score }}</p>
+        <p class="question-text"><strong>Punteggio:</strong> {{ parseFloat((question.score * 10).toFixed(2)) }}</p>
       </div>
     </div>
   </div>
+
+
+  <DomandaPopup
+      v-if="showPopup"
+      :domanda="domandaSelezionata"
+      @close="closePopup"
+  />
 </template>
 
 <style scoped>
@@ -91,34 +110,9 @@ export default {
   background: #333;
 }
 
-.question-text,
-.expected-answer,
-.llm-response,
-.score {
+.question-text{
   color: #ddd;
   font-size: 1rem;
   margin-bottom: 5px;
-}
-
-/* METRICHE */
-.question-metrics {
-  margin-top: 10px;
-}
-
-.metric-title {
-  color: #aaa;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.metrics-list {
-  list-style: none;
-  padding-left: 0;
-  color: #f0f0f0;
-}
-
-.metrics-list li {
-  margin-bottom: 4px;
-  font-size: 0.95rem;
 }
 </style>
