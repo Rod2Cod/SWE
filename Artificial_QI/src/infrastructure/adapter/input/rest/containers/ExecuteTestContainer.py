@@ -58,9 +58,9 @@ class ExecuteTestContainer(containers.DeclarativeContainer):
     # Services
     ExecuteTestService = providers.Factory(
         ExecuteTestService,
-        port=RisultatoTestAdapter,
-        elementoDomandaAdapter=ElementoDomandaAdapter,
-        evaluator=evaluator,
-        llmAdapter=hermes3_Adapter,
-        statusTracker=TestStatusTracker
+        llm=hermes3_Adapter,
+        valutatore=evaluator,
+        save_port=RisultatoTestAdapter,
+        get_domande_port=ElementoDomandaAdapter,
+        status_tracker=TestStatusTracker
     )

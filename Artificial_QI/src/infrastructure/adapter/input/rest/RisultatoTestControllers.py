@@ -21,7 +21,7 @@ class GetRisultatoTestController(MethodView):
             return (jsonify(risultato.serialize()), 200) \
                 if risultato else (jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500)
         except ValueError as e:
-            return jsonify(str(e)), 400
+            return jsonify({"message": str(e)}), 400
         except Exception:
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
