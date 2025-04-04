@@ -8,7 +8,6 @@ class TestStatusTrackerImpl(TestStatusTracker):
         self.__id_risultato = None
         self.__error = None
 
-
     def start_test(self, total_questions: int):
         self.__id_risultato = None
         self.__in_progress = True
