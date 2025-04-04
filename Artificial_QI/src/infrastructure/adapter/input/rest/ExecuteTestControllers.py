@@ -13,7 +13,7 @@ executeTest_blueprint = Blueprint('executeTest_blueprint', __name__)
 class ExecuteTestController(MethodView):
     def __init__(self, useCase: ExecuteTestUseCase = Provide[RootContainer.executeTestContainer.ExecuteTestService], \
                 status_tracker: TestStatusTracker = Provide[RootContainer.executeTestContainer.TestStatusTracker]):
-        self.__status_tracker = status_tracker
+        self.__status_tracker_use_case = status_tracker
         self.__useCase = useCase
 
     @inject
@@ -25,12 +25,12 @@ class ExecuteTestController(MethodView):
             def run_test_in_thread(app, useCase):
                 with app.app_context():
                     risultato = useCase.executeTest()
-                    self.__status_tracker.set_id_risultato(risultato.getId())
+                    self.__status_tracker_use_case.set_id_risultato(risultato.getId())
 
             Thread(target=run_test_in_thread, args=(app, self.__useCase)).start()
 
             time.sleep(3)
-            status = self.__status_tracker.get_status()
+            status = self.__status_tracker_use_case.get_status()
 
             if status["in_progress"]:
                 return jsonify({"message": "Test avviato con successo"}), 200
