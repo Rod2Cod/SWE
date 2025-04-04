@@ -10,11 +10,11 @@
     ],
     "values": [
       {
-        "Versione" : "0.0",
+        "Versione" : "0.1",
         "Data" : "2025-03-17",
         "Sez.modificate" : "Prima stesura",
         "Autore" : "Annalisa Egidi",
-        "Verificatore" : ""
+        "Verificatore" : "Alberto Maggion"
       }
     ]
   },
