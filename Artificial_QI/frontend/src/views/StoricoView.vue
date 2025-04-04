@@ -6,24 +6,30 @@
 
     <div class="row g-3">
       <div
-          class="col-12 col-md-6"
-          v-for="test in tests"
-          :key="test.id"
-          @click="vaiAlDettaglio(test.id)"
+        class="col-12 col-md-6"
+        v-for="test in tests"
+        :key="test.id"
+        @click="vaiAlDettaglio(test.id)"
       >
         <div class="test-card p-3 shadow-sm h-100">
           <p><strong>Data:</strong> {{ formatDate(test.dataEsecuzione) }}</p>
-          <p><strong>Score:</strong> {{ parseFloat((test.score * 10).toFixed(2)) }}/10</p>
+          <p>
+            <strong>Score:</strong>
+            {{ parseFloat((test.score * 10).toFixed(2)) }}/10
+          </p>
           <p><strong>LLM:</strong> {{ test.LLM }}</p>
         </div>
       </div>
     </div>
 
     <div class="d-flex justify-content-center mt-5" v-if="isLoading">
-      <img class="loading" src="@/assets/loading.svg">
+      <img class="loading" src="@/assets/loading.svg" />
     </div>
 
-    <div class="d-flex justify-content-center mt-5" v-if="!isLoading && tests.length === 0">
+    <div
+      class="d-flex justify-content-center mt-5"
+      v-if="!isLoading && tests.length === 0"
+    >
       <h2>Nessuna test eseguito</h2>
     </div>
   </main>
@@ -47,21 +53,22 @@ export default {
     async caricaStorico() {
       try {
         this.isLoading = true;
-        const response = await axios.get('/risultati'); // Da adattare al backend reale
+        const response = await axios.get("http://localhost:5000/risultati"); // Da adattare al backend reale
         this.tests = response.data;
-        this.tests.sort((a, b) => new Date(b.dataEsecuzione) - new Date(a.dataEsecuzione)); // Ordina per data decrescente
+        this.tests.sort(
+          (a, b) => new Date(b.dataEsecuzione) - new Date(a.dataEsecuzione)
+        ); // Ordina per data decrescente
         this.isLoading = false;
-
       } catch (error) {
         this.isLoading = false;
-        console.error('Errore nel recupero dello storico:', error);
+        console.error("Errore nel recupero dello storico:", error);
       }
     },
     formatDate(dataISO) {
       return new Date(dataISO).toLocaleDateString();
     },
     vaiAlDettaglio(testId) {
-      this.$router.push({name: 'TestResult', params: {id: testId}});
+      this.$router.push({ name: "TestResult", params: { id: testId } });
     },
   },
 };

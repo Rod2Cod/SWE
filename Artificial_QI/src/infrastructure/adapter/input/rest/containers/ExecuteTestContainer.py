@@ -1,5 +1,5 @@
 from dependency_injector import containers, providers
-from src.application import ExecuteTestService
+from src.application import ExecuteTestService, GetTestStatusService
 from src.infrastructure.adapter.output.persistence.repository import RisultatoTestPostgreSQLRepository, RisultatoSingolaDomandaPostgreSQLRepository, ElementoDomandaPostgreSQLRepository
 from src.infrastructure.adapter.output.persistence.mapper import RisultatoSingolaDomandaPersistenceMapper, RisultatoTestPersistenceMapper, ElementoDomandaPersistenceMapper
 from src.infrastructure.adapter.output.persistence import ElementoDomandaPersistenceAdapter, RisultatoTestPersistenceAdapter
@@ -62,5 +62,10 @@ class ExecuteTestContainer(containers.DeclarativeContainer):
         valutatore=evaluator,
         save_port=RisultatoTestAdapter,
         get_domande_port=ElementoDomandaAdapter,
+        status_tracker=TestStatusTracker
+    )
+    
+    GetTestStatusService = providers.Factory(
+        GetTestStatusService,
         status_tracker=TestStatusTracker
     )

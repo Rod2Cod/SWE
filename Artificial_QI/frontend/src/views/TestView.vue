@@ -4,7 +4,11 @@
 
     <div class="spacer"></div>
 
-    <button v-if="!testStarted && !testCompleted && !startingTest" class="start-btn" @click="startTest">
+    <button
+      v-if="!testStarted && !testCompleted && !startingTest"
+      class="start-btn"
+      @click="startTest"
+    >
       Inizia Test
     </button>
 
@@ -12,6 +16,16 @@
 
     <div class="starting-test d-flex flex-column align-items-center justify-content-center mt-5" v-if="startingTest">
       <img class="loading mb-3" src="@/assets/loading.svg" alt="Loading spinner">
+    </div>
+    <div
+      class="starting-test d-flex flex-column align-items-center justify-content-center mt-5"
+      v-if="startingTest"
+    >
+      <img
+        class="loading mb-3"
+        src="@/assets/loading.svg"
+        alt="Loading spinner"
+      />
       <h3 class="text-white">Avvio Test...</h3>
     </div>
 
@@ -24,9 +38,7 @@
 
     <div v-if="testCompleted" class="test-results">
       <h2 class="results-title">Test Completato!</h2>
-      <button class="start-btn" @click="goToResult">
-        Vai al risultato!
-      </button>
+      <button class="start-btn" @click="goToResult">Vai al risultato!</button>
       <button class="secondary-btn mt-3" @click="startTest">
         Esegui un altro test
       </button>
@@ -84,9 +96,8 @@ export default {
       this.startingTest = true;
       this.testCompleted = false;
       this.id = null;
-      this.error = false;
 
-      const response = await axios.post(`/executeTest`);
+      const response = await axios.post(`http://localhost:5000/executeTest`);
 
       if (response.status === 200) {
 

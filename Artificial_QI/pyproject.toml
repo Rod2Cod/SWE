@@ -2,7 +2,7 @@
 branch = true
 omit = [
     ".venv/*",
-    "test/*",
+    "./Artificaial_QI/test/*",
     "__init__.py",
     # omit pytorch-generated files in /tmp
     "/tmp/*",

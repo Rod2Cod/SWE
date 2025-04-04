@@ -1,4 +1,32 @@
 services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: artificial_qi_backend
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    networks:
+      - shared_network
+    environment:
+      - DATABASE_URL=postgresql://admin:admin@postgres:5432/Artificial_QI
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: artificial_qi_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - shared_network
+
   postgres:
     image: postgres:15
     restart: always
@@ -31,4 +59,4 @@ services:
 
 networks:
   shared_network:
-    external: true
+    driver: bridge

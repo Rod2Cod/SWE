@@ -1,0 +1,11 @@
+.pytest_cache/
+db_data/
+pgadmin_data/
+frontend/public/
+src/**/__pycache__/
+test/**/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store

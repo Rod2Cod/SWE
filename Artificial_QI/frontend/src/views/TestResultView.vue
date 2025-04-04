@@ -1,11 +1,10 @@
-
 <template>
   <main class="container py-4">
-  <div class="header mb-4">
-    <h1 class="page-title">Risultato Test</h1>
+    <div class="header mb-4">
+      <h1 class="page-title">Risultato Test</h1>
 
-    <Test :test="test"></Test>
-  </div>
+      <Test :test="test"></Test>
+    </div>
   </main>
 </template>
 
@@ -15,7 +14,7 @@ import axios from "axios";
 
 export default {
   name: "TestResultView",
-  components: {Test},
+  components: { Test },
   mounted() {
     this.loadTest();
   },
@@ -31,20 +30,17 @@ export default {
     },
     async loadTest() {
       try {
-        const response = await axios.get(`/risultati/${this.id}`);
+        const response = await axios.get(
+          `http://localhost:5000/risultati/${this.id}`
+        );
         this.test = response.data;
-        console.log(this.test.risultatiDomande)
-
+        console.log(this.test.risultatiDomande);
       } catch (error) {
         console.error("Error loading test data:", error);
       }
-
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
