@@ -1,5 +1,5 @@
 import pytest
-from src.application.ExecuteTestServices import ExecuteTestService
+from src.application.ExecuteTestServices import ExecuteTestService, GetTestStatusService
 from src.application.ports.output.LLMPort import LLMPort
 from src.application.ports.output.RisultatoTestPorts import SaveRisultatoTestPort
 from src.application.ports.output.ElementiDomandaPorts import GetAllElementiDomandaPort
@@ -16,6 +16,7 @@ class TestExecuteTestService:
         cls.mockValutatore = mock.Mock(spec=AlgoritmoValutazioneRisposte)
         cls.mockSavePort = mock.Mock(spec=SaveRisultatoTestPort)
         cls.mockGetDomandePort = mock.Mock(spec=GetAllElementiDomandaPort)
+        cls.status_tracker = GetTestStatusService()
         cls.service = ExecuteTestService(cls.mockLLM, cls.mockValutatore, cls.mockSavePort, cls.mockGetDomandePort)
 
     def setup_method(self):
@@ -23,6 +24,7 @@ class TestExecuteTestService:
         self.mockValutatore.reset_mock()
         self.mockSavePort.reset_mock()
         self.mockGetDomandePort.reset_mock()
+        self.status_tracker = GetTestStatusService()
 
     def test_execute_test_success(self):
         """Test per il corretto completamento del test con un solo elemento domanda."""
@@ -83,7 +85,8 @@ class TestExecuteTestService:
             assert res.getRispostaLLM() == "risposta_llm"
             assert res.getScore() == 0.6
             assert res.getMetriche() == {"metrica1": 0.7, "metrica2": 0.3}
-        
+        self.mockGetDomandePort.getAllElementiDomanda.assert_called_once()
+        self.mockLLM.makeQuestion.assert_called()
         self.mockSavePort.saveRisultatoTest.assert_called_once()
 
     def test_execute_test_empty_elementi_domanda(self):

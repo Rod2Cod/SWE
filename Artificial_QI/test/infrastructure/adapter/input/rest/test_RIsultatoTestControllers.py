@@ -65,7 +65,7 @@ class TestGetRisultatoTestControllers:
             response = client.get(url_for('risultatoTest_blueprint.get_risultato_test_by_id', id=999))
 
         assert response.status_code == 400
-        assert response.json == "Test non trovato"
+        assert response.json == {"message": "Test non trovato"}
 
     def test_get_risultato_test_by_id_server_error(self,client,app):
         mock_use_case = mock.Mock(spec=GetRisultatoTestUseCase)
