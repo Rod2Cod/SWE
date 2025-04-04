@@ -5,21 +5,21 @@
       <div class="form-group">
         <label for="question">Domanda</label>
         <input
-            type="text"
-            id="question"
-            v-model="question"
-            placeholder="Inserisci la domanda"
-            required
+          type="text"
+          id="question"
+          v-model="question"
+          placeholder="Inserisci la domanda"
+          required
         />
       </div>
 
       <div class="form-group">
         <label for="answer">Risposta</label>
         <textarea
-            id="answer"
-            v-model="expectedAnswer"
-            placeholder="Inserisci la risposta"
-            required
+          id="answer"
+          v-model="expectedAnswer"
+          placeholder="Inserisci la risposta"
+          required
         ></textarea>
       </div>
 
@@ -31,7 +31,6 @@
 </template>
 
 <script>
-
 import axios from "axios";
 
 export default {
@@ -39,7 +38,7 @@ export default {
   data() {
     return {
       question: "",
-      expectedAnswer: ""
+      expectedAnswer: "",
     };
   },
   methods: {
@@ -50,20 +49,20 @@ export default {
       }
 
       try {
-        await axios.post("/domande", this.payload);
+        await axios.post("http://localhost:5000/domande", this.payload);
         this.$router.push("/questions");
       } catch (error) {
         console.error("Errore durante l'invio della domanda:", error);
       }
-    }
+    },
   },
   computed: {
     payload() {
       return {
         domanda: this.question.trim(),
-        risposta: this.expectedAnswer.trim()
+        risposta: this.expectedAnswer.trim(),
       };
-    }
+    },
   },
 };
 </script>
@@ -93,7 +92,8 @@ label {
   color: white;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;

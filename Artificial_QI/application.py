@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 from src.infrastructure.adapter.output.persistence.Extensions import db
@@ -29,7 +30,7 @@ def create_app(testing=False) -> Flask:
     if(testing):
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/Artificial_QI'
+        app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     db.init_app(app)
@@ -61,4 +62,4 @@ def create_app(testing=False) -> Flask:
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

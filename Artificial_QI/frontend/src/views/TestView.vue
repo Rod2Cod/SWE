@@ -4,7 +4,11 @@
 
     <div class="spacer"></div>
 
-    <button v-if="!testStarted && !testCompleted" class="start-btn" @click="startTest">
+    <button
+      v-if="!testStarted && !testCompleted"
+      class="start-btn"
+      @click="startTest"
+    >
       Inizia Test
     </button>
 
@@ -17,9 +21,7 @@
 
     <div v-if="testCompleted" class="test-results">
       <h2 class="results-title">Test Completato!</h2>
-      <button class="start-btn" @click="goToResult">
-        Vai al risultato!
-      </button>
+      <button class="start-btn" @click="goToResult">Vai al risultato!</button>
     </div>
   </main>
 </template>
@@ -67,23 +69,21 @@ export default {
         if (this.testStarted && !this.testCompleted) {
           this.startPolling();
         }
-
       } catch (error) {
         console.error("Errore nel recupero dello stato del test", error);
       }
     },
 
     async startPolling() {
-      const response = await axios.post(`/executeTest`);
-      console.log(response)
-
+      const response = await axios.post(`http://localhost:5000/executeTest`);
+      console.log(response);
     },
 
     async pollTestProgress() {
       try {
         // Simulazione richiesta API di avanzamento test
 
-        const response = await axios.post(`/executeTest`);
+        const response = await axios.post(`http://localhost:5000/executeTest`);
         /*
         const data = response.data;
         this.progress = data.progress;
@@ -97,7 +97,6 @@ export default {
           this.testCompleted = true;
           clearInterval(this.pollingInterval);
         }
-
       } catch (error) {
         console.error("Errore durante il polling del test", error);
         clearInterval(this.pollingInterval);
@@ -120,7 +119,7 @@ export default {
     },
 
     goToResult() {
-      this.$router.push({name: "TestResult", params: {id: this.id}});
+      this.$router.push({ name: "TestResult", params: { id: this.id } });
     },
   },
   mounted() {
@@ -128,7 +127,7 @@ export default {
   },
   beforeUnmount() {
     if (this.pollingInterval) clearInterval(this.pollingInterval);
-  }
+  },
 };
 </script>
 
