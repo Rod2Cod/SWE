@@ -26,6 +26,7 @@ class ExecuteTestController(MethodView):
                 with app.app_context():
                     risultato = useCase.executeTest()
                     self.__status_tracker.set_id_risultato(risultato.getId())
+                    self.__status_tracker.finish_test()
 
             self.__status_tracker.mark_starting()
             Thread(target=run_test_in_thread, args=(app, self.__useCase)).start()

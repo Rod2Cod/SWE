@@ -34,7 +34,7 @@ class ExecuteTestService(ExecuteTestUseCase):
 
             self.__status_tracker.update_progress()
 
-        self.__status_tracker.finish_test()
+
         score_totale = sum(scores) / len(scores)
 
         risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now(), None, risultati)

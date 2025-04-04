@@ -8,13 +8,15 @@
       Inizia Test
     </button>
 
+    <p v-if="error" class="error-message">Errore nell'avvio del test!</p>
+
     <div class="starting-test d-flex flex-column align-items-center justify-content-center mt-5" v-if="startingTest">
       <img class="loading mb-3" src="@/assets/loading.svg" alt="Loading spinner">
       <h3 class="text-white">Avvio Test...</h3>
     </div>
 
     <div v-if="testStarted && !testCompleted" class="progress-container">
-      <p>Test in esecuzione... ({{ progress }}%)</p>
+      <p>Test in esecuzione... ({{ progress.toFixed(1) }}%)</p>
       <div class="progress-bar">
         <div class="progress-fill" :style="{ width: progress + '%' }"></div>
       </div>
@@ -47,6 +49,7 @@ export default {
       id: null,
       pollingInterval: null,
       in_progress: "",
+      error: false,
     };
   },
   methods: {
@@ -67,7 +70,7 @@ export default {
           this.testStarted = false;
           this.id = data.id_risultato;
           clearInterval(this.pollingInterval);
-        } else if (data.status === "not_started") {
+        } else if (data.in_progress === false && data.percentage === 100) {
           this.testStarted = false;
           this.testCompleted = false;
         }
@@ -81,6 +84,7 @@ export default {
       this.startingTest = true;
       this.testCompleted = false;
       this.id = null;
+      this.error = false;
 
       const response = await axios.post(`/executeTest`);
 
@@ -93,6 +97,7 @@ export default {
 
       } else {
         this.startingTest = false;
+        this.error = true;
         console.log("Errore durante l'esecuzione del test");
       }
 
@@ -110,14 +115,11 @@ export default {
 
       const status = response.data;
 
-      if (status.starting) {
-        this.startingTest = true;
-        this.pollingInterval = setInterval(this.checkTestStatus, 1000);
-      } else if (status.in_progress) {
+      if (status.in_progress) {
         this.testStarted = true;
         this.progress = status.percentage;
         this.pollingInterval = setInterval(this.checkTestStatus, 1000);
-      } else if (status.completed && globalState.vResult) {
+      } else if (status.in_progress && status.percentage === 100 && globalState.vResult) {
         this.testCompleted = true;
         globalState.vResult = false;
       }
@@ -159,6 +161,11 @@ export default {
 
 .start-btn:hover {
   background-color: #ddd;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
 }
 
 .progress-container {

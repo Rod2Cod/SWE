@@ -2,10 +2,6 @@ from abc import ABC, abstractmethod
 
 class TestStatusTracker(ABC):
     @abstractmethod
-    def mark_starting(self):
-        pass
-
-    @abstractmethod
     def start_test(self, total_questions: int):
         pass
 
