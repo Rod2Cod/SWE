@@ -5,6 +5,7 @@ from src.infrastructure.adapter.output.persistence.mapper import RisultatoSingol
 from src.infrastructure.adapter.output.persistence import ElementoDomandaPersistenceAdapter, RisultatoTestPersistenceAdapter
 from src.infrastructure.adapter.output.LLM.LLMAdapter import LLMAdapter
 from src.application.evaluation.AlgoritmoValutazioneRisposteImpl import AlgoritmoValutazioneRisposteImpl
+from src.application.evaluation.status.StatusTrackerImpl import TestStatusTrackerImpl
 from src.application.evaluation.Scorer import Scorer
 from pathlib import Path, Path
 
@@ -12,6 +13,9 @@ class ExecuteTestContainer(containers.DeclarativeContainer):
     
     """ Qui indico che mi deve arrivare una dipendenza db, che sarà fornita dall'esterno, in questo caso dal container principale """
     db = providers.Dependency()
+    
+    # Status Tracker
+    TestStatusTracker = providers.Singleton(TestStatusTrackerImpl)
     
     # Repository
     ElementoDomandaRepository = providers.Factory(ElementoDomandaPostgreSQLRepository, db=db)
@@ -54,8 +58,9 @@ class ExecuteTestContainer(containers.DeclarativeContainer):
     # Services
     ExecuteTestService = providers.Factory(
         ExecuteTestService,
-        llm=hermes3_Adapter,
-        valutatore=evaluator,
-        save_port=providers.Factory(RisultatoTestAdapter),
-        get_domande_port=providers.Factory(ElementoDomandaAdapter)
+        port=RisultatoTestAdapter,
+        elementoDomandaAdapter=ElementoDomandaAdapter,
+        evaluator=evaluator,
+        llmAdapter=hermes3_Adapter,
+        statusTracker=TestStatusTracker
     )
