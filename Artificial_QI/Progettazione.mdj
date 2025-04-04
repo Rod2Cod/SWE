@@ -102,27 +102,6 @@
 											"direction": "return"
 										}
 									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGVo5Ji2MxlpkE=",
-									"_parent": {
-										"$ref": "AAAAAAGVa+R+oYnUxPQ="
-									},
-									"name": "executeTest",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGVo5J64M6j+vA=",
-											"_parent": {
-												"$ref": "AAAAAAGVo5Ji2MxlpkE="
-											},
-											"type": {
-												"$ref": "AAAAAAGVcHLOZwrjtKA="
-											},
-											"direction": "return"
-										}
-									]
 								}
 							]
 						},
@@ -5617,9 +5596,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGV09JQ0rrjlZs="
 											},
-											"type": {
-												"$ref": "AAAAAAGVcHLOZwrjtKA="
-											},
+											"type": "RisultatoTest | None",
 											"direction": "return"
 										}
 									]
@@ -6700,16 +6677,6 @@
 								},
 								{
 									"_type": "UMLAttribute",
-									"_id": "AAAAAAGWAClJoQveBsQ=",
-									"_parent": {
-										"$ref": "AAAAAAGWACj73nttUCE="
-									},
-									"name": "is_starting",
-									"visibility": "private",
-									"type": "bool"
-								},
-								{
-									"_type": "UMLAttribute",
 									"_id": "AAAAAAGWACnU+ZrjcIQ=",
 									"_parent": {
 										"$ref": "AAAAAAGWACj73nttUCE="
@@ -6737,6 +6704,15 @@
 									"name": "id_risultato",
 									"visibility": "private",
 									"type": "int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAGWAT0T8hK11Vc=",
+									"_parent": {
+										"$ref": "AAAAAAGWACj73nttUCE="
+									},
+									"name": "error",
+									"visibility": "private"
 								}
 							],
 							"operations": [
@@ -6746,7 +6722,18 @@
 									"_parent": {
 										"$ref": "AAAAAAGWACj73nttUCE="
 									},
-									"name": "mark_starting"
+									"name": "set_error",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGWAT3xQAzpAv0=",
+											"_parent": {
+												"$ref": "AAAAAAGWACpwQXKnlFg="
+											},
+											"name": "error",
+											"type": ""
+										}
+									]
 								},
 								{
 									"_type": "UMLOperation",
@@ -8459,7 +8446,7 @@
 											"font": "Arial;13;1",
 											"parentStyle": true,
 											"left": 2341,
-											"top": 3055,
+											"top": 3070,
 											"width": 278.81787109375,
 											"height": 13,
 											"text": "ExecuteTestUseCase"
@@ -8497,7 +8484,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 2336,
-									"top": 3048,
+									"top": 3063,
 									"width": 288.81787109375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -8577,32 +8564,14 @@
 											"height": 13,
 											"text": "+getRisultatoTest(id: Integer): RisutaltoTest",
 											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAGVo5Ji3cxuMVc=",
-											"_parent": {
-												"$ref": "AAAAAAGVa+R+oondXlU="
-											},
-											"model": {
-												"$ref": "AAAAAAGVo5Ji2MxlpkE="
-											},
-											"font": "Arial;13;0",
-											"parentStyle": true,
-											"left": 2341,
-											"top": 3080,
-											"width": 278.81787109375,
-											"height": 13,
-											"text": "+executeTest(): RisultatoTest",
-											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 2336,
-									"top": 3073,
+									"top": 3088,
 									"width": 288.81787109375,
-									"height": 25
+									"height": 10
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -58475,7 +58444,7 @@
 											"top": 3057,
 											"width": 352.9013671875,
 											"height": 13,
-											"text": "+executeTest(): RisultatoTest",
+											"text": "+executeTest(): RisultatoTest | None",
 											"horizontalAlignment": 0
 										}
 									],
@@ -68127,24 +68096,6 @@
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAGWAClJwg0iIoU=",
-											"_parent": {
-												"$ref": "AAAAAAGWACj73nt1Ztg="
-											},
-											"model": {
-												"$ref": "AAAAAAGWAClJoQveBsQ="
-											},
-											"font": "Arial;13;0",
-											"parentStyle": true,
-											"left": 4837,
-											"top": 2685,
-											"width": 179.12158203125,
-											"height": 13,
-											"text": "-is_starting: bool",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
 											"_id": "AAAAAAGWACnVGpwn7mM=",
 											"_parent": {
 												"$ref": "AAAAAAGWACj73nt1Ztg="
@@ -68155,7 +68106,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 4837,
-											"top": 2700,
+											"top": 2685,
 											"width": 179.12158203125,
 											"height": 13,
 											"text": "-total_questions: int",
@@ -68173,7 +68124,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 4837,
-											"top": 2715,
+											"top": 2700,
 											"width": 179.12158203125,
 											"height": 13,
 											"text": "-questions_completed: int",
@@ -68191,10 +68142,28 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 4837,
-											"top": 2730,
+											"top": 2715,
 											"width": 179.12158203125,
 											"height": 13,
 											"text": "-id_risultato: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGWAT0UFBP2xsU=",
+											"_parent": {
+												"$ref": "AAAAAAGWACj73nt1Ztg="
+											},
+											"model": {
+												"$ref": "AAAAAAGWAT0T8hK11Vc="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 4837,
+											"top": 2730,
+											"width": 179.12158203125,
+											"height": 13,
+											"text": "-error",
 											"horizontalAlignment": 0
 										}
 									],
@@ -68230,7 +68199,7 @@
 											"top": 2753,
 											"width": 179.12158203125,
 											"height": 13,
-											"text": "+mark_starting()",
+											"text": "+set_error(error)",
 											"horizontalAlignment": 0
 										},
 										{
