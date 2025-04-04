@@ -108,7 +108,7 @@ export default {
 
       if (confirm(`Sei sicuro di voler eliminare ${this.selectedQuestions.length} domanda(e)?`)) {
         try {
-          await axios.delete("/domande/delete", { data: { ids: this.selectedQuestions } });
+          await axios.post("/domande/delete", { ids: this.selectedQuestions });
           this.questions = this.questions.filter(q => !this.selectedQuestions.includes(q.id));
           this.cancelDeleteMode();
         } catch (error) {

@@ -65,6 +65,7 @@ export default {
         } else if (data.percentage === 100) {
           this.testCompleted = true;
           this.testStarted = false;
+          this.id = data.id_risultato;
           clearInterval(this.pollingInterval);
         } else if (data.status === "not_started") {
           this.testStarted = false;
@@ -76,8 +77,11 @@ export default {
       }
     },
     async startTest() {
+      globalState.vResult = false;
       this.startingTest = true;
       this.testCompleted = false;
+      this.id = null;
+
       const response = await axios.post(`/executeTest`);
 
       if (response.status === 200) {
@@ -88,6 +92,7 @@ export default {
 
 
       } else {
+        this.startingTest = false;
         console.log("Errore durante l'esecuzione del test");
       }
 
@@ -97,7 +102,7 @@ export default {
 
       globalState.vResult = false;
       console.log(globalState.vResult);
-      this.$router.push({name: "history"});
+      this.$router.push({name: "TestResult", params: {id: this.id}});
     },
   },
   async mounted() {
@@ -113,7 +118,6 @@ export default {
         this.progress = status.percentage;
         this.pollingInterval = setInterval(this.checkTestStatus, 1000);
       } else if (status.completed && globalState.vResult) {
-        console.log("ciao")
         this.testCompleted = true;
         globalState.vResult = false;
       }
