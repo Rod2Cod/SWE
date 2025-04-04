@@ -102,6 +102,25 @@
 											"direction": "return"
 										}
 									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAGWAWHqDaUQ6pY=",
+									"_parent": {
+										"$ref": "AAAAAAGVa+R+oYnUxPQ="
+									},
+									"name": "executeTest",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGWAWH0QMQHNFM=",
+											"_parent": {
+												"$ref": "AAAAAAGWAWHqDaUQ6pY="
+											},
+											"type": "None",
+											"direction": "return"
+										}
+									]
 								}
 							]
 						},
@@ -5596,7 +5615,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGV09JQ0rrjlZs="
 											},
-											"type": "RisultatoTest | None",
+											"type": "None",
 											"direction": "return"
 										}
 									]
@@ -8446,7 +8465,7 @@
 											"font": "Arial;13;1",
 											"parentStyle": true,
 											"left": 2341,
-											"top": 3070,
+											"top": 3055,
 											"width": 278.81787109375,
 											"height": 13,
 											"text": "ExecuteTestUseCase"
@@ -8484,7 +8503,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 2336,
-									"top": 3063,
+									"top": 3048,
 									"width": 288.81787109375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -8564,14 +8583,32 @@
 											"height": 13,
 											"text": "+getRisultatoTest(id: Integer): RisutaltoTest",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGWAWHqF6UZH3U=",
+											"_parent": {
+												"$ref": "AAAAAAGVa+R+oondXlU="
+											},
+											"model": {
+												"$ref": "AAAAAAGWAWHqDaUQ6pY="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 2341,
+											"top": 3080,
+											"width": 278.81787109375,
+											"height": 13,
+											"text": "+executeTest(): None",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 2336,
-									"top": 3088,
+									"top": 3073,
 									"width": 288.81787109375,
-									"height": 10
+									"height": 25
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -58444,7 +58481,7 @@
 											"top": 3057,
 											"width": 352.9013671875,
 											"height": 13,
-											"text": "+executeTest(): RisultatoTest | None",
+											"text": "+executeTest(): None",
 											"horizontalAlignment": 0
 										}
 									],
