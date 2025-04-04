@@ -204,7 +204,7 @@
         {
           "Nome": "pgAdmin",
           "Descrizione": "Interfaccia grafica per la gestione di database PostgreSQL. Utilizzato all'interno di un docker container.",
-          "Versione": "7.6"
+          "Versione": "9.1"
         }
       ]
     }
