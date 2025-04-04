@@ -64,15 +64,15 @@ describe('DomandeView.vue', () => {
         expect(wrapper.vm.selectedQuestions).not.toContain(1)
     })
 
-    it('conferma e invia la richiesta di eliminazione', async () => {
-        axios.delete.mockResolvedValue({})
+    it('Eliminazione domanda', async () => {
+        axios.post.mockResolvedValue({})
         window.confirm = vi.fn(() => true)
 
         wrapper.vm.startDeleteMode()
         wrapper.vm.selectedQuestions = [1]
         await wrapper.vm.confirmDelete()
 
-        expect(axios.delete).toHaveBeenCalledWith('/domande/delete', { data: { ids: [1] } })
+        expect(axios.post).toHaveBeenCalledWith('/domande/delete', { ids: [1] })
         expect(wrapper.vm.questions.length).toBe(1) // Rimuove la domanda 1
         expect(wrapper.vm.isDeleting).toBe(false)
     })
