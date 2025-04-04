@@ -8,7 +8,7 @@ from src.application.ElementoDomandaServices import (AddElementoDomandaService,
                                                      validateDomandaRisposta,
                                                      validateId,
                                                      validateIdSet)
-from src.application.ports.output.ElementiDomandaPorts import (SaveElementoDomandaPort, 
+from src.application.ports.output.ElementoDomandaPorts import (SaveElementoDomandaPort, 
                                                                GetElementoDomandaPort, 
                                                                GetAllElementiDomandaPort, 
                                                                DeleteElementiDomandaPort, 

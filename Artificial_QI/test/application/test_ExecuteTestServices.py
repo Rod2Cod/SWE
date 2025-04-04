@@ -2,7 +2,7 @@ import pytest
 from src.application.ExecuteTestServices import ExecuteTestService, GetTestStatusService
 from src.application.ports.output.LLMPort import LLMPort
 from src.application.ports.output.RisultatoTestPorts import SaveRisultatoTestPort
-from src.application.ports.output.ElementiDomandaPorts import GetAllElementiDomandaPort
+from src.application.ports.output.ElementoDomandaPorts import GetAllElementiDomandaPort
 from src.application.evaluation.AlgoritmoValutazioneRisposte import AlgoritmoValutazioneRisposte
 from src.domain.ElementoDomanda import ElementoDomanda
 from src.domain.RisultatoTest import RisultatoTest, RisultatoSingolaDomanda
