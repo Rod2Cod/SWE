@@ -27,7 +27,6 @@ class ExecuteTestController(MethodView):
                     risultato = useCase.executeTest()
                     self.__status_tracker.set_id_risultato(risultato.getId())
 
-            self.__status_tracker.mark_starting()
             Thread(target=run_test_in_thread, args=(app, self.__useCase)).start()
 
             time.sleep(3)
@@ -44,9 +43,9 @@ executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestControll
 
 class GetTestStatusController(MethodView):
     def __init__(self, status_tracker: TestStatusTracker = Provide[RootContainer.executeTestContainer.TestStatusTracker]):
-        self.__status_tracker = status_tracker
+        self.__useCase = status_tracker
     
     def get(self):
-        return jsonify(self.__status_tracker.get_status()), 200
+        return jsonify(self.__useCase.get_status()), 200
 
-executeTest_blueprint.add_url_rule('/status', view_func=GetTestStatusController.as_view('status'))
+executeTest_blueprint.add_url_rule('/executeTest/status', view_func=GetTestStatusController.as_view('test_status'))

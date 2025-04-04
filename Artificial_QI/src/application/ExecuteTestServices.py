@@ -1,4 +1,4 @@
-from src.application.ports.input import ExecuteTestUseCase
+from src.application.ports.input import ExecuteTestUseCase, GetTestStatusUseCase
 from src.application.ports.output import LLMPort, SaveRisultatoTestPort, GetAllElementiDomandaPort
 from src.application.evaluation.AlgoritmoValutazioneRisposte import AlgoritmoValutazioneRisposte
 from src.application.evaluation.status.StatusTracker import TestStatusTracker
@@ -39,3 +39,10 @@ class ExecuteTestService(ExecuteTestUseCase):
 
         risultato_test = RisultatoTest(uuid.uuid1().int>>64, score_totale, self.__llm.getName(), datetime.datetime.now(), None, risultati)
         return self.__saveTestport.saveRisultatoTest(risultato_test)
+    
+class GetTestStatusService(GetTestStatusUseCase):
+    def __init__(self, status_tracker: TestStatusTracker):
+        self.__status_tracker = status_tracker
+
+    def getTestStatus(self) -> dict:
+        return self.__status_tracker.get_status()

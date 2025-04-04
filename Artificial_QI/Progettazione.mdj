@@ -36768,7 +36768,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 352,
-											"top": -112,
+											"top": -96,
 											"height": 13
 										},
 										{
@@ -36780,7 +36780,7 @@
 											"font": "Arial;13;1",
 											"parentStyle": true,
 											"left": 1509,
-											"top": 2767,
+											"top": 2775,
 											"width": 357.61767578125,
 											"height": 13,
 											"text": "UpdateElementiDomandaSetController"
@@ -36795,7 +36795,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 352,
-											"top": -112,
+											"top": -96,
 											"width": 149.55078125,
 											"height": 13,
 											"text": "(from Progettazione UML)"
@@ -36810,7 +36810,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 352,
-											"top": -112,
+											"top": -96,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
@@ -36818,7 +36818,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 1504,
-									"top": 2760,
+									"top": 2768,
 									"width": 367.61767578125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -36846,7 +36846,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 1504,
-									"top": 2785,
+									"top": 2793,
 									"width": 367.61767578125,
 									"height": 10
 								},
@@ -36872,7 +36872,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 1509,
-											"top": 2800,
+											"top": 2808,
 											"width": 357.61767578125,
 											"height": 13,
 											"text": "+post(nome: str, elementiId: set<int>)",
@@ -36882,7 +36882,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 1504,
-									"top": 2795,
+									"top": 2803,
 									"width": 367.61767578125,
 									"height": 23
 								},
@@ -36899,7 +36899,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 176,
-									"top": -112,
+									"top": -104,
 									"width": 10,
 									"height": 10
 								},
@@ -36916,7 +36916,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 176,
-									"top": -112,
+									"top": -104,
 									"width": 10,
 									"height": 10
 								}
@@ -36925,7 +36925,7 @@
 							"parentStyle": false,
 							"containerChangeable": true,
 							"left": 1504,
-							"top": 2760,
+							"top": 2768,
 							"width": 366.61767578125,
 							"height": 58,
 							"nameCompartment": {
