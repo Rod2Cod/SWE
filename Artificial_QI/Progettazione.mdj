@@ -117,9 +117,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGVo5Ji2MxlpkE="
 											},
-											"type": {
-												"$ref": "AAAAAAGVcHLOZwrjtKA="
-											},
+											"type": "RisultatoTest | None",
 											"direction": "return"
 										}
 									]
@@ -5617,9 +5615,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGV09JQ0rrjlZs="
 											},
-											"type": {
-												"$ref": "AAAAAAGVcHLOZwrjtKA="
-											},
+											"type": "RisultatoTest | None",
 											"direction": "return"
 										}
 									]
@@ -8593,7 +8589,7 @@
 											"top": 3080,
 											"width": 278.81787109375,
 											"height": 13,
-											"text": "+executeTest(): RisultatoTest",
+											"text": "+executeTest(): RisultatoTest | None",
 											"horizontalAlignment": 0
 										}
 									],
@@ -58475,7 +58471,7 @@
 											"top": 3057,
 											"width": 352.9013671875,
 											"height": 13,
-											"text": "+executeTest(): RisultatoTest",
+											"text": "+executeTest(): RisultatoTest | None",
 											"horizontalAlignment": 0
 										}
 									],

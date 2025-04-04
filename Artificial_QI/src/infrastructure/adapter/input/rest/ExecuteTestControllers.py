@@ -2,8 +2,7 @@ from flask import request, jsonify, Blueprint
 from flask.views import MethodView
 from dependency_injector.wiring import inject, Provide
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
-from src.application.evaluation.status.StatusTracker import TestStatusTracker
-from src.application.ports.input import ExecuteTestUseCase
+from src.application.ports.input import ExecuteTestUseCase, GetTestStatusUseCase
 from threading import Thread
 import time
 from flask import current_app
@@ -12,7 +11,7 @@ executeTest_blueprint = Blueprint('executeTest_blueprint', __name__)
 
 class ExecuteTestController(MethodView):
     def __init__(self, useCase: ExecuteTestUseCase = Provide[RootContainer.executeTestContainer.ExecuteTestService], \
-                status_tracker: TestStatusTracker = Provide[RootContainer.executeTestContainer.TestStatusTracker]):
+                status_tracker: GetTestStatusUseCase = Provide[RootContainer.executeTestContainer.GetTestStatusService]):
         self.__status_tracker_use_case = status_tracker
         self.__useCase = useCase
 
@@ -42,10 +41,10 @@ class ExecuteTestController(MethodView):
 executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestController.as_view('execute_test'))
 
 class GetTestStatusController(MethodView):
-    def __init__(self, status_tracker: TestStatusTracker = Provide[RootContainer.executeTestContainer.TestStatusTracker]):
+    def __init__(self, status_tracker: GetTestStatusUseCase = Provide[RootContainer.executeTestContainer.GetTestStatusService]):
         self.__useCase = status_tracker
     
     def get(self):
-        return jsonify(self.__useCase.get_status()), 200
+        return jsonify(self.__useCase.getTestStatus()), 200
 
 executeTest_blueprint.add_url_rule('/executeTest/status', view_func=GetTestStatusController.as_view('test_status'))

@@ -2,7 +2,7 @@ from unittest import mock
 import pytest
 from flask import url_for
 from application import create_app
-from src.application.ports.input import ExecuteTestUseCase
+from src.application.ports.input import ExecuteTestUseCase, GetTestStatusUseCase
 from src.domain import RisultatoTest, RisultatoSingolaDomanda
 from datetime import date
 
@@ -62,7 +62,7 @@ class TestExecuteTestController:
     def test_execute_test_no_result(self, client, app):
         # Mocking the ExecuteTestUseCase
         mock_use_case = mock.Mock(spec=ExecuteTestUseCase)
-        app.container.executeTestContainer.ExecuteTestService.override(mock_use_case)
+        app.container.executeTestContainer.ExecuteTestService.de(mock_use_case)
 
         # Mocking the return value of executeTest method to return None
         mock_use_case.executeTest.return_value = None
@@ -76,7 +76,7 @@ class TestExecuteTestController:
         assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
 
     def test_execute_test_error(self, client, app):
-        # Mocking the ExecuteTestUseCase
+        # Mocking the ExecuteTestUseCaseoverri
         mock_use_case = mock.Mock(spec=ExecuteTestUseCase)
         app.container.executeTestContainer.ExecuteTestService.override(mock_use_case)
 
@@ -90,4 +90,27 @@ class TestExecuteTestController:
         # Asserting the response status code and data
         assert response.status_code == 500
         assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
-    
+        
+class TestGetTestStatusController:
+    def test_get_test_status(self, client, app):
+        # Mocking the GetTestStatusUseCase
+        mock_use_case = mock.Mock(spec=GetTestStatusUseCase)
+        app.container.executeTestContainer.TestStatusTracker.override(mock_use_case)
+
+        # Mocking the return value of getTestStatus method
+        mock_use_case.getTestStatus.return_value = {
+            "starting": False,
+            "in_progress": False,
+            "completed": 0,
+            "total": 0,
+            "percentage": 0,
+            "id_risultato": None
+        }
+
+        with app.test_request_context():
+            # Sending a GET request to the endpoint
+            response = client.get(url_for('executeTest_blueprint.test_status'))
+
+        # Asserting the response status code and data
+        assert response.status_code == 200
+        assert response.json == {"in_progress": False}
