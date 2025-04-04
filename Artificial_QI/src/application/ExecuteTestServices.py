@@ -36,17 +36,16 @@ class ExecuteTestService(ExecuteTestUseCase):
                 risultati.add(risultato)
                 scores.append(score)
                 self.__status_tracker.update_progress()
+            score_totale = sum(scores) / len(scores)
+
+            risultato_test = RisultatoTest(uuid.uuid1().int >> 64, score_totale, self.__llm.getName(),
+                                           datetime.datetime.now(), None, risultati)
+            risultato = self.__saveTestport.saveRisultatoTest(risultato_test)
+            self.__status_tracker.set_id_risultato(risultato.getId())
+            self.__status_tracker.finish_test()
         except Exception as e:
             self.__status_tracker.set_error(str(e))
 
-        score_totale = sum(scores) / len(scores)
-
-        risultato_test = RisultatoTest(uuid.uuid1().int >> 64, score_totale, self.__llm.getName(),
-                                       datetime.datetime.now(), None, risultati)
-
-        risultato = self.__saveTestport.saveRisultatoTest(risultato_test)
-        self.__status_tracker.set_id_risultato(risultato.getId())
-        self.__status_tracker.finish_test()
 
 class GetTestStatusService(GetTestStatusUseCase):
     def __init__(self, status_tracker: TestStatusTracker):

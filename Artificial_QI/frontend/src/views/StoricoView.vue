@@ -53,7 +53,7 @@ export default {
     async caricaStorico() {
       try {
         this.isLoading = true;
-        const response = await axios.get("http://localhost:5000/risultati"); // Da adattare al backend reale
+        const response = await axios.get("/risultati"); // Da adattare al backend reale
         this.tests = response.data;
         this.tests.sort(
           (a, b) => new Date(b.dataEsecuzione) - new Date(a.dataEsecuzione)
