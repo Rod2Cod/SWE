@@ -14,6 +14,10 @@ class TestStatusTracker(ABC):
         pass
 
     @abstractmethod
+    def set_error(self, error):
+        pass
+
+    @abstractmethod
     def finish_test(self):
         pass
 

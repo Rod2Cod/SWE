@@ -129,8 +129,8 @@ export default {
         )
       ) {
         try {
-          await axios.delete("http://localhost:5000/domande/delete", {
-            data: { ids: this.selectedQuestions },
+          await axios.post("http://localhost:5000/domande/delete", {
+             ids: this.selectedQuestions ,
           });
           this.questions = this.questions.filter(
             (q) => !this.selectedQuestions.includes(q.id)

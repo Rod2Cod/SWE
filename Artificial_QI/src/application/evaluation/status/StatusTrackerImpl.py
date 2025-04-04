@@ -6,6 +6,7 @@ class TestStatusTrackerImpl(TestStatusTracker):
         self.__total_questions = 0
         self.__questions_completed = 0
         self.__id_risultato = None
+        self.__error = None
 
 
     def start_test(self, total_questions: int):
@@ -23,6 +24,9 @@ class TestStatusTrackerImpl(TestStatusTracker):
     def finish_test(self):
         self.__in_progress = False
 
+    def set_error(self, error):
+        self.__error = error
+
     def get_status(self) -> dict:
         percentage = 0
         if self.__total_questions > 0:
@@ -33,4 +37,5 @@ class TestStatusTrackerImpl(TestStatusTracker):
             "total": self.__total_questions,
             "percentage": percentage,
             "id_risultato": self.__id_risultato,
+            "error": self.__error,
         }

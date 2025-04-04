@@ -14,9 +14,6 @@
 
     <p v-if="error" class="error-message">Errore nell'avvio del test!</p>
 
-    <div class="starting-test d-flex flex-column align-items-center justify-content-center mt-5" v-if="startingTest">
-      <img class="loading mb-3" src="@/assets/loading.svg" alt="Loading spinner">
-    </div>
     <div
       class="starting-test d-flex flex-column align-items-center justify-content-center mt-5"
       v-if="startingTest"
@@ -67,7 +64,7 @@ export default {
   methods: {
     async checkTestStatus() {
       try {
-        const response = await axios.get(`/status`);
+        const response = await axios.get(`/executeTest/status`);
         const data = response.data;
 
         console.log(data)
@@ -85,6 +82,12 @@ export default {
         } else if (data.in_progress === false && data.percentage === 100) {
           this.testStarted = false;
           this.testCompleted = false;
+        } else if (data.error !== "None") {
+          this.error = true;
+          this.testStarted = false;
+          this.testCompleted = false;
+          console.log("Errore durante l'esecuzione del test:", data.error);
+          clearInterval(this.pollingInterval);
         }
 
       } catch (error) {
@@ -96,17 +99,16 @@ export default {
       this.startingTest = true;
       this.testCompleted = false;
       this.id = null;
+      this.error = false;
 
-      const response = await axios.post(`http://localhost:5000/executeTest`);
-
-      if (response.status === 200) {
+      try {
+        const response = await axios.post(`http://localhost:5000/executeTest`);
 
         this.startingTest = false;
         this.testStarted = true;
         this.pollingInterval = setInterval(this.checkTestStatus, 1000);
 
-
-      } else {
+      } catch (Exception) {
         this.startingTest = false;
         this.error = true;
         console.log("Errore durante l'esecuzione del test");
@@ -122,7 +124,7 @@ export default {
     },
   },
   async mounted() {
-      const response = await axios.get(`/status`);
+      const response = await axios.get(`/executeTest/status`);
 
       const status = response.data;
 

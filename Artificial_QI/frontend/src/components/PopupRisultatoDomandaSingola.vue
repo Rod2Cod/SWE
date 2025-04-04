@@ -11,7 +11,7 @@
         <p><strong>Metriche:</strong></p>
         <ul>
           <li v-for="(val, name) in domanda.metriche" :key="name">
-            <strong>{{ name }}:</strong> {{ Number(val.toPrecision(2)) }}
+            <strong>{{ name }}:</strong> {{ Number(val.toFixed(2)) }}
           </li>
         </ul>
       </div>

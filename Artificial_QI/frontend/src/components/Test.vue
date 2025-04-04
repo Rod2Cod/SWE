@@ -58,7 +58,7 @@ export default {
     <div class="question-list">
       <div v-for="(question, index) in test.risultatiDomande" :key="index" class="question-item" @click="risultatoSingolaDomanda(question.id)">
         <p class="question-text"><strong>Domanda:</strong> {{ question.domanda }}</p>
-        <p class="question-text"><strong>Punteggio:</strong> {{ parseFloat((question.score * 10).toFixed(2)) }}</p>
+        <p class="question-text" ><strong>Punteggio:</strong> {{ parseFloat((question.score * 10).toFixed(2)) }}</p>
       </div>
     </div>
   </div>
