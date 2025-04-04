@@ -23,12 +23,11 @@ class ExecuteTestController(MethodView):
 
             def run_test_in_thread(app, useCase):
                 with app.app_context():
-                    risultato = useCase.executeTest()
-                    self.__status_tracker_use_case.set_id_risultato(risultato.getId())
+                    useCase.executeTest()
 
             Thread(target=run_test_in_thread, args=(app, self.__useCase)).start()
 
-            time.sleep(3)
+            time.sleep(1)
             status = self.__status_tracker_use_case.get_status()
 
             if status["in_progress"]:
