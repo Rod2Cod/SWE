@@ -124,12 +124,12 @@
         },
         {
           "Nome": "radon",
-          "Descrizione": "Strumento per l'analisi della complessità ciclomatica del codice Python. Utilizzato assieme a pytest all'interno delle Github Actions.",
+          "Descrizione": "Strumento per l'analisi della complessità ciclomatica del codice Python.",
           "Versione": "4.1.0"
         },
         {
           "Nome": "xenon",
-          "Descrizione": "Strumento per il monitoraggio e l'analisi della complessità del codice Python. Utilizzate assiemo a pytest all'interno delle Github Actions.",
+          "Descrizione": "Strumento complementare a radon per l'analisi della complessità ciclomatica, permette al comando di fallire se sotto una certa soglia.",
           "Versione": "0.9.3"
         },
         {
@@ -144,22 +144,22 @@
         },
         {
           "Nome": "sacrebleu",
-          "Descrizione": "Libreria per calcolare le metriche di valutazione della traduzione automatica, come BLEU e altri.",
+          "Descrizione": "Libreria utilizzata per il calcolo delle metriche BLEU, TER e CHRF nello stumento di valutazione delle risposte.",
           "Versione": "2.5.0"
         },
         {
           "Nome": "rouge-score",
-          "Descrizione": "Libreria per calcolare le metriche di valutazione della traduzione automatica, come ROUGE e altri.",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica ROGUE nello stumento di valutazione delle risposte.",
           "Versione": "0.1.0"
         },
         {
           "Nome": "bert-score",
-          "Descrizione": "Libreria per calcolare le metriche di valutazione della traduzione automatica, come BERT e altri.",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica BERT nello stumento di valutazione delle risposte.",
           "Versione": "0.3.10"
         },
         {
           "Nome": "sentence-transformers",
-          "Descrizione": "Libreria per l'analisi del linguaggio naturale, che fornisce modelli pre-addestrati per l'estrazione di rappresentazioni semantiche.",
+          "Descrizione": "Libreria utilizzata per il calcolo della similitudine nello stumento di valutazione delle risposte.",
           "Versione": "4.0.0"
         },
         {
