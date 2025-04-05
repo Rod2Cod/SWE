@@ -1,4 +1,726 @@
 == Diagrammi delle classi
+=== Backend
+==== Domain Model
+#set heading(numbering: none)
+
+===== Elemento Domanda
+// TODO: aggiungere immagine
+
+I componenti principali del dominio di elemento domanda sono:
+
+====== Domanda
+  - *Attributi*
+    - `testo`: stringa che rappresenta testo della domanda
+
+  - *Metodi*
+    - `getText()`: restituisce il testo della domanda
+    - `setText(text: string)`: imposta il testo della domanda
+
+====== Risposta
+  - *Attributi*
+    - `testo`: stringa che rappresenta testo della risposta
+
+  - *Metodi*
+    - `getText(): str`
+      - *Descrizione*:
+        - restituisce il testo della risposta
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - stringa che rappresenta il testo della risposta
+    - `setText(text: str)`
+      - *Descrizione*:
+        - imposta il testo della risposta
+      - *Input*:
+        - `text`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - nessuno
+
+====== ElementoDomanda
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+    - `domanda`: oggetto di tipo `Domanda` che rappresenta la domanda
+    - `risposta`: oggetto di tipo `Risposta` che rappresenta la risposta
+
+  - *Metodi*
+    - `getId(): int`
+      - *Descrizione*:
+        - restituisce l'identificativo univoco dell'elemento domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - intero che rappresenta l'identificativo univoco dell'elemento domanda
+    - `getDomanda(): Domanda`
+      - *Descrizione*:
+        - restituisce l'oggetto `Domanda` associato all'elemento domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `Domanda` che rappresenta la domanda
+    - `getRisposta(): Risposta`
+      - *Descrizione*:
+        - restituisce l'oggetto `Risposta` associato all'elemento domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `Risposta` che rappresenta la risposta
+    - `setDomanda(domanda: str)`
+      - *Descrizione*:
+        - imposta il testo della domanda
+      - *Input*:
+        - `domanda`: stringa che rappresenta il testo della domanda
+      - *Output*:
+        - nessuno
+    - `setRisposta(risposta: str)`
+      - *Descrizione*:
+        - imposta il testo della risposta
+      - *Input*:
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - nessuno
+    - `serialize(): dict`
+      - *Descrizione*:
+        - restituisce un `dict` con i dati dell'elemento domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - `dict` con i dati dell'elemento domanda
+
+===== Risultato Test
+
+#set heading(numbering: "1.1")
+==== Application
+#set heading(numbering: none)
+
+===== Elemento Domanda
+Le dipendenze dei servizi di elemento domanda sono:
+  - *ElementoDomanda*: rappresenta il dominio di elemento domanda
+  - *ElementoDomandaUseCase*: rappresentano i casi d'uso implementati dai servizi
+  - *ElementiDomandaPorts*: rappresentano le porte utilizzate dai servizi
+
+====== AddService
+// TODO: aggiungere immagine
+
+======= AddElementoDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per salvare l'elemento domanda
+
+  - *Metodi*
+    - `addElementoDomanda(domanda: str, risposta: str): ElementoDomanda`
+      - *Descrizione*:
+        - aggiunge un elemento domanda a partire da domanda e risposta
+      - *Input*:
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena creato
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione della domanda o della risposta
+
+======= AddElementoDomandaUseCase
+  - *Metodi*
+      - `addElementoDomanda(domanda: str, risposta: str): ElementoDomanda`
+        - *Descrizione*:
+          - aggiunge un elemento domanda a partire da domanda e risposta
+        - *Input*:
+          - `domanda`: stringa che rappresenta il testo della domanda
+          - `risposta`: stringa che rappresenta il testo della risposta
+        - *Output*:
+          - oggetto di tipo `ElementoDomanda`
+
+======= SaveElementoDomandaPort
+  - *Metodi*
+    - `saveElementoDomanda(elementoDomanda: ElementoDomanda): ElementoDomanda`
+      - *Descrizione*:
+        - salva un elemento domanda nel database
+      - *Input*:
+        - `elementoDomanda`: oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda da salvare
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena salvato nel database
+
+====== GetService
+// TODO: aggiungere immagine
+
+======= GetElementoDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per ottenere l'elemento domanda
+
+  - *Metodi*
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena ottenuto
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
+
+======= GetElementoDomandaUseCase
+  - *Metodi*
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda`
+
+======= GetElementoDomandaPort
+  - *Metodi*
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda dal database, a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena ottenuto dal database
+
+====== GetAllService
+// TODO: aggiungere immagine
+
+======= GetAllElementiDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per ottenere tutti gli elementi domanda
+
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti
+
+======= GetAllElementiDomandaUseCase
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda`ù
+
+======= GetAllElementiDomandaPort
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti dal database
+
+====== DeleteService
+// TODO: aggiungere immagine
+
+======= DeleteElementiDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per eliminare gli elementi domanda
+
+  - *Metodi*
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina gli elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione degli id
+
+======= DeleteElementiDomandaUseCase
+  - *Metodi*
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina gli elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione
+
+======= DeleteElementiDomandaPort
+  - *Metodi*
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina gli elementi domanda nel datbase, a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
+
+====== UpdateService
+// TODO: aggiungere immagine
+
+======= UpdateElementoDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per aggiornare gli elementi domanda
+
+  - *Metodi*
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id, della domanda o della risposta
+
+======= UpdateElementoDomandaUseCase
+  - *Metodi*
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento
+
+======= UpdateElementoDomandaPort
+  - *Metodi*
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda nel database, a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento nel database
+
+===== Esecuzione Test
+===== Risultato Test
+
+#set heading(numbering: "1.1")
+==== Input Adapters (REST Controllers)
+#set heading(numbering: none)
+
+===== Elemento Domanda
+Le dipendenze dei REST controllers di elemento domanda sono:
+  - *ElementoDomandaUseCase*: rappresentano i casi d'uso implementati dai
+  servizi
+  - *Containers*: rappresentano le classi che gestiscono le dependency injection
+  - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
+  - *BadRequest* e *UnsupportedMediaType*: rappresentano alcune eccezioni catturate
+
+====== AddController
+// TODO: aggiungere immagine
+
+======= AddElementoDomandaController
+    - *Attributi*
+      - `useCase`: caso d'uso per aggiungere un elemento domanda, iniettato tramite dependency injection
+
+    - *Metodi*
+      - `post(): Response`
+        - *Descrizione*:
+          - aggiunge un elemento domanda a partire da domanda e risposta e lo ritorna all'interno della risposta
+        - *Input*:
+          - `domanda` e `risposta` tramite body json
+        - *Output*:
+          - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno l'elemento domanda appena creato
+          - messaggio di errore in caso di:
+            - problemi di validazione della domanda o della risposta
+            - errore interno del server
+            - mancanza di domanda o risposta nel body json
+          
+======= AddElementoDomandaUseCase
+  - *Metodi*
+      - `addElementoDomanda(domanda: str, risposta: str): ElementoDomanda`
+        - *Descrizione*:
+          - Aggiunge un elemento domanda a partire da domanda e risposta e lo ritorna
+        - *Input*:
+          - `domanda`: stringa che rappresenta il testo della domanda
+          - `risposta`: stringa che rappresenta il testo della risposta
+        - *Output*:
+          - oggetto di tipo `ElementoDomanda`
+
+====== GetController
+// TODO: aggiungere immagine
+
+======= GetElementoDomandaController
+    - *Attributi*
+      - `useCase`: caso d'uso per ottenere un elemento domanda, iniettato tramite dependency injection
+
+    - *Metodi*
+      - `get(id: int): Response`
+        - *Descrizione*:
+          - ritorna una risposta contenente un elemento domanda, a partire dal suo id
+        - *Input*:
+          - `id` tramite url param
+        - *Output*:
+          - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno l'elemento domanda appena ottenuto
+          - messaggio di errore in caso di:
+            - problemi di validazione dell'id
+            - errore interno del server
+
+======= GetElementoDomandaUseCase
+  - *Metodi*
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda`
+
+====== GetAllController
+// TODO: aggiungere immagine
+
+======= GetAllElementiDomandaController
+    - *Attributi*
+      - `useCase`: caso d'uso per ottenere tutti gli elementi domanda, iniettato tramite dependency injection
+
+    - *Metodi*
+      - `get(): Response`
+        - *Descrizione*:
+          - ritorna una risposta contenente un set di tutti gli elementi domanda presenti
+        - *Input*:
+          - nessuno
+        - *Output*:
+          - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il set di elementi domanda appena ottenuti
+          - messaggio di errore in caso di:
+            - errore interno del server
+
+======= GetAllElementiDomandaUseCase
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda`
+
+====== DeleteController
+// TODO: aggiungere immagine
+
+======= DeleteElementiDomandaController
+    - *Attributi*
+      - `useCase`: caso d'uso per eliminare gli elementi domanda, iniettato tramite dependency injection
+
+    - *Metodi*
+      - `delete(): Response`
+        - *Descrizione*:
+          - elimina uno o più elementi domanda a partire da un set di id
+        - *Input*:
+          - `ids` tramite body json
+        - *Output*:
+          - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il risultato dell'operazione di eliminazione
+          - messaggio di errore in caso di:
+            - problemi di validazione degli id
+            - errore interno del server
+            - mancanza di ids nel body json
+
+======= DeleteElementiDomandaUseCase
+  - *Metodi*
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina uno o più elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione
+
+====== UpdateController
+// TODO: aggiungere immagine
+
+======= UpdateElementoDomandaController
+    - *Attributi*
+      - `useCase`: caso d'uso per aggiornare un elemento domanda, iniettato tramite dependency injection
+
+    - *Metodi*
+      - `put(id: int): Response`
+        - *Descrizione*:
+          - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+        - *Input*:
+          - `id` tramite url param
+          - `domanda` e `risposta` tramite body json
+        - *Output*:
+          - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il risultato dell'operazione di aggiornamento
+          - messaggio di errore in caso di:
+            - problemi di validazione dell'id, della domanda o della risposta
+            - errore interno del server
+            - mancanza di domanda o risposta nel body json
+
+======= UpdateElementoDomandaUseCase
+  - *Metodi*
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento
+
+===== Esecuzione Test
+===== Risultato Test
+
+#set heading(numbering: "1.1")
+==== Output Adapters
+===== LLM
+#set heading(numbering: none)
+
+Le dipendenze dell'Adapters di LLM sono:
+  - *LLMPort*: rappresenta la porta implementata dall'Adapter stesso
+
+====== LLMAdapter
+  - *Attributi*
+    - `url`: stringa che rappresenta l'url per comunicare la domanda all'LLM ed ottenere la risposta
+    - `nome`: stringa che rappresenta il nome/modello dell'LLM utilizzato
+
+  - *Metodi*
+    - `makeQuestion(domanda: str): str`
+      - *Descrizione*:
+        - invia la domanda all'LLM e ne ritorna la risposta
+      - *Input*:
+        - `domanda`: stringa che rappresenta il testo della domanda
+      - *Output*:
+        - stringa che rappresenta la risposta fornita dall'LLM
+      - *Eccezioni*:
+        - `Exception`: eccezione sollevata nel caso in cui ci siano problemi di comunicazione con l'LLM
+
+    - `getName(): str`
+      - *Descrizione*:
+        - ritorna il nome dell'LLM
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - stringa che rappresenta il nome dell'LLM
+
+====== LLMPort
+  - *Metodi*
+    - `makeQuestion(domanda: str): str`
+      - *Descrizione*:
+        - invia la domanda all'LLM e ne ritorna la risposta
+      - *Input*:
+        - `domanda`: stringa che rappresenta il testo della domanda
+      - *Output*:
+        - stringa che rappresenta la risposta fornita dall'LLM
+
+    - `getName(): str`
+      - *Descrizione*:
+        - ritorna il nome dell'LLM
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - stringa che rappresenta il nome dell'LLM
+
+#set heading(numbering: "1.1")
+===== Persistence (PostreSQL)
+#set heading(numbering: none)
+
+====== Elemento Domanda
+Le dipendenze della sezione persistence di elemento domanda sono:
+  - *ElementoDomanda*: rappresenta il dominio di elemento domanda
+  - *ElementoDomandaPorts*: rappresentano le porte implementate dell'Adapter stesso
+  - *SQLAlchemyError* e *NoResultFound*: rappresentano alcune eccezioni lanciate da SQLAlchemy e catturate dall'Adapter
+  - *db*: rappresenta l'istanza del database utilizzato dalle entità del database e dalla repository per comunicare con il database stesso
+
+// TODO: aggiungere immagine
+
+======= ElementoDomandaPersistenceAdapter
+  - *Attributi*
+    - `repository`: repository utilizzata per comunicare con il database
+    - `mapper`: mapper utilizzato per mappare le entità del dominio di business con le entità del database
+
+  - *Metodi*
+    - `saveElementoDomanda(elementoDomanda: ElementoDomanda): ElementoDomanda`
+      - *Descrizione*:
+        - salva un elemento domanda nel database
+      - *Input*:
+        - `elementoDomanda`: oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda da salvare
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena salvato nel database
+
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena ottenuto dal database
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
+
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti dal database
+
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina uno o più elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
+
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento nel database
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
+
+======= SaveElementoDomandaPort
+  - *Metodi*
+    - `saveElementoDomanda(elementoDomanda: ElementoDomanda): ElementoDomanda`
+      - *Descrizione*:
+        - salva un elemento domanda nel database
+      - *Input*:
+        - `elementoDomanda`: oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda da salvare
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena salvato nel database
+
+======= GetElementoDomandaPort
+  - *Metodi*
+    - `getElementoDomandaById(id: int): ElementoDomanda`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena ottenuto dal database
+
+======= GetAllElementiDomandaPort
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti dal database
+
+======= DeleteElementiDomandaPort
+  - *Metodi*
+    - `deleteElementiDomanda(ids: Set[int]): bool`
+      - *Descrizione*:
+        - elimina uno o più elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
+
+======= UpdateElementoDomandaPort
+  - *Metodi*
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): bool`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento nel database
+
+======= ElementoDomandaEntity
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+    - `domanda`: stringa che rappresenta il testo della domanda
+    - `risposta`: stringa che rappresenta il testo della risposta
+
+======= ElementoDomandaPersistenceMapper
+  - *Metodi*
+    - `fromElementoDomandaEntity(entity: ElementoDomandaEntity): ElementoDomanda`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `ElementoDomandaEntity` in un oggetto di tipo `ElementoDomanda`
+      - *Input*:
+        - `entity`: oggetto di tipo `ElementoDomandaEntity` da mappare
+      - *Output*:
+        - oggetto di tipo `ElementoDomanda`
+
+    - `toElementoDomandaEntity(elementoDomanda: ElementoDomanda): ElementoDomandaEntity`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `ElementoDomanda` in un oggetto di tipo `ElementoDomandaEntity`
+      - *Input*:
+        - `elementoDomanda`: oggetto di tipo `ElementoDomanda` da mappare
+      - *Output*:
+        - oggetto di tipo `ElementoDomandaEntity`
+
+    - `fromDomandaRisposta(domanda: str, risposta: str): ElementoDomandaEntity`
+      - *Descrizione*:
+        - mappa una domanda e una risposta in un oggetto di tipo `ElementoDomandaEntity`
+      - *Input*:
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - oggetto di tipo `ElementoDomandaEntity`
+
+======= ElementoDomandaPostgreSQLRepository
+  - *Attributi*
+    - `db`: istanza del database utilizzata per comunicare con il database stesso
+
+  - *Metodi*
+    - `saveElementoDomanda(elementoEntity: ElementoDomandaEntity): ElementoDomandaEntity`
+      - *Descrizione*:
+        - salva un elemento domanda nel database
+      - *Input*:
+        - `elementoEntity`: oggetto di tipo `ElementoDomandaEntity` che rappresenta l'elemento domanda da salvare
+      - *Output*:
+        - oggetto di tipo `ElementoDomandaEntity` che rappresenta l'elemento domanda appena salvato nel database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `loadElementoDomandaById(id: int): ElementoDomandaEntity`
+      - *Descrizione*:
+        - ritorna un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+      - *Output*:
+        - oggetto di tipo `ElementoDomandaEntity` che rappresenta l'elemento domanda appena ottenuto dal database
+      - *Eccezioni*:
+        - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `loadAllElementiDomanda(): Set[ElementoDomandaEntity]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomandaEntity` che rappresentano gli elementi domanda appena ottenuti dal database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `deleteElementiDomanda(id: Set[int]): None`
+      - *Descrizione*:
+        - elimina uno o più elementi domanda a partire da un set di id
+      - *Input*:
+        - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `updateElementoDomanda(id: int, domanda: str, risposta: str): None`
+      - *Descrizione*:
+        - aggiorna domanda e risposta di un elemento domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco dell'elemento domanda
+        - `domanda`: stringa che rappresenta il testo della domanda
+        - `risposta`: stringa che rappresenta il testo della risposta
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di aggiornamento nel database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+        - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
 
 == Database
 #figure(

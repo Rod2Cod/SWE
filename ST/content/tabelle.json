@@ -43,7 +43,12 @@
         "Data": "2025-04-03",
         "Descrizione": "Sezione Struttura e Tecnologie - Aggiunto Database e aggiornate tecnologie back-end",
         "Autore": "Filippo Bellon"
-      }      
+      },
+      {
+        "Data": "2025-04-05",
+        "Descrizione": "Sezione Struttura - Aggiunta descrizione diagrammi delle classi Elemento Domanda",
+        "Autore": "Filippo Bellon"
+      }
     ]
   },
   "tecnologie": {
