@@ -42,8 +42,11 @@ executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestControll
 class GetTestStatusController(MethodView):
     def __init__(self, status_tracker: GetTestStatusUseCase = Provide[RootContainer.executeTestContainer.GetTestStatusService]):
         self.__useCase = status_tracker
-    
-    def get(self):
-        return jsonify(self.__useCase.getTestStatus()), 200
 
+    def get(self):
+        try:
+            status = self.__useCase.getTestStatus()
+            return jsonify(status), 200
+        except Exception as e:
+            return jsonify({"error": "Si è verificato un errore nel server, riprova più tardi"}), 500
 executeTest_blueprint.add_url_rule('/executeTest/status', view_func=GetTestStatusController.as_view('test_status'))
