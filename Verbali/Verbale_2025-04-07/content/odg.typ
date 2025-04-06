@@ -1,0 +1,3 @@
+- Discussione indicazione soddisfacimento requisiti Specifica Tecnica
+- Discussione inserimento test di unità e accettazione Piano di Qualifica
+- Discussione situazione codifica, test e deployment
