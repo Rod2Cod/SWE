@@ -1,8 +1,9 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 from src.infrastructure.adapter.output.persistence.Extensions import db
 from src.infrastructure.adapter.input.rest import (elementoDomanda_blueprint, 
-                                                    risultatoTest_blueprint, 
+                                                    risultatoTest_blueprint,
                                                     executeTest_blueprint)
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
 import configparser
@@ -19,9 +20,9 @@ def create_app(testing=False) -> Flask:
     
     """ Configuro app da INI file """
     INIconfig = configparser.ConfigParser()
-    
+
     filePath = (Path(__file__).resolve().parent / 'config.ini')
-    
+
     INIconfig.read(filePath)
 
     if(testing):
@@ -46,7 +47,7 @@ def create_app(testing=False) -> Flask:
             ElementoDomandaEntity, RisultatoTestEntity, 
             RisultatoSingolaDomandaEntity, RisultatoMetricaEntity)
         db.create_all()
-    
+
     """ Registro i blueprint (route inserite in altri file) """
     app.register_blueprint(elementoDomanda_blueprint)
     app.register_blueprint(risultatoTest_blueprint)
