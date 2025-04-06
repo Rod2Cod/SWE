@@ -3,19 +3,11 @@ from flask import Flask
 from flask_cors import CORS
 from src.infrastructure.adapter.output.persistence.Extensions import db
 from src.infrastructure.adapter.input.rest import (elementoDomanda_blueprint, 
-                                                    AddElementoDomandaController, 
-                                                    GetElementoDomandaController, 
-                                                    GetAllElementiDomandaController, 
-                                                    DeleteElementiDomandaController, 
-                                                    UpdateElementoDomandaController)
-from src.infrastructure.adapter.input.rest import (risultatoTest_blueprint, 
-                                                    GetRisultatoTestController, 
-                                                    GetAllRisultatiTestController, 
-                                                    GetRisultatoSingolaDomandaController)
-from src.infrastructure.adapter.input.rest import (executeTest_blueprint, 
-                                                   ExecuteTestController)
+                                                    risultatoTest_blueprint,
+                                                    executeTest_blueprint)
 from src.infrastructure.adapter.input.rest.containers.Containers import RootContainer
-
+import configparser
+from pathlib import Path, Path
 
 def create_app(testing=False) -> Flask:
     app = Flask(__name__)
@@ -26,12 +18,17 @@ def create_app(testing=False) -> Flask:
     """ Impedisco a flask di ordinare le chiavi json alfabeticamente"""
     app.json.sort_keys = False
     
-    """ Configuro database """
+    """ Configuro app da INI file """
+    INIconfig = configparser.ConfigParser()
+
+    filePath = (Path(__file__).resolve().parent / 'config.ini')
+
+    INIconfig.read(filePath)
+
     if(testing):
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     else:
-        #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@postgres:5432/Artificial_QI'
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin@localhost:5432/Artificial_QI'
+        app.config['SQLALCHEMY_DATABASE_URI'] = INIconfig['database']['uri']
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     db.init_app(app)
@@ -50,10 +47,7 @@ def create_app(testing=False) -> Flask:
             ElementoDomandaEntity, RisultatoTestEntity, 
             RisultatoSingolaDomandaEntity, RisultatoMetricaEntity)
         db.create_all()
-    
-    """ Configuro i controller di esecuzione test (necessario per registrare le route) """
-    executeTestController = ExecuteTestController()
-    
+
     """ Registro i blueprint (route inserite in altri file) """
     app.register_blueprint(elementoDomanda_blueprint)
     app.register_blueprint(risultatoTest_blueprint)

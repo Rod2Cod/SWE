@@ -5,11 +5,7 @@ class Test_StatusTracker:
         cls.status_tracker = TestStatusTrackerImpl()
         
     def setup_method(self):
-        self.__in_progress = False
-        self.__total_questions = 0
-        self.__questions_completed = 0
-        self.__id_risultato = None
-        self.__error = None
+        self.status_tracker = TestStatusTrackerImpl()
         
     def test_start_test(self):
         self.status_tracker.start_test(5)
@@ -18,6 +14,8 @@ class Test_StatusTracker:
         assert status["total"] == 5
         assert status["completed"] == 0
         assert status["percentage"] == 0.0
+        assert status["id_risultato"] == None
+        assert status["error"] == None
         
     def test_update_progress(self):
         self.status_tracker.start_test(5)

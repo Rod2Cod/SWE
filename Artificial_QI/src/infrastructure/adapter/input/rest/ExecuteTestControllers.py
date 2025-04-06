@@ -28,13 +28,14 @@ class ExecuteTestController(MethodView):
             Thread(target=run_test_in_thread, args=(app, self.__useCase)).start()
 
             time.sleep(1)
-            status = self.__status_tracker_use_case.get_status()
+            status = self.__status_tracker_use_case.getTestStatus()
 
             if status["in_progress"]:
                 return jsonify({"message": "Test avviato con successo"}), 200
             else:
                 return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
-        except Exception:
+        except Exception as e:
+            print(e)
             return jsonify({"message": "Si è verificato un errore nel server, riprova più tardi"}), 500
         
 executeTest_blueprint.add_url_rule('/executeTest', view_func=ExecuteTestController.as_view('execute_test'))

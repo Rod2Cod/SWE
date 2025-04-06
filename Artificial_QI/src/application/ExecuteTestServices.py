@@ -16,7 +16,7 @@ class ExecuteTestService(ExecuteTestUseCase):
         self.__saveTestport = save_port
         self.__getElementiDomanda_port = get_domande_port
 
-    def executeTest(self):
+    def executeTest(self) -> None:
         # recupero tutte le domande
 
         elementiDomanda = self.__getElementiDomanda_port.getAllElementiDomanda()
@@ -26,7 +26,6 @@ class ExecuteTestService(ExecuteTestUseCase):
         scores = []
         try:
             for elemento in elementiDomanda:
-
                 domanda = elemento.getDomanda().getText()
                 risposta = elemento.getRisposta().getText()
                 risposta_llm = self.__llm.makeQuestion(domanda)

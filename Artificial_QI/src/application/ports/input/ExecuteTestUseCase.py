@@ -3,7 +3,7 @@ from src.domain import RisultatoTest
 
 class ExecuteTestUseCase(ABC):
     @abstractmethod
-    def executeTest(self) -> RisultatoTest:
+    def executeTest(self) -> None:
         pass
     
 class GetTestStatusUseCase(ABC):

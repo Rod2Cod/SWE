@@ -1,6 +1,6 @@
 from src.domain.ElementoDomanda import ElementoDomanda
 from src.application.ports.input.ElementoDomandaUseCase import AddElementoDomandaUseCase, GetElementoDomandaUseCase, GetAllElementiDomandaUseCase, DeleteElementiDomandaUseCase, UpdateElementoDomandaUseCase
-from src.application.ports.output.ElementiDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
+from src.application.ports.output.ElementoDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
 
 def validateDomandaRisposta(domanda: str, risposta: str):
         if not(isinstance(domanda, str) and isinstance(risposta, str)) or (len(domanda) == 0 or len(risposta) == 0):

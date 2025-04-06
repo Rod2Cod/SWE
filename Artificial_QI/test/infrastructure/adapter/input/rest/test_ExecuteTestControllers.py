@@ -95,7 +95,7 @@ class TestGetTestStatusController:
     def test_get_test_status(self, client, app):
         # Mocking the GetTestStatusUseCase
         mock_use_case = mock.Mock(spec=GetTestStatusUseCase)
-        app.container.executeTestContainer.TestStatusTracker.override(mock_use_case)
+        app.container.executeTestContainer.GetTestStatusService.override(mock_use_case)
 
         # Mocking the return value of getTestStatus method
         mock_use_case.getTestStatus.return_value = {
@@ -113,4 +113,4 @@ class TestGetTestStatusController:
 
         # Asserting the response status code and data
         assert response.status_code == 200
-        assert response.json == {"in_progress": False}
+        assert response.json == mock_use_case.getTestStatus.return_value

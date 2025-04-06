@@ -2,8 +2,9 @@ import pytest
 from src.application.ExecuteTestServices import ExecuteTestService
 from src.application.ports.output.LLMPort import LLMPort
 from src.application.ports.output.RisultatoTestPorts import SaveRisultatoTestPort
-from src.application.ports.output.ElementiDomandaPorts import GetAllElementiDomandaPort
+from src.application.ports.output.ElementoDomandaPorts import GetAllElementiDomandaPort
 from src.application.evaluation.AlgoritmoValutazioneRisposte import AlgoritmoValutazioneRisposte
+from src.application.evaluation.status.StatusTrackerImpl import TestStatusTrackerImpl
 from src.domain.ElementoDomanda import ElementoDomanda
 from src.domain.RisultatoTest import RisultatoTest, RisultatoSingolaDomanda
 from datetime import datetime
@@ -16,7 +17,8 @@ class TestExecuteTestService:
         cls.mockValutatore = mock.Mock(spec=AlgoritmoValutazioneRisposte)
         cls.mockSavePort = mock.Mock(spec=SaveRisultatoTestPort)
         cls.mockGetDomandePort = mock.Mock(spec=GetAllElementiDomandaPort)
-        cls.service = ExecuteTestService(cls.mockLLM, cls.mockValutatore, cls.mockSavePort, cls.mockGetDomandePort)
+        cls.status_tracker = TestStatusTrackerImpl()
+        cls.service = ExecuteTestService(cls.mockLLM, cls.mockValutatore, cls.mockSavePort, cls.mockGetDomandePort, cls.status_tracker)
 
     def setup_method(self):
         self.mockLLM.reset_mock()
@@ -25,7 +27,7 @@ class TestExecuteTestService:
         self.mockGetDomandePort.reset_mock()
 
     def test_execute_test_success(self):
-        """Test per il corretto completamento del test con un solo elemento domanda."""
+        """Test per il corretto completamento del test"""
 
         self.mockGetDomandePort.getAllElementiDomanda.return_value = {
             ElementoDomanda("domanda1", "risposta1", 1),
@@ -70,32 +72,45 @@ class TestExecuteTestService:
             }
         )
 
-        risultato = self.service.executeTest()
-        assert risultato.getId() >= 0
-        assert risultato.getScore() == 0.6
-        assert risultato.getLLM() == "GPT-3"
-        assert risultato.getDataEsecuzione() is not None
-        assert len(risultato.getRisultatiDomande()) == 3
-        for res in risultato.getRisultatiDomande():
-            assert res.getId() >= 0
-            assert res.getDomanda().count("domanda") == 1
-            assert res.getRisposta().count("risposta") == 1
-            assert res.getRispostaLLM() == "risposta_llm"
-            assert res.getScore() == 0.6
-            assert res.getMetriche() == {"metrica1": 0.7, "metrica2": 0.3}
-        
+        self.service.executeTest()
+        self.mockGetDomandePort.getAllElementiDomanda.assert_called_once()
+        self.mockLLM.makeQuestion.assert_called()
+        self.mockLLM.getName.assert_called_once()
+        self.mockValutatore.evaluate.assert_called()
         self.mockSavePort.saveRisultatoTest.assert_called_once()
 
     def test_execute_test_empty_elementi_domanda(self):
         """Testa il comportamento in assenza di elementi domanda."""
-        llm = mock.Mock()
-        valutatore = mock.Mock()
-        save_port = mock.Mock()
-        get_domande_port = mock.Mock()
 
-        get_domande_port.getAllElementiDomanda.return_value = []
+        self.mockGetDomandePort.getAllElementiDomanda.return_value = {}
 
-        service = ExecuteTestService(llm, valutatore, save_port, get_domande_port)
+        self.service.executeTest()
+        self.mockGetDomandePort.getAllElementiDomanda.assert_called_once()
+        self.mockLLM.makeQuestion.assert_not_called()
+        self.mockValutatore.evaluate.assert_not_called()
+        self.mockSavePort.saveRisultatoTest.assert_not_called()
+        self.mockLLM.getName.assert_not_called()
+        assert self.status_tracker.get_status()["error"] is not None
+            
+    def test_execute_test_server_error(self):
+        """Test per il corretto completamento del test in presenza di un errore del server."""
 
-        with pytest.raises(Exception):
-            service.executeTest()
+        self.mockGetDomandePort.getAllElementiDomanda.return_value = {
+            ElementoDomanda("domanda1", "risposta1", 1),
+            ElementoDomanda("domanda2", "risposta2", 2),
+            ElementoDomanda("domanda3", "risposta3", 3)
+            }
+
+        self.mockLLM.makeQuestion.return_value = "risposta_llm"
+        self.mockValutatore.evaluate.return_value = ({"metrica1": 0.7, "metrica2": 0.3}, 0.6)
+        self.mockLLM.getName.return_value = "GPT-3"
+        self.mockSavePort.saveRisultatoTest.side_effect = Exception("Server error.")
+        
+        self.service.executeTest()
+
+        self.mockGetDomandePort.getAllElementiDomanda.assert_called_once()
+        self.mockLLM.makeQuestion.assert_called()
+        self.mockLLM.getName.assert_called_once()
+        self.mockValutatore.evaluate.assert_called()
+        self.mockSavePort.saveRisultatoTest.assert_called_once()
+        assert self.status_tracker.get_status()["error"] is not None
