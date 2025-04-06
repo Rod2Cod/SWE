@@ -38,6 +38,11 @@
 - *endpoint:* `/executeTest`
 - *Metodo:* `POST`
 #table-json-api(json("tabelle.json").at("api").at("execute_test"), 4)
+=== GET Status Test
+*Descrizione:* Questo endpoint consente di ricavare lo stato di esecuzione del test
+- *endpoint:* `/executeTest/status`
+- *Metodo:* `GET`
+#table-json-api(json("tabelle.json").at("api").at("execute_test"), 4)
 == Risultato Test
 === GET Get Risultato Test
 *Descrizione:* Questo endpoint consente di ottenere il risultato del test eseguito, dato il suo id.

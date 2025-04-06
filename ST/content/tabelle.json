@@ -48,6 +48,11 @@
         "Data": "2025-04-05",
         "Descrizione": "Sezione Struttura - Aggiunta descrizione diagrammi delle classi Elemento Domanda",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-06",
+        "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Teconologie - Agguinte librerie e framework frontend",
+        "Autore": "Luca Calzetta"
       }
     ]
   },
@@ -81,7 +86,12 @@
         {
           "Nome": "VueJS",
           "Descrizione": "Framework JavaScript open-source per la creazione di interfacce utente e applicazioni web.",
-          "Versione": ""
+          "Versione": "3.5.13"
+        },
+        {
+          "Nome": "Bootstrap",
+          "Descrizione": "Framework CSS per gestire la grafica all'interno del frontend",
+          "Versione": "5.3.3"
         },
         {
           "Nome": "Flask",
@@ -181,6 +191,36 @@
           "Nome": "flask-Cors",
           "Descrizione": "Estensione di Flask per gestire le richieste CORS.",
           "Versione": "4.0.0"
+        },
+        {
+          "Nome": "axios",
+          "Descrizione": "HTTP client per chiamate API",
+          "Versione": "1.8.3"
+        },
+        {
+          "Nome": "vue-router",
+          "Descrizione": "Libreria di Vue JS per gestire le rotte in un'app Single Page Application",
+          "Versione": "4.5.0"
+        },
+        {
+          "Nome": "vite",
+          "Descrizione": "Vite è un build tool e dev server per frontend",
+          "Versione": "6.0.11"
+        },
+        {
+          "Nome": "vitest",
+          "Descrizione": "Vitest è un test runner ottimizzato per Vite",
+          "Versione": "3.0.5"
+        },
+        {
+          "Nome": "jsdom",
+          "Descrizione": "Simula il DOM nel contesto Node.js per testare componenti vue",
+          "Versione": "26.0.0"
+        },
+        {
+          "Nome": "@ionic/vue",
+          "Descrizione": "È il pacchetto ufficiale di Ionic per Vue 3. Utilizzato per inserire delle icone nel frontend.",
+          "Versione": "8.5.0"
         }
       ]
     },
@@ -371,6 +411,28 @@
           "Body": "`{\"message\": \"...\"}`",
           "Descrizione": "Si è verificato un errore interno del server."
         }
+      ]
+    },
+    "status": {
+      "keys": [
+        "Esito",
+        "Codice HTTP",
+        "Body",
+        "Descrizione"
+      ],
+      "values": [
+        {
+          "Esito": "Positivo",
+          "Codice HTTP": "200",
+          "Body": "JSON",
+          "Descrizione": "Ritorna lo status dell'esecuzione del test"
+        },
+        {
+          "Esito": "Negativo",
+          "Codice HTTP": "500",
+          "Body": "`{\"message\": \"...\"}`",
+          "Descrizione": "Si è verificato un errore interno del server."
+        }        
       ]
     },
     "risultato_test": {
