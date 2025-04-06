@@ -1,3 +1,9 @@
-- Discussione indicazione soddisfacimento requisiti Specifica Tecnica
-- Discussione inserimento test di unità e accettazione Piano di Qualifica
+- Discussione Specifica Tecnica
+  - Indicazione soddisfacimento requisiti 
+  - Inserimento immagini classi
+- Discussione Piano di Qualifica
+  - Inserimento test di unità e accettazione 
+  - Aggiornamento test di sistema
 - Discussione situazione codifica, test e deployment
+- Discussione situazione Manuale Sviluppatore e Manuale Utente
+- Discussione situazione altra documentazione di progetto
