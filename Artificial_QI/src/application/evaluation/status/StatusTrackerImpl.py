@@ -13,6 +13,7 @@ class TestStatusTrackerImpl(TestStatusTracker):
         self.__in_progress = True
         self.__total_questions = total_questions
         self.__questions_completed = 0
+        self.__error = None
 
     def update_progress(self):
         self.__questions_completed += 1

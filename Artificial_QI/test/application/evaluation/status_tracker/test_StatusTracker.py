@@ -14,6 +14,8 @@ class Test_StatusTracker:
         assert status["total"] == 5
         assert status["completed"] == 0
         assert status["percentage"] == 0.0
+        assert status["id_risultato"] == None
+        assert status["error"] == None
         
     def test_update_progress(self):
         self.status_tracker.start_test(5)
