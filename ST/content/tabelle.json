@@ -402,8 +402,8 @@
         {
           "Esito": "Positivo",
           "Codice HTTP": "200",
-          "Body": "JSON",
-          "Descrizione": "Il test viene eseguito e ritornato con successo."
+          "Body": "`{\"message\": \"Test avviato con successo\"}`",
+          "Descrizione": "L'esecuzione del test viene avviata con successo."
         },
         {
           "Esito": "Negativo",
@@ -425,7 +425,7 @@
           "Esito": "Positivo",
           "Codice HTTP": "200",
           "Body": "JSON",
-          "Descrizione": "Ritorna lo status dell'esecuzione del test"
+          "Descrizione": "Lo status del test in corso viene restituito con successo."
         },
         {
           "Esito": "Negativo",
