@@ -1,4 +1,4 @@
-from unittest import mock
+from unittest.mock import Mock, patch
 import pytest
 from flask import url_for
 from application import create_app
@@ -18,9 +18,13 @@ def client(app):
     return app.test_client()
 
 class TestExecuteTestController:
-    def test_execute_test(self,client,app):
+    def test_execute_test(self, client, app):
+        """Test per il controller di esecuzione del test."""
+        
         # Mocking the ExecuteTestUseCase
-        mock_use_case = mock.Mock(spec=ExecuteTestUseCase)
+        mock_use_case = Mock(spec=ExecuteTestUseCase)
+        mock_status_use_case = Mock(spec=GetTestStatusUseCase)
+        app.container.executeTestContainer.GetTestStatusService.override(mock_status_use_case)
         app.container.executeTestContainer.ExecuteTestService.override(mock_use_case)
 
         # Mocking the return value of executeTest method
@@ -49,52 +53,80 @@ class TestExecuteTestController:
                 )
             }
         )
-        mock_use_case.executeTest.return_value = result
+        
+        mock_use_case.executeTest.return_value = None
+        mock_status_use_case.getTestStatus.return_value = {
+            "starting": False,
+            "in_progress": True,
+            "completed": 1,
+            "total": 2,
+            "percentage": 50,
+            "id_risultato": None
+        }
+        
+        def fake_thread_start():
+        # simula il codice run_test_in_thread(...)
+            mock_use_case.executeTest()
 
-        with app.test_request_context():
-            # Sending a POST request to the endpoint
-            response = client.post(url_for('executeTest_blueprint.execute_test'))
+        with patch("src.infrastructure.adapter.input.rest.ExecuteTestControllers.Thread") as mock_thread, \
+            patch("src.infrastructure.adapter.input.rest.ExecuteTestControllers.time.sleep") as mock_sleep:
+            
+            mock_thread_instance = mock_thread.return_value
+            mock_thread_instance.start.side_effect = fake_thread_start
+                
+            with app.test_request_context():
+                # Sending a POST request to the endpoint
+                response = client.post(url_for('executeTest_blueprint.execute_test'))
+                
+                mock_thread_instance.start.assert_called_once()
+                mock_sleep.assert_called_once_with(1)
 
         # Asserting the response status code and data
         assert response.status_code == 200
-        assert response.json == result.serialize()
+        assert response.json == {"message": "Test avviato con successo"}
+        mock_use_case.executeTest.assert_called_once()
+        mock_status_use_case.getTestStatus.assert_called_once()
 
-    def test_execute_test_no_result(self, client, app):
-        # Mocking the ExecuteTestUseCase
-        mock_use_case = mock.Mock(spec=ExecuteTestUseCase)
-        app.container.executeTestContainer.ExecuteTestService.de(mock_use_case)
-
-        # Mocking the return value of executeTest method to return None
-        mock_use_case.executeTest.return_value = None
-
-        with app.test_request_context():
-            # Sending a POST request to the endpoint
-            response = client.post(url_for('executeTest_blueprint.execute_test'))
-
-        # Asserting the response status code and data
-        assert response.status_code == 500
-        assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
-
-    def test_execute_test_error(self, client, app):
-        # Mocking the ExecuteTestUseCaseoverri
-        mock_use_case = mock.Mock(spec=ExecuteTestUseCase)
+    @pytest.mark.parametrize("error", [{"in_progress": False}, Exception()])
+    def test_execute_test_error(self, client, app, error):
+        # Mocking the ExecuteTestUseCaseoverride
+        mock_use_case = Mock(spec=ExecuteTestUseCase)
+        mock_status_use_case = Mock(spec=GetTestStatusUseCase)
+        app.container.executeTestContainer.GetTestStatusService.override(mock_status_use_case)
         app.container.executeTestContainer.ExecuteTestService.override(mock_use_case)
+        
+        if error is Exception:
+            mock_use_case.executeTest.side_effect = error
+        else:
+            mock_status_use_case.getTestStatus.return_value = error
+        
+        def fake_thread_start():
+        # simula il codice run_test_in_thread(...)
+            mock_use_case.executeTest()
 
-        # Mocking the return value of executeTest method to raise an exception
-        mock_use_case.executeTest.side_effect = Exception()
-
-        with app.test_request_context():
-            # Sending a POST request to the endpoint
-            response = client.post(url_for('executeTest_blueprint.execute_test'))
+        with patch("src.infrastructure.adapter.input.rest.ExecuteTestControllers.Thread") as mock_thread, \
+            patch("src.infrastructure.adapter.input.rest.ExecuteTestControllers.time.sleep") as mock_sleep:
+            
+            mock_thread_instance = mock_thread.return_value
+            mock_thread_instance.start.side_effect = fake_thread_start
+                
+            with app.test_request_context():
+                # Sending a POST request to the endpoint
+                response = client.post(url_for('executeTest_blueprint.execute_test'))
+                
+                mock_thread_instance.start.assert_called_once()
+                mock_sleep.assert_called_once_with(1)
 
         # Asserting the response status code and data
         assert response.status_code == 500
         assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
+        mock_use_case.executeTest.assert_called_once()
+        mock_status_use_case.getTestStatus.assert_called_once()
         
 class TestGetTestStatusController:
     def test_get_test_status(self, client, app):
         # Mocking the GetTestStatusUseCase
-        mock_use_case = mock.Mock(spec=GetTestStatusUseCase)
+        mock_use_case = Mock(spec=GetTestStatusUseCase)
         app.container.executeTestContainer.GetTestStatusService.override(mock_use_case)
 
         # Mocking the return value of getTestStatus method
@@ -114,3 +146,21 @@ class TestGetTestStatusController:
         # Asserting the response status code and data
         assert response.status_code == 200
         assert response.json == mock_use_case.getTestStatus.return_value
+        mock_use_case.getTestStatus.assert_called_once()
+        
+    def test_get_test_status_server_error(self, client, app):
+        # Mocking the GetTestStatusUseCase
+        mock_use_case = Mock(spec=GetTestStatusUseCase)
+        app.container.executeTestContainer.GetTestStatusService.override(mock_use_case)
+
+        # Mocking the return value of getTestStatus method
+        mock_use_case.getTestStatus.side_effect = Exception("Errore di test")
+
+        with app.test_request_context():
+            # Sending a GET request to the endpoint
+            response = client.get(url_for('executeTest_blueprint.test_status'))
+
+        # Asserting the response status code and data
+        assert response.status_code == 500
+        assert response.json == {"message": "Si è verificato un errore nel server, riprova più tardi"}
+        mock_use_case.getTestStatus.assert_called_once()
