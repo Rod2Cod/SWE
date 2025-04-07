@@ -1247,8 +1247,14 @@ I requisiti aventi sezioni indicate da una dobbia barra (*\/\/*) vengono impleme
 Il database è composto da 5 entità:
   - *ElementoDomanda*: rappresenta una singola domanda con annessa risposta. È composto da:
     - id: identificativo univoco dell'elemento domanda
-    - domanda: testo della domanda
-    - risposta: testo della risposta
+    - domanda: l' oggetto domanda
+    - risposta: l' oggetto risposta attesa
+
+  - *Domanda* : rappresenta la domanda. È composto da:
+    - testo : il testo della domanda
+  
+  - *Risposta* : rappresenta la risposta. È composto da:
+    - testo : il testo della risposta
 
   - *RisultatoTest*: rappresenta il risultato di un test di valutazione svolto su delle domande. È composto da:
     - id: identificativo univoco del risultato
@@ -1264,12 +1270,7 @@ Il database è composto da 5 entità:
     - risposta: testo della risposta testata
     - rispostaLLM: testo della risposta fornita dall'LLM
     - score: punteggio ottenuto dalla domanda
-    - risultatoTestId: id del risultato del test a cui si riferisce
-
-  - *RisultatoMetrica*: rappresenta il risultato ottenuto da metrica su un determinato risultato della singola domanda. È composto da:
-    - nomeMetrica: nome della metrica
-    - score: punteggio ottenuto dalla metrica
-    - risultatoDomandaId: id del risultato della singola domanda a cui si riferisce
+    - metriche : un dizionario di coppie "nome metrica" e "score parziale ottenuto" corrispondente
 
 === Query
 Le operazioni principali che vengono eseguite sul database sono:
