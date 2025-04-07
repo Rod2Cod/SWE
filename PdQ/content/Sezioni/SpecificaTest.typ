@@ -20,6 +20,11 @@ Dove:
   - *S*: sistema;
   - *A*: accettazione;
   - *R*: non regressione.
+
+- *Applicativo*: indica l'applicativo a cui il test è associato
+  - *B*: back-end
+  - *F*: front-end
+
 == Test di Unità
 Servono a verificare il corretto funzionamento di una singola parte autonoma del progetto.
 #table-json-rev(json(tabelle).at("Test").at("TestUnita"),4)
