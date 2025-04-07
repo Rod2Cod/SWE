@@ -198,7 +198,7 @@
 
 // Prendo l'ultima versione del documento
 #let getLastDocVersion(data, path) = {
-  let items = json("/" + path + "/" + data).at("versione").at("values")
+  let items = json("./" + path + "/" + data).at("versione").at("values")
   let filtered = items.filter(it => it.keys().contains("Versione"))
   filtered.at(-1, default: []).at("Versione", default: "")    // se versione non presente ritorna stringa vuota
 }
