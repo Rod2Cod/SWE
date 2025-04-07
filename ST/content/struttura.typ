@@ -1,8 +1,8 @@
+#import "../../functions.typ": table-json-rev
+
 == Diagrammi delle classi
 === Backend
 ==== Domain Model
-#set heading(numbering: none)
-
 ===== Elemento Domanda
 // TODO: aggiungere immagine
 
@@ -223,10 +223,7 @@ Il componente principale del dominio di risultato test è:
       - *Output*:
         - `dict` con i dati principali del risultato del test, senza i risultati delle domande
 
-#set heading(numbering: "1.1")
 ==== Application
-#set heading(numbering: none)
-
 ===== Elemento Domanda
 Le dipendenze dei servizi di elemento domanda sono:
   - *ElementoDomanda*: rappresenta il dominio di elemento domanda
@@ -553,7 +550,7 @@ Le dipendenze del servizio di risultato test sono:
   - *RisultatoTest*: rappresenta il dominio di risultato test
   - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato per singola domanda
 
-======= GetRisultatoTestService
+====== GetRisultatoTestService
   - *Attributi*
     - `port`: porta utilizzata per ottenere il risultato del test
   - *Metodi*
@@ -567,7 +564,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Eccezioni*:
         - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
 
-======= GetRisultatoTestUseCase
+====== GetRisultatoTestUseCase
   - *Metodi*
     - `getRisultatoTest(id: int): RisultatoTest`
       - *Descrizione*:
@@ -577,7 +574,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
 
-======= GetRisultatoTestPort
+====== GetRisultatoTestPort
   - *Metodi*
     - `getRisultatoTest(id: int): RisultatoTest`
       - *Descrizione*:
@@ -587,7 +584,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test con l'id specificato
 
-======= GetAllRisultatiTestService
+====== GetAllRisultatiTestService
   - *Attributi*
     - `port`: porta utilizzata per ottenere tutti i risultati del test
   - *Metodi*
@@ -599,7 +596,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
 
-======= GetAllRisultatiTestUseCase
+====== GetAllRisultatiTestUseCase
   - *Metodi*
     - `getAllRisultatiTest(): set[RisultatoTest]`
       - *Descrizione*:
@@ -609,7 +606,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
 
-======= GetAllRisultatiTestPort
+====== GetAllRisultatiTestPort
   - *Metodi*
     - `getAllRisultatiTest(): set[RisultatoTest]`
       - *Descrizione*:
@@ -619,7 +616,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano tutti i risultati di test presenti nel sistema
 
-======= GetRisultatoSingolaDomandaService
+====== GetRisultatoSingolaDomandaService
   - *Attributi*
     - `port`: porta utilizzata per ottenere il risultato di una specifica domanda di un test
   - *Metodi*
@@ -633,7 +630,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Eccezioni*:
         - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
 
-======= GetRisultatoSingolaDomandaUseCase
+====== GetRisultatoSingolaDomandaUseCase
   - *Metodi*
     - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
       - *Descrizione*:
@@ -643,7 +640,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
-======= GetRisultatoSingolaDomandaPort
+====== GetRisultatoSingolaDomandaPort
   - *Metodi*
     - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
       - *Descrizione*:
@@ -653,10 +650,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
-#set heading(numbering: "1.1")
 ==== Input Adapters (REST Controllers)
-#set heading(numbering: none)
-
 ===== Elemento Domanda
 Le dipendenze dei REST controllers di elemento domanda sono:
   - *ElementoDomandaUseCase*: rappresentano i casi d'uso implementati dai
@@ -979,11 +973,8 @@ Le dipendenze dei REST controllers di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
-#set heading(numbering: "1.1")
 ==== Output Adapters
 ===== LLM
-#set heading(numbering: none)
-
 Le dipendenze dell'Adapters di LLM sono:
   - *LLMPort*: rappresenta la porta implementata dall'Adapter stesso
 
@@ -1029,10 +1020,7 @@ Le dipendenze dell'Adapters di LLM sono:
       - *Output*:
         - stringa che rappresenta il nome dell'LLM
 
-#set heading(numbering: "1.1")
 ===== Persistence (PostreSQL)
-#set heading(numbering: none)
-
 ====== Elemento Domanda
 Le dipendenze della sezione persistence di elemento domanda sono:
   - *ElementoDomanda*: rappresenta il dominio di elemento domanda
@@ -1237,6 +1225,15 @@ Le dipendenze della sezione persistence di elemento domanda sono:
       - *Eccezioni*:
         - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
         - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
+
+====== Risultato Test
+
+=== Tracciamento requisiti
+Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
+
+I requisiti aventi sezioni indicate da una dobbia barra (*\/\/*) vengono implementati nelle sezioni del requisito soprastante. In caso di più righe consecutive aventi una doppia barra, i requisiti descritti in esse vengono implementati nelle sezione definite nell'ultima riga soprastante non avente una doppia barra.
+
+#table-json-rev(json("tabelle.json").at("tracciamento_requisiti").at("backend"), 3)
 
 == Database
 #figure(
