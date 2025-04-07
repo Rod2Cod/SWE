@@ -31,6 +31,12 @@ export default {
     closePopup() {
       this.showPopup = false;
       this.domandaSelezionata = null;
+    },
+    getBorderColor(score) {
+      const score10 = score * 10;
+      if (score10 < 5) return 'border-red';
+      if (score10 < 8) return 'border-orange';
+      return 'border-green';
     }
   },
   data() {
@@ -39,8 +45,11 @@ export default {
       showPopup: false,
     };
   },
-  mounted() {
-
+  computed: {
+    domandeOrdinate() {
+      if (!this.test || !Array.isArray(this.test.risultatiDomande)) return [];
+      return [...this.test.risultatiDomande].sort((a, b) => a.score - b.score);
+    }
   }
 };
 
@@ -56,7 +65,7 @@ export default {
 
     <h3 class="section-title">Risultati del Test</h3>
     <div class="question-list">
-      <div v-for="(question, index) in test.risultatiDomande" :key="index" class="question-item" @click="risultatoSingolaDomanda(question.id)">
+      <div v-for="(question, index) in domandeOrdinate" :key="index" class="question-item"  :class="getBorderColor(question.score)" @click="risultatoSingolaDomanda(question.id)">
         <p class="question-text"><strong>Domanda:</strong> {{ question.domanda }}</p>
         <p class="question-text" ><strong>Punteggio:</strong> {{ parseFloat((question.score * 10).toFixed(2)) }}</p>
       </div>
@@ -114,5 +123,15 @@ export default {
   color: #ddd;
   font-size: 1rem;
   margin-bottom: 5px;
+}
+
+.border-red {
+  border: 2px solid #e74c3c;
+}
+.border-orange {
+  border: 2px solid #f39c12;
+}
+.border-green {
+  border: 2px solid #2ecc71;
 }
 </style>

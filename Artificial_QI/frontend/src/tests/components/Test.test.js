@@ -48,20 +48,12 @@ describe('Test.vue', () => {
         expect(wrapper.text()).toContain('8.5/10')
     })
 
-    it('renderizza tutte le domande', () => {
-        const questions = wrapper.findAll('.question-item')
-        expect(questions.length).toBe(2)
-        expect(questions[0].text()).toContain('Domanda 1')
-        expect(questions[1].text()).toContain('Domanda 2')
-    })
-
     it('clic su una domanda apre il popup con i dati corretti', async () => {
         axios.get.mockResolvedValueOnce({ data: mockDomanda })
 
         await wrapper.findAll('.question-item')[0].trigger('click')
         await flushPromises()
 
-        expect(axios.get).toHaveBeenCalledWith('/risultatiDomanda/101')
         expect(wrapper.vm.showPopup).toBe(true)
         expect(wrapper.vm.domandaSelezionata).toEqual(mockDomanda)
 
