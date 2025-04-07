@@ -87,6 +87,141 @@ I componenti principali del dominio di elemento domanda sono:
         - `dict` con i dati dell'elemento domanda
 
 ===== Risultato Test
+Il componente principale del dominio di risultato test è:
+
+====== RisultatoSingolaDomanda
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco del risultato della domanda
+    - `domanda`: string che rappresenta la domanda
+    - `risposta`: stringa che rappresenta la risposta attesa
+    - `rispostaLLM`: stringa che rappresenta la risposta fornita dall'LLM
+    - `score`: float che rappresenta il punteggio di similitudine tra la risposta attesa e la risposta fornita dall'LLM
+    - `metriche`: dizionario contenente le metriche di valutazione della risposta
+
+  - *Metodi*
+    - `getId(): int`
+      - *Descrizione*:
+        - restituisce l'identificativo univoco del risultato della domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - intero che rappresenta l'identificativo univoco del risultato della domanda
+    - `getDomanda(): str`
+      - *Descrizione*:
+        - restituisce una stringa contenente la domanda posta all'LLM
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta la domanda
+    - `getRisposta(): str`
+      - *Descrizione*:
+        - restituisce una stringa contenente la risposta attesa
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta la risposta
+    - `getRispostaLLM(): str`
+      - *Descrizione*:
+        - restituisce una stringa contenente la risposta fornita dall'LLM
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta la risposta fornita dall'LLM
+    - `getScore(): float`
+      - *Descrizione*:
+        - restituisce un float contenente il punteggio di similitudine tra la risposta attesa e la risposta fornita dall'LLM
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `float` che rappresenta il punteggio di similitudine tra la risposta attesa e la risposta fornita dall'LLM
+    - `getMetriche(): dict`
+      - *Descrizione*:
+        - restituisce un dizionario contenente le metriche di valutazione della risposta con il relativo punteggio
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` contente le metriche di valutazione della risposta e il relativo punteggio
+    - `serialize(): dict`
+      - *Descrizione*:
+        - restituisce un `dict` con tutti i dati del risultato della domanda
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - `dict` con i dati del risultato della domanda
+    - `serializeForList(): dict`
+      - *Descrizione*:
+        - restituisce un `dict` con i dati principali del risultato della domanda, senza le metriche
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - `dict` con i dati del risultato della domanda, senza le metriche
+
+====== RisultatoTest
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco del risultato del test
+    - `score`: float che rappresenta il punteggio medio del test
+    - `LLM`: stringa che rappresenta il nome dell'LLM utilizzato
+    - `dataEsecuzione`: oggetto di tipo `datetime` che rappresenta la data di esecuzione del test
+    - `nomeSet`: stringa che rappresenta il nome del set di domande utilizzato
+    - `risulatiDomande`: set di oggetti di tipo `RisultatoSingolaDomanda` che rappresentano i risultati delle domande del test
+
+  - *Metodi*
+    - `getId(): int`
+      - *Descrizione*:
+        - restituisce l'identificativo univoco del risultato del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - intero che rappresenta l'identificativo univoco del risultato del test
+    - `getScore(): float`
+      - *Descrizione*:
+        - restituisce il punteggio medio del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `float` che rappresenta il punteggio medio del test
+    - `getLLM(): str`
+      - *Descrizione*:
+        - restituisce il nome dell'LLM testato
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta il nome dell'LLM testato
+    - `getDataEsecuzione(): datetime`
+      - *Descrizione*:
+        - restituisce la data di esecuzione del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `datetime` che rappresenta la data di esecuzione del test
+    - `getNomeSet(): str`
+      - *Descrizione*:
+        - restituisce il nome del set di domande utilizzato
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta il nome del set di domande utilizzato
+    - `getRisultatiDomande(): set[RisultatoSingolaDomanda]`
+      - *Descrizione*:
+        - restituisce un set di oggetti di tipo `RisultatoSingolaDomanda` che rappresentano i risultati delle domande del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `set[RisultatoSingolaDomanda]` che rappresenta i risultati delle domande del test
+    - `serialize(): dict`
+      - *Descrizione*:
+        - restituisce un `dict` con tutti i dati del risultato del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - `dict` con i tutti i dati del risultato del test
+    - `serializeForList(): dict`
+      - *Descrizione*:
+        - restituisce un `dict` con i dati principali del risultato del test, senza i risultati delle domande
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - `dict` con i dati principali del risultato del test, senza i risultati delle domande
 
 #set heading(numbering: "1.1")
 ==== Application
@@ -295,7 +430,228 @@ Le dipendenze dei servizi di elemento domanda sono:
         - booleano che rappresenta il risultato dell'operazione di aggiornamento nel database
 
 ===== Esecuzione Test
+Le dipendenze dei servizi di esecuzione test sono:
+  - *ExecuteTestUseCase*: rappresentano i casi d'uso per eseguire il test
+  - *GetTestStatusUseCase*: rappresenta il caso d'uso per ottenere lo stato del test
+  - *LLMPort*: rappresenta la porta per comunicare con l'LLM
+  - *SaveRisultatoTestPort*: rappresenta la porta per salvare il risultato del test
+  - *GetAllElementiDomandaPort*: rappresenta la porta per ottenere tutti gli elementi domanda presenti nel sistema
+  - *AlgoritmoValutazioneRisposte*: rappresenta la classe responsabile della valutazione delle risposte
+  - *TestStatusTracker*: rappresenta la classe responsabile del tracciamento dello stato del test
+  - *RisultatoTest*: rappresenta il dominio di risultato test
+  - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato per singola domanda
+
+====== ExecuteService
+// TODO: aggiungere immagine
+
+======= ExecuteTestService
+  - *Attributi*
+    - `status_tracker`: oggetto responsabile del tracciamento dello stato del test
+    - `llm`: porta utilizzata per comunicare con l'LLM
+    - `valutatore`: oggetto responsabile della valutazione delle risposte
+    - `saveTestPort`: porta utilizzata per salvare il risultato del test
+    - `getElementiDomandaPort`: porta utilizzata per ottenere gli elementi domanda da testare
+  - *Metodi*
+    - `executeTest(): None`
+        - *Descrizione*:
+          - esegue il test a partire da tutti gli elementi domanda presenti nel sistema, utilizzando l'LLM per ottenere le risposte da confrontare. Si occupa anche di valutare le risposte ottenute e di salvare il risultato del test
+        - *Input*:
+          - nessuno
+        - *Output*:
+          - nessuno
+
+======= ExecuteTestUseCase
+  - *Metodi*
+    - `executeTest(): None`
+      - *Descrizione*:
+        - esegue il test e si occupa del salvataggio del risultato
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - nessuno
+
+======= LLMPort
+  - *Metodi*
+    - `makeQuestion(domanda: str): str`
+      - *Descrizione*:
+        - ritorna la risposta fornita dall'LLM a partire dalla domanda
+      - *Input*:
+        - `domanda`: stringa che rappresenta la domanda da porre all'LLM
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta la risposta fornita dall'LLM
+    - `getName(): str`
+      - *Descrizione*:
+        - ritorna il nome dell'LLM in uso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `str` che rappresenta il nome dell'LLM in uso
+
+======= AlgoritmoValutazioneRisposte
+  - *Metodi*
+    - `evaluate(risposta_attesa: str, risposta_llm: str): tuple[dict[str, float], float]`
+      - *Descrizione*:
+        - valuta la risposta fornita dall'LLM rispetto alla risposta attesa e ritorna le metriche di valutazione e il punteggio di similitudine
+      - *Input*:
+        - `risposta_attesa`: stringa che rappresenta la risposta attesa
+        - `risposta_llm`: stringa che rappresenta la risposta fornita dall'LLM
+      - *Output*:
+        - oggetto di tipo `tuple` contenente un dizionario con le metriche di valutazione e un float con il punteggio di similitudine
+
+======= SaveRisultatoTestPort
+  - *Metodi*
+    - `saveRisultatoTest(risultato: RisultatoTest): RisultatoTest`
+      - *Descrizione*:
+        - salva il risultato del test nel database
+      - *Input*:
+        - `risultato`: oggetto di tipo `RisultatoTest` che rappresenta il risultato del test da salvare
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena salvato nel database
+
+======= GetAllElementiDomandaPort
+  - *Metodi*
+    - `getAllElementiDomanda(): Set[ElementoDomanda]`
+      - *Descrizione*:
+        - ritorna un set di tutti gli elementi domanda presenti nel sistema
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti
+
+
+======= GetTestStatusService
+  - *Attributi*
+    - `status_tracker`: oggetto responsabile del tracciamento dello stato del test
+  - *Metodi*
+    - `getTestStatus(): dict`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+
+======= GetTestStatusUseCase
+  - *Metodi*
+    - `getTestStatus(): dict`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+
 ===== Risultato Test
+// TODO: aggiungere immagine
+Le dipendenze del servizio di risultato test sono:
+  - *GetRisultatoTestPort*: rappresenta la porta per ottenere il risultato del test
+  - *GetAllRisultatiTestPort*: rappresenta la porta per ottenere tutti i risultati del test
+  - *GetRisultatoSingolaDomandaPort*: rappresenta la porta per ottenere il risultato di una singola domanda
+  - *GetRisultatoTestUseCase*: rappresenta il caso d'uso per ottenere il risultato del test
+  - *GetAllRisultatiTestUseCase*: rappresenta il caso d'uso per ottenere tutti i risultati del test
+  - *GetRisultatoSingolaDomandaUseCase*: rappresenta il caso d'uso per ottenere il risultato di una singola domanda
+  - *RisultatoTest*: rappresenta il dominio di risultato test
+  - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato per singola domanda
+
+======= GetRisultatoTestService
+  - *Attributi*
+    - `port`: porta utilizzata per ottenere il risultato del test
+  - *Metodi*
+    - `getRisultatoTest(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna il risultato del test con l'id specificato
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato del test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
+
+======= GetRisultatoTestUseCase
+  - *Metodi*
+    - `getRisultatoTest(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna il risultato del test con l'id specificato
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato del test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
+
+======= GetRisultatoTestPort
+  - *Metodi*
+    - `getRisultatoTest(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna il risultato del test con l'id specificato
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato del test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test con l'id specificato
+
+======= GetAllRisultatiTestService
+  - *Attributi*
+    - `port`: porta utilizzata per ottenere tutti i risultati del test
+  - *Metodi*
+    - `getAllRisultatiTest(): set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
+
+======= GetAllRisultatiTestUseCase
+  - *Metodi*
+    - `getAllRisultatiTest(): set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
+
+======= GetAllRisultatiTestPort
+  - *Metodi*
+    - `getAllRisultatiTest(): set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati del test presenti nel sistema
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano tutti i risultati di test presenti nel sistema
+
+======= GetRisultatoSingolaDomandaService
+  - *Attributi*
+    - `port`: porta utilizzata per ottenere il risultato di una specifica domanda di un test
+  - *Metodi*
+    - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna il risultato di una specifica domanda di un test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato della domanda di uno specifico test
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
+
+======= GetRisultatoSingolaDomandaUseCase
+  - *Metodi*
+    - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna il risultato di una specifica domanda di un test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato della domanda di uno specifico test
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
+
+======= GetRisultatoSingolaDomandaPort
+  - *Metodi*
+    - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna il risultato di una specifica domanda di un test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato della domanda di uno specifico test
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
 #set heading(numbering: "1.1")
 ==== Input Adapters (REST Controllers)
@@ -461,7 +817,167 @@ Le dipendenze dei REST controllers di elemento domanda sono:
         - booleano che rappresenta il risultato dell'operazione di aggiornamento
 
 ===== Esecuzione Test
+Le dipendenze dei REST controllers di esecuzione test sono:
+  - *ExecuteTestUseCase*: rappresentano i casi d'usoper l'esecuzione del test implementati dai servizi
+  - *GetTestStatusUseCase*: rappresenta il caso d'uso per ottenere lo stato del test
+  - *Containers*: rappresentano le classi che gestiscono le dependency injection
+  - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
+
+====== ExecuteController
+//TODO: aggiungere immagine
+
+======= ExecuteTestController
+  - *Attributi*
+    - `useCase`: caso d'uso per eseguire il test, iniettato tramite dependency injection
+    - `status_tracker`: caso d'uso per monitorare lo stato di avanzamento del test, iniettato tramite dependency injection
+  
+  - *Metodi*
+    - `post(): Response`
+      - *Descrizione*:
+        - avvia il test a partire da tutti gli elementi domanda presenti nel sistema e ne monitora lo stato durante la sua esecuzione
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno un messaggio di corretto avvio del test
+        - messaggio di errore in caso di:
+          - errore di comunicazione con l'LLM
+          - errore interno del server
+
+======= ExecuteTestUseCase
+  - *Metodi*
+    - `executeTest(): None`
+      - *Descrizione*:
+        - esegue il test a partire da tutti gli elementi domanda presenti nel sistema, utilizzando l'LLM per ottenere le risposte da confrontare. Si occupa anche di valutare le risposte ottenute e di salvare il risultato del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - nessuno
+
+======= GetTestStatusUseCase
+  - *Metodi*
+    - `getTestStatus(): dict`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+
+====== StatusController
+//TODO: aggiungere immagine
+
+======= GetTestStatusController
+  - *Attributi*
+    - `useCase`: caso d'uso per ottenere lo stato del test, iniettato tramite dependency injection
+
+  - *Metodi*
+    - `get(): Response`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno lo stato del test in corso
+        - messaggio di errore in caso di:
+          - errore interno del server
+
+======= GetTestStatusUseCase
+  - *Metodi*
+    - `getTestStatus(): dict`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+
 ===== Risultato Test
+Le dipendenze dei REST controllers di risultato test sono:
+  - *GetRisultatoTestUseCase*: rappresenta il caso d'uso per ottenere il risultato del test
+  - *GetAllRisultatiTestUseCase*: rappresenta il caso d'uso per ottenere tutti i risultati del test
+  - *GetRisultatoSingolaDomandaUseCase*: rappresenta il caso d'uso per ottenere il risultato di una singola domanda
+  - *Containers*: rappresentano le classi che gestiscono le dependency injection
+  - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
+
+====== Get Controllers
+//TODO: aggiungere immagine
+
+======= GetRisultatoTestController
+  - *Attributi*
+    - `useCase`: caso d'uso per ottenere il risultato del test, iniettato tramite dependency injection
+
+  - *Metodi*
+    - `get(id: int): Response`
+      - *Descrizione*:
+        - ritorna una risposta contenente il risultato del test a partire dal suo id
+      - *Input*:
+        - `id` tramite url param
+      - *Output*:
+        - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il risultato del test appena ottenuto
+        - messaggio di errore in caso di:
+          - problemi di validazione dell'id
+          - errore interno del server
+
+======= GetRisultatoTestUseCase
+  - *Metodi*
+    - `getRisultatoTest(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna il risultato del test con l'id specificato
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato del test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
+
+======= GetAllRisultatiTestController
+  - *Attributi*
+    - `useCase`: caso d'uso per ottenere tutti i risultati del test, iniettato tramite dependency injection
+
+  - *Metodi*
+    - `get(): Response`
+      - *Descrizione*:
+        - ritorna una risposta contenente un set di tutti i risultati del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il set di risultati del test appena ottenuti
+        - messaggio di errore in caso di:
+          - errore interno del server
+
+======= GetAllRisultatiTestUseCase
+  - *Metodi*
+    - `getAllRisultatiTest(): set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati del test
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
+
+======= GetRisultatoSingolaDomandaController
+  - *Attributi*
+    - `useCase`: caso d'uso per ottenere il risultato di una singola domanda, iniettato tramite dependency injection
+
+  - *Metodi*
+    - `get(id: int): Response`
+      - *Descrizione*:
+        - ritorna una risposta contenente il risultato di una singola domanda a partire dal suo id
+      - *Input*:
+        - `id` tramite url param
+      - *Output*:
+        - oggetto di tipo `Response` che rappresenta la risposta HTTP con all'interno il risultato della singola domanda appena ottenuto
+        - messaggio di errore in caso di:
+          - problemi di validazione dell'id
+          - errore interno del server
+
+======= GetRisultatoSingolaDomandaUseCase
+  - *Metodi*
+    - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna il risultato di una specifica domanda di un test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato della domanda di uno specifico test
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
 #set heading(numbering: "1.1")
 ==== Output Adapters
