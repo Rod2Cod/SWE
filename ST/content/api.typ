@@ -34,15 +34,15 @@
 #table-json-api(json("tabelle.json").at("api").at("elemento_domanda").at("update"), 4)
 == Esecuzione Test
 === POST Execute Test
-*Descrizione:* Questo endpoint consente di eseguire un test su tutte le domande presenti nel sistema.
+*Descrizione:* Questo endpoint consente di avviare l'esecuzione di un test sulle domande presenti nel sistema.
 - *endpoint:* `/executeTest`
 - *Metodo:* `POST`
 #table-json-api(json("tabelle.json").at("api").at("execute_test"), 4)
 === GET Status Test
-*Descrizione:* Questo endpoint consente di ricavare lo stato di esecuzione del test
+*Descrizione:* Questo endpoint consente di ricavare lo stato del test attualmente in esecuzione.
 - *endpoint:* `/executeTest/status`
 - *Metodo:* `GET`
-#table-json-api(json("tabelle.json").at("api").at("execute_test"), 4)
+#table-json-api(json("tabelle.json").at("api").at("status"), 4)
 == Risultato Test
 === GET Get Risultato Test
 *Descrizione:* Questo endpoint consente di ottenere il risultato del test eseguito, dato il suo id.

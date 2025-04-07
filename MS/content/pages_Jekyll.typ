@@ -8,7 +8,7 @@
 === Aggiunta cartella documenti 
   + aprire il file "index.md"
   + andare ad aggiungere nel punto desiderato all'interno del file una sezione come quella in foto
-    #image("index.md-verbali interni.png")
+    #image("pictures/index.md-verbali interni.png")
   + andare a modificare la sezione subito successiva a "contains" (in questo caso rappresentata da "Verbali/Interni") con le cartelle nella quale si trovano i file da mostrare
   + andare a modificare il codice Liquid secondo le esigenze \
     Esempio:

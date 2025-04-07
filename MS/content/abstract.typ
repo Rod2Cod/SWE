@@ -1,1 +1,1 @@
-Il documento contiene una *guida* volta ad aiutare i membri del gruppo nel primo approccio alle *tecnologie utilizzate* nel progetto e non appartenenti alle conoscenze di base di tutti i membri.
+Il documento ha lo scopo di fornire una *guida* volta ad aiutare i membri del gruppo e gli sviluppatori che dovranno mantenere ed estendere il prodotto. Di seguito sono riportati gli strumenti e le tecnologie utilizzate nel progetto, accompagnati da loro descrizione e metodologie di utilizzo.
