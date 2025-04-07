@@ -148,8 +148,10 @@ Le loro operazioni riguarderanno la possibilità di:
 
 Il *Mapper* sarà quindi sempre presente e si occuperà di "tradurre" le *Entity* del database in elementi del dominio quali *SetElementiDomanda* ed *Elementi Domanda*, e viceversa.
 
-#set heading(numbering: none)
+=== Database
+La struttura del database subirà perciò alcuni cambiamenti, assumento una forma del genere.
 
+#image("pictures/Artificial_QI_ER_Set.jpg")
 
 #set heading(numbering: "1.1")
 
