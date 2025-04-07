@@ -12,3 +12,4 @@ vendor/
 .env
 prova*
 Artificial_QI/
+.coverage

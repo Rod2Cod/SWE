@@ -36,8 +36,28 @@
       },
       {
         "Data": "2025-03-31",
-        "Descrizione": "Sezione API - Aggiunte API e tabelle",
+        "Descrizione": "Sezione API - Aggiunte API e relative tabelle",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-03",
+        "Descrizione": "Sezione Struttura e Tecnologie - Aggiunto Database e aggiornate tecnologie back-end",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-05",
+        "Descrizione": "Sezione Struttura - Aggiunta descrizione diagrammi delle classi Elemento Domanda",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-06",
+        "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Teconologie - Agguinte librerie e framework frontend",
+        "Autore": "Luca Calzetta"
+      },
+      {
+        "Data": "2025-04-07",
+        "Descrizione": "Sezione struttura, aggiunti risultato test e esecuzione test",
+        "Autore": "Alberto Maggion"
       }
     ]
   },
@@ -50,14 +70,14 @@
       ],
       "values": [
         {
-          "Nome":"Python",
-          "Descrizione":"Linguaggio di programmazione interpretato, ad alto livello e orientato agli oggetti.",
-          "Versione":""
+          "Nome": "Python",
+          "Descrizione": "Linguaggio di programmazione interpretato, ad alto livello e orientato agli oggetti.",
+          "Versione": "3.13.0"
         },
         {
-          "Nome":"Javascript",
-          "Descrizione":"Linguaggio di programmazione interpretato, orientato agli oggetti e basato su eventi.",
-          "Versione":""
+          "Nome": "Javascript",
+          "Descrizione": "Linguaggio di programmazione interpretato, orientato agli oggetti e basato su eventi.",
+          "Versione": ""
         }
       ]
     },
@@ -69,9 +89,19 @@
       ],
       "values": [
         {
-          "Nome":"VueJS",
-          "Descrizione":"Framework JavaScript open-source per la creazione di interfacce utente e applicazioni web.",
-          "Versione":""
+          "Nome": "VueJS",
+          "Descrizione": "Framework JavaScript open-source per la creazione di interfacce utente e applicazioni web.",
+          "Versione": "3.5.13"
+        },
+        {
+          "Nome": "Bootstrap",
+          "Descrizione": "Framework CSS per gestire la grafica all'interno del frontend",
+          "Versione": "5.3.3"
+        },
+        {
+          "Nome": "Flask",
+          "Descrizione": "Micro framework per Python, progettato per lo sviluppo di applicazioni web.",
+          "Versione": "3.1.0"
         }
       ]
     },
@@ -83,9 +113,119 @@
       ],
       "values": [
         {
-          "Nome":"",
-          "Descrizione":"",
-          "Versione":""
+          "Nome":"pytest",
+          "Descrizione":"Libreria per il testing in Python, che consente di scrivere test in modo semplice e intuitivo.",
+          "Versione":"8.3.5"
+        },
+        {
+          "Nome": "pytest-cov",
+          "Descrizione": "Plugin per pytest che fornisce report di copertura del codice. Utilizzato per i test all'interno dell'editor Visual Studio Code.",
+          "Versione": "6.0.0"
+        },
+        {
+          "Nome": "pytest-xdist",
+          "Descrizione": "Plugin per pytest che consente di eseguire test in parallelo e distribuire i test su più processi o macchine. Utilizzato per i test all'interno dell'editor Visual Studio Code.",
+          "Versione": "3.6.1"
+        },
+        {
+          "Nome": "Flask",
+          "Descrizione": "Micro framework per Python, progettato per lo sviluppo di applicazioni web.",
+          "Versione": "3.1.0"
+        },
+        {
+          "Nome": "Flask-SQLAlchemy",
+          "Descrizione": "Estensione di Flask per l'integrazione con SQLAlchemy.",
+          "Versione": ""
+        },
+        {
+          "Nome": "coverage",
+          "Descrizione": "Strumento per misurare la copertura del codice in Python. Utilizzato assieme a pytest all'interno delle Github Actions.",
+          "Versione": "7.7.0"
+        },
+        {
+          "Nome": "radon",
+          "Descrizione": "Strumento per l'analisi della complessità ciclomatica del codice Python.",
+          "Versione": "4.1.0"
+        },
+        {
+          "Nome": "xenon",
+          "Descrizione": "Strumento complementare a radon per l'analisi della complessità ciclomatica, permette al comando di fallire se sotto una certa soglia.",
+          "Versione": "0.9.3"
+        },
+        {
+          "Nome":"dependency-injector",
+          "Descrizione":"Libreria per effettuare l'\"iniezione\" delle dipendenze in Python.",
+          "Versione":"4.46.0"
+        },
+        {
+          "Nome": "psycopg2",
+          "Descrizione": "Driver PostgreSQL per Python, utilizzato per la connessione e l'interazione con il database PostgreSQL.",
+          "Versione": "2.9.10"
+        },
+        {
+          "Nome": "sacrebleu",
+          "Descrizione": "Libreria utilizzata per il calcolo delle metriche BLEU, TER e CHRF nello stumento di valutazione delle risposte.",
+          "Versione": "2.5.0"
+        },
+        {
+          "Nome": "rouge-score",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica ROGUE nello stumento di valutazione delle risposte.",
+          "Versione": "0.1.0"
+        },
+        {
+          "Nome": "bert-score",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica BERT nello stumento di valutazione delle risposte.",
+          "Versione": "0.3.10"
+        },
+        {
+          "Nome": "sentence-transformers",
+          "Descrizione": "Libreria utilizzata per il calcolo della similitudine nello stumento di valutazione delle risposte.",
+          "Versione": "4.0.0"
+        },
+        {
+          "Nome": "pandas",
+          "Descrizione": "Libreria per la manipolazione e l'analisi dei dati in Python.",
+          "Versione": "2.2.3"
+        },
+        {
+          "Nome": "joblib",
+          "Descrizione": "Librearia che facilita l'elaborazione parallela, la memorizzazione in cache dei risultati e la distribuzione delle attività in Python.",
+          "Versione": "1.3.2"
+        },
+        {
+          "Nome": "flask-Cors",
+          "Descrizione": "Estensione di Flask per gestire le richieste CORS.",
+          "Versione": "4.0.0"
+        },
+        {
+          "Nome": "axios",
+          "Descrizione": "HTTP client per chiamate API",
+          "Versione": "1.8.3"
+        },
+        {
+          "Nome": "vue-router",
+          "Descrizione": "Libreria di Vue JS per gestire le rotte in un'app Single Page Application",
+          "Versione": "4.5.0"
+        },
+        {
+          "Nome": "vite",
+          "Descrizione": "Vite è un build tool e dev server per frontend",
+          "Versione": "6.0.11"
+        },
+        {
+          "Nome": "vitest",
+          "Descrizione": "Vitest è un test runner ottimizzato per Vite",
+          "Versione": "3.0.5"
+        },
+        {
+          "Nome": "jsdom",
+          "Descrizione": "Simula il DOM nel contesto Node.js per testare componenti vue",
+          "Versione": "26.0.0"
+        },
+        {
+          "Nome": "@ionic/vue",
+          "Descrizione": "È il pacchetto ufficiale di Ionic per Vue 3. Utilizzato per inserire delle icone nel frontend.",
+          "Versione": "8.5.0"
         }
       ]
     },
@@ -97,9 +237,24 @@
       ],
       "values": [
         {
-          "Nome":"Visual Studio Code",
-          "Descrizione":"Editor di codice gratuito e open-source sviluppato da Microsoft. Supporta vari linguaggi di programmazione, estensioni personalizzabili e altri strumenti per lo sviluppo.",
-          "Versione":""
+          "Nome": "Visual Studio Code",
+          "Descrizione": "Editor di codice gratuito e open-source sviluppato da Microsoft. Supporta vari linguaggi di programmazione, estensioni personalizzabili e altri strumenti per lo sviluppo.",
+          "Versione": "1.98.2"
+        },
+        {
+          "Nome": "Docker",
+          "Descrizione": "Piattaforma per la creazione, distribuzione e gestione di applicazioni in container.",
+          "Versione": "24.0.1"
+        },
+        {
+          "Nome": "PostgreSQL",
+          "Descrizione": "Database relazionale open source basato su SQL. Utilizzato all'interno di un docker container.",
+          "Versione": "16.0"
+        },
+        {
+          "Nome": "pgAdmin",
+          "Descrizione": "Interfaccia grafica per la gestione di database PostgreSQL. Utilizzato all'interno di un docker container.",
+          "Versione": "9.1"
         }
       ]
     }
@@ -252,8 +407,8 @@
         {
           "Esito": "Positivo",
           "Codice HTTP": "200",
-          "Body": "JSON",
-          "Descrizione": "Il test viene eseguito e ritornato con successo."
+          "Body": "`{\"message\": \"Test avviato con successo\"}`",
+          "Descrizione": "L'esecuzione del test viene avviata con successo."
         },
         {
           "Esito": "Negativo",
@@ -261,6 +416,28 @@
           "Body": "`{\"message\": \"...\"}`",
           "Descrizione": "Si è verificato un errore interno del server."
         }
+      ]
+    },
+    "status": {
+      "keys": [
+        "Esito",
+        "Codice HTTP",
+        "Body",
+        "Descrizione"
+      ],
+      "values": [
+        {
+          "Esito": "Positivo",
+          "Codice HTTP": "200",
+          "Body": "JSON",
+          "Descrizione": "Lo status del test in corso viene restituito con successo."
+        },
+        {
+          "Esito": "Negativo",
+          "Codice HTTP": "500",
+          "Body": "`{\"message\": \"...\"}`",
+          "Descrizione": "Si è verificato un errore interno del server."
+        }        
       ]
     },
     "risultato_test": {

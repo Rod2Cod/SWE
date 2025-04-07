@@ -68,6 +68,11 @@
         "Data": "2025-02-24",
         "Descrizione": "",
         "Validatore": "Annalisa Egidi"
+      },
+      {
+        "Data": "2025-04-07",
+        "Descrizione": "Sezione Backend-Flask - Aggiunte possibili estensioni",
+        "Autore": "Filippo Bellon"
       }
     ]
   }

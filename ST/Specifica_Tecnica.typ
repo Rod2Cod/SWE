@@ -32,11 +32,14 @@
   numbering: "1",
   header: [Gruppo 2 - Rod2Cod #h(1fr) #title],
 )
-#set heading(numbering: "1.1")
+#set heading(
+  numbering: "1.1"
+)
+
 #show outline.entry.where(
   level: 1
 ): it => {
-  v(1em, weak: true)
+  v(1.5em, weak: true)
   strong(it)
 }
 
@@ -53,7 +56,10 @@
 ]
 
 //TABLE OF CONTENTS
-#outline(indent: 1em)
+#outline(
+  indent: 1em,
+  depth: 5
+)
 
 #pagebreak()
 
