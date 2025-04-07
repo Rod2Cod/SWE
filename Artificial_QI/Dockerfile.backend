@@ -22,9 +22,5 @@ COPY . .
 # Expose port for the backend service
 EXPOSE 5000
 
-# Set environment variables
-ENV PYTHONPATH=/app
-ENV DATABASE_URL=postgresql://admin:admin@postgres:5432/Artificial_QI
-
 # Command to run the application
 CMD ["python", "-m", "application"]

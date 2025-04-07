@@ -1,11 +1,22 @@
+# No test
 .pytest_cache/
+test/**/__pycache__/
+test/
+# No db
 db_data/
 pgadmin_data/
+# No frontend
 frontend/public/
 src/**/__pycache__/
-test/**/__pycache__/
+# No file runtime python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+# No altri file
 *.DS_Store
+# No file progettazione starUML
+*.mdj
+# No file configurazione Github Actions
+*.toml
+*.cfg
