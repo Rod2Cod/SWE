@@ -53,6 +53,11 @@
         "Data": "2025-04-06",
         "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Teconologie - Agguinte librerie e framework frontend",
         "Autore": "Luca Calzetta"
+      },
+      {
+        "Data": "2025-04-07",
+        "Descrizione": "Sezione struttura, aggiunti risultato test e esecuzione test",
+        "Autore": "Alberto Maggion"
       }
     ]
   },
