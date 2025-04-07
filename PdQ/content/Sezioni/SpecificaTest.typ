@@ -20,9 +20,18 @@ Dove:
   - *S*: sistema;
   - *A*: accettazione;
   - *R*: non regressione.
+== Test di Unità
+Servono a verificare il corretto funzionamento di una singola parte autonoma del progetto.
+#table-json-rev(json(tabelle).at("Test").at("TestUnita"),4)
+
+== Test di Integrazione
+Servono a verificare che le singole componenti interagiscano correttamente tra loro.
+#table-json-rev(json(tabelle).at("Test").at("TestIntegrazione"),4)
 
 == Test di Sistema
-#table-json-rev(json(tabelle).at("Test").at("TestSistema"),4)
+Servono a verificare che il comportamento del sistema sia conforme a quanto stabilito con il proponente.
+#table-json-rev(json(tabelle).at("Test").at("TestSistema"),5)
 
 == Test di Accettazione
-#table-json-rev(json(tabelle).at("Test").at("TestAccettazione"),3)
+Servono a verificare, insieme al committente, che il prodotto finale soddisfi tutti i requisiti.
+#table-json-rev(json(tabelle).at("Test").at("TestAccettazione"),4)
