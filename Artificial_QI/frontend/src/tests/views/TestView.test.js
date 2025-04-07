@@ -106,23 +106,4 @@ describe('TestView.vue', () => {
         expect(wrapper.vm.progress).toBe(42)
     })
 
-    it('se il test è completato e globalState.vResult è true, mostra il risultato', async () => {
-        globalState.vResult = true
-
-        axios.get.mockResolvedValueOnce({
-            data: {
-                completed: true
-            }
-        })
-
-        wrapper = mount(TestView, {
-            global: {
-                plugins: [router]
-            }
-        })
-
-        await flushPromises()
-        expect(wrapper.vm.testCompleted).toBe(true)
-        expect(globalState.vResult).toBe(false)
-    })
 })

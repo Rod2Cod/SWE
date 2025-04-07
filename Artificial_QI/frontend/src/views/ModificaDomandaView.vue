@@ -77,7 +77,7 @@ export default {
 
       try {
         await axios.put(
-          `http://localhost:5000/domande/${this.id}`,
+          `/domande/${this.id}`,
           this.payload
         );
         this.$router.push("/questions");
