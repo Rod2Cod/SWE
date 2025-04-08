@@ -11,6 +11,11 @@ layout: index
 {% assign data_pb = "2025-04-04" %}
 
 ## Product Baseline
+{% for pdf in site.static_files %}
+    {% if pdf.path contains "Documentazione/Candidatura_PB" and pdf.extname == ".pdf" %}
+- [Lettera di Presentazione PB]({{ pdf.path | relative_url }}){:target="_blank"}
+    {% endif %}
+{% endfor %}
 
 ### Esterni
 <!--  così vado a prendermi i file pdf in PdQ, PdP, AdR e Glossario -->
