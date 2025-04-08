@@ -1421,6 +1421,18 @@ Gli *Adapters* sono invece le classe che andranno ad implementare in maniera con
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
 
+
+Per quanto riguarda il frontend dell'applicativo, è stata adottata un'architettura di tipo *MVVM* (Model-View-ViewModel), implementata in modo implicito dal framework *Vue.js*. Questa struttura consente un approccio dichiarativo e reattivo, favorendo una netta separazione tra la logica di business e l'interfaccia utente. 
+Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
+- Model: rappresenta i dati dell'applicazione. In Vue.js, ciò corrisponde allo stato locale dei componenti, eventualmente esteso attraverso strumenti come Vuex o Pinia per la gestione dello stato globale.
+- View: è l'interfaccia grafica dell'applicazione, costituita dai template HTML. Grazie al data binding reattivo offerto da Vue.js, la vista si aggiorna automaticamente al variare dei dati sottostanti.
+
+- ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonchè il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
+
+Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), sfrutta una struttura component-based che consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una composizione scalabile dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
+
+
+
 == Design Patterns Utilizzati
 === Singleton
 Il pattern *Singleton* viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Ciò è utile in casi in cui sia hanno classi diverse che utilizzano un'istanza di un'altra classe in maniera condivisa. Questo pattern è stato utilizzato per gestire la creazione di un'unica istanza di connessione al database.
