@@ -19,7 +19,7 @@ layout: index
 
 ### Esterni
 <!--  così vado a prendermi i file pdf in PdQ, PdP, AdR e Glossario -->
-{% assign documentiEsterni = "PdQ:Piano di Qualifica, PdP:Piano di Progetto, AdR:Analisi dei Requisiti, Glossario:Glossario, MS:Manuale Sviluppatore" | split: ", " %}
+{% assign documentiEsterni = "PdQ:Piano di Qualifica, PdP:Piano di Progetto, AdR:Analisi dei Requisiti, Glossario:Glossario, MS:Manuale Sviluppatore, MU:Manuale Utente, ST:Specifica Tecnica" | split: ", " %}
 {% for pdf in site.static_files %}
     {% for documento in documentiEsterni %}
         {% assign nome = documento | split: ":" %}
