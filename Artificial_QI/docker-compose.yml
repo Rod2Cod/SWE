@@ -35,7 +35,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
     networks:
       - shared_network
 
@@ -51,10 +51,16 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./pgadmin_data:/var/lib/pgadmin
+      - pgadmin_data:/var/lib/pgadmin
     networks:
       - shared_network
 
 networks:
   shared_network:
     driver: bridge
+
+volumes:
+  db_data:
+    driver: local
+  pgadmin_data:
+    driver: local
