@@ -164,7 +164,6 @@ class TestGetRisultatoSingolaDomandaController:
             with pytest.raises(ValueError):
                 _ = client.get(url_for('risultatoTest_blueprint.get_risultato_singola_domanda_test_by_id', id="invalid"))
 
-
     def test_get_risultato_singola_domanda_by_id_not_found(self,client,app):
         mock_use_case = mock.Mock(spec=GetRisultatoSingolaDomandaUseCase)
         app.container.risultatoTestContainer.GetRisultatoSingolaDomandaService.override(mock_use_case)
