@@ -246,6 +246,11 @@
           "Nome": "configparser",
           "Descrizione": "Libreria per la gestione dei file di configurazione di tipo INI in Python.",
           "Versione": "7.2.0"
+        },
+        {
+          "Nome": "waitress",
+          "Descrizione": "Server WSGI per l'esecuzione di applicazioni Flask. Utilizzato per la fase di deployment.",
+          "Versione": "3.0.2"
         }
       ]
     },
