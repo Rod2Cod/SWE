@@ -176,8 +176,11 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python
 
 # POSTGRESQL DOCKER
-db_data/
-pgadmin_data/
+# escludo .gitkeep per mantenere la cartella
+Artificial_QI/db/db_data/*
+!Artificial_QI/db/db_data/.gitkeep
+Artificial_QI/db/pgadmin_data/*
+!Artificial_QI/db/pgadmin_data/.gitkeep
 
 # IDE
 .vscode/
