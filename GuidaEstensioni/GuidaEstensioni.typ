@@ -1,4 +1,4 @@
-#import "meta.typ": title, abstract, tabelle, keywords, data, introduzione, tecnologie, struttura
+#import "meta.typ": title, abstract, tabelle, keywords, data, introduzione,  struttura 
 
 // Funzioni da includere
 #import "../functions.typ": table-json, inDict, getLastDocVersion
@@ -59,9 +59,6 @@
 
 = Introduzione
   #introduzione
-
-= Tecnologie
-  #tecnologie
 
 = Struttura
   #struttura
