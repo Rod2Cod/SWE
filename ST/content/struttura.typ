@@ -4,7 +4,9 @@
 === Backend
 ==== Domain Model
 ===== Elemento Domanda
-// TODO: aggiungere immagine
+  #align(center)[
+      #image("../pictures/uml/ElementoDomanda.png", height: 18%)
+    ]
 
 I componenti principali del dominio di elemento domanda sono:
 
@@ -87,6 +89,9 @@ I componenti principali del dominio di elemento domanda sono:
         - `dict` con i dati dell'elemento domanda
 
 ===== Risultato Test
+#align(center)[
+      #image("../pictures/uml/RisultatoTest.png", height: 20%)
+    ]
 Il componente principale del dominio di risultato test è:
 
 ====== RisultatoSingolaDomanda
@@ -231,7 +236,9 @@ Le dipendenze dei servizi di elemento domanda sono:
   - *ElementiDomandaPorts*: rappresentano le porte utilizzate dai servizi
 
 ====== AddService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/AddService.png", height: 5%)
+    ]
 
 ======= AddElementoDomandaService
   - *Attributi*
@@ -271,7 +278,9 @@ Le dipendenze dei servizi di elemento domanda sono:
         - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena salvato nel database
 
 ====== GetService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/GetService.png", height: 6%)
+    ]
 
 ======= GetElementoDomandaService
   - *Attributi*
@@ -309,7 +318,9 @@ Le dipendenze dei servizi di elemento domanda sono:
         - oggetto di tipo `ElementoDomanda` che rappresenta l'elemento domanda appena ottenuto dal database
 
 ====== GetAllService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/GetAllService.png", height: 7%)
+    ]
 
 ======= GetAllElementiDomandaService
   - *Attributi*
@@ -345,7 +356,9 @@ Le dipendenze dei servizi di elemento domanda sono:
         - set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appena ottenuti dal database
 
 ====== DeleteService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/DeleteService.png", height: 7%)
+    ]
 
 ======= DeleteElementiDomandaService
   - *Attributi*
@@ -383,7 +396,9 @@ Le dipendenze dei servizi di elemento domanda sono:
         - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
 
 ====== UpdateService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/UpdateService.png", height: 5.5%)
+    ]
 
 ======= UpdateElementoDomandaService
   - *Attributi*
@@ -439,7 +454,9 @@ Le dipendenze dei servizi di esecuzione test sono:
   - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato per singola domanda
 
 ====== ExecuteService
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/ExecuteService.png", height: 23%)
+    ]
 
 ======= ExecuteTestService
   - *Attributi*
@@ -539,7 +556,6 @@ Le dipendenze dei servizi di esecuzione test sono:
         - oggetto di tipo `dict` che rappresenta lo stato del test in corso
 
 ===== Risultato Test
-// TODO: aggiungere immagine
 Le dipendenze del servizio di risultato test sono:
   - *GetRisultatoTestPort*: rappresenta la porta per ottenere il risultato del test
   - *GetAllRisultatiTestPort*: rappresenta la porta per ottenere tutti i risultati del test
@@ -549,8 +565,12 @@ Le dipendenze del servizio di risultato test sono:
   - *GetRisultatoSingolaDomandaUseCase*: rappresenta il caso d'uso per ottenere il risultato di una singola domanda
   - *RisultatoTest*: rappresenta il dominio di risultato test
   - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato per singola domanda
+====== GetRisultatoTest
+#align(center)[
+      #image("../pictures/uml/GetRisultatoTest.png", height: 8%)
+    ]
+======= GetRisultatoTestService
 
-====== GetRisultatoTestService
   - *Attributi*
     - `port`: porta utilizzata per ottenere il risultato del test
   - *Metodi*
@@ -564,7 +584,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Eccezioni*:
         - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
 
-====== GetRisultatoTestUseCase
+======= GetRisultatoTestUseCase
   - *Metodi*
     - `getRisultatoTest(id: int): RisultatoTest`
       - *Descrizione*:
@@ -574,7 +594,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
 
-====== GetRisultatoTestPort
+======= GetRisultatoTestPort
   - *Metodi*
     - `getRisultatoTest(id: int): RisultatoTest`
       - *Descrizione*:
@@ -583,8 +603,11 @@ Le dipendenze del servizio di risultato test sono:
         - `id`: intero che rappresenta l'identificativo univoco del risultato del test
       - *Output*:
         - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test con l'id specificato
-
-====== GetAllRisultatiTestService
+====== GetAllRisultatiTest
+#align(center)[
+      #image("../pictures/uml/GetAllRisultatiTest.png", height: 8%)
+    ]
+======= GetAllRisultatiTestService
   - *Attributi*
     - `port`: porta utilizzata per ottenere tutti i risultati del test
   - *Metodi*
@@ -596,7 +619,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
 
-====== GetAllRisultatiTestUseCase
+======= GetAllRisultatiTestUseCase
   - *Metodi*
     - `getAllRisultatiTest(): set[RisultatoTest]`
       - *Descrizione*:
@@ -606,7 +629,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
 
-====== GetAllRisultatiTestPort
+======= GetAllRisultatiTestPort
   - *Metodi*
     - `getAllRisultatiTest(): set[RisultatoTest]`
       - *Descrizione*:
@@ -615,8 +638,11 @@ Le dipendenze del servizio di risultato test sono:
         - nessuno
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano tutti i risultati di test presenti nel sistema
-
-====== GetRisultatoSingolaDomandaService
+====== GetRisultatoSingolaDomanda
+#align(center)[
+      #image("../pictures/uml/GetRisultatoSingolaDomanda.png", height: 4.8%)
+    ]
+======= GetRisultatoSingolaDomandaService
   - *Attributi*
     - `port`: porta utilizzata per ottenere il risultato di una specifica domanda di un test
   - *Metodi*
@@ -630,7 +656,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Eccezioni*:
         - `ValueError`: eccezione sollevata nel caso in cui ci siano problemi di validazione dell'id
 
-====== GetRisultatoSingolaDomandaUseCase
+======= GetRisultatoSingolaDomandaUseCase
   - *Metodi*
     - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
       - *Descrizione*:
@@ -640,7 +666,7 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
-====== GetRisultatoSingolaDomandaPort
+======= GetRisultatoSingolaDomandaPort
   - *Metodi*
     - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
       - *Descrizione*:
@@ -660,7 +686,9 @@ Le dipendenze dei REST controllers di elemento domanda sono:
   - *BadRequest* e *UnsupportedMediaType*: rappresentano alcune eccezioni catturate
 
 ====== AddController
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/AddController.png", height: 7%)
+    ]
 
 ======= AddElementoDomandaController
     - *Attributi*
@@ -691,7 +719,9 @@ Le dipendenze dei REST controllers di elemento domanda sono:
           - oggetto di tipo `ElementoDomanda`
 
 ====== GetController
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/GetController.png", height:8%)
+    ]
 
 ======= GetElementoDomandaController
     - *Attributi*
@@ -720,7 +750,10 @@ Le dipendenze dei REST controllers di elemento domanda sono:
         - oggetto di tipo `ElementoDomanda`
 
 ====== GetAllController
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/GetAllController.png", height: 9%)
+    ]
+
 
 ======= GetAllElementiDomandaController
     - *Attributi*
@@ -748,7 +781,9 @@ Le dipendenze dei REST controllers di elemento domanda sono:
         - set di oggetti di tipo `ElementoDomanda`
 
 ====== DeleteController
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/DeleteController.png", height: 9%)
+    ]
 
 ======= DeleteElementiDomandaController
     - *Attributi*
@@ -778,7 +813,9 @@ Le dipendenze dei REST controllers di elemento domanda sono:
         - booleano che rappresenta il risultato dell'operazione di eliminazione
 
 ====== UpdateController
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/UpdateController.png", height: 7%)
+    ]
 
 ======= UpdateElementoDomandaController
     - *Attributi*
@@ -818,7 +855,9 @@ Le dipendenze dei REST controllers di esecuzione test sono:
   - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
 
 ====== ExecuteController
-//TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/ExecuteController.png", height: 9%)
+    ]
 
 ======= ExecuteTestController
   - *Attributi*
@@ -858,7 +897,9 @@ Le dipendenze dei REST controllers di esecuzione test sono:
         - oggetto di tipo `dict` che rappresenta lo stato del test in corso
 
 ====== StatusController
-//TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/StatusController.png", height: 9%)
+    ]
 
 ======= GetTestStatusController
   - *Attributi*
@@ -894,9 +935,12 @@ Le dipendenze dei REST controllers di risultato test sono:
   - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
 
 ====== Get Controllers
-//TODO: aggiungere immagine
 
+#align(center)[
+      #image("../pictures/uml/GetRisultatoTestController.png", height: 9%)
+    ]
 ======= GetRisultatoTestController
+
   - *Attributi*
     - `useCase`: caso d'uso per ottenere il risultato del test, iniettato tramite dependency injection
 
@@ -922,6 +966,10 @@ Le dipendenze dei REST controllers di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoTest` che rappresenta il risultato del test appena ottenuto
 
+====== GetAllRisultatoTest
+#align(center)[
+      #image("../pictures/uml/GetRisultatoTestController.png", height: 9%)
+    ]
 ======= GetAllRisultatiTestController
   - *Attributi*
     - `useCase`: caso d'uso per ottenere tutti i risultati del test, iniettato tramite dependency injection
@@ -946,7 +994,10 @@ Le dipendenze dei REST controllers di risultato test sono:
         - nessuno
       - *Output*:
         - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati del test appena ottenuti
-
+====== GetRisultatoSingolaDomanda
+#align(center)[
+      #image("../pictures/uml/GetRisultatoSingolaDomandaController.png", height: 7%)
+    ]
 ======= GetRisultatoSingolaDomandaController
   - *Attributi*
     - `useCase`: caso d'uso per ottenere il risultato di una singola domanda, iniettato tramite dependency injection
@@ -975,6 +1026,9 @@ Le dipendenze dei REST controllers di risultato test sono:
 
 ==== Output Adapters
 ===== LLM
+#align(center)[
+      #image("../pictures/uml/LLM.png", height: 9%)
+    ]
 Le dipendenze dell'Adapters di LLM sono:
   - *LLMPort*: rappresenta la porta implementata dall'Adapter stesso
 
@@ -1028,7 +1082,9 @@ Le dipendenze della sezione persistence di elemento domanda sono:
   - *SQLAlchemyError* e *NoResultFound*: rappresentano alcune eccezioni lanciate da SQLAlchemy e catturate dall'Adapter
   - *db*: rappresenta l'istanza del database utilizzato dalle entità del database e dalla repository per comunicare con il database stesso
 
-// TODO: aggiungere immagine
+#align(center)[
+      #image("../pictures/uml/ElementoDomandaPersistence.png", height: 23%)
+    ]
 
 ======= ElementoDomandaPersistenceAdapter
   - *Attributi*

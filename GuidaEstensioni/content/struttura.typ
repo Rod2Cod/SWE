@@ -1,5 +1,40 @@
 == Diagrammi delle classi
-
+#align(center)[
+      #image("uml/AddSetElementiDomanda.png", height: 6%)
+    ]
+#align(center)[
+      #image("uml/AddTest.png", height: 7%)
+    ]
+#align(center)[
+      #image("uml/DeleteSetElementiDomanda.png", height: 7%)
+    ]
+#align(center)[
+      #image("uml/EditNomeSetElementiDomanda.png", height: 6%)
+    ]
+#align(center)[
+      #image("uml/ExecuteTestOnSet.png", height: 23%)
+    ]
+#align(center)[
+      #image("uml/FileTestUploadController.png", height: 10%)
+    ]
+#align(center)[
+      #image("uml/GetAllSetElementiDomanda.png", height: 6%)
+    ]
+#align(center)[
+      #image("uml/RisultatoTestDTO.png", height: 13%)
+    ]
+#align(center)[
+      #image("uml/UpdateElementiDomandaSet.png", height: 5.5%)
+    ]
+#align(center)[
+      #image("uml/ViewAggiungiSet.png", height: 10%)
+    ]
+#align(center)[
+      #image("uml/ViewModificaSet.png", height: 10%)
+    ]
+#align(center)[
+      #image("uml/ViewSet.png", height: 10%)
+    ]
 == Architettura
 === Architettura di Deployment
 L'architettura di deployment utilizzata dall'applicativo sia lato client che lato server è di tipo *monolitico*. Questo tipo di architettura porta diversi vantaggi:
