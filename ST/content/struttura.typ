@@ -1,4 +1,4 @@
-#import "../../functions.typ": table-json-rev
+#import "../../functions.typ": table-json-ST
 
 == Diagrammi delle classi
 === Backend
@@ -676,6 +676,122 @@ Le dipendenze del servizio di risultato test sono:
       - *Output*:
         - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato della domanda appena ottenuto
 
+===== Evaluation
+Le dipendenze dei servizi di valutazione sono:
+  - *AlgoritmoValutazioneRisposte*: rappresenta l'algoritmo di valutazione delle risposte
+  - *TestStatusTracker*: rappresenta il tracciamento dello stato del test
+
+====== AlgoritmoValutazioneRisposteImpl
+  - *Attributi*
+    - `scorer`: classe che si occupa di calcolcare i punteggi parziali di valutazione
+    - `model`: classe che si occupa di calcolare i punteggi di similitudine a partire dai punteggi parziali
+  - *Metodi*
+    - `evaluate(risposta_attesa: str, risposta_llm: str): tuple[dict[str, float], float]`
+      - *Descrizione*:
+        - valuta la risposta fornita dall'LLM rispetto alla risposta attesa e ritorna le metriche di valutazione e il punteggio di similitudine
+      - *Input*:
+        - `risposta_attesa`: stringa che rappresenta la risposta attesa
+        - `risposta_llm`: stringa che rappresenta la risposta fornita dall'LLM
+      - *Output*:
+        - oggetto di tipo `tuple` contenente un dizionario con le metriche di valutazione e un float con il punteggio di similitudine
+    - `transformInput(data: dict): DataFrame`
+      - *Descrizione*:
+        - trasforma i dati di input in un formato compatibile con il modello di valutazione
+      - *Input*:
+        - `data`: dizionario contenente i dati di input
+      - *Output*:
+        - oggetto di tipo `DataFrame` contenente i dati trasformati
+
+====== Scorer
+  - *Attributi*
+    - `bertScorer`: oggetto di tipo `BertScorer` che si occupa di calcolare lo score Bert
+    - `crossEncoder`: oggetto di tipo `CrossEncoder` che si occupa di calcolare lo score CrossEncoder
+    - `rougeScorer`: oggetto di tipo `RougeScorer` che si occupa di calcolare lo score Rouge
+  - *Metodi*
+    - `lexical_score(ipotesi: str, riferimento: str): (float,float,float)`
+      - *Descrizione*:
+        - calcola i punteggi Bleu, Ter e Chrf a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - oggetto di tipo `tuple` contenente i punteggi Bleu, Ter e Chrf
+    - `ROUGE_score(ipotesi: str, riferimento: str): float`
+      - *Descrizione*:
+        - calcola il punteggio Rouge a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - valore dello score Rouge in float
+    - `BERT_score(ipotesi: str, riferimento: str): float`
+      - *Descrizione*:
+        - calcola il punteggio Bert a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - valore dello score Bert in float
+    - `score(ipotesi: str, riferimento: str): dict[str, float]`
+      - *Descrizione*:
+        - calcola i punteggi di valutazione a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - oggetto di tipo `dict` contenente i le metriche utilizzate e i relativi punteggi di valutazione
+
+====== TestStatusTrackerImpl
+  - *Attributi*
+    - `in_progress`: booleano che rappresenta se il test è in corso o meno
+    - `total_questions`: intero che rappresenta il numero totale di domande del test
+    - `questions_completed`: intero che rappresenta il numero della domanda completate
+    - `id_risultato`: intero che rappresenta l'id del risultato del test
+    - `error`: Exception che rappresenta l'eventuale eccezione sollevata durante l'esecuzione del test
+  - *Metodi*
+    - `start_test(total_questions: int): None`
+      - *Descrizione*:
+        - inizializza il tracciamento dello stato del test
+      - *Input*:
+        - `total_questions`: intero che rappresenta il numero totale di domande del test
+      - *Output*:
+        - nessuno
+    - `update_progress()`: None
+      - *Descrizione*:
+        - aggiorna lo stato del test in corso facendo avanzare il numero delle domande completate
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - nessuno
+    - `set_id_risultato(id_risultato: int): None`
+      - *Descrizione*:
+        - setta l'id del risultato del test
+      - *Input*:
+        - `id_risultato`: intero che rappresenta l'id del risultato del test
+      - *Output*:
+        - nessuno
+    - `finish_test(): None`
+      - *Descrizione*:
+        - termina il tracciamento dello stato del test impostando in_progress a False
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - nessuno
+    - `set_error(error: Exception): None`
+      - *Descrizione*:
+        - setta l'eventuale eccezione sollevata durante l'esecuzione del test
+      - *Input*:
+        - `error`: eccezione sollevata durante l'esecuzione del test
+      - *Output*:
+        - nessuno
+    - `get_status(): dict`
+      - *Descrizione*:
+        - ritorna lo stato del test in corso
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+
 ==== Input Adapters (REST Controllers)
 ===== Elemento Domanda
 Le dipendenze dei REST controllers di elemento domanda sono:
@@ -1287,9 +1403,7 @@ Le dipendenze della sezione persistence di elemento domanda sono:
 === Tracciamento requisiti
 Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
 
-I requisiti aventi sezioni indicate da una dobbia barra (*\/\/*) vengono implementati nelle sezioni del requisito soprastante. In caso di più righe consecutive aventi una doppia barra, i requisiti descritti in esse vengono implementati nelle sezione definite nell'ultima riga soprastante non avente una doppia barra.
-
-#table-json-rev(json("tabelle.json").at("tracciamento_requisiti").at("backend"), 3)
+#table-json-ST(json("tabelle.json").at("tracciamento_requisiti").at("backend"))
 
 == Database
 #figure(

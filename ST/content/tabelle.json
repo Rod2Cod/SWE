@@ -63,6 +63,11 @@
         "Data": "2025-04-07",
         "Descrizione": "Sezione Struttura - Aggiunto tracciamento requisiti su classi backend",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-08",
+        "Descrizione": "Sezione Tecnologie - Aggiornate librerie e linguaggi",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
@@ -77,12 +82,12 @@
         {
           "Nome": "Python",
           "Descrizione": "Linguaggio di programmazione interpretato, ad alto livello e orientato agli oggetti.",
-          "Versione": "3.13.0"
+          "Versione": ">=3.13.0"
         },
         {
           "Nome": "Javascript",
           "Descrizione": "Linguaggio di programmazione interpretato, orientato agli oggetti e basato su eventi.",
-          "Versione": ""
+          "Versione": "ES14"
         }
       ]
     },
@@ -231,6 +236,11 @@
           "Nome": "@ionic/vue",
           "Descrizione": "È il pacchetto ufficiale di Ionic per Vue 3. Utilizzato per inserire delle icone nel frontend.",
           "Versione": "8.5.0"
+        },
+        {
+          "Nome": "configparser",
+          "Descrizione": "Libreria per la gestione dei file di configurazione di tipo INI in Python.",
+          "Versione": "7.2.0"
         }
       ]
     },
@@ -537,152 +547,131 @@
         {
           "Codice": "RF-1.1",
           "Descrizione": "L'utente deve poter visualizzare gli elementi domanda.",
-          "Sezioni": "4.1.1.2.1.3, 4.1.1.3.1.3, 4.1.1.4.2.1"
+          "Sezioni": "4.1.1.2.1.3, \n4.1.1.3.1.3, \n4.1.1.4.2.1"
         },
         {
           "Codice": "RF-1.1.1",
           "Descrizione": "L'utente deve poter visualizzare un singolo elemento domanda.",
-          "Sezioni": "4.1.1.2.1.2, 4.1.1.3.1.2, 4.1.1.4.2.1"
+          "Sezioni": "4.1.1.2.1.2, \n4.1.1.3.1.2, \n4.1.1.4.2.1"
         },
         {
           "Codice": "RF-1.1.1.1",
-          "Descrizione": "L'utente deve poter visualizzare il testo di una domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare il testo di una domanda."
         },
         {
           "Codice": "RF-1.1.1.2",
-          "Descrizione": "L'utente deve poter visualizzare il testo della risposta attesa associata ad una domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare il testo della risposta attesa associata ad una domanda."
         },
         {
           "Codice": "RF-1.2",
           "Descrizione": "L'utente deve poter modificare una domanda.",
-          "Sezioni": "4.1.1.2.1.5, 4.1.1.3.1.5, 4.1.1.4.2.1"
+          "Sezioni": "4.1.1.2.1.5, \n4.1.1.3.1.5, \n4.1.1.4.2.1"
         },
         {
           "Codice": "RF-1.3",
-          "Descrizione": "L'utente deve poter modificare una risposta attesa.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter modificare una risposta attesa."
         },
         {
           "Codice": "RF-1.4",
           "Descrizione": "L'utente deve poter eliminare un elemento domanda.",
-          "Sezioni": "4.1.1.2.1.4, 4.1.1.3.1.4, 4.1.1.4.2.1"
+          "Sezioni": "4.1.1.2.1.4, \n4.1.1.3.1.4, \n4.1.1.4.2.1"
         },
         {
           "Codice": "RF-1.5",
           "Descrizione": "L'utente deve poter aggiungere un elemento domanda.",
-          "Sezioni": "4.1.1.2.1.1, 4.1.1.3.1.1, 4.1.1.4.2.1"
+          "Sezioni": "4.1.1.2.1.1, \n4.1.1.3.1.1, \n4.1.1.4.2.1"
         },
         {
           "Codice": "RF-1.5.1",
-          "Descrizione": "L'utente deve poter aggiungere manualmente un elemento domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter aggiungere manualmente un elemento domanda."
         },
         {
           "Codice": "RF-1.5.1.1",
-          "Descrizione": "L'utente deve poter aggiungere manualmente una domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter aggiungere manualmente una domanda."
         },
         {
           "Codice": "RF-1.5.1.2",
-          "Descrizione": "L'utente deve poter aggiungere manualmente una risposta attesa.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter aggiungere manualmente una risposta attesa."
         },
         {
           "Codice": "RF-1.12",
           "Descrizione": "L'utente deve poter eseguire un test utilizzando gli elementi domanda presenti nel sistema.",
-          "Sezioni": "4.1.1.2.2.1, 4.1.1.3.2.1"
+          "Sezioni": "4.1.1.2.2.1, \n4.1.1.3.2.1"
         },
         {
           "Codice": "RF-1.13",
           "Descrizione": "L'utente deve poter visualizzare il risultato del test.",
-          "Sezioni": "4.1.1.2.3.1, 4.1.1.3.3.1.1, 4.1.1.4.2.2"
+          "Sezioni": "4.1.1.2.3.1, \n4.1.1.3.3.1.1, \n4.1.1.4.2.2"
         },
         {
           "Codice": "RF-1.13.1",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato la valutazione generale del test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato la valutazione generale del test."
         },
         {
           "Codice": "RF-1.13.2",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato la valutazione di ogni singola domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato la valutazione di ogni singola domanda."
         },
         {
           "Codice": "RF-1.13.3",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato la lista delle domande eseguite nel test ordinate in modo crescente rispetto alla singola valutazione.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato la lista delle domande eseguite nel test ordinate in modo crescente rispetto alla singola valutazione."
         },
         {
           "Codice": "RF-1.13.4",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato il nome del set su cui è stato eseguito il test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato il nome del set su cui è stato eseguito il test."
         },
         {
           "Codice": "RF-1.13.5",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato la data di esecuzione del test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato la data di esecuzione del test."
         },
         {
           "Codice": "RF-1.13.6",
-          "Descrizione": "L'utente deve poter visualizzare nel risultato l'LLM utilizzato nel test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare nel risultato l'LLM utilizzato nel test."
         },
         {
           "Codice": "RF-1.14",
           "Descrizione": "L'utente deve poter visualizzare il risultato di un test per singolo elemento domanda.",
-          "Sezioni": "4.1.1.2.3.7, 4.1.1.3.3.1.5, 4.1.1.4.2.2"
+          "Sezioni": "4.1.1.2.3.7, \n4.1.1.3.3.1.5, \n4.1.1.4.2.2"
         },
         {
           "Codice": "RF-1.14.1",
-          "Descrizione": "L'utente deve visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda."
         },
         {
           "Codice": "RF-1.14.2",
-          "Descrizione": "L'utente deve visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda."
         },
         {
           "Codice": "RF-1.14.3",
-          "Descrizione": "L'utente deve visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda."
         },
         {
           "Codice": "RF-1.14.4",
-          "Descrizione": "L'utente deve visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda."
         },
         {
           "Codice": "RF-1.17",
           "Descrizione": "L'utente deve poter visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione.",
-          "Sezioni": "4.1.1.2.3.4, 4.1.1.3.3.1.3, 4.1.1.4.2.2"
+          "Sezioni": "4.1.1.2.3.4, \n4.1.1.3.3.1.3, \n4.1.1.4.2.2"
         },
         {
           "Codice": "RF-1.17.1",
-          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test."
         },
         {
           "Codice": "RF-1.17.1.1",
-          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test."
         },
         {
           "Codice": "RF-1.17.1.2",
-          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test."
         },
         {
           "Codice": "RF-1.17.1.3",
-          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test."
         },
         {
           "Codice": "RF-1.17.1.4",
-          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test.",
-          "Sezioni": "//"
+          "Descrizione": "L'utente deve poter visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test."
         }
       ]
     }
