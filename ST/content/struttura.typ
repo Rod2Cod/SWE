@@ -1,4 +1,4 @@
-#import "../../functions.typ": table-json-rev
+#import "../../functions.typ": table-json-ST
 
 == Diagrammi delle classi
 === Backend
@@ -1347,9 +1347,7 @@ Le dipendenze della sezione persistence di elemento domanda sono:
 === Tracciamento requisiti
 Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
 
-I requisiti aventi sezioni indicate da una dobbia barra (*\/\/*) vengono implementati nelle sezioni del requisito soprastante. In caso di più righe consecutive aventi una doppia barra, i requisiti descritti in esse vengono implementati nelle sezione definite nell'ultima riga soprastante non avente una doppia barra.
-
-#table-json-rev(json("tabelle.json").at("tracciamento_requisiti").at("backend"), 3)
+#table-json-ST(json("tabelle.json").at("tracciamento_requisiti").at("backend"))
 
 == Database
 #figure(

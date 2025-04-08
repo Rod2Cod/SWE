@@ -44,6 +44,49 @@
   )
 }
 
+#let table-json-ST(data) = {
+  let keys = data.at("keys")
+  let values = data.at("values")
+
+  let i = 0
+  let rowspan = (:)
+  let rowspan_count = 0
+
+  for row in values.rev() {
+    if "Sezioni" not in row.keys() or row.at("Sezioni") == "//" {
+      rowspan_count += 1
+    } else {
+      if rowspan_count > 0 {
+        rowspan.insert(row.at("Codice"), rowspan_count+1)
+        rowspan_count = 0
+      }
+    }
+  }
+
+  table(
+    columns: (1fr, 4fr, 1.4fr),
+    align: horizon + center,
+    fill: (_, y) => if y == 0 { gray.lighten(50%) },
+    ..keys.map(key => {strong(key)}),
+    ..values.map(
+        row => row.keys().map(
+          key => if key == "Sezioni" and row.at("Codice") in rowspan.keys() {
+                    table.cell(
+                      align: horizon + center,
+                      rowspan: rowspan.at(row.at("Codice"))
+                      )[
+                        #row.at(key, default: [])
+                      ]
+                  } else if key == "Codice" {
+                    strong(row.at(key, default: []))
+                  } else {
+                    row.at(key, default: [])
+                  }
+        )
+    ).flatten()
+  )
+}
+
 #let table-json-cal(data,fractions) = {
   let keys = data.at("keys")
   let values = data.at("values")
