@@ -3,3 +3,11 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+# File di vscode
+.vscode/settings.json
+# File development
+Artificial_QI/
+# File test
+.env
+.coverage
+prova*
