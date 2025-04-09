@@ -119,6 +119,11 @@
         "Data" : "2025-04-09",
         "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità backend.",
         "Verificatore" : "Filippo Bellon"
+      },
+      {
+        "Data" : "2025-04-09",
+        "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità Frontend., Sezione Specifica test di integrazione - Aggiunti test di integrazione tra frontend, backend, sistema di valutazione e database",
+        "Verificatore" : "Luca Calzetta"
       }
     ]
   },
@@ -678,7 +683,23 @@
         {"Codice": "TUB-140", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni correttamente un oggetto di tipo RisultatoSingolaDomanda dal database", "Stato": "I"},
         {"Codice": "TUB-141", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un errore di tipo ValueError in caso il RisultatoSingolaDomanda non venga trovato nel database", "Stato": "I"},
         {"Codice": "TUB-142", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-143", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"}
+        {"Codice": "TUB-143", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-144", "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema"},
+        {"Codice": "TUB-145", "Descrizione": "Verificare che nella vista DomandeView si possano eliminare gli elementi domanda selezionati", "Stato": "I"},
+        {"Codice": "TUB-146", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di un elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-147", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di modifica di un elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-148", "Descrizione": "Verificare che nella vista AggiungiDomandaView si possano compilare i campi del form ed inserire l'elemento domanda nel sistema", "Stato": "I"},
+        {"Codice": "TUB-149", "Descrizione": "Verificare che nella vista ModificaDomandaView si possano modificare i campi dell'elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-150", "Descrizione": "Verificare che nella vista MofificaDomandaView si possa annullare la modifica dell'elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-151", "Descrizione": "Verificare che nella vista ModificaDomandaView riesca a caricare i dati dell'elemento domanda da modificare", "Stato": "I"},
+        {"Codice": "TUB-152", "Descrizione": "Verificare che nella vista TestView si possa eseguire un test", "Stato": "I"},
+        {"Codice": "TUB-153", "Descrizione": "Verificare che nella vista TestView una volta avviato un test si veda la barra progressiva", "Stato": "I"},
+        {"Codice": "TUB-154", "Descrizione": "Verificare che nella vista TestView in caso di errore, venga visualizzato un messaggio per avvisare l'utente", "Stato": "I"},
+        {"Codice": "TUB-155", "Descrizione": "Verificare che nella vista StoricoViewTest si possano visualizzare lo storico dei test effettuati", "Stato": "I"},
+        {"Codice": "TUB-156", "Descrizione": "Verificare che nella vista StoricoViewTest si possa cliccare su un test per navigare verso la pagina del risultato del test", "Stato": "I"},
+        {"Codice": "TUB-157", "Descrizione": "Verificare che nella vista TestResultView si possano visualizzare i dettagli del test", "Stato": "I"},
+        {"Codice": "TUB-158", "Descrizione": "Verificare che nella vista TestResultView si possa vedere un elenco di tutte le singole domande effettuate", "Stato": "I"},
+        {"Codice": "TUB-159", "Descrizione": "Verificare che nella vista TestResultView si possa cliccare su un risultato singola domanda per visualizzarne i dettagli attraverso un popup", "Stato": "I"}
       ]
     },
     "TestIntegrazione": {
@@ -713,7 +734,17 @@
         {"Codice": "TI-22", "Descrizione": "Verificare che l'integrazione tra GetTestStatusController e GetTestStatusService funzioni correttamente", "File di riferimento": "TestGetTestStatusController.py", "Stato": "I"},
         {"Codice": "TI-23", "Descrizione": "Verificare che l'integrazione tra GetRisultatoTestController e GetRisultatoTestService funzioni correttamente", "File di riferimento": "TestGetRisultatoTestController.py", "Stato": "I"},
         {"Codice": "TI-24", "Descrizione": "Verificare che l'integrazione tra GetAllRisultatiTestController e GetAllRisultatiTestService funzioni correttamente", "File di riferimento": "TestGetAllRisultatiTestController.py", "Stato": "I"},
-        {"Codice": "TI-25", "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente", "File di riferimento": "TestGetRisultatoSingolaDomandaController.py", "Stato": "I"}
+        {"Codice": "TI-25", "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente", "File di riferimento": "TestGetRisultatoSingolaDomandaController.py", "Stato": "I"},
+        {"Codice": "TI-26", "Descrizione": "Verificare che la vista Domandeview invii correttamente la richiesta di recupero degli elementi domanda dal backend", "File di riferimento": "","Stato": "I"},
+        {"Codice": "TI-27", "Descrizione": "Verificare che la vista DomandeView invii correttamente la richiesta di elminazione degli elementi domanda selezionati", "File di riferimento": "","Stato": "I"},
+        {"Codice": "TI-28", "Descrizione": "Verificare che la vista AggiungiDomandaView invii correttamente la richiesta di aggiunta di un elemento domanda", "File di riferimento": "","Stato": "I"},
+        {"Codice": "TI-29", "Descrizione": "Verificare che la vista ModificaDomandaView invii correttamente la richiesta di modifica di un elemento domanda", "File di riferimento": "","Stato": "I"},
+        {"Codice": "TI-30", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta al backend per avviare un test", "File di riferimento": "", "Stato": "I" },
+        {"Codice": "TI-31", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta status al backend per controllare lo stato di avanzamento del test", "File di riferimento": "", "Stato": "I" },
+        {"Codice": "TI-32", "Descrizione": "Verificare che, al completamento di un test, il risultato venga correttamente salvato nel database e mostrato all'utente", "File di riferimento": "", "Stato": "I"},
+        {"Codice": "TI-33", "Descrizione": "Verificare che, accedendo alla pagina dei risultati, il frontend recuperi i dati tramite API e li visualizzi correttamente", "File di riferimento": "", "Stato": "I" },
+        {"Codice": "TI-34", "Descrizione": "Verificare che, accedendo alla pagina dei risultati e cliccando su un risultato singola domanda, venga inviata una richiesta per caricare i dati per quella domanda", "File di riferimento": "", "Stato": "I" },
+        {"Codice": "TI-35", "Descrizione": "Verificare che la vista StoricoView invii correttamente la richiesta per caricare tutto lo storico dei test eseguiti", "File di riferimento": "","Stato": "I"}
       ]
     },
     "TestSistema": {
