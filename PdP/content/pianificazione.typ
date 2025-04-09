@@ -183,3 +183,17 @@
         Diagramma di Gantt per le attività dell'undicesimo periodo
       ]
     )
+
+  === Dodicesimo Periodo 08/04/2025 - 21/04/2025
+    *Obiettivi*
+      - Stesura finale dei documenti per la revisione PB, tra questi:
+        - Terminazione stesura *Manuale Utente*
+        - Terminazione stesura *Specifica Tecnica*
+        - Terminazione stesura *Manuale Sviluppatore*
+      - Ultimi *test* MVP
+    #figure(
+      image("gantt/Online Gantt 08-04_to_21-04.png"),
+      caption: [
+        Diagramma di Gantt per le attività del dodicesimo periodo
+      ]
+    )
