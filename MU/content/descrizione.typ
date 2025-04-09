@@ -9,6 +9,20 @@ L'applicativo ha l'obbiettivo di fornire uno strumento per facilitare il confron
 
 == Installazione
 
+L'intero sistema è progettato per essere avviato in modo semplice e veloce tramite Docker. Utilizzando il file `docker-compose.yml` fornito nella root del progetto, è possibile avviare contemporaneamente tutte le componenti necessarie: il frontend, il backend, database e il sistema di valutazione automatica. Tutti i servizi vengono orchestrati e configurati automaticamente grazie a Docker Compose.
+
+Per cui i requisiti per eseguire il sistema sono Docker e Docker Compose installati sulla tua macchina. Una volta posizionato nella directory principale del progetto, sarà sufficiente eseguire il seguente comando:
+
+```bash
+docker compose up --build
+```
+
+Questo comando costruirà le immagini (se non già presenti) e avvierà tutti i container, rendendo l'intero sistema operativo e accessibile.
+
+L'unica componente esterna che non viene inclusa direttamente nel sistema è il modello LLM da valutare. Questo deve essere messo a disposizione tramite un'API accessibile dall'interno dei container. L'URL di questa API deve essere fornito dall'utilizzatore all'interno del file di configurazione `config.ini`, situato nella cartella principale del progetto. Il sistema utilizzerà tale URL per comunicare con il modello durante le fasi di valutazione. Assicurarsi quindi di compilare correttamente il file `config.ini` prima dell'avvio del sistema, specificando l'endpoint del tuo modello LLM. Tutto il resto verrà gestito automaticamente dal sistema.
+
+
+
 
 
 
@@ -75,12 +89,20 @@ Viene visualizzata la seguente schermata:
  - data di esecuzione
  - punteggio generale 
  - LLM utilizzato
- - lista di domande con relativa valutazione ordinate in modo decrescente rispetto alla valutazione. Ogni domanda comprende :
+ - lista di domande con relativa valutazione ordinate in modo decrescente rispetto alla valutazione. Ogni box domanda, viene anche colorato in base al punteggio, per rendere immediata la compresione delle domande con bassa valutazione. Ogni domanda comprende :
       - domanda
-      - risposta attesa
-      - risposta ricevuta dall'LLM
-      - punteggio domanda
-      - nome delle metriche utilizzate con relativo Score parziale 
+      - punteggio
+Se invece si vuole vedere il risultato specifico di una singola domanda, basta cliccare su di essa ed appare un popup: 
+#align(center)[
+      #image("IMG/popupRisultatoSingolaDomanda.png", height: 40%)
+    ]
+
+Questo popup riporta i dettagli di della domanda, tra cui:
+- Domanda
+- Risposta attesa
+- Risposta del modello LLM
+- Punteggio generale
+- Punteggi delle singole metriche
 === Storico Test
 In questa pagina è possibile visualizzare sinteticamente tutti i test effettuati. 
 Ogni riquadro si riferisce ad un test.
