@@ -1507,4 +1507,4 @@ Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le lo
 Nel nostro progetto, la dependency injection è stata utilizzata per gestire la configurazione e l'inizializzazione dei servizi principali, come i repository, i servizi di business e i controllers per la comunicazione con servizi esterni.
 
 === MVVM
-Il pattern *MVVM* (Model-View-ViewModel) è un'architettura progettuale che separa la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice. \
+Il pattern *MVVM* (Model-View-ViewModel) permette di separare la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice. \
