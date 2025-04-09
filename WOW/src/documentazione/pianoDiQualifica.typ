@@ -9,7 +9,7 @@ Le metriche utilizzate all'interno del Piano di Qualifica, sono state selezionat
 
 ==== Qualità di Processo
 La qualità di processo si fonda sull'idea che, per ottenere un prodotto che soddisfi determinati *standard* di qualità, è necessario che i *processi* che lo vanno a creare, vengano sottoposti a *controlli* periodici con lo scopo ultimo di ottimizzarli. \
-Il concetto di qualità di processo viene dunque applicato all’intero spettro di *attività*, *pratiche* e *metodi* utilizzati lungo l’intero ciclo di vita del software. In sintesi, la qualità di processo si pone l'obiettivo di rendere la qualità una *parte integrante* del prodotto, garantendo che sia *costruita* nel processo stesso e non sia solo un obiettivo secondario.
+Il concetto di qualità di processo viene dunque applicato all'intero spettro di *attività*, *pratiche* e *metodi* utilizzati lungo l'intero ciclo di vita del software. In sintesi, la qualità di processo si pone l'obiettivo di rendere la qualità una *parte integrante* del prodotto, garantendo che sia *costruita* nel processo stesso e non sia solo un obiettivo secondario.
 
 Per garantire il raggiungimento degli standard qualitativi prefissati, il team ha adottato un approccio strutturato alla qualità di processo, che include:
 - *Processi primari*, che comprendono la gestione delle risorse e lo sviluppo del software;
@@ -32,7 +32,7 @@ Per garantire il raggiungimento degli standard qualitativi prefissati, il team h
 ==== Qualità di Prodotto
 
 La qualità del prodotto si concentra sulla *valutazione* del *software* sviluppato, ponendo particolare attenzione a caratteristiche come *usabilità*, *funzionalità*, *affidabilità*, *manutenibilità* e, più in generale, alle *prestazioni* complessive del sistema.\
-L’obiettivo principale è garantire che il software non solo *soddisfi* le funzionalità richieste dal cliente e operi correttamente, ma che lo faccia *rispettando* specifici standard di qualità.
+L'obiettivo principale è garantire che il software non solo *soddisfi* le funzionalità richieste dal cliente e operi correttamente, ma che lo faccia *rispettando* specifici standard di qualità.
 
 
 Gli aspetti valutati includono:
@@ -40,12 +40,12 @@ Gli aspetti valutati includono:
 - *Software*: deve soddisfare tutti i requisiti concordati con il proponente.
 
 *Metriche di qualità* prese in esame:
-  - Leggibilità *(MPD-IG)*: il contenuto dei documenti deve essere comprensibile all’utente;  
+  - Leggibilità *(MPD-IG)*: il contenuto dei documenti deve essere comprensibile all'utente;  
   - Correttezza Linguistica *(MPD-EO)*: i documenti devono essere privi di errori grammaticali.  
 
 
 ==== Specifica dei Test
-Il Piano di Qualifica prevede l’esecuzione di test dettagliati per verificare il corretto funzionamento del software. I test sono suddivisi in:
+Il Piano di Qualifica prevede l'esecuzione di test dettagliati per verificare il corretto funzionamento del software. I test sono suddivisi in:
 - *Test di Sistema*: verificano il corretto funzionamento delle singole funzionalità;
 - *Test di Accettazione*: garantiscono che il prodotto soddisfi i requisiti aziendali.
 
@@ -55,4 +55,4 @@ Ogni test è identificato da un codice e uno stato, che può essere *Implementat
 Per assicurare la qualità del progetto, il team esegue controlli periodici e raccoglie dati sulle performance tramite:
 - *Verifica della documentazione*, per individuare eventuali errori o incongruenze;
 - *Monitoraggio dei processi*, attraverso il confronto tra obiettivi e risultati effettivi;
-- *Analisi delle metriche di progetto*, per valutare l’aderenza agli standard prefissati.
+- *Analisi delle metriche di progetto*, per valutare l'aderenza agli standard prefissati.

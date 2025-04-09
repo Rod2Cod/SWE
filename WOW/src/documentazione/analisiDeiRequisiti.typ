@@ -9,8 +9,8 @@ Di seguito le istruzioni per redigere il documento.
 
 I casi d'uso servono a definire uno scenario in cui uno o più attori interagiscono con il sistema. Nel documento di analisi dei requisiti, i casi d'uso saranno identificati nel seguente modo:
 
-- UC: acronimo di "Use Case".
-- N°: un numero progressivo che facilita l'identificazione di un singolo caso d'uso.
+- *UC*: acronimo di "Use Case".
+- *N°*: un numero progressivo che facilita l'identificazione di un singolo caso d'uso.
 Un esempio è: UC[Numero caso d'uso].[Sottocaso]. \ Per sviluppare un singolo caso d'uso è necessario che siano presenti i seguenti punti:
 
 - *Descrizione*: Una breve spiegazione del caso d'uso.
@@ -34,7 +34,7 @@ Di cui:
  - *F*: Funzionale.
  - *Q*: Qualità.
  - *V*: Vincolo.
-- *Classificazione*: identifica l’importanza del requisito:
+- *Classificazione*: identifica l'importanza del requisito:
  - 1: Obbligatorio.
  - 2: Opzionale.
  - 3: Desiderabile.
