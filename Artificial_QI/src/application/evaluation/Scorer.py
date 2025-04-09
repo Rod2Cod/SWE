@@ -7,7 +7,7 @@ from sentence_transformers import CrossEncoder
  
 class Scorer:
     def __init__(self):
-        self.__bertScorer = BERTScorer(model_type="bert-base-uncased", from_tf=True)
+        self.__bertScorer = BERTScorer(model_type="bert-base-uncased")
         self.__crossEncoder = CrossEncoder('cross-encoder/stsb-roberta-large')
         self.__rougeScorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
  
