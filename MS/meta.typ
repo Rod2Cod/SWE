@@ -12,3 +12,4 @@
 #let db_postgres = [#include "content/db_postgres.typ"]
 #let backend_flask = [#include "content/flask_api.typ"]
 #let llm_evaluator = [#include "content/llm_evaluator.typ"]
+#let problemi = [#include "content/problemi_noti.typ"]
