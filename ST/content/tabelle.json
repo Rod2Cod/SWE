@@ -73,6 +73,11 @@
         "Data": "2025-04-08",
         "Descrizione": "Sezione Architettura - Architettura Logica - Aggiunta sezione  architettura VVM",
         "Autore": "Luca Calzetta"
+      },
+      {
+        "Data": "2025-04-08",
+        "Descrizione": "Sezione Struttura - Aggiunte immagini diagrammi delle classi",
+        "Autore": "Michele Nesler"
       }
     ]
   },
