@@ -1,1 +1,1 @@
-#lorem(20)
+Nessuno.
