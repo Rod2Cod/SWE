@@ -1,1 +1,1 @@
-- Arichitettura monolitica
+- Architettura monolitica
