@@ -1,5 +1,6 @@
 #import "../../functions.typ": table-json-ST
 
+
 == Diagrammi delle classi
 === Backend
 ==== Domain Model
@@ -965,7 +966,7 @@ Le dipendenze dei REST controllers di elemento domanda sono:
 
 ===== Esecuzione Test
 Le dipendenze dei REST controllers di esecuzione test sono:
-  - *ExecuteTestUseCase*: rappresentano i casi d'usoper l'esecuzione del test implementati dai servizi
+  - *ExecuteTestUseCase*: rappresentano i casi d'uso per l'esecuzione del test implementati dai servizi
   - *GetTestStatusUseCase*: rappresenta il caso d'uso per ottenere lo stato del test
   - *Containers*: rappresentano le classi che gestiscono le dependency injection
   - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
@@ -1145,7 +1146,7 @@ Le dipendenze dei REST controllers di risultato test sono:
 #align(center)[
       #image("../pictures/uml/LLM.png", height: 9%)
     ]
-Le dipendenze dell'Adapters di LLM sono:
+Le dipendenze dell'Adapter di LLM sono:
   - *LLMPort*: rappresenta la porta implementata dall'Adapter stesso
 
 ====== LLMAdapter
@@ -1473,7 +1474,7 @@ Le porte, punto focale di comunicazione con l'esterno, sono rappresentate dalle 
  - Le *Inbound Ports* (o Use Case) saranno quelle utilizzate da attori esterni per comunicare con il sistema. Queste interfacce saranno implementate dal sistema stesso tramite un sistema di API. Esse definiscono quindi i casi d'uso e le operazioni implementate dal sistema.
  - Le *Outbound Ports* saranno invece quelle utilizzate dal sistema stesso per comunicare con attori esterni. \
 
-Gli *Adapters* sono invece le classe che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
+Gli *Adapters* sono invece le classi che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
 
@@ -1483,10 +1484,9 @@ Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
 - Model: rappresenta i dati dell'applicazione. In Vue.js, ciò corrisponde allo stato locale dei componenti, eventualmente esteso attraverso strumenti come Vuex o Pinia per la gestione dello stato globale.
 - View: è l'interfaccia grafica dell'applicazione, costituita dai template HTML. Grazie al data binding reattivo offerto da Vue.js, la vista si aggiorna automaticamente al variare dei dati sottostanti.
 
-- ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonchè il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
+- ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonché il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
 
 Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), sfrutta una struttura component-based che consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una composizione scalabile dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
-
 
 
 == Design Patterns Utilizzati
