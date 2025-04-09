@@ -1466,7 +1466,8 @@ L'architettura di deployment utilizzata dall'applicativo sia lato client che lat
 - Prestazioni migliori
 
 === Architettura Logica
-L'architettura logica dell'applicativo è invece di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* che fungeranno da porte. Questo permette di rendere il sistema più flessibile a comunicazioni con servizi esterni differenti. \
+==== Backend
+L'architettura logica della componente backend dell'applicativo è di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* che fungeranno da porte. Questo permette di rendere il sistema più flessibile a comunicazioni con servizi esterni differenti. \
 
 La parte centrale dell'esagono è rappresentata quindi dalla *logica di business*, il quale contiene quindi il dominio del programma. \
 
@@ -1478,8 +1479,8 @@ Gli *Adapters* sono invece le classi che andranno ad implementare in maniera con
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
 
-
-Per quanto riguarda il frontend dell'applicativo, è stata adottata un'architettura di tipo *MVVM* (Model-View-ViewModel), implementata in modo implicito dal framework *Vue.js*. Questa struttura consente un approccio dichiarativo e reattivo, favorendo una netta separazione tra la logica di business e l'interfaccia utente. 
+==== Frontend
+Per quanto riguarda il frontend è stata invece adottata un'architettura di tipo *MVVM* (Model-View-ViewModel), implementata in modo implicito dal framework *Vue.js*. Questa struttura consente un approccio dichiarativo e reattivo, favorendo una netta separazione tra la logica di business e l'interfaccia utente. 
 Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
 - Model: rappresenta i dati dell'applicazione. In Vue.js, ciò corrisponde allo stato locale dei componenti, eventualmente esteso attraverso strumenti come Vuex o Pinia per la gestione dello stato globale.
 - View: è l'interfaccia grafica dell'applicazione, costituita dai template HTML. Grazie al data binding reattivo offerto da Vue.js, la vista si aggiorna automaticamente al variare dei dati sottostanti.
@@ -1487,7 +1488,6 @@ Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
 - ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonché il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
 
 Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), sfrutta una struttura component-based che consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una composizione scalabile dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
-
 
 == Design Patterns Utilizzati
 === Singleton
@@ -1505,3 +1505,6 @@ Il pattern *Decorator* viene utilizzato per aggiungere funzionalità a un oggett
 === Dependency injection
 Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le loro dipendenze dall'esterno, piuttosto che crearle direttamente al loro interno. Questo approccio migliora la modularità e facilita il testing, permettendo di sostituire facilmente le dipendenze con implementazioni alternative o mock durante i test. \
 Nel nostro progetto, la dependency injection è stata utilizzata per gestire la configurazione e l'inizializzazione dei servizi principali, come i repository, i servizi di business e i controllers per la comunicazione con servizi esterni.
+
+=== MVVM
+Il pattern *MVVM* (Model-View-ViewModel) è un'architettura progettuale che separa la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice. \

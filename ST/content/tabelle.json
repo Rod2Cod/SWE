@@ -78,6 +78,11 @@
         "Data": "2025-04-08",
         "Descrizione": "Sezione Struttura - Aggiunte immagini diagrammi delle classi",
         "Autore": "Michele Nesler"
+      },
+      {
+        "Data": "2025-04-09",
+        "Descrizione": "Sezione Struttura - Aggiunto design pattern MVVM",
+        "Autore": "Filippo Bellon"
       }
     ]
   },
