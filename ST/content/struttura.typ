@@ -1401,6 +1401,135 @@ Le dipendenze della sezione persistence di elemento domanda sono:
 
 ====== Risultato Test
 
+=== Frontend
+
+Il frontend di questa applicazione rende possibile l'esecuzione e la visualizzazione dei risultati, in modod grafic, attravero una pagina web costruita attraverso la tecnologia Single Page application. Per il frontend viene utilizzato Vue JS che utilizza il Pattern MVVM (ModelViewViewModel),
+
+
+==== HomeView
+Vista principale dell'applicazione. Funziona come punto informativo e descrittivo dell'applicazione. Non ha particolari metodi o funzioni in quanto è solo di presentazione.
+
+#figure(
+  image("../pictures/uml/ViewHomeVIew.png"),
+)
+
+==== DomandeView
+Gestisce e visualizza la lista delle domande esistenti. 
+
+#figure(
+  image("../pictures/uml/ViewDomandeView.png"),
+)
+
+- *Attributi*:
+  - ` domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
+  - `domandeSelezionate: List<ElementoDomanda>`: Lista elementi domanda selezionati per l'eliminazione
+
+- *Metodi*
+  - `caricaDomande(): List<ElementoDomanda>` : Void: Carica le domande dal backend
+  - ` eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
+
+==== AggiungiDomandaView
+
+Vista responsabile dell'inserimento di una nuova domanda. Fornisce un modulo per l'inserimento della domanda e della risposta attesa, e invia i dati al backend.
+
+#figure(
+  image("../pictures/uml/ViewAggiungiDomandaView.png"),
+)
+
+- *Attributi*
+
+  - `domanda: String`: Contenuto testuale della domanda da inserire.  
+  - `rispostaAttesa: String`: Contenuto testuale della risposta prevista.
+
+- *Metodi*
+
+  - `aggiungiDomanda(domanda:String, in risposta:String): Void`: Valida che entrambi i campi siano compilati, invia i dati tramite una chiamata `POST` al backend, e reindirizza l'utente alla vista delle domande in caso di successo.
+
+==== ModificaDomandaView
+
+Vista per la modifica di una domanda esistente. Carica automaticamente i dati della domanda da modificare e consente l'aggiornamento tramite form.
+
+#figure(
+  image("../pictures/uml/ViewModificaDomandaView.png"),
+)
+
+- *Attributi*
+
+  - `id: Int`: Identificativo univoco della domanda, ottenuto dai parametri della route.
+  - `domanda: String`: Testo della domanda da modificare.
+  - `rispostaAttesa: String`: Testo della risposta prevista da modificare.
+
+- *Metodi*
+
+  - `caricaDomanda(in id:Int): ElementoDomanda`:
+  Recupera la domanda da modificare tramite richiesta al backend.
+  - `modificaDomanda(in domanda:Domanda, in risposta:Risposta): Void`: 
+  Invia la modifica della domanda al backend.
+
+
+==== TestView
+
+Gestisce l'interfaccia per eseguire un test. Avvia il test, controlla lo stato in tempo reale tramite polling e gestisce la visualizzazione del progresso o del risultato finale.
+
+#figure(
+  image("../pictures/uml/ViewTestView.png"),
+)
+
+- *Attributi*
+
+  - `id: Int`: Identificativo del risultato del test completato.
+  - `testIniziato: bool`:  Indica se il test è attualmente in corso.
+  - `testCompletato: bool`: Indica se il test è stato completato.
+  - `avanzamento: Float`: Percentuale di avanzamento del test.
+
+- *Metodi*
+
+  - `iniziaTest(): Void`:  Invia la richiesta di avvio del test al backend
+  - `controllaStato(): Void`: Recupera lo stato corrente del test dal backend e aggiorna l'interfaccia in base alla risposta.
+  - `vaiAlRisultato(in id:Int): Void`:   Naviga alla vista dei risultati del test appena completato.
+
+
+==== StoricoView
+
+Componente che mostra lo storico dei test eseguiti dall'utente. 
+
+#figure(
+  image("../pictures/uml/ViewStorico.png"),
+)
+
+- *Attributi*
+
+  - `tests: List<Object>`:   Lista dei test eseguiti recuperati dal backend.
+
+- *Metodi*
+
+  - `caricaStorico(): Void`:  Recupera la lista dei test dal backend e li ordina per data decrescente.
+  - `vaiAlDettaglio(in id:int): Void`:    Naviga alla vista di dettaglio del risultato del test selezionato.
+
+==== TestResultView
+
+Componente che visualizza i dettagli di un test, incluse tutte le domande con i rispettivi punteggi. Permette di visualizzare il risultato dettagliato di ogni singola domanda.
+
+#figure(
+  image("../pictures/uml/ViewTestResultView.png"),
+)
+
+
+- *Attributi*
+
+  - `id: Int`:     Identificativo del test, ottenuto dai parametri del router.
+  - `test: Test`:     Oggetto che rappresenta il test da visualizzare, completo di dettagli e risultati.
+  - `domandaSelezionata: Int`:    Oggetto che contiene i dati della domanda selezionata per la visualizzazione singola.
+
+- *Metodi*
+
+  - `caricaTest(): Void`:   Recupera i dati completi del test dal backend usando l'id corrente.
+  - `risultatoSingolaDomanda(in id:int): void`:    Recupera dal backend il dettaglio del risultato di una domanda.
+
+==== ViewModel
+
+Il _ViewModel_ è una componente concettuale offerta da Vue.js, non da implementare nel nostro sistema. Agisce come un intermediario reattivo tra la logica dell'interfaccia utente (_View_) e i dati del modello (_Model_).  Vue si occupa automaticamente di aggiornare la vista ogni volta che i dati cambiano e viceversa, grazie al binding bidirezionale.
+
 === Tracciamento requisiti
 Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
 

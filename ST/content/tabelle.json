@@ -83,6 +83,11 @@
         "Data": "2025-04-09",
         "Descrizione": "Sezione Struttura - Aggiunto design pattern MVVM",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-09",
+        "Descrizione": "Sezione Struttura - Aggiunta sezione diagrammi delle classi frontend",
+        "Autore": "Luca Calzetta"
       }
     ]
   },
