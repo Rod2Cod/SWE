@@ -700,35 +700,134 @@
       "keys": [
         "Codice",
         "Descrizione",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice": "TI-1", "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-2", "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-3", "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-4", "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-5", "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-6", "Descrizione": "Verificare che l'integrazione tra AlgoritmoValutazioneRisposteImpl e Scorer funzioni correttamente", "File di riferimento": "Test_AlgoritmoValutazioneRisposte.py", "Stato": "I"},
-        {"Codice": "TI-7", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e LLMAdapter funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-8", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e AlgoritmoValutazioneRisposteImpl funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-9", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e SaveRisultatoTestPort funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-10", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e GetAllElementiDomandaPort funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-11", "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPostgreSQLRepository funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-12", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPostgreSQLRepository funzioni correttamente", "File di riferimento": "TestRisultatoTestPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-13", "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPersistenceMapper funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-14", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPersistenceMapper funzioni correttamente", "File di riferimento": "TestRisultatoTestPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-15", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoSingolaDomandaPersistenceMapper funzioni correttamente", "File di riferimento": "TestRisultatoSingolaDomandaPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-16", "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaController e AddElementoDomandaService funzioni correttamente", "File di riferimento": "TestAddElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-17", "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaController e GetElementoDomandaService funzioni correttamente", "File di riferimento": "TestGetElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-18", "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaController e GetAllElementiDomandaService funzioni correttamente", "File di riferimento": "TestGetAllElementiDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-19", "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaController e DeleteElementiDomandaService funzioni correttamente", "File di riferimento": "TestDeleteElementiDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-20", "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaController e UpdateElementoDomandaService funzioni correttamente", "File di riferimento": "TestUpdateElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-21", "Descrizione": "Verificare che l'integrazione tra ExecuteTestController e ExecuteTestService funzioni correttamente", "File di riferimento": "TestExecuteTestController.py", "Stato": "I"},
-        {"Codice": "TI-22", "Descrizione": "Verificare che l'integrazione tra GetTestStatusController e GetTestStatusService funzioni correttamente", "File di riferimento": "TestGetTestStatusController.py", "Stato": "I"},
-        {"Codice": "TI-23", "Descrizione": "Verificare che l'integrazione tra GetRisultatoTestController e GetRisultatoTestService funzioni correttamente", "File di riferimento": "TestGetRisultatoTestController.py", "Stato": "I"},
-        {"Codice": "TI-24", "Descrizione": "Verificare che l'integrazione tra GetAllRisultatiTestController e GetAllRisultatiTestService funzioni correttamente", "File di riferimento": "TestGetAllRisultatiTestController.py", "Stato": "I"},
-        {"Codice": "TI-25", "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente", "File di riferimento": "TestGetRisultatoSingolaDomandaController.py", "Stato": "I"}
+        {
+          "Codice": "TI-1",
+          "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-2",
+          "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-3",
+          "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-4",
+          "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-5",
+          "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-6",
+          "Descrizione": "Verificare che l'integrazione tra AlgoritmoValutazioneRisposteImpl e Scorer funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-7",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e LLMAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-8",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e AlgoritmoValutazioneRisposteImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-9",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e SaveRisultatoTestPort funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-10",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e GetAllElementiDomandaPort funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-11",
+          "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPostgreSQLRepository funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-12",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPostgreSQLRepository funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-13",
+          "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-14",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-15",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoSingolaDomandaPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-16",
+          "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaController e AddElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-17",
+          "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaController e GetElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-18",
+          "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaController e GetAllElementiDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-19",
+          "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaController e DeleteElementiDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-20",
+          "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaController e UpdateElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-21",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestController e ExecuteTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-22",
+          "Descrizione": "Verificare che l'integrazione tra GetTestStatusController e GetTestStatusService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-23",
+          "Descrizione": "Verificare che l'integrazione tra GetRisultatoTestController e GetRisultatoTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-24",
+          "Descrizione": "Verificare che l'integrazione tra GetAllRisultatiTestController e GetAllRisultatiTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-25",
+          "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente",
+          "Stato": "I"
+        }
       ]
     },
     "TestSistema": {
@@ -739,102 +838,505 @@
         "Stato"
       ],
       "values": [
-        {"Codice":"TS-1","Descrizione":"Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema","Requisito":"RF-1.1","Stato":"I"},
-        {"Codice":"TS-2","Descrizione":"Verificare che l'utente possa visualizzare un singolo elemento domanda","Requisito":"RF-1.1.1","Stato":"I"},
-        {"Codice":"TS-3","Descrizione":"Verificare che l'utente possa visualizzare il testo di una singola/determinata domanda","Requisito":"RF-1.1.1.1","Stato":"I"},
-        {"Codice":"TS-4","Descrizione":"Verificare che l'utente possa visualizzare il testo della risposta attesa associata ad una singola/determinata domanda","Requisito":"RF-1.1.1.2","Stato":"I"},
-        {"Codice":"TS-5","Descrizione":"Verificare che l'utente possa modificare una domanda già presente nel sistema","Requisito":"RF-1.2","Stato":"I"},
-        {"Codice":"TS-6","Descrizione":"Verificare che l'utente possa modificare una risposta attesa presente nel sistema","Requisito":"RF-1.3","Stato":"I"},
-        {"Codice":"TS-7","Descrizione":"Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema","Requisito":"RF-1.4","Stato":"I"},
-        {"Codice":"TS-8","Descrizione":"Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda","Requisito":"RF-1.5","Stato":"I"},
-        {"Codice":"TS-9","Descrizione":"Verificare che l'utente possa immettere manualmente una domanda all'interno del sistema","Requisito":"RF-1.5.1.1","Stato":"I"},
-        {"Codice":"TS-10","Descrizione":"Verificare che l'utente possa immettere manualmente una risposta attesa all'interno del sistema","Requisito":"RF-1.5.1.2","Stato":"I"},
-        {"Codice":"TS-11","Descrizione":"Verificare che l'utente possa inserire nel sistema degli elementi domanda presenti in un file strutturato","Requisito":"RF-2.5.2","Stato":"I"},
-        {"Codice":"TS-12","Descrizione":"Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set","Requisito":"RF-3.6","Stato":"I"},
-        {"Codice":"TS-13","Descrizione":"Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema","Requisito":"RF-2.7","Stato":"I"},
-        {"Codice":"TS-14","Descrizione":"Verificare che l'utente possa visualizzare un singolo elemento del set","Requisito":"RF-2.7.1","Stato":"I"},
-        {"Codice":"TS-15","Descrizione":"Verificare che l'utente possa visualizzare gli elementi domanda presenti in un set presente nel sistema","Requisito":"RF-2.8","Stato":"I"},
-        {"Codice":"TS-16","Descrizione":"Verificare che l'utente possa modificare il nome di un set presente nel sistema","Requisito":"RF-2.9","Stato":"I"},
-        {"Codice":"TS-17","Descrizione":"Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema","Requisito":"RF-2.10","Stato":"I"},
-        {"Codice":"TS-18","Descrizione":"Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema","Requisito":"RF-2.11","Stato":"I"},
-        {"Codice":"TS-19","Descrizione":"Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema","Requisito":"RF-1.12","Stato":"I"},
-        {"Codice":"TS-20","Descrizione":"Verificare che l'utente possa eseguire un test utilizzando un set di elementi domanda presenti nel sistema","Requisito":"RF-3.12.1","Stato":"I"},
-        {"Codice":"TS-21","Descrizione":"Verificare che l'utente possa visualizzare il risultato del test eseguito","Requisito":"RF-1.13","Stato":"I"},
-        {"Codice":"TS-22","Descrizione":"Verificare che l'utente possa visualizzare nel risultato la valutazione generale del test eseguito","Requisito":"RF-1.13.1","Stato":"I"},
-        {"Codice":"TS-23","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del test eseguito la valutazione di ogni singola domanda","Requisito":"RF-1.13.2","Stato":"I"},
-        {"Codice":"TS-24","Descrizione":"Verificare che l'utente possa visualizzare nel risultato la lista delle domande presenti nel sistema eseguite nel test ordinate in modo crescente rispetto alla singola valutazione","Requisito":"RF-1.13.3","Stato":"I"},
-        {"Codice":"TS-25","Descrizione":"Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda","Requisito":"RF-1.14","Stato":"I"},
-        {"Codice":"TS-26","Descrizione":"Verificare che l'utente possa visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.1","Stato":"I"},
-        {"Codice":"TS-27","Descrizione":"Verificare che l'utente possa visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.2","Stato":"I"},
-        {"Codice":"TS-28","Descrizione":"Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.3","Stato":"I"},
-        {"Codice":"TS-29","Descrizione":"Verificare che l'utente possa visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda","Requisito":"RF-1.14.4","Stato":"I"},
-        {"Codice":"TS-30","Descrizione":"Verificare che l'utente possa scaricare il risultato di un test eseguito","Requisito":"RF-2.15","Stato":"I"},
-        {"Codice":"TS-31","Descrizione":"Verificare che l'utente possa caricare un file contenente i risultati di un test","Requisito":"RF-2.16","Stato":"I"},
-        {"Codice":"TS-32","Descrizione":"Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione","Requisito":"RF-1.17","Stato":"I"},
-        {"Codice":"TS-33","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test","Requisito":"RF-1.17.1.1","Stato":"I"},
-        {"Codice":"TS-34","Descrizione":"Verificare che l'utente possa visualizzare, all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test","Requisito":"RF-1.17.1.2","Stato":"I"},
-        {"Codice":"TS-35","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test","Requisito":"RF-1.17.1.3","Stato":"I"},
-        {"Codice":"TS-36","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test","Requisito":"RF-1.17.1.4","Stato":"I"},
-        {"Codice":"TS-37","Descrizione":"Verificare che l'utente possa filtrare gli elementi dello storico dei test in base al nome del set di domande","Requisito":"RF-2.18.1","Stato":"I"},
-        {"Codice":"TS-38","Descrizione":"Verificare che l'utente possa filtrare gli elementi dello storico dei test in base all'LLM utilizzato","Requisito":"RF-2.18.2","Stato":"I"},
-        {"Codice":"TS-39","Descrizione":"Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test","Requisito":"RF-2.19","Stato":"I"},
-        {"Codice":"TS-40","Descrizione":"Verificare che l'utente possa visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni","Requisito":"RF-2.19.1","Stato":"I"},
-        {"Codice":"TS-41","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati","Requisito":"RF-2.19.1.1","Stato":"I"},
-        {"Codice":"TS-42","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati","Requisito":"RF-2.19.1.2","Stato":"I"},
-        {"Codice":"TS-43","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati","Requisito":"RF-2.19.1.3","Stato":"I"},
-        {"Codice":"TS-44","Descrizione":"Verificare che l'utente possa visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda presente nel sistema","Requisito":"RF-2.19.2","Stato":"I"},
-        {"Codice":"TS-45","Descrizione":"Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test","Requisito":"RF-2.20","Stato":"I"},
-        {"Codice":"TS-46","Descrizione":"Verificare che l'utente possa verificare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione","Requisito":"RF-2.20.1","Stato":"I"},
-        {"Codice":"TS-47","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test","Requisito":"RF-2.20.2","Stato":"I"},
-        {"Codice":"TS-48","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test","Requisito":"RF-2.20.3","Stato":"I"},
-        {"Codice":"TS-49","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test","Requisito":"RF-2.20.4","Stato":"I"},
-        {"Codice":"TS-50","Descrizione":"Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema","Requisito":"RF-2.21","Stato":"I"},
-        {"Codice":"TS-51","Descrizione":"Verificare che l'utente venga notificato se il file caricato contiene dati in un formato errato","Requisito":"RF-2.21.1","Stato":"I"},
-        {"Codice":"TS-52","Descrizione":"Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine","Requisito":"RF-3.22","Stato":"I"},
-        {"Codice":"TS-53","Descrizione":"Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema","Requisito":"RF-3.22.1","Stato":"I"},
-        {"Codice":"TS-54","Descrizione":"Verificare che l'utente possa annullare l'operazione di eliminazione di un set","Requisito":"RF-2.23","Stato":"I"},
-        {"Codice":"TS-55","Descrizione":"Verificare che l'utente possa annullare l'operazione di modifica di una domanda","Requisito":"RF-3.24","Stato":"I"},
-        {"Codice":"TS-56","Descrizione":"Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa","Requisito":"RF-3.25","Stato":"I"},
-        {"Codice":"TS-57","Descrizione":"Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda","Requisito":"RF-1.26","Stato":"I"},
-        {"Codice":"TS-58","Descrizione":"Verificare che l'utente possa visualizzare nel risultato la data di esecuzione del test","Requisito":"RF-1.13.5","Stato":"I"},
-        {"Codice":"TS-59","Descrizione":"Verificare che l'utente possa visualizzare nel risultato l'LLM utilizzato nel test","Requisito":"RF-1.13.6","Stato":"I"},
-        {"Codice":"TS-60","Descrizione":"Verificare che l'utente possa visualizzare nel risultato il nome del set su cui è stato eseguito il test","Requisito":"RF-1.13.4","Stato":"I"}
+        {
+          "Codice": "TS-1",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema",
+          "Requisito": "RF-1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-2",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda",
+          "Requisito": "RF-1.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-3",
+          "Descrizione": "Verificare che l'utente possa visualizzare il testo di una singola/determinata domanda",
+          "Requisito": "RF-1.1.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-4",
+          "Descrizione": "Verificare che l'utente possa visualizzare il testo della risposta attesa associata ad una singola/determinata domanda",
+          "Requisito": "RF-1.1.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-5",
+          "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema",
+          "Requisito": "RF-1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-6",
+          "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema",
+          "Requisito": "RF-1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-7",
+          "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema",
+          "Requisito": "RF-1.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-8",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda",
+          "Requisito": "RF-1.5",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-9",
+          "Descrizione": "Verificare che l'utente possa immettere manualmente una domanda all'interno del sistema",
+          "Requisito": "RF-1.5.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-10",
+          "Descrizione": "Verificare che l'utente possa immettere manualmente una risposta attesa all'interno del sistema",
+          "Requisito": "RF-1.5.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-11",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema degli elementi domanda presenti in un file strutturato",
+          "Requisito": "RF-2.5.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-12",
+          "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set",
+          "Requisito": "RF-3.6",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-13",
+          "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-2.7",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-14",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento del set",
+          "Requisito": "RF-2.7.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-15",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti in un set presente nel sistema",
+          "Requisito": "RF-2.8",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-16",
+          "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema",
+          "Requisito": "RF-2.9",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-17",
+          "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-2.10",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-18",
+          "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema",
+          "Requisito": "RF-2.11",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-19",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema",
+          "Requisito": "RF-1.12",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-20",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando un set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-3.12.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-21",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito",
+          "Requisito": "RF-1.13",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-22",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la valutazione generale del test eseguito",
+          "Requisito": "RF-1.13.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-23",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del test eseguito la valutazione di ogni singola domanda",
+          "Requisito": "RF-1.13.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-24",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la lista delle domande presenti nel sistema eseguite nel test ordinate in modo crescente rispetto alla singola valutazione",
+          "Requisito": "RF-1.13.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-25",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda",
+          "Requisito": "RF-1.14",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-26",
+          "Descrizione": "Verificare che l'utente possa visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-27",
+          "Descrizione": "Verificare che l'utente possa visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-28",
+          "Descrizione": "Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-29",
+          "Descrizione": "Verificare che l'utente possa visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda",
+          "Requisito": "RF-1.14.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-30",
+          "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito",
+          "Requisito": "RF-2.15",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-31",
+          "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test",
+          "Requisito": "RF-2.16",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-32",
+          "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione",
+          "Requisito": "RF-1.17",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-33",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test",
+          "Requisito": "RF-1.17.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-34",
+          "Descrizione": "Verificare che l'utente possa visualizzare, all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test",
+          "Requisito": "RF-1.17.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-35",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test",
+          "Requisito": "RF-1.17.1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-36",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test",
+          "Requisito": "RF-1.17.1.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-37",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test in base al nome del set di domande",
+          "Requisito": "RF-2.18.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-38",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test in base all'LLM utilizzato",
+          "Requisito": "RF-2.18.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-39",
+          "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test",
+          "Requisito": "RF-2.19",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-40",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni",
+          "Requisito": "RF-2.19.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-41",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati",
+          "Requisito": "RF-2.19.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-42",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati",
+          "Requisito": "RF-2.19.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-43",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati",
+          "Requisito": "RF-2.19.1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-44",
+          "Descrizione": "Verificare che l'utente possa visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda presente nel sistema",
+          "Requisito": "RF-2.19.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-45",
+          "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test",
+          "Requisito": "RF-2.20",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-46",
+          "Descrizione": "Verificare che l'utente possa verificare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione",
+          "Requisito": "RF-2.20.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-47",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test",
+          "Requisito": "RF-2.20.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-48",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test",
+          "Requisito": "RF-2.20.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-49",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test",
+          "Requisito": "RF-2.20.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-50",
+          "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema",
+          "Requisito": "RF-2.21",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-51",
+          "Descrizione": "Verificare che l'utente venga notificato se il file caricato contiene dati in un formato errato",
+          "Requisito": "RF-2.21.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-52",
+          "Descrizione": "Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine",
+          "Requisito": "RF-3.22",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-53",
+          "Descrizione": "Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema",
+          "Requisito": "RF-3.22.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-54",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set",
+          "Requisito": "RF-2.23",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-55",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda",
+          "Requisito": "RF-3.24",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-56",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa",
+          "Requisito": "RF-3.25",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-57",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda",
+          "Requisito": "RF-1.26",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-58",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la data di esecuzione del test",
+          "Requisito": "RF-1.13.5",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-59",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato l'LLM utilizzato nel test",
+          "Requisito": "RF-1.13.6",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-60",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato il nome del set su cui è stato eseguito il test",
+          "Requisito": "RF-1.13.4",
+          "Stato": "I"
+        }
       ]
     },
-      "TestAccettazione": {
+    "TestAccettazione": {
       "keys": [
         "Codice",
         "Descrizione",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice": "TA-1", "Descrizione": "Verificare che l'utente possa consultare il manuale utente", "File di riferimento": "test_accettazione_manuale.py", "Stato": "I"},
-        {"Codice": "TA-2", "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_visualizzazione_elementi.py", "Stato": "I"},
-        {"Codice": "TA-3", "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda", "File di riferimento": "test_accettazione_visualizzazione_singolo.py", "Stato": "I"},
-        {"Codice": "TA-4", "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema", "File di riferimento": "test_accettazione_modifica_domanda.py", "Stato": "I"},
-        {"Codice": "TA-5", "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema", "File di riferimento": "test_accettazione_modifica_risposta.py", "Stato": "I"},
-        {"Codice": "TA-6", "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema", "File di riferimento": "test_accettazione_eliminazione_elemento.py", "Stato": "I"},
-        {"Codice": "TA-7", "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda", "File di riferimento": "test_accettazione_inserimento_elemento.py", "Stato": "I"},
-        {"Codice": "TA-8", "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set", "File di riferimento": "test_accettazione_creazione_set.py", "Stato": "I"},
-        {"Codice": "TA-9", "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_visualizzazione_set.py", "Stato": "I"},
-        {"Codice": "TA-10", "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema", "File di riferimento": "test_accettazione_modifica_nome_set.py", "Stato": "I"},
-        {"Codice": "TA-11", "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_eliminazione_set.py", "Stato": "I"},
-        {"Codice": "TA-12", "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema", "File di riferimento": "test_accettazione_modifica_elementi_set.py", "Stato": "I"},
-        {"Codice": "TA-13", "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_esecuzione_test.py", "Stato": "I"},
-        {"Codice": "TA-14", "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito", "File di riferimento": "test_accettazione_visualizzazione_risultato.py", "Stato": "I"},
-        {"Codice": "TA-15", "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda", "File di riferimento": "test_accettazione_risultato_singola_domanda.py", "Stato": "I"},
-        {"Codice": "TA-16", "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito", "File di riferimento": "test_accettazione_download_risultato.py", "Stato": "I"},
-        {"Codice": "TA-17", "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test", "File di riferimento": "test_accettazione_caricamento_risultato.py", "Stato": "I"},
-        {"Codice": "TA-18", "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti", "File di riferimento": "test_accettazione_visualizzazione_storico.py", "Stato": "I"},
-        {"Codice": "TA-19", "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test", "File di riferimento": "test_accettazione_filtro_storico.py", "Stato": "I"},
-        {"Codice": "TA-20", "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test", "File di riferimento": "test_accettazione_confronto_test.py", "Stato": "I"},
-        {"Codice": "TA-21", "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test", "File di riferimento": "test_accettazione_confronto_dettagliato.py", "Stato": "I"},
-        {"Codice": "TA-22", "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file", "File di riferimento": "test_accettazione_notifica_errore.py", "Stato": "I"},
-        {"Codice": "TA-23", "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set", "File di riferimento": "test_accettazione_annullamento_eliminazione_set.py", "Stato": "I"},
-        {"Codice": "TA-24", "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda o risposta", "File di riferimento": "test_accettazione_annullamento_modifica.py", "Stato": "I"},
-        {"Codice": "TA-25", "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda", "File di riferimento": "test_accettazione_annullamento_eliminazione_elemento.py", "Stato": "I"},
-        {"Codice": "TA-26", "Descrizione": "Verificare che l'applicazione funzioni correttamente sui principali browser moderni", "File di riferimento": "test_accettazione_compatibilita_browser.py", "Stato": "I"}
+        {
+          "Codice": "TA-1",
+          "Descrizione": "Verificare che l'utente possa consultare il manuale utente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-2",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-3",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-4",
+          "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-5",
+          "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-6",
+          "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-7",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-8",
+          "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-9",
+          "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-10",
+          "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-11",
+          "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-12",
+          "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-13",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-14",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-15",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-16",
+          "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-17",
+          "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-18",
+          "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-19",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-20",
+          "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-21",
+          "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-22",
+          "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-23",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-24",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda o risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-25",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-26",
+          "Descrizione": "Verificare che l'applicazione funzioni correttamente sui principali browser moderni",
+          "Stato": "I"
+        }
       ]
     }
   }
