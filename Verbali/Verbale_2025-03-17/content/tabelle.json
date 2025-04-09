@@ -15,6 +15,13 @@
         "Sez.modificate" : "Prima stesura",
         "Autore" : "Annalisa Egidi",
         "Verificatore" : "Alberto Maggion"
+      },
+      {
+        "Versione" : "1.0",
+        "Data" : "2025-04-09",
+        "Sez.modificate" : "",
+        "Validatore" : "Luca Calzetta"
+
       }
     ]
   },
