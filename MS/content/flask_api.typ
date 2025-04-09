@@ -37,6 +37,37 @@ Per arrestare e rimuovere i container:
   ```bash
   docker-compose down
   ```
+== Test
+Per il test dei componenti di backend, viene fornito ed utilizzato lo strumento *pytest* e di seguito viene presentata una scaletta di esempio per avviarne l'esecuzione e testarne quindi le classi.
+  + Prima di tutto creare un *ambiente virtuale* e installare le *dipendenze* necessarie(tra queste sarà presente anche pytest):
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+  + Aggiungere quindi alla *variabile d'ambiente* ```env PYTHONPATH``` il percorso della cartella contenente le sottocartelle *src* e *test*:
+    ```bash
+    export PYTHONPATH=$PYTHONPATH:/path/alla/cartella/padre
+    ```
+  + Posizionarsi quindi all'interno della cartella padre contenente *src* e *test*
+  + *Avviare* il test con il seguente comando:
+    ```bash
+    pytest -v --cov-report=term-missing --cov=./src -n 2 ./test
+    ```
+    - Il flag ```-v``` permette di visualizzare i *dettagli* dei test eseguiti.
+    - Il flag ```--cov-report=term-missing``` permette di visualizzare la *copertura* dei test eseguiti a terminale.
+    - Il flag ```--cov=./src``` permette di specificare la *cartella* da *testare*.
+    - Il flag ```-n 2``` permette di eseguire i test in *parallelo* su 2 core.
+    - Il flag ```./test``` permette di specificare la *cartella* contenente i *test* da eseguire.
+
+  + In caso di terminazione dei test senza errori, apparira a terminale una tabella indicante la copertura dei test effettuati.
+
+==== Riferimenti
+  Per eventuali *approndimentimenti* riguardanti l'utilizzo di pytest, è possibile consultare le seguenti documentazioni:
+    - *Pytest* (https://docs.pytest.org/en/latest/)
+    - *Pytest-cov* (https://pytest-cov.readthedocs.io/en/latest/)
+    - *Pytest-xdist* (https://pytest-xdist.readthedocs.io/en/stable/).
+
 == Note Finali
 - Per testare endpoint più complessi, utilizza strumenti come Postman o cURL.
 - In caso di problemi:
