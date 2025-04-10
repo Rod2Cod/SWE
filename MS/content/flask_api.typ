@@ -84,39 +84,56 @@ Come descritto all'interno della Specifica Tecnica, il dominio delle domande pre
 I *Controllers* si occuperanno di fornire tramite *API*, degli endpoint per gestire le richieste HTTP. Per portare a termine la richiesta faranno quindi uso di uno o più *UseCase* definiti precedentemente, ed implementati nei *Services* corrispondenti.
 Di seguito vengono quindi elencate le possibili strutture dei vari Controllers.
 
+
+
+
 #set heading(numbering: none)
 ===== Aggiunta singola
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/AddSetElementiDomandaC.png", height: 6%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per l'aggiunta di un Set di Elementi Domanda, prendendo in input, il nome che si vuole assegnare al Set, e gli id degli Elementi Domanda che si vogliono aggiungere a quest'ultimo. Si andrà quindi poi a creare il nuovo Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Ottenimento singolo
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/GetSetElementiDomandaC.png", height: 6%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per l'ottenimento di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole ottenere. Si andrà quindi a recuperare il Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Ottenimento collettivo
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/GetAllSetElementiDomandaC.png", height: 6%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per l'ottenimento di tutti i Set di Elementi Domanda presenti nel sistema. Si andranno quindi a recuperare i vari Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Eliminazione singola
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/DeleteSetElementiDomandaC.png", height: 7%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per l'eliminazione di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole eliminare. Si andrà quindi a rimuovere il Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Modifica nome
-// TODO: Aggiungere immagine
 
+#align(center)[
+      #image("uml/EditNomeSetElementiDomandaC.png", height: 6%)
+    ]
 Questo controller si occuperà di esporre un endpoint per la modifica del nome di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole modificare e il nuovo nome che si vuole assegnare. Si andrà quindi a modificare il nome del Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Aggiornamento Elementi Domanda associati
-// TODO: Aggiungere immagine
 
+#align(center)[
+      #image("uml/UpdateElementiDomandaSetC.png", height: 5.5%)
+    ]
 Questo controller si occuperà di esporre un endpoint per l'aggiornamento degli Elementi Domanda associati ad un Set, prendendo in input, il nome del Set che si vuole modificare e gli id degli Elementi Domanda che si vogliono sostituire a quelli attualmente assegnati. Si andrà quindi a modificare gli Elementi Domanda associati al Set tramite lo *UseCase* e il *Service* corrispondente.
 
 ===== Esecuzione Test
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/ExecuteTestOnSetController.png", height: 7%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per l'esecuzione del test su un Set di Elementi Domanda, prendendo in input, il nome del Set su cui si vuole eseguire il test. Si andrà quindi a recuperare il Set tramite lo *UseCase* e il *Service* corrispondente, e si andrà a generare il test.
 
@@ -127,37 +144,51 @@ I *Services* si occuperanno di implementare gli *UseCase* e realizzare quindi la
 
 #set heading(numbering: none)
 ===== Aggiunta singola
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/AddSetElementiDomanda.png", height: 6%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'aggiunta di un Set di Elementi Domanda, prendendo in input, il nome che si vuole assegnare al Set, e gli id degli Elementi Domanda che si vogliono aggiungere a quest'ultimo. Si andrà quindi a creare il nuovo Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Ottenimento singolo
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/GetSetElementiDomanda.png", height: 6%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'ottenimento di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole ottenere. Si andrà quindi a recuperare il Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Ottenimento collettivo
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/GetAllSetElementiDomanda.png", height: 6%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'ottenimento di tutti i Set di Elementi Domanda presenti nel sistema. Si andranno quindi a recuperare i vari Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Eliminazione singola
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/DeleteSetElementiDomanda.png", height: 7%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'eliminazione di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole eliminare. Si andrà quindi a rimuovere il Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Modifica nome
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/EditNomeSetElementiDomanda.png", height: 6%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per la modifica del nome di un Set di Elementi Domanda, prendendo in input, il nome del Set che si vuole modificare e il nuovo nome che si vuole assegnare. Si andrà quindi a modificare il nome del Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Aggiornamento Elementi Domanda associati
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/UpdateElementiDomandaSet.png", height: 5.5%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'aggiornamento degli Elementi Domanda associati ad un Set, prendendo in input, il nome del Set che si vuole modificare e gli id degli Elementi Domanda che si vogliono sostituire a quelli attualmente assegnati. Si andrà quindi a modificare gli Elementi Domanda associati al Set tramite la *Porta* e l'*Adapter* corrispondente.
 
 ===== Esecuzione Test
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/ExecuteTestOnSet.png", height: 23%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per l'esecuzione del test su un Set di Elementi Domanda, prendendo in input, il nome del Set su cui si vuole eseguire il test. Si andrà quindi a recuperare il Set e le relative domande tramite la *Porta* corrispondente. Successivamente si potrà eseguire il test tramite le apposite *Porte* fornite e precedentemente. Infine, per l'operazione di salvataggio si farà uso della *Porta* e dell'*Adapter* corrispondente già presenti.
 
@@ -166,7 +197,9 @@ Questo *Service* si occuperà di eseguire la logica per l'esecuzione del test su
 
 L'*Adapter* si occuperà di implementare le *Porte* definite precedentemente, e di esporre quindi i metodi per la comunicazione con il database. Per portare a termine la richiesta farà quindi uso di uno o più *Repository*, *Mappers* ed *Entity*.
 
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/Adapter.png", height: 20%)
+    ]
 
 L'*Adapter* andrà quindi ad implementare le *Porte* precedentemente definite, ed a utilizzare la rispettiva *Repository* per andare a comunicare con il database. Per portare a termine la richiesta farà quindi uso di uno o più *Mappers* ed *Entity*.
 Le loro operazioni riguarderanno la possibilità di:
@@ -195,13 +228,18 @@ Di seguito vengono quindi elencate le possibili strutture dei vari Controllers.
 
 #set heading(numbering: none)
 ===== Caricamento Elementi Domanda o Set
-// TODO: Aggiungere immagine
+
+#align(center)[
+      #image("uml/FileElementiDomandaUploadController.png", height: 15%)
+    ]
 
 Questo controller si occuperà di esporre un endpoint per il caricamento di uno o più Elementi Domanda, o di un Set di Elementi Domanda, prendendo in input, il file che contiene gli Elementi Domanda o il Set. Si andrà quindi ad utilizzare gli *UseCase* e i *Service* corrispondenti già presenti, per andare a creare prima gli Elementi Domanda e poi l'eventuale Set.
 
 ===== Caricamento Risultato Test
-// TODO: Aggiungere immagine
 
+#align(center)[
+      #image("uml/FileTestUploadController.png", height: 10%)
+    ]
 Questo controller si occuperà di esporre un endpoint per il caricamento del Risultato di un Test, prendendo in input, il file che contiene il Risultato. Successivamente andrà quindi a fornire, tramite specifici DTO intermedi, i dati necessari allo *UseCase* e al *Service* corrispondente, per andare quindi ad inserire il nuovo Risultato.
 
 #set heading(numbering: "1.1")
@@ -211,6 +249,12 @@ Di seguito vengono quindi elencate le possibili strutture dei vari Services.
 
 #set heading(numbering: none)
 ===== Caricamento Risultato Test
-// TODO: Aggiungere immagine
+#align(center)[
+      #image("uml/AddTest.png", height: 7%)
+    ]
 
 Questo *Service* si occuperà di eseguire la logica per il caricamento del Risultato di un Test, prendendo in input, il *DTO* riguardante il Risultato da caricare. Si andrà quindi ad aggiungere quest'ultimo tramite la *Porta* e l'*Adapter* corrispondente già presente.
+
+#align(center)[
+      #image("uml/RisultatoTestDTO.png", height: 13%)
+    ]
