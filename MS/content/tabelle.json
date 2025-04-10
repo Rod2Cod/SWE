@@ -78,6 +78,16 @@
         "Data": "2025-04-09",
         "Descrizione": "Sezioni Backend-Flask e Problemi Noti - Aggiunto Test e sezione Problemi Noti",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-10",
+        "Descrizione": "Sezione Backend-Flask - Aggiunta configurazione di sistema",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-10",
+        "Descrizione": "Sezione LLM Evaluator - Aggiunta sezione allenamento random forest",
+        "Autore": "Alberto Maggion"
       }
     ]
   }

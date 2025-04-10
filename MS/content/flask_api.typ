@@ -4,6 +4,16 @@ Flask è un framework leggero e super flessibile per Python, utile per creare ap
 - Docker e Docker Compose installati sul sistema (vedi punto 4.2).
 - Permessi di amministratore per configurare directory locali e impostare volumi.
 
+== Configurazione del Sistema
+Alcune parti del sistema richiedono una determinata configurazione, modificale tramite il file `config.ini` presente nella cartella del progetto. All'interno di questo file si possono configurare le seguenti variabili:
+  - Sezione `llm`
+    - `url`: url per l'invio delle richieste al LLM.
+    - `nome`: nome del modello LLM da utilizzare.
+  - Sezione `evaluator`
+    - `model`: percorso del file .joblib contenente il modello di valutazione. Questo percorso è relativo a partire dalla cartella del progetto.
+  - Sezione `database`
+    - `uri`: URI per la connessione al database Postgres.
+
 == Avvio del Sistema
 
 + Posizionati nella directory del progetto contenente il file docker-compose.yml.
