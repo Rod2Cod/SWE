@@ -1,0 +1,1 @@
+Il giorno 04/04/2025 dalle ore 15:00 alle 15:30 il gruppo Rod2Cod si è riunito per presentare all'azienda gli sviluppi del prodotto e richiedere l'approvazione per presentare domanda di Product Baseline.

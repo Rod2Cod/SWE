@@ -1411,12 +1411,12 @@ Gestisce e visualizza la lista delle domande esistenti.
 )
 
 - *Attributi*:
-  - ` domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
+  - `domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
   - `domandeSelezionate: List<ElementoDomanda>`: Lista elementi domanda selezionati per l'eliminazione
 
 - *Metodi*
   - `caricaDomande(): List<ElementoDomanda>` : Void: Carica le domande dal backend
-  - ` eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
+  - `eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
 
 ==== AggiungiDomandaView
 
@@ -1521,7 +1521,7 @@ Componente che visualizza i dettagli di un test, incluse tutte le domande con i 
 Il _ViewModel_ è una componente concettuale offerta da Vue.js, non da implementare nel nostro sistema. Agisce come un intermediario reattivo tra la logica dell'interfaccia utente (_View_) e i dati del modello (_Model_).  Vue si occupa automaticamente di aggiornare la vista ogni volta che i dati cambiano e viceversa, grazie al binding bidirezionale.
 
 === Tracciamento requisiti
-Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
+Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del back-end e del front-end.
 
 #table-json-ST(json("tabelle.json").at("tracciamento_requisiti").at("backend"))
 
