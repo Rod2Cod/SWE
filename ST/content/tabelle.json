@@ -93,6 +93,12 @@
         "Data": "2025-04-10",
         "Descrizione": "Sezione Struttura - Aggiunto tracciamento requisiti su classi front-end",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-10",
+        "Descrizione": "Verifica documento",
+        "Versione" : "0.1",
+        "Verificatore": "Alberto Maggion"
       }
     ]
   },
