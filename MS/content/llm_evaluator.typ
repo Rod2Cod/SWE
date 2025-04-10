@@ -5,9 +5,21 @@ Nel progetto, l’intero sistema è stato strutturato all’interno della cartel
 == Allenamento Random Forest
 
 Il nostro sistema utilizza un metodo chiamato Random Forest per calcolare i punteggi, sfruttando alberi decisionali per determinare un punteggio di somiglianza tra le due frasi in ingresso. Questo approccio permette di ottenere risultati suufficientemente accurati rispetto alla realtà.
-Le Random Forest richiedono un processo di allenamento per funzionare correttamente. Sebbene il nostro sistema sia già stato addestrato su un dataset di 2000 domande, l’allenamento è un’operazione opzionale. Qualora fosse necessario ricalibrare i pesi, basterà fornire un dataset contenente coppie di frasi e i punteggi di similarità associati.
-La funzione di allenamento prenderà in input il dataset e, utilizzando le metriche e i modelli definiti nel sistema, valuterà l’accuratezza di ciascun elemento, generando così un nuovo modello da utilizzare. Questo processo potrebbe richiedere diverse ore, a seconda delle dimensioni del dataset e della complessità del calcolo.
-Una volta completato l’allenamento, sarà sufficiente sostituire il modello utilizzato dal sistema con quello di interesse per aggiornare il modello e continuare ad ottenere valutazioni.
+Le Random Forest richiedono un processo di allenamento per funzionare correttamente. Sebbene il nostro sistema sia già stato addestrato su un dataset di 5000 domande, l’allenamento è un’operazione opzionale. Qualora fosse necessario ricalibrare i pesi, viene fornito tutto il necessario all'interno della cartella `trainModel`. Si consiglia di utilizzare cuda con la corrispondente versione di pytorch per velocizzare il processo di allenamento. Il file `requirements.txt` contiene le librerie aggiuntive che è necessario installare per scaricare un dataset ed elaborarlo. Il primo passo per l'allenamento consiste nello scaricare il dataset, il modello preimpostato è `mteb/stsb_multi_mt`(solo la parte in italiano). Dopo aver scaricato e preparato il modello si puo procedere con l'allenamento. Il file `train.py` contiene il codice necessario per farlo.\
+Nello specifico il dataset viene scaricato, elaborato e salvato nella cartella assets come `ds1`. Il trainer carica poi il dataset elaborato e procede con l'allenamento. Il modello viene salvato nella cartella assets come `newmodel.joblib`.
+==== Passi da eseguire per l'allenamento (default)
++ Installare le dipendenze aggiuntive:
+  ```bash
+  pip install -r trainModel/requirements.txt
+  ```
++ Scaricare e preparare il dataset:
+  ```bash
+  python trainModel/dsLoader.py
+  ```
++ Eseguire lo script di allenamento:
+  ```bash
+  python trainModel/train.py
+  ```
 
 == Sistema di valutazione
 
