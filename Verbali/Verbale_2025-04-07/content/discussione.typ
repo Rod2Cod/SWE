@@ -5,10 +5,10 @@ Come punto iniziale, Luca si è occupato di esporre le modifiche recenti al codi
 
 == Discussione Specifica Tecnica
 In secondo luogo, si è discusso dell'attuale stato del documento Specifica Tecnica.
-Dopo un momento di discussione, si è deciso di inserire un paragrafo contenente una tabella, che indichi il *soddisfacimento* dei *requisiti* funzionali richiesti dal proponente, tracciandoli ai numeri delle sezioni contenenti le definizioni delle classi corrispondenti.
+Dopo un momento di discussione, si è deciso di inserire un paragrafo contenente una tabella, che indichi il *soddisfacimento* dei *requisiti* funzionali richiesti dal proponente, associandoli i numeri delle sezioni contenenti le definizioni delle classi che li soddisfano.
 #decisioni(
   [
-    - Inserire un paragrafo contenente una tabella, che indichi il soddisfacimento dei requisiti funzionali richiesti dal proponente, tracciandoli ai numeri delle sezioni contenenti le definizioni delle classi corrispondenti.
+    - Inserire un paragrafo contenente una tabella, che indichi il soddisfacimento dei requisiti funzionali richiesti dal proponente, associando i numeri delle sezioni contenenti le definizioni delle classi che li soddisfano.
   ],
   [
     - Distinguere meglio i requisiti soddisfatti e tracciati, associandoli alle singole classi/sezioni.

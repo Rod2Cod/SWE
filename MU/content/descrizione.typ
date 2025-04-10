@@ -4,17 +4,18 @@ L'applicativo ha l'obbiettivo di fornire uno strumento per facilitare il confron
 == Requisiti minimi di sistema
    - Versione Browser Chrome : 133
    - Sandard API LLM : OpenAPI 3.1
+   - Versione Docker : 27.2.0
 
    Qualora questi requisiti non fossero rispettati il completo funzionamento dell'applicativo non è garantito.
 
 == Installazione
 
-L'intero sistema è progettato per essere avviato in modo semplice e veloce tramite *Docker*. 
+L'intero sistema è progettato per essere avviato in modo semplice e veloce tramite *Docker*.
 
-Utilizzando il file `docker-compose.yml` fornito nella cartella del progetto, è possibile *avviare* contemporaneamente tutte le componenti necessarie: il frontend, il backend, database e il sistema di valutazione automatica. Tutti i servizi vengono orchestrati e configurati automaticamente grazie a Docker Compose.
+Utilizzando il file `docker-compose.yml` fornito nella cartella del progetto, è possibile *avviare* contemporaneamente tutte le componenti necessarie: il frontend, il backend, il database e il sistema di valutazione automatica. Tutti i servizi vengono orchestrati e configurati automaticamente grazie a Docker Compose.
 
 Prima di avviare il sistema, sarà quindi necessario verificare alcune \"dipendenze\":
-   - Avere installato *Docker* e Docker *Compose* ed avere in esecuzione *Docker Engine*. Se non sono già installati, è possibile scaricarli e installarli seguendo le istruzioni ufficiali di Docker.
+   - Avere installato *Docker* e Docker *Compose* ed avere in esecuzione *Docker Engine*. Se non sono già installati, è possibile scaricarli e installarli seguendo le istruzioni ufficiali di #link("https://www.docker.com/get-started/")[Docker]\.
    - Avere all'interno della cartella principale del progetto(dove sono presenti le cartelle *src* e *test*), una cartella `assets`, contenente il file `.joblib` fornito e riguardante il modello da utilizzare per la valutazione.
 
 Una volta posizionato nella directory principale del progetto, sarà sufficiente quindi eseguire il seguente comando:

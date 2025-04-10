@@ -464,7 +464,7 @@ Le dipendenze dei servizi di esecuzione test sono:
     - `status_tracker`: oggetto responsabile del tracciamento dello stato del test
     - `llm`: porta utilizzata per comunicare con l'LLM
     - `valutatore`: oggetto responsabile della valutazione delle risposte
-    - `saveTestPort`: porta utilizzata per salvare il risultato del test
+    - `saveRisultatoTestPort`: porta utilizzata per salvare il risultato del test
     - `getElementiDomandaPort`: porta utilizzata per ottenere gli elementi domanda da testare
   - *Metodi*
     - `executeTest(): None`
@@ -1390,6 +1390,222 @@ Le dipendenze della sezione persistence di elemento domanda sono:
         - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun elemento domanda con l'id specificato
 
 ====== Risultato Test
+Le dipendenze della sezione persistence di risultato test sono:
+  - *RisultatoTest*: rappresenta il dominio di risultato test
+  - *RisultatoSingolaDomanda*: rappresenta il dominio di risultato del singolo elemento domanda
+  - *RisultatoTestPorts*: rappresentano le porte implementate dell'Adapter stesso
+  - *SQLAlchemyError* e *NoResultFound*: rappresentano alcune eccezioni lanciate da SQLAlchemy e catturate dall'Adapter
+  - *db*: rappresenta l'istanza del database utilizzato dalle entità del database e dalla repository per comunicare con il database stesso
+
+#align(center)[
+      #image("../pictures/uml/RisultatoTestPersistence.png", height: 23%)
+    ]
+
+======= RisultatoTestPersistenceAdapter
+  - *Attributi*
+    - `repositoryTest` : repository utilizzata per comunicare con il database contenente i risultati del test
+    - `repositorySingolaDomanda` : repository utilizzata per comunicare con il database contenente i risultati del singolo elemento domanda
+    - `mapperTest` : mapper utilizzato per mappare le entità del dominio di business con le entità del database risultato test
+    - `mapperSingolaDomanda` : mapper utilizzato per mappare le entità del dominio di business con le entità del database singola domanda
+  
+  - *Metodi*
+    - `saveRisultatoTest(risultatoTest: RisultatoTest): RisultatoTest`
+      - *Descrizione*:
+        - salva un risultato test nel database
+      - *Input*:
+        - `risultatoTest`: oggetto di tipo `RisultatoTest` che rappresenta il risultato test da salvare
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato test appena salvato nel database
+
+    - `getRisultatoTestById(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna un risultato test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato test appena ottenuto dal database
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui non venga trovato alcun risultato test con l'id specificato
+
+    - `getAllRisultatiTest(): Set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati test presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati test appena ottenuti dal database
+
+    - `getRisultatoSingolaDomandaById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna un risultato singola domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato singola domanda
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato singola domanda appena ottenuto dal database
+      - *Eccezioni*:
+        - `ValueError`: eccezione sollevata nel caso in cui non venga trovato alcun risultato singola domanda con l'id specificato
+
+======= SaveRisultatoTestPort
+  - *Metodi*
+    - `saveRisultatoTest(risultatoTest: RisultatoTest): RisultatoTest`
+      - *Descrizione*:
+        - salva un risultato test nel database
+      - *Input*:
+        - `risultatoTest`: oggetto di tipo `RisultatoTest` che rappresenta il risultato test da salvare
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato test appena salvato nel database
+
+======= GetRisultatoTestPort
+  - *Metodi*
+    - `getRisultatoTestById(id: int): RisultatoTest`
+      - *Descrizione*:
+        - ritorna un risultato test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato test
+      - *Output*:
+        - oggetto di tipo `RisultatoTest` che rappresenta il risultato test appena ottenuto dal database
+
+======= GetAllRisultatiTestPort
+  - *Metodi*
+    - `getAllRisultatiTest(): Set[RisultatoTest]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati test presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTest` che rappresentano i risultati test appena ottenuti dal database
+
+======= GetRisultatoSingolaDomandaPort
+  - *Metodi*
+    - `getRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - ritorna un risultato singola domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato singola domanda
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda` che rappresenta il risultato singola domanda appena ottenuto dal database
+
+======= RisultatoTestEntity
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco del risultato test
+    - `score`: float che rappresenta il punteggio del test
+    - `LLM` : stringa che rappresenta il nome dell'LLM utilizzato per eseguire il test
+    - `data`: stringa che rappresenta la data in cui è stato eseguito il test
+    - `nomeSet` : stringa che rappresenta il nome del set di domande utilizzato per eseguire il test
+    - `risultatiDomande`: set di oggetti di tipo `RisultatoSingolaDomandaEntity` che rappresentano i risultati delle domande del test
+
+======= RisultatoSingolaDomandaEntity
+  - *Attributi*
+    - `id`: intero che rappresenta l'identificativo univoco del risultato singola domanda
+    - `domanda`: stringa che rappresenta il testo della domanda
+    - `risposta`: stringa che rappresenta il testo della risposta attesa
+    - `rispostaLLM`: stringa che rappresenta il testo della risposta ottenuta dall'LLM
+    - `score`: float che rappresenta il punteggio della domanda
+    - `risultatoTestId` : intero che rappresenta l'identificativo univoco del risultato test a cui appartiene il risultato singola domanda
+    - `risultatiMetriche`: set di oggetti di tipo `RisultatoSingolaDomandaMetricheEntity` che rappresentano i risultati delle metriche del risultato singola domanda
+
+======= RisultatoMetricaEntity
+  - *Attributi*
+    - `nomeMetrica`: stringa che rappresenta il nome della metrica
+    - `score`: float che rappresenta il valore della metrica
+    - `risultatoSingolaDomandaId` : intero che rappresenta l'identificativo univoco del risultato singola domanda a cui appartiene il risultato metrica
+
+======= RisultatoTestPersistenceMapper
+  - *Metodi*
+    - `fromRisultatoTestEntity(entity: RisultatoTestEntity): RisultatoTest`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `RisultatoTestEntity` in un oggetto di tipo `RisultatoTest`
+      - *Input*:
+        - `entity`: oggetto di tipo `RisultatoTestEntity` da mappare
+      - *Output*:
+        - oggetto di tipo `RisultatoTest`
+
+    - `toRisultatoTestEntity(risultatoTest: RisultatoTest): RisultatoTestEntity`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `RisultatoTest` in un oggetto di tipo `RisultatoTestEntity`
+      - *Input*:
+        - `risultatoTest`: oggetto di tipo `RisultatoTest` da mappare
+      - *Output*:
+        - oggetto di tipo `RisultatoTestEntity`
+
+======= RisultatoSingolaDomandaPersistenceMapper
+  - *Metodi*
+    - `fromRisultatoSingolaDomandaEntity(entity: RisultatoSingolaDomandaEntity): RisultatoSingolaDomanda`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `RisultatoSingolaDomandaEntity` in un oggetto di tipo `RisultatoSingolaDomanda`
+      - *Input*:
+        - `entity`: oggetto di tipo `RisultatoSingolaDomandaEntity` da mappare
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomanda`
+
+    - `toRisultatoSingolaDomandaEntity(risultatoSingolaDomanda: RisultatoSingolaDomanda): RisultatoSingolaDomandaEntity`
+      - *Descrizione*:
+        - mappa un oggetto di tipo `RisultatoSingolaDomanda` in un oggetto di tipo `RisultatoSingolaDomandaEntity`
+      - *Input*:
+        - `risultatoSingolaDomanda`: oggetto di tipo `RisultatoSingolaDomanda` da mappare
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomandaEntity`
+
+======= RisultatoTestPostgreSQLRepository
+  - *Attributi*
+    - `db`: istanza del database utilizzata per comunicare con il database stesso
+
+  - *Metodi*
+    - `saveRisultatoTest(risultatoEntity: RisultatoTestEntity): RisultatoTestEntity`
+      - *Descrizione*:
+        - salva un risultato test nel database
+      - *Input*:
+        - `risultatoEntity`: oggetto di tipo `RisultatoTestEntity` che rappresenta il risultato test da salvare
+      - *Output*:
+        - oggetto di tipo `RisultatoTestEntity` che rappresenta il risultato test appena salvato nel database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `loadRisultatoTestById(id: int): RisultatoTestEntity`
+      - *Descrizione*:
+        - ritorna un risultato test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato test
+      - *Output*:
+        - oggetto di tipo `RisultatoTestEntity` che rappresenta il risultato test appena ottenuto dal database
+      - *Eccezioni*:
+        - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun risultato test con l'id specificato
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+    - `deleteRisultatoTest(id: int): None`
+      - *Descrizione*:
+        - elimina un risultato test a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato test da eliminare
+      - *Output*:
+        - booleano che rappresenta il risultato dell'operazione di eliminazione nel database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+    - `loadAllRisultatiTest(): Set[RisultatoTestEntity]`
+      - *Descrizione*:
+        - ritorna un set di tutti i risultati test presenti nel database
+      - *Input*:
+        - nessuno
+      - *Output*:
+        - set di oggetti di tipo `RisultatoTestEntity` che rappresentano i risultati test appena ottenuti dal database
+      - *Eccezioni*:
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
+
+======= RisultatoSingolaDomandaPostgreSQLRepository
+  - *Attributi*
+    - `db`: istanza del database utilizzata per comunicare con il database stesso
+
+  - *Metodi*
+    - `loadRisultatoSingolaDomandaTestById(id: int): RisultatoSingolaDomandaEntity`
+      - *Descrizione*:
+        - ritorna un risultato singola domanda a partire dal suo id
+      - *Input*:
+        - `id`: intero che rappresenta l'identificativo univoco del risultato singola domanda
+      - *Output*:
+        - oggetto di tipo `RisultatoSingolaDomandaEntity` che rappresenta il risultato singola domanda appena ottenuto dal database
+      - *Eccezioni*:
+        - `NoResultFound`: eccezione sollevata nel caso in cui non venga trovato alcun risultato singola domanda con l'id specificato
+        - `SQLAlchemyError`: eccezione sollevata nel caso in cui ci siano problemi durante le operazione svolte sul database
 
 === Frontend
 
@@ -1411,12 +1627,12 @@ Gestisce e visualizza la lista delle domande esistenti.
 )
 
 - *Attributi*:
-  - ` domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
+  - `domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
   - `domandeSelezionate: List<ElementoDomanda>`: Lista elementi domanda selezionati per l'eliminazione
 
 - *Metodi*
   - `caricaDomande(): List<ElementoDomanda>` : Void: Carica le domande dal backend
-  - ` eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
+  - `eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
 
 ==== AggiungiDomandaView
 
@@ -1521,7 +1737,7 @@ Componente che visualizza i dettagli di un test, incluse tutte le domande con i 
 Il _ViewModel_ è una componente concettuale offerta da Vue.js, non da implementare nel nostro sistema. Agisce come un intermediario reattivo tra la logica dell'interfaccia utente (_View_) e i dati del modello (_Model_).  Vue si occupa automaticamente di aggiornare la vista ogni volta che i dati cambiano e viceversa, grazie al binding bidirezionale.
 
 === Tracciamento requisiti
-Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
+Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del back-end e del front-end.
 
 #table-json-ST(json("tabelle.json").at("tracciamento_requisiti").at("backend"))
 
@@ -1582,21 +1798,20 @@ L'architettura di deployment utilizzata dall'applicativo sia lato client che lat
 - Semplicità di sviluppo
 - Facilità di deployment
 - Facilità di testing
-- Prestazioni migliori
 
 === Architettura Logica
 ==== Backend
-L'architettura logica della componente backend dell'applicativo è di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* che fungeranno da porte. Questo permette di rendere il sistema più flessibile a comunicazioni con servizi esterni differenti. \
+L'architettura logica della componente backend dell'applicativo è di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* ben definite. Questo permette di isolare la business logic del sistema, limitando la possibilità di avere dipendenze non necessarie.\
 
-La parte centrale dell'esagono è rappresentata quindi dalla *logica di business*, il quale contiene quindi il dominio del programma. \
+La parte centrale dell'esagono è rappresentata quindi dalla *logica di business*, la quale contiene il dominio del programma. \
 
 Le porte, punto focale di comunicazione con l'esterno, sono rappresentate dalle *interfacce*. Ne distinguiamo di due tipi:
- - Le *Inbound Ports* (o Use Case) saranno quelle utilizzate da attori esterni per comunicare con il sistema. Queste interfacce saranno implementate dal sistema stesso tramite un sistema di API. Esse definiscono quindi i casi d'uso e le operazioni implementate dal sistema.
- - Le *Outbound Ports* saranno invece quelle utilizzate dal sistema stesso per comunicare con attori esterni. \
+ - Le *Inbound Ports* (o Use Case) sono quelle utilizzate da attori esterni per comunicare con il sistema. Queste interfacce sono implementate dal sistema stesso tramite un sistema di API. Esse definiscono quindi i casi d'uso e le operazioni implementate dal sistema.
+ - Le *Outbound Ports* sono invece quelle utilizzate dal sistema stesso per comunicare con attori esterni. \
 
-Gli *Adapters* sono invece le classi che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
-- Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
-- Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
+Gli *Adapters* sono invece le classi che vanno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi fanno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
+- Gli *Inbound Adapters* sono quelli che implementano le interfacce Inbound, andando a definire quindi le operazioni che il sistema esegue in base ai casi d'uso.
+- Gli *Outbound Adapters* sono quelli che implementano le interfacce Outbound, andando a definire quindi le operazioni che il sistema esegue per comunicare con servizi esterni.
 
 ==== Frontend
 Per quanto riguarda il frontend è stata invece adottata un'architettura di tipo *MVVM* (Model-View-ViewModel), implementata in modo implicito dal framework *Vue.js*. Questa struttura consente un approccio dichiarativo e reattivo, favorendo una netta separazione tra la logica di business e l'interfaccia utente. 
@@ -1606,24 +1821,24 @@ Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
 
 - ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonché il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
 
-Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), sfrutta una struttura component-based che consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una composizione scalabile dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
+Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una migliore testabilità dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
 
 == Design Patterns Utilizzati
 === Singleton
 Il pattern *Singleton* viene utilizzato per garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a tale istanza. Ciò è utile in casi in cui sia hanno classi diverse che utilizzano un'istanza di un'altra classe in maniera condivisa. Questo pattern è stato utilizzato per gestire la creazione di un'unica istanza di connessione al database.
 
 === Strategy
-Il pattern *Strategy* viene principalmente utilizzato per definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern è stato utilizzato per definire le diverse strategie e algoritmi che permettono la valutazione delle domande.
+Il pattern *Strategy* viene principalmente utilizzato per definire un'interafccia comune che permette l'utilizzo di algoritmi differenti, senza dover modificare le dipendenze delle classi di business. Questo pattern è stato utilizzato per definire le diverse strategie e algoritmi che permettono la valutazione delle domande.
 
 === Factory Method
-Il pattern *Factory Method* viene utilizzato per definire un'interfaccia per la creazione di un oggetto, ma lascia alle sottoclassi la decisione su quale classe istanziare. Questo pattern è stato utilizzato per la creazione e gestione di dipendenze tramite dependency injection.
+Il pattern *Factory Method* viene utilizzato per definire un'interfaccia per la creazione di un oggetto, lasciando alle sottoclassi la responsabilità di implementare la logica di creazione dell'oggetto concreto. Questo pattern è stato utilizzato per la creazione e gestione di dipendenze tramite dependency injection.
 
 === Decorator
 Il pattern *Decorator* viene utilizzato per aggiungere funzionalità a un oggetto dinamicamente, incapsulandolo in un nuovo oggetto che contiene queste funzionalità. Questo pattern è stato utilizzato per esempio per l'"iniezione" delle dipendenze all'interno dei controllers.
 
 === Dependency injection
-Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le loro dipendenze dall'esterno, piuttosto che crearle direttamente al loro interno. Questo approccio migliora la modularità e facilita il testing, permettendo di sostituire facilmente le dipendenze con implementazioni alternative o mock durante i test. \
+Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le loro dipendenze dall'esterno, piuttosto che crearle direttamente al loro interno. Questo approccio migliora la modularità e facilita il testing, permettendo di sostituire facilmente le dipendenze con implementazioni alternative o mock durante i test.\
 Nel nostro progetto, la dependency injection è stata utilizzata per gestire la configurazione e l'inizializzazione dei servizi principali, come i repository, i servizi di business e i controllers per la comunicazione con servizi esterni.
 
 === MVVM
-Il pattern *MVVM* (Model-View-ViewModel) permette di separare la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice. \
+Il pattern *MVVM* (Model-View-ViewModel) permette di separare la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice.
