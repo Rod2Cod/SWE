@@ -22,7 +22,11 @@
       {
         "Data": "2025-04-10",
         "Descrizione": "Aggiornate sezioni Installazione e Funzionalità",
-        "Autore": "Filippo Bellon",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-10",
+        "Descrizione": "Verifica documento",
         "Verificatore": "Alberto Maggion",
         "Versione": "0.1"
       }
