@@ -683,6 +683,9 @@ Le dipendenze dei servizi di valutazione sono:
   - *TestStatusTracker*: rappresenta il tracciamento dello stato del test
 
 ====== AlgoritmoValutazioneRisposteImpl
+#align(center)[
+      #image("../pictures/uml/AlgoritmoValutazioneRisposteImpl.png", height: 16%)
+    ]
   - *Attributi*
     - `scorer`: classe che si occupa di calcolcare i punteggi parziali di valutazione
     - `model`: classe che si occupa di calcolare i punteggi di similitudine a partire dai punteggi parziali
@@ -702,47 +705,10 @@ Le dipendenze dei servizi di valutazione sono:
         - `data`: dizionario contenente i dati di input
       - *Output*:
         - oggetto di tipo `DataFrame` contenente i dati trasformati
-
-====== Scorer
-  - *Attributi*
-    - `bertScorer`: oggetto di tipo `BertScorer` che si occupa di calcolare lo score Bert
-    - `crossEncoder`: oggetto di tipo `CrossEncoder` che si occupa di calcolare lo score CrossEncoder
-    - `rougeScorer`: oggetto di tipo `RougeScorer` che si occupa di calcolare lo score Rouge
-  - *Metodi*
-    - `lexical_score(ipotesi: str, riferimento: str): (float,float,float)`
-      - *Descrizione*:
-        - calcola i punteggi Bleu, Ter e Chrf a partire da un'ipotesi e un riferimento
-      - *Input*:
-        - `ipotesi`: stringa che rappresenta l'ipotesi
-        - `riferimento`: stringa che rappresenta il riferimento
-      - *Output*:
-        - oggetto di tipo `tuple` contenente i punteggi Bleu, Ter e Chrf
-    - `ROUGE_score(ipotesi: str, riferimento: str): float`
-      - *Descrizione*:
-        - calcola il punteggio Rouge a partire da un'ipotesi e un riferimento
-      - *Input*:
-        - `ipotesi`: stringa che rappresenta l'ipotesi
-        - `riferimento`: stringa che rappresenta il riferimento
-      - *Output*:
-        - valore dello score Rouge in float
-    - `BERT_score(ipotesi: str, riferimento: str): float`
-      - *Descrizione*:
-        - calcola il punteggio Bert a partire da un'ipotesi e un riferimento
-      - *Input*:
-        - `ipotesi`: stringa che rappresenta l'ipotesi
-        - `riferimento`: stringa che rappresenta il riferimento
-      - *Output*:
-        - valore dello score Bert in float
-    - `score(ipotesi: str, riferimento: str): dict[str, float]`
-      - *Descrizione*:
-        - calcola i punteggi di valutazione a partire da un'ipotesi e un riferimento
-      - *Input*:
-        - `ipotesi`: stringa che rappresenta l'ipotesi
-        - `riferimento`: stringa che rappresenta il riferimento
-      - *Output*:
-        - oggetto di tipo `dict` contenente i le metriche utilizzate e i relativi punteggi di valutazione
-
 ====== TestStatusTrackerImpl
+#align(center)[
+      #image("../pictures/uml/TestStatusTrackerImpl.png", height: 20%)
+    ]
   - *Attributi*
     - `in_progress`: booleano che rappresenta se il test è in corso o meno
     - `total_questions`: intero che rappresenta il numero totale di domande del test
@@ -792,6 +758,46 @@ Le dipendenze dei servizi di valutazione sono:
         - nessuno
       - *Output*:
         - oggetto di tipo `dict` che rappresenta lo stato del test in corso
+====== Scorer
+  - *Attributi*
+    - `bertScorer`: oggetto di tipo `BertScorer` che si occupa di calcolare lo score Bert
+    - `crossEncoder`: oggetto di tipo `CrossEncoder` che si occupa di calcolare lo score CrossEncoder
+    - `rougeScorer`: oggetto di tipo `RougeScorer` che si occupa di calcolare lo score Rouge
+  - *Metodi*
+    - `clexical_score(ipotesi: str, riferimento: str): (float,float,float)`
+      - *Descrizione*:
+        - calcola i punteggi Bleu, Ter e Chrf a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - oggetto di tipo `tuple` contenente i punteggi Bleu, Ter e Chrf
+    - `ROUGE_score(ipotesi: str, riferimento: str): float`
+      - *Descrizione*:
+        - calcola il punteggio Rouge a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - valore dello score Rouge in float
+    - `BERT_score(ipotesi: str, riferimento: str): float`
+      - *Descrizione*:
+        - calcola il punteggio Bert a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - valore dello score Bert in float
+    - `score(ipotesi: str, riferimento: str): dict[str, float]`
+      - *Descrizione*:
+        - calcola i punteggi di valutazione a partire da un'ipotesi e un riferimento
+      - *Input*:
+        - `ipotesi`: stringa che rappresenta l'ipotesi
+        - `riferimento`: stringa che rappresenta il riferimento
+      - *Output*:
+        - oggetto di tipo `dict` contenente i le metriche utilizzate e i relativi punteggi di valutazione
+
+
 
 ==== Input Adapters (REST Controllers)
 ===== Elemento Domanda
