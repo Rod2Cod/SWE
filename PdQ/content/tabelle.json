@@ -552,7 +552,6 @@
         "Stato"
       ],
       "values": [
-        {"Codice": "TUB-", "Descrizione": "Verificare che ", "Stato": "I"},
         {"Codice": "TUB-1", "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente", "Stato": "I"},
         {"Codice": "TUB-2", "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente", "Stato": "I"},
         {"Codice": "TUB-3", "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente", "Stato": "I"},
