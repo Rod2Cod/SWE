@@ -96,3 +96,21 @@ Axios è una libreria JavaScript per fare richieste HTTP, basata su Promises. È
 Axios supporta tutte le principali operazioni HTTP, come GET, POST, PUT, DELETE, e fornisce funzionalità avanzate come intercettori, configurazioni globali e gestione automatica delle intestazioni.
 
 Abbiamo scelto questa libreria in quanto offre molta più flessibilità per la comunicazione con le API rispetto al semplice `fetch` fornito da JavaScript base.
+== Possibili Estensioni
+Le estensioni che sono state pensate e progettate per il frontend riguardano le viste che gestiscono le funzionalità associate ai Set.
+=== Vista Per l'Aggiunta di un Set
+Questa vista si occuperà tramite model e viewmodel di Vue di effettuare l'aggiunta di un Set.
+#align(center)[
+      #image("uml/ViewAggiungiSet.png", height: 10%)
+    ]
+=== Vista Per la modifica di un Set
+Questa vista si occuperà tramite model e viewmodel di Vue di effettuare la modifica di un Set.
+#align(center)[
+      #image("uml/ViewModificaSet.png", height: 10%)
+    ]
+  
+=== Vista Per la visualizzazione di tutti i Set
+Questa vista si occuperà di visualizzare il nome di tutti i Set presenti nel sistema.
+#align(center)[
+      #image("uml/ViewSet.png", height: 10%)
+    ]

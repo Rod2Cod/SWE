@@ -552,7 +552,6 @@
         "Stato"
       ],
       "values": [
-        {"Codice": "TUB-", "Descrizione": "Verificare che ", "Stato": "I"},
         {"Codice": "TUB-1", "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente", "Stato": "I"},
         {"Codice": "TUB-2", "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente", "Stato": "I"},
         {"Codice": "TUB-3", "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente", "Stato": "I"},
@@ -699,7 +698,7 @@
         {"Codice": "TUB-141", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un errore di tipo ValueError in caso il RisultatoSingolaDomanda non venga trovato nel database", "Stato": "I"},
         {"Codice": "TUB-142", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
         {"Codice": "TUB-143", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-144", "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema"},
+        {"Codice": "TUB-144", "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema", "Stato": "I"},
         {"Codice": "TUB-145", "Descrizione": "Verificare che nella vista DomandeView si possano eliminare gli elementi domanda selezionati", "Stato": "I"},
         {"Codice": "TUB-146", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di un elemento domanda", "Stato": "I"},
         {"Codice": "TUB-147", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di modifica di un elemento domanda", "Stato": "I"},

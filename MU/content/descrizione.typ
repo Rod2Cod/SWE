@@ -9,22 +9,23 @@ L'applicativo ha l'obbiettivo di fornire uno strumento per facilitare il confron
 
 == Installazione
 
-L'intero sistema è progettato per essere avviato in modo semplice e veloce tramite Docker. Utilizzando il file `docker-compose.yml` fornito nella root del progetto, è possibile avviare contemporaneamente tutte le componenti necessarie: il frontend, il backend, database e il sistema di valutazione automatica. Tutti i servizi vengono orchestrati e configurati automaticamente grazie a Docker Compose.
+L'intero sistema è progettato per essere avviato in modo semplice e veloce tramite *Docker*. 
 
-Per cui i requisiti per eseguire il sistema sono Docker e Docker Compose installati sulla tua macchina. Una volta posizionato nella directory principale del progetto, sarà sufficiente eseguire il seguente comando:
+Utilizzando il file `docker-compose.yml` fornito nella cartella del progetto, è possibile *avviare* contemporaneamente tutte le componenti necessarie: il frontend, il backend, database e il sistema di valutazione automatica. Tutti i servizi vengono orchestrati e configurati automaticamente grazie a Docker Compose.
+
+Prima di avviare il sistema, sarà quindi necessario verificare alcune \"dipendenze\":
+   - Avere installato *Docker* e Docker *Compose* ed avere in esecuzione *Docker Engine*. Se non sono già installati, è possibile scaricarli e installarli seguendo le istruzioni ufficiali di Docker.
+   - Avere all'interno della cartella principale del progetto(dove sono presenti le cartelle *src* e *test*), una cartella `assets`, contenente il file `.joblib` fornito e riguardante il modello da utilizzare per la valutazione.
+
+Una volta posizionato nella directory principale del progetto, sarà sufficiente quindi eseguire il seguente comando:
 
 ```bash
 docker compose up --build
 ```
 
-Questo comando costruirà le immagini (se non già presenti) e avvierà tutti i container, rendendo l'intero sistema operativo e accessibile.
+Questo comando costruirà le immagini (se non già presenti) e *avvierà* tutti i container, rendendo l'intero sistema *operativo* e accessibile.
 
-L'unica componente esterna che non viene inclusa direttamente nel sistema è il modello LLM da valutare. Questo deve essere messo a disposizione tramite un'API accessibile dall'interno dei container. L'URL di questa API deve essere fornito dall'utilizzatore all'interno del file di configurazione `config.ini`, situato nella cartella principale del progetto. Il sistema utilizzerà tale URL per comunicare con il modello durante le fasi di valutazione. Assicurarsi quindi di compilare correttamente il file `config.ini` prima dell'avvio del sistema, specificando l'endpoint del tuo modello LLM. Tutto il resto verrà gestito automaticamente dal sistema.
-
-
-
-
-
+L'unica componente esterna che non viene inclusa direttamente nel sistema è il modello LLM da valutare. Questo deve essere messo a disposizione tramite un'*API* accessibile dall'interno dei container. L'URL di questa API deve essere fornito dall'utilizzatore all'interno del file di *configurazione* `config.ini`, situato nella cartella principale del progetto. Il sistema utilizzerà tale URL per comunicare con il modello durante le fasi di valutazione. Assicurarsi quindi di compilare correttamente il file `config.ini` prima dell'avvio del sistema, specificando l'endpoint del tuo modello LLM. Tutto il resto verrà gestito automaticamente dal sistema.
 
 == Funzionalità disponibili
 === Navigazione 
@@ -33,10 +34,10 @@ La barra di navigazione, premendo sugli appositi link permette di passare da una
       #image("IMG/navbar.png", height: 4%)
     ]
 Le pagine disponibili sono: 
- - Home : contiene una panoramica dell'applicativo
- - Domande : permette di visualizzare, modificare, aggiungere ed eliminare gli elementi domanda presenti nel sistema.
- - Test : permette di avviare un test, visualizzarne l'avanzamento durante l'esecuzione e passare alla pagina di visualizzazione dei risultati al termine
- - Storico : permette di visualizzare la sintetica di tutti i test effettuati in precedenza.
+ - *Home* : contiene una panoramica dell'applicativo
+ - *Domande* : permette di visualizzare, modificare, aggiungere ed eliminare gli elementi domanda presenti nel sistema.
+ - *Test* : permette di avviare un test, visualizzarne l'avanzamento durante l'esecuzione e passare alla pagina di visualizzazione dei risultati al termine
+ - *Storico* : permette di visualizzare la sintetica di tutti i test effettuati in precedenza.
 
 === Visualizzazione, Inserimento, Modifica e Cancellazione elementi domanda
 Le seguenti funzionalità sono disponibili nella pagina "Domande".
