@@ -20,3 +20,5 @@ __pycache__/
 # No file configurazione Github Actions
 *.toml
 *.cfg
+# No training model files
+trainModel/
