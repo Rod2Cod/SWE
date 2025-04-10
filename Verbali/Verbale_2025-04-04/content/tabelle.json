@@ -1,6 +1,6 @@
 {
-  "versione" : {
-    "keys" : [
+  "versione": {
+    "keys": [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,58 +10,49 @@
     ],
     "values": [
       {
-        "Data" : "2025-04-10",
+        "Data": "2025-04-10",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Filippo Bellon"
-      },
-      {
-        "Data" : "2025-04-10",
+        "Autore": "Filippo Bellon",
         "Versione": "0.1",
-        "Sez.modificate": "",
-        "Verificatore" : "Annalisa Egidi"
+        "Verificatore": "Annalisa Egidi"
       }
     ]
   },
-  "presenze" : {
-    "keys" : [
-      "Rif",
-      "Nominativo",
-      "Presenze",
-      "Ruolo"
-    ],
+  "presenze": {
+    "keys": ["Rif", "Nominativo", "Presenze", "Ruolo"],
     "values": [
       {
-        "Rif":"S",
+        "Rif": "S",
         "Nominativo": "Michele Nesler",
         "Presenze": "A",
         "Ruolo": "Responsabile"
       },
       {
-        "Rif":"S",
+        "Rif": "S",
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
         "Ruolo": "Analista"
       },
       {
-        "Rif":"S",
+        "Rif": "S",
         "Nominativo": "Filippo Bellon",
         "Presenze": "P",
         "Ruolo": "Analista"
       },
       {
-        "Rif":"S",
+        "Rif": "S",
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
         "Ruolo": "Analista"
       },
       {
-        "Rif":"S",
+        "Rif": "S",
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
         "Ruolo": "Analista"
       },
       {
-        "Rif":"A",
+        "Rif": "A",
         "Nominativo": "Gregori Piccoli",
         "Presenze": "P",
         "Ruolo": "Proponente"
