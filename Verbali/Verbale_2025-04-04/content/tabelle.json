@@ -13,6 +13,12 @@
         "Data" : "2025-04-10",
         "Sez.modificate": "Prima stesura",
         "Autore" : "Filippo Bellon"
+      },
+      {
+        "Data" : "2025-04-10",
+        "Versione": "0.1",
+        "Sez.modificate": "",
+        "Verificatore" : "Annalisa Egidi"
       }
     ]
   },
