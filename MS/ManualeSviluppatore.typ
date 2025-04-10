@@ -1,4 +1,4 @@
-#import "meta.typ": title, abstract, tabelle, keywords, github_Actions, pages_Jekyll, introduzione, frontend_react, docker, db_postgres, backend_flask, llm_evaluator, data
+#import "meta.typ": title, abstract, tabelle, keywords, github_Actions, pages_Jekyll, introduzione, frontend_vue, docker, db_postgres, backend_flask, llm_evaluator, data, problemi
 
 // Funzioni da includere
 #import "../functions.typ": table-json, inDict, getLastDocVersion
@@ -73,8 +73,8 @@
 = Docker
  #docker
 
-= Frontend - React Framework
-  #frontend_react
+= Frontend - Vue JS Framework
+  #frontend_vue
 
 = Database SQL - Postgres
   #db_postgres
@@ -84,3 +84,6 @@
 
 = LLM Evaulator - Python
   #llm_evaluator
+
+= Problemi Noti
+  #problemi

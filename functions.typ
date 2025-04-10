@@ -44,6 +44,51 @@
   )
 }
 
+#let table-json-cal(data,fractions) = {
+  let keys = data.at("keys")
+  let values = data.at("values")
+
+  table(
+      fill: (_,y) =>
+      if y == 0 {gray.lighten(50%)},
+      align: horizon + center,
+      columns: fractions,
+      ..keys.map(key => {strong(key)}),
+      ..values.map(
+        row => keys.map(
+          key => if key == "Revisione"{
+                    emph(row.at(key, default: []))
+                 } else { 
+                    row.at(key, default:[])
+                 }
+        )
+      ).flatten()
+  )
+}
+
+#let table-json-TU(data, fractions) = {
+  let keys = data.at("keys")
+  let values = data.at("values")
+
+  table(
+      fill: (_,y) =>
+      if y == 0 {gray.lighten(50%)},
+      align: horizon + center,
+      columns: fractions,
+      ..keys.map(key => {strong(key)}),
+      ..values.map(
+        row => keys.map(
+          key => if key == "Codice" {
+                    //evidenzio contenuto colonna codice
+                    strong(row.at(key, default: []))
+                 } else { 
+                    row.at(key, default:[])
+                 }
+        )
+      ).flatten()
+  )
+}
+
 #let table-json-ST(data) = {
   let keys = data.at("keys")
   let values = data.at("values")
@@ -84,28 +129,6 @@
                   }
         )
     ).flatten()
-  )
-}
-
-#let table-json-cal(data,fractions) = {
-  let keys = data.at("keys")
-  let values = data.at("values")
-
-  table(
-      fill: (_,y) =>
-      if y == 0 {gray.lighten(50%)},
-      align: horizon + center,
-      columns: fractions,
-      ..keys.map(key => {strong(key)}),
-      ..values.map(
-        row => keys.map(
-          key => if key == "Revisione"{
-                    emph(row.at(key, default: []))
-                 } else { 
-                    row.at(key, default:[])
-                 }
-        )
-      ).flatten()
   )
 }
 

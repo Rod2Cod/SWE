@@ -73,6 +73,11 @@
         "Data": "2025-04-07",
         "Descrizione": "Sezione Backend-Flask - Aggiunte possibili estensioni",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-09",
+        "Descrizione": "Sezioni Backend-Flask e Problemi Noti - Aggiunto Test e sezione Problemi Noti",
+        "Autore": "Filippo Bellon"
       }
     ]
   }

@@ -2,7 +2,7 @@
 
 == Architettura monolitica
 
-È nata una discussione in merito alla scelta tra un'architettura monolitica e una basata su microservizi. Dopo aver analizzato i vantaggi e le criticità di entrambe le soluzioni, si è giunti a una decisione condivisa.
+Si è discusso in merito alla scelta tra un'*architettura* monolitica e una basata su microservizi. Dopo aver analizzato i vantaggi e le criticità di entrambe le soluzioni, si è giunti a una decisione condivisa.
 
 #decisioni(
  [

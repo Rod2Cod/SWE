@@ -51,7 +51,7 @@
       },
       {
         "Data": "2025-04-06",
-        "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Teconologie - Agguinte librerie e framework frontend",
+        "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Tecnologie - Aggiunte librerie e framework frontend",
         "Autore": "Luca Calzetta"
       },
       {
@@ -68,6 +68,26 @@
         "Data": "2025-04-08",
         "Descrizione": "Sezione Tecnologie - Aggiornate librerie e linguaggi",
         "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-08",
+        "Descrizione": "Sezione Architettura - Architettura Logica - Aggiunta sezione  architettura VVM",
+        "Autore": "Luca Calzetta"
+      },
+      {
+        "Data": "2025-04-08",
+        "Descrizione": "Sezione Struttura - Aggiunte immagini diagrammi delle classi",
+        "Autore": "Michele Nesler"
+      },
+      {
+        "Data": "2025-04-09",
+        "Descrizione": "Sezione Struttura - Aggiunto design pattern MVVM",
+        "Autore": "Filippo Bellon"
+      },
+      {
+        "Data": "2025-04-09",
+        "Descrizione": "Sezione Struttura - Aggiunta sezione diagrammi delle classi frontend",
+        "Autore": "Luca Calzetta"
       }
     ]
   },
@@ -99,7 +119,7 @@
       ],
       "values": [
         {
-          "Nome": "VueJS",
+          "Nome": "Vue JS",
           "Descrizione": "Framework JavaScript open-source per la creazione di interfacce utente e applicazioni web.",
           "Versione": "3.5.13"
         },
@@ -174,22 +194,22 @@
         },
         {
           "Nome": "sacrebleu",
-          "Descrizione": "Libreria utilizzata per il calcolo delle metriche BLEU, TER e CHRF nello stumento di valutazione delle risposte.",
+          "Descrizione": "Libreria utilizzata per il calcolo delle metriche BLEU, TER e CHRF nello strumento di valutazione delle risposte.",
           "Versione": "2.5.0"
         },
         {
           "Nome": "rouge-score",
-          "Descrizione": "Libreria utilizzata per il calcolo della metrica ROGUE nello stumento di valutazione delle risposte.",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica ROGUE nello strumento di valutazione delle risposte.",
           "Versione": "0.1.0"
         },
         {
           "Nome": "bert-score",
-          "Descrizione": "Libreria utilizzata per il calcolo della metrica BERT nello stumento di valutazione delle risposte.",
+          "Descrizione": "Libreria utilizzata per il calcolo della metrica BERT nello strumento di valutazione delle risposte.",
           "Versione": "0.3.10"
         },
         {
           "Nome": "sentence-transformers",
-          "Descrizione": "Libreria utilizzata per il calcolo della similitudine nello stumento di valutazione delle risposte.",
+          "Descrizione": "Libreria utilizzata per il calcolo della similitudine nello strumento di valutazione delle risposte.",
           "Versione": "4.0.0"
         },
         {
@@ -199,7 +219,7 @@
         },
         {
           "Nome": "joblib",
-          "Descrizione": "Librearia che facilita l'elaborazione parallela, la memorizzazione in cache dei risultati e la distribuzione delle attività in Python.",
+          "Descrizione": "Libreria che facilita l'elaborazione parallela, la memorizzazione in cache dei risultati e la distribuzione delle attività in Python.",
           "Versione": "1.3.2"
         },
         {
@@ -241,6 +261,11 @@
           "Nome": "configparser",
           "Descrizione": "Libreria per la gestione dei file di configurazione di tipo INI in Python.",
           "Versione": "7.2.0"
+        },
+        {
+          "Nome": "waitress",
+          "Descrizione": "Server WSGI per l'esecuzione di applicazioni Flask. Utilizzato per la fase di deployment.",
+          "Versione": "3.0.2"
         }
       ]
     },
@@ -677,4 +702,3 @@
     }
   }
 }
-  

@@ -6,4 +6,3 @@
   - Aggiornamento test di sistema
 - Discussione situazione codifica, test e deployment
 - Discussione situazione Manuale Sviluppatore e Manuale Utente
-- Discussione situazione altra documentazione di progetto

@@ -1,5 +1,5 @@
 #let tabelle = "../tabelle.json"
-#import "../../../functions.typ": table-json-rev
+#import "../../../functions.typ": table-json-rev,  table-json-TU
 
 I test svolgono un ruolo fondamentale nel dimostrare che il prodotto rispetta i requisiti indicati nel documento di *Analisi dei Requisiti*.\
 Lo *stato* di ciascun test è categorizzato come segue:\
@@ -19,15 +19,14 @@ Dove:
   - *I*: integrazione;
   - *S*: sistema;
   - *A*: accettazione;
-  - *R*: non regressione.
 
-- *Applicativo*: indica l'applicativo a cui il test è associato
+- *Componente*: indica la componente del sistema a cui il test è associato
   - *B*: back-end
   - *F*: front-end
 
 == Test di Unità
 Servono a verificare il corretto funzionamento di una singola parte autonoma del progetto.
-#table-json-rev(json(tabelle).at("Test").at("TestUnita"),4)
+#table-json-TU(json(tabelle).at("Test").at("TestUnita"),3)
 
 == Test di Integrazione
 Servono a verificare che le singole componenti interagiscano correttamente tra loro.

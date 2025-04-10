@@ -114,6 +114,31 @@
         "Data" : "2025-02-26",
         "Sez.modificate": "Riferimenti - Riferimenti informativi\nQualità di Processo\nQualità di processo - metriche utilizzate\nQualità di Prodoto\nQualità di prodotto - metriche utilizzate\nResoconto delle Attività di Qualifica",
         "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Data": "2025-03-28",
+        "Sez.modificate": "Specifica dei Test - Test di Sistema",
+        "Autore": "Annalisa Egidi"
+      },
+      {
+        "Data": "2025-04-01",
+        "Sez.modificate": "Specifica dei Test - Test di Unità, Test di Integrazione",
+        "Autore": "Annalisa Egidi"
+      },
+      {
+        "Data" : "2025-04-09",
+        "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità backend.",
+        "Verificatore" : "Filippo Bellon"
+      },
+      {
+        "Data" : "2025-04-10",
+        "Sez.modificate": "Specifica dei Test: layout tabelle",
+        "Autore" : "Annalisa Egidi"
+      },
+      {
+        "Data" : "2025-04-10",
+        "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità Frontend., Sezione Specifica test di integrazione - Aggiunti test di integrazione tra frontend, backend, sistema di valutazione e database",
+        "Verificatore" : "Luca Calzetta"
       }
     ]
   },
@@ -524,105 +549,316 @@
       "keys": [
         "Codice",
         "Descrizione",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice": "TU-1", "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-2", "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente", "File di riferimento": "TestDomanda.py", "Stato": "I"},
-        {"Codice": "TU-3", "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente", "File di riferimento": "TestRisposta.py", "Stato": "I"},
-        {"Codice": "TU-4", "Descrizione": "Verificare che il metodo getText() della classe Domanda restituisca correttamente il testo della domanda", "File di riferimento": "TestDomanda.py", "Stato": "I"},
-        {"Codice": "TU-5", "Descrizione": "Verificare che il metodo setText() della classe Domanda modifichi correttamente il testo della domanda", "File di riferimento": "TestDomanda.py", "Stato": "I"},
-        {"Codice": "TU-6", "Descrizione": "Verificare che il metodo getText() della classe Risposta restituisca correttamente il testo della risposta", "File di riferimento": "TestRisposta.py", "Stato": "I"},
-        {"Codice": "TU-7", "Descrizione": "Verificare che il metodo setText() della classe Risposta modifichi correttamente il testo della risposta", "File di riferimento": "TestRisposta.py", "Stato": "I"},
-        {"Codice": "TU-8", "Descrizione": "Verificare che il metodo getId() della classe ElementoDomanda restituisca correttamente l'id dell'elemento domanda", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-9", "Descrizione": "Verificare che il metodo getDomanda() della classe ElementoDomanda restituisca correttamente l'oggetto Domanda", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-10", "Descrizione": "Verificare che il metodo getRisposta() della classe ElementoDomanda restituisca correttamente l'oggetto Risposta", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-11", "Descrizione": "Verificare che il metodo setDomanda() della classe ElementoDomanda modifichi correttamente l'oggetto Domanda", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-12", "Descrizione": "Verificare che il metodo setRisposta() della classe ElementoDomanda modifichi correttamente l'oggetto Risposta", "File di riferimento": "TestElementoDomanda.py", "Stato": "I"},
-        {"Codice": "TU-13", "Descrizione": "Verificare che la classe AlgoritmoValutazioneRisposteImpl venga istanziata correttamente", "File di riferimento": "Test_AlgoritmoValutazioneRisposte.py", "Stato": "I"},
-        {"Codice": "TU-14", "Descrizione": "Verificare che il metodo evaluate() della classe AlgoritmoValutazioneRisposteImpl restituisca un risultato di tipo corretto", "File di riferimento": "Test_AlgoritmoValutazioneRisposte.py", "Stato": "I"},
-        {"Codice": "TU-15", "Descrizione": "Verificare che il metodo evaluate() della classe AlgoritmoValutazioneRisposteImpl restituisca valori compresi nell'intervallo [0,1]", "File di riferimento": "Test_AlgoritmoValutazioneRisposte.py", "Stato": "I"},
-        {"Codice": "TU-16", "Descrizione": "Verificare che la classe Scorer venga istanziata correttamente", "File di riferimento": "Test_Scorer.py", "Stato": "I"},
-        {"Codice": "TU-17", "Descrizione": "Verificare che il metodo score() della classe Scorer restituisca un dizionario con le metriche corrette", "File di riferimento": "Test_Scorer.py", "Stato": "I"},
-        {"Codice": "TU-18", "Descrizione": "Verificare che i valori restituiti dal metodo score() della classe Scorer siano compresi nell'intervallo [0,1]", "File di riferimento": "Test_Scorer.py", "Stato": "I"},
-        {"Codice": "TU-19", "Descrizione": "Verificare che la classe RisultatoSingolaDomanda venga istanziata correttamente", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-20", "Descrizione": "Verificare che il metodo getId() della classe RisultatoSingolaDomanda restituisca correttamente l'id", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-21", "Descrizione": "Verificare che il metodo getDomanda() della classe RisultatoSingolaDomanda restituisca correttamente la domanda", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-22", "Descrizione": "Verificare che il metodo getRisposta() della classe RisultatoSingolaDomanda restituisca correttamente la risposta attesa", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-23", "Descrizione": "Verificare che il metodo getRispostaLLM() della classe RisultatoSingolaDomanda restituisca correttamente la risposta dell'LLM", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-24", "Descrizione": "Verificare che il metodo getScore() della classe RisultatoSingolaDomanda restituisca correttamente lo score", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-25", "Descrizione": "Verificare che il metodo getMetriche() della classe RisultatoSingolaDomanda restituisca correttamente le metriche", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-26", "Descrizione": "Verificare che la classe RisultatoTest venga istanziata correttamente", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-27", "Descrizione": "Verificare che il metodo getId() della classe RisultatoTest restituisca correttamente l'id", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-28", "Descrizione": "Verificare che il metodo getScore() della classe RisultatoTest restituisca correttamente lo score generale", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-29", "Descrizione": "Verificare che il metodo getLLM() della classe RisultatoTest restituisca correttamente il nome dell'LLM", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-30", "Descrizione": "Verificare che il metodo getDataEsecuzione() della classe RisultatoTest restituisca correttamente la data di esecuzione", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-31", "Descrizione": "Verificare che il metodo getNomeSet() della classe RisultatoTest restituisca correttamente il nome del set", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-32", "Descrizione": "Verificare che il metodo getRisultatiDomande() della classe RisultatoTest restituisca correttamente i risultati delle domande", "File di riferimento": "TestRisultatoTest.py", "Stato": "I"},
-        {"Codice": "TU-33", "Descrizione": "Verificare che la classe LLMAdapter venga istanziata correttamente", "File di riferimento": "TestLLMAdapter.py", "Stato": "I"},
-        {"Codice": "TU-34", "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter restituisca una risposta non vuota", "File di riferimento": "TestLLMAdapter.py", "Stato": "I"},
-        {"Codice": "TU-35", "Descrizione": "Verificare che il metodo getName() della classe LLMAdapter restituisca correttamente il nome dell'LLM", "File di riferimento": "TestLLMAdapter.py", "Stato": "I"},
-        {"Codice": "TU-36", "Descrizione": "Verificare che la classe AddElementoDomandaService venga istanziata correttamente", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-37", "Descrizione": "Verificare che il metodo addElementoDomanda() restituisca l'elemento domanda creato", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-38", "Descrizione": "Verificare che venga sollevata un'eccezione quando i parametri di input per addElementoDomanda() non sono validi", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-39", "Descrizione": "Verificare che la classe GetElementoDomandaService venga istanziata correttamente", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-40", "Descrizione": "Verificare che il metodo getElementoDomandaById() restituisca l'elemento domanda corretto", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-41", "Descrizione": "Verificare che venga sollevata un'eccezione quando l'id fornito a getElementoDomandaById() non è valido", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-42", "Descrizione": "Verificare che la classe GetAllElementiDomandaService venga istanziata correttamente", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-43", "Descrizione": "Verificare che il metodo getAllElementiDomanda() restituisca tutti gli elementi domanda", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-44", "Descrizione": "Verificare che la classe DeleteElementiDomandaService venga istanziata correttamente", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-45", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() elimini correttamente gli elementi domanda", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-46", "Descrizione": "Verificare che venga sollevata un'eccezione quando gli id forniti a deleteElementiDomandaById() non sono validi", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-47", "Descrizione": "Verificare che la classe UpdateElementoDomandaService venga istanziata correttamente", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-48", "Descrizione": "Verificare che il metodo updateElementoDomandaById() aggiorni correttamente l'elemento domanda", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-49", "Descrizione": "Verificare che venga sollevata un'eccezione quando i parametri di input per updateElementoDomandaById() non sono validi", "File di riferimento": "TestElementoDomandaServices.py", "Stato": "I"},
-        {"Codice": "TU-50", "Descrizione": "Verificare che la classe ExecuteTestService venga istanziata correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TU-51", "Descrizione": "Verificare che il metodo executeTest() esegua correttamente il test", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TU-52", "Descrizione": "Verificare che la classe GetTestStatusService venga istanziata correttamente", "File di riferimento": "TestGetTestStatusService.py", "Stato": "I"},
-        {"Codice": "TU-53", "Descrizione": "Verificare che il metodo getTestStatus() restituisca lo stato corrente del test", "File di riferimento": "TestGetTestStatusService.py", "Stato": "I"},
-        {"Codice": "TU-54", "Descrizione": "Verificare che la classe GetRisultatoTestService venga istanziata correttamente", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-55", "Descrizione": "Verificare che il metodo getRisultatoTestById() restituisca il risultato del test corretto", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-56", "Descrizione": "Verificare che venga sollevata un'eccezione quando l'id fornito a getRisultatoTestById() non è valido", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-57", "Descrizione": "Verificare che la classe GetAllRisultatiTestService venga istanziata correttamente", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-58", "Descrizione": "Verificare che il metodo getAllRisultatiTest() restituisca tutti i risultati dei test", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-59", "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaService venga istanziata correttamente", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"},
-        {"Codice": "TU-60", "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() restituisca il risultato corretto", "File di riferimento": "TestRisultatoTestServices.py", "Stato": "I"}
+        {"Codice": "TUB-", "Descrizione": "Verificare che ", "Stato": "I"},
+        {"Codice": "TUB-1", "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-2", "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-3", "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-4", "Descrizione": "Verificare che il metodo getText() della classe Domanda restituisca correttamente il testo della domanda", "Stato": "I"},
+        {"Codice": "TUB-5", "Descrizione": "Verificare che il metodo setText() della classe Domanda modifichi correttamente il testo della domanda", "Stato": "I"},
+        {"Codice": "TUB-6", "Descrizione": "Verificare che il metodo getText() della classe Risposta restituisca correttamente il testo della risposta", "Stato": "I"},
+        {"Codice": "TUB-7", "Descrizione": "Verificare che il metodo setText() della classe Risposta modifichi correttamente il testo della risposta", "Stato": "I"},
+        {"Codice": "TUB-8", "Descrizione": "Verificare che il metodo getId() della classe ElementoDomanda restituisca correttamente l'id dell'elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-9", "Descrizione": "Verificare che il metodo getDomanda() della classe ElementoDomanda restituisca correttamente l'oggetto Domanda", "Stato": "I"},
+        {"Codice": "TUB-10", "Descrizione": "Verificare che il metodo getRisposta() della classe ElementoDomanda restituisca correttamente l'oggetto Risposta", "Stato": "I"},
+        {"Codice": "TUB-11", "Descrizione": "Verificare che il metodo setDomanda() della classe ElementoDomanda modifichi correttamente l'oggetto Domanda", "Stato": "I"},
+        {"Codice": "TUB-12", "Descrizione": "Verificare che il metodo setRisposta() della classe ElementoDomanda modifichi correttamente l'oggetto Risposta", "Stato": "I"},
+
+        {"Codice": "TUB-13", "Descrizione": "Verificare che la classe TestStatusTrackerImpl venga istanziata correttamente", "Stato": "I" },
+        {"Codice": "TUB-14", "Descrizione": "Verificare che il metodo start_test() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I" },
+        {"Codice": "TUB-15", "Descrizione": "Verificare che il metodo test_update_progress() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
+        {"Codice": "TUB-16", "Descrizione": "Verificare che il metodo set_id_risultato() modifichi correttamente il campo id_risultato della classe TestStatusTrackerImpl", "Stato": "I"},
+        {"Codice": "TUB-17", "Descrizione": "Verificare che il metodo finish_test() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
+        {"Codice": "TUB-18", "Descrizione": "Verificare che il metodo set_error() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
+        {"Codice": "TUB-19", "Descrizione": "Verificare che il metodo get_status() della class TestStatusTrackerImpl ritorni correttamente un dizionario con i dati corretti", "Stato": "I"},
+        {"Codice": "TUB-20", "Descrizione": "Verificare che la classe Scorer venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-21", "Descrizione": "Verificare che la classe Scorer presenti i corretti valori di ritorno", "Stato": "I"},
+        {"Codice": "TUB-22", "Descrizione": "Verificare che la classe Scorer utilizzi le metriche corrette", "Stato": "I"},
+        {"Codice": "TUB-23", "Descrizione": "Verificare che la classe AlgoritmoValutazioneRisposteImpl venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-24", "Descrizione": "Verificare che il metodo evaluate() della classe AlgoritmoValutazioneRisposteImpl ritorni correttamente le metriche e i rispettivi valori", "Stato": "I"},
+        {"Codice": "TUB-25", "Descrizione": "Verificare che la classe AddElementoDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-26", "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService inserisca correttamente l'ElementoDomanda e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-27", "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di valori invalidi nell'ElementoDomanda", "Stato": "I"},
+        {"Codice": "TUB-28", "Descrizione": "Verificare che la classe GetElementoDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-29", "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni correttamente l'ElementoDomanda richiesto", "Stato": "I"},
+        {"Codice": "TUB-30", "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
+        {"Codice": "TUB-31", "Descrizione": "Verificare che la classe GetAllElementiDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-32", "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni correttamente un set di ElementoDomanda", "Stato": "I"},
+        {"Codice": "TUB-33", "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni un set vuoto in caso non siano presenti elementi", "Stato": "I"},
+        {"Codice": "TUB-34", "Descrizione": "Verificare che la classe DeleteElementiDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-35", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni True in caso di esito positivo dell'eliminazione", "Stato": "I"},
+        {"Codice": "TUB-36", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativi invalidi", "Stato": "I"},
+        {"Codice": "TUB-37", "Descrizione": "Verificare che la classe UpdateElementoDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-38", "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni True in caso di esito positivo dell'aggiornamento", "Stato": "I"},
+        {"Codice": "TUB-39", "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativo, domanda o risposta invalidi", "Stato": "I"},
+        {"Codice": "TUB-40", "Descrizione": "Verificare che la classe ExecuteTestService venga instanziata correttamete", "Stato": "I"},
+        {"Codice": "TUB-41", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService avvii correttamente il test", "Stato": "I"},
+        {"Codice": "TUB-42", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso non siano presenti domande", "Stato": "I"},
+        {"Codice": "TUB-43", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso sia presente un'errore di tipo Exception", "Stato": "I"},
+        {"Codice": "TUB-44", "Descrizione": "Verificare che la classe GetTestStatusService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-45", "Descrizione": "Verificare che il metodo getTestStatus() della classe GetTestStatusService ritorni correttamente un dizionario con i dati corretti", "Stato": "I"},
+        {"Codice": "TUB-46", "Descrizione": "Verificare che la classe GetRisultatoTestService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-47", "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni correttamente il RisultatoTest richiesto", "Stato": "I"},
+        {"Codice": "TUB-48", "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
+        {"Codice": "TUB-49", "Descrizione": "Verificare che la classe GetAllRisultatiTestService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-50", "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni correttamente un set di RisultatoTest", "Stato": "I"},
+        {"Codice": "TUB-51", "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni un set vuoto in caso non siano presenti risultati", "Stato": "I"},
+        {"Codice": "TUB-52", "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaService venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-53", "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni correttamente il RisultatoSingolaDomanda richiesto", "Stato": "I"},
+        {"Codice": "TUB-54", "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
+        
+        {"Codice": "TUB-55", "Descrizione": "Verificare che la classe AddElementoDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-56", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController aggiunga correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma", "Stato": "I"},
+        {"Codice": "TUB-57", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui domanda o risposta abbiano valori invalidi", "Stato": "I"},
+        {"Codice": "TUB-58", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-59", "Descrizione": "Verificare che la classe GetElementoDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-60", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni correttamente una risposta contenente l'ElementoDomanda richiesto", "Stato": "I"},
+        {"Codice": "TUB-61", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui l'identificativo abbia un valore invalido", "Stato": "I"},
+        {"Codice": "TUB-62", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-63", "Descrizione": "Verificare che la classe GetAllElementiDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-64", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista degli elementi", "Stato": "I"},
+        {"Codice": "TUB-65", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti elementi", "Stato": "I"},
+        {"Codice": "TUB-66", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-67", "Descrizione": "Verificare che la classe DeleteElementiDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-68", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController elimini correttamente gli elementi e ne ritorni un messaggio di conferma", "Stato": "I"},
+        {"Codice": "TUB-69", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui siano presenti identificativi invalidi", "Stato": "I"},
+        {"Codice": "TUB-70", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-71", "Descrizione": "Verificare che la classe UpdateElementoDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-72", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController aggiorni correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma", "Stato": "I"},
+        {"Codice": "TUB-73", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui sia presente una domanda o risposta non valida", "Stato": "I"},
+        {"Codice": "TUB-74", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui l'ElementoDomanda non venga trovato", "Stato": "I"},
+        {"Codice": "TUB-75", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-76", "Descrizione": "Verificare che la classe ExecuteTestController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-77", "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController avvii correttamente il test e ne ritorni un messaggio di conferma", "Stato": "I"},
+        {"Codice": "TUB-78", "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-79", "Descrizione": "Verificare che la classe GetTestStatusController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-80", "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni correttamente una risposta contenente lo status", "Stato": "I"},
+        {"Codice": "TUB-81", "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-82", "Descrizione": "Verificare che la classe GetRisultatoTestController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-83", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni correttamente una risposta contenente il RisultatoTest richiesto", "Stato": "I"},
+        {"Codice": "TUB-84", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui il RisultatoTest non venga trovato", "Stato": "I"},
+        {"Codice": "TUB-85", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-86", "Descrizione": "Verificare che la classe GetAllRisultatiTestController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-87", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista dei risultati", "Stato": "I"},
+        {"Codice": "TUB-88", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti risultati", "Stato": "I"},
+        {"Codice": "TUB-89", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-90", "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaController venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-91", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni correttamente una risposta contenente il RisultatoSingolaDomanda richiesto", "Stato": "I"},
+        {"Codice": "TUB-92", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un errore nel caso in cui si inserisca un identificativo invalido", "Stato": "I"},
+        {"Codice": "TUB-93", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui il RisultatoSingolaDomanda non venga trovato", "Stato": "I"},
+        {"Codice": "TUB-94", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+
+        {"Codice": "TUB-95", "Descrizione": "Verificare che la classe LLMAdapter venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-96", "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ponga la domanda all'LLM e ne ritorni la risposta", "Stato": "I"},
+        {"Codice": "TUB-97", "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ritorni un errore di tipo Exception in caso di problemi di comunicazione con l'LLM", "Stato": "I"},
+        {"Codice": "TUB-98", "Descrizione": "Verificare che il metodo getName() della classe LLMAdapter ritorni il nome dell'LLM interrogato", "Stato": "I"},
+        {"Codice": "TUB-99", "Descrizione": "Verificare che la classe ElementoDomandaPersistenceMapper venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-100", "Descrizione": "Verificare che il metodo fromElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomandaEntity in un oggetto di tipo ElementoDomanda e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-101", "Descrizione": "Verificare che il metodo toElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomanda in un oggetto di tipo ElementoDomandaEntity e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-102", "Descrizione": "Verificare che il metodo fromDomandaRisposta() avendo in input una domanda ed una risposta costruisca correttamente un oggetto di tipo ElementoDomandaEntity e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-103", "Descrizione": "Verificare che la classe RisultatoSingolaDomandaPersistenceMapper venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-104", "Descrizione": "Verificare che il metodo fromRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomandaEntity in un oggetto di tipo RisultatoSingolaDomanda e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-105", "Descrizione": "Verificare che il metodo toRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomanda in un oggetto di tipo RisultatoSingolaDomandaEntity e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-106", "Descrizione": "Verificare che la classe RisultatoTestPersistenceMapper venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-107", "Descrizione": "Verificare che il metodo fromRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTestEntity in un oggetto di tipo RisultatoTest e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-108", "Descrizione": "Verificare che il metodo toRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTest in un oggetto di tipo RisultatoTestEntity e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-109", "Descrizione": "Verificare che la classe ElementoDomandaPersistenceAdapter venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-110", "Descrizione": "Verificare che il metodo saveElementoDomanda() salvi correttamente l'ElementoDomanda all'interno del database e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-111", "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database", "Stato": "I"},
+        {"Codice": "TUB-112", "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-113", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni correttamente un oggetto di tipo ElementoDomanda dal database", "Stato": "I"},
+        {"Codice": "TUB-114", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database", "Stato": "I"},
+        {"Codice": "TUB-115", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
+        {"Codice": "TUB-116", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-117", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set di ElementoDomanda dal database", "Stato": "I"},
+        {"Codice": "TUB-118", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set vuoto in caso non siano presenti elementi nel database", "Stato": "I"},
+        {"Codice": "TUB-119", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
+        {"Codice": "TUB-120", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-121", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni True in caso di esito positivo dell'eliminazione degli elementi dal database", "Stato": "I"},
+        {"Codice": "TUB-122", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso di problemi di eliminazione nel database", "Stato": "I"},
+        {"Codice": "TUB-123", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-124", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni True ritorni True in caso di esito positivo dell'aggiornamento dell'ElementoDomanda nel database", "Stato": "I"},
+        {"Codice": "TUB-125", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database", "Stato": "I"},
+        {"Codice": "TUB-126", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso di problemi di aggiornamento nel database", "Stato": "I"},
+        {"Codice": "TUB-127", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-128", "Descrizione": "Verificare che la classe RisultatoTestPersistenceAdapter venga istanziata correttamente", "Stato": "I"},
+        {"Codice": "TUB-129", "Descrizione": "Verificare che il metodo saveRisultatoTest() salvi correttamente il RisultatoTest all'interno del database e lo ritorni", "Stato": "I"},
+        {"Codice": "TUB-130", "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database", "Stato": "I"},
+        {"Codice": "TUB-131", "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-132", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni correttamente un oggetto di tipo RisultatoTest dal database", "Stato": "I"},
+        {"Codice": "TUB-133", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un errore di tipo ValueError in caso il RisultatoTest non venga trovato nel database", "Stato": "I"},
+        {"Codice": "TUB-134", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
+        {"Codice": "TUB-135", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-136", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set di RisultatoTest dal database", "Stato": "I"},
+        {"Codice": "TUB-137", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set vuoto in caso non siano presenti risultati nel database", "Stato": "I"},
+        {"Codice": "TUB-138", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
+        {"Codice": "TUB-139", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel serve", "Stato": "I"},
+        {"Codice": "TUB-140", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni correttamente un oggetto di tipo RisultatoSingolaDomanda dal database", "Stato": "I"},
+        {"Codice": "TUB-141", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un errore di tipo ValueError in caso il RisultatoSingolaDomanda non venga trovato nel database", "Stato": "I"},
+        {"Codice": "TUB-142", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
+        {"Codice": "TUB-143", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
+        {"Codice": "TUB-144", "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema"},
+        {"Codice": "TUB-145", "Descrizione": "Verificare che nella vista DomandeView si possano eliminare gli elementi domanda selezionati", "Stato": "I"},
+        {"Codice": "TUB-146", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di un elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-147", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di modifica di un elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-148", "Descrizione": "Verificare che nella vista AggiungiDomandaView si possano compilare i campi del form ed inserire l'elemento domanda nel sistema", "Stato": "I"},
+        {"Codice": "TUB-149", "Descrizione": "Verificare che nella vista ModificaDomandaView si possano modificare i campi dell'elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-150", "Descrizione": "Verificare che nella vista MofificaDomandaView si possa annullare la modifica dell'elemento domanda", "Stato": "I"},
+        {"Codice": "TUB-151", "Descrizione": "Verificare che nella vista ModificaDomandaView riesca a caricare i dati dell'elemento domanda da modificare", "Stato": "I"},
+        {"Codice": "TUB-152", "Descrizione": "Verificare che nella vista TestView si possa eseguire un test", "Stato": "I"},
+        {"Codice": "TUB-153", "Descrizione": "Verificare che nella vista TestView una volta avviato un test si veda la barra progressiva", "Stato": "I"},
+        {"Codice": "TUB-154", "Descrizione": "Verificare che nella vista TestView in caso di errore, venga visualizzato un messaggio per avvisare l'utente", "Stato": "I"},
+        {"Codice": "TUB-155", "Descrizione": "Verificare che nella vista StoricoViewTest si possano visualizzare lo storico dei test effettuati", "Stato": "I"},
+        {"Codice": "TUB-156", "Descrizione": "Verificare che nella vista StoricoViewTest si possa cliccare su un test per navigare verso la pagina del risultato del test", "Stato": "I"},
+        {"Codice": "TUB-157", "Descrizione": "Verificare che nella vista TestResultView si possano visualizzare i dettagli del test", "Stato": "I"},
+        {"Codice": "TUB-158", "Descrizione": "Verificare che nella vista TestResultView si possa vedere un elenco di tutte le singole domande effettuate", "Stato": "I"},
+        {"Codice": "TUB-159", "Descrizione": "Verificare che nella vista TestResultView si possa cliccare su un risultato singola domanda per visualizzarne i dettagli attraverso un popup", "Stato": "I"}
       ]
     },
     "TestIntegrazione": {
       "keys": [
         "Codice",
         "Descrizione",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice": "TI-1", "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-2", "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-3", "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-4", "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-5", "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-6", "Descrizione": "Verificare che l'integrazione tra AlgoritmoValutazioneRisposteImpl e Scorer funzioni correttamente", "File di riferimento": "Test_AlgoritmoValutazioneRisposte.py", "Stato": "I"},
-        {"Codice": "TI-7", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e LLMAdapter funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-8", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e AlgoritmoValutazioneRisposteImpl funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-9", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e SaveRisultatoTestPort funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-10", "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e GetAllElementiDomandaPort funzioni correttamente", "File di riferimento": "TestExecuteTestServices.py", "Stato": "I"},
-        {"Codice": "TI-11", "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPostgreSQLRepository funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-12", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPostgreSQLRepository funzioni correttamente", "File di riferimento": "TestRisultatoTestPersistenceAdapter.py", "Stato": "I"},
-        {"Codice": "TI-13", "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPersistenceMapper funzioni correttamente", "File di riferimento": "TestElementoDomandaPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-14", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPersistenceMapper funzioni correttamente", "File di riferimento": "TestRisultatoTestPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-15", "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoSingolaDomandaPersistenceMapper funzioni correttamente", "File di riferimento": "TestRisultatoSingolaDomandaPersistenceMapper.py", "Stato": "I"},
-        {"Codice": "TI-16", "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaController e AddElementoDomandaService funzioni correttamente", "File di riferimento": "TestAddElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-17", "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaController e GetElementoDomandaService funzioni correttamente", "File di riferimento": "TestGetElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-18", "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaController e GetAllElementiDomandaService funzioni correttamente", "File di riferimento": "TestGetAllElementiDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-19", "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaController e DeleteElementiDomandaService funzioni correttamente", "File di riferimento": "TestDeleteElementiDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-20", "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaController e UpdateElementoDomandaService funzioni correttamente", "File di riferimento": "TestUpdateElementoDomandaController.py", "Stato": "I"},
-        {"Codice": "TI-21", "Descrizione": "Verificare che l'integrazione tra ExecuteTestController e ExecuteTestService funzioni correttamente", "File di riferimento": "TestExecuteTestController.py", "Stato": "I"},
-        {"Codice": "TI-22", "Descrizione": "Verificare che l'integrazione tra GetTestStatusController e GetTestStatusService funzioni correttamente", "File di riferimento": "TestGetTestStatusController.py", "Stato": "I"},
-        {"Codice": "TI-23", "Descrizione": "Verificare che l'integrazione tra GetRisultatoTestController e GetRisultatoTestService funzioni correttamente", "File di riferimento": "TestGetRisultatoTestController.py", "Stato": "I"},
-        {"Codice": "TI-24", "Descrizione": "Verificare che l'integrazione tra GetAllRisultatiTestController e GetAllRisultatiTestService funzioni correttamente", "File di riferimento": "TestGetAllRisultatiTestController.py", "Stato": "I"},
-        {"Codice": "TI-25", "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente", "File di riferimento": "TestGetRisultatoSingolaDomandaController.py", "Stato": "I"}
+        {
+          "Codice": "TI-1",
+          "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-2",
+          "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-3",
+          "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-4",
+          "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-5",
+          "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaService e ElementoDomandaPersistenceAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-6",
+          "Descrizione": "Verificare che l'integrazione tra AlgoritmoValutazioneRisposteImpl e Scorer funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-7",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e LLMAdapter funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-8",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e AlgoritmoValutazioneRisposteImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-9",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e SaveRisultatoTestPort funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-10",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestService e GetAllElementiDomandaPort funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-11",
+          "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPostgreSQLRepository funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-12",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPostgreSQLRepository funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-13",
+          "Descrizione": "Verificare che l'integrazione tra ElementoDomandaPersistenceAdapter e ElementoDomandaPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-14",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoTestPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-15",
+          "Descrizione": "Verificare che l'integrazione tra RisultatoTestPersistenceAdapter e RisultatoSingolaDomandaPersistenceMapper funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-16",
+          "Descrizione": "Verificare che l'integrazione tra AddElementoDomandaController e AddElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-17",
+          "Descrizione": "Verificare che l'integrazione tra GetElementoDomandaController e GetElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-18",
+          "Descrizione": "Verificare che l'integrazione tra GetAllElementiDomandaController e GetAllElementiDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-19",
+          "Descrizione": "Verificare che l'integrazione tra DeleteElementiDomandaController e DeleteElementiDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-20",
+          "Descrizione": "Verificare che l'integrazione tra UpdateElementoDomandaController e UpdateElementoDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-21",
+          "Descrizione": "Verificare che l'integrazione tra ExecuteTestController e ExecuteTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-22",
+          "Descrizione": "Verificare che l'integrazione tra GetTestStatusController e GetTestStatusService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-23",
+          "Descrizione": "Verificare che l'integrazione tra GetRisultatoTestController e GetRisultatoTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-24",
+          "Descrizione": "Verificare che l'integrazione tra GetAllRisultatiTestController e GetAllRisultatiTestService funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-25",
+          "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente",
+          "Stato": "I"
+        },
+        {"Codice": "TI-26", "Descrizione": "Verificare che la vista Domandeview invii correttamente la richiesta di recupero degli elementi domanda dal backend","Stato": "I"},
+        {"Codice": "TI-27", "Descrizione": "Verificare che la vista DomandeView invii correttamente la richiesta di elminazione degli elementi domanda selezionati", "Stato": "I"},
+        {"Codice": "TI-28", "Descrizione": "Verificare che la vista AggiungiDomandaView invii correttamente la richiesta di aggiunta di un elemento domanda", "Stato": "I"},
+        {"Codice": "TI-29", "Descrizione": "Verificare che la vista ModificaDomandaView invii correttamente la richiesta di modifica di un elemento domanda","Stato": "I"},
+        {"Codice": "TI-30", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta al backend per avviare un test",  "Stato": "I" },
+        {"Codice": "TI-31", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta status al backend per controllare lo stato di avanzamento del test","Stato": "I" },
+        {"Codice": "TI-32", "Descrizione": "Verificare che, al completamento di un test, il risultato venga correttamente salvato nel database e mostrato all'utente",  "Stato": "I"},
+        {"Codice": "TI-33", "Descrizione": "Verificare che, accedendo alla pagina dei risultati, il frontend recuperi i dati tramite API e li visualizzi correttamente", "Stato": "I" },
+        {"Codice": "TI-34", "Descrizione": "Verificare che, accedendo alla pagina dei risultati e cliccando su un risultato singola domanda, venga inviata una richiesta per caricare i dati per quella domanda",  "Stato": "I" },
+        {"Codice": "TI-35", "Descrizione": "Verificare che la vista StoricoView invii correttamente la richiesta per caricare tutto lo storico dei test eseguiti", "Stato": "I"}
       ]
     },
     "TestSistema": {
@@ -630,103 +866,508 @@
         "Codice",
         "Descrizione",
         "Requisito",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice":"TS-1","Descrizione":"Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema","Requisito":"RF-1.1","File di riferimento":"test_visualizzazione_elementi.py","Stato":"I"},
-        {"Codice":"TS-2","Descrizione":"Verificare che l'utente possa visualizzare un singolo elemento domanda","Requisito":"RF-1.1.1","File di riferimento":"test_visualizzazione_singolo_elemento.py","Stato":"I"},
-        {"Codice":"TS-3","Descrizione":"Verificare che l'utente possa visualizzare il testo di una singola/determinata domanda","Requisito":"RF-1.1.1.1","File di riferimento":"test_visualizzazione_testo_domanda.py","Stato":"I"},
-        {"Codice":"TS-4","Descrizione":"Verificare che l'utente possa visualizzare il testo della risposta attesa associata ad una singola/determinata domanda","Requisito":"RF-1.1.1.2","File di riferimento":"test_visualizzazione_risposta_attesa.py","Stato":"I"},
-        {"Codice":"TS-5","Descrizione":"Verificare che l'utente possa modificare una domanda già presente nel sistema","Requisito":"RF-1.2","File di riferimento":"test_modifica_domanda.py","Stato":"I"},
-        {"Codice":"TS-6","Descrizione":"Verificare che l'utente possa modificare una risposta attesa presente nel sistema","Requisito":"RF-1.3","File di riferimento":"test_modifica_risposta.py","Stato":"I"},
-        {"Codice":"TS-7","Descrizione":"Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema","Requisito":"RF-1.4","File di riferimento":"test_eliminazione_elemento.py","Stato":"I"},
-        {"Codice":"TS-8","Descrizione":"Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda","Requisito":"RF-1.5","File di riferimento":"test_inserimento_elemento.py","Stato":"I"},
-        {"Codice":"TS-9","Descrizione":"Verificare che l'utente possa immettere manualmente una domanda all'interno del sistema","Requisito":"RF-1.5.1.1","File di riferimento":"test_inserimento_manuale_domanda.py","Stato":"I"},
-        {"Codice":"TS-10","Descrizione":"Verificare che l'utente possa immettere manualmente una risposta attesa all'interno del sistema","Requisito":"RF-1.5.1.2","File di riferimento":"test_inserimento_manuale_risposta.py","Stato":"I"},
-        {"Codice":"TS-11","Descrizione":"Verificare che l'utente possa inserire nel sistema degli elementi domanda presenti in un file strutturato","Requisito":"RF-2.5.2","File di riferimento":"test_caricamento_file_domande.py","Stato":"I"},
-        {"Codice":"TS-12","Descrizione":"Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set","Requisito":"RF-3.6","File di riferimento":"test_creazione_set.py","Stato":"I"},
-        {"Codice":"TS-13","Descrizione":"Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema","Requisito":"RF-2.7","File di riferimento":"test_visualizzazione_set.py","Stato":"I"},
-        {"Codice":"TS-14","Descrizione":"Verificare che l'utente possa visualizzare un singolo elemento del set","Requisito":"RF-2.7.1","File di riferimento":"test_visualizzazione_elemento_set.py","Stato":"I"},
-        {"Codice":"TS-15","Descrizione":"Verificare che l'utente possa visualizzare gli elementi domanda presenti in un set presente nel sistema","Requisito":"RF-2.8","File di riferimento":"test_visualizzazione_elementi_set.py","Stato":"I"},
-        {"Codice":"TS-16","Descrizione":"Verificare che l'utente possa modificare il nome di un set presente nel sistema","Requisito":"RF-2.9","File di riferimento":"test_modifica_nome_set.py","Stato":"I"},
-        {"Codice":"TS-17","Descrizione":"Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema","Requisito":"RF-2.10","File di riferimento":"test_eliminazione_set.py","Stato":"I"},
-        {"Codice":"TS-18","Descrizione":"Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema","Requisito":"RF-2.11","File di riferimento":"test_modifica_elementi_set.py","Stato":"I"},
-        {"Codice":"TS-19","Descrizione":"Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema","Requisito":"RF-1.12","File di riferimento":"test_esecuzione_test.py","Stato":"I"},
-        {"Codice":"TS-20","Descrizione":"Verificare che l'utente possa eseguire un test utilizzando un set di elementi domanda presenti nel sistema","Requisito":"RF-3.12.1","File di riferimento":"test_esecuzione_test_set.py","Stato":"I"},
-        {"Codice":"TS-21","Descrizione":"Verificare che l'utente possa visualizzare il risultato del test eseguito","Requisito":"RF-1.13","File di riferimento":"test_visualizzazione_risultato.py","Stato":"I"},
-        {"Codice":"TS-22","Descrizione":"Verificare che l'utente possa visualizzare nel risultato la valutazione generale del test eseguito","Requisito":"RF-1.13.1","File di riferimento":"test_visualizzazione_valutazione_generale.py","Stato":"I"},
-        {"Codice":"TS-23","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del test eseguito la valutazione di ogni singola domanda","Requisito":"RF-1.13.2","File di riferimento":"test_visualizzazione_valutazione_domande.py","Stato":"I"},
-        {"Codice":"TS-24","Descrizione":"Verificare che l'utente possa visualizzare nel risultato la lista delle domande presenti nel sistema eseguite nel test ordinate in modo crescente rispetto alla singola valutazione","Requisito":"RF-1.13.3","File di riferimento":"test_visualizzazione_lista_ordinata.py","Stato":"I"},
-        {"Codice":"TS-25","Descrizione":"Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda","Requisito":"RF-1.14","File di riferimento":"test_visualizzazione_risultato_singola_domanda.py","Stato":"I"},
-        {"Codice":"TS-26","Descrizione":"Verificare che l'utente possa visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.1","File di riferimento":"test_visualizzazione_elemento_risultato.py","Stato":"I"},
-        {"Codice":"TS-27","Descrizione":"Verificare che l'utente possa visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.2","File di riferimento":"test_visualizzazione_risposta_llm.py","Stato":"I"},
-        {"Codice":"TS-28","Descrizione":"Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema","Requisito":"RF-1.14.3","File di riferimento":"test_visualizzazione_metriche.py","Stato":"I"},
-        {"Codice":"TS-29","Descrizione":"Verificare che l'utente possa visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda","Requisito":"RF-1.14.4","File di riferimento":"test_visualizzazione_valutazione_metriche.py","Stato":"I"},
-        {"Codice":"TS-30","Descrizione":"Verificare che l'utente possa scaricare il risultato di un test eseguito","Requisito":"RF-2.15","File di riferimento":"test_download_risultato.py","Stato":"I"},
-        {"Codice":"TS-31","Descrizione":"Verificare che l'utente possa caricare un file contenente i risultati di un test","Requisito":"RF-2.16","File di riferimento":"test_caricamento_risultato.py","Stato":"I"},
-        {"Codice":"TS-32","Descrizione":"Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione","Requisito":"RF-1.17","File di riferimento":"test_visualizzazione_storico.py","Stato":"I"},
-        {"Codice":"TS-33","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test","Requisito":"RF-1.17.1.1","File di riferimento":"test_visualizzazione_data_storico.py","Stato":"I"},
-        {"Codice":"TS-34","Descrizione":"Verificare che l'utente possa visualizzare, all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test","Requisito":"RF-1.17.1.2","File di riferimento":"test_visualizzazione_score_storico.py","Stato":"I"},
-        {"Codice":"TS-35","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test","Requisito":"RF-1.17.1.3","File di riferimento":"test_visualizzazione_llm_storico.py","Stato":"I"},
-        {"Codice":"TS-36","Descrizione":"Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test","Requisito":"RF-1.17.1.4","File di riferimento":"test_visualizzazione_set_storico.py","Stato":"I"},
-        {"Codice":"TS-37","Descrizione":"Verificare che l'utente possa filtrare gli elementi dello storico dei test in base al nome del set di domande","Requisito":"RF-2.18.1","File di riferimento":"test_filtro_set_storico.py","Stato":"I"},
-        {"Codice":"TS-38","Descrizione":"Verificare che l'utente possa filtrare gli elementi dello storico dei test in base all'LLM utilizzato","Requisito":"RF-2.18.2","File di riferimento":"test_filtro_llm_storico.py","Stato":"I"},
-        {"Codice":"TS-39","Descrizione":"Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test","Requisito":"RF-2.19","File di riferimento":"test_confronto_test.py","Stato":"I"},
-        {"Codice":"TS-40","Descrizione":"Verificare che l'utente possa visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni","Requisito":"RF-2.19.1","File di riferimento":"test_visualizzazione_confronto.py","Stato":"I"},
-        {"Codice":"TS-41","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati","Requisito":"RF-2.19.1.1","File di riferimento":"test_visualizzazione_valutazioni_confronto.py","Stato":"I"},
-        {"Codice":"TS-42","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati","Requisito":"RF-2.19.1.2","File di riferimento":"test_visualizzazione_set_confronto.py","Stato":"I"},
-        {"Codice":"TS-43","Descrizione":"Verificare che l'utente possa visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati","Requisito":"RF-2.19.1.3","File di riferimento":"test_visualizzazione_llm_confronto.py","Stato":"I"},
-        {"Codice":"TS-44","Descrizione":"Verificare che l'utente possa visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda presente nel sistema","Requisito":"RF-2.19.2","File di riferimento":"test_visualizzazione_dettaglio_confronto.py","Stato":"I"},
-        {"Codice":"TS-45","Descrizione":"Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test","Requisito":"RF-2.20","File di riferimento":"test_confronto_singola_domanda.py","Stato":"I"},
-        {"Codice":"TS-46","Descrizione":"Verificare che l'utente possa verificare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione","Requisito":"RF-2.20.1","File di riferimento":"test_visualizzazione_elemento_confronto.py","Stato":"I"},
-        {"Codice":"TS-47","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test","Requisito":"RF-2.20.2","File di riferimento":"test_visualizzazione_risposta_confronto.py","Stato":"I"},
-        {"Codice":"TS-48","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test","Requisito":"RF-2.20.3","File di riferimento":"test_visualizzazione_llm_confronto_dettagliato.py","Stato":"I"},
-        {"Codice":"TS-49","Descrizione":"Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test","Requisito":"RF-2.20.4","File di riferimento":"test_visualizzazione_valutazione_confronto.py","Stato":"I"},
-        {"Codice":"TS-50","Descrizione":"Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema","Requisito":"RF-2.21","File di riferimento":"test_notifica_errore_caricamento.py","Stato":"I"},
-        {"Codice":"TS-51","Descrizione":"Verificare che l'utente venga notificato se il file caricato contiene dati in un formato errato","Requisito":"RF-2.21.1","File di riferimento":"test_notifica_formato_errato.py","Stato":"I"},
-        {"Codice":"TS-52","Descrizione":"Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine","Requisito":"RF-3.22","File di riferimento":"test_notifica_errore_creazione_set.py","Stato":"I"},
-        {"Codice":"TS-53","Descrizione":"Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema","Requisito":"RF-3.22.1","File di riferimento":"test_notifica_nome_duplicato.py","Stato":"I"},
-        {"Codice":"TS-54","Descrizione":"Verificare che l'utente possa annullare l'operazione di eliminazione di un set","Requisito":"RF-2.23","File di riferimento":"test_annullamento_eliminazione_set.py","Stato":"I"},
-        {"Codice":"TS-55","Descrizione":"Verificare che l'utente possa annullare l'operazione di modifica di una domanda","Requisito":"RF-3.24","File di riferimento":"test_annullamento_modifica_domanda.py","Stato":"I"},
-        {"Codice":"TS-56","Descrizione":"Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa","Requisito":"RF-3.25","File di riferimento":"test_annullamento_modifica_risposta.py","Stato":"I"},
-        {"Codice":"TS-57","Descrizione":"Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda","Requisito":"RF-1.26","File di riferimento":"test_annullamento_eliminazione_elemento.py","Stato":"I"}
+        {
+          "Codice": "TS-1",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema",
+          "Requisito": "RF-1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-2",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda",
+          "Requisito": "RF-1.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-3",
+          "Descrizione": "Verificare che l'utente possa visualizzare il testo di una singola/determinata domanda",
+          "Requisito": "RF-1.1.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-4",
+          "Descrizione": "Verificare che l'utente possa visualizzare il testo della risposta attesa associata ad una singola/determinata domanda",
+          "Requisito": "RF-1.1.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-5",
+          "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema",
+          "Requisito": "RF-1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-6",
+          "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema",
+          "Requisito": "RF-1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-7",
+          "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema",
+          "Requisito": "RF-1.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-8",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda",
+          "Requisito": "RF-1.5",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-9",
+          "Descrizione": "Verificare che l'utente possa immettere manualmente una domanda all'interno del sistema",
+          "Requisito": "RF-1.5.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-10",
+          "Descrizione": "Verificare che l'utente possa immettere manualmente una risposta attesa all'interno del sistema",
+          "Requisito": "RF-1.5.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-11",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema degli elementi domanda presenti in un file strutturato",
+          "Requisito": "RF-2.5.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-12",
+          "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set",
+          "Requisito": "RF-3.6",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-13",
+          "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-2.7",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-14",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento del set",
+          "Requisito": "RF-2.7.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-15",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti in un set presente nel sistema",
+          "Requisito": "RF-2.8",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-16",
+          "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema",
+          "Requisito": "RF-2.9",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-17",
+          "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-2.10",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-18",
+          "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema",
+          "Requisito": "RF-2.11",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-19",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema",
+          "Requisito": "RF-1.12",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-20",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando un set di elementi domanda presenti nel sistema",
+          "Requisito": "RF-3.12.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-21",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito",
+          "Requisito": "RF-1.13",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-22",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la valutazione generale del test eseguito",
+          "Requisito": "RF-1.13.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-23",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del test eseguito la valutazione di ogni singola domanda",
+          "Requisito": "RF-1.13.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-24",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la lista delle domande presenti nel sistema eseguite nel test ordinate in modo crescente rispetto alla singola valutazione",
+          "Requisito": "RF-1.13.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-25",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda",
+          "Requisito": "RF-1.14",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-26",
+          "Descrizione": "Verificare che l'utente possa visualizzare l'elemento domanda nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-27",
+          "Descrizione": "Verificare che l'utente possa visualizzare la risposta data dall'LLM nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-28",
+          "Descrizione": "Verificare che l'utente possa visualizzare il nome delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda presente nel sistema",
+          "Requisito": "RF-1.14.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-29",
+          "Descrizione": "Verificare che l'utente possa visualizzare la valutazione delle metriche utilizzate nella visualizzazione del risultato per singolo elemento domanda",
+          "Requisito": "RF-1.14.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-30",
+          "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito",
+          "Requisito": "RF-2.15",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-31",
+          "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test",
+          "Requisito": "RF-2.16",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-32",
+          "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti, ordinati in ordine decrescente rispetto all'ordine di esecuzione",
+          "Requisito": "RF-1.17",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-33",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente la data di esecuzione del test",
+          "Requisito": "RF-1.17.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-34",
+          "Descrizione": "Verificare che l'utente possa visualizzare, all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente lo score generale del test",
+          "Requisito": "RF-1.17.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-35",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente l'LLM utilizzato nel test",
+          "Requisito": "RF-1.17.1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-36",
+          "Descrizione": "Verificare che l'utente possa visualizzare all'interno dello storico, un elemento riguardante l'esecuzione di un test contenente il set di domande su cui è stato eseguito il test",
+          "Requisito": "RF-1.17.1.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-37",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test in base al nome del set di domande",
+          "Requisito": "RF-2.18.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-38",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test in base all'LLM utilizzato",
+          "Requisito": "RF-2.18.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-39",
+          "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test",
+          "Requisito": "RF-2.19",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-40",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del confronto tra due test, ordinato per distanza tra le due valutazioni",
+          "Requisito": "RF-2.19.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-41",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto le due valutazioni generali dei test confrontati",
+          "Requisito": "RF-2.19.1.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-42",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi dei set di elementi domanda utilizzati nei test confrontati",
+          "Requisito": "RF-2.19.1.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-43",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato del confronto i nomi degli LLM utilizzati nei test confrontati",
+          "Requisito": "RF-2.19.1.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-44",
+          "Descrizione": "Verificare che l'utente possa visualizzare il dettaglio del confronto tra due esecuzioni di test per una specifica domanda presente nel sistema",
+          "Requisito": "RF-2.19.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-45",
+          "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test",
+          "Requisito": "RF-2.20",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-46",
+          "Descrizione": "Verificare che l'utente possa verificare nel confronto dettagliato di una singola domanda, l'elemento domanda in questione",
+          "Requisito": "RF-2.20.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-47",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la risposta data dall'LLM nei test",
+          "Requisito": "RF-2.20.2",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-48",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, l'LLM utilizzato nei test",
+          "Requisito": "RF-2.20.3",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-49",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel confronto dettagliato di una singola domanda, la valutazione assegnata alla domanda nei test",
+          "Requisito": "RF-2.20.4",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-50",
+          "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file contenente dati da inserire nel sistema",
+          "Requisito": "RF-2.21",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-51",
+          "Descrizione": "Verificare che l'utente venga notificato se il file caricato contiene dati in un formato errato",
+          "Requisito": "RF-2.21.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-52",
+          "Descrizione": "Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set non andata a buon fine",
+          "Requisito": "RF-3.22",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-53",
+          "Descrizione": "Verificare che l'utente venga notificato della presenza di un errore dato dalla creazione di un set con un nome già presente nel sistema",
+          "Requisito": "RF-3.22.1",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-54",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set",
+          "Requisito": "RF-2.23",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-55",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda",
+          "Requisito": "RF-3.24",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-56",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una risposta attesa",
+          "Requisito": "RF-3.25",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-57",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda",
+          "Requisito": "RF-1.26",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-58",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato la data di esecuzione del test",
+          "Requisito": "RF-1.13.5",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-59",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato l'LLM utilizzato nel test",
+          "Requisito": "RF-1.13.6",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TS-60",
+          "Descrizione": "Verificare che l'utente possa visualizzare nel risultato il nome del set su cui è stato eseguito il test",
+          "Requisito": "RF-1.13.4",
+          "Stato": "I"
+        }
       ]
     },
     "TestAccettazione": {
       "keys": [
         "Codice",
         "Descrizione",
-        "File di riferimento",
         "Stato"
       ],
       "values": [
-        {"Codice": "TA-1", "Descrizione": "Verificare che l'utente possa consultare il manuale utente", "File di riferimento": "test_accettazione_manuale.py", "Stato": "I"},
-        {"Codice": "TA-2", "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_visualizzazione_elementi.py", "Stato": "I"},
-        {"Codice": "TA-3", "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda", "File di riferimento": "test_accettazione_visualizzazione_singolo.py", "Stato": "I"},
-        {"Codice": "TA-4", "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema", "File di riferimento": "test_accettazione_modifica_domanda.py", "Stato": "I"},
-        {"Codice": "TA-5", "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema", "File di riferimento": "test_accettazione_modifica_risposta.py", "Stato": "I"},
-        {"Codice": "TA-6", "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema", "File di riferimento": "test_accettazione_eliminazione_elemento.py", "Stato": "I"},
-        {"Codice": "TA-7", "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda", "File di riferimento": "test_accettazione_inserimento_elemento.py", "Stato": "I"},
-        {"Codice": "TA-8", "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set", "File di riferimento": "test_accettazione_creazione_set.py", "Stato": "I"},
-        {"Codice": "TA-9", "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_visualizzazione_set.py", "Stato": "I"},
-        {"Codice": "TA-10", "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema", "File di riferimento": "test_accettazione_modifica_nome_set.py", "Stato": "I"},
-        {"Codice": "TA-11", "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_eliminazione_set.py", "Stato": "I"},
-        {"Codice": "TA-12", "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema", "File di riferimento": "test_accettazione_modifica_elementi_set.py", "Stato": "I"},
-        {"Codice": "TA-13", "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema", "File di riferimento": "test_accettazione_esecuzione_test.py", "Stato": "I"},
-        {"Codice": "TA-14", "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito", "File di riferimento": "test_accettazione_visualizzazione_risultato.py", "Stato": "I"},
-        {"Codice": "TA-15", "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda", "File di riferimento": "test_accettazione_risultato_singola_domanda.py", "Stato": "I"},
-        {"Codice": "TA-16", "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito", "File di riferimento": "test_accettazione_download_risultato.py", "Stato": "I"},
-        {"Codice": "TA-17", "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test", "File di riferimento": "test_accettazione_caricamento_risultato.py", "Stato": "I"},
-        {"Codice": "TA-18", "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti", "File di riferimento": "test_accettazione_visualizzazione_storico.py", "Stato": "I"},
-        {"Codice": "TA-19", "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test", "File di riferimento": "test_accettazione_filtro_storico.py", "Stato": "I"},
-        {"Codice": "TA-20", "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test", "File di riferimento": "test_accettazione_confronto_test.py", "Stato": "I"},
-        {"Codice": "TA-21", "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test", "File di riferimento": "test_accettazione_confronto_dettagliato.py", "Stato": "I"},
-        {"Codice": "TA-22", "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file", "File di riferimento": "test_accettazione_notifica_errore.py", "Stato": "I"},
-        {"Codice": "TA-23", "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set", "File di riferimento": "test_accettazione_annullamento_eliminazione_set.py", "Stato": "I"},
-        {"Codice": "TA-24", "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda o risposta", "File di riferimento": "test_accettazione_annullamento_modifica.py", "Stato": "I"},
-        {"Codice": "TA-25", "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda", "File di riferimento": "test_accettazione_annullamento_eliminazione_elemento.py", "Stato": "I"},
-        {"Codice": "TA-26", "Descrizione": "Verificare che l'applicazione funzioni correttamente sui principali browser moderni", "File di riferimento": "test_accettazione_compatibilita_browser.py", "Stato": "I"}
+        {
+          "Codice": "TA-1",
+          "Descrizione": "Verificare che l'utente possa consultare il manuale utente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-2",
+          "Descrizione": "Verificare che l'utente possa visualizzare gli elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-3",
+          "Descrizione": "Verificare che l'utente possa visualizzare un singolo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-4",
+          "Descrizione": "Verificare che l'utente possa modificare una domanda già presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-5",
+          "Descrizione": "Verificare che l'utente possa modificare una risposta attesa presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-6",
+          "Descrizione": "Verificare che l'utente possa eliminare un determinato elemento domanda già presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-7",
+          "Descrizione": "Verificare che l'utente possa inserire nel sistema un nuovo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-8",
+          "Descrizione": "Verificare che l'utente possa suddividere gli elementi domanda, presenti nel sistema, in set",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-9",
+          "Descrizione": "Verificare che l'utente possa visualizzare i set di elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-10",
+          "Descrizione": "Verificare che l'utente possa modificare il nome di un set presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-11",
+          "Descrizione": "Verificare che l'utente possa eliminare un set di elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-12",
+          "Descrizione": "Verificare che l'utente possa modificare gli elementi domanda appartenenti ad un set presente nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-13",
+          "Descrizione": "Verificare che l'utente possa eseguire un test utilizzando gli elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-14",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato del test eseguito",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-15",
+          "Descrizione": "Verificare che l'utente possa visualizzare il risultato di un test per singolo elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-16",
+          "Descrizione": "Verificare che l'utente possa scaricare il risultato di un test eseguito",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-17",
+          "Descrizione": "Verificare che l'utente possa caricare un file contenente i risultati di un test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-18",
+          "Descrizione": "Verificare che l'utente possa visualizzare lo storico dei test eseguiti",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-19",
+          "Descrizione": "Verificare che l'utente possa filtrare gli elementi dello storico dei test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-20",
+          "Descrizione": "Verificare che l'utente possa selezionare e confrontare i risultati di due esecuzioni di test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-21",
+          "Descrizione": "Verificare che l'utente possa visualizzare il confronto dettagliato di una singola domanda tra due esecuzioni di test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-22",
+          "Descrizione": "Verificare che l'utente venga notificato in caso di errore durante il caricamento di un file",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-23",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un set",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-24",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di modifica di una domanda o risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-25",
+          "Descrizione": "Verificare che l'utente possa annullare l'operazione di eliminazione di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TA-26",
+          "Descrizione": "Verificare che l'applicazione funzioni correttamente sui principali browser moderni",
+          "Stato": "I"
+        }
       ]
     }
   }

@@ -1,5 +1,6 @@
 #import "../../functions.typ": table-json-ST
 
+
 == Diagrammi delle classi
 === Backend
 ==== Domain Model
@@ -965,7 +966,7 @@ Le dipendenze dei REST controllers di elemento domanda sono:
 
 ===== Esecuzione Test
 Le dipendenze dei REST controllers di esecuzione test sono:
-  - *ExecuteTestUseCase*: rappresentano i casi d'usoper l'esecuzione del test implementati dai servizi
+  - *ExecuteTestUseCase*: rappresentano i casi d'uso per l'esecuzione del test implementati dai servizi
   - *GetTestStatusUseCase*: rappresenta il caso d'uso per ottenere lo stato del test
   - *Containers*: rappresentano le classi che gestiscono le dependency injection
   - *Inject* e *Provide*: rappresentano le funzioni per l'iniezione delle dipendenze
@@ -1145,7 +1146,7 @@ Le dipendenze dei REST controllers di risultato test sono:
 #align(center)[
       #image("../pictures/uml/LLM.png", height: 9%)
     ]
-Le dipendenze dell'Adapters di LLM sono:
+Le dipendenze dell'Adapter di LLM sono:
   - *LLMPort*: rappresenta la porta implementata dall'Adapter stesso
 
 ====== LLMAdapter
@@ -1400,6 +1401,135 @@ Le dipendenze della sezione persistence di elemento domanda sono:
 
 ====== Risultato Test
 
+=== Frontend
+
+Il frontend di questa applicazione rende possibile l'esecuzione e la visualizzazione dei risultati, in modod grafic, attravero una pagina web costruita attraverso la tecnologia Single Page application. Per il frontend viene utilizzato Vue JS che utilizza il Pattern MVVM (ModelViewViewModel),
+
+
+==== HomeView
+Vista principale dell'applicazione. Funziona come punto informativo e descrittivo dell'applicazione. Non ha particolari metodi o funzioni in quanto è solo di presentazione.
+
+#figure(
+  image("../pictures/uml/ViewHomeVIew.png"),
+)
+
+==== DomandeView
+Gestisce e visualizza la lista delle domande esistenti. 
+
+#figure(
+  image("../pictures/uml/ViewDomandeView.png"),
+)
+
+- *Attributi*:
+  - ` domande: List<ElementoDomanda>` : Lista elementi domanda da visualizzare
+  - `domandeSelezionate: List<ElementoDomanda>`: Lista elementi domanda selezionati per l'eliminazione
+
+- *Metodi*
+  - `caricaDomande(): List<ElementoDomanda>` : Void: Carica le domande dal backend
+  - ` eliminaDomande(in id:List<Int>)` : Elimina le domande selezionate
+
+==== AggiungiDomandaView
+
+Vista responsabile dell'inserimento di una nuova domanda. Fornisce un modulo per l'inserimento della domanda e della risposta attesa, e invia i dati al backend.
+
+#figure(
+  image("../pictures/uml/ViewAggiungiDomandaView.png"),
+)
+
+- *Attributi*
+
+  - `domanda: String`: Contenuto testuale della domanda da inserire.  
+  - `rispostaAttesa: String`: Contenuto testuale della risposta prevista.
+
+- *Metodi*
+
+  - `aggiungiDomanda(domanda:String, in risposta:String): Void`: Valida che entrambi i campi siano compilati, invia i dati tramite una chiamata `POST` al backend, e reindirizza l'utente alla vista delle domande in caso di successo.
+
+==== ModificaDomandaView
+
+Vista per la modifica di una domanda esistente. Carica automaticamente i dati della domanda da modificare e consente l'aggiornamento tramite form.
+
+#figure(
+  image("../pictures/uml/ViewModificaDomandaView.png"),
+)
+
+- *Attributi*
+
+  - `id: Int`: Identificativo univoco della domanda, ottenuto dai parametri della route.
+  - `domanda: String`: Testo della domanda da modificare.
+  - `rispostaAttesa: String`: Testo della risposta prevista da modificare.
+
+- *Metodi*
+
+  - `caricaDomanda(in id:Int): ElementoDomanda`:
+  Recupera la domanda da modificare tramite richiesta al backend.
+  - `modificaDomanda(in domanda:Domanda, in risposta:Risposta): Void`: 
+  Invia la modifica della domanda al backend.
+
+
+==== TestView
+
+Gestisce l'interfaccia per eseguire un test. Avvia il test, controlla lo stato in tempo reale tramite polling e gestisce la visualizzazione del progresso o del risultato finale.
+
+#figure(
+  image("../pictures/uml/ViewTestView.png"),
+)
+
+- *Attributi*
+
+  - `id: Int`: Identificativo del risultato del test completato.
+  - `testIniziato: bool`:  Indica se il test è attualmente in corso.
+  - `testCompletato: bool`: Indica se il test è stato completato.
+  - `avanzamento: Float`: Percentuale di avanzamento del test.
+
+- *Metodi*
+
+  - `iniziaTest(): Void`:  Invia la richiesta di avvio del test al backend
+  - `controllaStato(): Void`: Recupera lo stato corrente del test dal backend e aggiorna l'interfaccia in base alla risposta.
+  - `vaiAlRisultato(in id:Int): Void`:   Naviga alla vista dei risultati del test appena completato.
+
+
+==== StoricoView
+
+Componente che mostra lo storico dei test eseguiti dall'utente. 
+
+#figure(
+  image("../pictures/uml/ViewStorico.png"),
+)
+
+- *Attributi*
+
+  - `tests: List<Object>`:   Lista dei test eseguiti recuperati dal backend.
+
+- *Metodi*
+
+  - `caricaStorico(): Void`:  Recupera la lista dei test dal backend e li ordina per data decrescente.
+  - `vaiAlDettaglio(in id:int): Void`:    Naviga alla vista di dettaglio del risultato del test selezionato.
+
+==== TestResultView
+
+Componente che visualizza i dettagli di un test, incluse tutte le domande con i rispettivi punteggi. Permette di visualizzare il risultato dettagliato di ogni singola domanda.
+
+#figure(
+  image("../pictures/uml/ViewTestResultView.png"),
+)
+
+
+- *Attributi*
+
+  - `id: Int`:     Identificativo del test, ottenuto dai parametri del router.
+  - `test: Test`:     Oggetto che rappresenta il test da visualizzare, completo di dettagli e risultati.
+  - `domandaSelezionata: Int`:    Oggetto che contiene i dati della domanda selezionata per la visualizzazione singola.
+
+- *Metodi*
+
+  - `caricaTest(): Void`:   Recupera i dati completi del test dal backend usando l'id corrente.
+  - `risultatoSingolaDomanda(in id:int): void`:    Recupera dal backend il dettaglio del risultato di una domanda.
+
+==== ViewModel
+
+Il _ViewModel_ è una componente concettuale offerta da Vue.js, non da implementare nel nostro sistema. Agisce come un intermediario reattivo tra la logica dell'interfaccia utente (_View_) e i dati del modello (_Model_).  Vue si occupa automaticamente di aggiornare la vista ogni volta che i dati cambiano e viceversa, grazie al binding bidirezionale.
+
 === Tracciamento requisiti
 Qui di seguito verrà riportato in una tabella il tracciamento dei requisiti funzionali sulle varie classi del backend.
 
@@ -1465,7 +1595,8 @@ L'architettura di deployment utilizzata dall'applicativo sia lato client che lat
 - Prestazioni migliori
 
 === Architettura Logica
-L'architettura logica dell'applicativo è invece di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* che fungeranno da porte. Questo permette di rendere il sistema più flessibile a comunicazioni con servizi esterni differenti. \
+==== Backend
+L'architettura logica della componente backend dell'applicativo è di tipo *esagonale*, il quale permette di *isolare* la logica di business e renderla indipendente da eventuali servizi esterni, con i quali andrà a *comunicare* tramite l'uso di *interfacce* che fungeranno da porte. Questo permette di rendere il sistema più flessibile a comunicazioni con servizi esterni differenti. \
 
 La parte centrale dell'esagono è rappresentata quindi dalla *logica di business*, il quale contiene quindi il dominio del programma. \
 
@@ -1473,9 +1604,19 @@ Le porte, punto focale di comunicazione con l'esterno, sono rappresentate dalle 
  - Le *Inbound Ports* (o Use Case) saranno quelle utilizzate da attori esterni per comunicare con il sistema. Queste interfacce saranno implementate dal sistema stesso tramite un sistema di API. Esse definiscono quindi i casi d'uso e le operazioni implementate dal sistema.
  - Le *Outbound Ports* saranno invece quelle utilizzate dal sistema stesso per comunicare con attori esterni. \
 
-Gli *Adapters* sono invece le classe che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
+Gli *Adapters* sono invece le classi che andranno ad implementare in maniera concreta le porte definite dalle interfacce. Queste classi faranno quindi da ponte tramite la logica interna e i servizi esterni. Anche qui ne distinguiamo di due tipi:
 - Gli *Inbound Adapters* saranno quelli che implementeranno le interfacce Inbound, andando a definire quindi le operazioni che il sistema dovrà eseguire in base ai casi d'uso.
 - Gli *Outbound Adapters* saranno quelli che implementeranno le interfacce Outbound, andando a definire quindi le operazioni che il sistema dovrà eseguire per comunicare con servizi esterni.
+
+==== Frontend
+Per quanto riguarda il frontend è stata invece adottata un'architettura di tipo *MVVM* (Model-View-ViewModel), implementata in modo implicito dal framework *Vue.js*. Questa struttura consente un approccio dichiarativo e reattivo, favorendo una netta separazione tra la logica di business e l'interfaccia utente. 
+Nel dettaglio, il pattern MVVM si articola nei seguenti elementi:
+- Model: rappresenta i dati dell'applicazione. In Vue.js, ciò corrisponde allo stato locale dei componenti, eventualmente esteso attraverso strumenti come Vuex o Pinia per la gestione dello stato globale.
+- View: è l'interfaccia grafica dell'applicazione, costituita dai template HTML. Grazie al data binding reattivo offerto da Vue.js, la vista si aggiorna automaticamente al variare dei dati sottostanti.
+
+- ViewModel: funge da ponte tra il Model e la View, gestendo la logica di interazione e l'aggiornamento dello stato. In Vue.js, il componente stesso, nonché il motore di Vue.js che svolge il ruolo di ViewModel, che definisce proprietà, metodi, computed properties e gestori degli eventi.
+
+Questo tipo di architettura, oltre a facilitare lo sviluppo di Single Page Application (SPA), sfrutta una struttura component-based che consente un'elevata modularità del codice. Tale approccio favorisce il riuso dei componenti, la separazione delle responsabilità e una composizione scalabile dell'interfaccia, rendendo l'applicazione più manutenibile ed estensibile nel tempo.
 
 == Design Patterns Utilizzati
 === Singleton
@@ -1493,3 +1634,6 @@ Il pattern *Decorator* viene utilizzato per aggiungere funzionalità a un oggett
 === Dependency injection
 Il pattern *Dependency Injection* viene utilizzato per fornire alle classi le loro dipendenze dall'esterno, piuttosto che crearle direttamente al loro interno. Questo approccio migliora la modularità e facilita il testing, permettendo di sostituire facilmente le dipendenze con implementazioni alternative o mock durante i test. \
 Nel nostro progetto, la dependency injection è stata utilizzata per gestire la configurazione e l'inizializzazione dei servizi principali, come i repository, i servizi di business e i controllers per la comunicazione con servizi esterni.
+
+=== MVVM
+Il pattern *MVVM* (Model-View-ViewModel) permette di separare la logica di presentazione dalla logica di business e dall'interfaccia utente. Questo pattern è stato utilizzato per strutturare l'applicazione frontend, consentendo una chiara separazione delle responsabilità tra i componenti e facilitando la manutenzione e l'estensibilità del codice. \

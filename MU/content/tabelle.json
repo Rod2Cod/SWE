@@ -14,6 +14,12 @@
         "Data": "27-03-2025",
         "Descrizione": "Prima stesura",
         "Autore": "Michele Nesler"
+      },
+      {
+        "Versione": "0.1",
+        "Data": "09-04-2025",
+        "Descrizione": "Aggiunta sezione installazione, modificate immagini con quelle aggiornate",
+        "Autore": "Luca Calzetta"
       }
     ]
   }
