@@ -1,6 +1,6 @@
 {
-  "versione" : {
-    "keys" : [
+  "versione": {
+    "keys": [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,18 +10,16 @@
     ],
     "values": [
       {
-        "Data" : "2025-04-09",
-        "Autore" : "Filippo Bellon",
-        "Sez.modificate": "Prima stesura"
+        "Data": "2025-04-09",
+        "Autore": "Filippo Bellon",
+        "Sez.modificate": "Prima stesura",
+        "Versione": "0.1",
+        "Verificatore": "Michele Nesler"
       }
     ]
   },
- "presenze" : {
-    "keys" : [
-      "Nominativo",
-      "Presenze",
-      "Ruolo"
-    ],
+  "presenze": {
+    "keys": ["Nominativo", "Presenze", "Ruolo"],
     "values": [
       {
         "Nominativo": "Michele Nesler",
@@ -45,11 +43,6 @@
       },
       {
         "Nominativo": "Alberto Maggion",
-        "Presenze": "P",
-        "Ruolo": ""
-      },
-      {
-        "Nominativo": "Alessandro Rossi",
         "Presenze": "P",
         "Ruolo": ""
       }
