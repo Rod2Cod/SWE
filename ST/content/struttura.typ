@@ -1003,16 +1003,6 @@ Le dipendenze dei REST controllers di esecuzione test sono:
       - *Output*:
         - nessuno
 
-======= GetTestStatusUseCase
-  - *Metodi*
-    - `getTestStatus(): dict`
-      - *Descrizione*:
-        - ritorna lo stato del test in corso
-      - *Input*:
-        - nessuno
-      - *Output*:
-        - oggetto di tipo `dict` che rappresenta lo stato del test in corso
-
 ====== StatusController
 #align(center)[
       #image("../pictures/uml/StatusController.png", height: 9%)
