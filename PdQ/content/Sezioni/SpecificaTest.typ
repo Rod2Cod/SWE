@@ -30,12 +30,12 @@ Servono a verificare il corretto funzionamento di una singola parte autonoma del
 
 == Test di Integrazione
 Servono a verificare che le singole componenti interagiscano correttamente tra loro.
-#table-json-rev(json(tabelle).at("Test").at("TestIntegrazione"),4)
+#table-json-rev(json(tabelle).at("Test").at("TestIntegrazione"),3)
 
 == Test di Sistema
 Servono a verificare che il comportamento del sistema sia conforme a quanto stabilito con il proponente.
-#table-json-rev(json(tabelle).at("Test").at("TestSistema"),5)
+#table-json-rev(json(tabelle).at("Test").at("TestSistema"),4)
 
 == Test di Accettazione
 Servono a verificare, insieme al committente, che il prodotto finale soddisfi tutti i requisiti.
-#table-json-rev(json(tabelle).at("Test").at("TestAccettazione"),4)
+#table-json-rev(json(tabelle).at("Test").at("TestAccettazione"),3)
