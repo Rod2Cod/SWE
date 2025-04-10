@@ -15,6 +15,11 @@
         "Autore": "Filippo Bellon",
         "Versione": "0.1",
         "Verificatore": "Annalisa Egidi"
+      },
+      {
+        "Data": "2025-04-10",
+        "Versione": "1.0",
+        "Validatore": "Michele Nesler"
       }
     ]
   },
