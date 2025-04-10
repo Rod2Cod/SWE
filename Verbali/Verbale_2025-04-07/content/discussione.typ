@@ -45,3 +45,14 @@ Come ultimo punto, si è discusso dell'attuale stato dei manuali di progetto, qu
     - Velocizzare il processo di scrittura e revisione dei manuali, assegnando le varie sezioni da scrivere, ai componenti che se ne sono presi carico anche in fase di codifica.
   ]
 )
+
+== Discussione Customer Acceptance
+Si è discusso se continuare il progetto anche dopo la revisione Product Baseline sottoponendosi alla revisione Customer Acceptance. 
+#decisioni(
+  [
+    - non continuare e fermarsi alla Product Baseline.
+  ],
+  [
+    - Alcuni membri hanno intenzione di iniziare lo stage al più presto e quindi non avranno più tempo da dedicare al progetto. 
+  ]
+)

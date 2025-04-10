@@ -90,6 +90,20 @@ Qui di seguito sono elencate alcune possibili estensioni per la sezione backend 
 === Set di Elementi Domanda
 Come descritto all'interno della Specifica Tecnica, il dominio delle domande presenti nel sistema viene rappresentato dall'oggetto *ElementoDomanda*, composto da *Domanda* e *Risposta*. Al momento dell'esecuzione del test però, si vanno a ricavare tutti gli Elementi Domanda presenti nel sistema, senza la possibiltà di lavorare solo su alcuni di questi. La soluzione potrebbe essere quella di implementare un'entità *SetElementiDomanda*, in modo da poter raggruppare alcuni Elementi Domanda in base ad un certo criterio, ed andare quindi ad eseguire il test solo su questi.
 
+==== Entità Set Elementi Domanda
+#align(center)[
+      #image("uml/Set.png", height: 16%)
+    ]
+===== Attributi :
+- elementiDomanda : set di oggetti di tipo `ElementoDomanda` che rappresentano gli elementi domanda appartenenti al set.
+- nome : nome identificativo del set.
+===== Metodi : 
+- updateElementiDomandaAssociati : viene passato come parametro il set degli elementi domanda che si vuole siano associati al set. Tutti gli elementi domanda precedentemente associati vengono dissociati e sostituiti con i nuovi. 
+- getAllElementiDomanda : restituisce il set di elementi domanda associati al set.
+- setNome : una stringa contenente il nuovo nome viene passata come parametro e il nome del set viene sostituita con essa. 
+- getNome : restituisce la stringa contenente il nome del set. 
+- getSize : restituisce il numero di elementi domanda associati al set. 
+
 ==== Controllers
 I *Controllers* si occuperanno di fornire tramite *API*, degli endpoint per gestire le richieste HTTP. Per portare a termine la richiesta faranno quindi uso di uno o più *UseCase* definiti precedentemente, ed implementati nei *Services* corrispondenti.
 Di seguito vengono quindi elencate le possibili strutture dei vari Controllers.
