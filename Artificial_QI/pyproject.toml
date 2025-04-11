@@ -1,0 +1,37 @@
+[tool.coverage.run]
+branch = true
+omit = [
+    ".venv/*",
+    "./Artificaial_QI/test/*",
+    "__init__.py",
+    # omit pytorch-generated files in /tmp
+    "/tmp/*",
+    ]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+    ]
+fail_under = 80
+skip_covered = false
+show_missing = true
+ignore_errors = false
+format = "text"
+sort = "Cover"
+
+[tool.coverage.json]
+pretty_print = true

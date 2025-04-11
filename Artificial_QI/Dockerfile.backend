@@ -1,0 +1,26 @@
+# Use a Python base image
+FROM python:3.13
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Install PostgreSQL development libraries
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code (excluding frontend directory if it exists)
+COPY . .
+
+# Expose port for the backend service
+EXPOSE 8080
+
+# Command to run the application
+CMD ["waitress-serve", "--host", "0.0.0.0", "--call", "application:create_app"]
