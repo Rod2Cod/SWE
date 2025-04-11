@@ -12,103 +12,132 @@
       {
         "Data": "2025-03-05",
         "Descrizione": "Prima stesura",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Luca Calzetta",
+        "Versione": "0.1"
       },
       {
         "Data": "2025-03-13",
         "Descrizione": "Aggiunta sezione Struttura",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Luca Calzetta",
+        "Versione": "0.2"
       },
       {
         "Data": "2025-03-19",
         "Descrizione": "Sezione Struttura - Aggiunti Design Patterns Utilizzati",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Annalisa Egidi",
+        "Versione": "0.3"
       },
       {
         "Data": "2025-03-23",
         "Descrizione": "Sezione Struttura - Aggiunti altri Design Patterns Utilizzati",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Luca Calzetta",
+        "Versione": "0.4"
       },
       {
         "Data": "2025-03-27",
         "Descrizione": "Sezione Struttura - Aggiunti altri Design Patterns Utilizzati",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Luca Calzetta",
+        "Versione": "0.5"
       },
       {
         "Data": "2025-03-31",
         "Descrizione": "Sezione API - Aggiunte API e relative tabelle",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Michele Nesler",
+        "Versione": "0.6"
       },
       {
         "Data": "2025-04-03",
         "Descrizione": "Sezione Struttura e Tecnologie - Aggiunto Database e aggiornate tecnologie back-end",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Luca Calzetta",
+        "Versione": "0.7"
       },
       {
         "Data": "2025-04-05",
         "Descrizione": "Sezione Struttura - Aggiunta descrizione diagrammi delle classi Elemento Domanda",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Michele Nesler",
+        "Versione": "0.8"
       },
       {
         "Data": "2025-04-06",
         "Descrizione": "Sezione API - Aggiunto endpoint Status Test, Sezione Tecnologie - Aggiunte librerie e framework frontend",
-        "Autore": "Luca Calzetta"
+        "Autore": "Luca Calzetta",
+        "Verificatore": "Filippo Bellon",
+        "Versione": "0.9"
       },
       {
         "Data": "2025-04-07",
         "Descrizione": "Sezione struttura, aggiunti risultato test e esecuzione test",
-        "Autore": "Alberto Maggion"
+        "Autore": "Alberto Maggion",
+        "Verificatore": "Filippo Bellon",
+        "Versione": "0.10"
       },
       {
         "Data": "2025-04-07",
         "Descrizione": "Sezione Struttura - Aggiunto tracciamento requisiti su classi back-end",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.11"
       },
       {
         "Data": "2025-04-08",
         "Descrizione": "Sezione Tecnologie - Aggiornate librerie e linguaggi",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.12"
       },
       {
         "Data": "2025-04-08",
         "Descrizione": "Sezione Architettura - Architettura Logica - Aggiunta sezione  architettura VVM",
-        "Autore": "Luca Calzetta"
+        "Autore": "Luca Calzetta",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.13"
       },
       {
         "Data": "2025-04-08",
         "Descrizione": "Sezione Struttura - Aggiunte immagini diagrammi delle classi",
-        "Autore": "Michele Nesler"
+        "Autore": "Michele Nesler",
+        "Verificatore": "Annalisa Egidi",
+        "Versione": "0.14"
       },
       {
         "Data": "2025-04-09",
         "Descrizione": "Sezione Struttura - Aggiunto design pattern MVVM",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.15"
       },
       {
         "Data": "2025-04-09",
         "Descrizione": "Sezione Struttura - Aggiunta sezione diagrammi delle classi frontend",
-        "Autore": "Luca Calzetta"
+        "Autore": "Luca Calzetta",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.16"
       },
       {
         "Data": "2025-04-10",
         "Descrizione": "Sezione Struttura - Aggiunto tracciamento requisiti su classi front-end",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.17"
       },
       {
         "Data": "2025-04-10",
-        "Descrizione": "Verifica documento",
-        "Versione" : "0.1",
-        "Verificatore": "Alberto Maggion"
+        "Versione": "1.0",
+        "Validatore": "Michele Nesler"
       }
     ]
   },
   "tecnologie": {
     "linguaggi": {
-      "keys": [
-        "Nome",
-        "Descrizione",
-        "Versione"
-      ],
+      "keys": ["Nome", "Descrizione", "Versione"],
       "values": [
         {
           "Nome": "Python",
@@ -123,11 +152,7 @@
       ]
     },
     "framework": {
-      "keys": [
-        "Nome",
-        "Descrizione",
-        "Versione"
-      ],
+      "keys": ["Nome", "Descrizione", "Versione"],
       "values": [
         {
           "Nome": "Vue JS",
@@ -147,16 +172,12 @@
       ]
     },
     "librerie": {
-      "keys": [
-        "Nome",
-        "Descrizione",
-        "Versione"
-      ],
+      "keys": ["Nome", "Descrizione", "Versione"],
       "values": [
         {
-          "Nome":"pytest",
-          "Descrizione":"Libreria per il testing in Python, che consente di scrivere test in modo semplice e intuitivo.",
-          "Versione":"8.3.5"
+          "Nome": "pytest",
+          "Descrizione": "Libreria per il testing in Python, che consente di scrivere test in modo semplice e intuitivo.",
+          "Versione": "8.3.5"
         },
         {
           "Nome": "pytest-cov",
@@ -194,9 +215,9 @@
           "Versione": "0.9.3"
         },
         {
-          "Nome":"dependency-injector",
-          "Descrizione":"Libreria per effettuare l'\"iniezione\" delle dipendenze in Python.",
-          "Versione":"4.46.0"
+          "Nome": "dependency-injector",
+          "Descrizione": "Libreria per effettuare l'\"iniezione\" delle dipendenze in Python.",
+          "Versione": "4.46.0"
         },
         {
           "Nome": "psycopg2",
@@ -286,11 +307,7 @@
       ]
     },
     "strumenti": {
-      "keys": [
-        "Nome",
-        "Descrizione",
-        "Versione"
-      ],
+      "keys": ["Nome", "Descrizione", "Versione"],
       "values": [
         {
           "Nome": "Visual Studio Code",
@@ -318,12 +335,7 @@
   "api": {
     "elemento_domanda": {
       "add": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -346,12 +358,7 @@
         ]
       },
       "get": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -374,12 +381,7 @@
         ]
       },
       "get_all": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -396,12 +398,7 @@
         ]
       },
       "delete": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -424,12 +421,7 @@
         ]
       },
       "update": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -453,12 +445,7 @@
       }
     },
     "execute_test": {
-      "keys": [
-        "Esito",
-        "Codice HTTP",
-        "Body",
-        "Descrizione"
-      ],
+      "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
       "values": [
         {
           "Esito": "Positivo",
@@ -475,12 +462,7 @@
       ]
     },
     "status": {
-      "keys": [
-        "Esito",
-        "Codice HTTP",
-        "Body",
-        "Descrizione"
-      ],
+      "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
       "values": [
         {
           "Esito": "Positivo",
@@ -493,17 +475,12 @@
           "Codice HTTP": "500",
           "Body": "`{\"message\": \"...\"}`",
           "Descrizione": "Si è verificato un errore interno del server."
-        }        
+        }
       ]
     },
     "risultato_test": {
       "get": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -526,12 +503,7 @@
         ]
       },
       "get_all": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -548,12 +520,7 @@
         ]
       },
       "get_singolo": {
-        "keys": [
-          "Esito",
-          "Codice HTTP",
-          "Body",
-          "Descrizione"
-        ],
+        "keys": ["Esito", "Codice HTTP", "Body", "Descrizione"],
         "values": [
           {
             "Esito": "Positivo",
@@ -579,11 +546,7 @@
   },
   "tracciamento_requisiti": {
     "backend": {
-      "keys": [
-        "Codice",
-        "Descrizione",
-        "Sezioni"
-      ],
+      "keys": ["Codice", "Descrizione", "Sezioni"],
       "values": [
         {
           "Codice": "RF-1.1",
