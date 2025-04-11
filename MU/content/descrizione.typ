@@ -32,7 +32,7 @@ L'unica componente esterna che non viene inclusa direttamente nel sistema è il 
 === Navigazione 
 La barra di navigazione, premendo sugli appositi link permette di passare da una pagina ad un altra. 
 #align(center)[
-      #image("IMG/navbar.png", height: 4%)
+      #image("IMG/navbar.png", height: 3%)
     ]
 Le pagine disponibili sono: 
  - *Home* : contiene una panoramica dell'applicativo
