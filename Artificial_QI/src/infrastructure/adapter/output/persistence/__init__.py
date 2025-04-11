@@ -1,2 +1,0 @@
-from .ElementoDomandaPersistenceAdapter import ElementoDomandaPersistenceAdapter
-from .RisultatoTestPersistenceAdapter import RisultatoTestPersistenceAdapter

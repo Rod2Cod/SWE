@@ -1,3 +1,0 @@
-from .ElementoDomandaPostgreSQLRepository import ElementoDomandaPostgreSQLRepository
-from .RisultatoSingolaDomandaPostgreSQLRepository import RisultatoSingolaDomandaPostgreSQLRepository
-from .RisultatoTestPostgreSQLRepository import RisultatoTestPostgreSQLRepository

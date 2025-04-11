@@ -1,3 +1,0 @@
-from .ElementoDomandaPersistenceMapper import ElementoDomandaPersistenceMapper
-from .RisultatoTestPersistenceMapper import RisultatoTestPersistenceMapper
-from .RisultatoSingolaDomandaPersistenceMapper import RisultatoSingolaDomandaPersistenceMapper

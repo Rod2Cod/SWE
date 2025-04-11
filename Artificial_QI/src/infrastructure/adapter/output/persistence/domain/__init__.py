@@ -1,2 +1,0 @@
-from .ElementoDomandaEntity import ElementoDomandaEntity
-from .RisultatoTestEntity import RisultatoTestEntity, RisultatoSingolaDomandaEntity, RisultatoMetricaEntity

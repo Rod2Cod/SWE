@@ -1,2 +1,0 @@
-from .ElementoDomanda import ElementoDomanda,Domanda,Risposta
-from .RisultatoTest import RisultatoTest,RisultatoSingolaDomanda
