@@ -1,5 +1,5 @@
 import pytest
-from src.application.ExecuteTestServices import ExecuteTestService
+from src.application.ExecuteTestServices import ExecuteTestService, GetTestStatusService
 from src.application.ports.output.LLMPort import LLMPort
 from src.application.ports.output.RisultatoTestPorts import SaveRisultatoTestPort
 from src.application.ports.output.ElementoDomandaPorts import GetAllElementiDomandaPort
@@ -114,3 +114,21 @@ class TestExecuteTestService:
         self.mockValutatore.evaluate.assert_called()
         self.mockSavePort.saveRisultatoTest.assert_called_once()
         assert self.status_tracker.get_status()["error"] is not None
+
+class TestGetTestStatusService:
+    @classmethod
+    def setup_class(cls):
+        cls.status_tracker = TestStatusTrackerImpl()
+        cls.service = GetTestStatusService(cls.status_tracker)
+
+    def test_get_test_status(self):
+        """Test per il corretto recupero dello stato del test."""
+        
+        result = self.service.getTestStatus()
+        
+        assert "in_progress" in result.keys()
+        assert "completed" in result.keys()
+        assert "total" in result.keys()
+        assert "percentage" in result.keys()
+        assert "error" in result.keys()
+        assert "id_risultato" in result.keys()
