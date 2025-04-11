@@ -277,6 +277,11 @@
           "Nome": "waitress",
           "Descrizione": "Server WSGI per l'esecuzione di applicazioni Flask. Utilizzato per la fase di deployment.",
           "Versione": "3.0.2"
+        },
+        {
+          "Nome": "hf-xet",
+          "Descrizione": "Libreria utilizzata per il download e l'upload di modelli da Hugging Face.",
+          "Versione": "1.0.3"
         }
       ]
     },
