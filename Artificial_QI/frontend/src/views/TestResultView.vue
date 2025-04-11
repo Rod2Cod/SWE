@@ -34,7 +34,6 @@ export default {
           `/risultati/${this.id}`
         );
         this.test = response.data;
-        console.log(this.test.risultatiDomande);
       } catch (error) {
         console.error("Error loading test data:", error);
       }

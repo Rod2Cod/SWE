@@ -25,9 +25,7 @@ export default {
   props: {
     domanda: Object
   },
-  mounted() {
-    console.log(this.domanda)
-  }
+
 };
 </script>
 

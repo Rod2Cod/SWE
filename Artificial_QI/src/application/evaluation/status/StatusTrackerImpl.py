@@ -15,6 +15,7 @@ class TestStatusTrackerImpl(TestStatusTracker):
         self.__questions_completed = 0
         self.__error = None
 
+
     def update_progress(self):
         self.__questions_completed += 1
 
@@ -26,6 +27,7 @@ class TestStatusTrackerImpl(TestStatusTracker):
 
     def set_error(self, error):
         self.__error = error
+        self.__in_progress = False
 
     def get_status(self) -> dict:
         percentage = 0

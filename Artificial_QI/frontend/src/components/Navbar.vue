@@ -26,20 +26,18 @@ export default {
 <template>
   <nav class="navbar">
     <div class="container">
-      <!-- Logo -->
+
       <RouterLink to="/" class="logo-container">
         <img src="@/assets/logo.webp" alt="Artifial QI logo" class="logo" />
         <span class="brand-name">Artificial QI</span>
       </RouterLink>
 
-      <!-- Hamburger menu -->
       <button class="hamburger" @click="toggleMenu">
         <span :class="{'open': !isCollapsed}"></span>
         <span :class="{'open': !isCollapsed}"></span>
         <span :class="{'open': !isCollapsed}"></span>
       </button>
 
-      <!-- Links -->
       <ul class="nav-links" :class="{'show': !isCollapsed}">
         <li v-for="route in routes" :key="route.path">
           <RouterLink class="nav-item" :to="route.path" @click="closeMenu">

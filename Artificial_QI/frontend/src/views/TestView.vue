@@ -67,7 +67,6 @@ export default {
         const response = await axios.get(`/executeTest/status`);
         const data = response.data;
 
-        console.log(data)
 
         this.in_progress = data.in_progress;
 
@@ -117,9 +116,7 @@ export default {
     },
 
     goToResult() {
-
       globalState.vResult = false;
-      console.log(globalState.vResult);
       this.$router.push({name: "TestResult", params: {id: this.id}});
     },
   },
