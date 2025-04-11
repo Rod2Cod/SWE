@@ -3,7 +3,7 @@
   "LLM|Large Language Model":"Modello linguistico preaddestrato su grandi quantità di dati, in grado di comprendere e generare testo in linguaggio naturale in ambito generale.",
 
   "Elemento domanda":"Elemento composto dalla coppia domanda testuale e risposta attesa associata testuale.",
-  "Meteriche":"Criteri di valutazione delle risposte dell'LLM che producono uno score intermedio utilizzato per il calcolo del punteggio domanda associato ad ogni domanda presente nel test.",
+  "Metriche":"Criteri di valutazione delle risposte dell'LLM che producono uno score intermedio utilizzato per il calcolo del punteggio domanda associato ad ogni domanda presente nel test.",
   "score generale":"Punteggio assegnato al test calcolato tenendo conto di tutti i punteggi domanda associati alle singole domande utilizzate nel test.",
   "API|Application Programming Interface":"Un insieme di regole e protocolli che permette a diverse applicazioni software di comunicare e scambiarsi dati tra loro.",
   "Docker":"Una piattaforma che consente di creare, distribuire ed eseguire applicazioni all'interno di container, ambienti isolati che includono tutto il necessario per il funzionamento dell'applicazione. Questo garantisce la portabilità dell'applicazione.",
