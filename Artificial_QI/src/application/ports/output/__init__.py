@@ -1,0 +1,3 @@
+from .ElementoDomandaPorts import SaveElementoDomandaPort, GetElementoDomandaPort, GetAllElementiDomandaPort, DeleteElementiDomandaPort, UpdateElementoDomandaPort
+from .RisultatoTestPorts import SaveRisultatoTestPort, GetRisultatoTestPort, GetAllRisultatiTestPort, GetRisultatoSingolaDomandaPort
+from .LLMPort import LLMPort
