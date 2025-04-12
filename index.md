@@ -4,6 +4,12 @@
 layout: index
 ---
 
+# Codice
+
+<span class="codice">Il codice dell'applicativo si può trovare al seguente indirizzo: [Artificial QI](https://github.com/Rod2Cod/SWE/tree/master/Artificial_QI){:target="_blank"}<span>
+
+---
+
 # Documenti
 
 {% assign data_candidatura = "2024-11-04" %}
