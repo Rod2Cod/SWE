@@ -301,6 +301,7 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   Durante questo periodo abbiamo iniziato la fase di progettazione, abbiamo definito un prototipo di schema uml che poi abbiamo presentato sia all'azienda per ottenere feedback utili il prima possibile ed implementarli immediatamente. Abbiamo presentato il prototipo anche al professore espoponendogli i nostri principali dubbi. Questo è stato molto utile perche come ci aspettavamo essendo la prima volta che svolgiamo questo compito non ne avevamo compreso alcuni aspetti. I problemi principali li abbiamo riscontrati nella progettazione dei componenti per l'upload di domande e test da file. Discutendone insieme siamo riusciti a tenere in considerazione tutti gli aspetti che singolarmente non si era riusciti a tenere a mente, e a trovare una soluzione adatta.
 #pagebreak()
 
+== Product Baseline
 
 === Decimo periodo 11/03/2025 - 24/03/2025
   *Consuntivo Orario*

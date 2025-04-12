@@ -266,6 +266,8 @@
   #image("Graphs/p9_budget.png",height: 20%)
   #pagebreak()
 
+== Product Baseline
+
   === Decimo Periodo 11/02/2025 - 24/03/2025
         *Preventivo Orario*
   #table-json(preventivi.at("10"), 8)
