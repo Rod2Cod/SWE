@@ -16,7 +16,7 @@ Utilizzando il file `docker-compose.yml` fornito nella cartella del progetto, è
 
 Prima di avviare il sistema, sarà quindi necessario verificare alcune \"dipendenze\":
    - Assicurarsi di avere installato *Docker* e Docker *Compose* ed avere in esecuzione *Docker Engine*. Se non sono già installati, è possibile scaricarli e installarli seguendo le istruzioni ufficiali di #link("https://www.docker.com/get-started/")[Docker]\.
-   - Verificare di avere all'interno della cartella principale del progetto(dove sono presenti le cartelle *src* e *test*), una cartella `assets`, contenente il file `.joblib` e riguardante il modello da utilizzare per la valutazione. (Il file in questione viene fornito tramite archivio *zip* nella stessa cartella. Assicurarsi quindi di averlo *estratto* correttamente e lasciato all'interno della *cartella* `assets`.)
+   - Verificare di avere all'interno della cartella principale del progetto(dove sono presenti le cartelle *src* e *test*), una cartella `assets`, contenente il file `.joblib` e riguardante il modello da utilizzare per la valutazione. (Il *file* in questione viene fornito tramite *archivio* `.zip` nella stessa cartella. Assicurarsi quindi di averlo *estratto* correttamente e lasciato all'interno della *cartella* `assets`.)
 
 Una volta posizionato nella directory principale del progetto, sarà sufficiente quindi eseguire il seguente comando:
 
