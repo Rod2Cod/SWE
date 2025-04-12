@@ -21,7 +21,7 @@
 title: Artificial QI - Rod2Cod
 email: rod2cod@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Qui di seguito verranno forniti vari link alla documentazione 
+  Qui di seguito verranno forniti vari link alla documentazione e al codice  
   riguardante il progetto di Ingegneria del Software: [Artificial QI](https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C1.pdf){:target="_blank"}, proposto dall'azienda Zucchetti 
   e preso in carico dal nostro gruppo.
 baseurl: "/SWE" # the subpath of your site, e.g. /blog
