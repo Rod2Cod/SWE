@@ -300,3 +300,97 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   *Retrospective*:
   Durante questo periodo abbiamo iniziato la fase di progettazione, abbiamo definito un prototipo di schema uml che poi abbiamo presentato sia all'azienda per ottenere feedback utili il prima possibile ed implementarli immediatamente. Abbiamo presentato il prototipo anche al professore espoponendogli i nostri principali dubbi. Questo è stato molto utile perche come ci aspettavamo essendo la prima volta che svolgiamo questo compito non ne avevamo compreso alcuni aspetti. I problemi principali li abbiamo riscontrati nella progettazione dei componenti per l'upload di domande e test da file. Discutendone insieme siamo riusciti a tenere in considerazione tutti gli aspetti che singolarmente non si era riusciti a tenere a mente, e a trovare una soluzione adatta.
 #pagebreak()
+
+
+=== Decimo periodo 11/03/2025 - 24/03/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("10"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/C/10persone.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/C/10ruoli.png",height: 17%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("10")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot10"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
+  #image("Graphs/C/10costi.png",height: 20%)
+  *Retrospective*:
+  
+#pagebreak()
+
+
+
+=== Undicesimo periodo 25/03/2025 - 07/04/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("11"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/C/11persone.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/C/11ruoli.png",height: 17%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("11")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot11"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
+  #image("Graphs/C/11costi.png",height: 20%)
+  *Retrospective*:
+  
+#pagebreak()
+
+
+=== Dodicesimo periodo 08/04/2025 - 21/04/2025
+  *Consuntivo Orario*
+  #table-json(consuntivi.at("12"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/C/12persone.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/C/12ruoli.png",height: 17%)
+  ])
+  *Consuntivo costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  #table-json(costi(consuntivi.at("12")), 3)
+  ],
+  [
+    #table-json(consuntivi.at("tot12"), 4)
+  ]
+)
+  *Grafico a torta del budget speso e rimanente al termine del periodo.*
+  #image("Graphs/C/12costi.png",height: 20%)
+  *Retrospective*:
+  
+#pagebreak()

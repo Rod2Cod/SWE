@@ -274,10 +274,10 @@
   stroke: none,
   [
   *Distribuzione delle ore personali*
-  #image("Graphs/p10_dist_ore_persona.png",height: 18%)
+  #image("Graphs/P/10persone.png",height: 18%)
   ],[
   *Distribuzione delle ore per ruolo*
-  #image("Graphs/p10_dist_ore.png",height: 18%)
+  #image("Graphs/P/10ruoli.png",height: 17%)
   ])
   *Preventivo Costi*
   #table(
@@ -292,5 +292,61 @@
 )
   
   *Grafico a torta del budget speso e rimanente preventivato nel decimo periodo.*
-  #image("Graphs/p10_budget.png",height: 20%)
+  #image("Graphs/P/10costi.png",height: 22%)
+  #pagebreak()
+   === Undicesimo Periodo 25/03/2025 - 07/04/2025
+        *Preventivo Orario*
+  #table-json(preventivi.at("11"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/P/11persone.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/P/11ruoli.png",height: 17%)
+  ])
+  *Preventivo Costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+    #table-json(costi(preventivi.at("11")), 3)
+  ],
+  [
+    #table-json(preventivi.at("tot11"), 3)
+  ]
+)
+  
+  *Grafico a torta del budget speso e rimanente preventivato nel undicesimo periodo.*
+  #image("Graphs/P/11costi.png",height: 22%)
+  #pagebreak()
+   === Dodicesimo Periodo 08/04/2025 - 21/04/2025
+        *Preventivo Orario*
+  #table-json(preventivi.at("12"), 8)
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+  *Distribuzione delle ore personali*
+  #image("Graphs/P/12persone.png",height: 18%)
+  ],[
+  *Distribuzione delle ore per ruolo*
+  #image("Graphs/P/12ruoli.png",height:17%)
+  ])
+  *Preventivo Costi*
+  #table(
+  columns: 2,
+  stroke: none,
+  [
+    #table-json(costi(preventivi.at("12")), 3)
+  ],
+  [
+    #table-json(preventivi.at("tot12"), 3)
+  ]
+)
+  
+  *Grafico a torta del budget speso e rimanente preventivato nel dodicesimo periodo.*
+  #image("Graphs/P/12costi.png",height: 22%)
   #pagebreak()
