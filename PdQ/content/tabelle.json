@@ -157,40 +157,40 @@
   "Qualità": {
     "Processo": {
       "ProcessiPrimari": {
-        "keys": ["Obbiettivo", "Descrizione", "Metriche"],
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo": "Sviluppo \n(in particolare Codifica)",
+            "Obiettivo": "Sviluppo \n(in particolare Codifica)",
             "Descrizione": "Processo che ha lo scopo di determinare le attività e i compiti necessari per la realizzazione del prodotto richiesto, in accordo con le esigenze del proponente.",
             "Metriche": "MPC-RSI, MPC-SOR"
           },
           {
-            "Obbiettivo": "Fornitura",
+            "Obiettivo": "Fornitura",
             "Descrizione": "Processo che consiste nel decidere procedure e risorse da utilizzare per lo sviluppo del progetto.",
             "Metriche": "MPC-BV, MPC-SV,\nMPC-ETC, MPC-EAC,\nMPC-CPI, MPC-AC,\nMPC-PV, MPC-EV"
           }
         ]
       },
       "ProcessiSupporto": {
-        "keys": ["Obbiettivo", "Descrizione", "Metriche"],
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo": "Gestione della qualità",
+            "Obiettivo": "Gestione della qualità",
             "Descrizione": "Processo con lo scopo di assicurare che il prodotto e i servizi offerti rispettino gli obiettivi di qualità preposti.",
             "Metriche": "MPC-QMS"
           },
           {
-            "Obbiettivo": "Verifica",
+            "Obiettivo": "Verifica",
             "Descrizione": "Processo con lo scopo di controllare che i servizi realizzati soddisfino i requisiti specificati dal cliente",
             "Metriche": "MPC-VCC, MPC-VPTCP, MPC-VFTCP"
           }
         ]
       },
       "ProcessiOrganizzativi": {
-        "keys": ["Obbiettivo", "Descrizione", "Metriche"],
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo": "Gestione Organizzativa",
+            "Obiettivo": "Gestione Organizzativa",
             "Descrizione": "Processo che si occupa di regolare le modalità di coordinamento del gruppo",
             "Metriche": "MPC-ORG"
           }
@@ -345,50 +345,50 @@
     },
     "Prodotto": {
       "Documentazione": {
-        "keys": ["Obbiettivo", "Descrizione", "Metriche"],
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo": "Leggibilità",
+            "Obiettivo": "Leggibilità",
             "Descrizione": "Il contenuto dei documenti deve essere comprensibile all’utente.",
             "Metriche": "MPD-IG"
           },
           {
-            "Obbiettivo": "Correttezza Linguistica",
+            "Obiettivo": "Correttezza Linguistica",
             "Descrizione": "I documenti devono essere privi di errori grammaticali.",
             "Metriche": "MPD-EO"
           }
         ]
       },
       "Software": {
-        "keys": ["Obbiettivo", "Descrizione", "Metriche"],
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo": "Copertura dei Test",
+            "Obiettivo": "Copertura dei Test",
             "Descrizione": "Capacità del prodotto Software di superare i test",
             "Metriche": "MPD - CTS"
           },
           {
-            "Obbiettivo": "Funzionalità",
+            "Obiettivo": "Funzionalità",
             "Descrizione": "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
             "Metriche": "MPD-CROB, MPD-CRD, \nMPD-CROP"
           },
           {
-            "Obbiettivo": "Manutenibilità",
+            "Obiettivo": "Manutenibilità",
             "Descrizione": "Capacità di permettere future correzioni e modifiche senza compromettere l’intero prodotto software.",
             "Metriche": "MPD-CCM"
           },
           {
-            "Obbiettivo": "Usabilità",
+            "Obiettivo": "Usabilità",
             "Descrizione": "Capacità di essere comprensibile e di facile utilizzo per l’utente.",
             "Metriche": "MPD-SU, MPD-TA"
           },
           {
-            "Obbiettivo": "Affidabilità",
+            "Obiettivo": "Affidabilità",
             "Descrizione": "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
             "Metriche": "MPD-GE"
           },
           {
-            "Obbiettivo": "Efficienza",
+            "Obiettivo": "Efficienza",
             "Descrizione": "Capacità di svolgere un compito nel minor tempo possibile e con l’utilizzo della minor quantità possibile di risorse.",
             "Metriche": "MPD-TMR"
           }
@@ -1004,12 +1004,12 @@
         },
         {
           "Codice": "TUB-93",
-          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui il RisultatoSingolaDomanda non venga trovato",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un messaggio nel caso in cui il RisultatoSingolaDomanda non venga trovato",
           "Stato": "I"
         },
         {
           "Codice": "TUB-94",
-          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
           "Stato": "I"
         },
 
