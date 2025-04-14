@@ -986,50 +986,50 @@
           "Res": 0,
           "Amm": 0,
           "Ana": 0,
-          "Ptt": 0,
-          "Pre": 2,
-          "Ver": 1,
-          "Totale": 3
+          "Ptt": 3,
+          "Pre": 8,
+          "Ver": 2,
+          "Totale": 13
         },
         {
           "Nominativo": "Annalisa",
           "Res": 1,
           "Amm": 0,
           "Ana": 0,
-          "Ptt": 0,
-          "Pre": 2,
-          "Ver": 1,
-          "Totale": 4
+          "Ptt": 3,
+          "Pre": 8,
+          "Ver": 2,
+          "Totale": 14
         },
         {
           "Nominativo": "Filippo",
           "Res": 0,
           "Amm": 0,
           "Ana": 0,
-          "Ptt": 0,
-          "Pre": 2,
-          "Ver": 1,
-          "Totale": 3
+          "Ptt": 3,
+          "Pre": 8,
+          "Ver": 2,
+          "Totale": 13
         },
         {
           "Nominativo": "Luca",
           "Res": 0,
           "Amm": 0,
           "Ana": 0,
-          "Ptt": 0,
-          "Pre": 2,
-          "Ver": 1,
-          "Totale": 3
+          "Ptt": 3,
+          "Pre": 8,
+          "Ver": 2,
+          "Totale": 13
         },
         {
           "Nominativo": "Alberto",
           "Res": 0,
           "Amm": 0,
           "Ana": 0,
-          "Ptt": 0,
-          "Pre": 2,
-          "Ver": 1,
-          "Totale": 3
+          "Ptt": 3,
+          "Pre": 8,
+          "Ver": 2,
+          "Totale": 13
         }
       ]
     },
@@ -1051,9 +1051,9 @@
           "Amm": 0,
           "Ana": 0,
           "Ptt": 0,
-          "Pre": 1,
-          "Ver": 0,
-          "Totale": 2
+          "Pre": 5,
+          "Ver": 5,
+          "Totale": 11
         },
         {
           "Nominativo": "Annalisa",
@@ -1061,9 +1061,9 @@
           "Amm": 0,
           "Ana": 0,
           "Ptt": 0,
-          "Pre": 0,
-          "Ver": 1,
-          "Totale": 1
+          "Pre": 5,
+          "Ver": 5,
+          "Totale": 10
         },
         {
           "Nominativo": "Filippo",
@@ -1071,9 +1071,9 @@
           "Amm": 0,
           "Ana": 0,
           "Ptt": 0,
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Pre": 5,
+          "Ver": 5,
+          "Totale": 10
         },
         {
           "Nominativo": "Luca",
@@ -1081,9 +1081,9 @@
           "Amm": 0,
           "Ana": 0,
           "Ptt": 0,
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Pre": 5,
+          "Ver": 5,
+          "Totale": 10
         },
         {
           "Nominativo": "Alberto",
@@ -1091,9 +1091,9 @@
           "Amm": 0,
           "Ana": 0,
           "Ptt": 0,
-          "Pre": 0,
-          "Ver": 1,
-          "Totale": 1
+          "Pre": 5,
+          "Ver": 5,
+          "Totale": 10
         }
       ]
     },
@@ -1111,9 +1111,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 1205,
-          "Budget preventivato": 785,
-          "Budget rimanente": 10290
+          "Costo totale": 1915,
+          "Budget preventivato": 765,
+          "Budget rimanente": 10330
         }
       ]
     },
@@ -1121,9 +1121,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 2405,
+          "Costo totale": 2385,
           "Budget preventivato": 1200,
-          "Budget rimanente": 9090
+          "Budget rimanente": 9110
         }
       ]
     },
@@ -1131,9 +1131,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 3530,
+          "Costo totale": 3520,
           "Budget preventivato": 1125,
-          "Budget rimanente": 7965
+          "Budget rimanente": 7975
         }
       ]
     },
@@ -1141,9 +1141,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 4665,
+          "Costo totale": 4685,
           "Budget preventivato": 1135,
-          "Budget rimanente": 6830
+          "Budget rimanente": 6810
         }
       ]
     },
@@ -1151,9 +1151,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 5875,
+          "Costo totale": 5732.5,
           "Budget preventivato": 1210,
-          "Budget rimanente": 5620
+          "Budget rimanente": 5762.5
         }
       ]
     },
@@ -1161,9 +1161,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 7210,
+          "Costo totale": 6485,
           "Budget preventivato": 1335,
-          "Budget rimanente": 4285
+          "Budget rimanente": 5010
         }
       ]
     },
@@ -1171,9 +1171,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 8295,
+          "Costo totale": 6950,
           "Budget preventivato": 1085,
-          "Budget rimanente": 3200
+          "Budget rimanente": 4545
         }
       ]
     },
@@ -1181,9 +1181,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 9675,
+          "Costo totale": 7635,
           "Budget preventivato": 1380,
-          "Budget rimanente": 1820
+          "Budget rimanente": 3860
         }
       ]
     },
@@ -1191,9 +1191,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 10740,
+          "Costo totale": 8740,
           "Budget preventivato": 1065,
-          "Budget rimanente": 755
+          "Budget rimanente": 2755
         }
       ]
     },
@@ -1201,9 +1201,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 10995,
-          "Budget preventivato": 255,
-          "Budget rimanente": 500
+          "Costo totale": 9580,
+          "Budget preventivato": 1155,
+          "Budget rimanente": 1915
         }
       ]
     },
@@ -1211,9 +1211,9 @@
       "keys": ["Costo totale", "Budget preventivato", "Budget rimanente"],
       "values": [
         {
-          "Costo totale": 11130,
-          "Budget preventivato": 135,
-          "Budget rimanente": 365
+          "Costo totale": 9955,
+          "Budget preventivato": 780,
+          "Budget rimanente": 1540
         }
       ]
     }
@@ -1735,38 +1735,38 @@
         {
           "Nominativo": "Michele Nesler",
 
-          "Pre": 1,
-
+          "Pre": 5,
+          "Ver": 3,
           "Totale": 1
         },
         {
           "Nominativo": "Annalisa Egidi",
           "Res": 1,
 
-          "Pre": 1,
-
-          "Totale": 2
+          "Pre": 6,
+          "Ver": 3,
+          "Totale": 10
         },
         {
           "Nominativo": "Filippo Bellon",
-
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Ptt": 3,
+          "Pre": 2,
+          "Ver": 3,
+          "Totale": 8
         },
         {
           "Nominativo": "Luca Calzetta",
 
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Pre": 9,
+          "Ver": 3,
+          "Totale": 12
         },
         {
           "Nominativo": "Alberto Maggion",
 
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Pre": 6,
+          "Ver": 3,
+          "Totale": 9
         }
       ]
     },
@@ -1785,33 +1785,37 @@
         {
           "Nominativo": "Michele Nesler",
           "Res": 1,
-
-          "Totale": 1
+          "Pre": 2,
+          "Ver": 4,
+          "Totale": 7
         },
         {
           "Nominativo": "Annalisa Egidi",
 
-          "Ver": 1,
-          "Totale": 1
+          "Pre": 3,
+          "Ver": 3,
+          "Totale": 6
         },
         {
           "Nominativo": "Filippo Bellon",
 
-          "Pre": 1,
-          "Ver": 1,
-          "Totale": 2
+          "Pre": 4,
+          "Ver": 4,
+          "Totale": 8
         },
         {
           "Nominativo": "Luca Calzetta",
 
-          "Ver": 1,
-          "Totale": 1
+          "Pre": 4,
+          "Ver": 5,
+          "Totale": 9
         },
         {
           "Nominativo": "Alberto Maggion",
 
-          "Ver": 1,
-          "Totale": 1
+          "Pre": 3,
+          "Ver": 3,
+          "Totale": 6
         }
       ]
     },
@@ -1984,10 +1988,10 @@
       ],
       "values": [
         {
-          "Costo totale": 8575,
-          "Costo periodo": 150,
-          "Budget preventivato": 255,
-          "Budget rimanente": 2920
+          "Costo totale": 9175,
+          "Costo periodo": 750,
+          "Budget preventivato": 1155,
+          "Budget rimanente": 2320
         }
       ]
     },
@@ -2000,10 +2004,10 @@
       ],
       "values": [
         {
-          "Costo totale": 8680,
-          "Costo periodo": 105,
-          "Budget preventivato": 135,
-          "Budget rimanente": 2815
+          "Costo totale": 9708,
+          "Costo periodo": 533,
+          "Budget preventivato": 780,
+          "Budget rimanente": 1788
         }
       ]
     }

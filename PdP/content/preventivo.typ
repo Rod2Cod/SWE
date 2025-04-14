@@ -41,7 +41,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel primo periodo.*
-  #image("Graphs/p1_budget.png",height: 20%)
+  #image("Graphs/P/1costi.png",height: 20%)
   #pagebreak()
   === Secondo Periodo 19/11/2024 - 02/12/2024
   *Preventivo Orario*
@@ -69,7 +69,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel secondo periodo.*
-  #image("Graphs/p2_budget.png",height: 20%)
+   #image("Graphs/P/2costi.png",height: 20%)
   #pagebreak()
   === Terzo Periodo 03/12/2024 - 16/12/2024
   *Preventivo Orario*
@@ -96,7 +96,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel terzo periodo.*
-  #image("Graphs/p3_budget.png",height: 20%)
+   #image("Graphs/P/3costi.png",height: 20%)
   #pagebreak()
   === Quarto Periodo 17/12/2024 - 30/12/2024
   *Preventivo Orario*
@@ -123,7 +123,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel quarto periodo.*
-  #image("Graphs/p4_budget.png",height: 20%)
+   #image("Graphs/P/4costi.png",height: 20%)
   #pagebreak()
   === Quinto Periodo 31/12/2024 - 13/01/2025
   *Preventivo Orario*
@@ -151,7 +151,7 @@
 )
   
   *Grafico a torta del budget speso e rimanente preventivato nel quinto periodo.*
-  #image("Graphs/p5_budget.png",height: 20%)
+  #image("Graphs/P/5costi.png",height: 20%)
   #pagebreak()
   === Sesto Periodo 14/01/2025 - 27/01/2025
   *Preventivo Orario*
@@ -179,7 +179,7 @@
 )
   
   *Grafico a torta del budget speso e rimanente preventivato nel sesto periodo.*
-  #image("Graphs/p6_budget.png",height: 20%)
+   #image("Graphs/P/6costi.png",height: 20%)
   #pagebreak()
   === Settimo Periodo 28/01/2025 - 10/02/2025
     *Preventivo Orario*
@@ -207,7 +207,7 @@
 )
   
   *Grafico a torta del budget speso e rimanente preventivato nel settimo periodo.*
-  #image("Graphs/p7_budget.png",height: 20%)
+   #image("Graphs/P/7costi.png",height: 20%)
   #pagebreak()
 
   === Ottavo Periodo 11/02/2025 - 24/02/2025
@@ -236,7 +236,7 @@
 )
   
   *Grafico a torta del budget speso e rimanente preventivato nell'ottavo periodo.*
-  #image("Graphs/p8_budget.png",height: 20%)
+   #image("Graphs/P/8costi.png",height: 20%)
   #pagebreak()
   === Nono Periodo 25/02/2025 - 10/03/2025
         *Preventivo Orario*
@@ -263,7 +263,7 @@
   ]
 )
   *Grafico a torta del budget speso e rimanente preventivato nel nono periodo.*
-  #image("Graphs/p9_budget.png",height: 20%)
+   #image("Graphs/P/9costi.png",height: 20%)
   #pagebreak()
 
 == Product Baseline
