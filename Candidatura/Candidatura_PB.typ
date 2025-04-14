@@ -57,7 +57,7 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
 
   La documentazione da sottoporre a valutazione comprende:
   - Analisi dei Reqisiti alla versione 3.0;
-  - Glossario alla versione 2.0;
+  - Glossario alla versione 1.0;
   - Manuale Sviluppatore alla versione 2.0;
   - Manuale Utente alla versione 1.0;
   - Piano di Progetto alla versione 2.0;
