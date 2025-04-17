@@ -78,3 +78,47 @@
 *RTB* Dal grafico si osserva che il *Requirements Stability Index* si è mantenuto costantemente al 100% a partire dal periodo P3, indicando che i requisiti, una volta definiti, non sono stati più modificati. Questo riflette un'elevata stabilità e coerenza nella gestione dei requisiti. Al contrario, il valore dei *Satisfied Obligatory Requirements* è rimasto a 0% fino alla revisione corrente, segno che l'implementazione dei requisiti obbligatori non è ancora stata completata, ma è prevista nelle fasi successive del progetto.
 
 *PB*
+
+=== Code Coverage
+/*
+  #figure(
+    image("../Grafici/CodeCoverage.png", width: 80%),
+    caption: [
+      Resoconto Code Coverage
+    ],
+  )
+*/
+*PB*
+
+=== Passed Test Cases Percentage
+/*
+  #figure(
+    image("../Grafici/Passed_Test.png", width: 80%),
+    caption: [
+      Resoconto Passed Test Cases Percentage
+    ],
+  )
+*/
+*PB*
+
+=== Failed Test Cases Percentage
+/*
+  #figure(
+    image("../Grafici/Failed_Test.png", width: 80%),
+    caption: [
+      Resoconto Failed Test Cases Percentage
+    ],
+  )
+*/
+*PB*
+
+=== Complessità Ciclomatica del Codice
+/*
+  #figure(
+    image("../Grafici/Comprensibilita.png", width: 80%),
+    caption: [
+      Resoconto Complessità Ciclomatica del Codice
+    ],
+  )
+*/
+*PB*
