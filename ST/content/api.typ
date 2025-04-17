@@ -13,7 +13,7 @@
 - *Parametri:* 
   - `id` = id dell'elemento domanda da ottenere
 #table-json-api(json("tabelle.json").at("api").at("elemento_domanda").at("get"), 4)
-=== GET Get All Elementi Domnada
+=== GET Get All Elementi Domanda
 *Descrizione:* Questo endpoint consente di ottenere tutti gli elementi domanda presenti nel sistema.
 - *endpoint:* `/domande`
 - *Metodo:* `GET`

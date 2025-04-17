@@ -12,23 +12,29 @@
       {
         "Data": "2025-03-27",
         "Descrizione": "Prima stesura",
-        "Autore": "Michele Nesler"
+        "Autore": "Michele Nesler",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.1"
       },
       {
         "Data": "2025-04-09",
         "Descrizione": "Aggiunta sezione installazione, modificate immagini con quelle aggiornate",
-        "Autore": "Luca Calzetta"
+        "Autore": "Luca Calzetta",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.2"
       },
       {
         "Data": "2025-04-10",
         "Descrizione": "Aggiornate sezioni Installazione e Funzionalità",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion",
+        "Versione": "0.3"
       },
       {
         "Data": "2025-04-10",
-        "Descrizione": "Verifica documento",
-        "Verificatore": "Alberto Maggion",
-        "Versione": "0.1"
+        "Descrizione": "",
+        "Validatore": "Michele Nesler",
+        "Versione": "1.0"
       }
     ]
   }

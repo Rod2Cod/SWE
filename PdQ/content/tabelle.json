@@ -1,6 +1,6 @@
 {
-  "versione" : {
-    "keys" : [
+  "versione": {
+    "keys": [
       "Versione",
       "Data",
       "Sez.modificate",
@@ -10,195 +10,195 @@
     ],
     "values": [
       {
-        "Versione" : "0.0.1",
-        "Data" : "2024-12-26",
+        "Versione": "0.0.1",
+        "Data": "2024-12-26",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.0.2",
-        "Data" : "2025-01-01",
+        "Versione": "0.0.2",
+        "Data": "2025-01-01",
         "Sez.modificate": "Introduzione e Qualità di Processo - Aggiunte modifiche nelle sezioni Scopo del documento, Glossario, Riferimenti, Processi Primari, Processi di Supporto e Metriche Utilizzate",
-        "Autore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon"
       },
       {
-        "Versione" : "0.0.3",
-        "Data" : "2025-01-03",
+        "Versione": "0.0.3",
+        "Data": "2025-01-03",
         "Sez.modificate": "Qualità di Processo e Qualità di Prodotto - Rimozione Processi organizzativi e spostamento Documentazione da Qualità di processo a Qualità di prodotto",
-        "Autore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon"
       },
       {
-        "Versione" : "0.0.4",
-        "Data" : "2025-01-04",
+        "Versione": "0.0.4",
+        "Data": "2025-01-04",
         "Sez.modificate": "Qualità di Prodotto - Aggiunta sezione Software e modifiche a sezione Metriche Utilizzate ",
-        "Autore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon"
       },
       {
-        "Versione" : "0.0.5",
-        "Data" : "2025-01-05",
+        "Versione": "0.0.5",
+        "Data": "2025-01-05",
         "Sez.modificate": "Qualità di Prodotto - Modificate sezioni Metriche Utilizzate e Software",
-        "Autore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon"
       },
       {
-        "Versione" : "0.0.6",
-        "Data" : "2025-01-11",
+        "Versione": "0.0.6",
+        "Data": "2025-01-11",
         "Sez.modificate": "Qualità di Processo - Processi di Supporto, \n Metriche Utilizzate, \n Processi Organizzativi",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.0.7",
-        "Data" : "2025-01-18",
+        "Versione": "0.0.7",
+        "Data": "2025-01-18",
         "Sez.modificate": "Qualità di Processo - Processi di Supporto, \n Metriche Utilizzate",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.0.8",
-        "Data" : "2025-01-19",
+        "Versione": "0.0.8",
+        "Data": "2025-01-19",
         "Sez.modificate": "Qualità di Prodotto - Metriche Utilizzate,\n  Specifica dei Test,\n Specifica dei Test - Formato codice dei test ",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.1.0",
-        "Data" : "2025-01-20",
-        "Verificatore" : "Alberto Maggion"
+        "Versione": "0.1.0",
+        "Data": "2025-01-20",
+        "Verificatore": "Alberto Maggion"
       },
       {
-        "Versione" : "0.1.1",
-        "Data" : "2025-01-27",
+        "Versione": "0.1.1",
+        "Data": "2025-01-27",
         "Sez.modificate": "Specifica dei Test - Test di Sistema,\n Specifica dei Test - Test di Accettazione",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.1.2",
-        "Data" : "2024-12-26",
+        "Versione": "0.1.2",
+        "Data": "2024-12-26",
         "Sez.modificate": "Resoconto delle Attività di Verifica - Verifica della documentazione,\n Resoconto delle Attività di Verifica - Verifica dei Processi",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "0.2.0",
-        "Data" : "2025-01-31",
+        "Versione": "0.2.0",
+        "Data": "2025-01-31",
         "Sez.modificate": "Verifica Documento",
-        "Verificatore" : "Luca Calzetta"
+        "Verificatore": "Luca Calzetta"
       },
       {
-        "Versione" : "1.0.0",
-        "Data" : "2025-02-03",
+        "Versione": "1.0.0",
+        "Data": "2025-02-03",
         "Sez.modificate": "Approvazione del documento",
-        "Validatore" : "Alberto Maggion"
+        "Validatore": "Alberto Maggion"
       },
       {
-        "Versione":"1.0.1",
+        "Versione": "1.0.1",
         "Data": "2025-02-21",
         "Sez.modificate": "Specifica dei Test - Test di Sistema",
         "Autore": "Annalisa Egidi"
       },
       {
-        "Versione":"1.0.2",
+        "Versione": "1.0.2",
         "Data": "2025-02-24",
         "Sez.modificate": "Specifica dei Test - Test di Sistema",
         "Autore": "Annalisa Egidi"
       },
       {
-        "Versione" : "1.1.0",
-        "Data" : "2025-02-24",
+        "Versione": "1.1.0",
+        "Data": "2025-02-24",
         "Sez.modificate": "Verifica Documento",
-        "Verificatore" : "Luca Calzetta"
+        "Verificatore": "Luca Calzetta"
       },
       {
-        "Versione" : "2.0.0",
-        "Data" : "2025-02-24",
+        "Versione": "2.0.0",
+        "Data": "2025-02-24",
         "Sez.modificate": "",
-        "Validatore" : "Michele Nesler"
+        "Validatore": "Michele Nesler"
       },
       {
-        "Data" : "2025-02-26",
+        "Data": "2025-02-26",
         "Sez.modificate": "Riferimenti - Riferimenti informativi\nQualità di Processo\nQualità di processo - metriche utilizzate\nQualità di Prodoto\nQualità di prodotto - metriche utilizzate\nResoconto delle Attività di Qualifica",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.1"
       },
       {
         "Data": "2025-03-28",
         "Sez.modificate": "Specifica dei Test - Test di Sistema",
-        "Autore": "Annalisa Egidi"
+        "Autore": "Annalisa Egidi",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.2"
       },
       {
         "Data": "2025-04-01",
         "Sez.modificate": "Specifica dei Test - Test di Unità, Test di Integrazione",
-        "Autore": "Annalisa Egidi"
+        "Autore": "Annalisa Egidi",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.3"
       },
       {
-        "Data" : "2025-04-09",
+        "Data": "2025-04-09",
         "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità backend.",
-        "Verificatore" : "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.4"
       },
       {
-        "Data" : "2025-04-10",
+        "Data": "2025-04-10",
         "Sez.modificate": "Specifica dei Test: layout tabelle",
-        "Autore" : "Annalisa Egidi"
+        "Autore": "Annalisa Egidi",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.5"
       },
       {
-        "Data" : "2025-04-10",
+        "Data": "2025-04-10",
         "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità Frontend., Sezione Specifica test di integrazione - Aggiunti test di integrazione tra frontend, backend, sistema di valutazione e database",
-        "Verificatore" : "Luca Calzetta"
+        "Autore": "Luca Calzetta",
+        "Verificatore": "Michele Nesler",
+        "Versione": "2.6"
       }
     ]
   },
-   "Qualità" : {
-    "Processo" : {
-      "ProcessiPrimari" : {
-        "keys" : [
-          "Obbiettivo",
-          "Descrizione",
-          "Metriche"
-        ],
+  "Qualità": {
+    "Processo": {
+      "ProcessiPrimari": {
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo" : "Sviluppo \n(in particolare Codifica)",
-            "Descrizione" : "Processo che ha lo scopo di determinare le attività e i compiti necessari per la realizzazione del prodotto richiesto, in accordo con le esigenze del proponente.",
+            "Obiettivo": "Sviluppo \n(in particolare Codifica)",
+            "Descrizione": "Processo che ha lo scopo di determinare le attività e i compiti necessari per la realizzazione del prodotto richiesto, in accordo con le esigenze del proponente.",
             "Metriche": "MPC-RSI, MPC-SOR"
           },
           {
-            "Obbiettivo" : "Fornitura",
-            "Descrizione" : "Processo che consiste nel decidere procedure e risorse da utilizzare per lo sviluppo del progetto.",
+            "Obiettivo": "Fornitura",
+            "Descrizione": "Processo che consiste nel decidere procedure e risorse da utilizzare per lo sviluppo del progetto.",
             "Metriche": "MPC-BV, MPC-SV,\nMPC-ETC, MPC-EAC,\nMPC-CPI, MPC-AC,\nMPC-PV, MPC-EV"
           }
         ]
       },
-      "ProcessiSupporto" : {
-        "keys" : [
-          "Obbiettivo",
-          "Descrizione",
-          "Metriche"
-        ],
+      "ProcessiSupporto": {
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo" : "Gestione della qualità",
-            "Descrizione" : "Processo con lo scopo di assicurare che il prodotto e i servizi offerti rispettino gli obiettivi di qualità preposti.",
+            "Obiettivo": "Gestione della qualità",
+            "Descrizione": "Processo con lo scopo di assicurare che il prodotto e i servizi offerti rispettino gli obiettivi di qualità preposti.",
             "Metriche": "MPC-QMS"
           },
           {
-            "Obbiettivo" : "Verifica",
-            "Descrizione" : "Processo con lo scopo di controllare che i servizi realizzati soddisfino i requisiti specificati dal cliente",
+            "Obiettivo": "Verifica",
+            "Descrizione": "Processo con lo scopo di controllare che i servizi realizzati soddisfino i requisiti specificati dal cliente",
             "Metriche": "MPC-VCC, MPC-VPTCP, MPC-VFTCP"
           }
         ]
       },
-      "ProcessiOrganizzativi" : {
-        "keys" : [
-          "Obbiettivo",
-          "Descrizione",
-          "Metriche"
-        ],
+      "ProcessiOrganizzativi": {
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo" : "Gestione Organizzativa",
-            "Descrizione" : "Processo che si occupa di regolare le modalità di coordinamento del gruppo",
+            "Obiettivo": "Gestione Organizzativa",
+            "Descrizione": "Processo che si occupa di regolare le modalità di coordinamento del gruppo",
             "Metriche": "MPC-ORG"
           }
         ]
       },
-      "ProcessiPrimariMetriche" : {
-        "Fornitura" : {
-          "keys" : [
+      "ProcessiPrimariMetriche": {
+        "Fornitura": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -206,57 +206,57 @@
           ],
           "values": [
             {
-              "Codice" : "MPC-EV",
-              "Nome Metrica" : "Earned Value",
+              "Codice": "MPC-EV",
+              "Nome Metrica": "Earned Value",
               "Valore accettabile": "≥ 0",
               "Valore ottimale": "≤ EAC"
             },
             {
-              "Codice" : "MPC-PV",
-              "Nome Metrica" : "Planned Value",
+              "Codice": "MPC-PV",
+              "Nome Metrica": "Planned Value",
               "Valore accettabile": "≥ 0",
               "Valore ottimale": "≤ BAC"
             },
             {
-              "Codice" : "MPC-AC",
-              "Nome Metrica" : "Actual Cost",
+              "Codice": "MPC-AC",
+              "Nome Metrica": "Actual Cost",
               "Valore accettabile": "≥ 0",
               "Valore ottimale": "≤ EAC"
             },
             {
-              "Codice" : "MPC-CPI",
-              "Nome Metrica" : "Cost Performance Index ",
+              "Codice": "MPC-CPI",
+              "Nome Metrica": "Cost Performance Index ",
               "Valore accettabile": "compreso tra 0.95 e 1.05",
               "Valore ottimale": "1"
             },
             {
-              "Codice" : "MPC-EAC",
-              "Nome Metrica" : "Estimate At Completion ",
+              "Codice": "MPC-EAC",
+              "Nome Metrica": "Estimate At Completion ",
               "Valore accettabile": "± 5% rispetto al BAC",
               "Valore ottimale": "BAC"
             },
             {
-              "Codice" : "MPC-ETC",
-              "Nome Metrica" : "Estimate To Complete ",
+              "Codice": "MPC-ETC",
+              "Nome Metrica": "Estimate To Complete ",
               "Valore accettabile": "≥ 0",
               "Valore ottimale": "≤ EAC"
             },
             {
-              "Codice" : "MPC-SV",
-              "Nome Metrica" : "Schedule Variance ",
+              "Codice": "MPC-SV",
+              "Nome Metrica": "Schedule Variance ",
               "Valore accettabile": "± 10% rispetto al BAC",
               "Valore ottimale": "0%"
             },
             {
-              "Codice" : "MPC-BV",
-              "Nome Metrica" : "Budget Variance",
+              "Codice": "MPC-BV",
+              "Nome Metrica": "Budget Variance",
               "Valore accettabile": "± 10% rispetto al BAC",
               "Valore ottimale": "0%"
             }
           ]
         },
-        "Sviluppo" : {
-          "keys" : [
+        "Sviluppo": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -264,23 +264,23 @@
           ],
           "values": [
             {
-              "Codice" : "MPC-SOR",
-              "Nome Metrica" : "Satisfied Obligatory Requirements",
+              "Codice": "MPC-SOR",
+              "Nome Metrica": "Satisfied Obligatory Requirements",
               "Valore accettabile": "100%",
               "Valore ottimale": "100%"
             },
             {
-              "Codice" : "MPC-RSI",
-              "Nome Metrica" : "Requirements Stability Index",
+              "Codice": "MPC-RSI",
+              "Nome Metrica": "Requirements Stability Index",
               "Valore accettabile": "≥ 70%",
               "Valore ottimale": "100%"
             }
           ]
         }
       },
-      "ProcessiSupportoMetriche" : {
-        "Verifica" : {
-          "keys" : [
+      "ProcessiSupportoMetriche": {
+        "Verifica": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -288,27 +288,27 @@
           ],
           "values": [
             {
-              "Codice" : "MPC-VPTCP",
-              "Nome Metrica" : "Passed Test Cases Percentage",
+              "Codice": "MPC-VPTCP",
+              "Nome Metrica": "Passed Test Cases Percentage",
               "Valore accettabile": "≥80%",
               "Valore ottimale": "100%"
             },
             {
-              "Codice" : "MPC-VFTCP",
-              "Nome Metrica" : "Failed Test Cases Percentage",
+              "Codice": "MPC-VFTCP",
+              "Nome Metrica": "Failed Test Cases Percentage",
               "Valore accettabile": "≤20%",
               "Valore ottimale": "0%"
             },
             {
-              "Codice" : "MPC-VCC",
-              "Nome Metrica" : "Code Coverage",
+              "Codice": "MPC-VCC",
+              "Nome Metrica": "Code Coverage",
               "Valore accettabile": "≥75%",
               "Valore ottimale": "≥90%"
             }
           ]
         },
-        "GestioneQualità" : {
-          "keys" : [
+        "GestioneQualità": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -316,119 +316,111 @@
           ],
           "values": [
             {
-              "Codice" : "MPC-QMS",
-              "Nome Metrica" : "Quality Metrics Satisfied",
+              "Codice": "MPC-QMS",
+              "Nome Metrica": "Quality Metrics Satisfied",
               "Valore accettabile": "≥ 90%",
               "Valore ottimale": "100%"
             }
           ]
         }
       },
-      "ProcessiOrganizzativiMetriche" : {
-          "GestioneOrganizzativa" : {
-            "keys" : [
-              "Codice",
-              "Nome Metrica",
-              "Valore accettabile",
-              "Valore ottimale"
-            ],
-            "values": [
-              {
-                "Codice" : "MPC-ORG",
-                "Nome Metrica" : "Non-calculated risk",
-                "Valore accettabile": "≤5%",
-                "Valore ottimale": "0"
-              }
-            ]
-          }
+      "ProcessiOrganizzativiMetriche": {
+        "GestioneOrganizzativa": {
+          "keys": [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
+          ],
+          "values": [
+            {
+              "Codice": "MPC-ORG",
+              "Nome Metrica": "Non-calculated risk",
+              "Valore accettabile": "≤5%",
+              "Valore ottimale": "0"
+            }
+          ]
         }
-      },
-    "Prodotto" : {
-      "Documentazione" : {
-        "keys" : [
-          "Obbiettivo",
-          "Descrizione",
-          "Metriche"
-        ],
+      }
+    },
+    "Prodotto": {
+      "Documentazione": {
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo" : "Leggibilità",
-            "Descrizione" : "Il contenuto dei documenti deve essere comprensibile all’utente.",
+            "Obiettivo": "Leggibilità",
+            "Descrizione": "Il contenuto dei documenti deve essere comprensibile all’utente.",
             "Metriche": "MPD-IG"
           },
           {
-            "Obbiettivo" : "Correttezza Linguistica",
-            "Descrizione" : "I documenti devono essere privi di errori grammaticali.",
+            "Obiettivo": "Correttezza Linguistica",
+            "Descrizione": "I documenti devono essere privi di errori grammaticali.",
             "Metriche": "MPD-EO"
           }
         ]
       },
-      "Software" : {
-        "keys" : [
-          "Obbiettivo",
-          "Descrizione",
-          "Metriche"
-        ],
+      "Software": {
+        "keys": ["Obiettivo", "Descrizione", "Metriche"],
         "values": [
           {
-            "Obbiettivo" : "Copertura dei Test",
-            "Descrizione" : "Capacità del prodotto Software di superare i test",
+            "Obiettivo": "Copertura dei Test",
+            "Descrizione": "Capacità del prodotto Software di superare i test",
             "Metriche": "MPD - CTS"
           },
           {
-            "Obbiettivo" : "Funzionalità",
-            "Descrizione" : "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
+            "Obiettivo": "Funzionalità",
+            "Descrizione": "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
             "Metriche": "MPD-CROB, MPD-CRD, \nMPD-CROP"
           },
           {
-            "Obbiettivo" : "Manutenibilità",
-            "Descrizione" : "Capacità di permettere future correzioni e modifiche senza compromettere l’intero prodotto software.",
+            "Obiettivo": "Manutenibilità",
+            "Descrizione": "Capacità di permettere future correzioni e modifiche senza compromettere l’intero prodotto software.",
             "Metriche": "MPD-CCM"
           },
           {
-            "Obbiettivo" : "Usabilità",
-            "Descrizione" : "Capacità di essere comprensibile e di facile utilizzo per l’utente.",
+            "Obiettivo": "Usabilità",
+            "Descrizione": "Capacità di essere comprensibile e di facile utilizzo per l’utente.",
             "Metriche": "MPD-SU, MPD-TA"
           },
           {
-            "Obbiettivo" : "Affidabilità",
-            "Descrizione" : "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
+            "Obiettivo": "Affidabilità",
+            "Descrizione": "Capacità del prodotto di soddisfare tutti i requisiti individuati nel documento di Analisi dei Requisiti.",
             "Metriche": "MPD-GE"
           },
           {
-            "Obbiettivo" : "Efficienza",
-            "Descrizione" : "Capacità di svolgere un compito nel minor tempo possibile e con l’utilizzo della minor quantità possibile di risorse.",
+            "Obiettivo": "Efficienza",
+            "Descrizione": "Capacità di svolgere un compito nel minor tempo possibile e con l’utilizzo della minor quantità possibile di risorse.",
             "Metriche": "MPD-TMR"
           }
         ]
       },
-      "DocumentazioneMetriche" : {
-        "DocumentazioneTab" : {
-          "keys" : [
-              "Codice",
-              "Nome Metrica",
-              "Valore accettabile",
-              "Valore ottimale"
+      "DocumentazioneMetriche": {
+        "DocumentazioneTab": {
+          "keys": [
+            "Codice",
+            "Nome Metrica",
+            "Valore accettabile",
+            "Valore ottimale"
           ],
           "values": [
             {
-              "Codice" : "MPD-IG",
-              "Nome Metrica" : "Leggibilità: Indice di Gulpease",
+              "Codice": "MPD-IG",
+              "Nome Metrica": "Leggibilità: Indice di Gulpease",
               "Valore accettabile": "≥ 60",
               "Valore ottimale": "100"
             },
             {
-              "Codice" : "MPD-EO",
-              "Nome Metrica" : "Correttezza Linguistica: Errori Ortografici",
+              "Codice": "MPD-EO",
+              "Nome Metrica": "Correttezza Linguistica: Errori Ortografici",
               "Valore accettabile": "0%",
               "Valore ottimale": "0%"
             }
           ]
         }
       },
-      "SoftwareMetriche" : {
-        "Funzionalità" : {
-          "keys" : [
+      "SoftwareMetriche": {
+        "Funzionalità": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -436,27 +428,27 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-CROB",
-              "Nome Metrica" : "Copertura dei requisiti obbligatori",
+              "Codice": "MPD-CROB",
+              "Nome Metrica": "Copertura dei requisiti obbligatori",
               "Valore accettabile": "100%",
               "Valore ottimale": "100%"
             },
             {
-              "Codice" : "MPD-CRD",
-              "Nome Metrica" : "Copertura dei requisiti desiderabili",
+              "Codice": "MPD-CRD",
+              "Nome Metrica": "Copertura dei requisiti desiderabili",
               "Valore accettabile": "≥ 80%",
               "Valore ottimale": "100%"
             },
             {
-              "Codice" : "MPD-CROP",
-              "Nome Metrica" : "Copertura dei requisiti opzionali",
+              "Codice": "MPD-CROP",
+              "Nome Metrica": "Copertura dei requisiti opzionali",
               "Valore accettabile": "≥ 60%",
               "Valore ottimale": "100%"
             }
           ]
         },
-        "Usabilità" : {
-          "keys" : [
+        "Usabilità": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -464,21 +456,21 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-SU",
-              "Nome Metrica" : "Semplicità di utilizzo",
+              "Codice": "MPD-SU",
+              "Nome Metrica": "Semplicità di utilizzo",
               "Valore accettabile": "≤ 7 click",
               "Valore ottimale": "≤ 5 click"
             },
             {
-              "Codice" : "MPD-TA",
-              "Nome Metrica" : "Tempo di apprendimento",
+              "Codice": "MPD-TA",
+              "Nome Metrica": "Tempo di apprendimento",
               "Valore accettabile": "≤ 10 minuti",
               "Valore ottimale": "≤ 5 minuti"
             }
           ]
         },
-        "Efficienza" : {
-          "keys" : [
+        "Efficienza": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -486,15 +478,15 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-TMR",
-              "Nome Metrica" : "Tempo medio di risposta",
+              "Codice": "MPD-TMR",
+              "Nome Metrica": "Tempo medio di risposta",
               "Valore accettabile": "≤ 6 secondi",
               "Valore ottimale": "≤ 4 secondi"
             }
           ]
         },
-        "Manutenibilità" : {
-          "keys" : [
+        "Manutenibilità": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -502,15 +494,15 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-CCM",
-              "Nome Metrica" : " Complessità Ciclomatica per Metodo",
+              "Codice": "MPD-CCM",
+              "Nome Metrica": " Complessità Ciclomatica per Metodo",
               "Valore accettabile": "≤ 5",
               "Valore ottimale": "≤ 4"
             }
           ]
         },
-        "Affidabilità" : {
-          "keys" : [
+        "Affidabilità": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -518,15 +510,15 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-GE",
-              "Nome Metrica" : "Gestione degli Errori",
+              "Codice": "MPD-GE",
+              "Nome Metrica": "Gestione degli Errori",
               "Valore accettabile": "≥ 60%",
               "Valore ottimale": "≥ 80%"
             }
           ]
         },
-        "CoperturaTest" : {
-          "keys" : [
+        "CoperturaTest": {
+          "keys": [
             "Codice",
             "Nome Metrica",
             "Valore accettabile",
@@ -534,8 +526,8 @@
           ],
           "values": [
             {
-              "Codice" : "MPD-CTS",
-              "Nome Metrica" : "Software Test Coverage",
+              "Codice": "MPD-CTS",
+              "Nome Metrica": "Software Test Coverage",
               "Valore accettabile": "≥ 80%",
               "Valore ottimale": "100%"
             }
@@ -546,182 +538,810 @@
   },
   "Test": {
     "TestUnita": {
-      "keys": [
-        "Codice",
-        "Descrizione",
-        "Stato"
-      ],
+      "keys": ["Codice", "Descrizione", "Stato"],
       "values": [
-        {"Codice": "TUB-1", "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-2", "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-3", "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-4", "Descrizione": "Verificare che il metodo getText() della classe Domanda restituisca correttamente il testo della domanda", "Stato": "I"},
-        {"Codice": "TUB-5", "Descrizione": "Verificare che il metodo setText() della classe Domanda modifichi correttamente il testo della domanda", "Stato": "I"},
-        {"Codice": "TUB-6", "Descrizione": "Verificare che il metodo getText() della classe Risposta restituisca correttamente il testo della risposta", "Stato": "I"},
-        {"Codice": "TUB-7", "Descrizione": "Verificare che il metodo setText() della classe Risposta modifichi correttamente il testo della risposta", "Stato": "I"},
-        {"Codice": "TUB-8", "Descrizione": "Verificare che il metodo getId() della classe ElementoDomanda restituisca correttamente l'id dell'elemento domanda", "Stato": "I"},
-        {"Codice": "TUB-9", "Descrizione": "Verificare che il metodo getDomanda() della classe ElementoDomanda restituisca correttamente l'oggetto Domanda", "Stato": "I"},
-        {"Codice": "TUB-10", "Descrizione": "Verificare che il metodo getRisposta() della classe ElementoDomanda restituisca correttamente l'oggetto Risposta", "Stato": "I"},
-        {"Codice": "TUB-11", "Descrizione": "Verificare che il metodo setDomanda() della classe ElementoDomanda modifichi correttamente l'oggetto Domanda", "Stato": "I"},
-        {"Codice": "TUB-12", "Descrizione": "Verificare che il metodo setRisposta() della classe ElementoDomanda modifichi correttamente l'oggetto Risposta", "Stato": "I"},
+        {
+          "Codice": "TUB-1",
+          "Descrizione": "Verificare che la classe Domanda venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-2",
+          "Descrizione": "Verificare che la classe Risposta venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-3",
+          "Descrizione": "Verificare che la classe ElementoDomanda venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-4",
+          "Descrizione": "Verificare che il metodo getText() della classe Domanda restituisca correttamente il testo della domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-5",
+          "Descrizione": "Verificare che il metodo setText() della classe Domanda modifichi correttamente il testo della domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-6",
+          "Descrizione": "Verificare che il metodo getText() della classe Risposta restituisca correttamente il testo della risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-7",
+          "Descrizione": "Verificare che il metodo setText() della classe Risposta modifichi correttamente il testo della risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-8",
+          "Descrizione": "Verificare che il metodo getId() della classe ElementoDomanda restituisca correttamente l'id dell'elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-9",
+          "Descrizione": "Verificare che il metodo getDomanda() della classe ElementoDomanda restituisca correttamente l'oggetto Domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-10",
+          "Descrizione": "Verificare che il metodo getRisposta() della classe ElementoDomanda restituisca correttamente l'oggetto Risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-11",
+          "Descrizione": "Verificare che il metodo setDomanda() della classe ElementoDomanda modifichi correttamente l'oggetto Domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-12",
+          "Descrizione": "Verificare che il metodo setRisposta() della classe ElementoDomanda modifichi correttamente l'oggetto Risposta",
+          "Stato": "I"
+        },
 
-        {"Codice": "TUB-13", "Descrizione": "Verificare che la classe TestStatusTrackerImpl venga istanziata correttamente", "Stato": "I" },
-        {"Codice": "TUB-14", "Descrizione": "Verificare che il metodo start_test() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I" },
-        {"Codice": "TUB-15", "Descrizione": "Verificare che il metodo test_update_progress() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
-        {"Codice": "TUB-16", "Descrizione": "Verificare che il metodo set_id_risultato() modifichi correttamente il campo id_risultato della classe TestStatusTrackerImpl", "Stato": "I"},
-        {"Codice": "TUB-17", "Descrizione": "Verificare che il metodo finish_test() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
-        {"Codice": "TUB-18", "Descrizione": "Verificare che il metodo set_error() della classe TestStatusTrackerImpl funzioni correttamente", "Stato": "I"},
-        {"Codice": "TUB-19", "Descrizione": "Verificare che il metodo get_status() della class TestStatusTrackerImpl ritorni correttamente un dizionario con i dati corretti", "Stato": "I"},
-        {"Codice": "TUB-20", "Descrizione": "Verificare che la classe Scorer venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-21", "Descrizione": "Verificare che la classe Scorer presenti i corretti valori di ritorno", "Stato": "I"},
-        {"Codice": "TUB-22", "Descrizione": "Verificare che la classe Scorer utilizzi le metriche corrette", "Stato": "I"},
-        {"Codice": "TUB-23", "Descrizione": "Verificare che la classe AlgoritmoValutazioneRisposteImpl venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-24", "Descrizione": "Verificare che il metodo evaluate() della classe AlgoritmoValutazioneRisposteImpl ritorni correttamente le metriche e i rispettivi valori", "Stato": "I"},
-        {"Codice": "TUB-25", "Descrizione": "Verificare che la classe AddElementoDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-26", "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService inserisca correttamente l'ElementoDomanda e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-27", "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di valori invalidi nell'ElementoDomanda", "Stato": "I"},
-        {"Codice": "TUB-28", "Descrizione": "Verificare che la classe GetElementoDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-29", "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni correttamente l'ElementoDomanda richiesto", "Stato": "I"},
-        {"Codice": "TUB-30", "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
-        {"Codice": "TUB-31", "Descrizione": "Verificare che la classe GetAllElementiDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-32", "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni correttamente un set di ElementoDomanda", "Stato": "I"},
-        {"Codice": "TUB-33", "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni un set vuoto in caso non siano presenti elementi", "Stato": "I"},
-        {"Codice": "TUB-34", "Descrizione": "Verificare che la classe DeleteElementiDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-35", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni True in caso di esito positivo dell'eliminazione", "Stato": "I"},
-        {"Codice": "TUB-36", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativi invalidi", "Stato": "I"},
-        {"Codice": "TUB-37", "Descrizione": "Verificare che la classe UpdateElementoDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-38", "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni True in caso di esito positivo dell'aggiornamento", "Stato": "I"},
-        {"Codice": "TUB-39", "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativo, domanda o risposta invalidi", "Stato": "I"},
-        {"Codice": "TUB-40", "Descrizione": "Verificare che la classe ExecuteTestService venga instanziata correttamete", "Stato": "I"},
-        {"Codice": "TUB-41", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService avvii correttamente il test", "Stato": "I"},
-        {"Codice": "TUB-42", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso non siano presenti domande", "Stato": "I"},
-        {"Codice": "TUB-43", "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso sia presente un'errore di tipo Exception", "Stato": "I"},
-        {"Codice": "TUB-44", "Descrizione": "Verificare che la classe GetTestStatusService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-45", "Descrizione": "Verificare che il metodo getTestStatus() della classe GetTestStatusService ritorni correttamente un dizionario con i dati corretti", "Stato": "I"},
-        {"Codice": "TUB-46", "Descrizione": "Verificare che la classe GetRisultatoTestService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-47", "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni correttamente il RisultatoTest richiesto", "Stato": "I"},
-        {"Codice": "TUB-48", "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
-        {"Codice": "TUB-49", "Descrizione": "Verificare che la classe GetAllRisultatiTestService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-50", "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni correttamente un set di RisultatoTest", "Stato": "I"},
-        {"Codice": "TUB-51", "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni un set vuoto in caso non siano presenti risultati", "Stato": "I"},
-        {"Codice": "TUB-52", "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaService venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-53", "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni correttamente il RisultatoSingolaDomanda richiesto", "Stato": "I"},
-        {"Codice": "TUB-54", "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido", "Stato": "I"},
-        
-        {"Codice": "TUB-55", "Descrizione": "Verificare che la classe AddElementoDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-56", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController aggiunga correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma", "Stato": "I"},
-        {"Codice": "TUB-57", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui domanda o risposta abbiano valori invalidi", "Stato": "I"},
-        {"Codice": "TUB-58", "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-59", "Descrizione": "Verificare che la classe GetElementoDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-60", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni correttamente una risposta contenente l'ElementoDomanda richiesto", "Stato": "I"},
-        {"Codice": "TUB-61", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui l'identificativo abbia un valore invalido", "Stato": "I"},
-        {"Codice": "TUB-62", "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-63", "Descrizione": "Verificare che la classe GetAllElementiDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-64", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista degli elementi", "Stato": "I"},
-        {"Codice": "TUB-65", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti elementi", "Stato": "I"},
-        {"Codice": "TUB-66", "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-67", "Descrizione": "Verificare che la classe DeleteElementiDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-68", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController elimini correttamente gli elementi e ne ritorni un messaggio di conferma", "Stato": "I"},
-        {"Codice": "TUB-69", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui siano presenti identificativi invalidi", "Stato": "I"},
-        {"Codice": "TUB-70", "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-71", "Descrizione": "Verificare che la classe UpdateElementoDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-72", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController aggiorni correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma", "Stato": "I"},
-        {"Codice": "TUB-73", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui sia presente una domanda o risposta non valida", "Stato": "I"},
-        {"Codice": "TUB-74", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui l'ElementoDomanda non venga trovato", "Stato": "I"},
-        {"Codice": "TUB-75", "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-76", "Descrizione": "Verificare che la classe ExecuteTestController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-77", "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController avvii correttamente il test e ne ritorni un messaggio di conferma", "Stato": "I"},
-        {"Codice": "TUB-78", "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-79", "Descrizione": "Verificare che la classe GetTestStatusController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-80", "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni correttamente una risposta contenente lo status", "Stato": "I"},
-        {"Codice": "TUB-81", "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-82", "Descrizione": "Verificare che la classe GetRisultatoTestController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-83", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni correttamente una risposta contenente il RisultatoTest richiesto", "Stato": "I"},
-        {"Codice": "TUB-84", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui il RisultatoTest non venga trovato", "Stato": "I"},
-        {"Codice": "TUB-85", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-86", "Descrizione": "Verificare che la classe GetAllRisultatiTestController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-87", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista dei risultati", "Stato": "I"},
-        {"Codice": "TUB-88", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti risultati", "Stato": "I"},
-        {"Codice": "TUB-89", "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-90", "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaController venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-91", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni correttamente una risposta contenente il RisultatoSingolaDomanda richiesto", "Stato": "I"},
-        {"Codice": "TUB-92", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un errore nel caso in cui si inserisca un identificativo invalido", "Stato": "I"},
-        {"Codice": "TUB-93", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui il RisultatoSingolaDomanda non venga trovato", "Stato": "I"},
-        {"Codice": "TUB-94", "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni ritorni un messaggio nel caso in cui si verifichi un errore nel server", "Stato": "I"},
+        {
+          "Codice": "TUB-13",
+          "Descrizione": "Verificare che la classe TestStatusTrackerImpl venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-14",
+          "Descrizione": "Verificare che il metodo start_test() della classe TestStatusTrackerImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-15",
+          "Descrizione": "Verificare che il metodo test_update_progress() della classe TestStatusTrackerImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-16",
+          "Descrizione": "Verificare che il metodo set_id_risultato() modifichi correttamente il campo id_risultato della classe TestStatusTrackerImpl",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-17",
+          "Descrizione": "Verificare che il metodo finish_test() della classe TestStatusTrackerImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-18",
+          "Descrizione": "Verificare che il metodo set_error() della classe TestStatusTrackerImpl funzioni correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-19",
+          "Descrizione": "Verificare che il metodo get_status() della class TestStatusTrackerImpl ritorni correttamente un dizionario con i dati corretti",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-20",
+          "Descrizione": "Verificare che la classe Scorer venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-21",
+          "Descrizione": "Verificare che la classe Scorer presenti i corretti valori di ritorno",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-22",
+          "Descrizione": "Verificare che la classe Scorer utilizzi le metriche corrette",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-23",
+          "Descrizione": "Verificare che la classe AlgoritmoValutazioneRisposteImpl venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-24",
+          "Descrizione": "Verificare che il metodo evaluate() della classe AlgoritmoValutazioneRisposteImpl ritorni correttamente le metriche e i rispettivi valori",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-25",
+          "Descrizione": "Verificare che la classe AddElementoDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-26",
+          "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService inserisca correttamente l'ElementoDomanda e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-27",
+          "Descrizione": "Verificare che il metodo addElementoDomanda() della classe AddElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di valori invalidi nell'ElementoDomanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-28",
+          "Descrizione": "Verificare che la classe GetElementoDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-29",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni correttamente l'ElementoDomanda richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-30",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() della classe GetElementoDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-31",
+          "Descrizione": "Verificare che la classe GetAllElementiDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-32",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni correttamente un set di ElementoDomanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-33",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() della classe GetAllElementiDomandaService ritorni un set vuoto in caso non siano presenti elementi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-34",
+          "Descrizione": "Verificare che la classe DeleteElementiDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-35",
+          "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni True in caso di esito positivo dell'eliminazione",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-36",
+          "Descrizione": "Verificare che il metodo deleteElementiDomandaById() della classe DeleteElementiDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativi invalidi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-37",
+          "Descrizione": "Verificare che la classe UpdateElementoDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-38",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni True in caso di esito positivo dell'aggiornamento",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-39",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() della classe UpdateElementoDomandaService ritorni un'eccezione di tipo ValueError in caso di identificativo, domanda o risposta invalidi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-40",
+          "Descrizione": "Verificare che la classe ExecuteTestService venga instanziata correttamete",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-41",
+          "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService avvii correttamente il test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-42",
+          "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso non siano presenti domande",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-43",
+          "Descrizione": "Verificare che il metodo executeTest() della classe ExecuteTestService non esegua il test nel caso sia presente un'errore di tipo Exception",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-44",
+          "Descrizione": "Verificare che la classe GetTestStatusService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-45",
+          "Descrizione": "Verificare che il metodo getTestStatus() della classe GetTestStatusService ritorni correttamente un dizionario con i dati corretti",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-46",
+          "Descrizione": "Verificare che la classe GetRisultatoTestService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-47",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni correttamente il RisultatoTest richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-48",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() della classe GetRisultatoTestService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-49",
+          "Descrizione": "Verificare che la classe GetAllRisultatiTestService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-50",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni correttamente un set di RisultatoTest",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-51",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() della classe GetAllRisultatiTestService ritorni un set vuoto in caso non siano presenti risultati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-52",
+          "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaService venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-53",
+          "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni correttamente il RisultatoSingolaDomanda richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-54",
+          "Descrizione": "Verificare che il metodo getRisultatoSingolaDomandaTestById() della classe GetRisultatoSingolaDomandaService ritorni un'eccezione di tipo ValueError in caso venga inserito un identificativo non valido",
+          "Stato": "I"
+        },
 
-        {"Codice": "TUB-95", "Descrizione": "Verificare che la classe LLMAdapter venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-96", "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ponga la domanda all'LLM e ne ritorni la risposta", "Stato": "I"},
-        {"Codice": "TUB-97", "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ritorni un errore di tipo Exception in caso di problemi di comunicazione con l'LLM", "Stato": "I"},
-        {"Codice": "TUB-98", "Descrizione": "Verificare che il metodo getName() della classe LLMAdapter ritorni il nome dell'LLM interrogato", "Stato": "I"},
-        {"Codice": "TUB-99", "Descrizione": "Verificare che la classe ElementoDomandaPersistenceMapper venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-100", "Descrizione": "Verificare che il metodo fromElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomandaEntity in un oggetto di tipo ElementoDomanda e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-101", "Descrizione": "Verificare che il metodo toElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomanda in un oggetto di tipo ElementoDomandaEntity e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-102", "Descrizione": "Verificare che il metodo fromDomandaRisposta() avendo in input una domanda ed una risposta costruisca correttamente un oggetto di tipo ElementoDomandaEntity e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-103", "Descrizione": "Verificare che la classe RisultatoSingolaDomandaPersistenceMapper venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-104", "Descrizione": "Verificare che il metodo fromRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomandaEntity in un oggetto di tipo RisultatoSingolaDomanda e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-105", "Descrizione": "Verificare che il metodo toRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomanda in un oggetto di tipo RisultatoSingolaDomandaEntity e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-106", "Descrizione": "Verificare che la classe RisultatoTestPersistenceMapper venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-107", "Descrizione": "Verificare che il metodo fromRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTestEntity in un oggetto di tipo RisultatoTest e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-108", "Descrizione": "Verificare che il metodo toRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTest in un oggetto di tipo RisultatoTestEntity e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-109", "Descrizione": "Verificare che la classe ElementoDomandaPersistenceAdapter venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-110", "Descrizione": "Verificare che il metodo saveElementoDomanda() salvi correttamente l'ElementoDomanda all'interno del database e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-111", "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database", "Stato": "I"},
-        {"Codice": "TUB-112", "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-113", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni correttamente un oggetto di tipo ElementoDomanda dal database", "Stato": "I"},
-        {"Codice": "TUB-114", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database", "Stato": "I"},
-        {"Codice": "TUB-115", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-116", "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-117", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set di ElementoDomanda dal database", "Stato": "I"},
-        {"Codice": "TUB-118", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set vuoto in caso non siano presenti elementi nel database", "Stato": "I"},
-        {"Codice": "TUB-119", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-120", "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-121", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni True in caso di esito positivo dell'eliminazione degli elementi dal database", "Stato": "I"},
-        {"Codice": "TUB-122", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso di problemi di eliminazione nel database", "Stato": "I"},
-        {"Codice": "TUB-123", "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-124", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni True ritorni True in caso di esito positivo dell'aggiornamento dell'ElementoDomanda nel database", "Stato": "I"},
-        {"Codice": "TUB-125", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database", "Stato": "I"},
-        {"Codice": "TUB-126", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso di problemi di aggiornamento nel database", "Stato": "I"},
-        {"Codice": "TUB-127", "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-128", "Descrizione": "Verificare che la classe RisultatoTestPersistenceAdapter venga istanziata correttamente", "Stato": "I"},
-        {"Codice": "TUB-129", "Descrizione": "Verificare che il metodo saveRisultatoTest() salvi correttamente il RisultatoTest all'interno del database e lo ritorni", "Stato": "I"},
-        {"Codice": "TUB-130", "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database", "Stato": "I"},
-        {"Codice": "TUB-131", "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-132", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni correttamente un oggetto di tipo RisultatoTest dal database", "Stato": "I"},
-        {"Codice": "TUB-133", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un errore di tipo ValueError in caso il RisultatoTest non venga trovato nel database", "Stato": "I"},
-        {"Codice": "TUB-134", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-135", "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-136", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set di RisultatoTest dal database", "Stato": "I"},
-        {"Codice": "TUB-137", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set vuoto in caso non siano presenti risultati nel database", "Stato": "I"},
-        {"Codice": "TUB-138", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-139", "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel serve", "Stato": "I"},
-        {"Codice": "TUB-140", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni correttamente un oggetto di tipo RisultatoSingolaDomanda dal database", "Stato": "I"},
-        {"Codice": "TUB-141", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un errore di tipo ValueError in caso il RisultatoSingolaDomanda non venga trovato nel database", "Stato": "I"},
-        {"Codice": "TUB-142", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database", "Stato": "I"},
-        {"Codice": "TUB-143", "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server", "Stato": "I"},
-        {"Codice": "TUB-144", "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema", "Stato": "I"},
-        {"Codice": "TUB-145", "Descrizione": "Verificare che nella vista DomandeView si possano eliminare gli elementi domanda selezionati", "Stato": "I"},
-        {"Codice": "TUB-146", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di un elemento domanda", "Stato": "I"},
-        {"Codice": "TUB-147", "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di modifica di un elemento domanda", "Stato": "I"},
-        {"Codice": "TUB-148", "Descrizione": "Verificare che nella vista AggiungiDomandaView si possano compilare i campi del form ed inserire l'elemento domanda nel sistema", "Stato": "I"},
-        {"Codice": "TUB-149", "Descrizione": "Verificare che nella vista ModificaDomandaView si possano modificare i campi dell'elemento domanda", "Stato": "I"},
-        {"Codice": "TUB-150", "Descrizione": "Verificare che nella vista MofificaDomandaView si possa annullare la modifica dell'elemento domanda", "Stato": "I"},
-        {"Codice": "TUB-151", "Descrizione": "Verificare che nella vista ModificaDomandaView riesca a caricare i dati dell'elemento domanda da modificare", "Stato": "I"},
-        {"Codice": "TUB-152", "Descrizione": "Verificare che nella vista TestView si possa eseguire un test", "Stato": "I"},
-        {"Codice": "TUB-153", "Descrizione": "Verificare che nella vista TestView una volta avviato un test si veda la barra progressiva", "Stato": "I"},
-        {"Codice": "TUB-154", "Descrizione": "Verificare che nella vista TestView in caso di errore, venga visualizzato un messaggio per avvisare l'utente", "Stato": "I"},
-        {"Codice": "TUB-155", "Descrizione": "Verificare che nella vista StoricoViewTest si possano visualizzare lo storico dei test effettuati", "Stato": "I"},
-        {"Codice": "TUB-156", "Descrizione": "Verificare che nella vista StoricoViewTest si possa cliccare su un test per navigare verso la pagina del risultato del test", "Stato": "I"},
-        {"Codice": "TUB-157", "Descrizione": "Verificare che nella vista TestResultView si possano visualizzare i dettagli del test", "Stato": "I"},
-        {"Codice": "TUB-158", "Descrizione": "Verificare che nella vista TestResultView si possa vedere un elenco di tutte le singole domande effettuate", "Stato": "I"},
-        {"Codice": "TUB-159", "Descrizione": "Verificare che nella vista TestResultView si possa cliccare su un risultato singola domanda per visualizzarne i dettagli attraverso un popup", "Stato": "I"}
+        {
+          "Codice": "TUB-55",
+          "Descrizione": "Verificare che la classe AddElementoDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-56",
+          "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController aggiunga correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-57",
+          "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui domanda o risposta abbiano valori invalidi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-58",
+          "Descrizione": "Verificare che il metodo post() della classe AddElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-59",
+          "Descrizione": "Verificare che la classe GetElementoDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-60",
+          "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni correttamente una risposta contenente l'ElementoDomanda richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-61",
+          "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui l'identificativo abbia un valore invalido",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-62",
+          "Descrizione": "Verificare che il metodo get() della classe GetElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-63",
+          "Descrizione": "Verificare che la classe GetAllElementiDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-64",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista degli elementi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-65",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti elementi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-66",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-67",
+          "Descrizione": "Verificare che la classe DeleteElementiDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-68",
+          "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController elimini correttamente gli elementi e ne ritorni un messaggio di conferma",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-69",
+          "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui siano presenti identificativi invalidi",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-70",
+          "Descrizione": "Verificare che il metodo post() della classe DeleteElementiDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-71",
+          "Descrizione": "Verificare che la classe UpdateElementoDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-72",
+          "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController aggiorni correttamente l'ElementoDomanda e ne ritorni un messaggio di conferma",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-73",
+          "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui sia presente una domanda o risposta non valida",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-74",
+          "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui l'ElementoDomanda non venga trovato",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-75",
+          "Descrizione": "Verificare che il metodo put() della classe UpdateElementoDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-76",
+          "Descrizione": "Verificare che la classe ExecuteTestController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-77",
+          "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController avvii correttamente il test e ne ritorni un messaggio di conferma",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-78",
+          "Descrizione": "Verificare che il metodo post() della classe ExecuteTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-79",
+          "Descrizione": "Verificare che la classe GetTestStatusController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-80",
+          "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni correttamente una risposta contenente lo status",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-81",
+          "Descrizione": "Verificare che il metodo get() della classe GetTestStatusController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-82",
+          "Descrizione": "Verificare che la classe GetRisultatoTestController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-83",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni correttamente una risposta contenente il RisultatoTest richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-84",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui il RisultatoTest non venga trovato",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-85",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-86",
+          "Descrizione": "Verificare che la classe GetAllRisultatiTestController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-87",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista dei risultati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-88",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni correttamente una risposta contenente una lista vuota in caso non siano presenti risultati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-89",
+          "Descrizione": "Verificare che il metodo get() della classe GetAllRisultatiTestController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-90",
+          "Descrizione": "Verificare che la classe GetRisultatoSingolaDomandaController venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-91",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni correttamente una risposta contenente il RisultatoSingolaDomanda richiesto",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-92",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un errore nel caso in cui si inserisca un identificativo invalido",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-93",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un messaggio nel caso in cui il RisultatoSingolaDomanda non venga trovato",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-94",
+          "Descrizione": "Verificare che il metodo get() della classe GetRisultatoSingolaDomandaController ritorni un messaggio nel caso in cui si verifichi un errore nel server",
+          "Stato": "I"
+        },
+
+        {
+          "Codice": "TUB-95",
+          "Descrizione": "Verificare che la classe LLMAdapter venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-96",
+          "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ponga la domanda all'LLM e ne ritorni la risposta",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-97",
+          "Descrizione": "Verificare che il metodo makeQuestion() della classe LLMAdapter ritorni un errore di tipo Exception in caso di problemi di comunicazione con l'LLM",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-98",
+          "Descrizione": "Verificare che il metodo getName() della classe LLMAdapter ritorni il nome dell'LLM interrogato",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-99",
+          "Descrizione": "Verificare che la classe ElementoDomandaPersistenceMapper venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-100",
+          "Descrizione": "Verificare che il metodo fromElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomandaEntity in un oggetto di tipo ElementoDomanda e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-101",
+          "Descrizione": "Verificare che il metodo toElementoDomandaEntity() converta correttamente un oggetto di tipo ElementoDomanda in un oggetto di tipo ElementoDomandaEntity e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-102",
+          "Descrizione": "Verificare che il metodo fromDomandaRisposta() avendo in input una domanda ed una risposta costruisca correttamente un oggetto di tipo ElementoDomandaEntity e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-103",
+          "Descrizione": "Verificare che la classe RisultatoSingolaDomandaPersistenceMapper venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-104",
+          "Descrizione": "Verificare che il metodo fromRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomandaEntity in un oggetto di tipo RisultatoSingolaDomanda e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-105",
+          "Descrizione": "Verificare che il metodo toRisultatoSingolaDomandaEntity() converta correttamente un oggetto di tipo RisultatoSingolaDomanda in un oggetto di tipo RisultatoSingolaDomandaEntity e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-106",
+          "Descrizione": "Verificare che la classe RisultatoTestPersistenceMapper venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-107",
+          "Descrizione": "Verificare che il metodo fromRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTestEntity in un oggetto di tipo RisultatoTest e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-108",
+          "Descrizione": "Verificare che il metodo toRisultatoTestEntity() converta correttamente un oggetto di tipo RisultatoTest in un oggetto di tipo RisultatoTestEntity e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-109",
+          "Descrizione": "Verificare che la classe ElementoDomandaPersistenceAdapter venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-110",
+          "Descrizione": "Verificare che il metodo saveElementoDomanda() salvi correttamente l'ElementoDomanda all'interno del database e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-111",
+          "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-112",
+          "Descrizione": "Verificare che il metodo saveElementoDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-113",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni correttamente un oggetto di tipo ElementoDomanda dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-114",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-115",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-116",
+          "Descrizione": "Verificare che il metodo getElementoDomandaById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-117",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set di ElementoDomanda dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-118",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni correttamente un set vuoto in caso non siano presenti elementi nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-119",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-120",
+          "Descrizione": "Verificare che il metodo getAllElementiDomanda() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-121",
+          "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni True in caso di esito positivo dell'eliminazione degli elementi dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-122",
+          "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso di problemi di eliminazione nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-123",
+          "Descrizione": "Verificare che il metodo deleteElementiDomandaById() ritorni False in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-124",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni True ritorni True in caso di esito positivo dell'aggiornamento dell'ElementoDomanda nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-125",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni un errore di tipo ValueError in caso l'ElementoDomanda non venga trovato nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-126",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso di problemi di aggiornamento nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-127",
+          "Descrizione": "Verificare che il metodo updateElementoDomandaById() ritorni False in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-128",
+          "Descrizione": "Verificare che la classe RisultatoTestPersistenceAdapter venga istanziata correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-129",
+          "Descrizione": "Verificare che il metodo saveRisultatoTest() salvi correttamente il RisultatoTest all'interno del database e lo ritorni",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-130",
+          "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso di problemi di salvataggio nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-131",
+          "Descrizione": "Verificare che il metodo saveRisultatoTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-132",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni correttamente un oggetto di tipo RisultatoTest dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-133",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un errore di tipo ValueError in caso il RisultatoTest non venga trovato nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-134",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-135",
+          "Descrizione": "Verificare che il metodo getRisultatoTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-136",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set di RisultatoTest dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-137",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni correttamente un set vuoto in caso non siano presenti risultati nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-138",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-139",
+          "Descrizione": "Verificare che il metodo getAllRisultatiTest() ritorni un oggetto di tipo None in caso si verifichi un errore nel serve",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-140",
+          "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni correttamente un oggetto di tipo RisultatoSingolaDomanda dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-141",
+          "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un errore di tipo ValueError in caso il RisultatoSingolaDomanda non venga trovato nel database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-142",
+          "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso di problemi di caricamento dal database",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-143",
+          "Descrizione": "Verificare che getRisultatoSingolaDomandaTestById() ritorni un oggetto di tipo None in caso si verifichi un errore nel server",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-144",
+          "Descrizione": "Verificare che nella vista DomandeView vengano visualizzati gli elementi domanda presenti nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-145",
+          "Descrizione": "Verificare che nella vista DomandeView si possano eliminare gli elementi domanda selezionati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-146",
+          "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-147",
+          "Descrizione": "Verificare che nella vista DomandeView si possa navigare verso la vista di inserimento di modifica di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-148",
+          "Descrizione": "Verificare che nella vista AggiungiDomandaView si possano compilare i campi del form ed inserire l'elemento domanda nel sistema",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-149",
+          "Descrizione": "Verificare che nella vista ModificaDomandaView si possano modificare i campi dell'elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-150",
+          "Descrizione": "Verificare che nella vista MofificaDomandaView si possa annullare la modifica dell'elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-151",
+          "Descrizione": "Verificare che nella vista ModificaDomandaView riesca a caricare i dati dell'elemento domanda da modificare",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-152",
+          "Descrizione": "Verificare che nella vista TestView si possa eseguire un test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-153",
+          "Descrizione": "Verificare che nella vista TestView una volta avviato un test si veda la barra progressiva",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-154",
+          "Descrizione": "Verificare che nella vista TestView in caso di errore, venga visualizzato un messaggio per avvisare l'utente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-155",
+          "Descrizione": "Verificare che nella vista StoricoViewTest si possano visualizzare lo storico dei test effettuati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-156",
+          "Descrizione": "Verificare che nella vista StoricoViewTest si possa cliccare su un test per navigare verso la pagina del risultato del test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-157",
+          "Descrizione": "Verificare che nella vista TestResultView si possano visualizzare i dettagli del test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-158",
+          "Descrizione": "Verificare che nella vista TestResultView si possa vedere un elenco di tutte le singole domande effettuate",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TUB-159",
+          "Descrizione": "Verificare che nella vista TestResultView si possa cliccare su un risultato singola domanda per visualizzarne i dettagli attraverso un popup",
+          "Stato": "I"
+        }
       ]
     },
     "TestIntegrazione": {
-      "keys": [
-        "Codice",
-        "Descrizione",
-        "Stato"
-      ],
+      "keys": ["Codice", "Descrizione", "Stato"],
       "values": [
         {
           "Codice": "TI-1",
@@ -848,25 +1468,60 @@
           "Descrizione": "Verificare che l'integrazione tra GetRisultatoSingolaDomandaController e GetRisultatoSingolaDomandaService funzioni correttamente",
           "Stato": "I"
         },
-        {"Codice": "TI-26", "Descrizione": "Verificare che la vista Domandeview invii correttamente la richiesta di recupero degli elementi domanda dal backend","Stato": "I"},
-        {"Codice": "TI-27", "Descrizione": "Verificare che la vista DomandeView invii correttamente la richiesta di elminazione degli elementi domanda selezionati", "Stato": "I"},
-        {"Codice": "TI-28", "Descrizione": "Verificare che la vista AggiungiDomandaView invii correttamente la richiesta di aggiunta di un elemento domanda", "Stato": "I"},
-        {"Codice": "TI-29", "Descrizione": "Verificare che la vista ModificaDomandaView invii correttamente la richiesta di modifica di un elemento domanda","Stato": "I"},
-        {"Codice": "TI-30", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta al backend per avviare un test",  "Stato": "I" },
-        {"Codice": "TI-31", "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta status al backend per controllare lo stato di avanzamento del test","Stato": "I" },
-        {"Codice": "TI-32", "Descrizione": "Verificare che, al completamento di un test, il risultato venga correttamente salvato nel database e mostrato all'utente",  "Stato": "I"},
-        {"Codice": "TI-33", "Descrizione": "Verificare che, accedendo alla pagina dei risultati, il frontend recuperi i dati tramite API e li visualizzi correttamente", "Stato": "I" },
-        {"Codice": "TI-34", "Descrizione": "Verificare che, accedendo alla pagina dei risultati e cliccando su un risultato singola domanda, venga inviata una richiesta per caricare i dati per quella domanda",  "Stato": "I" },
-        {"Codice": "TI-35", "Descrizione": "Verificare che la vista StoricoView invii correttamente la richiesta per caricare tutto lo storico dei test eseguiti", "Stato": "I"}
+        {
+          "Codice": "TI-26",
+          "Descrizione": "Verificare che la vista Domandeview invii correttamente la richiesta di recupero degli elementi domanda dal backend",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-27",
+          "Descrizione": "Verificare che la vista DomandeView invii correttamente la richiesta di elminazione degli elementi domanda selezionati",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-28",
+          "Descrizione": "Verificare che la vista AggiungiDomandaView invii correttamente la richiesta di aggiunta di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-29",
+          "Descrizione": "Verificare che la vista ModificaDomandaView invii correttamente la richiesta di modifica di un elemento domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-30",
+          "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta al backend per avviare un test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-31",
+          "Descrizione": "Verificare che la vista TestView invii correttamente la richiesta status al backend per controllare lo stato di avanzamento del test",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-32",
+          "Descrizione": "Verificare che, al completamento di un test, il risultato venga correttamente salvato nel database e mostrato all'utente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-33",
+          "Descrizione": "Verificare che, accedendo alla pagina dei risultati, il frontend recuperi i dati tramite API e li visualizzi correttamente",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-34",
+          "Descrizione": "Verificare che, accedendo alla pagina dei risultati e cliccando su un risultato singola domanda, venga inviata una richiesta per caricare i dati per quella domanda",
+          "Stato": "I"
+        },
+        {
+          "Codice": "TI-35",
+          "Descrizione": "Verificare che la vista StoricoView invii correttamente la richiesta per caricare tutto lo storico dei test eseguiti",
+          "Stato": "I"
+        }
       ]
     },
     "TestSistema": {
-      "keys": [
-        "Codice",
-        "Descrizione",
-        "Requisito",
-        "Stato"
-      ],
+      "keys": ["Codice", "Descrizione", "Requisito", "Stato"],
       "values": [
         {
           "Codice": "TS-1",
@@ -1231,11 +1886,7 @@
       ]
     },
     "TestAccettazione": {
-      "keys": [
-        "Codice",
-        "Descrizione",
-        "Stato"
-      ],
+      "keys": ["Codice", "Descrizione", "Stato"],
       "values": [
         {
           "Codice": "TA-1",
@@ -1371,4 +2022,3 @@
     }
   }
 }
-

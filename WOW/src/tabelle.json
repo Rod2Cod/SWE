@@ -165,13 +165,17 @@
         "Validatore": "Luca Calzetta"
       },
       {
-        "Autore":"Alberto Maggion, Annalisa Egidi",
-        "Descrizione": "- Modifica versionamento dei documenti e tracciamento issue nei verbali\n- Piano di Qualifica - Qualità di Processo\n- Piano di Qualifica - Qualità di Prodotto"
-      },
-      {
+        "Autore": "Alberto Maggion, Annalisa Egidi",
+        "Descrizione": "- Modifica versionamento dei documenti e tracciamento issue nei verbali\n- Piano di Qualifica - Qualità di Processo\n- Piano di Qualifica - Qualità di Prodotto",
         "Versione": "2.1",
         "Data": "2025-04-09",
         "Verificatore": "Filippo Bellon"
+      },
+      {
+        "Versione": "3.0",
+        "Data": "2025-04-14",
+        "Descrizione": "",
+        "Validatore": "Michele Nesler"
       }
     ]
   }

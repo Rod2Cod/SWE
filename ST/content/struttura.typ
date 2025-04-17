@@ -13,7 +13,7 @@ I componenti principali del dominio di elemento domanda sono:
 
 ====== Domanda
   - *Attributi*
-    - `testo`: stringa che rappresenta testo della domanda
+    - `testo`: stringa che rappresenta il testo della domanda
 
   - *Metodi*
     - `getText()`: restituisce il testo della domanda
@@ -21,7 +21,7 @@ I componenti principali del dominio di elemento domanda sono:
 
 ====== Risposta
   - *Attributi*
-    - `testo`: stringa che rappresenta testo della risposta
+    - `testo`: stringa che rappresenta il testo della risposta
 
   - *Metodi*
     - `getText(): str`
@@ -146,7 +146,7 @@ Il componente principale del dominio di risultato test è:
       - *Input*:
         - nessuno
       - *Output*:
-        - oggetto di tipo `dict` contente le metriche di valutazione della risposta e il relativo punteggio
+        - oggetto di tipo `dict` contenente le metriche di valutazione della risposta e il relativo punteggio
     - `serialize(): dict`
       - *Descrizione*:
         - restituisce un `dict` con tutti i dati del risultato della domanda
@@ -169,7 +169,7 @@ Il componente principale del dominio di risultato test è:
     - `LLM`: stringa che rappresenta il nome dell'LLM utilizzato
     - `dataEsecuzione`: oggetto di tipo `datetime` che rappresenta la data di esecuzione del test
     - `nomeSet`: stringa che rappresenta il nome del set di domande utilizzato
-    - `risulatiDomande`: set di oggetti di tipo `RisultatoSingolaDomanda` che rappresentano i risultati delle domande del test
+    - `risultatiDomande`: set di oggetti di tipo `RisultatoSingolaDomanda` che rappresentano i risultati delle domande del test
 
   - *Metodi*
     - `getId(): int`
@@ -220,7 +220,7 @@ Il componente principale del dominio di risultato test è:
       - *Input*:
         - nessuno
       - *Output*:
-        - `dict` con i tutti i dati del risultato del test
+        - `dict` con tutti i dati del risultato del test
     - `serializeForList(): dict`
       - *Descrizione*:
         - restituisce un `dict` con i dati principali del risultato del test, senza i risultati delle domande
@@ -390,7 +390,7 @@ Le dipendenze dei servizi di elemento domanda sono:
   - *Metodi*
     - `deleteElementiDomanda(ids: Set[int]): bool`
       - *Descrizione*:
-        - elimina gli elementi domanda nel datbase, a partire da un set di id
+        - elimina gli elementi domanda nel database, a partire da un set di id
       - *Input*:
         - `ids`: set di interi che rappresentano gli identificativi univoci degli elementi domanda da eliminare
       - *Output*:

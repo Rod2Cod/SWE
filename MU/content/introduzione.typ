@@ -1,5 +1,5 @@
 == Glossario
-  Questo documento, è corredato di una sezione finale denominata *Glossario Utente* contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.
+  Questo documento è corredato di una sezione finale denominata *Glossario Utente* contenente una definizione di tutti i termini specifici utilizzati, identificati da una G a pedice.
 
 == Riferimenti
 

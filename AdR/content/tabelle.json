@@ -152,16 +152,23 @@
         "Validatore": "Annalisa Egidi"
       },
       {
-        "Versione": "2.0.1",
+        "Versione": "2.1",
         "Data": "2025-02-21",
         "Descrizione": "Sezioni Tracciamento, Requisiti e Casi d'uso - Aggiornata tabella Fonte - Requisiti, Aggiornati Requisiti Funzionali e di Qualità, Modificato Elenco dei casi d'uso",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Michele Nesler"
       },
       {
-        "Versione": "",
+        "Versione": "2.2",
         "Data": "2025-03-11",
         "Descrizione": "Sezione Casi d'uso - Aggiornate postcondizioni UC4",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione": "3.0",
+        "Data": "2025-04-10",
+        "Validatore": "Annalisa Egidi"
       }
     ]
   },

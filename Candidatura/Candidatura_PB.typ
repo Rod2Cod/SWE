@@ -56,14 +56,14 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
   La documentazione e il materiale prodotto è disponibile al seguente indirizzo: \ #underline(offset: 0.15cm)[https://rod2cod.github.io/SWE/]
 
   La documentazione da sottoporre a valutazione comprende:
-  - Analisi dei Reqisiti alla versione ;
-  - Glossario alla versione ;
-  - Manuale Sviluppatore alla versione ;
-  - Manuale Utente alla versione ;
-  - Piano di Progetto alla versione ;
-  - Piano di Qualifica alla versione ;
-  - Specifica Tecnica alla versione ;
-  - Way of Working alla versione ;
+  - Analisi dei Reqisiti alla versione 3.0;
+  - Glossario alla versione 1.0;
+  - Manuale Sviluppatore alla versione 2.0;
+  - Manuale Utente alla versione 1.0;
+  - Piano di Progetto alla versione 2.0;
+  - Piano di Qualifica alla versione 3.0;
+  - Specifica Tecnica alla versione 1.0;
+  - Way of Working alla versione 3.0;
   - Verbali interni;
   - Verbali esterni.
 
@@ -74,11 +74,9 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
   alla possibilità di prendere parte alla revisione _Customer Acceptance_.
  = Aggiornamento costi
   Rispetto al budget iniziale preventivato di 11495€, il gruppo è riuscito a
-  rispettare gli accordi presi con una spesa finale di € (rimanendo sotto
-  il tetto massimo di spesa di €).
-  Per quanto riguarda le ore di attività, ogni membro del gruppo, a inizio
-  progetto, aveva preventivato di rimanere entro un tetto massimo di 90 ore
-  (per un totale collettivo di 540 ore). In seguito all'abbandono del gruppo da parte di Alessandro Rossi il gruppo ha deciso di sopperire alla sua mancanza aumentando di 5 ore l'impengo previsto dei restanti membri considerando di riuscire a soddisfare in questo modo tutti i requisiti obbligatori. Sono stati invece negoziati i requisiti desiderabili, tramutandoli in facoltativi. 
+  rispettare gli accordi presi con una spesa finale di 9708€ (rimanendo sotto
+  il tetto massimo di spesa di 1788€).
+  Per quanto riguarda le ore di attività, ogni membro del gruppo, a inizio progetto, aveva preventivato di rimanere entro un tetto massimo di 90 ore (per un totale di 540).
   Di seguito, una tabella riassuntiva in merito alle ore impiegate dai singoli
   membri del gruppo.
 
@@ -89,14 +87,14 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
       table.header(
         [*Membro*], [*Ore Impiegate*]
       ),
-      [Filippo Bellon],[95],
-      [Annalisa Egidi],[95],
-      [Michele Nesler], [95],
-      [Luca Calzetta], [95],
-      [Alberto Maggion], [95],
+      [Filippo Bellon],[90],
+      [Annalisa Egidi],[88,5],
+      [Michele Nesler], [88],
+      [Luca Calzetta], [94,5],
+      [Alberto Maggion], [94,5],
       [Alessandro Rossi], [28,5],
-      [Totale],[503,5],
-      [Rimanenti],[36,5]
+      [Totale],[474],
+      [Rimanenti],[66]
     )
   ]
 ]

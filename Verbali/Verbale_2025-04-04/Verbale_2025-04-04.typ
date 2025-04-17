@@ -55,13 +55,6 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
     [P], [Presente],
     [A], [Assente]
   )
-  #table(
-    align: center,
-    columns: (auto, auto),
-    table.header(table.cell(colspan: 2)[Presenze]),
-    [P], [Presente],
-    [A], [Assente]
-  )
 ]
 
 
