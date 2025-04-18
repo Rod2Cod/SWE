@@ -54,7 +54,7 @@
 )
 *RTB* Dal grafico è possibile osservare l'andamento del costo effettivamente sostenuto (*Actual Cost*) e del costo stimato per completare il progetto (*Estimate to Complete*). Al momento della RTB, il valore di *AC* ha superato quello di *ETC*, indicando che oltre metà del budget complessivo è già stato speso. L'andamento non perfettamente lineare delle curve evidenzia una progressione disomogenea del lavoro, con periodi di maggiore attività alternati a fasi meno intense, che riflettono una distribuzione del carico di lavoro non costante nel tempo.
 
-*PB*
+*PB* Come evidenziato dal grafico, l'Actual Cost ha seguito una crescita costante e controllata, mentre l'Estimate to Complete è diminuito proporzionalmente. Al momento della PB, l'AC ha raggiunto circa il 75% del budget totale.
 
 === Earned Value e Planned Value
 #figure(
