@@ -107,12 +107,10 @@
 *PB* Correlato al dato precedente, la percentuale di test falliti si è mantenuta costantemente allo 0% durante tutti i periodi di rilevazione, raggiungendo sempre il valore ottimale. Questo conferma ulteriormente l'alta qualità del codice prodotto e l'attenzione del team nel garantire che ogni funzionalità implementata soddisfi pienamente i requisiti specificati.
 
 === Complessità Ciclomatica del Codice
-/*
-  #figure(
-    image("../Grafici/Comprensibilita.png", width: 80%),
-    caption: [
-      Resoconto Complessità Ciclomatica del Codice
-    ],
-  )
-*/
-*PB*
+#figure(
+  image("../Grafici/Ciclomatica.png", width: 80%),
+  caption: [
+    Resoconto Complessità Ciclomatica del Codice
+  ],
+)
+*PB* Nei periodi P8-P12, la complessità ciclomatica si è mantenuta tra 1,6 e 1,8, valori nettamente inferiori sia alla soglia accettabile (5) che a quella ottimale (4). Questo conferma l'ottima manutenibilità e comprensibilità del codice sviluppato.
