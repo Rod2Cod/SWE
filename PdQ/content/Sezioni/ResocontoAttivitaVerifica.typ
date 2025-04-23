@@ -75,7 +75,7 @@
     Resoconto Requirements Stability Index e Satisfied Obligatory Requirements
   ],
 )
-*RTB* Dal grafico si osserva che il *Requirements Stability Index* si è mantenuto costantemente al 100% a partire dal periodo P3, indicando che i requisiti, una volta definiti, non sono stati più modificati. Questo riflette un'elevata stabilità e coerenza nella gestione dei requisiti. Al contrario, il valore dei *Satisfied Obligatory Requirements* è rimasto a 0% fino alla revisione corrente, segno che l'implementazione dei requisiti obbligatori non è ancora stata completata, ma è prevista nelle fasi successive del progetto.
+*RTB* Dal grafico si osserva che il *Requirements Stability Index* si è mantenuto costantemente a partire dal periodo P3, indicando che i requisiti, una volta definiti, non sono stati più modificati. Questo riflette un'elevata stabilità e coerenza nella gestione dei requisiti. Al contrario, il valore dei *Satisfied Obligatory Requirements* è rimasto a 0% fino alla revisione corrente, segno che l'implementazione dei requisiti obbligatori non è ancora stata completata, ma è prevista nelle fasi successive del progetto.
 
 *PB* L'indice RSI ha mantenuto valori eccellenti (97-100%) nei periodi P8-P12, dimostrando un'ottima stabilità dei requisiti. Il SOR ha evidenziato un progresso significativo, passando da 0% a 100% nel periodo P12, segnalando il completamento di tutti i requisiti obbligatori.
 

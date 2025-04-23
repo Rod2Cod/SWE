@@ -151,6 +151,12 @@
         "Autore": "Luca Calzetta,\nAnnalisa Egidi",
         "Verificatore": "Michele Nesler",
         "Versione": "2.6"
+      },
+      {
+        "Data": "2025-04-14",
+        "Sez.modificate": "Validazione del documento",
+        "Validatore": "Alberto Maggion",
+        "Versione": "3.0"
       }
     ]
   },
