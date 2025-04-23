@@ -88,7 +88,7 @@ Per il test dei componenti di backend, viene fornito ed utilizzato lo strumento 
 Qui di seguito sono elencate alcune possibili estensioni per la sezione backend del progetto.
 
 === Set di Elementi Domanda
-Come descritto all'interno della Specifica Tecnica, il dominio delle domande presenti nel sistema viene rappresentato dall'oggetto *ElementoDomanda*, composto da *Domanda* e *Risposta*. Al momento dell'esecuzione del test però, si vanno a ricavare tutti gli Elementi Domanda presenti nel sistema, senza la possibiltà di lavorare solo su alcuni di questi. La soluzione potrebbe essere quella di implementare un'entità *SetElementiDomanda*, in modo da poter raggruppare alcuni Elementi Domanda in base ad un certo criterio, ed andare quindi ad eseguire il test solo su questi.
+Come descritto all'interno della Specifica Tecnica, il dominio delle domande presenti nel sistema viene rappresentato dall'oggetto *ElementoDomanda*, composto da *Domanda* e *Risposta*. Al momento dell'esecuzione del test però, si vanno a ricavare tutti gli Elementi Domanda presenti nel sistema, senza la possibilità di lavorare solo su alcuni di questi. La soluzione potrebbe essere quella di implementare un'entità *SetElementiDomanda*, in modo da poter raggruppare alcuni Elementi Domanda in base ad un certo criterio, ed andare quindi ad eseguire il test solo su questi.
 
 ==== Entità Set Elementi Domanda
 #align(center)[
@@ -100,7 +100,7 @@ Come descritto all'interno della Specifica Tecnica, il dominio delle domande pre
 ===== Metodi : 
 - updateElementiDomandaAssociati : viene passato come parametro il set degli elementi domanda che si vuole siano associati al set. Tutti gli elementi domanda precedentemente associati vengono dissociati e sostituiti con i nuovi. 
 - getAllElementiDomanda : restituisce il set di elementi domanda associati al set.
-- setNome : una stringa contenente il nuovo nome viene passata come parametro e il nome del set viene sostituita con essa. 
+- setNome : una stringa contenente il nuovo nome viene passata come parametro e il nome del set viene sostituito con essa. 
 - getNome : restituisce la stringa contenente il nome del set. 
 - getSize : restituisce il numero di elementi domanda associati al set. 
 
@@ -237,7 +237,7 @@ Le loro operazioni riguarderanno la possibilità di:
 Il *Mapper* sarà quindi sempre presente e si occuperà di "tradurre" le *Entity* del database in elementi del dominio quali *SetElementiDomanda* ed *Elementi Domanda*, e viceversa.
 
 === Database
-La struttura del database subirà perciò alcuni cambiamenti, assumento una forma del genere.
+La struttura del database subirà perciò alcuni cambiamenti, simili a quelli elencati in seguito.
 
 #image("pictures/Artificial_QI_ER_Set.jpg")
 
@@ -268,7 +268,7 @@ Questo controller si occuperà di esporre un endpoint per il caricamento del Ris
 
 #set heading(numbering: "1.1")
 ==== Services
-I *Services* si occuperanno di implementare gli *UseCase* e realizzare quindi la logica di business. Per portare a termine la richiesta faranno quindi uso di *Porte*, le quali veranno implementate nel o negli *Adapters* corrispondenti.
+I *Services* si occuperanno di implementare gli *UseCase* e realizzare quindi la logica di business. Per portare a termine la richiesta faranno quindi uso di *Porte*, le quali verranno implementate nel o negli *Adapters* corrispondenti.
 Di seguito vengono quindi elencate le possibili strutture dei vari Services.
 
 #set heading(numbering: none)

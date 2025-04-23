@@ -71,23 +71,31 @@
       },
       {
         "Data": "2025-04-07",
+        "Versione": "1.1",
         "Descrizione": "Sezione Backend-Flask - Aggiunte possibili estensioni",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion"
       },
       {
         "Data": "2025-04-09",
+        "Versione": "1.2",
         "Descrizione": "Sezioni Backend-Flask e Problemi Noti - Aggiunto Test e sezione Problemi Noti",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Alberto Maggion"
       },
       {
         "Data": "2025-04-10",
+        "Versione": "1.3",
         "Descrizione": "Sezione Backend-Flask - Aggiunta configurazione di sistema",
-        "Autore": "Filippo Bellon"
+        "Autore": "Filippo Bellon",
+        "Verificatore": "Annalisa Egidi"
       },
       {
         "Data": "2025-04-10",
+        "Versione": "1.4",
         "Descrizione": "Sezione LLM Evaluator - Aggiunta sezione allenamento random forest",
-        "Autore": "Alberto Maggion"
+        "Autore": "Alberto Maggion",
+        "Verificatore": "Filippo Bellon"
       }
     ]
   }
