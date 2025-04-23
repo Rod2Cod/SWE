@@ -11,9 +11,9 @@
     "values": [
       {
         "Versione" : "",
-        "Data" : "2025-04-15",
+        "Data" : "",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Alberto Maggion"
+        "Autore" : ""
       }
     ]
   },
@@ -27,12 +27,12 @@
       {
         "Nominativo": "Michele Nesler",
         "Presenze": "P",
-        "Ruolo": "Amministratore"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Annalisa Egidi",
         "Presenze": "P",
-        "Ruolo": "Verificatore"
+        "Ruolo": "Analista"
       },
       {
         "Nominativo": "Filippo Bellon",
@@ -42,12 +42,12 @@
       {
         "Nominativo": "Luca Calzetta",
         "Presenze": "P",
-        "Ruolo": "Responsabile"
+        "Ruolo": "Progettista"
       },
       {
         "Nominativo": "Alberto Maggion",
         "Presenze": "P",
-        "Ruolo": "Programmatore"
+        "Ruolo": "Responsabile"
       }
     ]
   }

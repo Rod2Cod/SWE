@@ -147,8 +147,8 @@
       },
       {
         "Data": "2025-04-10",
-        "Sez.modificate": "Sezione Specifica dei Test - Aggiunti Test di Unità Frontend., Sezione Specifica test di integrazione - Aggiunti test di integrazione tra frontend, backend, sistema di valutazione e database",
-        "Autore": "Luca Calzetta",
+        "Sez.modificate": "- Sezione Specifica dei Test: Aggiunti Test di Unità Frontend.\n- Sezione Specifica test di integrazione: aggiunti test di integrazione tra frontend, backend, sistema di valutazione e database\n- Sezione Resoconto delle Attività di Verifica",
+        "Autore": "Luca Calzetta,\nAnnalisa Egidi",
         "Verificatore": "Michele Nesler",
         "Versione": "2.6"
       }

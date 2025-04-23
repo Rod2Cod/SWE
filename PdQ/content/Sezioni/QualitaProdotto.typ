@@ -25,7 +25,6 @@ Le metriche presentate in questa sezione sono definite e formalizzate nel Way of
 ==== Usabilità
     #table-json(json(tabelle).at("Qualità").at("Prodotto").at("SoftwareMetriche").at("Usabilità"),4)
     
-
 === Efficienza
     #table-json(json(tabelle).at("Qualità").at("Prodotto").at("SoftwareMetriche").at("Efficienza"),4)
     
