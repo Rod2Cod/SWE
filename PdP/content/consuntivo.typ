@@ -330,7 +330,7 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/C/10costi.png",height: 20%)
   *Retrospective*:
-  
+  Durante questo periodo abbiamo terminato la progettazione e successivamente iniziato la programmazione. Non sono state riscontrate particolari difficoltà, a parte un'iniziale incertezza nello sviluppo dei test d'unità, risolta tramite autoformazione e confronto interno.
 #pagebreak()
 
 
@@ -362,7 +362,7 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/C/11costi.png",height: 20%)
   *Retrospective*:
-  
+  Durante questo periodo abbiamo concluso la programmazione e presentato il Minimum Viable Product all'azienda, che lo ha approvato. Abbiamo completato la documentazione per la prima fase della Product Baseline e prenotato l'incontro con il professor Cardin per la stessa fase. La principale difficoltà riscontrata è stata l'organizzazione degli incontri, dovuta alla volontà di concludere il progetto entro il periodo successivo e di aumentare quindi i momenti sincroni di confronto e aggiornamento. Trovare momenti in cui tutti i membri fossero presenti è stato inizialmente complicato, ma la situazione si è risolta grazie all'utilizzo dello strumento When2meet, che ha permesso a ciascuno di segnalare le proprie disponibilità e, contemporaneamente, visualizzare quelle degli altri.
 #pagebreak()
 
 
@@ -393,3 +393,4 @@ Per questo il costo del periodo è risultato molto più basso di quello preventi
   *Grafico a torta del budget speso e rimanente al termine del periodo.*
   #image("Graphs/C/12costi.png",height: 20%)
   *Retrospective*:
+Durante questo periodo abbiamo ultimato la documentazione. Non abbiamo riscontrato particolari problematiche. Attendiamo le due riunioni per la Product Baseline e il loro esito.

@@ -191,6 +191,11 @@
         "Data": "2025-04-12",
         "Verificatore": "Luca Calzetta",
         "Versione": "1.9"
+      },
+      {
+        "Validatore": "Michele Nesler",
+        "Data": "2025-04-14",
+        "Versione": "2.0"
       }
     ]
   },
