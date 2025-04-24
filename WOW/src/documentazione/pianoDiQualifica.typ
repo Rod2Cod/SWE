@@ -7,6 +7,16 @@ Le metriche utilizzate all'interno del Piano di Qualifica, sono state selezionat
   - *Documenti* resi disponibili dal professore;
   - Ricerche in *internet*, in aggiunta a quanto consigliato all'interno dei documenti resi disponibili.
 
+==== Struttura del documento
+
+Il Piano di Qualifica è strutturato nelle seguenti sezioni principali:
+
+- *Introduzione*: definisce lo scopo del documento, il glossario e i riferimenti normativi e informativi;
+- *Qualità di Processo*: descrive le metriche adottate per valutare la qualità dei processi primari, di supporto e organizzativi secondo lo standard ISO/IEC/IEEE 12207:1995;
+- *Qualità di Prodotto*: specifica le metriche utilizzate per valutare la qualità della documentazione e del software;
+- *Specifica dei Test*: definisce i test necessari per verificare la conformità del prodotto ai requisiti;
+- *Resoconto delle Attività di Verifica*: presenta i risultati delle verifiche effettuate sulla documentazione e sui processi.
+
 ==== Qualità di Processo
 La qualità di processo si fonda sull'idea che, per ottenere un prodotto che soddisfi determinati *standard* di qualità, è necessario che i *processi* che lo vanno a creare, vengano sottoposti a *controlli* periodici con lo scopo ultimo di ottimizzarli. \
 Il concetto di qualità di processo viene dunque applicato all'intero spettro di *attività*, *pratiche* e *metodi* utilizzati lungo l'intero ciclo di vita del software. In sintesi, la qualità di processo si pone l'obiettivo di rendere la qualità una *parte integrante* del prodotto, garantendo che sia *costruita* nel processo stesso e non sia solo un obiettivo secondario.
@@ -30,22 +40,28 @@ Per garantire il raggiungimento degli standard qualitativi prefissati, il team h
 
 
 ==== Qualità di Prodotto
-
-La qualità del prodotto si concentra sulla *valutazione* del *software* sviluppato, ponendo particolare attenzione a caratteristiche come *usabilità*, *funzionalità*, *affidabilità*, *manutenibilità* e, più in generale, alle *prestazioni* complessive del sistema.\
-L'obiettivo principale è garantire che il software non solo *soddisfi* le funzionalità richieste dal cliente e operi correttamente, ma che lo faccia *rispettando* specifici standard di qualità.
-
+La qualità del prodotto si concentra sulla valutazione del software sviluppato, ponendo particolare attenzione a caratteristiche come usabilità, funzionalità, affidabilità, manutenibilità e, più in generale, alle prestazioni complessive del sistema. \
+L'obiettivo principale è garantire che il software non solo soddisfi le funzionalità richieste dal cliente e operi correttamente, ma che lo faccia rispettando specifici standard di qualità.
 
 Gli aspetti valutati includono:
 - *Documentazione*: deve essere chiara, leggibile e priva di errori;
 - *Software*: deve soddisfare tutti i requisiti concordati con il proponente.
 
 *Metriche di qualità* prese in esame:
-  - Leggibilità *(MPD-IG)*: il contenuto dei documenti deve essere comprensibile all'utente;  
-  - Correttezza Linguistica *(MPD-EO)*: i documenti devono essere privi di errori grammaticali.  
+- Leggibilità *(MPD-IG)*: il contenuto dei documenti deve essere comprensibile all'utente;
+- Correttezza Linguistica *(MPD-EO)*: i documenti devono essere privi di errori grammaticali;
+- Funzionalità *(MPD-CROP, MPD-CRD, MPD-CROB)*: capacità del prodotto di soddisfare tutti i requisiti individuati nell'Analisi dei Requisiti;
+- Usabilità *(MPD-SU, MPD-TA)*: capacità di essere comprensibile e di facile utilizzo per l'utente;
+- Efficienza *(MPD-TMR)*: capacità di svolgere un compito nel minor tempo possibile;
+- Affidabilità *(MPD-GE)*: capacità del prodotto di gestire correttamente gli errori;
+- Manutenibilità *(MPD-CCM)*: capacità di permettere future correzioni e modifiche;
+- Copertura dei Test *(MPD-CTS)*: capacità del prodotto software di superare i test.
 
 
 ==== Specifica dei Test
 Il Piano di Qualifica prevede l'esecuzione di test dettagliati per verificare il corretto funzionamento del software. I test sono suddivisi in:
+- *Test di Unità*: verificano il corretto funzionamento delle singole componenti;
+- *Test di Integrazione*: verificano la corretta interazione tra le diverse componenti;
 - *Test di Sistema*: verificano il corretto funzionamento delle singole funzionalità;
 - *Test di Accettazione*: garantiscono che il prodotto soddisfi i requisiti aziendali.
 
