@@ -86,7 +86,7 @@
     Resoconto Code Coverage
   ],
 )
-*PB* Il grafico mostra un eccellente andamento della copertura del codice, che si è mantenuta costantemente sopra il 93%, superando notevolmente la soglia accettabile del 75%. Particolarmente positivo è il fatto che il valore ha continuato a migliorare fino a raggiungere il 97,2% nell'ultimo periodo rilevato, avvicinandosi sempre più al valore ottimale del 90%, che è stato ampiamente superato. Questo dimostra l'efficacia e la completezza dei test implementati dal team, garantendo un'alta qualità del codice prodotto.
+*PB* Il grafico mostra un eccellente andamento della copertura del codice, che si è mantenuta costantemente sopra il 93%, superando notevolmente la soglia accettabile del 75%. Particolarmente positivo è il fatto che il valore ha continuato a migliorare fino a raggiungere il 97,2% nell'ultimo periodo rilevato, superando ampiamente il valore ottimale del 90%. Questo dimostra l'efficacia e la completezza dei test implementati dal team.
 
 === Passed Test Cases Percentage
 #figure(
