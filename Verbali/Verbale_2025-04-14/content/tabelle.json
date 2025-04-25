@@ -10,10 +10,11 @@
     ],
     "values": [
       {
-        "Versione" : "",
+        "Versione" : "0.1",
         "Data" : "2025-04-15",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Alberto Maggion"
+        "Autore" : "Alberto Maggion",
+        "Verificatore": "Luca Calzetta"
       }
     ]
   },
