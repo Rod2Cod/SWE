@@ -29,7 +29,7 @@
 
 //FRONTESPIZIO
 #import "../frontespizio.typ": show_content
-#let versione = getLastDocVersion(tabelle, "AdR")
+#let versione = getLastDocVersion(tabelle, "MU")
 #show_content(title, data, versione, abstract)
 
 #pagebreak()
