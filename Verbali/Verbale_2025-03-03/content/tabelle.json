@@ -10,10 +10,17 @@
     ],
     "values": [
       {
-        "Versione" : "0.0.1",
-        "Data" : "03/03/2025",
+        "Versione" : "0.1",
+        "Data" : "2025-03-03",
         "Sez.modificate": "Prima stesura",
-        "Autore" : "Annalisa Egidi"
+        "Autore" : "Annalisa Egidi",
+        "Verificatore": "Michele Nesler"
+      },
+      {
+        "Versione" : "1.0",
+        "Data" : "2025-03-03",
+        "Sez.modificate": "Prima stesura",
+        "Validatore" : "Filippo Bellon"
       }
     ]
   },

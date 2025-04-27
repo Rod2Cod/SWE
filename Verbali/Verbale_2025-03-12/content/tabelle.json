@@ -14,7 +14,11 @@
         "Data" : "2025-03-13",
         "Autore" : "Luca Calzetta",
         "Sez.modificate": "Prima stesura",
-        "Verificatore" : "Annalisa Egidi",
+        "Verificatore" : "Annalisa Egidi"
+      },
+      {
+        "Versione" : "1.0",
+        "Data" : "2025-03-13",
         "Validatore" : "Alberto Maggion"
       }
     ]
