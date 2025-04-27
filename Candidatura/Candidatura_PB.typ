@@ -42,7 +42,7 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
   ]
 
   #block(above: 1cm)[
-    #text(size: 15pt)[10 Aprile 2025]
+    #text(size: 15pt)[27 Aprile 2025]
   ]
 
 ]
@@ -103,6 +103,6 @@ per utilizzare il template, è necessario utilizzare il file meta.typ che contie
   #block(above: 2.5cm)[
     Michele Nesler \
     _Responsabile di Progetto_ \
-    _10 Aprile 2025_
+    _27 Aprile 2025_
   ]
 ]
